@@ -22,7 +22,14 @@ object FilesystemInfo {
             if (parts.size < 3) continue
             val mountPoint = parts[1].replace("\\040", " ")
             val fstype = parts[2]
-            if (path == mountPoint || path.startsWith("$mountPoint/")) {
+            // "/" is a prefix of every absolute path; the "$mountPoint/"
+            // form would give "//" and never match.
+            val matches = if (mountPoint == "/") {
+                path.startsWith("/")
+            } else {
+                path == mountPoint || path.startsWith("$mountPoint/")
+            }
+            if (matches) {
                 if (mountPoint.length > bestMount.length) {
                     bestMount = mountPoint
                     bestType = fstype

@@ -81,7 +81,9 @@ class FilesystemInfoTest {
         assertEquals("vfat", FilesystemInfo.parseFstype(mounts, "/storage/ABCD-1234/DCIM/a.jpg"))
         assertEquals("fuse", FilesystemInfo.parseFstype(mounts, "/storage/emulated/0/DCIM/a.jpg"))
         assertEquals("ext4", FilesystemInfo.parseFstype(mounts, "/system/bin/sh"))
-        assertEquals(null, FilesystemInfo.parseFstype(mounts, "/nonexistent/path"))
+        // A relative path matches no mount (a leading "/" would match
+        // the root mount — a file under "/" is on the root volume).
+        assertEquals(null, FilesystemInfo.parseFstype(mounts, "nonexistent/path"))
     }
 
     @Test

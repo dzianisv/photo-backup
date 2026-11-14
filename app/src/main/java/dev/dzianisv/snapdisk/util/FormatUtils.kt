@@ -62,7 +62,11 @@ class SpeedWindow {
 
     fun add(nowMs: Long, totalBytesCopied: Long) {
         samples.addLast(nowMs to totalBytesCopied)
-        while (samples.size > 1 && nowMs - samples.first().first > 5_000) {
+        // Keep the samples inside the last 5 s, plus the single sample
+        // just before the window, so a span >= 5 s stays computable:
+        // pruning the boundary sample would leave one sample and the
+        // speed would collapse to 0 exactly when the window fills.
+        while (samples.size > 2 && nowMs - samples[1].first > 5_000) {
             samples.removeFirst()
         }
     }
