@@ -1,12 +1,16 @@
 package dev.dzianisv.snapdisk
 
+import android.Manifest
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
+import androidx.test.rule.GrantPermissionRule
 import dev.dzianisv.snapdisk.backup.BackupPrefs
 import org.junit.Rule
 import org.junit.Test
+import org.junit.rules.RuleChain
+import org.junit.rules.TestRule
 
 /**
  * Smoke test for the settings screen — the app's only screen
@@ -15,8 +19,26 @@ import org.junit.Test
  */
 class SettingsScreenTest {
 
+    private val composeRule = createAndroidComposeRule<MainActivity>()
+
+    // Permissions are granted up front (RuleChain: grant runs before
+    // the activity launches) so no system permission dialog can appear
+    // and cover the activity: on first launch MainActivity requests
+    // both permissions, and in smoke run 43618997791 the
+    // GrantPermissionsActivity stayed up undismissed for ~100 s while
+    // the Compose test waited behind it, then the screen timed out and
+    // the lookup failed with "No compose hierarchies found". The test
+    // asserts the settings screen, not the permission flow — granting
+    // here is environment setup, not a weakened assertion.
     @get:Rule
-    val composeRule = createAndroidComposeRule<MainActivity>()
+    val ruleChain: TestRule = RuleChain
+        .outerRule(
+            GrantPermissionRule.grant(
+                Manifest.permission.POST_NOTIFICATIONS,
+                Manifest.permission.READ_MEDIA_IMAGES,
+            ),
+        )
+        .around(composeRule)
 
     @Test
     fun settingsScreenShowsDefaultFoldersStartAndPro() {

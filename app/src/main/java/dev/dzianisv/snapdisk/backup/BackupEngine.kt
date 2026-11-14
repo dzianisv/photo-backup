@@ -178,6 +178,14 @@ object BackupEngine {
                     if (control.stopped) return CopyResult.Stopped(copied)
                     val read = input.read(buffer)
                     if (read < 0) break
+                    // Pause gate, second half: a pause requested while
+                    // blocked in read() must not let the just-read chunk
+                    // be written. Hold the bytes in the buffer and wait
+                    // for resume instead — the old code wrote them, so
+                    // one 4 KB chunk landed after pause (smoke run
+                    // 43618997791: expected 28672, got 32768).
+                    while (control.paused && !control.stopped) Thread.sleep(50)
+                    if (control.stopped) return CopyResult.Stopped(copied)
                     sink.write(buffer, 0, read)
                     copied += read
                     onProgress(copied)

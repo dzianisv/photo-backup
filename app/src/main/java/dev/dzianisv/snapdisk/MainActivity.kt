@@ -44,13 +44,19 @@ class MainActivity : ComponentActivity() {
     private var notificationsEnabled by mutableStateOf(true)
     private val storageReceiver = StorageReceiver()
 
-    private val requestNotificationPermission =
-        registerForActivityResult(ActivityResultContracts.RequestPermission()) {
+    // One launcher for both runtime permissions. Two separate
+    // RequestPermission launchers fired back-to-back in onCreate were
+    // dropped by the framework ("Can request only one set of
+    // permissions at a time", smoke run 43618997791 logcat 17:18:11),
+    // so READ_MEDIA_IMAGES was never requested on launch — and the
+    // notifications dialog stayed up undismissed, blocking the
+    // settings screen in the smoke test. RequestMultiplePermissions
+    // sequences them through one system flow; on a real device both
+    // permissions are still asked on first launch, as before.
+    private val requestPermissions =
+        registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {
             refreshNotificationsEnabled()
         }
-
-    private val requestMediaPermission =
-        registerForActivityResult(ActivityResultContracts.RequestPermission()) { }
 
     private val pickFromFolder =
         registerForActivityResult(ActivityResultContracts.OpenDocumentTree()) { uri: Uri? ->
@@ -130,17 +136,17 @@ class MainActivity : ComponentActivity() {
             registerReceiver(storageReceiver, filter)
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
-            ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) !=
-            PackageManager.PERMISSION_GRANTED
-        ) {
-            requestNotificationPermission.launch(Manifest.permission.POST_NOTIFICATIONS)
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
-            ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_IMAGES) !=
-            PackageManager.PERMISSION_GRANTED
-        ) {
-            requestMediaPermission.launch(Manifest.permission.READ_MEDIA_IMAGES)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            val missing = listOf(
+                Manifest.permission.POST_NOTIFICATIONS,
+                Manifest.permission.READ_MEDIA_IMAGES,
+            ).filter {
+                ContextCompat.checkSelfPermission(this, it) !=
+                    PackageManager.PERMISSION_GRANTED
+            }
+            if (missing.isNotEmpty()) {
+                requestPermissions.launch(missing.toTypedArray())
+            }
         }
 
         // If a removable disk is already mounted when the app opens,

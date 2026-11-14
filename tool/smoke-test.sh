@@ -70,6 +70,14 @@ if [ -z "$SERVICES_OK" ]; then
 fi
 say "boot completed; letting the system settle (first-boot dexopt, ANRs)"
 sleep 90
+# Keep the display on for the whole run: in smoke run 43618997791
+# the screen timed out mid-test (both app + dialog windows went
+# invisible 17:19:55) while the Compose test waited behind an
+# undismissed permission dialog, and the test then failed. Stay-on
+# while charging + a long timeout so the display can never go dark
+# under a slow test again.
+adb shell svc power stayon true 2>&1 | tee -a "$LOG" || true
+adb shell settings put system screen_off_timeout 1800000 2>&1 | tee -a "$LOG" || true
 # Digital Wellbeing ANRs on first boot; absent on AOSP images —
 # the error below is harmless there.
 adb shell pm disable-user --user 0 com.google.android.apps.wellbeing 2>&1 | tee -a "$LOG" || true

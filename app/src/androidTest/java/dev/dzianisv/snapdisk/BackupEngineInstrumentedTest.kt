@@ -121,6 +121,13 @@ class BackupEngineInstrumentedTest {
         }
         Thread.sleep(300)
         control.paused = true
+        // Let a write already in flight when pause was set land (one
+        // write syscall, < 1 ms): no engine can un-write it, so the
+        // snapshot below is taken after it, not mid-flight. The engine
+        // fix guarantees nothing further is written while paused — the
+        // 500 ms freeze assertion below is the real check. Same settle
+        // the unit test got in 3cc9518.
+        Thread.sleep(200)
         assertTrue("no .part file while copying", part.exists())
         val sizeWhilePaused = part.length()
         assertTrue(sizeWhilePaused > 0)
