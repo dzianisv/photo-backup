@@ -30,8 +30,8 @@ state, evidence, date.
   (dev.dzianisv.snapdisk). No money spent, no credentials used.
   Evidence: PR #7 (commits 06c2f26 + ddef732, merge c02fecf);
   CI runs 43653618672 (build pass, 1m21s) and 43653778884
-  (build pass, 1m4s) green; merge SHA recorded in the
-  follow-up Work Log PR (CI run TBD).
+  (build pass, 1m4s) green; merge SHA recorded in follow-up
+  PR #8 (CI run TBD).
   Work Log row in the same PR. "First article due Nov 26"
   follow-up in Open is now DONE — pulled forward Nov 14.
 
