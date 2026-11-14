@@ -3,6 +3,33 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## 2026-11-14 — v0.1.2 shipped (smoke green, first verified version)
+
+- Owner: Implementation + Publish lead. State: DONE.
+  Evidence: repo `dzianisv/photo-backup`, tag `v0.1.2`,
+  APK https://github.com/dzianisv/photo-backup/releases/download/v0.1.2/app-release.apk
+  (11,535,007 bytes; aapt2: dev.dzianisv.snapdisk, versionCode 3,
+  versionName 0.1.2, minSdk 24, targetSdk 36).
+  CI: Release 43624496774 success, Smoke 43624496788 success
+  (13m59s; 20 instrumented tests, 0 failures, 0 errors, from the
+  run's `smoke-evidence` artifact — BackupEngine 10 + Notification
+  4 + Settings 2 + Billing 3 + 1 more, all green).
+  What v0.1.2 fixes over v0.1.1 (PR #2, merged 1324c75): the pause
+  race (engine re-checks paused/stopped after `input.read()` and
+  holds the chunk) and the double permission launchers (one
+  `RequestMultiplePermissions` call); instrumented pause test gets
+  the 200 ms settle; SettingsScreenTest grants both permissions up
+  front; smoke-test.sh keeps the emulator display on.
+  Screenshots: real `01-settings-defaults.png` from the v0.1.2
+  smoke artifact copied to `tool/play-store/screenshots/` and
+  viewed/verified; 4 notification screenshots still to capture.
+  v0.1.1 stays released but was never smoke-verified (boot flake
+  twice); v0.1.2 is the current shipped version.
+  Blocked (owner): Play Console account ($25 — the one remaining
+  Play gate), stable upload keystore, PostHog project, Sentry DSN,
+  real-device proof (Pixel 9a + real USB disk), sandbox Pro
+  purchase (needs the Play Console app + product).
+
 ## 2026-11-14 — v0.1.1 MVP shipped (v0.1.0 deleted, unannounced)
 
 - Owner: Implementation + Publish lead. State: DONE (GitHub Release
