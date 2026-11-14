@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -48,9 +47,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
+    // Kotlin jvmTarget follows the reference project (h264-converter):
+    // the Compose plugin registers the Kotlin extension; no kotlinOptions
+    // block is needed (default bytecode target is fine for this app).
     buildFeatures {
         compose = true
         buildConfig = true
