@@ -222,6 +222,9 @@ class BackupEngineTest {
         }
         Thread.sleep(300)
         control.paused = true
+        // Let the chunk already in flight land (one 5 ms read + write),
+        // so the snapshot below is the paused size, not a mid-flight one.
+        Thread.sleep(200)
         // While paused the copy writes to the .part file; the finished
         // destination must not exist yet and the .part size is frozen.
         assertFalse(dest.exists())
