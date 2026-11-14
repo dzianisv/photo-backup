@@ -28,7 +28,8 @@ state, evidence, date.
   docs/sitemap.xml, docs/llms.txt (Guides) and
   docs/llms-full.txt. applicationId untouched
   (dev.dzianisv.snapdisk). No money spent, no credentials used.
-  Evidence: PR #7 (commit TBD, merge TBD); CI run TBD green.
+  Evidence: PR #7 (commit 06c2f26, merge TBD); CI run 43653618672
+  green (Android PR, build pass, 1m21s).
   Work Log row in the same PR. "First article due Nov 26"
   follow-up in Open is now DONE — pulled forward Nov 14.
 
