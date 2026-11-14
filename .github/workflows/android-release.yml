@@ -1,0 +1,82 @@
+name: Android Release
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      KEYSTORE_PATH: ${{ github.workspace }}/upload.keystore
+      STORE_PASSWORD: ci-upload-pass
+      KEY_PASSWORD: ci-upload-pass
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - name: Install Android SDK components
+        run: |
+          echo "ANDROID_HOME=$ANDROID_HOME"
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 9.3.1
+      - name: Generate CI keystores
+        run: |
+          keytool -genkeypair -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Photo Backup CI, OU=CI, O=CI, L=CI, ST=CI, C=US" -noprompt
+          keytool -genkeypair -keystore upload.keystore -storepass ci-upload-pass -alias upload -keypass ci-upload-pass -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Photo Backup CI, OU=CI, O=CI, L=CI, ST=CI, C=US" -noprompt
+      - name: Unit tests
+        run: gradle testDebugUnitTest --no-daemon
+      - name: Build release APK
+        run: gradle assembleRelease --no-daemon
+      # Play Store needs an AAB, not the APK. Built from the same
+      # tag so the store build is byte-identical in code to the
+      # sideload APK. Signing note: CI signs with a throwaway
+      # keystore — the AAB is a build artifact, NOT the Play upload.
+      # The first Play upload must use a stable upload keystore
+      # (owner's custody — no Play Console account yet).
+      - name: Build release AAB (Play Store upload)
+        run: gradle bundleRelease --no-daemon
+      - name: Audit merged manifest in the built APK
+        run: |
+          AAPT2=$(ls "$ANDROID_HOME"/build-tools/*/aapt2 | sort -V | tail -1)
+          "$AAPT2" dump badging app/build/outputs/apk/release/app-release.apk | tee /tmp/badging.txt
+          grep -q "package: name='dev.dzianisv.snapdisk'" /tmp/badging.txt
+          grep -q "versionName='${GITHUB_REF_NAME#v}'" /tmp/badging.txt
+          grep -q "uses-permission: name='android.permission.POST_NOTIFICATIONS'" /tmp/badging.txt
+          grep -q "uses-permission: name='android.permission.FOREGROUND_SERVICE_DATA_SYNC'" /tmp/badging.txt
+          grep -q "uses-permission: name='android.permission.READ_MEDIA_IMAGES'" /tmp/badging.txt
+          grep -q "uses-permission: name='android.permission.READ_MEDIA_VIDEO'" /tmp/badging.txt
+          echo "Manifest audit passed"
+      - name: Audit foreground service + storage receiver in the built APK
+        run: |
+          AAPT2=$(ls "$ANDROID_HOME"/build-tools/*/aapt2 | sort -V | tail -1)
+          "$AAPT2" dump xmltree --file AndroidManifest.xml app/build/outputs/apk/release/app-release.apk | tee /tmp/manifest-tree.txt
+          grep -q "BackupService" /tmp/manifest-tree.txt
+          grep -q "StorageReceiver" /tmp/manifest-tree.txt
+          grep -q "BackupActionReceiver" /tmp/manifest-tree.txt
+          grep -q "android.hardware.usb.action.USB_DEVICE_ATTACHED" /tmp/manifest-tree.txt
+          grep -q "android.intent.action.MEDIA_MOUNTED" /tmp/manifest-tree.txt
+          echo "Foreground service + storage receiver present in shipped APK"
+      - name: Check release APK is not obfuscated
+        run: |
+          unzip -p app/build/outputs/apk/release/app-release.apk classes.dex | strings | grep -q 'Lkotlin/coroutines/Continuation;' && echo "dex not obfuscated (Continuation descriptor present)"
+      - uses: softprops/action-gh-release@v2
+        with:
+          name: Photo Backup ${{ github.ref_name }}
+          files: |
+            app/build/outputs/apk/release/app-release.apk
+            app/build/outputs/bundle/release/app-release.aab
+          generate_release_notes: true
+          body: |
+            Photo Backup ${{ github.ref_name }} — back up photos oldest-first from internal storage to an external disk, in the background (native Kotlin + Jetpack Compose, Material 3).
+
+            Disk connected → notification offers Backup; the copy runs as a foreground service with a progress notification (percent, copied/total, speed, ETA) + Pause/Stop. App opens to a settings screen only: From / To folders with folder pickers.
+
+            **Signing note:** this APK is signed with a throwaway keystore generated in CI. A future properly-signed build will need a reinstall, not an update.

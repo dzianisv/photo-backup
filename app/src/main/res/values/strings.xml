@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SnapDisk</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="choose_from_folder">Choose source folder</string>
+    <string name="choose_to_folder">Choose destination folder</string>
+    <string name="start_backup">Start backup</string>
+    <string name="backup">Backup</string>
+    <string name="cancel">Cancel</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="stop">Stop</string>
+    <string name="offer_title">External storage is connected</string>
+    <string name="offer_text">External storage is connected. Backup photos?</string>
+    <string name="notification_channel_name">SnapDisk</string>
+    <string name="notification_channel_description">Backup offers and copy progress</string>
+    <string name="scanning_photos">Finding photos…</string>
+    <string name="scanning_photos_detail">Listing photos and videos, oldest first</string>
+    <string name="backing_up_photos">Backing up photos</string>
+    <string name="backup_paused">Backup paused</string>
+    <string name="backup_done">Backup complete</string>
+    <string name="backup_done_detail">Backed up %1$d photos (%2$s)</string>
+    <string name="backup_done_detail_skipped">Backed up %1$d photos (%2$s), %3$d skipped</string>
+    <string name="backup_error">Backup failed</string>
+    <string name="backup_stopped">Backup stopped</string>
+    <string name="backup_stopped_detail">Backup stopped — %1$d photos copied (%2$s)</string>
+    <string name="paused_disk_removed">The disk was disconnected. Reconnect it and tap Resume — already-copied files are skipped.</string>
+    <string name="idle_explainer">Connect an external disk and tap Start backup. Photos and videos copy oldest first, in the background.</string>
+    <string name="notifications_denied_banner">Notifications are off, so no backup offer will pop up when you connect a disk. You can still back up from here.</string>
+    <string name="skipped_files_title">Skipped files</string>
+    <string name="error_title">Something went wrong</string>
+    <string name="show_details">Show details</string>
+    <string name="hide_details">Hide details</string>
+    <string name="copy_error">Copy error</string>
+    <string name="error_copied">Full error copied to clipboard</string>
+    <string name="limit_reached_title">Free backup limit reached</string>
+    <string name="limit_reached_detail">Free backup covers 5 GB per run. %1$s already backed up — upgrade to Pro for unlimited backup size and auto-backup when a disk is connected.</string>
+    <string name="pro_title">SnapDisk Pro</string>
+    <string name="pro_unlocked">Pro unlocked — auto-backup on connect and unlimited backup size are on.</string>
+    <string name="pro_pitch">Auto-backup when a disk is connected + unlimited backup size. One-time purchase, no subscription.</string>
+    <string name="pro_price">Upgrade to Pro — $9.99 once</string>
+    <string name="pro_unavailable">Pro is not available yet — the Play listing is still being set up.</string>
+    <string name="pro_purchase_started">Opening the Play purchase…</string>
+</resources>

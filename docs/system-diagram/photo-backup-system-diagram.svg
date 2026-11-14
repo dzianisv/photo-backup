@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1200" viewBox="0 0 2100 1200">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/></marker></defs>
+<rect x="0" y="0" width="2100" height="1200" fill="#FFFFFF"/>
+<text x="1050" y="54" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="34" font-weight="bold" fill="#0F172A" text-anchor="middle">Photo Backup — System Diagram</text>
+<text x="1050" y="94" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="20" fill="#475569" text-anchor="middle">dev.dzianisv.photobackup · Kotlin + Jetpack Compose · on-device, no cloud, no account · 2026-11-14</text>
+<text x="120" y="148" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="20" font-weight="bold" fill="#475569">1 · USER / TRIGGERS</text>
+<text x="120" y="316" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="20" font-weight="bold" fill="#475569">2 · UI</text>
+<text x="120" y="484" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="20" font-weight="bold" fill="#475569">3 · APP SERVICES</text>
+<text x="120" y="652" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="20" font-weight="bold" fill="#475569">4 · ENGINE</text>
+<text x="120" y="820" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="20" font-weight="bold" fill="#475569">5 · STORAGE</text>
+<line x1="370" y1="278" x2="370" y2="328" stroke="#334155" stroke-width="2.5" marker-end="url(#arr)"/>
+<line x1="1730" y1="278" x2="1730" y2="328" stroke="#334155" stroke-width="2.5" marker-end="url(#arr)"/>
+<line x1="1050" y1="278" x2="1050" y2="496" stroke="#334155" stroke-width="2.5" marker-end="url(#arr)"/>
+<path d="M 1150 496 V 470 H 1600 V 446" fill="none" stroke="#334155" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="1375" y="460" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="16" fill="#334155" text-anchor="middle">shows offer</text>
+<line x1="1730" y1="446" x2="1730" y2="496" stroke="#334155" stroke-width="2.5" marker-end="url(#arr)"/>
+<path d="M 120 387 H 70 V 891 H 112" fill="none" stroke="#334155" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="54" y="640" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="16" fill="#334155" text-anchor="middle" transform="rotate(-90 54 640)">reads / writes</text>
+<path d="M 1730 614 V 639 H 1050 V 656" fill="none" stroke="#334155" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="1390" y="630" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="16" fill="#334155" text-anchor="middle">starts copy</text>
+<line x1="1480" y1="723" x2="1308" y2="723" stroke="#334155" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="1394" y="712" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="16" fill="#334155" text-anchor="middle">photo list</text>
+<line x1="800" y1="723" x2="628" y2="723" stroke="#334155" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="714" y="712" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="16" fill="#334155" text-anchor="middle">on error</text>
+<line x1="1730" y1="782" x2="1730" y2="832" stroke="#334155" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="1744" y="814" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="16" fill="#334155" text-anchor="start">reads</text>
+<line x1="1050" y1="782" x2="1050" y2="832" stroke="#334155" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="1064" y="814" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="16" fill="#334155" text-anchor="start">writes</text>
+<rect x="120" y="160" width="500" height="118" rx="16" fill="#475569" stroke="#0F172A" stroke-width="2"/>
+<text x="370.0" y="215" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF" text-anchor="middle">User opens app</text>
+<text x="370.0" y="243" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">opens the Settings screen</text>
+<rect x="800" y="160" width="500" height="118" rx="16" fill="#475569" stroke="#0F172A" stroke-width="2"/>
+<text x="1050.0" y="215" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF" text-anchor="middle">USB disk connected</text>
+<text x="1050.0" y="243" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">OTG / USB storage attached</text>
+<rect x="1480" y="160" width="500" height="118" rx="16" fill="#475569" stroke="#0F172A" stroke-width="2"/>
+<text x="1730.0" y="215" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Notification tap · Backup</text>
+<text x="1730.0" y="243" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">user taps the Backup action</text>
+<rect x="120" y="328" width="500" height="118" rx="16" fill="#0F766E" stroke="#0F172A" stroke-width="2"/>
+<text x="370.0" y="370" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Settings screen</text>
+<text x="370.0" y="398" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">From /sdcard/DCIM · To /disk/DCIM</text>
+<text x="370.0" y="424" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">folder pickers via SAF document-tree</text>
+<rect x="1480" y="328" width="500" height="118" rx="16" fill="#0F766E" stroke="#0F172A" stroke-width="2"/>
+<text x="1730.0" y="370" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Notification</text>
+<text x="1730.0" y="398" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">offer · progress % · GB · MB/s · ETA</text>
+<text x="1730.0" y="424" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">Backup / Cancel · Pause / Stop</text>
+<rect x="120" y="496" width="500" height="118" rx="16" fill="#B45309" stroke="#0F172A" stroke-width="2"/>
+<text x="370.0" y="538" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF" text-anchor="middle">WorkManager</text>
+<text x="370.0" y="566" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">retry / scheduling</text>
+<text x="370.0" y="592" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">re-runs a failed backup</text>
+<rect x="800" y="496" width="500" height="118" rx="16" fill="#B45309" stroke="#0F172A" stroke-width="2"/>
+<text x="1050.0" y="538" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Storage detection</text>
+<text x="1050.0" y="566" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">StorageManager · USB</text>
+<text x="1050.0" y="592" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">ACTION_MEDIA_MOUNTED receiver</text>
+<rect x="1480" y="496" width="500" height="118" rx="16" fill="#B45309" stroke="#0F172A" stroke-width="2"/>
+<text x="1730.0" y="538" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ForegroundService</text>
+<text x="1730.0" y="566" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">backup service</text>
+<text x="1730.0" y="592" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">runs copy · posts progress</text>
+<rect x="120" y="664" width="500" height="118" rx="16" fill="#6D28D9" stroke="#0F172A" stroke-width="2"/>
+<text x="370.0" y="706" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Error capture</text>
+<text x="370.0" y="734" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">full detail, never truncated</text>
+<text x="370.0" y="760" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">surfaced in UI + logs</text>
+<rect x="800" y="664" width="500" height="118" rx="16" fill="#6D28D9" stroke="#0F172A" stroke-width="2"/>
+<text x="1050.0" y="706" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Copy engine</text>
+<text x="1050.0" y="734" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">copy · pause · stop · resume</text>
+<text x="1050.0" y="760" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">skip-if-exists · verify size</text>
+<rect x="1480" y="664" width="500" height="118" rx="16" fill="#6D28D9" stroke="#0F172A" stroke-width="2"/>
+<text x="1730.0" y="706" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF" text-anchor="middle">MediaStore scanner</text>
+<text x="1730.0" y="734" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">DATE_TAKEN ascending</text>
+<text x="1730.0" y="760" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">oldest photos first</text>
+<path d="M 120 846 L 120 936 A 250 14 0 0 0 620 936 L 620 846" fill="#1D4ED8" stroke="#0F172A" stroke-width="2"/>
+<ellipse cx="370.0" cy="846" rx="250.0" ry="14" fill="#FFFFFF" fill-opacity="0.25" stroke="#0F172A" stroke-width="2"/>
+<text x="370.0" y="881" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF" text-anchor="middle">App prefs</text>
+<text x="370.0" y="909" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">From/To URIs</text>
+<text x="370.0" y="935" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">last backup state</text>
+<path d="M 800 846 L 800 936 A 250 14 0 0 0 1300 936 L 1300 846" fill="#1D4ED8" stroke="#0F172A" stroke-width="2"/>
+<ellipse cx="1050.0" cy="846" rx="250.0" ry="14" fill="#FFFFFF" fill-opacity="0.25" stroke="#0F172A" stroke-width="2"/>
+<text x="1050.0" y="881" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF" text-anchor="middle">External disk</text>
+<text x="1050.0" y="909" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">/disk/DCIM</text>
+<text x="1050.0" y="935" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">backup destination</text>
+<path d="M 1480 846 L 1480 936 A 250 14 0 0 0 1980 936 L 1980 846" fill="#1D4ED8" stroke="#0F172A" stroke-width="2"/>
+<ellipse cx="1730.0" cy="846" rx="250.0" ry="14" fill="#FFFFFF" fill-opacity="0.25" stroke="#0F172A" stroke-width="2"/>
+<text x="1730.0" y="881" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Internal DCIM</text>
+<text x="1730.0" y="909" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">/sdcard/DCIM</text>
+<text x="1730.0" y="935" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#FFFFFF" text-anchor="middle">source photos</text>
+<rect x="120" y="988" width="1860" height="130" rx="16" fill="#FEF3C7" stroke="#DC2626" stroke-width="3"/>
+<text x="150" y="1024" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="21" font-weight="bold" fill="#991B1B">⚠ WATCH OUT</text>
+<text x="150" y="1056" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#451A03">Play Console account · upload keystore · Sentry DSN · PostHog — all owner-gated</text>
+<text x="150" y="1082" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#451A03">Real-disk OTG test on Pixel 9a unproven — “USB-OTG ready” stays unclaimed</text>
+<text x="150" y="1108" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="19" fill="#451A03">Name + payment model undecided — owner’s call</text>
+<text x="1050" y="1154" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="18" fill="#475569" text-anchor="middle">Rounded box = process / screen · Cylinder = stored data · Arrow = calls / uses / reads / writes</text>
+<text x="1050" y="1184" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-size="18" fill="#475569" text-anchor="middle">Slate = triggers · Teal = UI · Amber = app services · Violet = engine · Blue = storage — Source: owner wireframes v1 + products/photo-backup.md · Repo: dzianisv/photo-backup (to create)</text>
+</svg>
