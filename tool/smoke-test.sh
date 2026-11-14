@@ -2,10 +2,13 @@
 # Photo Backup emulator smoke test (run inside android-emulator-runner).
 # Runs the in-process Compose instrumented tests
 # (app/src/androidTest/.../SettingsScreenTest.kt +
-#  BackupEngineInstrumentedTest.kt + NotificationTest.kt) via
+#  BackupEngineInstrumentedTest.kt + NotificationTest.kt +
+#  NotificationScreenshotTest.kt + ProCardScreenshotTest.kt) via
 # connectedDebugAndroidTest — no uiautomator dumps, no adb UI
 # driving, which proved unreliable on the slow GitHub Actions
 # emulator (System UI ANRs, empty dumps for minutes at a time).
+# (The notification screenshot tests DO use UiDevice, but only to
+# open the shade and photograph it — no UI driving.)
 #
 # Evidence: everything lands in tool/smoke-screenshots/<run-id>/
 # (run-id is unique per run, so nothing is ever overwritten):
@@ -161,8 +164,10 @@ find "$OUT/screenshots" -name "*.png" 2>/dev/null | tee -a "$LOG" || true
 
 # --- Verdict: count the SMOKE lines + JUnit results ---
 say "JUnit XML results:"
-grep -h "tests=" app/build/outputs/androidTest-results/connected/*.xml 2>/dev/null | tee -a "$LOG" || say "no JUnit XML found"
+# AGP writes results to connected/debug/, not connected/.
+grep -h "testsuite name" app/build/outputs/androidTest-results/connected/debug/*.xml 2>/dev/null | tee -a "$LOG" || say "no JUnit XML found"
 say "SMOKE lines:"
-grep -h "SMOKE " app/build/outputs/androidTest-results/connected/*.xml 2>/dev/null | tee -a "$LOG" || true
+# println() output lands in the per-test logcat files, not the JUnit XML.
+grep -rh "System.out: SMOKE" app/build/outputs/androidTest-results/connected/debug/*/logcat-*.txt 2>/dev/null | sed 's/.*System.out: //' | tee -a "$LOG" || true
 
 exit "$RC"
