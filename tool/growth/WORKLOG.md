@@ -13,7 +13,22 @@ state, evidence, date.
   (11,535,003 bytes; aapt2: dev.dzianisv.snapdisk, versionCode 2,
   versionName 0.1.1, minSdk 24, targetSdk 36; apksigner verify OK).
   CI: PR 43621458782 success, Release 43621462565 success,
-  Smoke 43621462440 (see verdict).
+  Smoke 43621462440 FAILED — both attempts (1 + rerun) on the
+  emulator boot flake (`adb: device offline`, emulator never came
+  online; no instrumented test ran on the tag). No green tag smoke
+  yet: v0.1.1 is released but NOT smoke-verified.
+  The same code (v0.1.0) DID run the instrumented tests once, in
+  smoke run 43618997791, and found 2 real failures, fixed in open
+  PR #2 (`fix/smoke-pause-and-permissions`): (1) pause race — the
+  engine wrote one 4 KB chunk read while paused (expected 28672,
+  got 32768); (2) MainActivity fired two permission launchers
+  back-to-back, the second was dropped, the notifications dialog
+  blocked the settings screen (`No compose hierarchies found`).
+  PR #2 is green (PR run 43622332641) and its own smoke dispatch
+  43622646593 on the fixed branch PASSED. Next step (not done by
+  this lead — PR #2's session owns it): merge PR #2, tag v0.1.2
+  from main, verify its smoke run. Screenshots for the Play
+  package are still pending a green tag smoke run.
   v0.1.0 was tagged, then DELETED (never announced): its release run
   43618997754 failed lintVitalRelease (registerForActivityResult
   needs Fragment >= 1.3.0 — fixed by adding fragment-ktx 1.8.5),
