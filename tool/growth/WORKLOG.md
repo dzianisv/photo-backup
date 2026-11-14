@@ -3,6 +3,35 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## 2026-11-14 — First article live (seo-geo lane, pulled forward from Nov 26)
+
+- Owner: Growth lead (seo-geo lane). State: DONE.
+  Article: "How to back up photos to a USB drive without
+  uploading them" — https://dzianisv.github.io/photo-backup/backup-photos-to-usb.html
+  (docs/backup-photos-to-usb.html, mirrored on the Convert264
+  first-article pattern: same navy/cyan template, TL;DR answer
+  first, real steps, manual alternative, callout, footer link).
+  Targets the searches.md winners "photo backup to usb" and
+  "photos to usb". Content: SnapDisk v0.1.2 real steps (plug in,
+  tap Backup, oldest-first background copy, progress + Pause /
+  Stop, size-verified, resume on re-plug); free 5 GB per run
+  verified from code (ProPrefs.FREE_BACKUP_BYTES_LIMIT =
+  5L * 1024 * 1024 * 1024, enforced in BackupService.kt) — no
+  other numbers claimed, no download counts, no ratings. Manual
+  alternative: copy DCIM via the Files app, with its limits
+  (no resume, no verification) stated honestly. One real
+  screenshot only: docs/screenshots-03-progress.png, copied
+  from tool/play-store/screenshots/03-progress.png (real
+  12 MiB copy, 7%, measured live in smoke run 43644126583);
+  no mockups. JSON-LD Article + FAQPage + BreadcrumbList in
+  the head. Linked from the landing index footer, added to
+  docs/sitemap.xml, docs/llms.txt (Guides) and
+  docs/llms-full.txt. applicationId untouched
+  (dev.dzianisv.snapdisk). No money spent, no credentials used.
+  Evidence: PR #7 (commit TBD, merge TBD); CI run TBD green.
+  Work Log row in the same PR. "First article due Nov 26"
+  follow-up in Open is now DONE — pulled forward Nov 14.
+
 ## 2026-11-14 — Play screenshots 02–05 captured (smoke green, all 4 real)
 
 - Owner: Implementation lead. State: DONE.
@@ -140,8 +169,9 @@ state, evidence, date.
   added to `tool/play-store/listing.md`. Re-score after launch.
 - PRD + TDD + implementation spec + project doc DONE Nov 14
   (Notion, verified by re-fetch — links in the product file).
-- Follow-ups: NTFS read-only detection (needs real-disk test),
-  first article due Nov 26.
+- Follow-ups: NTFS read-only detection (needs real-disk test).
+  First article DONE Nov 14 (pulled forward from Nov 26 — see
+  entry above).
 
 ## 2026-11-14 — Landing page live (seo-geo lane)
 

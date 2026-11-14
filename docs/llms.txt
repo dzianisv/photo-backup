@@ -13,6 +13,10 @@
 - [Source code on GitHub](https://github.com/dzianisv/photo-backup): Kotlin + Jetpack Compose, Material 3.
 - [Privacy Policy](https://github.com/dzianisv/photo-backup/blob/main/PRIVACY.md): collects nothing — no account, no analytics, no ads, no internet permission.
 
+## Guides
+
+- [How to back up photos to a USB drive without uploading them](https://dzianisv.github.io/photo-backup/backup-photos-to-usb.html): plug in a USB drive, copy oldest-first with SnapDisk — or by hand in the Files app.
+
 ## Support
 
 - [Report an issue](https://github.com/dzianisv/photo-backup/issues): every report gets an answer.
