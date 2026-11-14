@@ -107,7 +107,9 @@ class MainActivity : ComponentActivity() {
         billing = BillingManager(this).apply {
             listener = object : BillingManager.Listener {
                 override fun onProChanged(isProNow: Boolean) {
-                    isPro = isProNow
+                    // Qualified: inside BillingManager.apply, bare `isPro`
+                    // would resolve to BillingManager's read-only val.
+                    this@MainActivity.isPro = isProNow
                 }
 
                 override fun onBillingUnavailable(message: String) {

@@ -27,6 +27,10 @@ class BillingManager(
     context: Context,
     private val prefs: ProPrefs = ProPrefs(context),
 ) {
+    // The constructor Context is not a property; keep the application
+    // context for BillingClient (line 60 used the bare parameter, which
+    // is out of scope in the function body).
+    private val appContext: Context = context.applicationContext
     interface Listener {
         fun onProChanged(isPro: Boolean)
         fun onBillingUnavailable(message: String)
@@ -57,7 +61,7 @@ class BillingManager(
             return
         }
         try {
-            client = BillingClient.newBuilder(context.applicationContext)
+            client = BillingClient.newBuilder(appContext)
                 .setListener(purchasesListener)
                 .enablePendingPurchases(
                     PendingPurchasesParams.newBuilder().enableOneTimeProducts().build(),
