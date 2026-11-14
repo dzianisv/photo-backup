@@ -18,8 +18,8 @@ Back up photos & videos to a USB disk. One tap, no cloud. (57 chars)
 ## Full description (4000 chars max)
 
 Plug in a USB disk. SnapDisk offers a backup in a notification —
-tap Backup and walk away. Photos and videos copy oldest-first to
-your disk, in the background, with a live progress notification
+tap Backup and walk away. Your photos and videos copy to USB
+oldest-first, in the background, with a live progress notification
 (percent, size, speed, time left) and Pause/Stop.
 
 - One tap: disk connected → notification → Backup. No account,
@@ -41,7 +41,7 @@ Free: manual backup, 5 GB per backup run.
 SnapDisk Pro ($9.99, one-time): auto-backup when a disk is
 connected + unlimited backup size. No subscription.
 
-SnapDisk is for anyone with a phone full of photos and a USB disk
+SnapDisk is the USB photo backup for anyone with a phone full of photos and a USB disk
 in a drawer: no cloud account, no subscription, no file-manager
 maze. Plug in, tap once, trust the counts.
 
