@@ -10,10 +10,17 @@ state, evidence, date.
   APK https://github.com/dzianisv/photo-backup/releases/download/v0.1.2/app-release.apk
   (11,535,007 bytes; aapt2: dev.dzianisv.snapdisk, versionCode 3,
   versionName 0.1.2, minSdk 24, targetSdk 36).
-  CI: Release 43624496774 success, Smoke 43624496788 success
-  (13m59s; 20 instrumented tests, 0 failures, 0 errors, from the
-  run's `smoke-evidence` artifact — BackupEngine 10 + Notification
-  4 + Settings 2 + Billing 3 + 1 more, all green).
+  CI: PR #2 (commits b0a9a63 + 5d16085, merge 1324c75; Android PR
+  first failed run 43622100612 on missing androidx.test:rules, then
+  green 17:42:52Z after 5d16085), branch smoke 43622646593 success
+  (10/10, 0 failures), Release 43624496774 success, tag Smoke
+  43624496788 success (13m59s; 10/10, 0 failures — BackupEngine 4
+  + Billing 2 + Notification 3 + Settings 1, from the run's
+  `smoke-evidence` artifact). Correction: the "20 instrumented
+  tests" count above double-counted branch + tag runs, and the
+  per-suite split (BackupEngine 10, Notification 4, Settings 2,
+  Billing 3) was wrong — each run has 10 tests with the split
+  above, verified from the JUnit XML.
   What v0.1.2 fixes over v0.1.1 (PR #2, merged 1324c75): the pause
   race (engine re-checks paused/stopped after `input.read()` and
   holds the chunk) and the double permission launchers (one
@@ -23,8 +30,11 @@ state, evidence, date.
   Screenshots: real `01-settings-defaults.png` from the v0.1.2
   smoke artifact copied to `tool/play-store/screenshots/` and
   viewed/verified; 4 notification screenshots still to capture.
-  v0.1.1 stays released but was never smoke-verified (boot flake
-  twice); v0.1.2 is the current shipped version.
+  v0.1.1 stays released but was never smoke-verified: its smoke
+  run 43621462440 attempt 2 ran all 10 tests and failed the same 2
+  (pause race + settings screen — JUnit XML in the run's
+  smoke-evidence artifact), so "boot flake twice, no test ran" was
+  wrong for attempt 2. v0.1.2 is the current shipped version.
   Blocked (owner): Play Console account ($25 — the one remaining
   Play gate), stable upload keystore, PostHog project, Sentry DSN,
   real-device proof (Pixel 9a + real USB disk), sandbox Pro
@@ -40,28 +50,29 @@ state, evidence, date.
   (11,535,003 bytes; aapt2: dev.dzianisv.snapdisk, versionCode 2,
   versionName 0.1.1, minSdk 24, targetSdk 36; apksigner verify OK).
   CI: PR 43621458782 success, Release 43621462565 success,
-  Smoke 43621462440 FAILED — both attempts (1 + rerun) on the
-  emulator boot flake (`adb: device offline`, emulator never came
-  online; no instrumented test ran on the tag). No green tag smoke
-  yet: v0.1.1 is released but NOT smoke-verified.
-  The same code (v0.1.0) DID run the instrumented tests once, in
-  smoke run 43618997791, and found 2 real failures, fixed in open
-  PR #2 (`fix/smoke-pause-and-permissions`): (1) pause race — the
-  engine wrote one 4 KB chunk read while paused (expected 28672,
-  got 32768); (2) MainActivity fired two permission launchers
-  back-to-back, the second was dropped, the notifications dialog
-  blocked the settings screen (`No compose hierarchies found`).
-  PR #2 is green (PR run 43622332641) and its own smoke dispatch
-  43622646593 on the fixed branch PASSED. Next step (not done by
-  this lead — PR #2's session owns it): merge PR #2, tag v0.1.2
-  from main, verify its smoke run. Screenshots for the Play
-  package are still pending a green tag smoke run.
+  Smoke 43621462440 FAILED — attempt 2 (rerun) ran all 10
+  instrumented tests: 8 passed, 2 failed (pauseResumeAndStop +
+  settingsScreenShowsDefaultFoldersStartAndPro, same as v0.1.0;
+  JUnit XML in the run's smoke-evidence artifact). The earlier
+  "both attempts failed on the boot flake, no test ran" note was
+  wrong for attempt 2; attempt 1's failure mode was not verified.
+  No green tag smoke for v0.1.1: it is released but NOT
+  smoke-verified; v0.1.2 is the first smoke-verified release.
+  The 2 real failures (found by v0.1.0 smoke run 43618997791):
+  (1) pause race — the engine wrote one 4 KB chunk read while
+  paused (expected 28672, got 32768); (2) MainActivity fired two
+  permission launchers back-to-back, the second was dropped, the
+  notifications dialog blocked the settings screen (`No compose
+  hierarchies found`). Both fixed in PR #2 (merge 1324c75); v0.1.2
+  (branch smoke 43622646593 10/10 + tag smoke 43624496788 10/10)
+  is green.
   v0.1.0 was tagged, then DELETED (never announced): its release run
   43618997754 failed lintVitalRelease (registerForActivityResult
   needs Fragment >= 1.3.0 — fixed by adding fragment-ktx 1.8.5),
-  and its smoke run 43618997791 failed on an emulator boot flake
-  (adb exit 1, emulator never reachable — no test ran, not an app
-  bug). Build fixes on the way to green: kotlin-jvm/android plugin
+  and its smoke run 43618997791 ran all 10 tests — 8 passed, 2
+  failed on real assertions (pause race, expected 28672 got 32768;
+  settings screen "No compose hierarchies found" after 154.5 s),
+  not a boot flake. Build fixes on the way to green: kotlin-jvm/android plugin
   collision (compose plugin already registers the `kotlin`
   extension — compose plugin only, no kotlinOptions), 4 compile
   errors (themes.xml Material3 parent, `isPro` scope in
