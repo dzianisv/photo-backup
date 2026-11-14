@@ -4,7 +4,6 @@
     android:height="24dp"
     android:viewportWidth="24"
     android:viewportHeight="24"
-    android:tint="?attr/colorControlNormal">
     <!-- Material "file download": arrow into a tray. -->
     <path
         android:fillColor="@android:color/white"
