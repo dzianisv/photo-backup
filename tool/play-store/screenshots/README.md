@@ -1,12 +1,18 @@
 # SnapDisk — Play screenshots
 
 Real screenshots from smoke-test runs only, never mockups.
-Filled after the first green smoke run.
 
-Planned (5, in listing order):
-1. `01-settings.png` — settings screen: From /sdcard/DCIM + To
-   /disk/DCIM pickers, Start backup, Pro card. Caption: "Pick your
-   folders once, then one tap".
+## Present (v0.1.2, smoke run 43624496788, green)
+
+1. `01-settings-defaults.png` — settings screen: From /sdcard/DCIM +
+   To /disk/DCIM pickers, Start backup, Pro card. Viewed and
+   verified 2026-11-14. Caption: "Pick your folders once, then one
+   tap".
+   Source: `tool/smoke-screenshots/43624496788-20261114-180942/screenshots/01-settings-defaults.png`
+   in the run's `smoke-evidence` artifact.
+
+## Still to capture (need a run that exercises them)
+
 2. `02-offer.png` — offer notification: "External storage is
    connected. Backup photos?" [Backup] [Cancel]. Caption: "Plug in a
    disk, tap Backup".
