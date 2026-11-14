@@ -134,10 +134,18 @@ state, evidence, date.
   present, robots.txt / sitemap.xml / llms.txt / screenshot all 200.
   Landing-done checklist: page live at canonical URL ✓; title <60
   and meta description <160 ✓; robots.txt, sitemap.xml, llms.txt
-  present and correct ✓; schema validated by JSON parse (Rich
-  Results Test not run — needs no account, still unrun) ◐; page
+  present and correct ✓; schema validated by JSON parse + Rich
+  Results Test VALID Nov 14 ✓ (see below); page
   renders without JS ✓ (verified over local HTTP + live fetch).
+  Rich Results Test RUN Nov 14 (13:26 PST, no account, no sitemap
+  submitted): VALID — 1 valid item (SoftwareApplication: SnapDisk,
+  UtilitiesApplication, Android, 0.1.2, $0, author Dzianis
+  Vashchuk, downloadUrl = v0.1.2 APK), 0 errors; 1 optional
+  warning only (aggregateRating missing — expected, no ratings
+  yet). FAQPage JSON-LD present in code (2nd @graph node) but not
+  surfaced as a detected item by the tool; no error on it.
+  Result: https://search.google.com/test/rich-results/result?id=DSSfoBC4CKgasjyPQ-FYIA
   STILL OPEN: sitemap submitted to Google Search Console and Bing
   Webmaster Tools — blocked, needs the owner's Google account;
-  do not submit anything that needs his credentials. Rich Results
-  Test validation unrun. Re-score keywords after launch.
+  do not submit anything that needs his credentials.
+  Re-score keywords after launch.
