@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SnapDisk – Photo Backup to USB</title>
+<meta name="description" content="Back up photos and videos to a USB disk. One tap, no cloud, no account. SnapDisk for Android — free, with a one-time Pro unlock.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/">
+<meta property="og:title" content="SnapDisk – Photo Backup to USB">
+<meta property="og:description" content="Back up photos and videos to a USB disk. One tap, no cloud, no account. SnapDisk for Android — free, with a one-time Pro unlock.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://dzianisv.github.io/photo-backup/#app",
+      "name": "SnapDisk",
+      "alternateName": "SnapDisk – Photo Backup to USB",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Android",
+      "softwareVersion": "0.1.2",
+      "description": "Back up photos and videos to a USB disk. One tap, no cloud, no account. Free core with a one-time Pro unlock.",
+      "url": "https://dzianisv.github.io/photo-backup/",
+      "downloadUrl": "https://github.com/dzianisv/photo-backup/releases/download/v0.1.2/app-release.apk",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase that adds auto-backup when a disk is connected and unlimited backup size. There is no subscription."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does SnapDisk upload my photos anywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Copying runs entirely on your device, from your internal storage to the external disk you choose. The app has no internet permission, so your photos cannot leave your device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does a backup start?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plug in a USB disk and SnapDisk offers a backup in a notification. Tap Backup and walk away — photos and videos copy oldest-first, in the background, with a live progress notification."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I unplug the disk mid-copy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The backup pauses with the full error shown and resumes where it stopped when the disk is back. Files that already copied are never copied twice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the APK from this page. It needs Android 7.0 or later."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Something does not work. Where do I report it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open an issue on GitHub — every report gets an answer: https://github.com/dzianisv/photo-backup/issues"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:960px; margin:0 auto; padding:0 20px; }
+  header { padding:64px 0 32px; text-align:center; }
+  header img.logo { width:120px; height:120px; border-radius:28px; }
+  h1 { font-size:44px; line-height:1.15; margin:20px 0 12px; }
+  h1 span { background:linear-gradient(90deg,var(--cyan),var(--purple)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .tagline { font-size:20px; color:var(--grey); max-width:640px; margin:0 auto; }
+  .tldr { font-size:15px; color:var(--grey); max-width:640px; margin:16px auto 0; }
+  .tldr strong { color:var(--white); }
+  .cta { margin:32px 0 12px; }
+  .btn { display:inline-block; background:linear-gradient(90deg,var(--cyan),var(--purple)); color:#0f172a; font-weight:700; font-size:18px; padding:14px 32px; border-radius:999px; text-decoration:none; }
+  .btn:hover { opacity:.9; }
+  .note { font-size:14px; color:var(--grey); }
+  section { padding:48px 0; }
+  h2 { font-size:28px; margin-bottom:20px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+  .card { background:var(--navy2); border-radius:16px; padding:20px; }
+  .card h3 { font-size:17px; margin-bottom:8px; }
+  .card p, .card li { color:var(--grey); font-size:15px; }
+  .card ul { list-style:none; }
+  .card li::before { content:"· "; color:var(--cyan); }
+  .steps { counter-reset:step; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+  .step { background:var(--navy2); border-radius:16px; padding:20px; }
+  .step::before { counter-increment:step; content:counter(step); display:inline-block; width:32px; height:32px; line-height:32px; text-align:center; border-radius:50%; background:linear-gradient(135deg,var(--cyan),var(--purple)); color:#0f172a; font-weight:700; margin-bottom:10px; }
+  .shot { max-width:320px; margin:0 auto; }
+  .shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  .shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  .price { font-size:32px; font-weight:700; margin-bottom:4px; }
+  .price span { font-size:16px; font-weight:400; color:var(--grey); }
+  details { background:var(--navy2); border-radius:12px; padding:16px 20px; margin-bottom:12px; }
+  summary { font-weight:600; cursor:pointer; }
+  details p { color:var(--grey); font-size:15px; margin-top:8px; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <img class="logo" src="icon-512.png" alt="SnapDisk icon" width="120" height="120">
+  <h1>Back up photos to USB.<br><span>One tap. No cloud.</span></h1>
+  <p class="tagline">Plug in a USB disk. Tap once. Done.</p>
+  <p class="tldr"><strong>TL;DR:</strong> SnapDisk backs up your photos and videos to a USB disk, oldest first, in the background — no account, no cloud, no ads. Free, with a one-time $9.99 Pro unlock.</p>
+  <div class="cta">
+    <a class="btn" href="https://github.com/dzianisv/photo-backup/releases/download/v0.1.2/app-release.apk">Get started free — Download v0.1.2 (APK, 11&nbsp;MB)</a>
+  </div>
+  <p class="note">Android 7.0 and later. Coming soon to Google Play — until then, install the APK directly.</p>
+</header>
+
+<section>
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step"><strong>Plug in a USB disk.</strong><p>SnapDisk offers a backup in a notification: “External storage is connected. Backup photos?”</p></div>
+    <div class="step"><strong>Tap Backup.</strong><p>Photos and videos copy oldest-first, in the background, with a live progress notification — percent, size, speed, time left — and Pause / Stop.</p></div>
+    <div class="step"><strong>Trust the counts.</strong><p>Every file is size-verified after copying. Unplug mid-copy and it pauses, then resumes where it stopped. Already-copied files are never copied twice.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>What you get</h2>
+  <div class="grid">
+    <div class="card"><h3>One tap</h3><p>Disk connected → notification → Backup. No account, no cloud, no upload — everything stays on your devices.</p></div>
+    <div class="card"><h3>Oldest first</h3><p>Your earliest photos copy first, and the folder structure is kept (Camera, Screenshots, …).</p></div>
+    <div class="card"><h3>Honest progress</h3><p>The notification shows real percent, copied / total size, speed and time left. Pause and resume any time.</p></div>
+    <div class="card"><h3>Proves it copied</h3><p>Every file is size-verified after copying. A bad file is retried once, then skipped with its reason — it never stalls the whole backup.</p></div>
+    <div class="card"><h3>Full errors, not one line</h3><p>A file too big for FAT32 is skipped and listed, not a dead end. Errors show the full error with Copy.</p></div>
+    <div class="card"><h3>Simple settings</h3><p>Open the app and you get a settings screen only: a From folder and a To folder, each with a folder picker.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Screenshot</h2>
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk settings screen — From and To folders with pickers" loading="lazy">
+    <figcaption>Settings screen — From and To folders, with pickers. Real screenshot from the v0.1.2 smoke test.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Pricing</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Free</h3>
+      <p class="price">$0</p>
+      <ul>
+        <li>Manual backup of photos and videos</li>
+        <li>Oldest first, background copy</li>
+        <li>5 GB per backup run</li>
+        <li>No ads, no account, no cloud</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>SnapDisk Pro</h3>
+      <p class="price">$9.99 <span>one-time</span></p>
+      <ul>
+        <li>Auto-backup when a disk is connected</li>
+        <li>Unlimited backup size</li>
+        <li>Everything in Free</li>
+        <li>No subscription</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Privacy</h2>
+  <p style="color:var(--grey); max-width:640px;">SnapDisk has no account, no ads, and no tracking. Copying runs entirely on your phone — the app does not even have internet permission, so your photos cannot leave your device. Full text: <a href="https://github.com/dzianisv/photo-backup/blob/main/PRIVACY.md">Privacy Policy</a>.</p>
+</section>
+
+<section id="faq">
+  <h2>Questions</h2>
+  <details><summary>Is SnapDisk really free?</summary><p>Yes. The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase that adds auto-backup when a disk is connected and unlimited backup size. There is no subscription.</p></details>
+  <details><summary>Does SnapDisk upload my photos anywhere?</summary><p>No. Copying runs entirely on your device, from your internal storage to the external disk you choose. The app has no internet permission, so your photos cannot leave your device.</p></details>
+  <details><summary>How does a backup start?</summary><p>Plug in a USB disk and SnapDisk offers a backup in a notification. Tap Backup and walk away — photos and videos copy oldest-first, in the background, with a live progress notification.</p></details>
+  <details><summary>What happens if I unplug the disk mid-copy?</summary><p>The backup pauses with the full error shown and resumes where it stopped when the disk is back. Files that already copied are never copied twice.</p></details>
+  <details><summary>Is SnapDisk on Google Play yet?</summary><p>Not yet — the Play listing is being prepared. Until then, install the APK from this page. It needs Android 7.0 or later.</p></details>
+  <details><summary>Something does not work. Where do I report it?</summary><p>Open an issue on GitHub — every report gets an answer: <a href="https://github.com/dzianisv/photo-backup/issues">github.com/dzianisv/photo-backup/issues</a>.</p></details>
+</section>
+
+<footer>
+  <p>SnapDisk — photo backup to USB for Android.</p>
+  <p><a href="https://github.com/dzianisv/photo-backup">GitHub</a><a href="https://github.com/dzianisv/photo-backup/releases">Releases</a><a href="https://github.com/dzianisv/photo-backup/blob/main/PRIVACY.md">Privacy Policy</a></p>
+</footer>
+
+</div>
+</body>
+</html>
