@@ -106,7 +106,10 @@ state, evidence, date.
 
 - Discovery done: competitor study + name check committed
   (`tool/growth/competitors.md` — discovery lead, Nov 14).
-  Keyword scoring (searches.md) still to do.
-- PRD: draft alongside this build (owner 24h window).
+  Keyword scoring DONE Nov 14 (commit 07f7171, CI 43626786426
+  green): 7 queries scored in `tool/growth/searches.md`, winners
+  added to `tool/play-store/listing.md`. Re-score after launch.
+- PRD + TDD + implementation spec + project doc DONE Nov 14
+  (Notion, verified by re-fetch — links in the product file).
 - Follow-ups: NTFS read-only detection (needs real-disk test),
-  keyword scoring due Nov 20, first article due Nov 26.
+  first article due Nov 26.
