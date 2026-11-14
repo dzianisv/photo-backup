@@ -3,6 +3,34 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## 2026-11-14 — Play screenshots 02–05 captured (smoke green, all 4 real)
+
+- Owner: Implementation lead. State: DONE.
+  Evidence: PR #6 (commits b2557ed + 7e8a8c4, merge 7a2bbfa);
+  Android PR green 43643647911 (3m8s) then 43646434186 (3m36s)
+  after the screenshot commit; branch smoke 43644126583 success
+  (23m7s; 14/14, 0 failures — BackupEngine 4 + Billing 2 +
+  Notification 3 + NotificationScreenshot 3 + ProCardScreenshot 1
+  + Settings 1, from the run's `smoke-evidence` artifact).
+  Screenshots (all viewed + verified 2026-11-14, copied from the
+  smoke artifact to `tool/play-store/screenshots/`):
+  02-offer (real offer notification in the shade — production post
+  path; the emulator has no USB mount event, so the mount trigger
+  itself is not exercised), 03-progress (mid-copy of a real 12 MiB
+  file — 7%, 872.0 KB/12.0 MB, 168.6 KB/s, ETA 1m, all measured
+  live; copy finished + verified after the shot), 04-done (real
+  3-file copy — "Backed up 3 photos (585.9 KB)"), 05-pro (real
+  SettingsScreen with the billing-connected state injected —
+  emulator has no Play Store, so the $9.99 button state is
+  labelled in the screenshots README; replace with a live-billing
+  shot on a real device once the Play listing + `pro_unlock`
+  exist). Play screenshot set now complete (01–05); all 5 are
+  emulator shots, interim until Pixel 9a + real-disk shots exist.
+  Also fixed smoke-test.sh verdict greps (JUnit XML is under
+  connected/debug/, SMOKE lines in per-test logcat files — the old
+  greps printed nothing). No production code changed, no version
+  bump (v0.1.2 still current), applicationId untouched.
+
 ## 2026-11-14 — v0.1.2 shipped (smoke green, first verified version)
 
 - Owner: Implementation + Publish lead. State: DONE.
@@ -29,7 +57,8 @@ state, evidence, date.
   front; smoke-test.sh keeps the emulator display on.
   Screenshots: real `01-settings-defaults.png` from the v0.1.2
   smoke artifact copied to `tool/play-store/screenshots/` and
-  viewed/verified; 4 notification screenshots still to capture.
+  viewed/verified; the remaining 4 (02–05) were captured later the
+  same day from green smoke 43644126583 — see the entry above.
   v0.1.1 stays released but was never smoke-verified: its smoke
   run 43621462440 attempt 2 ran all 10 tests and failed the same 2
   (pause race + settings screen — JUnit XML in the run's
