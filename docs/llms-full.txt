@@ -1,0 +1,45 @@
+# SnapDisk — Photo Backup to USB
+
+SnapDisk is a free Android app that backs up photos and videos to a USB disk. Plug in a USB disk, tap Backup in the notification, and photos copy oldest-first in the background — no account, no cloud, no ads. Free core (manual backup, 5 GB per run); SnapDisk Pro is a one-time $9.99 purchase for auto-backup on disk connect and unlimited backup size.
+
+## How it works
+
+1. Plug in a USB disk. SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"
+2. Tap Backup. Photos and videos copy oldest-first, in the background, with a live progress notification — percent, size, speed, time left — and Pause / Stop.
+3. Trust the counts. Every file is size-verified after copying. Unplug mid-copy and it pauses, then resumes where it stopped. Already-copied files are never copied twice.
+
+## What you get
+
+- One tap: disk connected, notification, Backup. No account, no cloud, no upload — everything stays on your devices.
+- Oldest first: your earliest photos copy first, and the folder structure is kept (Camera, Screenshots, …).
+- Honest progress: the notification shows real percent, copied / total size, speed and time left. Pause and resume any time.
+- Proves it copied: every file is size-verified after copying. A bad file is retried once, then skipped with its reason — it never stalls the whole backup.
+- Full errors, not one line: a file too big for FAT32 is skipped and listed, not a dead end. Errors show the full error with Copy.
+- Simple settings: open the app and you get a settings screen only — a From folder and a To folder, each with a folder picker.
+
+## Pricing
+
+- Free ($0): manual backup of photos and videos, oldest first, background copy, 5 GB per backup run. No ads, no account, no cloud.
+- SnapDisk Pro ($9.99, one-time): auto-backup when a disk is connected, unlimited backup size, everything in Free. No subscription.
+
+## Privacy
+
+SnapDisk has no account, no ads, and no tracking. Copying runs entirely on your phone — the app does not even have internet permission, so your photos cannot leave your device. Full text: https://github.com/dzianisv/photo-backup/blob/main/PRIVACY.md
+
+## Questions
+
+- Is SnapDisk really free? Yes. The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase that adds auto-backup when a disk is connected and unlimited backup size. There is no subscription.
+- Does SnapDisk upload my photos anywhere? No. Copying runs entirely on your device, from your internal storage to the external disk you choose. The app has no internet permission, so your photos cannot leave your device.
+- How does a backup start? Plug in a USB disk and SnapDisk offers a backup in a notification. Tap Backup and walk away — photos and videos copy oldest-first, in the background, with a live progress notification.
+- What happens if I unplug the disk mid-copy? The backup pauses with the full error shown and resumes where it stopped when the disk is back. Files that already copied are never copied twice.
+- Is SnapDisk on Google Play yet? Not yet — the Play listing is being prepared. Until then, install the APK from this page. It needs Android 7.0 or later.
+- Something does not work. Where do I report it? Open an issue on GitHub — every report gets an answer: https://github.com/dzianisv/photo-backup/issues
+
+## Links
+
+- Landing page: https://dzianisv.github.io/photo-backup/
+- Download v0.1.2 (APK, 11 MB): https://github.com/dzianisv/photo-backup/releases/download/v0.1.2/app-release.apk
+- All releases: https://github.com/dzianisv/photo-backup/releases
+- Source code: https://github.com/dzianisv/photo-backup
+- Privacy Policy: https://github.com/dzianisv/photo-backup/blob/main/PRIVACY.md
+- Issues: https://github.com/dzianisv/photo-backup/issues
