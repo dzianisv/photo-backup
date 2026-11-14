@@ -113,3 +113,31 @@ state, evidence, date.
   (Notion, verified by re-fetch — links in the product file).
 - Follow-ups: NTFS read-only detection (needs real-disk test),
   first article due Nov 26.
+
+## 2026-11-14 — Landing page live (seo-geo lane)
+
+- Owner: Product Lead agent. State: DONE (page live, verified by fetch).
+  Live URL: https://dzianisv.github.io/photo-backup/ (GitHub Pages,
+  main branch, /docs folder; enabled via API after merge).
+  What shipped: docs/index.html (static, semantic HTML, one H1,
+  title 30 chars, meta description 128 chars, tagline 8 words,
+  real v0.1.2 settings screenshot above the fold, pricing shown
+  Free + Pro $9.99 one-time, CTA "Get started free"), docs/robots.txt
+  (AI crawlers allowed by name), docs/sitemap.xml, docs/llms.txt +
+  docs/llms-full.txt, JSON-LD SoftwareApplication + FAQPage
+  (validated by parse), icon + feature graphic copied to docs/.
+  Copy matches tool/play-store/listing.md; no invented numbers,
+  ratings, or download counts.
+  Evidence: PR #3 (commit 48ba788, merge 1ae0e7f, merged
+  2026-11-14T20:31:31Z); CI run 43637755510 build pass (1m0s);
+  live fetch after Pages enable: index 200 with title + CTA
+  present, robots.txt / sitemap.xml / llms.txt / screenshot all 200.
+  Landing-done checklist: page live at canonical URL ✓; title <60
+  and meta description <160 ✓; robots.txt, sitemap.xml, llms.txt
+  present and correct ✓; schema validated by JSON parse (Rich
+  Results Test not run — needs no account, still unrun) ◐; page
+  renders without JS ✓ (verified over local HTTP + live fetch).
+  STILL OPEN: sitemap submitted to Google Search Console and Bing
+  Webmaster Tools — blocked, needs the owner's Google account;
+  do not submit anything that needs his credentials. Rich Results
+  Test validation unrun. Re-score keywords after launch.
