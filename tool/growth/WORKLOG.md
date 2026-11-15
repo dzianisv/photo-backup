@@ -33,7 +33,7 @@ state, evidence, date.
   Evidence: PR #9 (commits 1e11fd5 + dec2618, merge da67bac);
   CI runs 43658403126 (build pass, 1m20s) and 43658555360
   (build pass) green; merge SHA recorded in follow-up PR #10
-  (CI run TBD green). Work Log row in the same PR. "Second
+  (CI run 43658798347 green). Work Log row in the same PR. "Second
   article due Nov 26" follow-up in Open is now DONE — pulled
   forward Nov 14.
 
