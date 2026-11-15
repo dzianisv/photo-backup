@@ -5,7 +5,7 @@
   <link>https://dzianisv.github.io/photo-backup/blog/</link>
   <description>How to back up photos to a USB drive on Android — no cloud, no account, no upload.</description>
   <language>en</language>
-  <lastBuildDate>Sat, 14 Nov 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 15 Nov 2026 00:00:00 +0000</lastBuildDate>
   <item>
     <title>How to back up photos to a USB drive without uploading them</title>
     <link>https://dzianisv.github.io/photo-backup/backup-photos-to-usb.html</link>
@@ -40,6 +40,13 @@
     <guid>https://dzianisv.github.io/photo-backup/backup-photos-offline.html</guid>
     <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
     <description>Most "backup" apps start by uploading your photos to someone else's server. An offline backup never does: your photos copy from your phone straight to a drive you can hold, with no account, no upload, and nothing to log into.</description>
+  </item>
+  <item>
+    <title>How to back up photos to an external drive on Android</title>
+    <link>https://dzianisv.github.io/photo-backup/backup-photos-to-external-drive.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/backup-photos-to-external-drive.html</guid>
+    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    <description>An external drive is the simplest photo backup there is: a drive you can hold, with your photos on it, and no cloud in between. On Android the drive plugs straight into the phone — no computer needed.</description>
   </item>
 </channel>
 </rss>

@@ -3,6 +3,47 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## 2026-11-15 — Sixth article live (seo-geo lane, pulled forward from Nov 26)
+
+- Owner: Growth lead (seo-geo lane). State: DONE (pending live
+  verification after merge — PR number + CI run + live fetch
+  recorded below on merge).
+  Article: "How to back up photos to an external drive on Android" —
+  https://dzianisv.github.io/photo-backup/backup-photos-to-external-drive.html
+  (docs/backup-photos-to-external-drive.html, same navy/cyan template as
+  the first five articles, TL;DR answer first, real steps, manual
+  alternative, callout, footer link). Targets the searches.md
+  query 2 phrase "backup photos to external drive android" — MEDIUM
+  difficulty, broader intent, full-description phrase — framed honestly
+  as a how-to article, no search-volume, demand, download, or rating
+  claims.
+  Content: SnapDisk v0.1.2 real steps (plug in, tap Backup,
+  oldest-first background copy, progress + Pause / Stop,
+  size-verified, resume on re-plug); free 5 GB per run verified
+  from code (ProPrefs.FREE_BACKUP_BYTES_LIMIT =
+  5L * 1024 * 1024 * 1024, enforced in BackupService.kt) — no
+  other numbers claimed, no download counts, no ratings. "No
+  internet permission" verified from
+  app/src/main/AndroidManifest.xml (no INTERNET permission
+  declared). Manual alternative: copy photos via the Files app,
+  with its limits (no resume, no verification) stated honestly.
+  One real screenshot only: docs/screenshots-05-pro.png,
+  copied from tool/play-store/screenshots/05-pro.png (the real
+  SettingsScreen Pro card — auto-backup + unlimited, $9.99 once;
+  the only screenshot not already used as a lead shot by another
+  article; note per tool/play-store/screenshots/README.md the
+  billing-connected state is rendered, not reached through the
+  live billing flow — replace with a shot through live billing
+  on a real device once the Play listing + `pro_unlock` product
+  exist). No mockups. JSON-LD Article + FAQPage +
+  BreadcrumbList in the head. Linked from the landing index
+  footer, added to docs/sitemap.xml, docs/blog/index.html (list +
+  JSON-LD blogPost), docs/feed.xml, docs/llms.txt (Guides)
+  and docs/llms-full.txt. applicationId untouched
+  (dev.dzianisv.snapdisk). No money spent, no credentials used.
+  Evidence: PR #TBD (commit TBD, merge TBD); CI run TBD green.
+  Merge SHA + live fetch recorded in follow-up PR #TBD.
+
 ## 2026-11-14 — Landing hero screenshot swapped to progress notification (owner feedback)
 
 - Owner: Growth lead (seo-geo lane). State: DONE (pending live

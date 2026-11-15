@@ -20,6 +20,7 @@
 - [How to back up DCIM to OTG storage on Android](https://dzianisv.github.io/photo-backup/backup-dcim-to-otg.html): back up the DCIM folder to an OTG drive with SnapDisk, or by hand in the Files app.
 - [How to copy photos to a USB stick on Android](https://dzianisv.github.io/photo-backup/copy-photos-to-usb-stick.html): copy photos to a USB stick with SnapDisk in one tap, or by hand in the Files app.
 - [How to back up photos offline on Android — no cloud, no account](https://dzianisv.github.io/photo-backup/backup-photos-offline.html): back up photos offline with no cloud, no account, and no upload — SnapDisk, or by hand in the Files app.
+- [How to back up photos to an external drive on Android](https://dzianisv.github.io/photo-backup/backup-photos-to-external-drive.html): back up photos to an external drive with SnapDisk, or by hand in the Files app.
 
 ## Blog
 
