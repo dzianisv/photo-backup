@@ -33,7 +33,7 @@ state, evidence, date.
   untouched (dev.dzianisv.snapdisk). No money spent, no
   credentials used.
   Evidence: PR #11 (commits 51cf782 + 18ff5a0, merge
-  <merge-sha>); CI run 43663465126 (build pass, 1m8s) green.
+  89bd5db); CI run 43663465126 (build pass, 1m8s) green.
   Merge SHA recorded in follow-up PR #12. Work Log row
   in the same PR.
 
