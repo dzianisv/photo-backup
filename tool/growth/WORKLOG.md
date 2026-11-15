@@ -3,6 +3,23 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## 2026-11-14 — Landing hero screenshot swapped to progress notification (owner feedback)
+
+- Owner: Growth lead (seo-geo lane). State: DONE (pending live
+  verification after merge — PR number + CI run + live fetch
+  recorded below on merge).
+  Owner feedback Nov 14 (side chat, with screenshot): the progress
+  notification shot "seems to be a better screenshot for a main page"
+  than the settings screen. The image he sent is pixel-identical
+  (PIL diff: max channel diff 0) to the repo's existing
+  docs/screenshots-03-progress.png — the real v0.1.2 smoke-test
+  shot of "Backing up photos — 7%, 872.0 KB/12.0 MB, 168.6 KB/s,
+  ETA 1m" with Pause / Stop — so no new file was needed.
+  Change: docs/index.html Screenshot section now leads with
+  screenshots-03-progress.png (new alt + caption); the settings
+  screenshot stays as a second figure. applicationId untouched
+  (dev.dzianisv.snapdisk). No money spent, no credentials used.
+
 ## 2026-11-14 — Blog home + RSS on GitHub Pages (owner instruction: real blog, not Muse pages)
 
 - Owner: Growth lead (seo-geo lane). State: DONE (pending live
