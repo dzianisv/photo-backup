@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to back up DCIM to OTG storage on Android — SnapDisk</title>
+<meta name="description" content="Back up DCIM to OTG storage on Android: plug a USB drive into your phone and copy the DCIM folder to it. SnapDisk does it oldest-first — or use the Files app.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/backup-dcim-to-otg.html">
+<meta property="og:title" content="How to back up DCIM to OTG storage on Android">
+<meta property="og:description" content="Back up DCIM to OTG storage on Android: plug a USB drive into your phone and copy the DCIM folder to it. SnapDisk does it oldest-first — or use the Files app.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/backup-dcim-to-otg.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/backup-dcim-to-otg.html#article",
+      "headline": "How to back up DCIM to OTG storage on Android",
+      "description": "Back up DCIM to OTG storage on Android: plug a USB drive into your phone and copy the DCIM folder to it. SnapDisk does it oldest-first — or use the Files app.",
+      "datePublished": "2026-11-14",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/backup-dcim-to-otg.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/backup-dcim-to-otg.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is the DCIM folder on Android?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DCIM is the folder where Android keeps camera photos and videos, at /sdcard/DCIM. Camera shots are in DCIM/Camera and screenshots in DCIM/Screenshots. SnapDisk backs up from /sdcard/DCIM by default, so you do not have to find the folder yourself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is OTG storage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OTG (USB On-The-Go) lets an Android phone act as the host for a USB drive: plug the drive in — directly, or through a USB-C OTG adapter — and the phone reads it like a computer would. Most modern Android phones support OTG."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free with SnapDisk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase that adds auto-backup when a disk is connected and unlimited backup size. There is no subscription."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/backup-dcim-to-otg.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How to back up DCIM to OTG storage on Android",
+          "item": "https://dzianisv.github.io/photo-backup/backup-dcim-to-otg.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a>
+  <h1>How to back up DCIM to OTG storage on Android</h1>
+  <p class="dek">DCIM is where your Android phone keeps its camera photos — and OTG is how a USB drive plugs straight into that phone. Put the two together and your whole camera roll copies to a drive you can hold, with no computer and no upload in between.</p>
+  <p class="meta">November 14, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> To back up DCIM to OTG storage on Android, plug a USB drive into your phone through an OTG adapter and copy the DCIM folder to it. The easy way is <a href="./">SnapDisk</a>: plug in the drive, tap <strong>Backup</strong> in the notification, and your photos and videos copy oldest-first in the background, with live progress and Pause / Stop. The free version covers 5 GB per run; Pro is a one-time $9.99 for auto-backup on connect and unlimited size. If you'd rather do it by hand, the Files app does the same copy — just slower and with no resume if you unplug mid-copy.</p>
+
+  <h2>What DCIM and OTG mean</h2>
+  <ul>
+    <li><strong>DCIM</strong> is the folder Android uses for camera photos and videos, at <strong>/sdcard/DCIM</strong>. Camera shots live in DCIM → Camera; screenshots in DCIM → Screenshots. If you back up DCIM, you back up the camera roll.</li>
+    <li><strong>OTG (USB On-The-Go)</strong> lets your phone act as the host for a USB drive. Plug the drive in — directly if it's USB-C, or through a USB-C OTG adapter for a regular USB stick — and the phone reads it like a computer would. Most modern Android phones support OTG; if the phone doesn't see the drive, try a different adapter.</li>
+  </ul>
+  <p>One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li><strong>An Android phone</strong> (Android 7.0 or later for SnapDisk).</li>
+    <li><strong>An OTG drive your phone can read</strong> — a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter. A spinning hard drive may need its own power.</li>
+    <li><strong>Enough space on the drive</strong> for the DCIM folder you want to keep. Check the drive's free space first — a phone's camera roll is often tens of gigabytes.</li>
+  </ul>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the <a href="https://github.com/dzianisv/photo-backup/releases/download/v0.1.2/app-release.apk">v0.1.2 APK</a> (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the OTG drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"</li>
+    <li><strong>Tap Backup.</strong> Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally. By default it copies from <strong>/sdcard/DCIM</strong> to <strong>/disk/DCIM</strong> on the drive; both folders can be changed in Settings.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice.</li>
+  </ol>
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk settings — From /sdcard/DCIM, To /disk/DCIM" loading="lazy">
+    <figcaption>Real settings screen from the v0.1.2 smoke test — the defaults are exactly this backup: From /sdcard/DCIM, To /disk/DCIM.</figcaption>
+  </figure>
+  <p>If you unplug the drive mid-copy, the backup pauses with the full error shown and resumes where it stopped when the drive is back. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup.</p>
+  <p>The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: by hand in the Files app (no app needed)</h2>
+  <p>If you'd rather not install anything, Android's built-in Files app can copy DCIM to the OTG drive:</p>
+  <ol>
+    <li><strong>Plug in the OTG drive.</strong> A notification or a "USB drive" entry should appear in the Files app under Storage devices.</li>
+    <li><strong>Open Files, browse to Internal storage → DCIM.</strong> Long-press the DCIM folder to select the whole thing — or open DCIM → Camera and select the photos inside it.</li>
+    <li><strong>Tap ⋮ → Copy to</strong> (or Move to, if you want them off the phone), then choose the external drive as the destination.</li>
+    <li><strong>Wait for the copy to finish</strong> — and don't unplug the drive until the Files app says it's done.</li>
+  </ol>
+  <p>This works fine for a one-off copy. Its limits are the reason SnapDisk exists: no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time. For a full DCIM folder, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Moving instead of copying the first time.</strong> "Move to" deletes the originals as it goes. Copy first, check the drive, then delete from the phone — never the other way round.</li>
+    <li><strong>Copying without verifying.</strong> A copy that reports "done" without checking sizes can silently leave you with half a file. Whatever method you use, spot-check a few photos on the drive before deleting them from the phone.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling an OTG drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> DCIM is the whole camera roll in one folder. Back it up as a folder, check a few files open on the drive, and only then free the space on the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than select folders by hand, <a href="./">SnapDisk</a> backs up DCIM to an OTG drive on-device — free, no ads, no account, and your photos never leave the phone. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a> and <a href="usb-photo-backup.html">USB photo backup on Android: back up photos to an external drive without uploading them</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/blob/main/PRIVACY.md">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
