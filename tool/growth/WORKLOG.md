@@ -35,7 +35,7 @@ state, evidence, date.
   credentials used.
   Evidence: PR #13 (commit fa63f6e, merge
   3af16f3); CI run 43665296144 (build pass, 1m16s) green.
-  Merge SHA recorded in follow-up PR #TBD. Work Log row
+  Merge SHA recorded in follow-up PR #15. Work Log row
   in the same PR.
 
 ## 2026-11-14 — Third article live (seo-geo lane, pulled forward from Nov 26)
