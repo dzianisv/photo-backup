@@ -30,10 +30,12 @@ state, evidence, date.
   footer, added to docs/sitemap.xml, docs/llms.txt (Guides)
   and docs/llms-full.txt. applicationId untouched
   (dev.dzianisv.snapdisk). No money spent, no credentials used.
-  Evidence: PR #9 (commit 1e11fd5, merge TBD); CI run
-  43658403126 green (build pass, 1m20s). Work Log row in the
-  same PR. "Second article due Nov 26" follow-up in Open is
-  now DONE — pulled forward Nov 14.
+  Evidence: PR #9 (commits 1e11fd5 + dec2618, merge da67bac);
+  CI runs 43658403126 (build pass, 1m20s) and 43658555360
+  (build pass) green; merge SHA recorded in follow-up PR #10
+  (CI run 43658798347 green). Work Log row in the same PR. "Second
+  article due Nov 26" follow-up in Open is now DONE — pulled
+  forward Nov 14.
 
 ## 2026-11-14 — First article live (seo-geo lane, pulled forward from Nov 26)
 
