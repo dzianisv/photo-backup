@@ -3,6 +3,48 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## 2026-11-14 — Fifth article live (seo-geo lane, pulled forward from Nov 26)
+
+- Owner: Growth lead (seo-geo lane). State: DONE.
+  Article: "How to back up photos offline on Android — no cloud,
+  no account" —
+  https://dzianisv.github.io/photo-backup/backup-photos-offline.html
+  (docs/backup-photos-offline.html, same navy/cyan template as the
+  first three articles, TL;DR answer first, real steps, manual
+  alternative, callout, footer link). Targets the searches.md
+  query 4 phrase "photo backup app offline" — low-medium
+  difficulty, low relevance (searchers want offline/privacy
+  generally, not USB backup specifically) — framed honestly as
+  a how-to article on the offline / no-cloud differentiator, no
+  search-volume, demand, download, or rating claims.
+  Content: SnapDisk v0.1.2 real steps (plug in, tap Backup,
+  oldest-first background copy, progress + Pause / Stop,
+  size-verified, resume on re-plug); free 5 GB per run verified
+  from code (ProPrefs.FREE_BACKUP_BYTES_LIMIT =
+  5L * 1024 * 1024 * 1024, enforced in BackupService.kt) — no
+  other numbers claimed, no download counts, no ratings. "No
+  internet permission" verified from
+  app/src/main/AndroidManifest.xml (no INTERNET permission
+  declared). Manual alternative: copy photos via the Files app,
+  with its limits (no resume, no verification) stated honestly.
+  One real screenshot only: docs/screenshots-03-progress.png,
+  copied from tool/play-store/screenshots/03-progress.png (real
+  12 MiB mid-copy — 7%, measured live in smoke run
+  43644126583); no mockups. JSON-LD Article + FAQPage +
+  BreadcrumbList in the head. Linked from the landing index
+  footer, added to docs/sitemap.xml, docs/llms.txt (Guides)
+  and docs/llms-full.txt. applicationId untouched
+  (dev.dzianisv.snapdisk). No money spent, no credentials used.
+  Numbering: this article was tasked as the fourth, but PR #13
+  ("How to copy photos to a USB stick on Android") merged first
+  (2026-11-15T01:57:36Z, merge 3af16f3), so this is the fifth
+  article live; the branch was rebased on the new main and the
+  shared footer / sitemap / llms / Work Log touchpoints
+  re-resolved to keep both articles.
+  Evidence: PR #14 (commit TBD, merge TBD); CI run TBD green.
+  Merge SHA recorded in follow-up PR. Work Log row in the
+  same PR.
+
 ## 2026-11-14 — Fourth article live (seo-geo lane, pulled forward from Nov 26)
 
 - Owner: Growth lead (seo-geo lane). State: DONE.
