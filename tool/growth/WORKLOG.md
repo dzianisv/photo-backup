@@ -3,6 +3,40 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## 2026-11-14 — Third article live (seo-geo lane, pulled forward from Nov 26)
+
+- Owner: Growth lead (seo-geo lane). State: DONE.
+  Article: "How to back up DCIM to OTG storage on Android" —
+  https://dzianisv.github.io/photo-backup/backup-dcim-to-otg.html
+  (docs/backup-dcim-to-otg.html, same navy/cyan template as the
+  first two articles, TL;DR answer first, real steps, manual
+  alternative, callout, footer link). Targets the searches.md
+  query 5 phrase "backup dcim to otg" — very low difficulty,
+  how-to phrase, landing-page article material, not a
+  store-title keyword; honest framing in the copy (low-volume
+  niche how-to phrase, no search-volume or demand claims).
+  Content: SnapDisk v0.1.2 real steps (plug in, tap Backup,
+  oldest-first background copy, progress + Pause / Stop,
+  size-verified, resume on re-plug); free 5 GB per run verified
+  from code (ProPrefs.FREE_BACKUP_BYTES_LIMIT =
+  5L * 1024 * 1024 * 1024, enforced in BackupService.kt) — no
+  other numbers claimed, no download counts, no ratings. Manual
+  alternative: copy DCIM via the Files app, with its limits
+  (no resume, no verification) stated honestly. One real
+  screenshot only: docs/screenshots-01-settings-defaults.png,
+  copied from tool/play-store/screenshots/01-settings-defaults.png
+  (real settings screen — From /sdcard/DCIM, To /disk/DCIM —
+  from green smoke run 43644126583); no mockups. JSON-LD
+  Article + FAQPage + BreadcrumbList in the head. Linked from
+  the landing index footer, added to docs/sitemap.xml,
+  docs/llms.txt (Guides) and docs/llms-full.txt. applicationId
+  untouched (dev.dzianisv.snapdisk). No money spent, no
+  credentials used.
+  Evidence: PR #11 (commits 51cf782 + <worklog-commit>, merge
+  <merge-sha>); CI run 43663465126 (build pass, 1m8s) green.
+  Merge SHA recorded in follow-up PR #<follow-up>. Work Log row
+  in the same PR.
+
 ## 2026-11-14 — Second article live (seo-geo lane, pulled forward from Nov 26)
 
 - Owner: Growth lead (seo-geo lane). State: DONE.
