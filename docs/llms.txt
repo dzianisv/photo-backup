@@ -21,6 +21,11 @@
 - [How to copy photos to a USB stick on Android](https://dzianisv.github.io/photo-backup/copy-photos-to-usb-stick.html): copy photos to a USB stick with SnapDisk in one tap, or by hand in the Files app.
 - [How to back up photos offline on Android — no cloud, no account](https://dzianisv.github.io/photo-backup/backup-photos-offline.html): back up photos offline with no cloud, no account, and no upload — SnapDisk, or by hand in the Files app.
 
+## Blog
+
+- [SnapDisk blog](https://dzianisv.github.io/photo-backup/blog/): how to back up photos to a USB drive on Android — no cloud, no account, no upload. Every post lives in the SnapDisk GitHub repo, version-controlled.
+- [SnapDisk blog RSS feed](https://dzianisv.github.io/photo-backup/feed.xml): all blog posts as RSS.
+
 ## Support
 
 - [Report an issue](https://github.com/dzianisv/photo-backup/issues): every report gets an answer.
