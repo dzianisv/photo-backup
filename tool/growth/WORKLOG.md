@@ -3,6 +3,39 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## 2026-11-15 — Directory submissions copy ready (social-marketing lane, WL-30)
+
+- Owner: Growth lead (social-marketing lane). State: DONE (copy only —
+  nothing submitted to any directory).
+  `tool/growth/directories.md` — submission-ready copy, verbatim: name,
+  URL, tagline (52 chars), short description (296 chars), long
+  description (496 chars), category, tags, icon
+  `tool/play-store/icon-512.png` (512×512, verified on disk),
+  AlternativeTo targets from competitors.md + searches.md (Photos to
+  USB: OTG Backup, Buffalo Photo Backup, VaultDrive, PhotoSaver
+  Phone-to-Drive, SanDisk app, MeBackup), status table per directory,
+  and the rule block (never pay without owner approval; every
+  directory needs an owner account). Structure and rules mirrored
+  from Convert264 WL-30.
+  Facts verified against the repo before writing: v0.1.2,
+  applicationId dev.dzianisv.snapdisk, minSdk 24, free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT, enforced in BackupService.kt),
+  Pro $9.99 one-time, no INTERNET permission in the manifest. No
+  download counts, no ratings, no search-volume claims.
+  F-Droid: NOT possible as-is — `app/build.gradle.kts:72` depends on
+  `libs.play.billing.ktx` (Google Play Billing, proprietary); a foss
+  flavor without billing would be needed, deferred until Play is
+  live; still needs a GitLab account + fdroiddata MR (owner).
+  BetaList ruled out (paid only + own domain required, landing is a
+  github.io subdomain). Product Hunt / Show HN / Indie Hackers
+  planned — need his accounts; do not launch Product Hunt until the
+  Play listing exists. DevHunt / SaaSHub weak fit, noted briefly.
+  applicationId untouched (dev.dzianisv.snapdisk). No money spent,
+  no credentials used, no accounts created.
+  Evidence: PR #23 (commit 3447101, merge 8b4a2e4, merged
+  2026-11-15T19:32:39Z); CI run 43752875819 (build pass, 1m5s)
+  green. Merge SHA recorded in follow-up PR #24.
+
 ## 2026-11-15 — Sixth article live (seo-geo lane, pulled forward from Nov 26)
 
 - Owner: Growth lead (seo-geo lane). State: DONE (pending live
