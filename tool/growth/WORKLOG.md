@@ -36,9 +36,10 @@ state, evidence, date.
   discovery. Canonical URLs stay the GitHub Pages ones either way.
   Owner step: create a Medium publication for SnapDisk and grant
   access — then cross-posting of the 5 articles can start.
-  Evidence: PR #17 (commit TBD, merge TBD); CI run TBD green;
-  live fetch after merge: landing, blog home, all 5 articles,
-  feed.xml, sitemap.xml TBD.
+  Evidence: PR #17 (commit 0a24b59 + Work Log PR-number fixup);
+  CI run TBD green; live fetch after merge: landing, blog home,
+  all 5 articles, feed.xml, sitemap.xml TBD (merge SHA + live
+  fetch recorded in a follow-up PR, per repo pattern).
 
 ## 2026-11-14 — Fifth article live (seo-geo lane, pulled forward from Nov 26)
 
