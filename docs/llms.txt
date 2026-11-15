@@ -18,6 +18,7 @@
 - [How to back up photos to a USB drive without uploading them](https://dzianisv.github.io/photo-backup/backup-photos-to-usb.html): plug in a USB drive, copy oldest-first with SnapDisk — or by hand in the Files app.
 - [USB photo backup on Android: back up photos to an external drive without uploading them](https://dzianisv.github.io/photo-backup/usb-photo-backup.html): USB photo backup on Android — copy photos to an external drive with SnapDisk, or by hand in the Files app.
 - [How to back up DCIM to OTG storage on Android](https://dzianisv.github.io/photo-backup/backup-dcim-to-otg.html): back up the DCIM folder to an OTG drive with SnapDisk, or by hand in the Files app.
+- [How to copy photos to a USB stick on Android](https://dzianisv.github.io/photo-backup/copy-photos-to-usb-stick.html): copy photos to a USB stick with SnapDisk in one tap, or by hand in the Files app.
 
 ## Support
 
