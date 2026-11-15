@@ -41,8 +41,13 @@ state, evidence, date.
   JSON-LD blogPost), docs/feed.xml, docs/llms.txt (Guides)
   and docs/llms-full.txt. applicationId untouched
   (dev.dzianisv.snapdisk). No money spent, no credentials used.
-  Evidence: PR #TBD (commit TBD, merge TBD); CI run TBD green.
-  Merge SHA + live fetch recorded in follow-up PR #TBD.
+  Evidence: PR #21 (commit e26432b, merge f69e62a, merged
+  2026-11-15T17:30:00Z); CI run 43741311271 (build pass, 1m8s)
+  green. Live fetch after merge (2026-11-15T17:31:30Z): article,
+  blog home, feed.xml, sitemap.xml, llms.txt, llms-full.txt,
+  screenshots-05-pro.png — all 200; blog home serves 6 posts,
+  sitemap + feed contain the new article URL.
+  Merge SHA + live fetch recorded in follow-up PR #22.
 
 ## 2026-11-14 — Landing hero screenshot swapped to progress notification (owner feedback)
 
