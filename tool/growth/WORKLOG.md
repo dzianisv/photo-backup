@@ -41,8 +41,9 @@ state, evidence, date.
   article live; the branch was rebased on the new main and the
   shared footer / sitemap / llms / Work Log touchpoints
   re-resolved to keep both articles.
-  Evidence: PR #14 (commit TBD, merge TBD); CI run TBD green.
-  Merge SHA recorded in follow-up PR. Work Log row in the
+  Evidence: PR #14 (commit 8b04bf4, merge a5e81a9); CI run
+  43666164946 (build pass, 1m28s) green.
+  Merge SHA recorded in follow-up PR #16. Work Log row in the
   same PR.
 
 ## 2026-11-14 — Fourth article live (seo-geo lane, pulled forward from Nov 26)
