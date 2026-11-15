@@ -3,6 +3,44 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## 2026-11-14 — Blog home + RSS on GitHub Pages (owner instruction: real blog, not Muse pages)
+
+- Owner: Growth lead (seo-geo lane). State: DONE (pending live
+  verification after merge — PR number + CI run + live fetch
+  recorded below on merge).
+  Owner instruction Nov 14 19:19 PT: articles must live on a webpage
+  with a blog, or Medium/Substack — NOT Muse pages, which he believes
+  will disappear. The 5 articles already lived as loose HTML files in
+  docs/ on GitHub Pages (his repo, content in git — not a Muse
+  artifact), but with no blog home, no index, no feed. This task
+  gives them one.
+  What shipped: docs/blog/index.html — blog home at
+  /photo-backup/blog/ listing all 5 articles (title, Nov 14 2026
+  date, 1–2 line excerpt, link), same navy/cyan template, no JS,
+  JSON-LD Blog + BlogPosting + BreadcrumbList, one line stating the
+  blog lives in this GitHub repo (dzianisv/photo-backup, docs/) —
+  version-controlled, no platform to disappear. docs/feed.xml —
+  RSS 2.0 feed with all 5 articles. Landing page: top nav
+  (SnapDisk · Download · Blog) + Blog link in footer. Every article
+  page: back-link to the blog home in the header ("← Blog") and a
+  Blog link in the footer. docs/sitemap.xml: blog home added
+  (priority 0.9, weekly). docs/llms.txt + docs/llms-full.txt:
+  Blog section added (blog home + RSS feed). No article content
+  changed; applicationId untouched (dev.dzianisv.snapdisk). No money
+  spent, no credentials used, no account created.
+  Medium vs Substack (cross-posting, NOT done): recommendation
+  Medium — its import tool sets the canonical URL back to the
+  GitHub Pages article (no duplicate-content penalty) and reaches
+  readers already searching how-tos; Substack is better for an
+  email list but has no per-post canonical field and weaker how-to
+  discovery. Canonical URLs stay the GitHub Pages ones either way.
+  Owner step: create a Medium publication for SnapDisk and grant
+  access — then cross-posting of the 5 articles can start.
+  Evidence: PR #17 (commit 0a24b59 + Work Log PR-number fixup);
+  CI run TBD green; live fetch after merge: landing, blog home,
+  all 5 articles, feed.xml, sitemap.xml TBD (merge SHA + live
+  fetch recorded in a follow-up PR, per repo pattern).
+
 ## 2026-11-14 — Fifth article live (seo-geo lane, pulled forward from Nov 26)
 
 - Owner: Growth lead (seo-geo lane). State: DONE.

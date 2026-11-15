@@ -138,3 +138,7 @@ Method 2: by hand in the Files app (no app needed). If you'd rather not install 
 What to avoid: Moving before verifying. "Move to" deletes the originals as it goes. Copy first, check the drive, then delete from the phone — never the other way round. Unplugging mid-copy. Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this. An app that calls itself offline but asks for an account. If a backup app needs you to sign in before it copies anything, your photos are going through its servers — that is a cloud backup with an offline label. A genuinely offline app has nothing to log into and no internet permission to upload with.
 
 Rule of thumb: if the backup works with the phone in airplane mode, it is offline. Try it — SnapDisk copies with no connection at all, because there is nothing to connect to.
+
+## Blog
+
+SnapDisk blog: https://dzianisv.github.io/photo-backup/blog/ — how to back up photos to a USB drive on Android, no cloud, no account, no upload. Every post lives in the SnapDisk GitHub repo (dzianisv/photo-backup, docs/), version-controlled. RSS feed: https://dzianisv.github.io/photo-backup/feed.xml. Posts: How to back up photos to a USB drive without uploading them; USB photo backup on Android; How to back up DCIM to OTG storage on Android; How to copy photos to a USB stick on Android; How to back up photos offline on Android — no cloud, no account.
