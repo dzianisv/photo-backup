@@ -19,6 +19,10 @@ state, evidence, date.
   screenshots-03-progress.png (new alt + caption); the settings
   screenshot stays as a second figure. applicationId untouched
   (dev.dzianisv.snapdisk). No money spent, no credentials used.
+  Evidence: PR #19 (commit 0c51192, merge 9984772); CI run
+  43676820467 build pass (1m27s). Live fetch after merge:
+  landing page 200, screenshots-03-progress.png is the lead
+  screenshot and screenshots-01-settings-defaults.png the second.
 
 ## 2026-11-14 — Blog home + RSS on GitHub Pages (owner instruction: real blog, not Muse pages)
 
