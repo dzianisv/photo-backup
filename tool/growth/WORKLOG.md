@@ -3,6 +3,49 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## 2026-11-15 — FAQ page live (seo-geo lane)
+
+- Owner: Growth lead (seo-geo lane). State: DONE.
+  Page: "SnapDisk FAQ" —
+  https://dzianisv.github.io/photo-backup/faq.html
+  (docs/faq.html, same navy/cyan template as the six articles,
+  TL;DR answer first, no JS, text-only — no new screenshots).
+  8 questions, the support FAQ and the first-visitor page in one:
+  how a backup works, free 5 GB per run, Pro $9.99 one-time,
+  privacy (no INTERNET permission), resume on re-plug, disk
+  formats (FAT32 >4 GB skipped, exFAT no limit, NTFS honestly
+  UNTESTED on a real disk), default folders, Play status,
+  where to report issues. JSON-LD FAQPage + BreadcrumbList in
+  the head. Linked from the landing index footer and
+  docs/blog/index.html; added to docs/sitemap.xml, docs/llms.txt
+  + docs/llms-full.txt (Guides/FAQ section).
+  Content: v0.1.2 real steps (plug in, tap Backup, oldest-first
+  background copy, progress + Pause / Stop, size-verified, resume
+  on re-plug); free 5 GB per run verified from code
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT =
+  5L * 1024 * 1024 * 1024, app/src/main/java/dev/dzianisv/
+  snapdisk/backup/ProPrefs.kt:43, enforced in
+  BackupService.kt:312); Pro $9.99 one-time, auto-backup on
+  connect + unlimited size (tool/growth/DECISIONS.md,
+  tool/play-store/listing.md); no INTERNET permission verified
+  from app/src/main/AndroidManifest.xml; FAT32 files >=4 GB
+  skipped with reason (BackupService.kt:325-330,
+  FilesystemInfo.kt:14,53). No download counts, no ratings, no
+  search-volume or demand claims. applicationId untouched
+  (dev.dzianisv.snapdisk). No money spent, no credentials used,
+  no accounts created.
+  Evidence: PR #26 (commit 96cdd63, merge 8e57473, merged
+  2026-11-16T01:58:02Z); CI run 43789040086 (build pass, 1m17s)
+  green. Live fetch after Pages deploy: faq.html 200, 11649
+  bytes, title "SnapDisk FAQ — photo backup to USB on Android",
+  FAQPage JSON-LD present. This follow-up PR records the merge
+  SHA + live fetch in the Work Log.
+  Note: the first commit of this work landed on the wrong local
+  branch (a sibling agent's article-free-up-space checkout in
+  the shared clone); it was cherry-picked onto faq-page as
+  96cdd63 and the stray commit removed from the sibling branch
+  before the PR was opened — no sibling files were touched.
+
 ## 2026-11-16 WITA (2026-11-15 PST) — Weekly reflection, week 1 days 1–2
 
 - Owner: Product Lead (weekly reflection job). State: DONE.
