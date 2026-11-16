@@ -3,6 +3,64 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## WL-42 — Back up OnePlus photos to USB article, 13th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/oneplus-photos-to-usb.html ("Back up OnePlus photos
+  to a USB drive (no computer)"), following the WL-41
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png as
+  the lead shot — same reuse as the 8th, 9th, 10th, 11th, and
+  12th articles). Facts verified from code on fresh main: SAF
+  tree picker (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending; free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy. Search
+  evidence (Nov 16, 2026 live web search): top results are all
+  manual copy — AnExplorer guide (manual select-copy-paste,
+  anexplorer.io/transfer/phone-to-usb; the only one showing a
+  progress bar for the manual copy, still no resume or
+  verification), Pixoneye (manual file-manager copy, one small
+  batch at a time; notes ThePhotoStick Omni, a dedicated stick
+  with its own app, not an ordinary flash drive), Dr.Fone (PC
+  drag-and-drop / Google Drive / AirDroid / OTG manual copy),
+  YouTube PYcbV25CczI (OTG + file manager manual copy, suggests
+  Move), Coolmuster (OTG manual copy, PC tool, cloud). Google
+  Photos is cloud, not USB. OnePlus specifics stated honestly:
+  OTG off by default — Settings, System Settings, OTG
+  Connection (older OxygenOS: Settings, System, OTG storage),
+  auto-off after 10 minutes with no peripheral; stock file
+  manager on recent OnePlus is My Files; most OnePlus phones
+  have no microSD slot. Honest contrast stated in the TL;DR:
+  My Files works but is manual select-copy-paste with no
+  progress, no resume, no verification; Google Photos backup is
+  cloud, not a USB copy; SnapDisk = enable OTG, plug in, tap
+  Backup, whole library oldest-first with %, GB copied/total,
+  speed, ETA, Pause/Stop, resume on re-plug, size-verified,
+  copies never deletes. Query 12 scored Nov 16, 2026
+  (searches.md): "back up photos from OnePlus to USB flash
+  drive without computer" — real how-to gap. Volume unknown
+  (Play publishes no volume); difficulty low-medium. Linked
+  from blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt (full section), feed.xml (now 13
+  items). JSON-LD validated by parse; sitemap.xml and feed.xml
+  parse as XML. Title 48 chars, meta 145 chars. No app code or
+  Play listing files touched; applicationId untouched
+  (dev.dzianisv.snapdisk).
+  Evidence: PR #47 (commit 2a2b295, merge e58984c, merged
+  2026-11-16T23:36:59Z); CI run 43980357137 (build pass, 1m0s)
+  green; post-merge main runs green (Android PR 43980826298,
+  pages 43980823982). Live fetch after Pages deploy: article
+  200, 22066 bytes, title "Back up OnePlus photos to a USB
+  drive — SnapDisk" present, "November 16, 2026" present;
+  blog index 200 with the new link; feed.xml 200 (13 items);
+  sitemap.xml 200 with the new link.
+
 ## WL-41 — Back up Google Pixel photos to USB article, 12th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
