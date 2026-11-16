@@ -3,6 +3,33 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## WL-37 — SnapDisk vs VaultDrive comparison article, 8th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/snapdisk-vs-vaultdrive.html ("SnapDisk vs VaultDrive:
+  USB photo backup on Android, compared"), following the 7th
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, no new screenshots). Facts only from competitors.md
+  #6 (VaultDrive, verified WL-35, Nov 16 2026) and the Play
+  listing: Pro $9.99 vs $19.99 one-time, free 5 GB/run vs 200
+  files or 2 GB, oldest-first + Pause/Stop in the notification,
+  and VaultDrive's own FAQ on freeing up space ("planned for an
+  upcoming release"). Install counts dated (as of Nov 14, 2026);
+  Android scope only; no invented numbers, no ratings, no demand
+  claims. Linked from blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt (full section + Blog posts
+  list), feed.xml. JSON-LD validated by parse; sitemap.xml and
+  feed.xml parse as XML. Title 62 chars, meta 149 chars. No app
+  code or Play listing files touched; applicationId untouched
+  (dev.dzianisv.snapdisk).
+  Evidence: PR #38 (commit 8b1b416, merge f6ed14f, merged
+  2026-11-16T11:29:41Z); CI run 43858010069 (build pass, 1m20s)
+  green. Live fetch after Pages deploy: article 200, 14563
+  bytes, title "SnapDisk vs VaultDrive: USB photo backup on
+  Android — SnapDisk" present, "November 16, 2026" present;
+  blog index, feed.xml and sitemap.xml all live with the new
+  link.
+
 ## WL-36 — Host the Privacy Policy on GitHub Pages, point the listing at it (DONE)
 
 - Owner: Hourly supervisor. State: DONE.
