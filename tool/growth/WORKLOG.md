@@ -28,6 +28,9 @@ state, evidence, date.
   notification. The $9.99 undercut justification is now verified
   and usable in listing copy. No numbers invented; no money
   spent; applicationId untouched (dev.dzianisv.snapdisk).
+  Evidence: PR #34 (commit a40d438, merge e27d2ae, merged
+  2026-11-16T04:30:23Z); CI run 43804295519 (build pass, 1m8s)
+  green.
 
 ## 2026-11-15 — FAQ page live (seo-geo lane)
 
