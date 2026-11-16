@@ -3,6 +3,69 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## 2026-11-16 WITA (2026-11-15 PST) — Weekly reflection, week 1 days 1–2
+
+- Owner: Product Lead (weekly reflection job). State: DONE.
+  Reflection written to the goal file (scoreboard / what worked /
+  what did not / support / next three actions). Scoreboard: downloads
+  unknown (not on Play), rating none, 0 open issues, 0 open PRs,
+  v0.1.2 latest, 6 articles live, blog + RSS live, landing 200,
+  0 directory submissions, Sentry/PostHog not installed. Week 1
+  foundation is done except owner gates. Live re-verified in this
+  run: landing https://dzianisv.github.io/photo-backup/ 200
+  (crawled 2026-11-16 01:50 UTC; progress screenshot leads,
+  Free/$9.99 Pro pricing, Play status honest "Not yet"). Repo HEAD
+  7ff4eef (PR #24 merge), 0 open issues, 0 open PRs.
+
+## WL-31 — Resolve Play Console sign-in, verify/upload SnapDisk (OPEN, owner-gated)
+
+- Owner: Dzianis. Due: Nov 16. State: OPEN.
+  Google rejected the saved password twice Nov 15 (15:33 and 16:22
+  UTC); the Console was never reached, so his claimed SnapDisk push
+  stays unverified. Paths: re-enter the password carefully, use
+  "Forgot password?" recovery, or sign in himself in the live
+  browser. Once in: verify the push, or upload the v0.1.2 AAB
+  (tool/play-store/); first production review usually 1–3 days,
+  up to 7. Unblocks: listing verification, sandbox Pro purchase,
+  SnapDisk name check on Play. Do not retry the saved login from
+  here; the side chat owns the sign-in thread.
+
+## WL-32 — Submit SnapDisk to AlternativeTo (OPEN, blocked on owner account)
+
+- Owner: Growth lead (account: Dzianis). Due: Nov 18. State: OPEN.
+  Copy ready verbatim in tool/growth/directories.md (WL-30, PR #23,
+  merge 8b4a2e4): name SnapDisk, tagline, short/long descriptions,
+  category Backup & Sync, targets Photos to USB: OTG Backup,
+  Buffalo Photo Backup, VaultDrive, PhotoSaver, SanDisk app,
+  MeBackup. Needs a free AlternativeTo account (his sign-in).
+  Never pay the $5 priority review without his explicit approval.
+  Do not submit twice to one directory. Product Hunt / Show HN /
+  Indie Hackers stay planned — Product Hunt waits for the Play
+  listing.
+
+## WL-33 — Medium publication + cross-post the 6 articles (OPEN, blocked on owner account)
+
+- Owner: Growth lead (publication: Dzianis). Due: Nov 19. State: OPEN.
+  Blog home + RSS live at https://dzianisv.github.io/photo-backup/blog/
+  with 6 articles; Medium recommended over Substack (import sets
+  canonical back to GitHub Pages). Needs him to create a Medium
+  publication for SnapDisk and grant access; then cross-post all 6
+  articles with canonical URLs kept on GitHub Pages.
+
+## WL-34 — Answer the Android 15 six-hour dataSync timeout before first release (OPEN)
+
+- Owner: Implementation lead. Due: Nov 19. State: OPEN.
+  Pre-launch blocker carried from the Nov 14–15 study notes: a
+  grep over the repo (app/, docs/*.md, tool/) for onTimeout,
+  6 hour, six-hour, User-initiated, WorkManager returns no hits;
+  the implementation spec does not mention the timeout or the
+  alternative APIs. A big/slow backup could be killed silently at
+  the budget — the "copy says done but copied nothing" failure
+  this product exists to avoid. Answer: onTimeout with a clean
+  paused state reusing the detach-paused pattern, plus a
+  target-SDK note in the spec. Must land before the first release,
+  not after.
+
 ## 2026-11-15 — Directory submissions copy ready (social-marketing lane, WL-30)
 
 - Owner: Growth lead (social-marketing lane). State: DONE (copy only —
