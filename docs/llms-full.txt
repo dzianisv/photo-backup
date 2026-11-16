@@ -159,6 +159,30 @@ What to avoid: Moving before verifying. "Move to" deletes the originals as it go
 
 Rule of thumb: if the backup works with the phone in airplane mode, it is offline. Try it — SnapDisk copies with no connection at all, because there is nothing to connect to.
 
+### SnapDisk FAQ
+
+https://dzianisv.github.io/photo-backup/faq.html
+
+The questions a first visitor asks about backing up photos to a USB disk with SnapDisk — answered from how the app actually works in v0.1.2.
+
+TL;DR: SnapDisk backs up your photos to a USB disk — plug it in, tap Backup in the notification, and your photos copy oldest-first in the background, with live progress and Pause / Stop. The free version covers 5 GB per run; Pro is a one-time $9.99 for auto-backup on connect and unlimited size. Nothing is uploaded anywhere: the app has no internet permission, so your photos physically cannot leave your device.
+
+How does SnapDisk back up my photos? Plug in a USB disk and SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?" Tap Backup and your photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally. The progress notification shows real percent, copied / total size, speed, and time left, with Pause and Stop. Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice.
+
+How much can I back up for free? The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. There is no subscription and no monthly fee — Pro is paid once.
+
+Does SnapDisk upload my photos anywhere? No. Copying runs entirely on your device, from your internal storage to the external disk you choose. The app has no internet permission, so your photos cannot leave your device. It works with the phone in airplane mode — if a backup works in airplane mode, it is offline, and SnapDisk does.
+
+What happens if I unplug the disk mid-copy? The backup pauses with the full error shown and resumes where it stopped when the disk is back. A partially copied file resumes from where it stopped instead of starting over, and files that already copied are never copied twice. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup.
+
+What disk formats work? Drives formatted exFAT have no per-file size limit. Drives formatted FAT32 can't hold a single file over 4 GB — that only matters for very long videos. SnapDisk skips those files, lists them with the reason, and keeps going instead of failing the whole backup. NTFS has not been tested on a real disk yet, so we make no claim about it either way: not supported, not unsupported — untested.
+
+Where do my photos go on the disk? By default SnapDisk copies from /sdcard/DCIM on your phone to /disk/DCIM on the external disk. Both folders can be changed in Settings — open the app and pick your own From and To folders. The app opened is a settings screen only; the backup itself is started from the notification.
+
+Is SnapDisk on Google Play yet? Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later.
+
+Something does not work. Where do I report it? Open an issue on GitHub — every report gets an answer: github.com/dzianisv/photo-backup/issues. If a backup fails, the app shows the full error — copy it into the issue so the cause is visible, not guessed.
+
 ## Blog
 
 SnapDisk blog: https://dzianisv.github.io/photo-backup/blog/ — how to back up photos to a USB drive on Android, no cloud, no account, no upload. Every post lives in the SnapDisk GitHub repo (dzianisv/photo-backup, docs/), version-controlled. RSS feed: https://dzianisv.github.io/photo-backup/feed.xml. Posts: How to back up photos to a USB drive without uploading them; USB photo backup on Android; How to back up DCIM to OTG storage on Android; How to copy photos to a USB stick on Android; How to back up photos offline on Android — no cloud, no account; How to back up photos to an external drive on Android.
