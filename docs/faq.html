@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SnapDisk FAQ — photo backup to USB on Android</title>
+<meta name="description" content="SnapDisk FAQ: how photo backup to a USB disk works, the free 5 GB limit, Pro at $9.99 one-time, privacy, disk formats, and resume — no cloud, no account.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/faq.html">
+<meta property="og:title" content="SnapDisk FAQ — photo backup to USB on Android">
+<meta property="og:description" content="SnapDisk FAQ: how photo backup to a USB disk works, the free 5 GB limit, Pro at $9.99 one-time, privacy, disk formats, and resume — no cloud, no account.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/faq.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/faq.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does SnapDisk back up my photos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plug in a USB disk and SnapDisk offers a backup in a notification: \"External storage is connected. Backup photos?\" Tap Backup and your photos and videos copy oldest-first in the background, while you use the phone normally. The progress notification shows real percent, copied / total size, speed, and time left, with Pause and Stop. Every file is size-verified after copying, so the counts are proof, not a promise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free with SnapDisk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase that adds auto-backup when a disk is connected and unlimited backup size. There is no subscription."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does SnapDisk upload my photos anywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Copying runs entirely on your device, from your internal storage to the external disk you choose. The app has no internet permission, so your photos cannot leave your device. It works with the phone in airplane mode."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I unplug the disk mid-copy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The backup pauses with the full error shown and resumes where it stopped when the disk is back. Files that already copied are never copied twice, and a partially copied file resumes from where it stopped instead of starting over."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What disk formats work with SnapDisk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Drives formatted exFAT have no per-file size limit. Drives formatted FAT32 can't hold a single file over 4 GB — that only matters for very long videos; SnapDisk skips those files, lists them with the reason, and keeps going instead of failing the whole backup. NTFS has not been tested on a real disk yet, so we make no claim about it either way."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where do my photos go on the disk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By default SnapDisk copies from /sdcard/DCIM on your phone to /disk/DCIM on the external disk. Both folders can be changed in Settings — open the app and pick your own From and To folders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Something does not work. Where do I report it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open an issue on GitHub at github.com/dzianisv/photo-backup/issues — every report gets an answer."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/faq.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SnapDisk FAQ",
+          "item": "https://dzianisv.github.io/photo-backup/faq.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>SnapDisk FAQ</h1>
+  <p class="dek">The questions a first visitor asks about backing up photos to a USB disk with SnapDisk — answered from how the app actually works in v0.1.2.</p>
+  <p class="meta">November 15, 2026 · 3 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> SnapDisk backs up your photos to a USB disk — plug it in, tap <strong>Backup</strong> in the notification, and your photos copy oldest-first in the background, with live progress and Pause / Stop. The free version covers 5 GB per run; Pro is a one-time $9.99 for auto-backup on connect and unlimited size. Nothing is uploaded anywhere: the app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>How does SnapDisk back up my photos?</h2>
+  <p>Plug in a USB disk and SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?" Tap <strong>Backup</strong> and your photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally. The progress notification shows real percent, copied / total size, speed, and time left, with Pause and Stop. Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice.</p>
+
+  <h2>How much can I back up for free?</h2>
+  <p>The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. There is no subscription and no monthly fee — Pro is paid once.</p>
+
+  <h2>Does SnapDisk upload my photos anywhere?</h2>
+  <p>No. Copying runs entirely on your device, from your internal storage to the external disk you choose. The app has no internet permission, so your photos cannot leave your device. It works with the phone in airplane mode — if a backup works in airplane mode, it is offline, and SnapDisk does.</p>
+
+  <h2>What happens if I unplug the disk mid-copy?</h2>
+  <p>The backup pauses with the full error shown and resumes where it stopped when the disk is back. A partially copied file resumes from where it stopped instead of starting over, and files that already copied are never copied twice. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup.</p>
+
+  <h2>What disk formats work?</h2>
+  <p>Drives formatted exFAT have no per-file size limit. Drives formatted FAT32 can't hold a single file over 4 GB — that only matters for very long videos. SnapDisk skips those files, lists them with the reason, and keeps going instead of failing the whole backup. NTFS has not been tested on a real disk yet, so we make no claim about it either way: not supported, not unsupported — untested.</p>
+
+  <h2>Where do my photos go on the disk?</h2>
+  <p>By default SnapDisk copies from <strong>/sdcard/DCIM</strong> on your phone to <strong>/disk/DCIM</strong> on the external disk. Both folders can be changed in Settings — open the app and pick your own From and To folders. The app opened is a settings screen only; the backup itself is started from the notification.</p>
+
+  <h2>Is SnapDisk on Google Play yet?</h2>
+  <p>Not yet — the Play listing is being prepared. Until then, install the <a href="https://github.com/dzianisv/photo-backup/releases/download/v0.1.2/app-release.apk">v0.1.2 APK</a> from the GitHub release page. It needs Android 7.0 or later.</p>
+
+  <h2>Something does not work. Where do I report it?</h2>
+  <p>Open an issue on GitHub — every report gets an answer: <a href="https://github.com/dzianisv/photo-backup/issues">github.com/dzianisv/photo-backup/issues</a>. If a backup fails, the app shows the full error — copy it into the issue so the cause is visible, not guessed.</p>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if the backup works with the phone in airplane mode, it is offline. Try it — SnapDisk copies with no connection at all, because there is nothing to connect to.</p>
+  </div>
+
+  <h2>Want the how-to guides?</h2>
+  <p>Step-by-step, with the manual Files-app alternative for each: <a href="backup-photos-to-external-drive.html">How to back up photos to an external drive on Android</a>, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, and <a href="backup-photos-offline.html">How to back up photos offline on Android — no cloud, no account</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/blob/main/PRIVACY.md">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
