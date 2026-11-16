@@ -24,6 +24,7 @@
 - [SnapDisk FAQ](https://dzianisv.github.io/photo-backup/faq.html): how photo backup to a USB disk works, the free 5 GB limit, Pro at $9.99 one-time, privacy, disk formats, and resume — no cloud, no account.
 - [How to free up space by moving photos to a USB drive](https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html): free up space on Android — copy photos to a USB drive, check the copy, then delete them from the phone; SnapDisk does the copy oldest-first, or use the Files app.
 - [SnapDisk vs VaultDrive: USB photo backup on Android, compared](https://dzianisv.github.io/photo-backup/snapdisk-vs-vaultdrive.html): SnapDisk vs VaultDrive — price, free tier, copy order, and freeing up space, compared from the verified facts, as of November 2026.
+- [Back up WhatsApp photos to a USB drive on Android (no computer)](https://dzianisv.github.io/photo-backup/whatsapp-photos-to-usb.html): back up WhatsApp photos to a USB drive with no computer — point SnapDisk at the WhatsApp Images folder; files only, not chats.
 
 ## Blog
 
