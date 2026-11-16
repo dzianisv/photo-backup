@@ -3,6 +3,53 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## WL-38 — Back up WhatsApp photos to USB article, 9th how-to (DONE, pending live verification after merge)
+
+- Owner: SEO/GEO lane lead. State: DONE (pending live verification
+  after merge — PR number + CI run + live fetch recorded below on
+  merge).
+  New docs/whatsapp-photos-to-usb.html ("Back up WhatsApp photos
+  to a USB drive on Android (no computer)"), following the 8th
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png as
+  the lead shot — same reuse as the 7th article). Facts verified
+  from code on fresh main: SAF tree picker (MainActivity.kt
+  OpenDocumentTree + takePersistableUriPermission;
+  BackupService.kt:629 lists via PhotoQuery.listTreeFiles);
+  recursive DocumentFile walk, image/video extensions only,
+  sorted global oldest-first, destination mirrors source tree;
+  free 5 GB per run (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro
+  $9.99 one-time = auto-backup on connect + unlimited size; no
+  INTERNET permission in AndroidManifest.xml; FAT32 files >=4 GB
+  skipped with reason. WhatsApp paths from the Nov 16, 2026
+  search result (umatechnology.org): newer Android — Android >
+  media > com.whatsapp > WhatsApp > Media > WhatsApp Images;
+  older installs — WhatsApp > Media > WhatsApp Images; path
+  varies by Android version/install, stated in the article.
+  Honest limits stated prominently in the TL;DR: media files
+  only — no chat history (msgstore.db.crypt14), no voice notes
+  (.opus), no stickers outside the picked folder, no documents;
+  WhatsApp Settings > Chats > Chat backup (Google Drive) is the
+  route for chats; SnapDisk copies, never deletes; free 5 GB per
+  run, run again past the cap. Query 8 scored Nov 16, 2026
+  (searches.md): "back up WhatsApp photos to USB drive Android
+  without computer" — real how-to gap, top results PC-based
+  (Wondershare MobileTrans), SD-card moves, or cloud; no top
+  result offers phone → USB without a computer. Volume unknown
+  (Play publishes no volume); difficulty low-medium. Linked from
+  blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full section + Blog posts list), feed.xml.
+  JSON-LD validated by parse; sitemap.xml and feed.xml parse as
+  XML. Title 52 chars, meta 159 chars. No app code or Play
+  listing files touched; applicationId untouched
+  (dev.dzianisv.snapdisk).
+  Evidence: PR #___ (commit ___, merge ___, merged
+  2026-11-16T___Z); CI run ___ (___) ___. Live fetch after Pages
+  deploy: article ___ , ___ bytes, title "Back up WhatsApp
+  photos to USB on Android — SnapDisk" present, "November 16,
+  2026" present; blog index, feed.xml (9 items) and sitemap.xml
+  all live with the new link.
+
 ## WL-37 — SnapDisk vs VaultDrive comparison article, 8th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.

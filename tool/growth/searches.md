@@ -122,6 +122,20 @@ demand is read off competitor install velocity instead (see
 - Verdict: supporting keyword. Added to the full description
   ("SnapDisk is the USB photo backup for anyone …").
 
+### 8. "back up WhatsApp photos to USB drive Android without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low-Medium. No top result offers phone → USB
+  disk directly without a computer, and no app result does it.
+- Current top results (scored Nov 16, 2026, live web search):
+  PC-based tools (Wondershare MobileTrans — Windows/Mac),
+  SD-card moves (mundobytes, ES File Explorer), or cloud
+  (Google Drive / iCloud / Google Photos). SnapDisk does it:
+  its From folder is a SAF tree picker, so the user points it
+  at the WhatsApp Images folder and copies oldest-first.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 16, 2026 (WL-38, 9th how-to):
+  docs/whatsapp-photos-to-usb.html.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),

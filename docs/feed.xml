@@ -62,5 +62,12 @@
     <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
     <description>Two Android apps that copy your photos to a USB drive — no cloud, no account, no upload. Here is how they actually differ, from the facts we could verify as of November 2026.</description>
   </item>
+  <item>
+    <title>Back up WhatsApp photos to a USB drive on Android (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/whatsapp-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/whatsapp-photos-to-usb.html</guid>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Your WhatsApp photos are files on your phone — in a folder you can point a backup app at. Plug a USB drive into the phone and copy them straight to it, no computer, no upload.</description>
+  </item>
 </channel>
 </rss>
