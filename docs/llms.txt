@@ -11,7 +11,7 @@
 
 - [SnapDisk landing page](https://dzianisv.github.io/photo-backup/): what it does, how it works, pricing, FAQ.
 - [Source code on GitHub](https://github.com/dzianisv/photo-backup): Kotlin + Jetpack Compose, Material 3.
-- [Privacy Policy](https://github.com/dzianisv/photo-backup/blob/main/PRIVACY.md): collects nothing — no account, no analytics, no ads, no internet permission.
+- [Privacy Policy](https://dzianisv.github.io/photo-backup/privacy.html): collects nothing — no account, no analytics, no ads, no internet permission.
 
 ## Guides
 

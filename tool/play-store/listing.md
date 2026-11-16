@@ -73,9 +73,9 @@ to usb stick, photo backup app offline, backup dcim to otg.
 
 ## Privacy policy URL
 
-`PRIVACY.md` in the repo root (collects nothing). Hosted URL needed
-for the listing — publish at the repo's GitHub Pages or the product
-site when the landing page ships.
+`PRIVACY.md` in the repo root (collects nothing), hosted at
+https://dzianisv.github.io/photo-backup/privacy.html — use this URL
+in the Play listing.
 
 ## Data safety + content rating
 
