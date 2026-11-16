@@ -136,6 +136,23 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-38, 9th how-to):
   docs/whatsapp-photos-to-usb.html.
 
+### 9. "transfer photos from Android to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low-Medium. No top result offers an automated
+  whole-library backup with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 16, 2026, live web search):
+  manual file-manager copy — YouTube PYcbV25CczI (OTG +
+  file manager, select-copy-paste), Dr.Fone
+  (drfone.wondershare.com — PC drag-and-drop, Google Drive,
+  AirDroid, or OTG file-manager copy), sekin.in (Files by
+  Google / Samsung My Files, manual Move to the drive),
+  thegadgetians.com, usbmemorydirect.com (manual
+  select-copy-paste). No result automates the whole library
+  oldest-first with progress, Pause/Stop, and resume.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 16, 2026 (WL-39, 10th how-to):
+  docs/transfer-photos-to-usb-automatically.html.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
