@@ -3,11 +3,9 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
-## WL-38 — Back up WhatsApp photos to USB article, 9th how-to (DONE, pending live verification after merge)
+## WL-38 — Back up WhatsApp photos to USB article, 9th how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: DONE (pending live verification
-  after merge — PR number + CI run + live fetch recorded below on
-  merge).
+- Owner: SEO/GEO lane lead. State: DONE.
   New docs/whatsapp-photos-to-usb.html ("Back up WhatsApp photos
   to a USB drive on Android (no computer)"), following the 8th
   article template exactly (navy/cyan, TL;DR first, no JS,
@@ -43,12 +41,13 @@ state, evidence, date.
   XML. Title 52 chars, meta 159 chars. No app code or Play
   listing files touched; applicationId untouched
   (dev.dzianisv.snapdisk).
-  Evidence: PR #___ (commit ___, merge ___, merged
-  2026-11-16T___Z); CI run ___ (___) ___. Live fetch after Pages
-  deploy: article ___ , ___ bytes, title "Back up WhatsApp
-  photos to USB on Android — SnapDisk" present, "November 16,
-  2026" present; blog index, feed.xml (9 items) and sitemap.xml
-  all live with the new link.
+  Evidence: PR #39 (commit b46f412, merge 93a3c64, merged
+  2026-11-16T19:35:22Z); CI run 43940537748 (build pass, 1m9s)
+  green. Live fetch after Pages deploy: article 200, 18408
+  bytes, title "Back up WhatsApp photos to USB on Android —
+  SnapDisk" present, "November 16, 2026" present; blog index,
+  feed.xml (9 items) and sitemap.xml all live with the new
+  link.
 
 ## WL-37 — SnapDisk vs VaultDrive comparison article, 8th how-to (DONE)
 
