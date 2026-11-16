@@ -24,7 +24,7 @@ SnapDisk is a free Android app that backs up photos and videos to a USB disk. Pl
 
 ## Privacy
 
-SnapDisk has no account, no ads, and no tracking. Copying runs entirely on your phone — the app does not even have internet permission, so your photos cannot leave your device. Full text: https://github.com/dzianisv/photo-backup/blob/main/PRIVACY.md
+SnapDisk has no account, no ads, and no tracking. Copying runs entirely on your phone — the app does not even have internet permission, so your photos cannot leave your device. Full text: https://dzianisv.github.io/photo-backup/privacy.html
 
 ## Questions
 
@@ -41,7 +41,7 @@ SnapDisk has no account, no ads, and no tracking. Copying runs entirely on your 
 - Download v0.1.2 (APK, 11 MB): https://github.com/dzianisv/photo-backup/releases/download/v0.1.2/app-release.apk
 - All releases: https://github.com/dzianisv/photo-backup/releases
 - Source code: https://github.com/dzianisv/photo-backup
-- Privacy Policy: https://github.com/dzianisv/photo-backup/blob/main/PRIVACY.md
+- Privacy Policy: https://dzianisv.github.io/photo-backup/privacy.html
 - Issues: https://github.com/dzianisv/photo-backup/issues
 
 ## Guides
