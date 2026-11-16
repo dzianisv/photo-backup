@@ -172,6 +172,24 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-40, 11th how-to):
   docs/samsung-galaxy-photos-to-usb.html.
 
+### 11. "back up photos from Google Pixel to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low-Medium. No top result offers an automated
+  whole-library photo backup with progress, Pause/Stop, and
+  resume.
+- Current top results (scored Nov 16, 2026, live web search):
+  YouTube PYcbV25CczI (OTG + file manager manual copy);
+  AnExplorer guide (manual select-copy-paste,
+  anexplorer.io/transfer/phone-to-usb); cellularnews.com
+  (Files app manual copy); Dr.Fone (PC drag-and-drop / OTG
+  manual copy); manualdobruxo.com.br (Files by Google manual
+  copy). Google Photos is cloud, not USB. Pixel has no
+  SD-card slot and no My Files — Files by Google is the stock
+  route.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 16, 2026 (WL-41, 12th how-to):
+  docs/google-pixel-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
