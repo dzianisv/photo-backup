@@ -28,6 +28,7 @@
 - [Transfer photos from Android to a USB drive automatically (no manual copy)](https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html): transfer photos to a USB drive automatically — plug in, tap Backup, whole library oldest-first; no manual file picking, no computer.
 - [Back up Samsung Galaxy photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html): back up Samsung Galaxy photos to a USB drive with no computer — Smart Switch and My Files compared; original files, byte-for-byte copy, size-checked.
 - [Back up Google Pixel photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/google-pixel-photos-to-usb.html): back up Google Pixel photos to a USB drive with no computer — Files by Google manual copy compared; original files, byte-for-byte copy, size-checked.
+- [Back up OnePlus photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/oneplus-photos-to-usb.html): back up OnePlus photos to a USB drive with no computer — OTG toggle and My Files manual copy compared; original files, byte-for-byte copy, size-checked.
 
 ## Blog
 

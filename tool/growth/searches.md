@@ -190,6 +190,30 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-41, 12th how-to):
   docs/google-pixel-photos-to-usb.html.
 
+### 12. "back up photos from OnePlus to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low-Medium. No top result offers an automated
+  whole-library photo backup with progress, Pause/Stop, and
+  resume.
+- Current top results (scored Nov 16, 2026, live web search):
+  AnExplorer guide (manual select-copy-paste,
+  anexplorer.io/transfer/phone-to-usb — the only one of the
+  five that shows a progress bar for the manual copy, still no
+  resume or verification); Pixoneye (manual file-manager copy,
+  one small batch at a time; notes ThePhotoStick Omni, a
+  dedicated stick with its own app, not an ordinary flash
+  drive); Dr.Fone (PC drag-and-drop / Google Drive / AirDroid
+  / OTG manual copy); YouTube PYcbV25CczI (OTG + file manager
+  manual copy, suggests Move); Coolmuster (OTG manual copy, PC
+  tool, cloud). OnePlus specifics: OTG is off by default —
+  Settings, System Settings, OTG Connection (older OxygenOS:
+  Settings, System, OTG storage), auto-off after 10 minutes
+  with no peripheral; stock file manager on recent OnePlus is
+  My Files; most OnePlus phones have no microSD slot.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 16, 2026 (WL-42, 13th how-to):
+  docs/oneplus-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
