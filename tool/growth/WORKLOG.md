@@ -3,6 +3,56 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## WL-41 — Back up Google Pixel photos to USB article, 12th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/google-pixel-photos-to-usb.html ("Back up Google Pixel
+  photos to a USB drive (no computer)"), following the WL-40
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png as
+  the lead shot — same reuse as the 8th, 9th, 10th, and 11th
+  articles). Facts verified from code on fresh main: SAF tree
+  picker (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending; free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy. Search
+  evidence (Nov 16, 2026 live web search): top results are all
+  manual copy — YouTube PYcbV25CczI (OTG + file manager),
+  AnExplorer guide (manual select-copy-paste,
+  anexplorer.io/transfer/phone-to-usb), cellularnews.com (Files
+  app manual copy), Dr.Fone (PC drag-and-drop / OTG manual
+  copy), manualdobruxo.com.br (Files by Google manual copy).
+  Google Photos is cloud, not USB. Pixel specifics stated
+  honestly: no SD-card slot and no My Files — Files by Google
+  is the stock route. Honest contrast stated in the TL;DR:
+  Files by Google works but is manual select-copy-paste with no
+  progress, no resume, no verification; Google Photos backup is
+  cloud, not a USB copy; SnapDisk = plug in, tap Backup, whole
+  library oldest-first with %, GB copied/total, speed, ETA,
+  Pause/Stop, resume on re-plug, size-verified, copies never
+  deletes. Query 11 scored Nov 16, 2026 (searches.md): "back
+  up photos from Google Pixel to USB flash drive without
+  computer" — real how-to gap. Volume unknown (Play publishes
+  no volume); difficulty low-medium. Linked from blog index
+  (JSON-LD + post block), sitemap.xml, llms.txt, llms-full.txt
+  (full section), feed.xml (now 12 items). JSON-LD validated by
+  parse; sitemap.xml and feed.xml parse as XML. Title 53 chars,
+  meta 150 chars. No app code or Play listing files touched;
+  applicationId untouched (dev.dzianisv.snapdisk).
+  Evidence: PR #45 (commit 8aaa5da, merge 41ccc22, merged
+  2026-11-16T22:33:56Z); CI run 43971010249 (build pass, 1m6s)
+  green; post-merge main runs green (Android PR 43971276366,
+  pages 43971273960). Live fetch after Pages deploy: article
+  200, 20659 bytes, title "Back up Google Pixel photos to a
+  USB drive — SnapDisk" present, "November 16, 2026" present;
+  blog index, feed.xml (12 items) and sitemap.xml all live with
+  the new link.
+
 ## WL-40 — Back up Samsung Galaxy photos to USB article, 11th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
