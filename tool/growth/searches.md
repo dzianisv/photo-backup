@@ -153,6 +153,40 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-39, 10th how-to):
   docs/transfer-photos-to-usb-automatically.html.
 
+### 10. "back up photos from Samsung Galaxy to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low-Medium. No top result offers an automated
+  whole-library photo backup with progress, Pause/Stop, and
+  resume.
+- Current top results (scored Nov 16, 2026, live web search):
+  Samsung Smart Switch to USB — whole-device backup
+  (umatechnology.org, summarising Samsung's support pages);
+  My Files manual copy (sekin.in; Samsung Members community —
+  Samsung says files cannot be transferred directly to USB from
+  Gallery); Coolmuster (PC drag-and-drop, OTG manual copy, PC
+  tool, cloud); umatechnology.org general USB guide (Files by
+  Google / Samsung My Files, manual copy). Samsung Cloud is a
+  cloud backup, not a USB copy, and Samsung's own guide notes
+  files larger than 1 GB cannot be backed up to it.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 16, 2026 (WL-40, 11th how-to):
+  docs/samsung-galaxy-photos-to-usb.html.
+
+## Not a gap (scored, no article)
+- "back up photos from Android to USB without losing quality"
+  (the WL-40 brief query): NOT a gap. The top result, Photos
+  to USB: OTG Backup (Play listing, com.arzdrz.photos_to_usb),
+  already advertises "Original quality. Every file is copied
+  byte for byte, nothing is compressed", and the FotoSafe guide
+  (fotosafe.weidisoft.net) covers the same phone → USB
+  original-quality route. No article was published on this
+  query. The quality angle is covered honestly inside the
+  WL-40 Galaxy article instead: SnapDisk also copies
+  byte-for-byte (raw stream copy, BackupEngine.copyWithResume,
+  size-verified after copy) but is not the only app that does,
+  and the article says so. The Galaxy query above is the
+  closest real gap found, per the WL-40 brief's fallback.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
