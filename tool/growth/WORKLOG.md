@@ -95,19 +95,25 @@ state, evidence, date.
   publication for SnapDisk and grant access; then cross-post all 6
   articles with canonical URLs kept on GitHub Pages.
 
-## WL-34 — Answer the Android 15 six-hour dataSync timeout before first release (OPEN)
+## WL-34 — Answer the Android 15 six-hour dataSync timeout before first release (DONE)
 
-- Owner: Implementation lead. Due: Nov 19. State: OPEN.
-  Pre-launch blocker carried from the Nov 14–15 study notes: a
-  grep over the repo (app/, docs/*.md, tool/) for onTimeout,
-  6 hour, six-hour, User-initiated, WorkManager returns no hits;
-  the implementation spec does not mention the timeout or the
-  alternative APIs. A big/slow backup could be killed silently at
-  the budget — the "copy says done but copied nothing" failure
-  this product exists to avoid. Answer: onTimeout with a clean
-  paused state reusing the detach-paused pattern, plus a
-  target-SDK note in the spec. Must land before the first release,
-  not after.
+- Owner: Implementation lead. Due: Nov 19. State: DONE.
+  Evidence: PR #30 (commit 12fe757, merge 81ed0e4); CI run
+  43791513967 green (build pass, 1m47s).
+  `BackupService.onTimeout` pauses with the same clean paused state
+  as a disk detach (PAUSED + full error, `.part` kept, finished
+  files kept), plain notification, then `stopSelf()`; `CopyControl.timedOut`
+  unwinds the engine to `CopyResult.Paused` at the next buffer
+  boundary; resume reuses the detach path (open the app first to
+  reset the timer). A refused `startForeground` after the budget is
+  exhausted surfaces as a full ERROR state, never a crash. Two unit
+  tests prove the timeout path pauses cleanly and resumes byte-exact.
+  Target-SDK note added to the implementation spec §2 (workspace spec
+  mirror `docs/implementation-spec.md` — the repo carries no spec .md;
+  the Notion hub page still needs the same paragraph). Timeout
+  behavior verified against Android Developers "Foreground service
+  timeouts". Still owed: real-device check on the Pixel 9a with the
+  adb timeout commands from the spec note.
 
 ## 2026-11-15 — Directory submissions copy ready (social-marketing lane, WL-30)
 
