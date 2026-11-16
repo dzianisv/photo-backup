@@ -69,5 +69,12 @@
     <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
     <description>Your WhatsApp photos are files on your phone — in a folder you can point a backup app at. Plug a USB drive into the phone and copy them straight to it, no computer, no upload.</description>
   </item>
+  <item>
+    <title>Transfer photos from Android to a USB drive automatically (no manual copy)</title>
+    <link>https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html</guid>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Moving photos to a USB drive by hand means opening a file manager, picking files one by one, and hoping nothing gets missed. Plug the drive in, tap once, and let the whole library copy itself.</description>
+  </item>
 </channel>
 </rss>
