@@ -205,12 +205,13 @@ state, evidence, date.
   resolution dropped the index.html closing tags and the llms.txt
   Blog/Support + llms-full.txt Blog sections — caught by diff
   review and repaired before this commit).
-  Evidence: PR #TBD (commit TBD, merge TBD, merged TBD); CI run
-  TBD green. Live fetch after merge (TBD): article, blog home,
-  feed.xml, sitemap.xml, llms.txt, llms-full.txt,
+  Evidence: PR #28 (commit 0a4e011, merge 35bae38, merged
+  2026-11-16T02:10:08Z); CI run 43790320527 (build pass, 1m15s)
+  green. Live fetch after merge (2026-11-16T02:11Z): article,
+  blog home, feed.xml, sitemap.xml, llms.txt, llms-full.txt,
   screenshots-01-settings-defaults.png — all 200; blog home
   serves 7 posts, sitemap + feed contain the new article URL.
-  Merge SHA + live fetch recorded in follow-up PR #TBD.
+  Merge SHA + live fetch recorded in follow-up PR #29.
 
 ## 2026-11-15 — Sixth article live (seo-geo lane, pulled forward from Nov 26)
 
