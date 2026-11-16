@@ -134,7 +134,10 @@ state, evidence, date.
   feed.xml (7 items), 7th article all 200. Open rows stay
   owner-gated: WL-31 Play Console sign-in (due Nov 16), WL-32
   AlternativeTo (due Nov 18), WL-33 Medium (due Nov 19).
-  Evidence: PR #32 (this PR); CI run recorded on merge.
+  Evidence: PR #32 (commit 94d1bfc, merge a6b41c4, merged
+  2026-11-16T03:29:45Z); CI run 43798302111 (build pass, 1m9s)
+  green; post-merge main runs green (Android PR 43798516732,
+  pages 43798516369).
 
 ## 2026-11-15 — Directory submissions copy ready (social-marketing lane, WL-30)
 
