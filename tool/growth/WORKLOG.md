@@ -110,10 +110,31 @@ state, evidence, date.
   tests prove the timeout path pauses cleanly and resumes byte-exact.
   Target-SDK note added to the implementation spec §2 (workspace spec
   mirror `docs/implementation-spec.md` — the repo carries no spec .md;
-  the Notion hub page still needs the same paragraph). Timeout
+  the Notion hub page carries the same paragraph — verified present
+  Nov 16, see the follow-up entry below). Timeout
   behavior verified against Android Developers "Foreground service
   timeouts". Still owed: real-device check on the Pixel 9a with the
   adb timeout commands from the spec note.
+
+## 2026-11-16 WITA — WL-34 Notion follow-up closed (hourly supervisor)
+
+- Owner: Hourly supervisor. State: DONE.
+  The WL-34 row said the Notion hub page "still needs the same
+  paragraph". Verified by re-fetch Nov 16 03:26 UTC: the
+  Implementation Spec page
+  (https://app.notion.com/p/418ac25eb49f819fa47dc3e0c7742d0a)
+  already carries the full Android 15 six-hour dataSync timeout
+  paragraph under §2 ("answered in v0.1.2 before the first
+  release — PR #30, merge 81ed0e4", onTimeout answer, resume path,
+  Pixel 9a adb verification steps). No edit needed; the owed item
+  is closed, and the WL-34 row above is corrected to match.
+  Board check in the same run (03:24 UTC): 0 open issues, 0 open
+  PRs, latest CI green (Android PR run 43792113941, pages run
+  43792114143), live site verified — landing, blog home, FAQ,
+  feed.xml (7 items), 7th article all 200. Open rows stay
+  owner-gated: WL-31 Play Console sign-in (due Nov 16), WL-32
+  AlternativeTo (due Nov 18), WL-33 Medium (due Nov 19).
+  Evidence: PR #32 (this PR); CI run recorded on merge.
 
 ## 2026-11-15 — Directory submissions copy ready (social-marketing lane, WL-30)
 
