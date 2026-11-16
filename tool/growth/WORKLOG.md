@@ -3,6 +3,67 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## WL-40 — Back up Samsung Galaxy photos to USB article, 11th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/samsung-galaxy-photos-to-usb.html ("Back up Samsung
+  Galaxy photos to a USB drive (no computer)"), following the
+  WL-39 article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png as
+  the lead shot — same reuse as the 8th, 9th, and 10th articles).
+  PIVOT (per the WL-40 brief's fallback): the brief's
+  original-quality query, "back up photos from Android to USB
+  without losing quality", is NOT a gap — the top result,
+  Photos to USB: OTG Backup (Play listing), already advertises
+  "Original quality. Every file is copied byte for byte, nothing
+  is compressed", and the FotoSafe guide covers the same
+  phone → USB original-quality route. No article was published
+  on that query. Closest real gap found: the Samsung Galaxy
+  query — no top result automates the photo library (Smart
+  Switch = whole-device backup, My Files = manual copy). The
+  quality angle is covered honestly inside the Galaxy article
+  (SnapDisk also copies byte-for-byte, but is not the only app
+  that does). Facts verified from code on fresh main: SAF tree
+  picker (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending; free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy. Search
+  evidence (Nov 16, 2026 live web search): top results are
+  Samsung Smart Switch whole-device backup
+  (umatechnology.org, summarising Samsung support pages), My
+  Files manual copy (sekin.in; Samsung Members — Samsung says
+  files cannot be transferred directly to USB from Gallery),
+  Coolmuster (PC drag-and-drop, OTG manual copy, PC tool,
+  cloud), and cloud (Samsung Cloud, Google Photos Storage
+  saver). Honest contrast stated in the TL;DR: Smart Switch
+  works but backs up the whole device, not a re-runnable photo
+  library; My Files has no progress, no resume, no
+  verification; SnapDisk = plug in, tap Backup, whole library
+  oldest-first with %, GB copied/total, speed, ETA, Pause/Stop,
+  resume on re-plug, size-verified, copies never deletes. Query
+  10 scored Nov 16, 2026 (searches.md): "back up photos from
+  Samsung Galaxy to USB flash drive without computer" — real
+  how-to gap. Volume unknown (Play publishes no volume);
+  difficulty low-medium. Linked from blog index (JSON-LD + post
+  block), sitemap.xml, llms.txt, llms-full.txt (full section),
+  feed.xml (now 11 items). JSON-LD validated by parse;
+  sitemap.xml and feed.xml parse as XML. Title 58 chars, meta
+  152 chars. No app code or Play listing files touched;
+  applicationId untouched (dev.dzianisv.snapdisk).
+  Evidence: PR #43 (commit b987e61, merge a0a1a3c, merged
+  2026-11-16T21:36:26Z); CI run 43961298964 (build pass, 1m31s)
+  green; post-merge main runs green (Android PR 43961797661,
+  pages 43961796839). Live fetch after Pages deploy: article
+  200, 21169 bytes, title "Back up Samsung Galaxy photos to a
+  USB drive — SnapDisk" present, "November 16, 2026" present;
+  blog index, feed.xml (11 items) and sitemap.xml all live with
+  the new link.
+
 ## WL-39 — Transfer photos to USB automatically article, 10th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
