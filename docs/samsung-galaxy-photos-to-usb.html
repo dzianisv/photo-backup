@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Samsung Galaxy photos to a USB drive — SnapDisk</title>
+<meta name="description" content="Back up Samsung Galaxy photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html">
+<meta property="og:title" content="Back up Samsung Galaxy photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up Samsung Galaxy photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html#article",
+      "headline": "Back up Samsung Galaxy photos to a USB drive (no computer)",
+      "description": "Back up Samsung Galaxy photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-16",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up Samsung Galaxy photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A USB-C flash drive plugs straight into a Galaxy phone, or a regular USB drive through Samsung's USB-C OTG adapter. Samsung's own routes are Smart Switch (a whole-device backup to the drive) and My Files (copy by hand). SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up Samsung Galaxy photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up Samsung Galaxy photos to a USB drive (no computer)</h1>
+  <p class="dek">Galaxy phones are the most common Android phones there are, and Samsung gives you two ways to get photos onto a USB drive — but neither one is a photo backup that runs itself. Here is what Samsung offers, and the one-tap version.</p>
+  <p class="meta">November 16, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> Plug a USB drive into your Galaxy phone, tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: Samsung's own routes work — Smart Switch backs the whole device up to a USB drive, and My Files copies photos by hand — but Smart Switch is a whole-device backup, not a photo library you can re-run, and My Files has no progress detail, no resume, and no verification. And one honest correction to the brief behind this article: the original-quality angle alone is <em>not</em> an open gap — the rival app Photos to USB: OTG Backup already advertises byte-for-byte originals on its Play listing — so this article targets the Galaxy query instead, where no top result automates the photo library. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 16, 2026, no top search result for this query offers an automated whole-library photo backup with progress, Pause/Stop, and resume: the top results are Samsung's Smart Switch whole-device backup, My Files manual copy, PC drag-and-drop, or cloud.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up photos from Samsung Galaxy to USB flash drive without computer" and every top result teaches one of Samsung's own routes, or the same manual job:</p>
+  <ul>
+    <li><strong>Smart Switch</strong> (<a href="http://umatechnology.org/essential-guide-to-backing-up-photos-on-samsung-devices/">Back Up Samsung Galaxy Photos: Cloud and USB Methods</a>, summarising Samsung's support pages) — connect the drive, open Smart Switch, tap the external-storage icon, choose Back up, pick photos and videos. It works, and it needs no computer. But it is a whole-device backup: it backs up the phone, not a photo library you re-run every week, and Samsung's own pages note categories Smart Switch may not save on every phone.</li>
+    <li><strong>My Files</strong> (<a href="https://sekin.in/how-to-transfer-files-from-android-phone-to-usb-drive-full-guide/">How To Transfer Files From Android Phone To USB Drive</a>; <a href="https://stg-r1.community.samsung.com/t5/galaxy-s/how-to-take-pictures-off-phone-and-put-on-memory-stick/m-p/15256607">Samsung Members</a>) — plug the drive in, open My Files, pick the photos, Copy, choose USB storage, Copy here. Manual select-copy-paste, start to finish — and Samsung says files cannot be transferred directly to the USB drive from apps such as Gallery, so you do it in My Files. No progress detail, no resume, no verification.</li>
+    <li><strong>Coolmuster</strong> (<a href="https://www.coolmuster.com/android/transfer-photos-from-samsung-to-usb-stick.html">How to Transfer Photos from Samsung to USB Stick</a>) — four ways: drag-and-drop through a computer, OTG copy in the file manager, a PC tool, or cloud storage. Three of the four need a computer or a cloud account; the OTG way is the same manual file-manager copy.</li>
+    <li><strong>Cloud routes</strong> — Samsung Cloud and Google Photos back up over Wi-Fi, not to a drive you hold. Samsung Cloud is a cloud backup with a Samsung account, and Samsung's own guide notes files larger than 1 GB cannot be backed up to it. Google Photos' "Storage saver" setting compresses photos — that is where quality is actually lost, not on a USB copy.</li>
+  </ul>
+  <p>None of them offers an automated photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 16, 2026.</p>
+
+  <h2>What you need</h2>
+  <p>A Samsung Galaxy phone (Android 7.0 or later for SnapDisk); a USB drive your phone can read — a USB-C flash drive plugs straight into a modern Galaxy phone, or a regular USB drive with a USB-C OTG adapter (Samsung's own Type-A-to-Type-C adapter supports OTG, and one usually comes in the box); and enough space on the drive for the photos you want to keep. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — Galaxy camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Plug in the USB drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"</li>
+    <li><strong>Tap Backup.</strong> Your whole library copies oldest-first — your earliest photos first — in the background, while you use the phone normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the phone to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. A rival app, Photos to USB: OTG Backup, does the same byte-for-byte copy and says so on its Play listing; SnapDisk is not the only app that preserves originals, and this article does not claim it is. What SnapDisk adds over that rival is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: Smart Switch (Samsung's own route, no app needed)</h2>
+  <p>If you'd rather use Samsung's own tool, Smart Switch backs up to a USB drive with no computer: 1. Connect the USB drive to the Galaxy phone, using an OTG adapter if needed. 2. Open Smart Switch. 3. Tap the external storage or SD card icon. 4. Select Back up (if the screen has a "Back up to" option, choose the storage you connected). 5. Choose photos and videos and let it run. This works fine for a one-off backup of the phone. Its limits are the reason SnapDisk exists for photos: Smart Switch backs up the whole device rather than running a photo-library backup you repeat, its own pages note categories it may not save on every phone, and there is no oldest-first photo order, no per-file progress detail, and no resume-and-skip on the next run — you repeat the whole backup instead of picking up where the last one stopped.</p>
+
+  <h2>Method 3: by hand in My Files (no app needed)</h2>
+  <p>Samsung's file manager can copy your photos to the USB drive: 1. Plug in the USB drive. 2. Open My Files. 3. Select the photos (long-press the first, tap the rest, or long-press a folder to select the whole thing) — do it in My Files, not in Gallery, which Samsung says cannot transfer directly to USB. 4. Tap Copy, choose USB storage, tap Copy here. 5. Unmount the USB storage in My Files before disconnecting it. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Smart Switch is the tool if you want the whole device, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the phone is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>Not the only byte-for-byte copier.</strong> Photos to USB: OTG Backup also copies originals without compression. SnapDisk's difference is the automated library run — oldest-first, progress, Pause/Stop, resume — not the quality claim alone.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works, but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 16, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. Check Google Photos' "Storage saver" setting, too — it compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="whatsapp-photos-to-usb.html">Back up WhatsApp photos to a USB drive on Android (no computer)</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

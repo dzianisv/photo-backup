@@ -26,6 +26,7 @@
 - [SnapDisk vs VaultDrive: USB photo backup on Android, compared](https://dzianisv.github.io/photo-backup/snapdisk-vs-vaultdrive.html): SnapDisk vs VaultDrive — price, free tier, copy order, and freeing up space, compared from the verified facts, as of November 2026.
 - [Back up WhatsApp photos to a USB drive on Android (no computer)](https://dzianisv.github.io/photo-backup/whatsapp-photos-to-usb.html): back up WhatsApp photos to a USB drive with no computer — point SnapDisk at the WhatsApp Images folder; files only, not chats.
 - [Transfer photos from Android to a USB drive automatically (no manual copy)](https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html): transfer photos to a USB drive automatically — plug in, tap Backup, whole library oldest-first; no manual file picking, no computer.
+- [Back up Samsung Galaxy photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html): back up Samsung Galaxy photos to a USB drive with no computer — Smart Switch and My Files compared; original files, byte-for-byte copy, size-checked.
 
 ## Blog
 

@@ -76,5 +76,12 @@
     <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
     <description>Moving photos to a USB drive by hand means opening a file manager, picking files one by one, and hoping nothing gets missed. Plug the drive in, tap once, and let the whole library copy itself.</description>
   </item>
+  <item>
+    <title>Back up Samsung Galaxy photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html</guid>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Galaxy phones are the most common Android phones there are, and Samsung gives you two ways to get photos onto a USB drive — but neither one is a photo backup that runs itself. Here is what Samsung offers, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
