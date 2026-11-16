@@ -5,7 +5,7 @@
   <link>https://dzianisv.github.io/photo-backup/blog/</link>
   <description>How to back up photos to a USB drive on Android — no cloud, no account, no upload.</description>
   <language>en</language>
-  <lastBuildDate>Sun, 15 Nov 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 16 Nov 2026 00:00:00 +0000</lastBuildDate>
   <item>
     <title>How to back up photos to a USB drive without uploading them</title>
     <link>https://dzianisv.github.io/photo-backup/backup-photos-to-usb.html</link>
@@ -54,6 +54,13 @@
     <guid>https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html</guid>
     <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
     <description>Your phone is full because your photos are. Move them to a USB drive you can hold, check the copy, then delete the originals — and the storage warning goes away without losing a single picture.</description>
+  </item>
+  <item>
+    <title>SnapDisk vs VaultDrive: USB photo backup on Android, compared</title>
+    <link>https://dzianisv.github.io/photo-backup/snapdisk-vs-vaultdrive.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/snapdisk-vs-vaultdrive.html</guid>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Two Android apps that copy your photos to a USB drive — no cloud, no account, no upload. Here is how they actually differ, from the facts we could verify as of November 2026.</description>
   </item>
 </channel>
 </rss>
