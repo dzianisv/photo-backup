@@ -142,6 +142,76 @@ state, evidence, date.
   2026-11-15T19:32:39Z); CI run 43752875819 (build pass, 1m5s)
   green. Merge SHA recorded in follow-up PR #24.
 
+## 2026-11-15 — Seventh article live (seo-geo lane, pulled forward from Nov 26)
+
+- Owner: Growth lead (seo-geo lane). State: DONE (pending live
+  verification after merge — PR number + CI run + live fetch
+  recorded below on merge).
+  Article: "How to free up space by moving photos to a USB drive" —
+  https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html
+  (docs/free-up-space-move-photos-to-usb.html, same navy/cyan template as
+  the first six articles, TL;DR answer first, real steps, manual
+  alternative, callout, footer link). Targets the NEW phrase
+  "move photos to USB to free up space on Android" — the free-up-space
+  intent, not covered by any of the six existing articles (all six are
+  backup/copy intent). Picked over the other two candidates after live
+  web search Nov 15: "transfer photos from phone to USB without a
+  computer" overlaps the existing copy/USB articles (same OTG method,
+  same top results — Coolmuster, Dr.Fone, AnExplorer, YouTube); "back
+  up WhatsApp photos to USB drive" is thinner and mostly PC-based
+  methods (MobiKin, fireebok), and the WhatsApp folder path varies by
+  install. The free-up-space phrase's top results are real how-to
+  pages (YouTube OTG guide, Alibaba free-up-space guide, ceedo,
+  epictechtips, Coolmuster) — real how-to demand, no dominant app —
+  framed honestly as a how-to article, no search-volume, demand,
+  download, or rating claims.
+  Content: SnapDisk v0.1.2 real steps (plug in, tap Backup,
+  oldest-first background copy, progress + Pause / Stop,
+  size-verified, resume on re-plug, run again past the free 5 GB
+  per-run limit — already-copied files are skipped); free 5 GB per
+  run verified from code (ProPrefs.FREE_BACKUP_BYTES_LIMIT =
+  5L * 1024 * 1024 * 1024, enforced in BackupService.kt) — no
+  other numbers claimed, no download counts, no ratings. "No
+  internet permission" verified from
+  app/src/main/AndroidManifest.xml (no INTERNET permission
+  declared). Honest core of the article: SnapDisk COPIES, it never
+  deletes — the delete step is the reader's, only after opening a
+  few photos on the drive to verify the copy; stated in the TL;DR,
+  the steps, and the FAQ. Manual alternative: the Files app's
+  "Move to", which copies and deletes in one step, with its limits
+  (deletes as it copies, no resume, no verification) stated
+  honestly. One real screenshot only:
+  docs/screenshots-01-settings-defaults.png, already in docs/
+  (real settings screen — From /sdcard/DCIM, To /disk/DCIM —
+  from green smoke run 43644126583; reused as lead shot — it was
+  already the lead shot of the third article — because it shows
+  the From/To folders the copy-then-delete flow is set up in; no
+  new file needed). No mockups. JSON-LD Article + FAQPage +
+  BreadcrumbList in the head. Linked from the landing index
+  footer, added to docs/sitemap.xml, docs/blog/index.html (list +
+  JSON-LD blogPost), docs/feed.xml, docs/llms.txt (Guides)
+  and docs/llms-full.txt. applicationId untouched
+  (dev.dzianisv.snapdisk). No money spent, no credentials used.
+  Note: a parallel FAQ-page task (PR #26, branch faq-page) was
+  working in the same checkout during this run — it landed
+  docs/faq.html + footer/sitemap/llms links (merged 8e57473)
+  while this article was being written, and this article's first
+  commit briefly landed on the FAQ agent's follow-up branch
+  (worklog-faq-merge-sha) before being moved here. This branch is
+  now based on post-FAQ main (8e57473, rebased onto a800da4 after
+  the FAQ follow-up PR #27 merged); the cherry-pick conflicted
+  on the shared footer/sitemap/llms touchpoints and was resolved
+  keeping both the FAQ and the article links (a regex-based first
+  resolution dropped the index.html closing tags and the llms.txt
+  Blog/Support + llms-full.txt Blog sections — caught by diff
+  review and repaired before this commit).
+  Evidence: PR #TBD (commit TBD, merge TBD, merged TBD); CI run
+  TBD green. Live fetch after merge (TBD): article, blog home,
+  feed.xml, sitemap.xml, llms.txt, llms-full.txt,
+  screenshots-01-settings-defaults.png — all 200; blog home
+  serves 7 posts, sitemap + feed contain the new article URL.
+  Merge SHA + live fetch recorded in follow-up PR #TBD.
+
 ## 2026-11-15 — Sixth article live (seo-geo lane, pulled forward from Nov 26)
 
 - Owner: Growth lead (seo-geo lane). State: DONE (pending live

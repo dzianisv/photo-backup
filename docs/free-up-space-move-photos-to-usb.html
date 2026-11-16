@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to free up space by moving photos to a USB drive — SnapDisk</title>
+<meta name="description" content="Free up space on Android: move photos to a USB drive, check the copy, then delete them from the phone. SnapDisk copies oldest-first — or use the Files app.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html">
+<meta property="og:title" content="How to free up space by moving photos to a USB drive">
+<meta property="og:description" content="Free up space on Android: move photos to a USB drive, check the copy, then delete them from the phone. SnapDisk copies oldest-first — or use the Files app.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html#article",
+      "headline": "How to free up space by moving photos to a USB drive",
+      "description": "Free up space on Android: move photos to a USB drive, check the copy, then delete them from the phone. SnapDisk copies oldest-first — or use the Files app.",
+      "datePublished": "2026-11-15",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does SnapDisk delete photos from my phone to free up space?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SnapDisk only copies your photos to the USB drive — it never deletes anything from your phone. After the backup finishes, open a few photos on the drive to check they arrived, then delete the originals from your phone yourself, in the Gallery or the Files app. Copy, check, then delete — never the other way round."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free with SnapDisk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase that adds auto-backup when a disk is connected and unlimited backup size. There is no subscription."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where do I report issues with SnapDisk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open an issue on GitHub at github.com/dzianisv/photo-backup/issues — every report gets an answer."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How to free up space by moving photos to a USB drive",
+          "item": "https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>How to free up space by moving photos to a USB drive</h1>
+  <p class="dek">Your phone is full because your photos are. Move them to a USB drive you can hold, check the copy, then delete the originals — and the storage warning goes away without losing a single picture.</p>
+  <p class="meta">November 15, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> To free up space on Android by moving photos to a USB drive, copy the photos to the drive, open a few on the drive to check they arrived, then delete the originals from the phone. The easy way to do the copy is <a href="./">SnapDisk</a>: plug in the drive, tap <strong>Backup</strong> in the notification, and your photos and videos copy oldest-first in the background, with live progress and Pause / Stop. The free version covers 5 GB per run; Pro is a one-time $9.99 for auto-backup on connect and unlimited size. One honest note: SnapDisk only copies — it never deletes — so the delete step is yours, after you verify the copy. If you'd rather do it by hand, the Files app's "Move to" copies and deletes in one step — just with no resume and no verification if you unplug mid-copy.</p>
+
+  <h2>Why photos are what fills the phone</h2>
+  <p>On most phones, photos and videos are the single biggest thing in storage — a camera roll grows every day and never shrinks on its own. The usual fix, a cloud "free up space" button, works by uploading every photo first and deleting the local copy after. That needs an account, an upload, and a subscription to keep working. Moving the photos to a USB drive is the same idea without the cloud: the photos leave the phone, but they land on hardware you hold, not on someone else's server.</p>
+  <p>The order matters more than the tool. A move is two separate acts — copy, then delete — and the only safe order is copy first, check the copy, then delete. Any method that deletes as it copies is gambling that nothing goes wrong mid-copy. This page does the copy and the delete as two steps on purpose.</p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li><strong>An Android phone</strong> (Android 7.0 or later for SnapDisk).</li>
+    <li><strong>A USB drive your phone can read</strong> — a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter. Most modern Android phones support OTG; if the phone doesn't see the drive, try a different adapter.</li>
+    <li><strong>Enough space on the drive</strong> for the photos you want to move. Check first how much your photos take — Settings → Storage shows it — and pick a drive with room to spare.</li>
+  </ul>
+
+  <h2>Method 1: SnapDisk (copy first, delete after)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else — and it does it entirely offline. Install it from the <a href="https://github.com/dzianisv/photo-backup/releases/download/v0.1.2/app-release.apk">v0.1.2 APK</a> (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the USB drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"</li>
+    <li><strong>Tap Backup.</strong> Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally. By default it copies from <strong>/sdcard/DCIM</strong> to <strong>/disk/DCIM</strong> on the drive; both folders can be changed in Settings.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big camera roll partway, just run it again and it picks up where it left off.</li>
+    <li><strong>Check the copy on the drive.</strong> Open the Files app, browse to the USB drive, and open a few photos — the oldest and the newest. If they open, the copy is good.</li>
+    <li><strong>Delete the originals from the phone.</strong> In the Gallery or the Files app, select the photos you just copied and delete them. Only now is the space actually free — and only now is it safe, because the copies are verified on the drive.</li>
+  </ol>
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The copy runs between these two folders.</figcaption>
+  </figure>
+  <p>If you unplug the drive mid-copy, the backup pauses with the full error shown and resumes where it stopped when the drive is back. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup.</p>
+  <p>The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: by hand in the Files app (no app needed)</h2>
+  <p>If you'd rather not install anything, Android's built-in Files app can move your photos to the USB drive — also fully offline:</p>
+  <ol>
+    <li><strong>Plug in the USB drive.</strong> A notification or a "USB drive" entry should appear in the Files app under Storage devices.</li>
+    <li><strong>Open Files, browse to Internal storage → DCIM → Camera.</strong> That's where your phone's photos live. (Screenshots are in DCIM → Screenshots; other apps keep their own folders.)</li>
+    <li><strong>Select the photos, tap ⋮ → Move to</strong>, then choose the USB drive as the destination. "Move to" copies each file and deletes the original as it goes — that is what frees the space.</li>
+    <li><strong>Wait for the move to finish</strong> — and don't unplug the drive until the Files app says it's done.</li>
+  </ol>
+  <p>This works fine for a one-off move of a few dozen photos, and it frees the space in a single step. Its limits are the reason SnapDisk exists: "Move to" deletes as it copies, so a mid-move interruption can leave you with neither copy verified; there is no resume if you unplug, no verification that every file actually arrived, and you have to repeat the whole manual selection next time. For a full camera roll, the app's copy-first-then-delete flow is the safer option. If you want the copy step on its own, see <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round.</li>
+    <li><strong>"Move to" on the first try.</strong> It deletes the originals as it goes. If anything interrupts it — a loose cable, a full drive — the file in flight may be gone from both places. Copy first; move only once you trust the flow.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+    <li><strong>Freeing space by deleting the only copy.</strong> A photo that exists in one place is not backed up. If the drive is the only copy left, keep it somewhere safe — a drive in a drawer is one dropped drive away from losing everything.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> the copy is only a backup once you've opened a photo on the drive. Copy, check, then delete — never the other way round.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than select folders by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="copy-photos-to-usb-stick.html">How to copy photos to a USB stick on Android</a>, and <a href="backup-photos-to-external-drive.html">How to back up photos to an external drive on Android</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/blob/main/PRIVACY.md">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

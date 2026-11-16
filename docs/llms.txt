@@ -22,6 +22,7 @@
 - [How to back up photos offline on Android — no cloud, no account](https://dzianisv.github.io/photo-backup/backup-photos-offline.html): back up photos offline with no cloud, no account, and no upload — SnapDisk, or by hand in the Files app.
 - [How to back up photos to an external drive on Android](https://dzianisv.github.io/photo-backup/backup-photos-to-external-drive.html): back up photos to an external drive with SnapDisk, or by hand in the Files app.
 - [SnapDisk FAQ](https://dzianisv.github.io/photo-backup/faq.html): how photo backup to a USB disk works, the free 5 GB limit, Pro at $9.99 one-time, privacy, disk formats, and resume — no cloud, no account.
+- [How to free up space by moving photos to a USB drive](https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html): free up space on Android — copy photos to a USB drive, check the copy, then delete them from the phone; SnapDisk does the copy oldest-first, or use the Files app.
 
 ## Blog
 
