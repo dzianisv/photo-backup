@@ -3,6 +3,31 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## WL-36 — Host the Privacy Policy on GitHub Pages, point the listing at it (DONE)
+
+- Owner: Hourly supervisor. State: DONE.
+  The Play listing's privacy-policy URL was still marked "hosted URL
+  needed" even though PRIVACY.md existed in the repo root and the
+  landing page had shipped Nov 14. Published it: new
+  docs/privacy.html mirrors PRIVACY.md verbatim in the site template
+  (navy/cyan, JSON-LD WebPage + BreadcrumbList, canonical URL),
+  added to docs/sitemap.xml, docs/llms.txt and docs/llms-full.txt;
+  every site footer Privacy link (landing, blog, FAQ, all 7
+  articles) and tool/play-store/listing.md now point at
+  https://dzianisv.github.io/photo-backup/privacy.html. No stale
+  GitHub-blob privacy links remain in docs/ or tool/. The publish
+  package is now complete on the listing side: title, descriptions,
+  icon, feature graphic, 5 screenshots, data safety, content
+  rating, privacy URL, v0.1.2 AAB — the only remaining Play gate
+  is the owner's Console sign-in (WL-31). No numbers invented;
+  applicationId untouched (dev.dzianisv.snapdisk).
+  Evidence: PR #36 (commit e7592c2, merge 88d49a0, merged
+  2026-11-16T09:28Z); CI run 43839793523 (build pass, 1m12s)
+  green. Live fetch after Pages deploy: privacy.html 200, 6176
+  bytes, title "SnapDisk Privacy Policy — photo backup to USB on
+  Android", JSON-LD present, "Last updated: November 14, 2026"
+  present.
+
 ## WL-35 — Verify the VaultDrive $19.99 Pro-Lifetime undercut (DONE)
 
 - Owner: Hourly supervisor. State: DONE.
