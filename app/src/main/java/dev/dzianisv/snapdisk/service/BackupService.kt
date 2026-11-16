@@ -1,5 +1,7 @@
 package dev.dzianisv.snapdisk.service
 
+import android.app.ForegroundServiceStartNotAllowedException
+import android.app.NotificationManager
 import android.app.Service
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -62,6 +64,13 @@ class BackupService : Service() {
     private var job: Job? = null
     private val control = CopyControl()
     private val speedWindow = SpeedWindow()
+    /**
+     * Set when `startForeground` is refused because the 6-hour dataSync
+     * budget is exhausted (WL-34): the run must end in the ERROR state
+     * the refusal produced, not overwrite it with STOPPED.
+     */
+    @Volatile
+    private var fgsStartDenied: Boolean = false
 
     // What was already copied in this run, so a resume after detach or
     // pause does not re-scan or re-copy from scratch (TDD O4: the scan
@@ -108,16 +117,82 @@ class BackupService : Service() {
         return START_NOT_STICKY
     }
 
+    /**
+     * Android 15+ dataSync 6-hour budget exhausted (WL-34; targetSdk 36,
+     * so the limit applies). The system calls this on API 35+ and the
+     * service has a few seconds to stop, or the app crashes with a
+     * `RemoteServiceException` ("did not stop within its timeout").
+     * Same clean paused state as a disk detach: the engine stops at
+     * the next buffer boundary (control.timedOut), the in-flight file
+     * keeps its `.part` for resume, finished files are kept, and the
+     * user resumes from the same state — after opening the app, which
+     * resets Android's 6-hour timer. Must NOT call `publish()` here:
+     * after onTimeout the service is no longer foreground and the
+     * budget is exhausted, so `startForeground` would throw — post a
+     * plain notification instead, then stop promptly.
+     */
+    override fun onTimeout(startId: Int, fgsType: Int) {
+        val current = _stateFlow.value
+        if (current.status == BackupStatus.COPYING || current.status == BackupStatus.SCANNING) {
+            control.paused = true
+            control.timedOut = true
+            val error = BackupError(
+                summary = "Backup paused — Android's 6-hour limit for background backup was reached",
+                detail = "Operation: background backup (dataSync foreground service)\n" +
+                    "Android 15 and later allow a dataSync foreground service to run " +
+                    "for 6 hours in 24 hours (this app targets SDK 36, so the limit applies). " +
+                    "The limit was reached, so Android stopped the backup.\n" +
+                    "Already-copied files are kept, and the file in progress keeps its " +
+                    "partial copy — nothing is lost and nothing is reported as done.\n" +
+                    "To continue: open SnapDisk, then tap Resume. Opening the app resets " +
+                    "Android's 6-hour timer; resuming without opening the app first fails " +
+                    "until the timer resets.",
+            )
+            _stateFlow.update {
+                it.copy(status = BackupStatus.PAUSED, error = error, pausedByDetach = false)
+            }
+            getSystemService(NotificationManager::class.java)?.notify(
+                NotificationHelper.NOTIFICATION_ID_PROGRESS,
+                NotificationHelper.buildProgressNotification(this, _stateFlow.value),
+            )
+        }
+        // A few seconds to stop, or the system crashes the app.
+        stopSelf()
+    }
+
     private fun startForegroundWith(state: BackupState) {
         val notification = NotificationHelper.buildProgressNotification(this, state)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            startForeground(
-                NotificationHelper.NOTIFICATION_ID_PROGRESS,
-                notification,
-                ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC,
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                startForeground(
+                    NotificationHelper.NOTIFICATION_ID_PROGRESS,
+                    notification,
+                    ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC,
+                )
+            } else {
+                startForeground(NotificationHelper.NOTIFICATION_ID_PROGRESS, notification)
+            }
+        } catch (e: ForegroundServiceStartNotAllowedException) {
+            // The 6-hour dataSync budget is exhausted and the user has not
+            // foregrounded the app since (which resets the timer) — e.g.
+            // Resume tapped in the notification after a timeout-pause.
+            // Surface as a full ERROR state, never a crash (WL-34).
+            fgsStartDenied = true
+            control.stopped = true
+            val error = BackupError(
+                summary = "Could not restart the backup — Android's 6-hour background limit is still in effect",
+                detail = "Operation: start dataSync foreground service\n" +
+                    "Error: ${e::class.qualifiedName}: ${e.message}\n" +
+                    "Android 15 and later allow 6 hours of dataSync background work in " +
+                    "24 hours. Open SnapDisk first — opening the app resets the timer — " +
+                    "then tap Resume. Already-copied files are kept.",
             )
-        } else {
-            startForeground(NotificationHelper.NOTIFICATION_ID_PROGRESS, notification)
+            _stateFlow.update { it.copy(status = BackupStatus.ERROR, error = error) }
+            getSystemService(NotificationManager::class.java)?.notify(
+                NotificationHelper.NOTIFICATION_ID_PROGRESS,
+                NotificationHelper.buildProgressNotification(this, _stateFlow.value),
+            )
+            stopSelf()
         }
     }
 
@@ -155,6 +230,8 @@ class BackupService : Service() {
         if (job?.isActive == true) return
         control.paused = false
         control.stopped = false
+        control.timedOut = false
+        fgsStartDenied = false
         pending = emptyList()
         pendingIndex = 0
         skipped = mutableListOf()
@@ -177,7 +254,12 @@ class BackupService : Service() {
         ) return
         control.paused = false
         control.stopped = false
+        control.timedOut = false
+        fgsStartDenied = false
         publish(current.copy(status = BackupStatus.COPYING, error = null, pausedByDetach = false))
+        // startForeground refused (WL-34: 6-hour budget exhausted) —
+        // publish() already set the ERROR state; do not launch a job.
+        if (fgsStartDenied) return
         if (job?.isActive != true) {
             job = scope.launch { runBackup() }
         }
@@ -186,6 +268,10 @@ class BackupService : Service() {
     fun stopBackup() {
         control.stopped = true
         control.paused = false
+        // No running job (e.g. Stop tapped on a timeout-paused
+        // notification after the service was destroyed): nothing will
+        // stop the service for us, so stop now instead of lingering.
+        if (job?.isActive != true) stopSelf()
     }
 
     /** Called when the destination disk goes away mid-copy. */
@@ -252,6 +338,9 @@ class BackupService : Service() {
                 }
             }
             val totalBytes = pending.sumOf { it.sizeBytes }
+            // startForeground refused while publishing above (WL-34) —
+            // the ERROR state is already set; do not scan or copy.
+            if (fgsStartDenied) return
             // Completed files are exactly pending[0..<pendingIndex]:
             // each was skipped (size-verified) or copied + verified.
             // Deriving it from the list — not from the last published
@@ -277,6 +366,12 @@ class BackupService : Service() {
             while (pendingIndex < pending.size) {
                 if (control.stopped) {
                     // Stop: delete the .part file (TDD S1), keep finished files.
+                    // Except when startForeground was refused (WL-34): the
+                    // ERROR state above is the answer — do not overwrite it.
+                    if (fgsStartDenied) {
+                        stopSelf()
+                        return
+                    }
                     pending.getOrNull(pendingIndex)?.let { item ->
                         destinationFile(prefs, item)?.let { dest ->
                             BackupEngine.partFileFor(dest).delete()
@@ -355,6 +450,11 @@ class BackupService : Service() {
                     }
                     is CopyResult.Paused -> {
                         copiedBytes = beforeFileBytes + result.bytesCopied
+                        // Timeout-pause (WL-34): onTimeout already published
+                        // the PAUSED state and stopped the service. Do NOT
+                        // publish here — startForeground would throw with
+                        // the budget exhausted. Just exit quietly.
+                        if (control.timedOut) return
                         publish(
                             _stateFlow.value.copy(
                                 status = BackupStatus.PAUSED,

@@ -278,4 +278,82 @@ class BackupEngineTest {
         assertTrue(resumed is CopyResult.Copied)
         assertTrue(dest.readBytes().contentEquals(data))
     }
+
+    @Test
+    fun timeoutWhilePausedReturnsPausedAndKeepsPartForResume() {
+        // WL-34: the Android 15 dataSync 6-hour timeout. The service sets
+        // control.timedOut from onTimeout; the engine must return Paused
+        // promptly (not block in the pause gate until resume) with the
+        // .part file intact, so the same resume path as a detach-pause
+        // finishes the file byte-exact.
+        val data = ByteArray(200_000) { (it % 251).toByte() }
+        val dest = File(tmp.root, "photo.jpg")
+        val part = BackupEngine.partFileFor(dest)
+        val control = CopyControl()
+        val resultRef = AtomicReference<CopyResult?>()
+        val done = CountDownLatch(1)
+        thread {
+            resultRef.set(
+                BackupEngine.copyWithResume(
+                    input = SlowInputStream(data),
+                    destination = dest,
+                    expectedSizeBytes = data.size.toLong(),
+                    control = control,
+                ),
+            )
+            done.countDown()
+        }
+        Thread.sleep(300)
+        control.paused = true
+        Thread.sleep(200)
+        assertFalse(dest.exists())
+        val sizeWhilePaused = part.length()
+        assertTrue(sizeWhilePaused > 0)
+        // The timeout fires while paused: the copy must unwind now,
+        // not wait for a resume that may never come (the service stops).
+        control.timedOut = true
+        assertTrue(done.await(30, TimeUnit.SECONDS))
+        val result = resultRef.get()
+        assertTrue(result is CopyResult.Paused)
+        val partial = (result as CopyResult.Paused).bytesCopied
+        assertTrue(partial in 1 until data.size.toLong())
+        assertEquals(partial, part.length())
+        assertFalse(dest.exists())
+        // Same resume path as a detach-pause: a fresh run finishes it.
+        val resumed = BackupEngine.copyWithResume(
+            input = ByteArrayInputStream(data),
+            destination = dest,
+            expectedSizeBytes = data.size.toLong(),
+            control = CopyControl(),
+        )
+        assertTrue(resumed is CopyResult.Copied)
+        assertTrue(dest.readBytes().contentEquals(data))
+        assertFalse(part.exists())
+    }
+
+    @Test
+    fun timeoutBeforeStartReturnsPausedWithoutWriting() {
+        // Timeout already set when the copy starts (e.g. onTimeout fired
+        // during the scan): nothing is written, no destination appears.
+        val data = ByteArray(10_000) { (it % 251).toByte() }
+        val dest = File(tmp.root, "photo.jpg")
+        val control = CopyControl().apply {
+            paused = true
+            timedOut = true
+        }
+        val result = BackupEngine.copyWithResume(
+            input = ByteArrayInputStream(data),
+            destination = dest,
+            expectedSizeBytes = data.size.toLong(),
+            control = control,
+        )
+        assertTrue(result is CopyResult.Paused)
+        assertEquals(0L, (result as CopyResult.Paused).bytesCopied)
+        assertFalse(dest.exists())
+        // No bytes were written: the .part file is absent or empty
+        // (the stream is opened before the first pause gate, so an
+        // empty .part may exist — it resumes as offset 0, not as data).
+        val part = BackupEngine.partFileFor(dest)
+        assertEquals(0L, if (part.exists()) part.length() else 0L)
+    }
 }

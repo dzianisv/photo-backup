@@ -31,6 +31,14 @@ data class PhotoItem(
 class CopyControl {
     @Volatile var paused: Boolean = false
     @Volatile var stopped: Boolean = false
+    /**
+     * Set by the service from `Service.onTimeout` (Android 15+ dataSync
+     * 6-hour budget exhausted, WL-34). Like a pause, but the service
+     * is about to be destroyed, so the engine must return promptly
+     * instead of blocking in the pause gate: the in-flight file keeps
+     * its `.part` for resume, exactly as a detach-pause does.
+     */
+    @Volatile var timedOut: Boolean = false
 }
 
 sealed class CopyResult {
@@ -174,8 +182,9 @@ object BackupEngine {
                 val buffer = ByteArray(DEFAULT_BUFFER_SIZE)
                 while (true) {
                     if (control.stopped) return CopyResult.Stopped(copied)
-                    while (control.paused && !control.stopped) Thread.sleep(100)
+                    while (control.paused && !control.stopped && !control.timedOut) Thread.sleep(100)
                     if (control.stopped) return CopyResult.Stopped(copied)
+                    if (control.timedOut) return CopyResult.Paused(copied)
                     val read = input.read(buffer)
                     if (read < 0) break
                     // Pause gate, second half: a pause requested while
@@ -184,8 +193,9 @@ object BackupEngine {
                     // for resume instead — the old code wrote them, so
                     // one 4 KB chunk landed after pause (smoke run
                     // 43618997791: expected 28672, got 32768).
-                    while (control.paused && !control.stopped) Thread.sleep(50)
+                    while (control.paused && !control.stopped && !control.timedOut) Thread.sleep(50)
                     if (control.stopped) return CopyResult.Stopped(copied)
+                    if (control.timedOut) return CopyResult.Paused(copied)
                     sink.write(buffer, 0, read)
                     copied += read
                     onProgress(copied)
