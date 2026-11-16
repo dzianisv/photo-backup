@@ -178,6 +178,29 @@ Method 2: by hand in the Files app (no app needed). If you'd rather not install 
 What to avoid: Deleting before verifying. A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. "Move to" on the first try. It deletes the originals as it goes. If anything interrupts it — a loose cable, a full drive — the file in flight may be gone from both places. Copy first; move only once you trust the flow. Unplugging mid-copy. Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this. Freeing space by deleting the only copy. A photo that exists in one place is not backed up. If the drive is the only copy left, keep it somewhere safe — a drive in a drawer is one dropped drive away from losing everything.
 
 Rule of thumb: the copy is only a backup once you've opened a photo on the drive. Copy, check, then delete — never the other way round.
+
+### SnapDisk vs VaultDrive: USB photo backup on Android, compared
+
+https://dzianisv.github.io/photo-backup/snapdisk-vs-vaultdrive.html
+
+Two Android apps that copy your photos to a USB drive — no cloud, no account, no upload. Here is how they actually differ, from the facts we could verify as of November 2026.
+
+TL;DR: SnapDisk and VaultDrive both back up Android photos to a USB drive offline, with no account and no subscription. The verified differences: SnapDisk Pro is $9.99 one-time, half of VaultDrive Pro Lifetime at $19.99 once; SnapDisk's free tier covers 5 GB per backup run, VaultDrive's covers 200 files or 2 GB per backup; SnapDisk copies oldest-first with Pause and Stop in the progress notification; and neither app deletes photos from your phone — VaultDrive's own FAQ says freeing up space is "planned for an upcoming release", while SnapDisk's free-up-space flow is copy first, check the copy, then delete the originals yourself. VaultDrive launched in October 2026 and had about 870 installs as of November 14, 2026, with no reviews yet; SnapDisk is not on Google Play yet (v0.1.2).
+
+SnapDisk: free Android app (v0.1.2, not on Google Play yet). Plug in the disk, tap Backup in the notification, and photos copy oldest-first in the background, size-verified, with a progress notification showing percent, copied / total size, speed, and time left, plus Pause and Stop. Free: manual backup, 5 GB per run. Pro is a one-time $9.99 purchase for auto-backup when a disk is connected and unlimited size. No cloud, no account, no ads, and no internet permission.
+
+VaultDrive: USB Photo Backup (com.coticsy.vaultdrive, by Coticsy LLC) launched in October 2026 and had about 870 installs as of November 14, 2026, with no reviews yet. Plug in a USB-C flash drive, SSD, or SD card reader, choose what to back up, and tap Start. It copies at original quality, byte for byte, keeping dates and places; offers Fresh or Incremental backup (Pro copies only what's new); resumes after unplug; checks every copy and lists skipped files with reasons; and sorts folders by date or by album. It works offline with no account, needs Android 8 or later, and shows no ads. Free tier: up to 200 files or 2 GB per backup. Pro Lifetime is $19.99 once, with no subscription, ever — verified November 16, 2026 from the vendor site (coticsy.com) and the App Store in-app purchase list.
+
+Price: both are one-time purchases, neither charges a subscription. SnapDisk Pro $9.99 once; VaultDrive Pro Lifetime $19.99 once. SnapDisk free backs up manually up to 5 GB per backup run; VaultDrive free covers up to 200 files or 2 GB per backup. SnapDisk's runs can be repeated — files already copied are never copied twice, so a second run picks up where the first stopped.
+
+During the backup: SnapDisk copies oldest-first in the background, with Pause and Stop in the progress notification; if you unplug mid-copy it pauses and resumes where it stopped. VaultDrive also resumes after unplug, checks every copy, and lists skipped files with reasons; on Android it keeps running in the background with a progress notification. Its Pro tier adds Incremental backup; SnapDisk skips already-copied files for free, so a repeat run only copies what's new.
+
+Freeing up space: neither app deletes photos from your phone today. SnapDisk only copies — it never deletes — so freeing space is copy to the drive, check the copy, then delete the originals yourself (see "How to free up space by moving photos to a USB drive"). VaultDrive's own FAQ says: "Not yet. Today VaultDrive only copies, so nothing is removed from your phone. Freeing up space … is planned for an upcoming release."
+
+What to avoid: choosing on install counts (VaultDrive had about 870 installs as of November 14, 2026, with no reviews yet; SnapDisk is not on Google Play yet, so it has no install count at all); deleting before verifying — copy, open a few photos on the drive, then delete from the phone, never the other way round; assuming "offline" means the same thing everywhere (SnapDisk has no internet permission at all, so your photos physically cannot leave the device); paying for a subscription you didn't want (neither app has one).
+
+Rule of thumb: the app that wins is the one whose copy you trust enough to delete after. Compare the price, the free tier, and the copy — then check the copy on the drive before you delete anything.
+
 ### SnapDisk FAQ
 
 https://dzianisv.github.io/photo-backup/faq.html
@@ -204,4 +227,4 @@ Something does not work. Where do I report it? Open an issue on GitHub — every
 
 ## Blog
 
-SnapDisk blog: https://dzianisv.github.io/photo-backup/blog/ — how to back up photos to a USB drive on Android, no cloud, no account, no upload. Every post lives in the SnapDisk GitHub repo (dzianisv/photo-backup, docs/), version-controlled. RSS feed: https://dzianisv.github.io/photo-backup/feed.xml. Posts: How to back up photos to a USB drive without uploading them; USB photo backup on Android; How to back up DCIM to OTG storage on Android; How to copy photos to a USB stick on Android; How to back up photos offline on Android — no cloud, no account; How to back up photos to an external drive on Android; How to free up space by moving photos to a USB drive.
+SnapDisk blog: https://dzianisv.github.io/photo-backup/blog/ — how to back up photos to a USB drive on Android, no cloud, no account, no upload. Every post lives in the SnapDisk GitHub repo (dzianisv/photo-backup, docs/), version-controlled. RSS feed: https://dzianisv.github.io/photo-backup/feed.xml. Posts: How to back up photos to a USB drive without uploading them; USB photo backup on Android; How to back up DCIM to OTG storage on Android; How to copy photos to a USB stick on Android; How to back up photos offline on Android — no cloud, no account; How to back up photos to an external drive on Android; How to free up space by moving photos to a USB drive; SnapDisk vs VaultDrive: USB photo backup on Android, compared.
