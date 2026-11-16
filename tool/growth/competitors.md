@@ -10,7 +10,7 @@ but not the rating/install header, so rating and install band come from
 AppBrain/androidrank snapshots of the same Play data — labelled as
 such per app. This is search evidence, not a live Play Console check.
 
-## Top 5
+## Top 6
 
 ### 1. Photos to USB: OTG Backup — the closest direct competitor
 - Developer: Akshay C P · Package: com.arzdrz.photos_to_usb
@@ -161,7 +161,55 @@ such per app. This is search evidence, not a live Play Console check.
   oldest-first order, and a single-purpose flow a non-technical
   user finishes in one tap.
 
-## Also noted (not top 5)
+### 6. VaultDrive — the direct price rival (added Nov 16, 2026)
+- Developer: Coticsy LLC · Package: com.coticsy.vaultdrive
+- Rating: **no ratings yet (0 reviews)** · Installs: **500+ band,
+  ~870 total** (AppBrain, Nov 16, 2026) · ~20 installs/day over the
+  last 30 days (490 in 30 days)
+- Launched: **October 2026** · Last update: **Nov 3, 2026** (v1.0.7)
+  — actively maintained.
+- Price: free to try (up to **200 files or 2 GB per backup**); **Pro
+  Lifetime $19.99 once, no subscription, ever** — verified Nov 16,
+  2026 from the vendor site (coticsy.com/vaultdrive.html: "Pro is
+  $19.99 once", "Pro Lifetime is $19.99 (US), no subscription";
+  "US prices as of November 2026") and the App Store IAP list
+  ("VaultDrive: USB Backup $19.99"). The Google Play listing text
+  (via AppBrain mirror) confirms "one-time purchase, with no
+  subscription, ever" but does not show the dollar amount in the
+  mirror. This is the price anchor behind our $9.99 Pro:
+  VaultDrive charges $19.99 once for the same one-time model;
+  comparable utility one-time unlocks are €4.99 (Portafogli Pro);
+  $9.99 sits between the two and undercuts the direct competitor.
+  See tool/growth/DECISIONS.md.
+- What it does: plug in a USB-C flash drive / SSD / SD card reader,
+  choose what to back up, tap Start; original quality, byte for byte,
+  dates and places kept; Fresh or Incremental (Pro: copy only what's
+  new, skip files already on the drive); resume after unplug; every
+  copy checked, skipped files listed with reasons; folders by date
+  or by album, one folder per phone; backup reminders; App Lock;
+  73 languages; Android 8+ / iOS 17+; works offline, no account.
+- Weakness to beat: **it is brand new and unrated, and it does not
+  free up space** — its own FAQ: "Not yet. Today VaultDrive only
+  copies, so nothing is removed from your phone. Freeing up space
+  … is planned for an upcoming release." Our 7th article already
+  owns the free-up-space intent; a future move feature would widen
+  the gap. Its Android listing also keeps the screen on, dimmed,
+  until the backup is done on iPhone ("Keeps the screen on, dimmed,
+  until the backup is done") while Android "keeps running in the
+  background, with a progress notification" — the notification-led
+  flow is table stakes here, not our edge against VaultDrive; our
+  edge is oldest-first order shown in the notification, Pause/Stop
+  in the notification, and half our Pro price.
+- 1-star complaints: one 5★ review only (Lakshmi, Jul 16, 2026:
+  "20 GB in under 10 minutes"). No 1-stars yet — watch this
+  listing; it is the rival most likely to grow into our direct
+  competitor alongside Photos to USB.
+- Screenshots bar: clean one-tap copy story, 73-language badge.
+  Beat it with: half-price Pro ($9.99 vs $19.99), oldest-first
+  order, Pause/Stop in the notification, and the free-up-space
+  story it cannot tell yet.
+
+## Also noted (not top 6)
 - **FolderSync** (Tacit Dynamics, dk.tacit.android.foldersync.lite):
   4.2★, ~33k ratings, 1M+ installs, updated Oct 22, 2026. Generic
   folder sync (cloud/SMB/SFTP), not photo-to-USB-first; newest
@@ -185,7 +233,7 @@ such per app. This is search evidence, not a live Play Console check.
   "endless ads … spam … freezes up constantly."
 
 ## The repeated complaint = the feature list
-Across all five, the same 1-star themes recur:
+Across all six, the same 1-star themes recur:
 1. **Copy says done but copied nothing / partial copy** (PhotoStick:
    3h → empty folders; 118 asked → 50 copied). → Verify every
    file, report real counts.
