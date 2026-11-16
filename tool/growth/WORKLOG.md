@@ -3,6 +3,51 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## WL-39 — Transfer photos to USB automatically article, 10th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/transfer-photos-to-usb-automatically.html ("Transfer
+  photos from Android to a USB drive automatically (no manual
+  copy)"), following the WL-38 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot —
+  same reuse as the 8th and 9th articles). Facts verified from
+  code on fresh main: SAF tree picker (MainActivity.kt
+  OpenDocumentTree + takePersistableUriPermission;
+  PhotoQuery.listTreeFiles, BackupService.kt:629); oldest-first
+  via MediaStore DATE_TAKEN ascending; free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GB skipped
+  with reason. Search evidence (Nov 16, 2026 live web search):
+  top results are manual file-manager copy — YouTube
+  PYcbV25CczI, Dr.Fone (drfone.wondershare.com), sekin.in,
+  thegadgetians.com, usbmemorydirect.com — plus PC drag-and-drop
+  and cloud (Google Drive, AirDroid); no result offers an
+  automated whole-library backup with progress, Pause/Stop, and
+  resume. Honest contrast stated in the TL;DR: manual method =
+  pick files one by one, no progress, no resume, no
+  verification; SnapDisk = plug in, tap Backup, whole library
+  oldest-first with %, GB copied/total, speed, ETA, Pause/Stop,
+  resume on re-plug, size-verified, copies never deletes. Query
+  9 scored Nov 16, 2026 (searches.md): "transfer photos from
+  Android to USB flash drive without computer" — real how-to
+  gap. Volume unknown (Play publishes no volume); difficulty
+  low-medium. Linked from blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt (full section), feed.xml.
+  JSON-LD validated by parse; sitemap.xml and feed.xml parse as
+  XML. Title 47 chars, meta 154 chars. No app code or Play
+  listing files touched; applicationId untouched
+  (dev.dzianisv.snapdisk).
+  Evidence: PR #41 (commit 6bfe639, merge 4d59ff1, merged
+  2026-11-16T20:33:16Z); CI run 43950699654 (build pass, 1m23s)
+  green; post-merge main runs green (Android PR 43950981099,
+  pages 43950979225). Live fetch after Pages deploy: article
+  200, 18115 bytes, title "Transfer photos from Android to a
+  USB drive automatically (no manual copy)" present,
+  "November 16, 2026" present; blog index, feed.xml (10 items)
+  and sitemap.xml all live with the new link.
+
 ## WL-38 — Back up WhatsApp photos to USB article, 9th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
@@ -213,13 +258,13 @@ state, evidence, date.
   Indie Hackers stay planned — Product Hunt waits for the Play
   listing.
 
-## WL-33 — Medium publication + cross-post the 8 articles (OPEN, blocked on owner account)
+## WL-33 — Medium publication + cross-post the 10 articles (OPEN, blocked on owner account)
 
 - Owner: Growth lead (publication: Dzianis). Due: Nov 19. State: OPEN.
   Blog home + RSS live at https://dzianisv.github.io/photo-backup/blog/
-  with 8 articles; Medium recommended over Substack (import sets
+  with 10 articles; Medium recommended over Substack (import sets
   canonical back to GitHub Pages). Needs him to create a Medium
-  publication for SnapDisk and grant access; then cross-post all 8
+  publication for SnapDisk and grant access; then cross-post all 10
   articles with canonical URLs kept on GitHub Pages.
 
 ## WL-34 — Answer the Android 15 six-hour dataSync timeout before first release (DONE)
