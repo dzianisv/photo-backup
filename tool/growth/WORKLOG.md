@@ -3,6 +3,32 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## WL-35 — Verify the VaultDrive $19.99 Pro-Lifetime undercut (DONE)
+
+- Owner: Hourly supervisor. State: DONE.
+  Closes the week-1 reflection gap: the $9.99 Pro price reasoning
+  cited "VaultDrive charges $19.99 once for Pro Lifetime" with no
+  competitor row. Verified Nov 16, 2026 from live sources:
+  vendor site coticsy.com/vaultdrive.html (crawled 2026-11-16
+  04:26 UTC) — "Pro is $19.99 once", "Pro Lifetime is $19.99
+  (US), no subscription", "US prices as of November 2026", free
+  up to 200 files or 2 GB per backup; App Store IAP list —
+  "VaultDrive: USB Backup $19.99"; Google Play listing text via
+  AppBrain mirror (com.coticsy.vaultdrive, v1.0.7, launched Oct
+  2026, ~870 installs, 0 reviews, no ads, last update Nov 3,
+  2026) confirms "one-time purchase, with no subscription, ever"
+  (dollar amount not shown in the mirror). Added as competitor
+  #6 in tool/growth/competitors.md (was Top 5, now Top 6):
+  VaultDrive is the direct price rival — same niche (phone to USB,
+  no cloud, no account), launched Oct 2026, unrated, ~20
+  installs/day; its own FAQ says it does NOT free up space yet
+  ("planned for an upcoming release") — the free-up-space story
+  our 7th article owns. Our edge vs VaultDrive: half-price Pro
+  ($9.99 vs $19.99), oldest-first order, Pause/Stop in the
+  notification. The $9.99 undercut justification is now verified
+  and usable in listing copy. No numbers invented; no money
+  spent; applicationId untouched (dev.dzianisv.snapdisk).
+
 ## 2026-11-15 — FAQ page live (seo-geo lane)
 
 - Owner: Growth lead (seo-geo lane). State: DONE.
