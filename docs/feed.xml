@@ -48,5 +48,12 @@
     <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
     <description>An external drive is the simplest photo backup there is: a drive you can hold, with your photos on it, and no cloud in between. On Android the drive plugs straight into the phone — no computer needed.</description>
   </item>
+  <item>
+    <title>How to free up space by moving photos to a USB drive</title>
+    <link>https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html</guid>
+    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Your phone is full because your photos are. Move them to a USB drive you can hold, check the copy, then delete the originals — and the storage warning goes away without losing a single picture.</description>
+  </item>
 </channel>
 </rss>
