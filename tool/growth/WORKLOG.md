@@ -167,13 +167,13 @@ state, evidence, date.
   Indie Hackers stay planned — Product Hunt waits for the Play
   listing.
 
-## WL-33 — Medium publication + cross-post the 6 articles (OPEN, blocked on owner account)
+## WL-33 — Medium publication + cross-post the 8 articles (OPEN, blocked on owner account)
 
 - Owner: Growth lead (publication: Dzianis). Due: Nov 19. State: OPEN.
   Blog home + RSS live at https://dzianisv.github.io/photo-backup/blog/
-  with 6 articles; Medium recommended over Substack (import sets
+  with 8 articles; Medium recommended over Substack (import sets
   canonical back to GitHub Pages). Needs him to create a Medium
-  publication for SnapDisk and grant access; then cross-post all 6
+  publication for SnapDisk and grant access; then cross-post all 8
   articles with canonical URLs kept on GitHub Pages.
 
 ## WL-34 — Answer the Android 15 six-hour dataSync timeout before first release (DONE)
