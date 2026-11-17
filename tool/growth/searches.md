@@ -2299,6 +2299,103 @@ demand is read off competitor install velocity instead (see
   Article published Nov 17, 2026 (WL-67, 36th how-to):
   docs/lenovo-photos-to-usb.html.
 
+### 36. "back up HTC photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an HTC-specific
+  phone-to-USB guide at all, let alone an HTC-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the HTC-specific results are HTC's own OTG
+  support pages, a storage-expansion guide for the HTC One,
+  and HTC's own PC backup app, and the rest are generic
+  manual guides.
+- Current top results (scored Nov 17, 2026, live web search):
+  HTC support, "How do I view the files and folders from my
+  USB drive?" (U12+)
+  (htc.com/mea-en/support/htc-u12-plus/faq/how-do-i-view-the-
+  files-and-folders-from-my-usb-drive.html?showcontent=1 —
+  HTC's own support page: if the phone supports USB OTG,
+  connect a USB OTG connector, go to Settings > Storage, tap
+  the name of the drive; HTC File Manager can manage the files
+  too. An OTG support page, not a backup guide); HTC support,
+  "How do I view the files and folders from my USB drive?"
+  (U12 life)
+  (htc.com/eu/support/htc-u12-life/howto/how-do-i-view-the-
+  files-and-folders-from-my-usb-drive.html — the same page for
+  the U12 life. An OTG support page, not a backup guide); HTC
+  support, "File Manager — Managing files and folders in an
+  external USB drive"
+  (htc.com/hk-en/support/apps/file-manager/managing-files-and-
+  folders-in-an-external-usb-drive.html — HTC's own File
+  Manager page: open the app, connect a USB adapter, and on
+  Android 6 or later a popup walks you through granting access
+  to the USB storage, then swipe to the USB Storage tab. A
+  manual file-manager guide, not an automated backup);
+  AndroidAyuda, "Complete guide to expanding mobile storage
+  without a MicroSD slot"
+  (en.androidayuda.com/Expand-the-storage-of-your-mobile-even-
+  if-it-has-a-microsd-slot/ — written around the HTC One, which
+  has no microSD card slot: expand storage with a USB flash
+  drive and a USB OTG cable. A storage-expansion guide, not a
+  photo-backup guide); HTC Sync Manager
+  (htc.com/au/support/htc-sync-manager/howto/backing-up-phone-
+  to-computer.html — HTC's own support page: connect the phone
+  to a computer, Transfer & Backup, Back up now. HTC-specific,
+  but a desktop app that backs up to the PC, not to a USB drive
+  as plain files); Filecroco, "HTC Sync Manager"
+  (filecroco.com/download-htc-sync-manager/ — HTC Sync Manager
+  has been discontinued, support has ended, and it will never
+  be updated. A discontinued PC app, not a phone-to-USB copy);
+  Wondershare MobileTrans, "HTC Backup App: An Ultimate Guide
+  and Best Alternatives"
+  (mobiletrans.wondershare.com/htc/htc-backup-app.html — HTC
+  Sync Manager is a desktop application that backs up and
+  restores data to a PC, and the HTC Backup app backs up to an
+  HTC or Google account. Both routes land on a PC or in a cloud
+  account — neither writes plain photo files to a USB drive);
+  AnExplorer (anexplorer.io/features/usb-otg — plug a USB drive
+  in via OTG and AnExplorer gives full read/write access, with
+  FAT32, exFAT, and NTFS support. Generic Android, not written
+  for HTC — and a guide for its own app); Dr.Fone
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-drop,
+  Google Drive, or AirDroid over Wi-Fi. Generic Android, and
+  most of the ways need a computer or a cloud account);
+  AnExplorer (anexplorer.io/transfer/phone-to-usb — plug in a
+  flash drive via OTG and copy files with a progress bar showing
+  speed and time remaining. Generic Android, not written for HTC
+  — and a guide for its own app); Coolmuster
+  (coolmuster.com/android/transfer-files-from-android-to-usb-
+  flash-drive.html — OTG copy, a PC assistant app, drag-and-drop
+  through a computer, or a cloud service. Generic Android, and
+  most of the ways need a computer or a cloud account); Photos
+  to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — the one-tap app alternative: copies
+  the whole gallery to a pen drive in one tap, copies only new
+  photos next time, warns about the FAT32 4 GB limit. Free with
+  ads, one-time purchase to remove them. Generic Android, not an
+  HTC guide, and it does not promise oldest-first order, detailed
+  progress with Pause and Stop, or size verification of every
+  file); HTC U23 Pro vs HTC Desire 22 Pro specs
+  (smartprix.com/mobiles/htc_u23_pro_vs_htc_desire_22_pro-
+  cpd1wqtp2ttz_pd1940jof90.php — USB-C v3.0 with USB on-the-go
+  for the U23 Pro, USB-C v2.0 with USB on-the-go for the Desire
+  22 Pro. Spec tables, not a guide — and the confirmation that
+  both current HTC phones have OTG); HTC U23 vs HTC Desire 22
+  Pro specs
+  (smartprix.com/mobiles/htc_u23_vs_htc_desire_22_pro-
+  cpd1ksw0f1rj_pd1940jof90.php — USB-C v3.0 with USB on-the-go
+  for the U23. Spec tables, not a guide — and the confirmation
+  that the U23 has OTG); cloud routes — Google Photos syncs the
+  gallery to Google's servers, Google backup restores data to a
+  new phone from Google's cloud, not to a drive you hold; Google
+  Photos' "Storage saver" setting compresses photos, and a cloud
+  backup stops working the day you stop paying for storage.
+  Neither route gives a folder of plain photo files on a USB
+  drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-68, 37th how-to):
+  docs/htc-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
