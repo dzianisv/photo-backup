@@ -158,9 +158,25 @@ class NotificationScreenshotTest {
             NotificationHelper.NOTIFICATION_ID_PROGRESS,
             NotificationHelper.buildProgressNotification(ctx, state),
         )
-        val posted = mgr.activeNotifications.first {
-            it.id == NotificationHelper.NOTIFICATION_ID_PROGRESS
-        }.notification
+        val posted = run {
+            // Poll: on a loaded emulator the NotificationManagerService
+            // can take seconds to list a just-posted notification
+            // (smoke run 44154569523 failed here with
+            // NoSuchElementException on the immediate read, twice).
+            val deadline = System.currentTimeMillis() + 10_000
+            var found: Notification? = null
+            while (System.currentTimeMillis() < deadline && found == null) {
+                found = mgr.activeNotifications.firstOrNull {
+                    it.id == NotificationHelper.NOTIFICATION_ID_PROGRESS
+                }?.notification
+                if (found == null) Thread.sleep(200)
+            }
+            assertTrue(
+                "progress notification was not listed after posting it",
+                found != null,
+            )
+            found!!
+        }
         assertEquals(
             "posted progress bar does not match the real copy",
             state.percent,

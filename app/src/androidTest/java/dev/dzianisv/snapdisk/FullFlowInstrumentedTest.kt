@@ -48,17 +48,28 @@ import org.junit.Test
  * The progress notification text carries no file name, so the
  * service test does not (and cannot) observe the order from it.
  *
- * Timing discipline (learned from smoke run 44147560922, which
- * failed 6 tests): seed data is written and verified in 1 MB
- * chunks — the test process heap is ~200 MB, so holding whole
- * 80 MB files as byte arrays OOMs. Pause/Stop are sent only after
- * the in-flight file's .part is observed on disk, never on a
- * sleep — on a loaded emulator a sleep can overshoot and the copy
- * finishes first. Every test stops any leftover service in
- * setUp/tearDown: BackupService.stateFlow is process-static, so a
- * paused service left by a failed test would make the next test's
- * startBackup() a no-op (job still active) and the next test would
- * time out in PAUSED.
+ * Timing discipline (learned from smoke runs 44147560922 and
+ * 44154569523, which failed 6 and 4 tests): seed data is written
+ * and verified in 1 MB chunks — the test process heap is ~200 MB,
+ * so holding whole 80 MB files as byte arrays OOMs. Pause/Stop
+ * are sent only after the in-flight file's .part is observed on
+ * disk, never on a sleep — on a loaded emulator a sleep can
+ * overshoot and the copy finishes first. Every test stops any
+ * leftover service in setUp/tearDown: BackupService.stateFlow is
+ * process-static, so a paused service left by a failed test would
+ * make the next test's startBackup() a no-op (job still active)
+ * and the next test would time out in PAUSED.
+ *
+ * Destination mirroring (root cause of the run-2 failures):
+ * the service mirrors the source tree under the To folder (TDD
+ * C6), so a photo seeded with RELATIVE_PATH "DCIM/snapdisk-e2e"
+ * lands in <dst>/DCIM/snapdisk-e2e/<name> — NOT in <dst>/<name>.
+ * Run 2 asserted the flat path, so it reported "missing file"
+ * and ".part never observed" while the service was copying
+ * correctly (logcat showed the MediaProvider opens for every
+ * seeded file). Every assertion here goes through destFile(),
+ * which applies the same mirroring rule, and every "no .part
+ * left" / file-count check walks the tree recursively.
  */
 class FullFlowInstrumentedTest {
 
@@ -117,7 +128,10 @@ class FullFlowInstrumentedTest {
     /**
      * If a backup job is active (a previous test left the service
      * COPYING/PAUSED), stop it and wait for STOPPED so the next
-     * test's startBackup() is not a no-op. Best effort: never throws.
+     * test's startBackup() is not a no-op. Fails setUp outright if
+     * the previous job will not stop within 60 s: a stale active
+     * job would make this test observe the previous test's states
+     * and fail downstream with a misleading message.
      */
     private fun stopServiceIfRunning() {
         val state = BackupService.stateFlow.value.status
@@ -130,11 +144,40 @@ class FullFlowInstrumentedTest {
                 Intent(ctx, BackupService::class.java).setAction(BackupService.ACTION_STOP),
             )
         } catch (_: Exception) { /* service may already be gone */ }
-        val deadline = System.currentTimeMillis() + 10_000
+        val deadline = System.currentTimeMillis() + 60_000
         while (System.currentTimeMillis() < deadline) {
             if (BackupService.stateFlow.value.status == BackupStatus.STOPPED) return
             Thread.sleep(100)
         }
+        throw AssertionError(
+            "previous backup job did not stop within 60 s " +
+                "(state=${BackupService.stateFlow.value.status}) — refusing to run " +
+                "on top of a stale active job",
+        )
+    }
+
+    /** MediaStore RELATIVE_PATH every seeded photo is inserted with. */
+    private val seedRelativePath = "DCIM/snapdisk-e2e"
+
+    /**
+     * Where the service puts a seeded photo: it mirrors the source
+     * tree under the To folder (TDD C6), so the destination is
+     * <dst>/DCIM/snapdisk-e2e/<name>. Asserting the flat
+     * <dst>/<name> path is wrong — that is what failed run 2.
+     */
+    private fun destFile(name: String): File = File(File(dstDir, seedRelativePath), name)
+
+    /** The in-flight .part next to [name]'s destination (PRD A3). */
+    private fun partFile(name: String): File =
+        dev.dzianisv.snapdisk.backup.BackupEngine.partFileFor(destFile(name))
+
+    /** Every file under the destination, recursively (mirrored tree). */
+    private fun allDestFiles(): List<File> =
+        dstDir.walkTopDown().filter { it.isFile }.toList()
+
+    private fun assertNoStaleParts() {
+        val parts = allDestFiles().filter { it.name.endsWith(".part") }
+        assertTrue("stale .part files remain: $parts", parts.isEmpty())
     }
 
     /**
@@ -164,7 +207,7 @@ class FullFlowInstrumentedTest {
         val values = ContentValues().apply {
             put(MediaStore.MediaColumns.DISPLAY_NAME, name)
             put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg")
-            put(MediaStore.MediaColumns.RELATIVE_PATH, "DCIM/snapdisk-e2e")
+            put(MediaStore.MediaColumns.RELATIVE_PATH, seedRelativePath)
             put(MediaStore.MediaColumns.DATE_TAKEN, dateTakenMs)
             put(MediaStore.MediaColumns.DATE_ADDED, dateTakenMs / 1000)
             put(MediaStore.MediaColumns.DATE_MODIFIED, dateTakenMs / 1000)
@@ -283,7 +326,7 @@ class FullFlowInstrumentedTest {
     }
 
     /** Wait until [file] exists with a partial size (a copy is in flight), or fail. */
-    private fun waitForPartInFlight(file: File, totalBytes: Long, timeoutMs: Long = 30_000) {
+    private fun waitForPartInFlight(file: File, totalBytes: Long, timeoutMs: Long = 120_000) {
         val deadline = System.currentTimeMillis() + timeoutMs
         while (System.currentTimeMillis() < deadline) {
             if (file.exists() && file.length() in 1 until totalBytes) return
@@ -338,14 +381,18 @@ class FullFlowInstrumentedTest {
         // Backup in the app (the offer's Backup action does the same
         // startForegroundService call from the receiver).
         activityScenario = ActivityScenario.launch(MainActivity::class.java)
-        seedPhoto("e2e-old.jpg", 1_700_000_000_000L, 20L * 1024 * 1024)
-        seedPhoto("e2e-mid.jpg", 1_700_000_100_000L, 20L * 1024 * 1024)
-        seedPhoto("e2e-new.jpg", 1_700_000_200_000L, 20L * 1024 * 1024)
+        // Small files: the emulator copies at ~100 KB/s worst case,
+        // so 2 MB each keeps the whole job inside the DONE timeout
+        // while still proving oldest-first order + content.
+        val size = 2L * 1024 * 1024
+        seedPhoto("e2e-old.jpg", 1_700_000_000_000L, size)
+        seedPhoto("e2e-mid.jpg", 1_700_000_100_000L, size)
+        seedPhoto("e2e-new.jpg", 1_700_000_200_000L, size)
 
         val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
         var sawProgressWithPauseStop = false
         startServiceAction(BackupService.ACTION_START)
-        val done = waitForState(120_000, 50, seenStates) { state ->
+        val done = waitForState(240_000, 50, seenStates) { state ->
             val progress = progressNotification()
             if (progress != null && state.status == BackupStatus.COPYING) {
                 val titles = actionTitles(progress)
@@ -366,14 +413,15 @@ class FullFlowInstrumentedTest {
             "no COPYING progress notification with Pause/Stop was observed; seen=$seenStates",
             sawProgressWithPauseStop,
         )
+        assertEquals("DONE state copiedFiles", 3, done.copiedFiles)
 
-        val oldDest = File(dstDir, "e2e-old.jpg")
-        val midDest = File(dstDir, "e2e-mid.jpg")
-        val newDest = File(dstDir, "e2e-new.jpg")
-        assertFileMatchesSeed(oldDest, "e2e-old.jpg", 20L * 1024 * 1024)
-        assertFileMatchesSeed(midDest, "e2e-mid.jpg", 20L * 1024 * 1024)
-        assertFileMatchesSeed(newDest, "e2e-new.jpg", 20L * 1024 * 1024)
-        assertTrue("stale .part files remain", dstDir.listFiles()?.none { it.name.endsWith(".part") } == true)
+        val oldDest = destFile("e2e-old.jpg")
+        val midDest = destFile("e2e-mid.jpg")
+        val newDest = destFile("e2e-new.jpg")
+        assertFileMatchesSeed(oldDest, "e2e-old.jpg", size)
+        assertFileMatchesSeed(midDest, "e2e-mid.jpg", size)
+        assertFileMatchesSeed(newDest, "e2e-new.jpg", size)
+        assertNoStaleParts()
         // Landing order is the oldest-first proof at service level:
         // the engine copies sequentially, so mtimes increase old→new.
         assertTrue(
@@ -399,19 +447,22 @@ class FullFlowInstrumentedTest {
     @Test
     fun pauseAndResumeThroughNotificationActions() {
         activityScenario = ActivityScenario.launch(MainActivity::class.java)
-        // One large file: the pause is sent only after its .part is
-        // observed mid-copy, so there is no between-files window for
-        // the pause to land in (the engine-level pause is already
-        // proven deterministically by BackupEngineInstrumentedTest
-        // with a slow stream; this test proves the notification
-        // action path).
-        val size = 300L * 1024 * 1024
+        // One file, big enough to stay in flight for seconds at any
+        // observed emulator copy rate (~100 KB/s–2 MB/s): the pause
+        // is sent only after its .part is observed mid-copy, so
+        // there is no between-files window for the pause to land in
+        // (the engine-level pause is already proven deterministically
+        // by BackupEngineInstrumentedTest with a slow stream; this
+        // test proves the notification action path). 300 MB (run 2)
+        // made the job run for many minutes and invited cross-test
+        // interference; 10 MB is the same proof in seconds.
+        val size = 10L * 1024 * 1024
         seedPhoto("e2e-big.jpg", 1_700_000_000_000L, size)
 
         val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
         startServiceAction(BackupService.ACTION_START)
-        waitForState(60_000, 50, seenStates) { it.status == BackupStatus.COPYING }
-        val part = File(dstDir, "e2e-big.jpg.part")
+        waitForState(120_000, 50, seenStates) { it.status == BackupStatus.COPYING }
+        val part = partFile("e2e-big.jpg")
         waitForPartInFlight(part, size)
         sendNotificationAction(BackupService.ACTION_PAUSE)
         val paused = waitForState(10_000, 50, seenStates) { it.status == BackupStatus.PAUSED }
@@ -431,7 +482,7 @@ class FullFlowInstrumentedTest {
         )
 
         sendNotificationAction(BackupService.ACTION_RESUME)
-        val done = waitForState(120_000, 50, seenStates) {
+        val done = waitForState(180_000, 50, seenStates) {
             it.status == BackupStatus.DONE || it.status == BackupStatus.ERROR
         }
         assertEquals(
@@ -439,8 +490,8 @@ class FullFlowInstrumentedTest {
             BackupStatus.DONE,
             done.status,
         )
-        assertFileMatchesSeed(File(dstDir, "e2e-big.jpg"), "e2e-big.jpg", size)
-        assertTrue("stale .part files remain", dstDir.listFiles()?.none { it.name.endsWith(".part") } == true)
+        assertFileMatchesSeed(destFile("e2e-big.jpg"), "e2e-big.jpg", size)
+        assertNoStaleParts()
         println("SMOKE full-flow: resume finished the paused copy, file byte-identical")
     }
 
@@ -448,18 +499,21 @@ class FullFlowInstrumentedTest {
     fun stopThroughNotificationActionKeepsFinishedFiles() {
         activityScenario = ActivityScenario.launch(MainActivity::class.java)
         // Small file first (oldest): it finishes before the stop is
-        // sent, so it must be kept byte-identical. The large second
-        // file is in flight when the stop lands: its .part must go.
-        seedPhoto("e2e-stop1.jpg", 1_700_000_000_000L, 5L * 1024 * 1024)
-        val bigSize = 300L * 1024 * 1024
+        // sent, so it must be kept byte-identical. The second file
+        // is in flight when the stop lands: its .part must go.
+        // 300 MB (run 2) made the job run for many minutes; 10 MB
+        // stays in flight for seconds at any observed copy rate.
+        val firstSize = 2L * 1024 * 1024
+        seedPhoto("e2e-stop1.jpg", 1_700_000_000_000L, firstSize)
+        val bigSize = 10L * 1024 * 1024
         seedPhoto("e2e-stop2.jpg", 1_700_000_100_000L, bigSize)
 
         val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
         startServiceAction(BackupService.ACTION_START)
-        waitForState(60_000, 50, seenStates) { it.status == BackupStatus.COPYING }
-        waitForPartInFlight(File(dstDir, "e2e-stop2.jpg.part"), bigSize)
+        waitForState(120_000, 50, seenStates) { it.status == BackupStatus.COPYING }
+        waitForPartInFlight(partFile("e2e-stop2.jpg"), bigSize)
         sendNotificationAction(BackupService.ACTION_STOP)
-        val stopped = waitForState(10_000, 50, seenStates) {
+        val stopped = waitForState(30_000, 50, seenStates) {
             it.status == BackupStatus.STOPPED || it.status == BackupStatus.DONE
         }
         assertEquals(
@@ -467,12 +521,12 @@ class FullFlowInstrumentedTest {
             BackupStatus.STOPPED,
             stopped.status,
         )
-        assertTrue("stale .part files remain after Stop", dstDir.listFiles()?.none { it.name.endsWith(".part") } == true)
-        assertFileMatchesSeed(File(dstDir, "e2e-stop1.jpg"), "e2e-stop1.jpg", 5L * 1024 * 1024)
+        assertNoStaleParts()
+        assertFileMatchesSeed(destFile("e2e-stop1.jpg"), "e2e-stop1.jpg", firstSize)
         // No further copying after Stop: the destination is stable.
-        val countAfterStop = dstDir.listFiles()?.count { it.isFile } ?: 0
+        val countAfterStop = allDestFiles().size
         Thread.sleep(1_000)
-        val countLater = dstDir.listFiles()?.count { it.isFile } ?: 0
+        val countLater = allDestFiles().size
         assertEquals("files kept copying after Stop", countAfterStop, countLater)
         println(
             "SMOKE full-flow: Stop ended the job, .part deleted, " +
