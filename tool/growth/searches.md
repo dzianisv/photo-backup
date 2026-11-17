@@ -371,6 +371,45 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-47, 18th how-to):
   docs/sony-xperia-photos-to-usb.html.
 
+### 18. "back up photos from LG to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low-Medium. No top result is an LG-specific guide,
+  and no top result offers an automated whole-library LG photo
+  backup with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 16, 2026, live web search):
+  Ubuy product listing (a dual-connector photo backup stick sold
+  as compatible with LG, Samsung, Google, Motorola — a stick to
+  buy, not a guide; says to use the phone's built-in file
+  manager); AnExplorer guide (manual select-copy-paste,
+  anexplorer.io/transfer/phone-to-usb — the only one of the
+  five that shows a progress bar for the manual copy, still no
+  resume or verification); YouTube PYcbV25CczI (OTG + file
+  manager manual copy, suggests Move); Dr.Fone (Google Drive /
+  PC drag-and-drop / OTG manual copy / AirDroid); Photos to USB:
+  OTG Backup (Play listing, com.arzdrz.photos_to_usb — a real
+  phone-to-USB app, one-tap whole-gallery copy with resume,
+  free with ads, one-time purchase removes ads — generic
+  Android, not an LG guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop,
+  or size verification). Google Photos is cloud, not USB.
+  LG specifics: LG left the phone business in April 2021
+  (wound down July 31, 2021) — no new LG phones, no new LG
+  tools, and LG Mobile Switch is no longer updated (struggles
+  on newer Android versions); stock file manager is LG File
+  Manager (Management > File Manager), stock gallery is
+  Gallery; no OTG toggle — plug the drive in and it mounts;
+  late LG phones (G7, G8, V30 and later, Velvet, Wing, V60)
+  are USB-C, older ones Micro-USB; most LG phones have a
+  microSD slot. LG's own tools: LG Mobile Switch is
+  phone-to-phone migration (USB cable / Wi-Fi / SD card), LG
+  Bridge is PC software that backs the phone up to a
+  computer, LG Backup (Settings, Backup & reset) writes a
+  backup to an SD card or the cloud — none of them writes
+  plain photo files to a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 16, 2026 (WL-49, 19th how-to):
+  docs/lg-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
