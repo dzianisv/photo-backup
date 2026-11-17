@@ -1,5 +1,105 @@
 # SnapDisk — Work Log
 
+## WL-52 — Back up Vivo photos to USB article, 22nd how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/vivo-photos-to-usb.html ("Back up Vivo photos to a
+  USB drive (no computer)"), following the WL-47 article template
+  exactly (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot —
+  same reuse as the 8th through 21st articles). Facts verified
+  from code on fresh main: SAF tree picker (MainActivity.kt
+  OpenDocumentTree + takePersistableUriPermission); oldest-first
+  via MediaStore DATE_TAKEN ascending; free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy. Search
+  evidence (Nov 16, 2026 live web search): no Vivo-specific
+  result in the top results at all — FoneLab guide
+  (fonelab.com/resource/how-to-transfer-photos-from-android-
+  phone-to-usb-flash-drive.html — OTG adapter + file manager,
+  PC File Explorer, or HyperTrans PC tool; generic Android, two
+  of the three ways need a computer); AnExplorer guide
+  (anexplorer.io/transfer/phone-to-usb; manual select-copy-paste,
+  the only one of the five that shows a progress bar with speed
+  and time remaining, still no resume or verification); YouTube
+  video (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); MobiKin guide
+  (mobikin.com/android-backup/transfer-files-from-android-to-
+  usb-flash-drive.html — generic: PC drag-and-drop, Assistant PC
+  tool, OTG copy, Files by Google, AirDroid); VaultDrive page
+  (coticsy.com/vaultdrive.html — a rival app's own page, generic
+  Android and iPhone, not a Vivo guide: free for up to 200 files
+  or 2 GB per backup, Pro $19.99 once; does not promise
+  oldest-first order, detailed progress with Pause and Stop, or
+  size verification); MobiKin vivo Cloud guide
+  (mobikin.com/android-backup/vivo-cloud-backup.html — the one
+  Vivo-specific backup guide found in the wider search, and it
+  is not a phone-to-USB guide at all: vivo Cloud, Google backup,
+  PC tool); vivo's own EasyShare FAQ
+  (vivo.com/bt/content/easyshare — EasyShare moves files between
+  two phones, or backs the phone up to a PC; phone-to-phone or
+  phone-to-PC, not phone-to-USB); Photos to USB: OTG Backup
+  (Play listing, com.arzdrz.photos_to_usb) is the one-tap app
+  alternative from the wider search — a real phone-to-USB app,
+  one-tap whole-gallery copy, only new photos next time, warns
+  about the FAT32 4 GB limit, free with ads, one-time purchase
+  removes ads — generic Android, not a Vivo guide, and it does
+  not promise oldest-first order, detailed progress with Pause
+  and Stop, or size verification, so the article says so
+  honestly instead of claiming SnapDisk is the only one-tap
+  option. Cloud is Google Photos or vivo Cloud — cloud, not USB.
+  Vivo specifics stated honestly: Funtouch OS has an "OTG"
+  switch (Settings > More settings > OTG — search Settings for
+  "OTG"; vivo's own FAQ says the switch turns itself off if it
+  is not used in 5 minutes, to save power), and not every Vivo
+  phone has OTG; stock file manager is File Manager
+  (category-based: Images, Videos, Audio, Documents, Downloads);
+  stock gallery is Albums (photo backup there runs through
+  Google Photos); modern Vivo phones (X, V, recent Y series) are
+  USB-C, older ones Micro-USB; whether a model has a microSD
+  slot varies by model (budget Y and T series phones include one
+  — not verified for any other model, check the model's specs).
+  Vivo's own tools: EasyShare is phone-to-phone transfer (Send
+  on one phone, Accept on the other) or backup to a PC via
+  EasyShare on the computer (USB cable or Wi-Fi) — needs a
+  second phone or a PC; vivo Cloud is cloud backup (5 GB free,
+  automatic backup about every 7 days when charging, on Wi-Fi,
+  and locked; device backup covers system data, call logs,
+  messages, and apps, photos sync through Albums or Google
+  Photos) — none of them writes plain photo files to a USB
+  drive. Honest contrast stated in the TL;DR: File Manager
+  works but is manual select-copy-paste with no progress, no
+  resume, no verification; Vivo's own tools work but move data
+  to another phone, to a PC, or to the cloud — not plain photos
+  on a USB drive; Google Photos / vivo Cloud is cloud, not a USB
+  copy; Photos to USB also does one-tap copy with resume —
+  SnapDisk adds oldest-first order, detailed progress with
+  Pause/Stop, size verification, no ads, and free 5 GB per run.
+  Query 21 scored Nov 16, 2026 (searches.md): "back up photos
+  from Vivo to USB flash drive without computer" — real how-to
+  gap. Volume unknown (Play publishes no volume); difficulty
+  low. Linked from blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt (full section + Blog
+  posts list, now 22), feed.xml (now 22 items). JSON-LD
+  validated by parse; sitemap.xml and feed.xml parse as XML.
+  Title 45 chars, meta 142 chars. No app code or Play listing
+  files touched; applicationId untouched
+  (dev.dzianisv.snapdisk). Work ran from a persistent scratch
+  clone (~/workspace/pb-wl52-scratch, not the shared checkout,
+  never /tmp). Evidence: PR #69 (commit 8245fa9, merge b01d86d,
+  merged 2026-11-17T06:31:19Z); CI run 44031575908 (build pass,
+  1m25s) green; post-merge main runs green (Android PR
+  44031831026, pages 44031829397). Live fetch after Pages deploy:
+  article 200, 27441 bytes, title "Back up Vivo photos to a USB
+  drive — SnapDisk" present; blog index 200, 20530 bytes;
+  feed.xml 200 (22 items); sitemap.xml 200 with the new link;
+  llms-full.txt 200, 230216 bytes, Blog list counts 22 with
+  Vivo present.
+
 ## WL-51 — Back up Realme photos to USB article, 21st how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
