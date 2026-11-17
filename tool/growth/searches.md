@@ -335,6 +335,42 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-45, 17th how-to):
   docs/huawei-photos-to-usb.html.
 
+### 17. "back up photos from Sony Xperia to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low-Medium. No top result is a Sony-specific guide,
+  and no top result offers an automated whole-library Xperia photo
+  backup with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 16, 2026, live web search):
+  YouTube PYcbV25CczI (OTG + file manager manual copy, suggests
+  Move); AnExplorer guide (manual select-copy-paste,
+  anexplorer.io/transfer/phone-to-usb — the only one of the
+  five that shows a progress bar for the manual copy, still no
+  resume or verification); Dr.Fone (Google Drive / PC
+  drag-and-drop / OTG manual copy / AirDroid); YouTube
+  ch1evyu5PPM (OTG + file manager manual copy, suggests Move);
+  askfilo (OTG manual copy or a PC middleman); Photos to USB:
+  OTG Backup (Play listing, com.arzdrz.photos_to_usb — a real
+  phone-to-USB app, one-tap whole-gallery copy with resume,
+  free with ads, one-time purchase removes ads — generic
+  Android, not an Xperia guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop,
+  or size verification). Google Photos is cloud, not USB.
+  Sony specifics: no OTG toggle — near-stock Android mounts
+  the drive on its own; stock file manager is Files by Google,
+  stock gallery is Google Photos (Sony ships almost no apps
+  of its own on recent Xperia phones); microSDXC in the
+  shared SIM slot varies by model (up to 1.5 TB on the
+  Xperia 1 VI); Xperia 1 VI USB-C is USB 3.2 Gen 1 (5 Gbit/s),
+  Xperia 10 VI is USB 2.0. Sony's own tool is Xperia
+  Companion — PC software that backs the phone up to a
+  computer as a package, not a phone-to-USB copy; older
+  Xperia phones also shipped an Xperia Backup & Restore app
+  that could write a backup to a USB drive via a host
+  adapter, again a backup package, not plain photo files.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 16, 2026 (WL-47, 18th how-to):
+  docs/sony-xperia-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
