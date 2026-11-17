@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Fairphone photos to a USB drive — SnapDisk</title>
+<meta name="description" content="Back up Fairphone photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/fairphone-photos-to-usb.html">
+<meta property="og:title" content="Back up Fairphone photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up Fairphone photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/fairphone-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/fairphone-photos-to-usb.html#article",
+      "headline": "Back up Fairphone photos to a USB drive (no computer)",
+      "description": "Back up Fairphone photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-17",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/fairphone-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/fairphone-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up Fairphone photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — all three current models have OTG. Spec tables list USB Type-C 3.0 with OTG and DisplayPort for the Fairphone 4 and the Fairphone 5, and USB Type-C 2.0 with OTG for the Fairphone 6. Fairphone OS is near-stock Android, so there is no OTG switch to enable: the drive mounts on plug-in. If nothing appears, check Settings > Storage. The stock route is the Files app: plug the drive in, open Files, pick the photos, and Copy to the drive. SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later. Fairphone OS ships with Google apps including the Play Store, so once the listing is live that will be the install route; the /e/OS Fairphone 6 has no Play Store, so the APK is the install route there."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/fairphone-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up Fairphone photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/fairphone-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up Fairphone photos to a USB drive (no computer)</h1>
+  <p class="dek">Fairphone phones (4, 5, and 6) run Fairphone OS — near-stock Android — with USB-C and OTG on all three: spec tables list USB Type-C 3.0 with OTG and DisplayPort for the Fairphone 4 and the Fairphone 5, and USB Type-C 2.0 with OTG for the Fairphone 6. And Fairphone has no backup tool of its own: the routes on a Fairphone are Google's — Google Photos and Google backup — plus PC tools and rooted backup apps, which back your photos up to the cloud, to a computer, or to another device, not to a USB drive as plain files. A USB-C flash drive plugs straight into any current Fairphone. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 17, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On any current Fairphone, plug a USB drive in: it mounts straight away with a "USB storage added" notification — Fairphone OS is near-stock Android, so there is no OTG switch to enable and nothing to turn on first; if nothing appears, check Settings &gt; Storage — then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: the Files app works — it is the stock file manager on Fairphone OS, and it copies photos to a USB drive — but it is manual select-copy-paste with no progress detail, no resume, and no verification; Fairphone's own backup routes work too, but Fairphone has no backup tool of its own, so the routes are Google's — Google Photos and Google backup — plus PC tools like MyPhoneExplorer and rooted apps like Neo Backup, and none of them writes your photos as plain files to a USB drive: Google Photos backs photos up to Google's cloud, Google backup restores your data to a new phone from the cloud, and the PC tools back the phone up to a computer. One rival app does exist — Photos to USB: OTG Backup copies a whole gallery to a pen drive in one tap and resumes where it stopped — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 17, 2026, no top search result for this query is a Fairphone-specific phone-to-USB guide at all, let alone a Fairphone-specific automated whole-library backup with progress, Pause/Stop, and resume: the Fairphone-specific results are a forum thread asking how to do it and cloud and PC backup guides, and the rest are generic manual guides.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up Fairphone photos to USB drive without computer" and there is no Fairphone-specific phone-to-USB guide in the top results at all — the Fairphone-specific result is a forum thread asking how to do it, and the rest are generic Android guides, in different packaging:</p>
+  <ul>
+    <li><strong>Fairphone community forum, "Back up on hard disk"</strong> (<a href="https://forum.fairphone.com/t/back-up-on-hard-disk/118672">Back up on hard disk - Fairphone 5</a>) — a Fairphone 5 owner asking how to back up to an offline disk instead of Google One. The answers are Swift Backup, Syncthing to sync photos with other devices, Neo Backup (needs root), FolderSync to a USB drive, MyPhoneExplorer (a PC tool), or a USB cable to a PC — a discussion, not a guide. One reply says "go into your settings (choose Backup), plug in a USB type C external drive and do a manual backup" — but that reply is about LineageOS, not Fairphone OS, as the next reply in the thread points out. Nobody in the thread gives a Fairphone-specific phone-to-USB photo backup.</li>
+    <li><strong>YouTube</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos</a>) — a video walkthrough of the generic route: OTG adapter, the phone's built-in file manager, select photos in DCIM, Copy or Move to the drive. Generic Android, not written for Fairphone.</li>
+    <li><strong>FotoSafe</strong> (<a href="https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/">Back up Android photos to USB</a>) — connect the drive, select it in FotoSafe, review the media and start copying. Generic Android, not written for Fairphone — and it is a guide for its own app.</li>
+    <li><strong>Dr.Fone</strong> (<a href="http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html">4 Practical Ways to Transfer Photos from Android to USB Flash Drive</a>) — OTG copy, PC drag-and-drop, Google Drive, or AirDroid over Wi-Fi. Generic Android, and most of the ways need a computer or a cloud account.</li>
+    <li><strong>AnExplorer</strong> (<a href="https://anexplorer.io/features/usb-otg">USB OTG File Manager for Android — Read, Write, Transfer</a>) — plug a USB drive in via OTG and AnExplorer gives full read/write access, with FAT32, exFAT, and NTFS support. Generic Android, not written for Fairphone — and it is a guide for its own app.</li>
+    <li><strong>softhandtech</strong> (<a href="https://softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/">Transfer Photos from Phone to Memory Stick: A Comprehensive Guide</a>) — a computer as middleman, direct OTG transfer, or a cloud service. Generic Android and iPhone, not written for Fairphone.</li>
+    <li><strong>Photos to USB: OTG Backup</strong> (<a href="https://play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb">Google Play</a>) — the one-tap app alternative, from the top results for this job: a real phone-to-USB app that copies the whole gallery to a pen drive in one tap, copies only new photos next time, and warns about the FAT32 4 GB limit. It is free with ads, with a one-time purchase to remove them. It is the closest thing to this article's job — but it is a generic Android listing, not a Fairphone guide, and it does not promise oldest-first order, detailed progress with Pause and Stop, or size verification of every file.</li>
+    <li><strong>Fairphone community forum, "Backup your phone" guide</strong> (<a href="https://forum.fairphone.com/t/backup-your-phone/26290/1">Backup your phone - Guides</a>) — Fairphone's own community guide: TWRP custom recovery, CWM custom recovery, Titanium Backup (needs root), the built-in backup app, or Google sync to the cloud. Fairphone-specific, but every route is a custom recovery, a rooted backup tool, or a cloud sync — none of them puts plain photo files on a USB drive.</li>
+    <li><strong>Fairphone community forum, "How to do a full backup when rooted?"</strong> (<a href="https://forum.fairphone.com/t/how-to-do-a-full-backup-when-rooted/132065">How to do a full backup when rooted?</a>) — the thread's own conclusion: the only official backup way is sending all data to Google, and without root there is nothing like a full backup; the suggestions are Neo Backup, Swift Backup, and TWRP, which the thread notes has not been updated for years. Fairphone-specific, but rooted tools and Google's cloud — not a phone-to-USB photo backup.</li>
+    <li><strong>/e/OS community, "How do I back up my Fairphone 6 with /e/OS?"</strong> (<a href="https://community.e.foundation/t/how-do-i-back-up-my-fairphone-6-with-e-os/77971">How do I back up my Fairphone 6 with /e/OS?</a>) — for the de-Googled Fairphone 6, the backup is Seedvault (Settings &gt; System &gt; Backup &gt; Seedvault), with the backup destination set to the SD card. Fairphone-specific, but it backs up apps and data to a card, not a folder of plain photo files on a USB drive.</li>
+    <li><strong>Fairphone support, "How to back up or restore data on your Fairphone"</strong> (<a href="https://support.fairphone.com/hc/en-us/articles/8951206995601-How-to-back-up-or-restore-my-data">How to back up or restore data on your Fairphone</a>) — Fairphone's own support page, and the only backup way it presents is Google backup: the thread on the forum confirms "the Google backup is certainly presented as the official way for backing up a Fairphone" and "there are no other ways mentioned in the official docs". Fairphone-specific, but it backs the phone up to Google's cloud — not to a USB drive.</li>
+    <li><strong>Technobezz's Fairphone 5 data transfer guide</strong> (<a href="https://www.technobezz.com/how-to-transfer-data-to-fairphone-5">Fairphone 5 Data Transfer Guide</a>) — wireless "Copy your data" during setup, a USB cable to the old phone, or restore from a Google One backup (Settings &gt; System &gt; Backup). Fairphone-specific, but it moves data to a new phone or restores it from Google's cloud — not a phone-to-USB photo backup.</li>
+    <li><strong>Fairphone 5 specs</strong> (<a href="https://en.wikipedia.org/wiki/Fairphone_5">Fairphone 5</a>) — USB-C 3.0 (DisplayPort, USB-OTG); microSDXC (dedicated slot). Spec tables, not a guide — and the confirmation that the Fairphone 5 has OTG. The same page notes the Fairphone 5 was discontinued in January 2026.</li>
+    <li><strong>Fairphone 4 specs</strong> (<a href="https://en.wikipedia.org/wiki/Fairphone_4">Fairphone 4</a>) — USB-C 3.0 (DisplayPort, USB-OTG); microSD up to 2 TB. Spec tables, not a guide — and the confirmation that the Fairphone 4 has OTG.</li>
+    <li><strong>Fairphone 6 specs</strong> (<a href="https://m.gsmarena.com/compare.php3?idPhone1=13955">Fairphone 6</a>) — USB Type-C 2.0, OTG; microSDXC (dedicated slot); Android 15 with up to 8 major Android upgrades. Spec tables, not a guide — and the confirmation that the current Fairphone 6 has OTG.</li>
+    <li><strong>Cloud routes</strong> — Google Photos syncs your gallery to Google's servers, Google backup restores your data to a new phone from Google's cloud, not to a drive you hold; Google Photos' "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Neither route gives you a folder of plain photo files on a USB drive.</li>
+  </ul>
+  <p>None of them is a Fairphone-specific phone-to-USB guide at all, and none of them offers an automated Fairphone photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>What you need</h2>
+  <p>A Fairphone (Android 7.0 or later for SnapDisk) — the Fairphone 4, 5, and 6 all have USB-C with OTG, so no adapter is needed for a USB-C flash drive; a regular USB drive needs a USB-C OTG adapter — and enough space on the drive for the photos you want to keep. Three Fairphone specifics: first, OTG is not a question on the current models — spec tables list USB Type-C 3.0 with OTG and DisplayPort for the Fairphone 4 and the Fairphone 5, and USB Type-C 2.0 with OTG for the Fairphone 6 — and Fairphone OS is near-stock Android with no OTG switch, so the drive mounts on plug-in; if the phone ignores the drive, check Settings &gt; Storage. Second, Fairphone ships the Files app as the stock file manager — Fairphone owners in the community forum copy pictures, videos, and audio "with Files app to the SD card" — and the stock photo backup is Google Photos, which is the route Fairphone's own support page presents; Fairphone camera photos live in DCIM/Camera — and every current Fairphone has a dedicated microSDXC slot (up to 2 TB), so a card is an option, but the card stays in the phone and opening it anywhere else needs a card reader; a USB drive plugs into any computer as it is. Third, Fairphone OS ships with Google apps including the Play Store, so SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live — the one exception is the /e/OS Fairphone 6, which has no Play Store, so the APK is the install route there. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the USB drive.</strong> It mounts straight away — look for a "USB storage added" notification. Fairphone OS is near-stock Android with no OTG switch, so there is nothing to turn on first. If nothing appears, check Settings &gt; Storage. All three current models — Fairphone 4, 5, and 6 — have OTG, so the drive should appear on any of them.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — Fairphone camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the phone normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the phone to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: Files (the stock route, no app needed)</h2>
+  <p>Fairphone OS ships the Files app as the stock file manager, and it can copy your photos to the USB drive: 1. Plug in the USB drive — a notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage. 2. Open Files and confirm the USB drive shows up under external storage. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until Files says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: Fairphone's own tools (Google Photos and Google backup — not phone-to-USB)</h2>
+  <p>If you want Fairphone's own route, know what each tool actually does — Fairphone has no backup tool of its own; the routes on a Fairphone are Google's, plus PC tools and rooted apps, and none of them writes your photos as plain files to a USB drive. Google Photos is Google's own photo backup app, and it is the stock photo backup on Fairphone — Fairphone's own support page presents Google backup as the official way to back up a Fairphone: open Photos, tap your profile picture, Photos settings, Backup, and turn Backup on — it automatically backs up photos to your Google account, with 15 GB free with every Google account. It is a real backup — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. Google backup is the route Fairphone's support page points to: Settings &gt; System &gt; Backup, Back up to Google Drive on — it backs the phone up to your Google account so you can restore app settings and data to a new phone. It is a real backup — but the backup lives in Google's cloud and restores to a phone, not a folder of photo files on a USB drive you can plug into any computer and open. Seedvault is the backup on the /e/OS Fairphone 6: Settings &gt; System &gt; Backup &gt; Seedvault, with the backup destination set to the SD card — it backs up apps and data to a card, but not a folder of plain photo files on a USB drive, and the /e/OS community notes quite a few things are excluded. MyPhoneExplorer is a PC tool: install it on the computer, connect the phone with a USB cable, and back the phone up to the PC — but that needs a PC in between, and the backup lands on the PC, not on a USB drive. Swift Backup and FolderSync are the other tools the Fairphone forum suggests: Swift Backup backs apps and data up to a card or to a cloud, and FolderSync syncs files to a USB drive or anywhere else — but Swift Backup needs root-level access (Shizuku) for a full backup, and FolderSync is a sync tool you configure yourself, not a one-tap photo backup. Neo Backup and Titanium Backup are the other routes the Fairphone guides list: both need a rooted phone — and the forum thread notes TWRP has not been updated for years and no longer works with current encryption. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the Fairphone into the computer with a USB cable, tap the USB notification and choose File transfer — and drag the DCIM folder onto the USB drive. The Fairphone forum offers the same local route: take a cable, connect to your PC, and transfer the important data. This works fine, and it is the only route above that needs a second device in between. If the phone and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the phone is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>/e/OS Fairphone 6: no Play Store.</strong> The /e/OS Fairphone 6 ships without Google apps, so there is no Play Store to install from — install the APK from the GitHub release page instead. The backup on /e/OS is Seedvault, which writes apps and data to a card, not plain photo files to a USB drive.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter you don't need.</strong> A USB-C flash drive plugs straight into any current Fairphone — the Fairphone 4, 5, and 6 all have USB-C with OTG — so an adapter is only needed for a regular USB-A drive.</li>
+    <li><strong>Looking for an OTG switch that isn't there.</strong> Fairphone OS is near-stock Android with no OTG toggle — the drive mounts on plug-in, so if nothing appears, check Settings &gt; Storage rather than hunting for a switch.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google backup and Google Photos back your phone up to Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> Drag-and-drop through a computer works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route, not a desktop tool.</li>
+    <li><strong>Mistaking a PC backup for a USB backup.</strong> MyPhoneExplorer backs your Fairphone up to a computer — a real backup, but it lands on the PC, not on a USB drive you can plug into any computer and open.</li>
+    <li><strong>Mistaking a microSD copy for a USB backup.</strong> Copying DCIM to a memory card is a real local copy — every current Fairphone has a dedicated microSDXC slot up to 2 TB — but the card stays in the phone, and opening it anywhere else needs a card reader; a USB drive plugs into any computer as it is.</li>
+    <li><strong>Mistaking a sync for a backup.</strong> Syncthing and FolderSync move your photos to another device or to a drive — but a sync is not a one-tap backup with progress, Pause and Stop, and verification, and a sync that deletes on one side deletes on the other.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 17, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On Fairphone the cloud routes are Google Photos and Google backup — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="zte-photos-to-usb.html">Back up ZTE photos to a USB drive (no computer)</a> — ZTE is the closest parallel: another brand with Google Photos as the stock backup and no backup tool of its own.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

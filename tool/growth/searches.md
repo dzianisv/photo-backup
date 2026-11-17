@@ -1888,6 +1888,144 @@ demand is read off competitor install velocity instead (see
 - Verdict: how-to article material, not a listing keyword.
   Article published Nov 17, 2026 (WL-63, 33rd how-to):
   docs/zte-photos-to-usb.html.
+### 33. "back up Fairphone photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Fairphone-specific
+  phone-to-USB guide at all, let alone a Fairphone-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Fairphone-specific result is a forum
+  thread asking how to do it, and the rest are generic
+  manual guides.
+- Current top results (scored Nov 17, 2026, live web search):
+  Fairphone community forum, "Back up on hard disk"
+  (forum.fairphone.com/t/back-up-on-hard-disk/118672 — a
+  Fairphone 5 owner asking how to back up to an offline
+  disk instead of Google One; the answers are Swift Backup,
+  Syncthing, Neo Backup (needs root), FolderSync, MyPhone-
+  Explorer (a PC tool), or a USB cable to a PC — a
+  discussion, not a guide; one reply's "plug in a USB-C
+  drive and do a manual backup in Settings > Backup" is
+  LineageOS, not Fairphone OS, corrected in-thread);
+  YouTube video (youtube.com/watch?v=PYcbV25CczI — generic
+  OTG + file manager walkthrough); FotoSafe guide
+  (fotosafe.weidisoft.net/en/guides/back-up-android-photos-
+  to-usb/ — connect the drive, select it in FotoSafe, review
+  the media and start copying; generic Android, not written
+  for Fairphone — and it is a guide for its own app);
+  Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC
+  drag-and-drop, Google Drive, or AirDroid; generic Android,
+  most ways need a computer or a cloud account); AnExplorer
+  guide (anexplorer.io/features/usb-otg — plug a USB drive
+  in via OTG and AnExplorer gives full read/write access,
+  FAT32, exFAT, and NTFS; generic Android, not written for
+  Fairphone — and it is a guide for its own app);
+  softhandtech guide
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-
+  memory-stick/ — a computer as middleman, direct OTG
+  transfer, or a cloud service; generic Android and iPhone,
+  not written for Fairphone); Photos to USB: OTG Backup
+  (Play listing, com.arzdrz.photos_to_usb — a real
+  phone-to-USB app, one-tap whole-gallery copy, only new
+  photos next time, warns about the FAT32 4 GB limit, free
+  with ads, one-time purchase removes ads — generic Android,
+  not a Fairphone guide, and it does not promise oldest-first
+  order, detailed progress with Pause and Stop, or size
+  verification of every file).
+  Wider search: Fairphone community forum, "Backup your
+  phone" guide (forum.fairphone.com/t/backup-your-phone/
+  26290/1 — TWRP custom recovery, CWM custom recovery,
+  Titanium Backup (needs root), the built-in backup app, or
+  Google sync to the cloud; Fairphone-specific, but every
+  route is a custom recovery, a rooted backup tool, or a
+  cloud sync — none of them puts plain photo files on a
+  USB drive); Fairphone community forum, "How to do a full
+  backup when rooted?"
+  (forum.fairphone.com/t/how-to-do-a-full-backup-when-rooted/
+  132065 — the thread's own conclusion is that the only
+  official backup way is sending all data to Google, and
+  without root there is nothing like a full backup; the
+  suggestions are Neo Backup, Swift Backup, and TWRP, which
+  the thread notes has not been updated for years;
+  Fairphone-specific, but rooted tools and Google's cloud —
+  not a phone-to-USB photo backup); /e/OS community, "How
+  do I back up my Fairphone 6 with /e/OS?"
+  (community.e.foundation/t/how-do-i-back-up-my-fairphone-6-
+  with-e-os/77971 — for the de-Googled Fairphone 6, the
+  backup is Seedvault (Settings > System > Backup >
+  Seedvault), with the backup destination set to the SD
+  card; Fairphone-specific, but it backs up apps and data
+  to a card, not a folder of plain photo files on a USB
+  drive); Fairphone support, "How to back up or restore
+  data on your Fairphone"
+  (support.fairphone.com/hc/en-us/articles/8951206995601-
+  How-to-back-up-or-restore-my-data — Fairphone's own
+  support page, and the only backup way it presents is
+  Google backup; Fairphone-specific, but it backs the phone
+  up to Google's cloud — not to a USB drive); Technobezz's
+  Fairphone 5 data transfer guide
+  (technobezz.com/how-to-transfer-data-to-fairphone-5 —
+  wireless "Copy your data" during setup, a USB cable to
+  the old phone, or restore from a Google One backup
+  (Settings > System > Backup); Fairphone-specific, but it
+  moves data to a new phone or restores it from Google's
+  cloud — not a phone-to-USB photo backup); Fairphone 5
+  specs (en.wikipedia.org/wiki/Fairphone_5 — USB-C 3.0
+  (DisplayPort, USB-OTG); microSDXC (dedicated slot); spec
+  tables, not a guide — and the confirmation that the
+  Fairphone 5 has OTG; the same page notes the Fairphone 5
+  was discontinued in January 2026); Fairphone 4 specs
+  (en.wikipedia.org/wiki/Fairphone_4 — USB-C 3.0
+  (DisplayPort, USB-OTG); microSD up to 2 TB; spec tables,
+  not a guide — and the confirmation that the Fairphone 4
+  has OTG); Fairphone 6 specs
+  (m.gsmarena.com/compare.php3?idPhone1=13955 — USB
+  Type-C 2.0, OTG; microSDXC (dedicated slot); Android 15
+  with up to 8 major Android upgrades; spec tables, not a
+  guide — and the confirmation that the current Fairphone 6
+  has OTG).
+  Fairphone specifics: Fairphone phones (4, 5, and 6) run
+  Fairphone OS — near-stock Android (the Fairphone 4 now
+  runs Android 15; the Fairphone 6 ships with Android 15
+  and up to 8 major Android upgrades); OTG is on all three
+  current models: spec tables list USB Type-C 3.0 with OTG
+  and DisplayPort for the Fairphone 4 and the Fairphone 5,
+  and USB Type-C 2.0 with OTG for the Fairphone 6 — no OTG
+  switch on Fairphone OS, so the drive mounts on plug-in;
+  every current Fairphone has a dedicated microSDXC slot
+  (up to 2 TB); Fairphone has no backup tool of its own —
+  the routes are Google's (Google Photos, Google backup via
+  Google One) plus PC tools (MyPhoneExplorer backs the phone
+  up to a PC) and rooted apps (Neo Backup and Titanium
+  Backup need a rooted phone; Swift Backup needs root-level
+  access via Shizuku for a full backup; FolderSync syncs
+  files to a USB drive or anywhere else) and Seedvault on
+  the /e/OS Fairphone 6 (Settings > System > Backup >
+  Seedvault, destination SD card); stock file manager is
+  the Files app (Fairphone owners in the community forum
+  copy pictures, videos, and audio "with Files app to the
+  SD card"); stock photo backup is Google Photos (Fairphone's
+  own support page presents Google backup as the official
+  way to back up a Fairphone); Fairphone OS ships with
+  Google apps including the Play Store, so SnapDisk installs
+  from the v0.1.2 APK today and from Play once the listing
+  is live — the /e/OS Fairphone 6 has no Play Store, so the
+  APK is the install route there. Fairphone's own tools:
+  Google Photos (Photos settings > Backup, to Google's
+  cloud, 15 GB free) backs photos up to Google's cloud;
+  Google backup (Settings > System > Backup, Back up to
+  Google Drive) restores to a new phone from the cloud;
+  Seedvault backs apps and data up to a card; MyPhoneExplorer
+  backs the phone up to a PC; Swift Backup backs apps and
+  data up to a card or a cloud; FolderSync syncs files to a
+  USB drive or anywhere else; Neo Backup and Titanium Backup
+  need a rooted phone; Google Photos / Google backup back
+  photos up to Google's cloud — none of them writes plain
+  photo files to a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-65, 34th how-to):
+  docs/fairphone-photos-to-usb.html.
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
