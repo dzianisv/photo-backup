@@ -127,10 +127,10 @@ class FullFlowInstrumentedTest {
         }
         val uri = ctx.contentResolver.insert(
             MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values,
-        ) ?: fail("MediaStore insert failed for $name")
+        ) ?: throw AssertionError("MediaStore insert failed for $name")
         seededUris += uri
         ctx.contentResolver.openOutputStream(uri)?.use { it.write(data) }
-            ?: fail("could not open output stream for $name")
+            ?: throw AssertionError("could not open output stream for $name")
         return data
     }
 
@@ -201,7 +201,7 @@ class FullFlowInstrumentedTest {
             if (condition(state)) return state
             Thread.sleep(pollMs)
         }
-        fail(
+        throw AssertionError(
             "timed out after ${timeoutMs}ms waiting for state; " +
                 "last=${last.status} error=${last.error?.summary} " +
                 "seen=$seenStates",
@@ -389,7 +389,7 @@ class FullFlowInstrumentedTest {
         val finished = dstDir.listFiles()?.filter { it.isFile && !it.name.endsWith(".part") } ?: emptyList()
         for (file in finished) {
             val expected = stopData[file.name]
-                ?: fail("unexpected finished file ${file.name}")
+                ?: throw AssertionError("unexpected finished file ${file.name}")
             assertTrue("finished file ${file.name} is not byte-identical", file.readBytes().contentEquals(expected))
         }
         // No further copying after Stop: the destination is stable.
