@@ -1,6 +1,20 @@
 # SnapDisk — Work Log
 
-## WL-45 — Back up Huawei photos to USB article, 17th how-to (DONE)
+## 2026-11-16 — WL-45 / WL-46 + searches.md numbering dedupe (dispatcher)
+
+- Owner: Product Lead (daily loop). State: DONE.
+  Two lanes shipped in parallel Nov 16 and collided on labels: the
+  videos article (PR #53, merge 4d74d9f) and the Huawei article
+  (PR #54, merge 5ecebeb) were both briefed as WL-45 / 16th
+  how-to, and searches.md carried two "### 13" sections (the
+  videos query duplicating Xiaomi's). Resolved in scoring order,
+  no rows deleted: videos stays WL-45 (16th article, query
+  13 → 15); Huawei renumbered WL-45 → WL-46 (17th article,
+  query 15 → 16). Both articles live and verified (feed 17 items).
+  Evidence: fix PR below — merge SHA + CI run recorded in the
+  follow-up.
+
+## WL-46 — Back up Huawei photos to USB article, 17th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
   New docs/huawei-photos-to-usb.html ("Back up Huawei photos
@@ -48,7 +62,7 @@
   verification; cloud backup is cloud, not a USB copy; SnapDisk =
   plug in, tap Backup, whole library oldest-first with %, GB
   copied/total, speed, ETA, Pause/Stop, resume on re-plug,
-  size-verified, copies never deletes. Query 15 scored Nov 16,
+  size-verified, copies never deletes. Query 16 scored Nov 16,
   2026 (searches.md): "back up photos from Huawei to USB flash
   drive without computer" — real how-to gap. Volume unknown
   (Play publishes no volume); difficulty low-medium. Linked from
@@ -61,10 +75,12 @@
   but a sibling lane shipped the videos article under the same
   WL-45 / 16th labels first (PR #53, merge 4d74d9f, merged
   2026-11-17T01:56:31Z), so this article is the 17th how-to live
-  and the Work Log now carries two WL-45 rows — dispatcher to
-  renumber one. Also: searches.md now carries two "### 13"
-  sections (the videos query was numbered 13, duplicating the
-  Xiaomi row) — flagged, not renamed here. This work ran from a
+  and the Work Log briefly carried two WL-45 rows — resolved by
+  the dispatcher Nov 16 (this row renumbered WL-45 → WL-46; see
+  the dedupe entry above it). Also: searches.md briefly carried
+  two "### 13" sections (the videos query was numbered 13,
+  duplicating the Xiaomi row) — resolved in the same fix: videos
+  query 13 → 15, Huawei query 15 → 16, in scoring order. This work ran from a
   separate fresh clone (repo-wl45-huawei) because the shared
   checkout was on the sibling's wl-45-videos-to-usb branch with
   uncommitted changes; no sibling files were touched.
@@ -114,7 +130,7 @@
   select-copy-paste with no progress, no resume, no
   verification; VaultDrive also backs up videos original-quality
   — SnapDisk is not the only app that does; what it adds is the
-  automated whole-library run and half the Pro price. Query 13
+  automated whole-library run and half the Pro price. Query 15
   scored Nov 16, 2026 (searches.md): "back up videos from
   Android to USB flash drive without computer" — real how-to
   gap. Volume unknown (Play publishes no volume); difficulty
