@@ -174,6 +174,28 @@ class FullFlowInstrumentedTest {
     private fun partFile(name: String): File =
         dev.dzianisv.snapdisk.backup.BackupEngine.partFileFor(destFile(name))
 
+    /**
+     * Diagnostic: print exactly what the service's enumeration
+     * sees (same query + sort), so a wrong copy order can be
+     * traced to the MediaStore rows rather than guessed at.
+     * Smoke run 44175300406 processed mid → new → old although
+     * the seeds carry old < mid < new DATE_TAKEN — the dump shows
+     * whether the stored dates/ids are not what was inserted.
+     */
+    private fun dumpMediaStore(tag: String) {
+        val items = dev.dzianisv.snapdisk.backup.PhotoQuery
+            .queryMediaStoreOldestFirst(ctx)
+        println("SMOKE e2e $tag: enumeration sees ${items.size} items")
+        for (item in items) {
+            println(
+                "SMOKE e2e $tag: ${item.displayName} id=${item.id} " +
+                    "taken=${item.dateTakenMillis} modified=${item.dateModifiedMillis} " +
+                    "effective=${item.effectiveDateMillis} size=${item.sizeBytes} " +
+                    "rel=${item.relativePath}",
+            )
+        }
+    }
+
     /** Every file under the destination, recursively (mirrored tree). */
     private fun allDestFiles(): List<File> =
         dstDir.walkTopDown().filter { it.isFile }.toList()
@@ -406,6 +428,7 @@ class FullFlowInstrumentedTest {
         val firstSeenOrder = mutableListOf<String>()
         val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
         var sawProgressWithPauseStop = false
+        dumpMediaStore("serviceCopies")
         startServiceAction(BackupService.ACTION_START)
         // Prove MY job started first: startForegroundService is
         // async, so stateFlow still holds the previous test's DONE
@@ -566,6 +589,7 @@ class FullFlowInstrumentedTest {
         seedPhoto("e2e-stop2.jpg", 1_700_000_100_000L, bigSize)
 
         val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
+        dumpMediaStore("stop")
         startServiceAction(BackupService.ACTION_START)
         waitForState(120_000, 50, seenStates) { it.status == BackupStatus.COPYING }
         waitForPartInFlight(partFile("e2e-stop2.jpg"), bigSize)

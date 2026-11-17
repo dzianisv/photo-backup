@@ -90,7 +90,15 @@ class NotificationScreenshotTest {
     @Test
     fun offerNotificationScreenshot() {
         NotificationHelper.postOfferNotification(ctx)
-        Thread.sleep(1_500)
+        // Poll: on a loaded emulator the NotificationManagerService
+        // can take seconds to list a just-posted notification
+        // (smoke run 44175300406 failed here on the immediate read).
+        val deadline = System.currentTimeMillis() + 5_000
+        while (System.currentTimeMillis() < deadline &&
+            mgr.activeNotifications.none { it.id == NotificationHelper.NOTIFICATION_ID_OFFER }
+        ) {
+            Thread.sleep(200)
+        }
         assertTrue(
             "offer notification was not posted",
             mgr.activeNotifications.any { it.id == NotificationHelper.NOTIFICATION_ID_OFFER },
@@ -194,7 +202,10 @@ class NotificationScreenshotTest {
             "SMOKE notifications: 03-progress shot at ${state.percent}% " +
                 "(${FormatUtils.formatProgress(copiedBytes, totalBytes, speedBytesPerSec)})",
         )
-        assertTrue("copy did not finish", done.await(60, TimeUnit.SECONDS))
+        assertTrue(
+            "copy did not finish",
+            done.await(180, TimeUnit.SECONDS),
+        )
         assertTrue("copy did not complete", resultRef.get() is CopyResult.Copied)
         assertTrue(BackupEngine.verify(dest, totalBytes))
         println("SMOKE notifications: the copy behind the shot finished + verified")
