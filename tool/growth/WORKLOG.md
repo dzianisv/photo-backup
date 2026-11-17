@@ -1,5 +1,148 @@
 # SnapDisk — Work Log
 
+## WL-68 — Back up HTC photos to USB article, 37th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/htc-photos-to-usb.html ("Back up HTC
+  photos to a USB drive (no computer)"), following the
+  WL-54/WL-55/WL-56/WL-57/WL-58/WL-59/WL-60/WL-61/WL-62/WL-63/
+  WL-64/WL-65/WL-66/WL-67 article template exactly (navy/cyan,
+  TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot
+  — same reuse as the 8th through 36th articles). Facts
+  verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price); no INTERNET permission in AndroidManifest.xml;
+  FAT32 files >=4 GiB skipped with reason
+  (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw byte-stream copy
+  (BackupEngine.copyWithResume — no decode/re-encode) with size
+  verification after copy. Search evidence (Nov 17, 2026 live
+  web search): there is no HTC-specific phone-to-USB
+  guide in the top results at all — the HTC-specific
+  results are HTC's own OTG support pages, a storage-expansion
+  guide for the HTC One, and HTC's own PC backup app, and the
+  rest are generic manual guides.
+  HTC support, "How do I view the files and folders from my USB
+  drive?" (U12+)
+  (htc.com/mea-en/support/htc-u12-plus/faq/how-do-i-view-the-
+  files-and-folders-from-my-usb-drive.html?showcontent=1 —
+  HTC's own support page: if the phone supports USB OTG,
+  connect a USB OTG connector to the phone and the external USB
+  drive, go to Settings > Storage, tap the name of the drive,
+  and navigate to the file or folder; HTC File Manager can
+  manage the files too. An OTG support page, not a backup
+  guide); HTC support, "How do I view the files and folders
+  from my USB drive?" (U12 life)
+  (htc.com/eu/support/htc-u12-life/howto/how-do-i-view-the-
+  files-and-folders-from-my-usb-drive.html — the same page for
+  the U12 life: USB OTG, connect the connector, Settings >
+  Storage, tap the drive name. An OTG support page, not a
+  backup guide); HTC support, "File Manager — Managing files
+  and folders in an external USB drive"
+  (htc.com/hk-en/support/apps/file-manager/managing-files-and-
+  folders-in-an-external-usb-drive.html — HTC's own File
+  Manager page: open the app, connect a USB adapter to the
+  phone and the drive, and on Android 6 or later a popup walks
+  you through granting access to the USB storage, then swipe to
+  the USB Storage tab. A manual file-manager guide, not an
+  automated backup); AndroidAyuda, "Complete guide to
+  expanding mobile storage without a MicroSD slot"
+  (en.androidayuda.com/Expand-the-storage-of-your-mobile-even-
+  if-it-has-a-microsd-slot/ — written around the HTC One, which
+  has no microSD card slot: expand storage with a USB flash
+  drive and a USB OTG cable, plug it in, and the phone enters
+  USB host mode. A storage-expansion guide, not a
+  photo-backup guide — it is about opening files stored on the
+  drive, not copying the camera roll to it); HTC Sync Manager
+  (htc.com/au/support/htc-sync-manager/howto/backing-up-phone-
+  to-computer.html — HTC's own support page: connect the phone
+  to a computer, open HTC Sync Manager, Transfer & Backup, Back
+  up now. HTC-specific, but it is a desktop app — it backs up
+  to the PC, not to a USB drive as plain files — and it is built
+  around backing up to a computer, not backing up a healthy
+  phone to a drive you hold); Filecroco, "HTC Sync Manager"
+  (filecroco.com/download-htc-sync-manager/ — HTC Sync Manager
+  has been discontinued, support has ended, and it will never
+  be updated. A discontinued PC app, not a phone-to-USB copy);
+  Wondershare MobileTrans, "HTC Backup App: An Ultimate Guide
+  and Best Alternatives"
+  (mobiletrans.wondershare.com/htc/htc-backup-app.html — HTC
+  Sync Manager is a freely available desktop application from
+  HTC that backs up and restores data to a PC, and the HTC
+  Backup app backs up to an HTC or Google account. Both routes
+  land on a PC or in a cloud account — neither writes your
+  photos as plain files to a USB drive); AnExplorer guide
+  (anexplorer.io/features/usb-otg — plug a USB drive in via OTG
+  and AnExplorer gives full read/write access, FAT32, exFAT,
+  and NTFS; generic Android, not written for HTC — and it is a
+  guide for its own app); Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-drop,
+  Google Drive, or AirDroid over Wi-Fi; generic Android, and
+  most of the ways need a computer or a cloud account);
+  AnExplorer guide (anexplorer.io/transfer/phone-to-usb — plug
+  in a flash drive via OTG and copy files with a progress bar
+  showing speed and time remaining; generic Android, not written
+  for HTC — and it is a guide for its own app); Coolmuster
+  guide (coolmuster.com/android/transfer-files-from-android-
+  to-usb-flash-drive.html — OTG copy, a PC assistant app,
+  drag-and-drop through a computer, or a cloud service; generic
+  Android, and most of the ways need a computer or a cloud
+  account); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a real phone-to-USB app,
+  one-tap whole-gallery copy, only new photos next time,
+  warns about the FAT32 4 GB limit, free with ads, one-time
+  purchase removes ads — generic Android, not an HTC
+  guide, and it does not promise oldest-first order,
+  detailed progress with Pause and Stop, or size
+  verification of every file).
+  Wider search: HTC U23 Pro vs HTC Desire 22 Pro specs
+  (smartprix.com/mobiles/htc_u23_pro_vs_htc_desire_22_pro-
+  cpd1wqtp2ttz_pd1940jof90.php — USB-C v3.0 with USB
+  on-the-go for the U23 Pro, USB-C v2.0 with USB on-the-go
+  for the Desire 22 Pro; spec tables, not a guide — and the
+  confirmation that both current HTC phones have OTG); HTC
+  U23 vs HTC Desire 22 Pro specs
+  (smartprix.com/mobiles/htc_u23_vs_htc_desire_22_pro-
+  cpd1ksw0f1rj_pd1940jof90.php — USB-C v3.0 with USB
+  on-the-go for the U23; spec tables, not a guide — and the
+  confirmation that the U23 has OTG).
+  HTC specifics: OTG is across the current HTC range: spec
+  tables list USB-C 3.0 with OTG for the U23 Pro, USB-C 2.0
+  with OTG for the Desire 22 Pro, and USB-C 3.0 with OTG for
+  the U23; HTC's own support pages for the U12+ and the U12
+  life describe viewing files from a USB drive over OTG —
+  connect an OTG connector, go to Settings > Storage, and tap
+  the name of the drive; the U23 Pro and the Desire 22 Pro
+  both have a microSDXC slot, the HTC One has no microSD slot
+  at all; HTC has no phone-to-USB backup tool of its own — its
+  own tool is HTC Sync Manager, a Windows and Mac desktop app
+  that backs pictures, videos, music, contacts, and more up to
+  a PC and restores them later, and it is discontinued, support
+  ended; the HTC Backup app backs up to an HTC or Google
+  account, which is a cloud backup; the other routes are
+  Google's (Google Photos, Google backup). HTC's own tools:
+  HTC Sync Manager (desktop app, connect with a USB cable,
+  Transfer & Backup backs pictures, videos, music, contacts,
+  and more up to the PC) backs the phone up to the PC;
+  Google Photos (Photos settings > Backup, to Google's cloud,
+  15 GB free) backs photos up to Google's cloud; Google backup
+  (Settings > System > Backup, Back up to Google Drive)
+  restores to a new phone from the cloud — none of them writes
+  plain photo files to a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-68, 37th how-to):
+  docs/htc-photos-to-usb.html. Query 36 scored in
+  tool/growth/searches.md. Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml (37 items)
+  updated. PR #102 (article), merge 45feb7d, CI run 44200965044
+  (Android PR, success); this row PR #103.
+
 ## WL-67 — Back up Lenovo photos to USB article, 36th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
