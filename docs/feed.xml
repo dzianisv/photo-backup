@@ -104,5 +104,12 @@
     <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
     <description>Xiaomi phones hide one extra switch before a USB drive works at all — on many MIUI and HyperOS phones OTG is off unless you enable it, and it switches itself off after about 10 minutes. Once it's on, a USB-C flash drive plugs straight in, and the stock route is Mi File Manager. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up Motorola photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/motorola-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/motorola-photos-to-usb.html</guid>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Motorola phones run near-stock Android, so there is no OTG switch to hunt for — a USB-C flash drive plugs straight in, and the stock route is Files by Google. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
