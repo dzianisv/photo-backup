@@ -635,6 +635,92 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-53, 23rd how-to):
   docs/honor-photos-to-usb.html.
 
+### 23. "back up photos from Nokia to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Nokia-specific
+  guide at all, let alone a Nokia-specific automated
+  whole-library backup with progress, Pause/Stop, and
+  resume — the top results are generic manual guides,
+  PC tools, or a rival app page.
+- Current top results (scored Nov 17, 2026, live web search):
+  TheGadgetians guide
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-
+  without-computer/ — OTG adapter + file manager, mentions
+  ThePhotoStick Omni; generic Android and iPhone, not written
+  for Nokia); SoftHandTech guide
+  (softhandtech.com/how-do-you-transfer-pictures-from-your-
+  phone-to-a-flash-drive/ — OTG adapter + file manager, or a
+  computer, or cloud storage; generic, not written for
+  Nokia); SoftHandTech guide
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-
+  memory-stick/ — computer drag-and-drop, direct OTG copy, or
+  cloud services; generic, not written for Nokia); AnExplorer
+  guide (anexplorer.io/transfer/phone-to-usb — manual
+  select-copy-paste, the only one of the five that shows a
+  progress bar with speed and time remaining, still no resume
+  or verification); umatechnology.org guide
+  (umatechnology.org/how-to-transfer-photos-from-android-to-a-
+  usb-flash-drive-without-a-computer/ — Files by Google or
+  Samsung My Files, or through a computer; generic Android,
+  not written for Nokia); YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-
+  drop, Google Drive, or AirDroid; generic Android, most ways
+  need a computer or a cloud account); MobiKin guide
+  (mobikin.com/android-backup/transfer-photos-from-android-to-
+  flash-drive.html — File Explorer, Assistant PC tool, OTG
+  copy, Files by Google, or Google Photos; generic Android,
+  most ways need a computer or a cloud account); Seagate OTG
+  compatibility list (seagate.com — not a guide, but the one
+  Nokia-specific OTG evidence found: Nokia X71, Nokia 5.1
+  Plus, and Nokia 6.1 are on the confirmed-OTG list); the one
+  Nokia-specific backup page found in the wider search,
+  mull-overthing (mull-overthing.com/how-do-i-backup-my-
+  nokia-phone/ — Google One / Android Backup Service to the
+  cloud, or Nokia PC Suite to a PC; not a phone-to-USB guide
+  at all); MobileTrans Nokia backup guide
+  (mobiletrans.wondershare.com/transfer/backup-nokia.html —
+  backs the phone up to a PC with a Windows/Mac tool; no USB
+  drive, no plain photo files); Nokia PC Suite help
+  (nokia-pc-suite.helpmax.net — legacy PC tool, Content Copier
+  writes a single .nbu backup file to a PC); HMD's own user
+  guides (hmd.com — transfer data to a new phone using your
+  Google account, or restore from a Google backup, Settings >
+  System > Backup; phone-to-phone or phone-to-cloud, not
+  phone-to-USB); Google One (Play listing,
+  com.google.android.apps.subscriptions.red — backs photos up
+  to Google's cloud, 15 GB free; cloud, not a USB copy);
+  Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a real phone-to-USB app, one-tap
+  whole-gallery copy, only new photos next time, warns about
+  the FAT32 4 GB limit, free with ads, one-time purchase
+  removes ads — generic Android, not a Nokia guide, and it
+  does not promise oldest-first order, detailed progress with
+  Pause and Stop, or size verification of every file). Google
+  Photos is cloud, not USB. Nokia specifics: Nokia phones run
+  near-stock Android (Android One on most models); stock file
+  manager is Files by Google; stock gallery is Google Photos;
+  no documented Nokia OTG switch location was found — the
+  drive mounts on plug-in with a "USB storage added"
+  notification; if nothing appears, check Settings > Storage;
+  whether a switch exists at all, or switches itself off, is
+  unverified; not every Nokia phone has OTG (Seagate confirms
+  X71, 5.1 Plus, 6.1); modern Nokia phones are USB-C, older
+  ones Micro-USB; whether a model has a microSD slot varies
+  by model (check the model's specs). Nokia's own tools: no
+  Nokia backup app — HMD's guides point to Google backup
+  (Settings > System > Backup, Back up to Google Drive), which
+  restores to a new phone from the cloud; Google One backs
+  photos up to Google's cloud (15 GB free); Nokia PC Suite is
+  a legacy PC tool writing a .nbu file; MobileTrans is a PC
+  tool backing the phone up to a computer — none of them
+  writes plain photo files to a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-54, 24th how-to):
+  docs/nokia-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
