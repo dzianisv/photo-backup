@@ -47,8 +47,14 @@
   feed.xml parse as XML. Title 53 chars, meta 150 chars. No app
   code or Play listing files touched; applicationId untouched
   (dev.dzianisv.snapdisk).
-  Evidence: PR #TODO (pending merge — PR number + CI run + live
-  fetch recorded in follow-up).
+  Evidence: PR #53 (commit 9146972, merge 4d74d9f, merged
+  2026-11-17T01:55:51Z); CI run 43999049532 (build pass, 1m26s)
+  green; post-merge main runs green (Android PR 43999308764,
+  pages 43999308531). Live fetch after Pages deploy: article
+  200, 22882 bytes, title "Back up videos from Android to a USB
+  drive — SnapDisk" present, "November 16, 2026" present;
+  blog index, feed.xml (16 items) and sitemap.xml all live with
+  the new link.
 
 
 The only task tracker for this product. One row per task: what, who,
