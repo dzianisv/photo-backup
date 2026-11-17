@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Redmi photos to a USB drive — SnapDisk</title>
+<meta name="description" content="Back up Redmi photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/redmi-photos-to-usb.html">
+<meta property="og:title" content="Back up Redmi photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up Redmi photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/redmi-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/redmi-photos-to-usb.html#article",
+      "headline": "Back up Redmi photos to a USB drive (no computer)",
+      "description": "Back up Redmi photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-17",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/redmi-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/redmi-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up Redmi photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — on the Note 14 line. Spec tables list USB Type-C 2.0 with OTG for the Redmi Note 14 Pro 4G and the Redmi Note 14 Pro 5G — plug a USB drive in and the phone mounts it. Two Redmi specifics: on many HyperOS phones OTG is off by default, so enable it first in Settings, Additional settings, OTG (on some phones the switch is under More settings, OTG) — the switch turns itself off again after about 10 minutes without a drive, so enable it with the drive already attached — and the microSD slot varies by model: the Note 14 Pro 4G has a microSDXC slot (uses the shared SIM slot) while the Note 14 Pro 5G has none, so check your own model before buying a card or an adapter. The stock route is Mi File Manager: plug the drive in, open File Manager, pick the photos, and Copy to the drive. SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later. Redmi phones ship with Google Play, so once the listing is live that will be the install route."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/redmi-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up Redmi photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/redmi-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up Redmi photos to a USB drive (no computer)</h1>
+  <p class="dek">Redmi phones (Note, K, and A series) run HyperOS — Xiaomi's Android skin, since Redmi is Xiaomi's sub-brand — with OTG support across the Note 14 line: spec tables list USB Type-C 2.0 with OTG for the Note 14 Pro 4G and the Note 14 Pro 5G — but the microSD slot varies by model: the Note 14 Pro 4G has a microSDXC slot (uses the shared SIM slot) while the Note 14 Pro 5G has none. And Redmi's own backup tools are Xiaomi Cloud and Google's — Google Photos and Google backup — which back your photos up to the cloud, not to a USB drive as plain files. A USB-C flash drive plugs straight into any Redmi phone. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 17, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On a Redmi phone, enable OTG first — on many HyperOS phones it is off by default, so go to Settings &gt; Additional settings &gt; OTG (on some phones the switch is under More settings &gt; OTG) and turn it on, with the drive already attached, because the switch turns itself off again after about 10 minutes without a drive — then plug a USB drive in: OTG models mount it straight away with a "USB storage added" notification; if nothing appears, check Settings &gt; Storage — then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: Mi File Manager works — it is the stock file manager on Redmi phones, and it copies photos to a USB drive — but it is manual select-copy-paste with no progress detail, no resume, and no verification; Redmi's own backup routes work too, but they are Xiaomi Cloud and Google's routes — Xiaomi Cloud, Google Photos, and Google backup — and none of them writes your photos as plain files to a USB drive: Xiaomi Cloud syncs your gallery to Xiaomi's servers, Google Photos backs photos up to Google's cloud, and Google backup restores your data to a new phone from the cloud. One rival app does exist — Photos to USB: OTG Backup copies a whole gallery to a pen drive in one tap and resumes where it stopped — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 17, 2026, no top search result for this query is a Redmi-specific guide at all, let alone a Redmi-specific automated whole-library backup with progress, Pause/Stop, and resume: the top results are generic manual guides, PC tools, or rival app pages.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up Redmi photos to USB drive without computer" and there is no Redmi-specific result in the top results at all — the rest are generic Android guides, in different packaging:</p>
+  <ul>
+    <li><strong>Dr.Fone</strong> (<a href="http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html">4 Practical Ways to Transfer Photos from Android to USB Flash Drive</a>) — OTG copy, PC drag-and-drop, Google Drive, or AirDroid over Wi-Fi. Generic Android, and most of the ways need a computer or a cloud account.</li>
+    <li><strong>AnExplorer</strong> (<a href="https://anexplorer.io/transfer/phone-to-usb">How to Transfer Files from Android to USB Drive (OTG, No Root)</a>) — connect the drive with an OTG adapter, open AnExplorer, long-press to select files in DCIM/Camera, Copy, Paste to the drive. A thorough manual guide, and the only one of these guides that shows a progress bar with speed and time remaining — but it is still a manual copy: you pick the files, and there is no resume or verification.</li>
+    <li><strong>Coolmuster</strong> (<a href="https://www.coolmuster.com/android/transfer-files-from-android-to-usb-flash-drive.html">4 Ways to Transfer Files from Android to USB Flash Drive</a>) — OTG copy, a PC tool (Coolmuster Android Assistant, phone and drive both plugged into the computer), or a cloud service. Generic Android, and two of the three ways need a computer.</li>
+    <li><strong>YouTube</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos</a>) — a video walkthrough of the generic route: OTG adapter, the phone's built-in file manager, select photos in DCIM, Copy or Move to the drive. Generic Android, not written for Redmi.</li>
+    <li><strong>Substack</strong> (<a href="https://curiousbluenoser.substack.com/p/saving-photos-for-necessary-updates">The Photo Ransom: How to Upgrade Your Storage and Free Your Phone's Immune System</a>) — a picture-keeper flash drive piece: plug the maker's drive in, open its app, tap Start. Generic, and tied to one maker's drive and app — not a Redmi guide.</li>
+    <li><strong>Microsoft Q&amp;A</strong> (<a href="https://learn.microsoft.com/en-us/answers/questions/3934384/import-photos-video-from-android-14-g-to-pc-and-fl">import photos video from android 14 g to pc and flash drive</a>) — a generic Android 14 answer: a USB cable to a PC, a flash disk direct through an OTG adapter, or a cloud service (OneDrive, Google Drive, Google Photos). Generic Android, not written for Redmi.</li>
+    <li><strong>AnExplorer's OTG feature page</strong> (<a href="https://anexplorer.io/features/usb-otg">USB OTG File Manager for Android — Read, Write, Transfer</a>) — a feature page for AnExplorer's OTG support: plug a drive in, read and write it with no setup, copy between the drive and an SD card directly. A file-manager feature page, not a Redmi backup guide.</li>
+    <li><strong>YouTube</strong> (<a href="https://www.youtube.com/watch?v=ch1evyu5PPM">How to Transfer Photos, Videos and any Files from Android Phone to USB Pendrive</a>) — the same generic route: check OTG, OTG adapter, file manager, Copy or Move, safely eject. Generic Android, not written for Redmi.</li>
+    <li><strong>askfilo</strong> (<a href="https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432">How to transfer pictures from an Android phone to a flash drive</a>) — OTG adapter plus the file manager, or a PC as a middleman. Generic Android, not written for Redmi.</li>
+    <li><strong>VaultDrive</strong> (<a href="https://coticsy.com/vaultdrive.html">VaultDrive: Back Up Phone Photos to a USB Drive, No Computer</a>) — a rival phone-to-USB app page: plug a flash drive or SSD in, pick what to back up, tap Start; free for up to 200 files or 2 GB per backup, Pro $19.99 once, no account. A real phone-to-USB app — but it is a generic Android/iPhone listing, not a Redmi guide, and it does not promise oldest-first order, detailed progress with Pause and Stop, or size verification of every file.</li>
+    <li><strong>AnExplorer's Xiaomi device page</strong> (<a href="https://anexplorer.io/device/phone/xiaomi">File Manager for Xiaomi, Redmi &amp; POCO — Replace the Built-in App</a>) — a file-manager comparison page for Xiaomi, Redmi, and POCO phones: Xiaomi's built-in File Manager (part of MIUI/HyperOS) shows banner ads while browsing your own files, and it notes that phones with SD card slots (Redmi Note series, POCO M series) benefit from moving media to the card. A file-manager page, not a backup guide — but it confirms Redmi phones run MIUI/HyperOS with Xiaomi's File Manager built in, and that the Redmi Note series has the SD card slot.</li>
+    <li><strong>File Manager by Xiaomi</strong> (<a href="https://play.google.com/store/apps/details?id=com.mi.android.globalFileexplorer">Google Play</a>) — Xiaomi's own file manager, published by Xiaomi Inc. as com.mi.android.globalFileexplorer: find files faster, manage files, share them offline, quick search, moving, deleting, opening, renaming, unzipping, and copy-paste. This is the stock file manager the manual method below uses — it is Xiaomi's preinstalled file app on global MIUI and HyperOS phones.</li>
+    <li><strong>Xiaomi's HyperOS backup guide</strong> (<a href="https://xiaomi-plus.com/how-to-back-up-a-xiaomi-phone-xiaomi-cloud-google-and-local-backup-hyperos/">How to Back Up a Xiaomi Phone: Xiaomi Cloud, Google and Local Backup (HyperOS)</a>) — the three backup options on a HyperOS phone: Google backup (contacts, app list, settings, photos via Google Photos, to a Google account), Xiaomi Cloud (Xiaomi apps data, gallery, notes, messages, to a Xiaomi account), and local backup (a full copy kept on your own computer, with a USB cable). A backup guide for Xiaomi phones running HyperOS — the same system Redmi phones run — but none of its three routes writes plain photo files to a USB drive.</li>
+    <li><strong>Google Photos help</strong> (<a href="https://support.google.com/photos/answer/14216276">Give your device photos access to Google Photos</a>) — Google's default-gallery access feature: let Google Photos share access with your device's default gallery app, so photos backed up to Google Photos show up in the gallery. Xiaomi is one of the brands that works with this feature — which confirms Xiaomi phones (Redmi included) have their own default gallery app, separate from Google Photos, and Google Photos is the cloud backup behind it.</li>
+    <li><strong>GSMArena's Redmi Note 14 Pro 4G specs</strong> (<a href="https://m.gsmarena.com/xiaomi_redmi_note_14_pro_4g_(global)-ampp-13614.php">Xiaomi Redmi Note 14 Pro 4G - Full phone specifications</a>) — USB Type-C 2.0 with OTG, and a microSDXC card slot (uses the shared SIM slot). Spec tables, not a guide.</li>
+    <li><strong>GSMArena's Redmi Note 14 Pro 5G specs</strong> (<a href="https://m.gsmarena.com/xiaomi_redmi_note_14_pro_5g-ampp-13613.php">Xiaomi Redmi Note 14 Pro 5G - Full phone specifications</a>) — Android 14 with HyperOS, USB Type-C 2.0 with OTG, and no card slot. Spec tables, not a guide — and the confirmation that the current Note Pro runs HyperOS with OTG and no microSD slot, so a USB drive is the plug-in storage for it.</li>
+    <li><strong>Photos to USB: OTG Backup</strong> (<a href="https://play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb">Google Play</a>) — the one-tap app alternative, from the wider search for this job: a real phone-to-USB app that copies the whole gallery to a pen drive in one tap, copies only new photos next time, and warns about the FAT32 4 GB limit. It is free with ads, with a one-time purchase to remove them. It is the closest thing to this article's job — but it is a generic Android listing, not a Redmi guide, and it does not promise oldest-first order, detailed progress with Pause and Stop, or size verification of every file.</li>
+    <li><strong>Google Photos</strong> (<a href="https://play.google.com/store/apps/details?id=com.google.android.apps.photos">Google Play</a>) — Google's own photo backup: 15 GB of cloud storage free with every Google account, automatic upload over Wi-Fi. Cloud, not a USB copy.</li>
+    <li><strong>umatechnology</strong> (<a href="http://umatechnology.org/how-to-transfer-photos-from-android-to-a-usb-flash-drive-without-a-computer/">Transfer Android Photos to a USB Drive Without a Computer</a>) — copy photos with Files by Google or Samsung's My Files, or through a computer as a middleman; notes a photo that exists only in the cloud cannot be copied to a drive until it is downloaded to the phone first. Generic Android, not written for Redmi.</li>
+    <li><strong>thegadgetians</strong> (<a href="https://thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/">How to Transfer Files From Phone to USB Without Computer: Ultimate Guide</a>) — OTG adapter plus the phone's file manager for Android, a Lightning adapter for iPhone; generic, and it pushes one maker's photo stick. Not a Redmi guide.</li>
+    <li><strong>pixoneye</strong> (<a href="https://pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/">How to Transfer Photos from Your Phone to a USB Stick</a>) — copy local originals to compatible USB storage with the phone's file manager, or through a trusted computer; generic Android and iPhone, not written for Redmi.</li>
+    <li><strong>Cloud routes</strong> — Xiaomi Cloud syncs your gallery to Xiaomi's servers, Google Photos backs up over Wi-Fi to Google's servers, not to a drive you hold; its "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Xiaomi Cloud's free storage is limited, so a large photo library needs a paid plan or Google Photos instead. Neither route gives you a folder of plain photo files on a USB drive.</li>
+  </ul>
+  <p>None of them is a Redmi-specific guide at all, and none of them offers an automated Redmi photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>What you need</h2>
+  <p>A Redmi phone (Android 7.0 or later for SnapDisk) that supports OTG — check your model's specs before buying anything; a USB drive your phone can read — a USB-C flash drive plugs straight into any Redmi phone, or a regular USB drive with a USB-C OTG adapter; and enough space on the drive for the photos you want to keep. Three Redmi specifics: first, OTG is not a given on every model, and on many HyperOS phones it is off by default. Redmi phones run HyperOS — Xiaomi's Android skin, since Redmi is Xiaomi's sub-brand — and on many MIUI and HyperOS phones OTG is off unless you enable it in Settings &gt; Additional settings &gt; OTG (on some phones the switch is under More settings &gt; OTG). The switch turns itself off again after about 10 minutes without a drive, so enable it with the drive already attached. On some newer versions there is no OTG switch at all and OTG works directly. Spec tables list USB Type-C 2.0 with OTG for the Note 14 Pro 4G and the Note 14 Pro 5G. If the phone ignores the drive, check Settings &gt; Storage. Second, Redmi ships Xiaomi's apps, so the stock file manager is Mi File Manager — File Manager by Xiaomi, com.mi.android.globalFileexplorer — which handles the phone's internal storage and connected external storage, and shows banner ads while you browse your own files — and Redmi camera photos live in DCIM/Camera — and the microSD slot varies by model: the Note 14 Pro 4G has a microSDXC slot (uses the shared SIM slot) while the Note 14 Pro 5G has none, so a USB drive is the plug-in storage for the 5G model, and check your own model's specs before buying a card. Third, Redmi phones ship with Google Play, so SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live — there is no sideload-only situation here. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Enable OTG first.</strong> On many HyperOS phones OTG is off by default: go to Settings &gt; Additional settings &gt; OTG (on some phones the switch is under More settings &gt; OTG) and turn it on — with the drive already attached, because the switch turns itself off again after about 10 minutes without a drive. On some newer versions there is no OTG switch at all and OTG works directly. Spec tables list USB Type-C 2.0 with OTG for the Note 14 Pro 4G and the Note 14 Pro 5G.</li>
+    <li><strong>Plug in the USB drive.</strong> Most OTG models mount it straight away — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage, and check the OTG switch is still on — it turns itself off after about 10 minutes without a drive.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — Redmi camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the phone normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the phone to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: Mi File Manager (the stock route, no app needed)</h2>
+  <p>Redmi phones ship with Mi File Manager — File Manager by Xiaomi — as the stock file manager, and it can copy your photos to the USB drive: 1. Enable OTG first: Settings &gt; Additional settings &gt; OTG (on some phones under More settings &gt; OTG), with the drive already attached — the switch turns itself off after about 10 minutes without a drive. 2. Plug in the USB drive — a notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage and check the OTG switch is still on. 3. Open File Manager and confirm the USB drive shows up under external storage. 4. Go back to Internal storage, DCIM, Camera, where your camera photos live. 5. Select the photos (long-press the first, tap the rest, or select all). 6. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until File Manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, you have to repeat the whole manual selection next time photos pile up — and File Manager shows banner ads while you browse your own files. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: Redmi's own tools (Xiaomi Cloud, Google Photos, and Google backup — not phone-to-USB)</h2>
+  <p>If you want Redmi's own route, know what each tool actually does — Redmi has no phone-to-USB backup of its own; the routes on a Redmi phone are Xiaomi Cloud and Google's, and none of them writes your photos as plain files to a USB drive. Xiaomi Cloud is Xiaomi's own cloud backup, and the one Redmi-specific route: open Settings, tap your Xiaomi account at the top, open Xiaomi Cloud, choose what to sync — gallery, contacts, messages, notes, recorder — and use the cloud backup option to save device settings and app data. It backs your photos up to Xiaomi's servers and restores them on another Xiaomi, Redmi, or POCO phone. It is a real backup — but it lives on Xiaomi's servers, needs a Xiaomi account and a connection, its free storage is limited so a large photo library needs a paid plan, and it still doesn't give you a folder of photo files on a USB drive. Google Photos is Google's own photo backup app: open Photos, tap your profile picture, Photos settings, Backup, and turn Backup on — it automatically backs up photos to your Google account, with 15 GB free with every Google account. Your Redmi's default gallery app is Xiaomi Gallery, not Google Photos — Google Photos integrates with it through the default-gallery access feature, so backed-up photos show up in the gallery — but either way it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. Google backup is the route Xiaomi's guides point to first: Settings &gt; Google &gt; Backup, Back up by Google One on — it backs the phone up to your Google account so you can restore app settings and data to a new phone. It is a real backup — but the backup lives in Google's cloud and restores to a phone, not a folder of photo files on a USB drive you can plug into any computer and open. And the SD-card route copies DCIM to a memory card with File Manager — a real local copy, but only some Redmi models have a microSD slot (the Note 14 Pro 4G does, the Note 14 Pro 5G does not), and the card stays in the phone (or needs a card reader to open anywhere else), not a USB drive you can plug into any computer. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the Redmi phone into the computer with a USB cable, tap the USB notification and choose File transfer (by default a Redmi phone charges only) — and drag the DCIM folder onto the USB drive. Xiaomi's own HyperOS backup guide offers the same local route: plug the phone into the computer and copy DCIM and Pictures too. This works fine, and it is the only route above that needs a second device in between. If the phone and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the phone is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>No OTG, no USB backup.</strong> On a model without working OTG — every Note 14 model in the spec tables lists OTG, but check your own model's specs before buying an adapter — a USB drive may simply never appear, and no app can change that. The cloud routes (Xiaomi Cloud, Google Photos, and Google backup) are the backup for those phones.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter before checking OTG.</strong> Not every Redmi phone is confirmed to have OTG — check your own model's specs first, or the drive will never appear no matter what you plug in.</li>
+    <li><strong>Forgetting the OTG switch.</strong> On many HyperOS phones OTG is off by default, and the switch turns itself off again after about 10 minutes without a drive — so a drive that worked yesterday can be ignored today. Enable it in Settings &gt; Additional settings &gt; OTG with the drive already attached. On some newer versions there is no OTG switch at all and OTG works directly — a missing switch is not proof the phone is broken; some models simply mount the drive on plug-in.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Xiaomi Cloud, Google backup, and Google Photos back your phone up to Xiaomi's or Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> Drag-and-drop through a computer works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route, not a desktop tool.</li>
+    <li><strong>Mistaking an SD-card copy for a USB backup.</strong> Copying DCIM to a memory card is a real local copy — but only some Redmi models have a microSD slot (the Note 14 Pro 4G does, the Note 14 Pro 5G does not), the card stays in the phone, and opening it anywhere else needs a card reader. A USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 17, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On Redmi the cloud routes are Xiaomi Cloud, Google Photos, and Google backup — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="xiaomi-photos-to-usb.html">Back up Xiaomi photos to a USB drive (no computer)</a> — Redmi is Xiaomi's sub-brand, so the Xiaomi guide covers the same HyperOS system.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
