@@ -116,8 +116,12 @@
   the shared checkout, never /tmp). Evidence: PR #74 (commit
   0a5c352, merge 7361638, merged 2026-11-17T08:33:14Z); CI run
   44047497188 (build pass, 57s) green; post-merge main runs
-  green (Android PR TBD, pages TBD). Live fetch after Pages
-  deploy: TBD.
+  green (Android PR 44047724340, pages 44047723953). Live
+  fetch after Pages deploy: article 200, 30703 bytes, title
+  "Back up Nokia photos to a USB drive — SnapDisk" present;
+  blog index 200, 22342 bytes; feed.xml 200 (24 items);
+  sitemap.xml 200 with the new link; llms-full.txt 200,
+  258543 bytes, Blog list counts 24 with Nokia present.
 
 
 ## WL-53 — Back up Honor photos to USB article, 23rd how-to (DONE)
