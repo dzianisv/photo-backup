@@ -3,6 +3,67 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## WL-44 — Back up Motorola photos to USB article, 15th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/motorola-photos-to-usb.html ("Back up Motorola photos
+  to a USB drive (no computer)"), following the WL-43
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png as
+  the lead shot — same reuse as the 8th, 9th, 10th, 11th, 12th,
+  13th, and 14th articles). Facts verified from code on fresh
+  main: SAF tree picker (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending; free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy. Search
+  evidence (Nov 16, 2026 live web search): top results are all
+  manual copy — YouTube PYcbV25CczI (OTG + file manager manual
+  copy, suggests Move; names the Motorola file manager as
+  Files, or Files by Google), AnExplorer guide (manual
+  select-copy-paste, anexplorer.io/transfer/phone-to-usb; the
+  only one showing a progress bar for the manual copy, still no
+  resume or verification), Dr.Fone (Google Drive / PC
+  drag-and-drop / OTG manual copy / AirDroid), MobiKin (PC
+  drag-and-drop, PC tool, OTG manual copy, Files by Google,
+  AirDroid), YouTube ch1evyu5PPM (OTG + file manager manual
+  copy, suggests Move), thegadgetians (file manager manual copy;
+  mentions ThePhotoStick Omni, a dedicated stick with its own
+  app, not an ordinary flash drive). Google Photos is cloud,
+  not USB. Motorola specifics stated honestly: no OTG toggle —
+  near-stock Android mounts the drive on its own ("USB
+  available" notification, Files by Google under Storage
+  devices); if the notification says the phone is charging a
+  connected device, tap it and switch "Controlled by" to "This
+  device"; stock file manager is Files by Google, stock gallery
+  is Google Photos; microSD slot varies by model — most Moto G
+  phones have one (up to 1 TB on recent models), Motorola Edge
+  2024 and 2025 have none. Honest contrast stated in the TL;DR:
+  Files by Google works but is manual select-copy-paste with no
+  progress, no resume, no verification; Google Photos backup is
+  cloud, not a USB copy; SnapDisk = plug in, tap Backup, whole
+  library oldest-first with %, GB copied/total, speed, ETA,
+  Pause/Stop, resume on re-plug, size-verified, copies never
+  deletes. Query 14 scored Nov 16, 2026 (searches.md): "back
+  up photos from Motorola to USB flash drive without computer"
+  — real how-to gap. Volume unknown (Play publishes no volume);
+  difficulty low-medium. Linked from blog index (JSON-LD + post
+  block), sitemap.xml, llms.txt, llms-full.txt (full section),
+  feed.xml (now 15 items). JSON-LD validated by parse;
+  sitemap.xml and feed.xml parse as XML. Title 49 chars, meta
+  146 chars. No app code or Play listing files touched;
+  applicationId untouched (dev.dzianisv.snapdisk).
+  Evidence: PR #51 (commit 1a2cce0, merge 7ea1a76, merged
+  2026-11-17T01:34:08Z); CI run 43996397815 (build pass, 58s)
+  green. Live fetch after Pages deploy: article 200, 22760
+  bytes, title "Back up Motorola photos to a USB drive —
+  SnapDisk" present, "November 16, 2026" present; blog index 200, 15109 bytes; feed.xml 200 (15 items); sitemap.xml 200
+  with the new link.
+
 ## WL-43 — Back up Xiaomi photos to USB article, 14th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
