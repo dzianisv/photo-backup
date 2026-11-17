@@ -1,5 +1,83 @@
 # SnapDisk — Work Log
 
+## WL-50 — Back up Oppo photos to USB article, 20th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/oppo-photos-to-usb.html ("Back up Oppo photos to a USB
+  drive (no computer)"), following the WL-47 article template
+  exactly (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot —
+  same reuse as the 8th through 19th articles). Facts verified
+  from code on fresh main: SAF tree picker (MainActivity.kt
+  OpenDocumentTree + takePersistableUriPermission); oldest-first
+  via MediaStore DATE_TAKEN ascending; free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy. Search
+  evidence (Nov 16, 2026 live web search): the one Oppo-specific
+  result is the Coolmuster guide
+  (coolmuster.com/android/transfer-files-from-oppo-to-usb-flash-drive.html
+  — OTG adapter + File Manager manual copy, USB-C drive direct,
+  or the Coolmuster Android Assistant PC tool); FoneLab guide
+  (generic: OTG + file manager, PC File Explorer, HyperTrans PC
+  tool); Dr.Fone (Google Drive / PC drag-and-drop / OTG manual
+  copy / AirDroid); AnExplorer guide (manual select-copy-paste,
+  anexplorer.io/transfer/phone-to-usb; the only one of the five
+  that shows a progress bar for the manual copy, still no resume
+  or verification); MobiKin guide (generic: PC drag-and-drop,
+  Assistant PC tool, OTG copy, Files by Google, AirDroid);
+  Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb) is the one-tap app alternative from
+  the wider search — a real phone-to-USB app, one-tap
+  whole-gallery copy with resume, free with ads — generic
+  Android, not an Oppo guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop, or
+  size verification, so the article says so honestly instead of
+  claiming SnapDisk is the only one-tap option. Cloud is Google
+  Photos or HeyTap Cloud — cloud, not USB. Oppo specifics stated
+  honestly: ColorOS has an "OTG connection" switch (Settings >
+  Additional settings on older ColorOS, System settings on some
+  versions, Accessibility & convenience on ColorOS 15 and newer
+  — search Settings for "OTG") that switches off automatically
+  after about 10 minutes without a connected accessory, and not
+  every Oppo phone has OTG; stock file manager is File Manager,
+  stock gallery is Photos; modern Oppo phones (Find X, Reno,
+  recent A-series) are USB-C, older ones Micro-USB; most recent
+  Oppo phones have no microSD slot. Oppo's own tools: Clone
+  Phone is phone-to-phone migration over Wi-Fi Direct (needs a
+  second phone), HeyTap Cloud is cloud backup (Settings >
+  HeyTap Cloud) — neither of them writes plain photo files to a
+  USB drive. Honest contrast stated in the TL;DR: File Manager
+  works but is manual select-copy-paste with no progress, no
+  resume, no verification; Oppo's own tools work but move data
+  to another phone or to the cloud — not plain photos on a USB
+  drive; Google Photos / HeyTap Cloud is cloud, not a USB copy;
+  Photos to USB also does one-tap copy with resume — SnapDisk
+  adds oldest-first order, detailed progress with Pause/Stop,
+  size verification, no ads, and free 5 GB per run. Query 19
+  scored Nov 16, 2026 (searches.md): "back up photos from Oppo
+  to USB flash drive without computer" — real how-to gap. Volume
+  unknown (Play publishes no volume); difficulty low-medium.
+  Linked from blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt (full section + Blog posts list, now
+  20), feed.xml (now 20 items). JSON-LD validated by parse;
+  sitemap.xml and feed.xml parse as XML. Title 45 chars, meta
+  142 chars. No app code or Play listing files touched;
+  applicationId untouched (dev.dzianisv.snapdisk). Work ran from
+  a persistent scratch clone (~/workspace/pb-wl50-scratch, not
+  the shared checkout, never /tmp). Evidence: PR #65 (commit
+  78dc3a0, merge 623bcc9, merged 2026-11-17T04:35:18Z); CI run
+  44017899476 (build pass, 1m19s) green; post-merge main runs
+  green (Android PR 44018223732, pages 44018223214). Live fetch
+  after Pages deploy: article 200, 26135 bytes, title "Back up
+  Oppo photos to a USB drive — SnapDisk" present; blog index
+  200, 18825 bytes; feed.xml 200 (20 items); sitemap.xml 200
+  with the new link; llms-full.txt 200, 196178 bytes, Blog list
+  counts 20 with Oppo present.
+
 ## WL-49 — Back up LG photos to USB article, 19th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
