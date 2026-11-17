@@ -3,6 +3,67 @@
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 
+## WL-43 — Back up Xiaomi photos to USB article, 14th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/xiaomi-photos-to-usb.html ("Back up Xiaomi photos
+  to a USB drive (no computer)"), following the WL-42
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png as
+  the lead shot — same reuse as the 8th, 9th, 10th, 11th, 12th,
+  and 13th articles). Facts verified from code on fresh main: SAF
+  tree picker (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending; free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy. Search
+  evidence (Nov 16, 2026 live web search): top results are all
+  manual copy — AnExplorer guide (manual select-copy-paste,
+  anexplorer.io/transfer/phone-to-usb; the only one showing a
+  progress bar for the manual copy, still no resume or
+  verification), FoneLab (OTG manual copy in the Files app, plus
+  PC tool HyperTrans), Dr.Fone (Google Drive / PC drag-and-drop /
+  OTG manual copy / AirDroid), YouTube PYcbV25CczI (OTG + file
+  manager manual copy, suggests Move), EpicTechTips (file manager
+  manual copy, suggests Move; PC middleman or cloud). Google
+  Photos is cloud, not USB. Xiaomi specifics stated honestly:
+  OTG off by default on many MIUI/HyperOS phones — Settings,
+  Additional settings, OTG (on some phones: Settings, More
+  settings, OTG), auto-off after about 10 minutes without a
+  drive; Xiaomi's own support note says the switch was removed
+  from MIUI 11 onward on some versions while newer model-specific
+  pages still document a toggle, so a missing switch means OTG
+  works directly, not a broken phone; stock file manager is Mi
+  File Manager, stock gallery is Gallery; microSD slot varies by
+  model — most Redmi and Redmi Note phones have one, POCO
+  F-series and Xiaomi flagships often don't. Honest contrast
+  stated in the TL;DR: Mi File Manager works but is manual
+  select-copy-paste with no progress, no resume, no
+  verification; Google Photos backup is cloud, not a USB copy;
+  SnapDisk = enable OTG, plug in, tap Backup, whole library
+  oldest-first with %, GB copied/total, speed, ETA, Pause/Stop,
+  resume on re-plug, size-verified, copies never deletes. Query
+  13 scored Nov 16, 2026 (searches.md): "back up photos from
+  Xiaomi to USB flash drive without computer" — real how-to gap.
+  Volume unknown (Play publishes no volume); difficulty
+  low-medium. Linked from blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt (full section), feed.xml
+  (now 14 items). JSON-LD validated by parse; sitemap.xml and
+  feed.xml parse as XML. Title 47 chars, meta 144 chars. No app
+  code or Play listing files touched; applicationId untouched
+  (dev.dzianisv.snapdisk).
+  Evidence: PR #49 (commit 18fc0dd, merge 52874ce, merged
+  2026-11-17T00:36:38Z); CI run 43988633465 (build pass, 1m28s)
+  green. Live fetch after Pages deploy: article 200, 23267
+  bytes, title "Back up Xiaomi photos to a USB drive — SnapDisk"
+  present, "November 16, 2026" present; blog index 200, 14415
+  bytes; feed.xml 200 (14 items); sitemap.xml 200 with the new
+  link.
+
 ## WL-42 — Back up OnePlus photos to USB article, 13th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
