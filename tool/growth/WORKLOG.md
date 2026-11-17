@@ -1,5 +1,96 @@
 # SnapDisk — Work Log
 
+## WL-51 — Back up Realme photos to USB article, 21st how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/realme-photos-to-usb.html ("Back up Realme photos to a
+  USB drive (no computer)"), following the WL-47 article template
+  exactly (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot —
+  same reuse as the 8th through 20th articles). Facts verified
+  from code on fresh main: SAF tree picker (MainActivity.kt
+  OpenDocumentTree + takePersistableUriPermission); oldest-first
+  via MediaStore DATE_TAKEN ascending; free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy. Search
+  evidence (Nov 16, 2026 live web search): no Realme-specific
+  result in the top results at all — AnExplorer guide
+  (anexplorer.io/transfer/phone-to-usb; manual select-copy-paste,
+  the only one of the six that shows a progress bar with speed
+  and time remaining, still no resume or verification); YouTube
+  video (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); AskFilo guide (generic: OTG + file
+  manager, or a PC as a middleman); Dr.Fone (Google Drive / PC
+  drag-and-drop / OTG manual copy / AirDroid); TheGadgetians
+  guide (generic phone-to-USB: OTG adapter + file manager);
+  Move Files USB/OTG/Internal (Play listing,
+  com.fbd.moveapps.sdcard.dp — a generic file-manager app that
+  detects an OTG drive and moves files in bulk; manual file
+  picking, not an automated backup, and it does not promise
+  oldest-first order, progress with Pause and Stop, or
+  verification); MobiKin realme backup guide
+  (mobikin.com/android-backup/back-up-and-restore-realme.html —
+  the one Realme-specific backup guide found in the wider search,
+  and it is not a phone-to-USB guide at all: PC tool, Google
+  backup, HeyTap Cloud, local backup on the phone); Photos to
+  USB: OTG Backup (Play listing, com.arzdrz.photos_to_usb) is
+  the one-tap app alternative from the wider search — a real
+  phone-to-USB app, one-tap whole-gallery copy with resume, free
+  with ads — generic Android, not a Realme guide, and it does not
+  promise oldest-first order, detailed progress with Pause and
+  Stop, or size verification, so the article says so honestly
+  instead of claiming SnapDisk is the only one-tap option. Cloud
+  is Google Photos or HeyTap Cloud — cloud, not USB. Realme
+  specifics stated honestly: Realme UI has an "OTG connection"
+  switch (Settings > Additional settings on most versions, System
+  Settings on some — search Settings for "OTG"; some models also
+  offer an OTG tile in Quick Settings) that switches off
+  automatically after about 10 minutes without a connected
+  accessory, and not every Realme phone has OTG; stock file
+  manager is File Manager (drive appears under Categories >
+  Storage locations); modern Realme phones (GT, Pro, number
+  series) are USB-C, older ones Micro-USB; whether a model has a
+  microSD slot varies by model — stated in the article as
+  unverified, not guessed. Realme's own tools: Clone Phone is
+  phone-to-phone migration (new phone shows a QR code, old phone
+  scans it, direct connection — needs a second phone), HeyTap
+  Cloud is cloud backup (Settings > HeyTap Cloud, 5 GB free,
+  auto-backup about every 7 days; Optimize Storage keeps
+  originals in the cloud), Local Backup stores a backup file on
+  the phone itself — none of them writes plain photo files to a
+  USB drive. Honest contrast stated in the TL;DR: File Manager
+  works but is manual select-copy-paste with no progress, no
+  resume, no verification; Realme's own tools work but move data
+  to another phone, to the cloud, or keep it on the same phone —
+  not plain photos on a USB drive; Google Photos / HeyTap Cloud
+  is cloud, not a USB copy; Photos to USB also does one-tap copy
+  with resume — SnapDisk adds oldest-first order, detailed
+  progress with Pause/Stop, size verification, no ads, and free
+  5 GB per run. Query 20 scored Nov 16, 2026 (searches.md):
+  "back up photos from Realme to USB flash drive without
+  computer" — real how-to gap. Volume unknown (Play publishes no
+  volume); difficulty low. Linked from blog index (JSON-LD + post
+  block), sitemap.xml, llms.txt, llms-full.txt (full section +
+  Blog posts list, now 21), feed.xml (now 21 items). JSON-LD
+  validated by parse; sitemap.xml and feed.xml parse as XML.
+  Title 47 chars, meta 144 chars. No app code or Play listing
+  files touched; applicationId untouched
+  (dev.dzianisv.snapdisk). Work ran from a persistent scratch
+  clone (~/workspace/pb-wl51-scratch, not the shared checkout,
+  never /tmp). Evidence: PR #67 (commit de132ee, merge 6ac409b,
+  merged 2026-11-17T05:31:54Z); CI run 44024585720 (build pass,
+  1m11s) green; post-merge main runs green (Android PR
+  44024762024, pages 44024761555). Live fetch after Pages deploy:
+  article 200, 27776 bytes, title "Back up Realme photos to a USB
+  drive — SnapDisk" present; blog index 200, 19665 bytes;
+  feed.xml 200 (21 items); sitemap.xml 200 with the new link;
+  llms-full.txt 200, 213306 bytes, Blog list counts 21 with
+  Realme present.
+
 ## WL-50 — Back up Oppo photos to USB article, 20th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
