@@ -33,6 +33,7 @@
 - [Back up Motorola photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/motorola-photos-to-usb.html): back up Motorola photos to a USB drive with no computer — no OTG toggle, Files by Google manual copy compared; original files, byte-for-byte copy, size-checked.
 - [Back up videos from Android to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/videos-to-usb.html): back up videos from Android to a USB drive with no computer — Files by Google manual copy compared, FAT32 4 GB limit for long 4K videos; original files, byte-for-byte copy, size-checked.
 - [Back up Huawei photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/huawei-photos-to-usb.html): back up Huawei photos to a USB drive with no computer — Huawei Backup encrypted archive and Files manual copy compared; original files, byte-for-byte copy, size-checked.
+- [Back up Sony Xperia photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/sony-xperia-photos-to-usb.html): back up Sony Xperia photos to a USB drive with no computer — Xperia Companion PC backup and Files by Google manual copy compared; original files, byte-for-byte copy, size-checked.
 
 ## Blog
 
