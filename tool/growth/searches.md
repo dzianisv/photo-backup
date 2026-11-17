@@ -1238,6 +1238,140 @@ demand is read off competitor install velocity instead (see
 - Verdict: how-to article material, not a listing keyword.
   Article published Nov 17, 2026 (WL-58, 28th how-to):
   docs/nothing-phone-photos-to-usb.html.
+### 28. "back up POCO photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a POCO-specific
+  guide at all, let alone a POCO-specific automated
+  whole-library backup with progress, Pause/Stop, and
+  resume — the top results are generic manual guides,
+  PC tools, or rival app pages.
+- Current top results (scored Nov 17, 2026, live web search):
+  Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-
+  drop, Google Drive, or AirDroid; generic Android, most ways
+  need a computer or a cloud account); Buffalo Photo Backup
+  (Play listing, jp.buffalo.photobackup — a rival phone-to-USB
+  app from Buffalo: open the app, connect an SSD, USB flash
+  drive, or card reader, backup starts automatically, keeping
+  the original data; Android smartphones with USB-C, Android
+  13 or later; generic Android, not a POCO guide, and it does
+  not promise oldest-first order, detailed progress with Pause
+  and Stop, or size verification of every file); YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); AnExplorer guide
+  (anexplorer.io/transfer/phone-to-usb — manual
+  select-copy-paste, the only one of these guides that
+  shows a progress bar with speed and time remaining, still no
+  resume or verification); Coolmuster guide
+  (coolmuster.com/android/transfer-files-from-android-to-usb-
+  flash-drive.html — OTG copy, a PC tool, or a cloud service;
+  generic Android, two of the three ways need a computer).
+  Wider search: VaultDrive page (coticsy.com/vaultdrive.html
+  — a rival phone-to-USB app: plug a flash drive or SSD in,
+  pick what to back up, tap Start; free up to 200 files or
+  2 GB per backup, Pro $19.99 once, no account; generic
+  Android/iPhone, not a POCO guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop,
+  or size verification of every file); AnExplorer OTG feature
+  page (anexplorer.io/features/usb-otg — a file-manager
+  feature page for OTG read/write, not a POCO backup guide);
+  YouTube video (youtube.com/watch?v=ch1evyu5PPM — same
+  generic route: check OTG, OTG adapter, file manager, Copy
+  or Move, safely eject); askfilo guide (askfilo.com — OTG
+  adapter + file manager, or a PC as a middleman; generic
+  Android, not written for POCO); AnExplorer Xiaomi device
+  page (anexplorer.io/device/phone/xiaomi — Xiaomi's built-in
+  File Manager, part of MIUI/HyperOS, shows banner ads while
+  browsing your own files; lists POCO models F6 Pro, F6, X6
+  Pro, X6, M6 Pro, C65; notes phones with SD card slots
+  (Redmi Note series, POCO M series) benefit from moving
+  media to the card; a file-manager page, not a backup guide
+  — but it confirms POCO phones run MIUI/HyperOS with
+  Xiaomi's File Manager built in, and that the M series has
+  the SD card slot); File Manager by Xiaomi (Play listing,
+  com.mi.android.globalFileexplorer — Xiaomi's own file
+  manager: quick search, moving, deleting, opening, renaming,
+  unzipping, and copy-paste; Xiaomi's preinstalled file app
+  on global MIUI and HyperOS phones; the Files app the manual
+  method uses); Xiaomi HyperOS backup guide (xiaomi-plus.com
+  — the three backup options on a HyperOS phone: Google
+  backup, Xiaomi Cloud, and local backup to a computer with a
+  USB cable; a backup guide for Xiaomi phones running HyperOS
+  — the same system POCO phones run — but none of its three
+  routes writes plain photo files to a USB drive); Google
+  Photos help (support.google.com/photos/answer/14216276 —
+  default-gallery access: Google Photos shares access with
+  your device's default gallery app; Xiaomi is one of the
+  brands that works with this feature — which confirms Xiaomi
+  phones, POCO included, have their own default gallery app,
+  separate from Google Photos, and Google Photos is the cloud
+  backup behind it); phonebunch X7 vs M7 vs F7 comparison
+  (cdn.phonebunch.com — spec tables list USB Type-C 2.0 with
+  OTG for the X7 and the F7, but plain USB Type-C 2.0 with no
+  OTG for the M7; the M7 is the one with a microSDXC dedicated
+  slot, while the X7 and F7 have none; spec tables, not a
+  guide); GSMArena POCO F9 Ultra specs (gsmarena.com — Android
+  16 with HyperOS 3, USB Type-C 3.2 with OTG, no card slot;
+  spec tables, not a guide); POCO M7 specs
+  (meloytechviews.com — lists USB Type-C with USB OTG, a
+  microSDXC hybrid SIM slot expandable up to 2TB — which
+  contradicts phonebunch, which lists the M7's OTG as not
+  supported; a third-party specs site, so the M7 OTG claim is
+  reported, not verified); POCO M7 5G review (mobilkanal.com —
+  lists USB OTG as supported and a memory card slot up to 1TB
+  on the M7 5G — which also contradicts phonebunch's Not
+  Supported; a review site, so the same caveat applies: the
+  M7 family's OTG support is disputed between sources);
+  Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a real phone-to-USB app, one-tap
+  whole-gallery copy, only new photos next time, warns about
+  the FAT32 4 GB limit, free with ads, one-time purchase
+  removes ads — generic Android, not a POCO guide, and it
+  does not promise oldest-first order, detailed progress with
+  Pause and Stop, or size verification of every file);
+  Google Photos (Play listing, com.google.android.apps.photos
+  — 15 GB cloud storage free; cloud, not a USB copy).
+  POCO specifics: POCO is Xiaomi's sub-brand and runs
+  HyperOS (Xiaomi's Android skin — the F7 runs Android 15
+  with HyperOS 2, the F9 Ultra runs Android 16 with HyperOS
+  3); stock file manager is Mi File Manager (File Manager by
+  Xiaomi, com.mi.android.globalFileexplorer — Xiaomi's
+  preinstalled file app on global MIUI and HyperOS phones;
+  it shows banner ads while browsing your own files);
+  gallery app is Xiaomi Gallery (the HyperOS Gallery app —
+  Google Photos help lists Xiaomi among the brands whose
+  default gallery app integrates with Google Photos, so the
+  gallery is Xiaomi's own and Google Photos is the cloud
+  backup behind it); POCO's own backup routes are Xiaomi
+  Cloud (gallery sync and backup to a Xiaomi account, free
+  storage limited) and Google's (Google Photos, Google backup
+  via Google One); OTG: spec tables list USB Type-C 2.0 with
+  OTG for the F7, F7 Pro, X7, and X7 Pro, and USB Type-C 3.2
+  with OTG for the F9 Ultra; the budget M7 OTG is disputed —
+  phonebunch lists Not Supported, meloytechviews and
+  mobilkanal list it as supported — treat as unconfirmed,
+  check your own phone; on many HyperOS phones OTG is off by
+  default — enable it in Settings > Additional settings > OTG
+  (on some phones under More settings > OTG), and the switch
+  turns itself off after about 10 minutes without a drive
+  (same switch as the Xiaomi guide, WL-era, verified there);
+  all POCO phones are USB-C; only the budget M series has a
+  microSD slot — the F and X series have none, so a USB drive
+  is the plug-in storage for them. POCO's own tools: Xiaomi
+  Cloud (Settings > Xiaomi account > Xiaomi Cloud, gallery
+  sync and backup to Xiaomi's servers, free storage limited)
+  and Google backup (Settings > Google > Backup, Back up by
+  Google One) restore to a new phone from the cloud; Google
+  Photos (Photos settings > Backup, to Google's cloud, 15 GB
+  free) backs photos up to Google's cloud; the SD-card route
+  copies to a card, not a drive, and only the M series has a
+  slot; Google Photos / Google One / Xiaomi Cloud back photos
+  up to their clouds — none of them writes plain photo files
+  to a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-59, 29th how-to):
+  docs/poco-photos-to-usb.html.
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
