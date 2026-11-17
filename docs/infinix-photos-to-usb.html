@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Infinix photos to a USB drive — SnapDisk</title>
+<meta name="description" content="Back up Infinix photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/infinix-photos-to-usb.html">
+<meta property="og:title" content="Back up Infinix photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up Infinix photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/infinix-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/infinix-photos-to-usb.html#article",
+      "headline": "Back up Infinix photos to a USB drive (no computer)",
+      "description": "Back up Infinix photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-17",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/infinix-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/infinix-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up Infinix photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — if your model supports OTG. Plug a USB-C flash drive straight into a modern Infinix — the Note 12 G96, Zero 30 5G, and Hot 70 support OTG — and most models mount the drive on plug-in with a \"USB storage added\" notification. One guide reports an OTG toggle at Settings > More Connections on the Zero 30, but that report is AI-generated and unverified, so treat the location as a lead, not a fact. The Infinix Smart 5 has no OTG at all, so no adapter will make a drive appear on it — check your own model's specs first. If nothing appears, check Settings > Storage. The stock route is File Manager: plug the drive in, open File Manager, pick the photos, and Copy to the drive. SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later. Infinix phones ship with Google Play, so once the listing is live that will be the install route."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/infinix-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up Infinix photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/infinix-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up Infinix photos to a USB drive (no computer)</h1>
+  <p class="dek">Infinix phones (Note, Hot, Zero, and GT series) run XOS — Infinix's Android skin — with OTG support that varies by model: most recent models mount the drive on plug-in with a "USB storage added" notification, but some budget models have no OTG at all. And Infinix's own backup tools back your photos up to the cloud or to a PC, not to a USB drive as plain files. A USB-C flash drive plugs straight into a modern Infinix. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 17, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On an Infinix phone, check your model supports OTG first — the Note 12 G96, Zero 30 5G, and Hot 70 do, but the Smart 5 has no OTG at all, so no adapter will make a drive appear on it — then plug a USB drive in: most OTG models mount it straight away with a "USB storage added" notification; if nothing appears, check Settings &gt; Storage (one guide reports an OTG toggle at Settings &gt; More Connections on the Zero 30, but that report is AI-generated and unverified, so treat the location as a lead, not a fact) — then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: Infinix File Manager works — it is the stock file manager on Infinix phones, and it copies photos to a USB drive — but it is manual select-copy-paste with no progress detail, no resume, and no verification; Infinix's own backup routes work too, but none of them writes your photos as plain files to a USB drive — Google backup restores your data to a new phone from the cloud, XCloud backs photos up to Infinix's cloud, Coolmuster backs the phone up to a PC, and the SD-card route copies to a card, not a drive. One rival app does exist — Photos to USB: OTG Backup copies a whole gallery to a pen drive in one tap and resumes where it stopped — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 17, 2026, no top search result for this query is an Infinix-specific guide at all, let alone an Infinix-specific automated whole-library backup with progress, Pause/Stop, and resume: the top results are generic manual guides, PC tools, or a rival app page.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up photos from Infinix to USB flash drive without computer" and there is no Infinix-specific result in the top results at all — the rest are generic Android guides, in different packaging:</p>
+  <ul>
+    <li><strong>YouTube</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos</a>) — a video walkthrough of the generic route: OTG adapter, the phone's built-in file manager, select photos in DCIM, Copy or Move to the drive. Generic Android, not written for Infinix.</li>
+    <li><strong>Dr.Fone</strong> (<a href="http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html">4 Practical Ways to Transfer Photos from Android to USB Flash Drive</a>) — OTG copy, PC drag-and-drop, Google Drive, or AirDroid over Wi-Fi. Generic Android, and most of the ways need a computer or a cloud account.</li>
+    <li><strong>AnExplorer</strong> (<a href="https://anexplorer.io/transfer/phone-to-usb">How to Transfer Files from Android to USB Drive (OTG, No Root)</a>) — connect the drive with an OTG adapter, open AnExplorer, long-press to select files in DCIM/Camera, Copy, Paste to the drive. A thorough manual guide, and the only one of these guides that shows a progress bar with speed and time remaining — but it is still a manual copy: you pick the files, and there is no resume or verification.</li>
+    <li><strong>askfilo</strong> (<a href="https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432">How to transfer pictures from an Android phone to a flash drive</a>) — OTG adapter and the phone's file manager, or a PC as a middleman. Generic Android, not written for Infinix.</li>
+    <li><strong>TheGadgetians</strong> (<a href="https://thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/">How to Transfer Files From Phone to USB Without Computer</a>) — OTG adapter, the phone's file manager, select and copy to the drive; mentions ThePhotoStick Omni, a dedicated stick with its own app, not an ordinary flash drive. Generic Android and iPhone, not written for Infinix.</li>
+    <li><strong>Pixoneye</strong> (<a href="https://pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/">How to Transfer Photos from Your Phone to a USB Stick</a>) — copy local originals to a USB drive with a file manager, one small batch at a time; notes ThePhotoStick Omni, a dedicated stick with its own app, not an ordinary flash drive. Generic Android and iPhone, not written for Infinix.</li>
+    <li><strong>SoftHandTech</strong> (<a href="https://softhandtech.com/how-do-you-transfer-pictures-from-your-phone-to-a-flash-drive/">Easy Guide: Transferring Pictures from Your Phone to a Flash Drive</a>) — connect the drive with an OTG adapter and copy with a file manager, or use a computer, or cloud storage. Generic, not written for Infinix.</li>
+    <li><strong>FoneLab</strong> (<a href="https://www.fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html">How to Transfer Photos from Android to Flash Drive in 3 Easy Ways</a>) — OTG adapter copy, a PC file-explorer copy, or the FoneLab HyperTrans PC tool. Generic Android, and two of the three ways need a computer.</li>
+    <li><strong>MobileTrans</strong> (<a href="https://mobiletrans.wondershare.com/android-tips/how-to-transfer-files-via-otg.html">How to Transfer Files from Mobile via OTG?</a>) — connect the phone and the pen drive with an OTG cable, select the files, Copy, Paste to the drive. Generic Android, not written for Infinix.</li>
+    <li><strong>TechDows</strong> (<a href="https://techdows.com/usb-otg-everything-you-need-to-know.html">USB OTG: everything you need to know</a>) — a general OTG explainer: which adapter to buy, how to open OTG storage, and what to do when a drive does not show up. Useful background, not an Infinix guide.</li>
+    <li><strong>Photos to USB: OTG Backup</strong> (<a href="https://play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb">Google Play</a>) — the one-tap app alternative, from the wider search for this job: a real phone-to-USB app that copies the whole gallery to a pen drive in one tap, copies only new photos next time, and warns about the FAT32 4 GB limit. It is free with ads, with a one-time purchase to remove them. It is the closest thing to this article's job — but it is a generic Android listing, not an Infinix guide, and it does not promise oldest-first order, detailed progress with Pause and Stop, or size verification of every file.</li>
+    <li><strong>infinixfirmware.io</strong> (<a href="https://infinixfirmware.io/how-to-backup-restore-data-on-infinix-smartphones/">How to Backup &amp; Restore Data on Infinix Smartphones</a>) — the one Infinix-specific backup page found in the wider search, and it is not a phone-to-USB guide at all: Google Account Backup (Settings &gt; Google &gt; Backup), XOS backup (Settings &gt; System &gt; Backup &amp; Reset, Local Backup or XCloud Backup), a manual copy to an SD card, or a copy to a laptop over USB — a cloud, a card, or a PC, never a USB drive. Note the source is a third-party Infinix fan site, not Infinix's own site, so the XCloud menu names are reported, not official.</li>
+    <li><strong>Coolmuster</strong> (<a href="https://www.coolmuster.com/android/infinix-backup-restore.html">How to Achieve Infinix Backup and Restore with 3 Simple Ways</a>) — the other Infinix-specific backup page found in the wider search: Google Backup to the cloud, Infinix Cloud to Infinix's servers, or the Coolmuster Android Backup Manager desktop tool, which backs the phone up to a computer over USB with debugging on. A cloud or a PC, never a USB drive.</li>
+    <li><strong>Alibaba's external-drive guide</strong> (<a href="https://www.alibaba.com/product-insights/how-to-backup-your-entire-smartphone-to-an-external-drive-without-cloud-storage.html">How To Backup Your Entire Smartphone To An External Drive Without Cloud Storage</a>) — a generic Android guide for the same job: OTG cable, the phone's file manager, copy DCIM and the rest to the drive. Generic Android, not written for Infinix.</li>
+    <li><strong>Trustloud</strong> (<a href="https://trustloud.com/back-up-android-phone/">How to Back Up an Android Phone: 5 Free Ways (2026)</a>) — a generic Android backup guide: Google One backup plus Google Photos, Samsung Cloud or Smart Switch, or a USB cable to a computer. Cloud or a PC, not written for Infinix.</li>
+    <li><strong>Techzei</strong> (<a href="https://techzei.com/how-to-back-up-your-phone-android-iphone/">How to Back Up Your Phone Properly: Android and iPhone</a>) — a generic backup guide: Google backup and Google Photos, plus a monthly USB copy of DCIM to a computer or drive. Generic Android and iPhone, not written for Infinix.</li>
+    <li><strong>smallusefultips</strong> (<a href="https://smallusefultips.com/does-infinix-smart-5-support-otg/">Does Infinix Smart 5 Support OTG?</a>) — the one Infinix-specific OTG answer that matters most: the Infinix Smart 5 (2020, Android 10 Go edition) does <em>not</em> support OTG, and the page says so plainly — it is a hardware limitation, and no software tweak or adapter can enable it. If you own a Smart 5, a USB drive will never appear, and the phone-to-USB route in this article does not apply to it.</li>
+    <li><strong>accio.com's Zero 30 OTG guide</strong> (<a href="https://www.accio.com/business/infinix-zero-30-otg-setting">Infinix Zero 30 OTG Setting Guide 2026</a>) — the Infinix Zero 30 5G supports OTG through its USB-C port, and the guide reports the toggle at Settings &gt; More Connections &gt; OTG, with a note that Infinix devices often switch OTG off if nothing is connected for 10 minutes. Treat both details as reported, not verified: the page is an AI-generated report, and it warns itself that firmware versions can move the toggle. The OTG support itself is the usable fact; the exact menu path is a lead to check on your own phone.</li>
+    <li><strong>docsbot.ai's Note 12 G96 page</strong> (<a href="https://docsbot.ai/prompts/technical/infinix-note-12-g96-otg-support">Infinix Note 12 G96 OTG Support</a>) — the Infinix Note 12 G96 supports OTG, so a USB drive, keyboard, or other peripheral plugs straight in. A second model with confirmed OTG.</li>
+    <li><strong>Mascom's Hot 70 listing</strong> (<a href="https://www.mascomintl.com/Infinix-Hot-70-256GB-Storage-4GB-RAM-6-78-inch-120Hz-Display-6000mAh-Battery-Infinix-Hot-70-Holds-thousands-of-photos-videos-or-downloaded-songs-without-deleting-anything-first-Night-Pulse-Dive-Blue-Silver-Dancer-Thermo-5eJQ47ItiL5qb7S2">Infinix Hot 70</a>) — a retailer spec page for the Hot 70 (released May 2026) that lists "USB-C with OTG — read flash drives directly to share files, music or presentations without a laptop in between", plus a dedicated microSDXC slot that takes a memory card while both SIM slots stay in use. A third model with confirmed OTG, from its spec sheet.</li>
+    <li><strong>FoneArena's GT 50 Pro unboxing</strong> (<a href="https://www.fonearena.com/blog/497019/infinix-gt-50-pro-unboxing-first-impressions.html">Infinix GT 50 Pro Unboxing and First Impressions</a>) — the newest Infinix runs Android 16 with XOS 16 on top, with a USB Type-C port on the bottom. XOS 16 is the current skin; the page does not state OTG support for this model, so don't assume it — check the specs.</li>
+    <li><strong>91mobiles' XOS 16 hands-on</strong> (<a href="https://www.91mobiles.com/reviews/infinix-xos-16-hands/amp/">Infinix XOS 16 hands-on</a>) — XOS 16 redesigned the first-party apps, including Gallery and File Manager, and the Gallery app gained AI imaging features (AI Flare Remover, AI Shadow Remover, AI Reflection Remover). The stock gallery and file manager on a current Infinix are XOS's own Gallery and File Manager apps.</li>
+    <li><strong>XOS's stock apps</strong> (<a href="https://www.toolify.ai/ai-news/enhance-your-android-with-infinix-xos-ported-apps-auto-call-recorder-ai-gallery-file-manager-1520598">Infinix XOS ported apps</a> and <a href="https://www.nairaland.com/5479325/infinix-xos-5.5-everything-need">XOS 5.5 launch notes</a>) — the stock gallery on Infinix phones is AI Gallery, in the box since XOS 5.5, and the stock file manager is File Manager, which browses internal storage and external memory cards. Both are XOS's own apps, not Google's — though Google Photos is also on the phone for cloud backup.</li>
+    <li><strong>HT Tech's Infinix OTG list</strong> (<a href="https://tech.hindustantimes.com/mobile-finder/infinix-brand/usb-otg-external-storage">Infinix Phones with USB OTG</a>) — a filter list of Infinix models with USB OTG, not a guide. Useful to check your own model against, but it says nothing about how to back photos up.</li>
+    <li><strong>Google Photos</strong> (<a href="https://play.google.com/store/apps/details?id=com.google.android.apps.photos">Google Play</a>) — Google's own photo backup: 15 GB of cloud storage free with every Google account, automatic upload over Wi-Fi. Cloud, not a USB copy.</li>
+    <li><strong>Cloud routes</strong> — Google Photos backs up over Wi-Fi to Google's servers, not to a drive you hold; its "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Infinix's own cloud is XCloud — it backs the phone up to Infinix's servers, not to a USB drive — and it is not on every model: one guide says newer Infinix phones with XOS above 7 usually have it, so check your own phone before counting on it.</li>
+  </ul>
+  <p>None of them is an Infinix-specific guide at all, and none of them offers an automated Infinix photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>What you need</h2>
+  <p>An Infinix phone (Android 7.0 or later for SnapDisk) that supports OTG — check your model's specs before buying anything; a USB drive your phone can read — a USB-C flash drive plugs straight into a modern Infinix, or a regular USB drive with a USB-C OTG adapter; older Infinix phones with a Micro-USB port need a Micro-USB OTG adapter instead; and enough space on the drive for the photos you want to keep. Three Infinix specifics: first, OTG is not a given. Infinix phones run XOS — Infinix's Android skin — and the drive mounts on plug-in on models that support OTG: look for a "USB storage added" or "USB drive connected" notification. One guide reports an OTG toggle at Settings &gt; More Connections on the Zero 30, and that Infinix turns OTG off after 10 minutes with nothing connected — but that report is AI-generated and unverified, and it warns itself that firmware versions can move the toggle, so treat the path as a lead to check, not a fact. If the phone ignores the drive, check Settings &gt; Storage. And not every Infinix phone has OTG at all — the Smart 5 doesn't, while the Note 12 G96, Zero 30 5G, and Hot 70 do — so for any other model check its specs, and don't assume a missing toggle means a broken phone. Second, Infinix's stock file manager is File Manager, which handles the phone's internal storage and connected external storage, and the stock gallery is AI Gallery — and Infinix camera photos live in DCIM/Camera — and whether your model has a microSD slot varies by model (the Hot 70 has a dedicated microSD slot), so check your own model's specs rather than assuming one either way; a USB drive is the plug-in storage that works on every OTG model. Third, Infinix phones ship with Google Play, so SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live — there is no sideload-only situation here. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Check your model supports OTG.</strong> If you own a Smart 5, stop here — it has no OTG, and no adapter will change that. For any other model, check its specs (the Note 12 G96, Zero 30 5G, and Hot 70 do support OTG).</li>
+    <li><strong>Plug in the USB drive.</strong> Most OTG models mount it straight away — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage; one guide reports an OTG toggle under Settings &gt; More Connections, but that report is unverified, so there may be nothing to turn on.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — Infinix camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the phone normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the phone to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: File Manager (the stock route, no app needed)</h2>
+  <p>Infinix phones ship with File Manager as the stock file manager, and it can copy your photos to the USB drive: 1. Plug in the USB drive — a notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage. 2. Open File Manager and confirm the USB drive shows up under external storage. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until File Manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: Infinix's own tools (Google backup, XCloud, or a PC — not phone-to-USB)</h2>
+  <p>If you want Infinix's own route, know what each tool actually does — none of them writes your photos as plain files to a USB drive. Google backup is the route Infinix's guides point to first: Settings &gt; Google &gt; Backup, Back up to Google Drive on — it backs the phone up to your Google account so you can restore app settings and data to a new phone. It is a real backup — but the backup lives in Google's cloud and restores to a phone, not a folder of photo files on a USB drive you can plug into any computer and open. XCloud is Infinix's own cloud backup, on phones that have it: Settings &gt; System &gt; Backup &amp; Reset, Local Backup or XCloud Backup — it backs contacts, messages, photos, and settings up to your Infinix account. It is a real backup too — but it lives on Infinix's servers, needs an Infinix account and a connection, and is not on every model (one guide says newer phones with XOS above 7 usually have it), and it still doesn't give you a folder of photo files on a USB drive. Google Photos is Google's own photo backup app: it automatically backs up photos to Google's cloud, with 15 GB free with every Google account — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. Coolmuster Android Backup Manager is the PC route the Infinix guides offer: a Windows tool that backs the whole phone up to a computer in one click — but it needs the computer, a USB cable, and USB debugging on. And the SD-card route copies DCIM to a memory card with File Manager — a real local copy, but it stays on a card in the phone (or needs a card reader to open anywhere else), not a USB drive you can plug into any computer. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the Infinix phone into the computer with a USB cable, tap the USB notification and choose File transfer (by default an Infinix phone charges only) — and drag the DCIM folder onto the USB drive. This works fine, and it is the only route above that needs a second device in between. If the phone and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the phone is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>No OTG, no USB backup.</strong> On a model without OTG — the Smart 5 is the confirmed one — a USB drive simply never appears, and no app can change that. The cloud routes (Google Photos, XCloud) are the backup for those phones.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter before checking OTG.</strong> Not every Infinix phone has OTG — the Smart 5 doesn't, and no adapter or setting can enable it. Check your own model's specs first, or the drive will never appear no matter what you plug in.</li>
+    <li><strong>Hunting for an OTG switch that may not exist.</strong> One guide reports a toggle at Settings &gt; More Connections on the Zero 30, but that report is AI-generated and unverified, and XOS mounts the drive on plug-in with a "USB storage added" notification on models that support OTG. If your Infinix phone ignores a drive, check Settings &gt; Storage — but a missing switch is not proof the phone is broken; some models simply have no OTG.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google backup, XCloud, and Google Photos back your phone up to Google's or Infinix's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> Coolmuster backs the phone up to a computer — it needs the PC, a cable, and USB debugging. If the phone and the drive are all you have, a phone-to-USB copy is the route, not a desktop tool.</li>
+    <li><strong>Mistaking an SD-card copy for a USB backup.</strong> Copying DCIM to a memory card is a real local copy — but the card stays in the phone, and opening it anywhere else needs a card reader. A USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 17, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On Infinix the cloud routes are Google Photos, Google One, and XCloud — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="asus-photos-to-usb.html">Back up Asus photos to a USB drive (no computer)</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
