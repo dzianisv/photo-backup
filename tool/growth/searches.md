@@ -502,6 +502,65 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-51, 21st how-to):
   docs/realme-photos-to-usb.html.
 
+### 21. "back up photos from Vivo to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Vivo-specific guide at
+  all, let alone a Vivo-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 16, 2026, live web search):
+  FoneLab guide (fonelab.com/resource/how-to-transfer-photos-
+  from-android-phone-to-usb-flash-drive.html — OTG adapter +
+  file manager, PC File Explorer, or HyperTrans PC tool;
+  generic Android, two of the three ways need a computer);
+  AnExplorer guide (anexplorer.io/transfer/phone-to-usb — manual
+  select-copy-paste, the only one of the five that shows a
+  progress bar with speed and time remaining, still no resume or
+  verification); YouTube video (youtube.com/watch?v=PYcbV25CczI —
+  generic OTG + file manager walkthrough); MobiKin guide
+  (mobikin.com/android-backup/transfer-files-from-android-to-
+  usb-flash-drive.html — generic: PC drag-and-drop, Assistant PC
+  tool, OTG copy, Files by Google, AirDroid); VaultDrive page
+  (coticsy.com/vaultdrive.html — a rival app's own page, generic
+  Android and iPhone, not a Vivo guide: free for up to 200 files
+  or 2 GB per backup, Pro $19.99 once; does not promise
+  oldest-first order, detailed progress with Pause and Stop, or
+  size verification); MobiKin vivo Cloud guide
+  (mobikin.com/android-backup/vivo-cloud-backup.html — the one
+  Vivo-specific backup guide found in the wider search, and it is
+  not a phone-to-USB guide at all: vivo Cloud, Google backup,
+  PC tool); vivo's own EasyShare FAQ (vivo.com/bt/content/
+  easyshare — EasyShare moves files between two phones, or backs
+  the phone up to a PC; phone-to-phone or phone-to-PC, not
+  phone-to-USB); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a real phone-to-USB app, one-tap
+  whole-gallery copy, only new photos next time, warns about the
+  FAT32 4 GB limit, free with ads, one-time purchase removes ads
+  — generic Android, not a Vivo guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop, or
+  size verification). Google Photos is cloud, not USB. Vivo
+  specifics: Funtouch OS has an "OTG" switch (Settings > More
+  settings > OTG — search Settings for "OTG"; vivo's own FAQ
+  says the switch turns itself off if it is not used in 5
+  minutes, to save power), and not every Vivo phone has OTG;
+  stock file manager is File Manager (category-based: Images,
+  Videos, Audio, Documents, Downloads); stock gallery is Albums
+  (photo backup there runs through Google Photos); modern Vivo
+  phones (X, V, recent Y series) are USB-C, older ones
+  Micro-USB; whether a model has a microSD slot varies by model
+  (budget Y and T series phones include one — not verified for
+  any other model, check the model's specs). Vivo's own tools:
+  EasyShare is phone-to-phone transfer (Send on one phone,
+  Accept on the other) or backup to a PC via EasyShare on the
+  computer (USB cable or Wi-Fi) — needs a second phone or a PC;
+  vivo Cloud is cloud backup (5 GB free, automatic backup about
+  every 7 days when charging, on Wi-Fi, and locked; device backup
+  covers system data, call logs, messages, and apps, photos sync
+  through Albums or Google Photos) — none of them writes plain
+  photo files to a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 16, 2026 (WL-52, 22nd how-to):
+  docs/vivo-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
