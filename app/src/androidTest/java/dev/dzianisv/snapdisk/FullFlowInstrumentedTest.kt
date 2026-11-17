@@ -25,7 +25,6 @@ import java.io.File
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
-import org.junit.Assert.fail
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -48,6 +47,18 @@ import org.junit.Test
  * BackupEngineInstrumentedTest.oldestFirstCopyOrderAndVerification.
  * The progress notification text carries no file name, so the
  * service test does not (and cannot) observe the order from it.
+ *
+ * Timing discipline (learned from smoke run 44147560922, which
+ * failed 6 tests): seed data is written and verified in 1 MB
+ * chunks — the test process heap is ~200 MB, so holding whole
+ * 80 MB files as byte arrays OOMs. Pause/Stop are sent only after
+ * the in-flight file's .part is observed on disk, never on a
+ * sleep — on a loaded emulator a sleep can overshoot and the copy
+ * finishes first. Every test stops any leftover service in
+ * setUp/tearDown: BackupService.stateFlow is process-static, so a
+ * paused service left by a failed test would make the next test's
+ * startBackup() a no-op (job still active) and the next test would
+ * time out in PAUSED.
  */
 class FullFlowInstrumentedTest {
 
@@ -70,6 +81,9 @@ class FullFlowInstrumentedTest {
         notificationManager =
             ctx.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         NotificationHelper.ensureChannels(ctx)
+        // Never inherit a running job from a previous test in this
+        // process: stop it first (best effort, never fails setUp).
+        stopServiceIfRunning()
         notificationManager.cancelAll()
         // Free tier for every test here; the service must never take
         // the Pro auto-backup path (the receiver test asserts the
@@ -88,6 +102,7 @@ class FullFlowInstrumentedTest {
     fun tearDown() {
         try { activityScenario?.close() } catch (_: Exception) { /* already closed */ }
         activityScenario = null
+        stopServiceIfRunning()
         try { notificationManager.cancelAll() } catch (_: Exception) { /* best effort */ }
         for (uri in seededUris) {
             try { ctx.contentResolver.delete(uri, null, null) } catch (_: Exception) { /* gone */ }
@@ -97,6 +112,29 @@ class FullFlowInstrumentedTest {
         BackupPrefs(ctx).fromTreeUri = null
         BackupPrefs(ctx).toTreeUri = null
         ProPrefs(ctx).jobVolumeUuid = null
+    }
+
+    /**
+     * If a backup job is active (a previous test left the service
+     * COPYING/PAUSED), stop it and wait for STOPPED so the next
+     * test's startBackup() is not a no-op. Best effort: never throws.
+     */
+    private fun stopServiceIfRunning() {
+        val state = BackupService.stateFlow.value.status
+        if (state != BackupStatus.SCANNING && state != BackupStatus.COPYING &&
+            state != BackupStatus.PAUSED
+        ) return
+        try {
+            ContextCompat.startForegroundService(
+                ctx,
+                Intent(ctx, BackupService::class.java).setAction(BackupService.ACTION_STOP),
+            )
+        } catch (_: Exception) { /* service may already be gone */ }
+        val deadline = System.currentTimeMillis() + 10_000
+        while (System.currentTimeMillis() < deadline) {
+            if (BackupService.stateFlow.value.status == BackupStatus.STOPPED) return
+            Thread.sleep(100)
+        }
     }
 
     /**
@@ -112,10 +150,17 @@ class FullFlowInstrumentedTest {
             Uri.encode("primary:$relative")
     }
 
-    /** Seed one JPEG into MediaStore (DCIM/snapdisk-e2e) with a fixed DATE_TAKEN. */
-    private fun seedPhoto(name: String, dateTakenMs: Long, sizeBytes: Int): ByteArray {
+    /** Deterministic content byte at [position] for a seeded file [name]. */
+    private fun patternByte(name: String, position: Long): Byte =
+        ((position + name.hashCode()) % 251).toByte()
+
+    /**
+     * Seed one JPEG into MediaStore (DCIM/snapdisk-e2e) with a fixed
+     * DATE_TAKEN, written in 1 MB chunks — never hold the whole file
+     * in memory (the test heap is ~200 MB).
+     */
+    private fun seedPhoto(name: String, dateTakenMs: Long, sizeBytes: Long) {
         deletePreExisting(name)
-        val data = ByteArray(sizeBytes) { ((it + name.hashCode()) % 251).toByte() }
         val values = ContentValues().apply {
             put(MediaStore.MediaColumns.DISPLAY_NAME, name)
             put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg")
@@ -129,9 +174,38 @@ class FullFlowInstrumentedTest {
             MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values,
         ) ?: throw AssertionError("MediaStore insert failed for $name")
         seededUris += uri
-        ctx.contentResolver.openOutputStream(uri)?.use { it.write(data) }
+        val out = ctx.contentResolver.openOutputStream(uri)
             ?: throw AssertionError("could not open output stream for $name")
-        return data
+        out.use { stream ->
+            val chunk = ByteArray(CHUNK_BYTES)
+            var written = 0L
+            while (written < sizeBytes) {
+                val n = minOf(CHUNK_BYTES.toLong(), sizeBytes - written).toInt()
+                for (i in 0 until n) chunk[i] = patternByte(name, written + i)
+                stream.write(chunk, 0, n)
+                written += n
+            }
+        }
+    }
+
+    /** Streaming byte-compare: [file] must match the seeded pattern for [name]. */
+    private fun assertFileMatchesSeed(file: File, name: String, sizeBytes: Long) {
+        assertTrue("missing file ${file.name}", file.exists())
+        assertEquals("wrong size for ${file.name}", sizeBytes, file.length())
+        file.inputStream().use { stream ->
+            val chunk = ByteArray(CHUNK_BYTES)
+            var read = 0L
+            while (read < sizeBytes) {
+                val n = stream.read(chunk, 0, minOf(CHUNK_BYTES.toLong(), sizeBytes - read).toInt())
+                if (n < 0) throw AssertionError("${file.name} ended early at $read bytes")
+                for (i in 0 until n) {
+                    if (chunk[i] != patternByte(name, read + i)) {
+                        throw AssertionError("${file.name} differs at byte ${read + i}")
+                    }
+                }
+                read += n
+            }
+        }
     }
 
     private fun deletePreExisting(name: String) {
@@ -179,14 +253,14 @@ class FullFlowInstrumentedTest {
     }
 
     /**
-     * Poll [condition] until true or [timeoutMs] elapses. While
-     * polling, records every distinct (status, currentFile) pair the
-     * service publishes, so the test can assert on the state sequence
+     * Poll [condition] until true or [timeoutMs] elapses. Records
+     * every distinct (status, currentFile) pair the service
+     * publishes, so the test can assert on the state sequence
      * instead of only the final state.
      */
     private fun waitForState(
         timeoutMs: Long,
-        pollMs: Long = 100,
+        pollMs: Long = 50,
         seenStates: MutableList<Pair<BackupStatus, String?>> = mutableListOf(),
         condition: (BackupState) -> Boolean,
     ): BackupState {
@@ -205,6 +279,20 @@ class FullFlowInstrumentedTest {
             "timed out after ${timeoutMs}ms waiting for state; " +
                 "last=${last.status} error=${last.error?.summary} " +
                 "seen=$seenStates",
+        )
+    }
+
+    /** Wait until [file] exists with a partial size (a copy is in flight), or fail. */
+    private fun waitForPartInFlight(file: File, totalBytes: Long, timeoutMs: Long = 30_000) {
+        val deadline = System.currentTimeMillis() + timeoutMs
+        while (System.currentTimeMillis() < deadline) {
+            if (file.exists() && file.length() in 1 until totalBytes) return
+            Thread.sleep(20)
+        }
+        throw AssertionError(
+            "${file.name} was never observed mid-copy " +
+                "(exists=${file.exists()} size=${if (file.exists()) file.length() else "n/a"} " +
+                "of $totalBytes) — the copy finished before the action landed?",
         )
     }
 
@@ -230,9 +318,15 @@ class FullFlowInstrumentedTest {
         println("SMOKE full-flow: mount broadcast posted the offer (Backup/Cancel)")
 
         // Cancel dismisses the offer through the same receiver the
-        // notification action uses.
+        // notification action uses. Poll for the dismissal: on a
+        // loaded emulator the NotificationManagerService can take
+        // seconds to propagate the cancel (smoke run 44147560922
+        // showed 200-300 ms monitor contention on this call).
         sendNotificationAction(StorageReceiver.ACTION_DISMISS_OFFER)
-        Thread.sleep(300)
+        val dismissDeadline = System.currentTimeMillis() + 5_000
+        while (offerNotification() != null && System.currentTimeMillis() < dismissDeadline) {
+            Thread.sleep(100)
+        }
         assertTrue("offer was not dismissed by Cancel", offerNotification() == null)
         println("SMOKE full-flow: Cancel dismissed the offer")
     }
@@ -244,9 +338,9 @@ class FullFlowInstrumentedTest {
         // Backup in the app (the offer's Backup action does the same
         // startForegroundService call from the receiver).
         activityScenario = ActivityScenario.launch(MainActivity::class.java)
-        val oldData = seedPhoto("e2e-old.jpg", 1_700_000_000_000L, 20 * 1024 * 1024)
-        val midData = seedPhoto("e2e-mid.jpg", 1_700_000_100_000L, 20 * 1024 * 1024)
-        val newData = seedPhoto("e2e-new.jpg", 1_700_000_200_000L, 20 * 1024 * 1024)
+        seedPhoto("e2e-old.jpg", 1_700_000_000_000L, 20L * 1024 * 1024)
+        seedPhoto("e2e-mid.jpg", 1_700_000_100_000L, 20L * 1024 * 1024)
+        seedPhoto("e2e-new.jpg", 1_700_000_200_000L, 20L * 1024 * 1024)
 
         val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
         var sawProgressWithPauseStop = false
@@ -272,21 +366,13 @@ class FullFlowInstrumentedTest {
             "no COPYING progress notification with Pause/Stop was observed; seen=$seenStates",
             sawProgressWithPauseStop,
         )
-        // SCANNING is not asserted: the scan of 3 files can finish
-        // between two 50 ms polls, so a poll may legitimately miss it.
-        // COPYING is asserted below via the progress notification.
-        assertTrue("COPYING was never published", seenStates.any { it.first == BackupStatus.COPYING })
 
         val oldDest = File(dstDir, "e2e-old.jpg")
         val midDest = File(dstDir, "e2e-mid.jpg")
         val newDest = File(dstDir, "e2e-new.jpg")
-        for ((file, expected) in listOf(oldDest to oldData, midDest to midData, newDest to newData)) {
-            assertTrue("missing destination file ${file.name}", file.exists())
-            assertTrue(
-                "destination ${file.name} is not byte-identical to the source",
-                file.readBytes().contentEquals(expected),
-            )
-        }
+        assertFileMatchesSeed(oldDest, "e2e-old.jpg", 20L * 1024 * 1024)
+        assertFileMatchesSeed(midDest, "e2e-mid.jpg", 20L * 1024 * 1024)
+        assertFileMatchesSeed(newDest, "e2e-new.jpg", 20L * 1024 * 1024)
         assertTrue("stale .part files remain", dstDir.listFiles()?.none { it.name.endsWith(".part") } == true)
         // Landing order is the oldest-first proof at service level:
         // the engine copies sequentially, so mtimes increase old→new.
@@ -313,40 +399,39 @@ class FullFlowInstrumentedTest {
     @Test
     fun pauseAndResumeThroughNotificationActions() {
         activityScenario = ActivityScenario.launch(MainActivity::class.java)
-        // Large files so the copy is still in flight when the pause
-        // action lands (the engine-level pause is already proven
-        // deterministically by BackupEngineInstrumentedTest with a
-        // slow stream; this test proves the notification-action path).
-        val bigData = seedPhoto("e2e-big1.jpg", 1_700_000_000_000L, 80 * 1024 * 1024)
-        seedPhoto("e2e-big2.jpg", 1_700_000_100_000L, 80 * 1024 * 1024)
-        seedPhoto("e2e-big3.jpg", 1_700_000_200_000L, 80 * 1024 * 1024)
+        // One large file: the pause is sent only after its .part is
+        // observed mid-copy, so there is no between-files window for
+        // the pause to land in (the engine-level pause is already
+        // proven deterministically by BackupEngineInstrumentedTest
+        // with a slow stream; this test proves the notification
+        // action path).
+        val size = 300L * 1024 * 1024
+        seedPhoto("e2e-big.jpg", 1_700_000_000_000L, size)
 
         val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
         startServiceAction(BackupService.ACTION_START)
         waitForState(60_000, 50, seenStates) { it.status == BackupStatus.COPYING }
+        val part = File(dstDir, "e2e-big.jpg.part")
+        waitForPartInFlight(part, size)
         sendNotificationAction(BackupService.ACTION_PAUSE)
         val paused = waitForState(10_000, 50, seenStates) { it.status == BackupStatus.PAUSED }
         assertEquals(BackupStatus.PAUSED, paused.status)
-        // The in-flight file's .part must exist and stay frozen while paused.
-        val parts = dstDir.listFiles()?.filter { it.name.endsWith(".part") } ?: emptyList()
-        assertTrue("no .part file while paused (copy finished before the pause landed?)", parts.isNotEmpty())
-        val part = parts.first()
+        // The in-flight file's .part must stay frozen while paused.
         val sizeWhilePaused = part.length()
         assertTrue("empty .part while paused", sizeWhilePaused > 0)
         Thread.sleep(500)
         assertEquals("copy progressed while paused", sizeWhilePaused, part.length())
-        val pausedNotification = progressNotification()
         assertEquals(
             listOf("Resume", "Stop"),
-            actionTitles(pausedNotification),
+            actionTitles(progressNotification()),
         )
         println(
-            "SMOKE full-flow: pause froze the copy (.part ${part.name} " +
-                "held at $sizeWhilePaused bytes), Resume/Stop offered",
+            "SMOKE full-flow: pause froze the copy (.part held at " +
+                "$sizeWhilePaused bytes), Resume/Stop offered",
         )
 
         sendNotificationAction(BackupService.ACTION_RESUME)
-        val done = waitForState(120_000, 100, seenStates) {
+        val done = waitForState(120_000, 50, seenStates) {
             it.status == BackupStatus.DONE || it.status == BackupStatus.ERROR
         }
         assertEquals(
@@ -354,25 +439,25 @@ class FullFlowInstrumentedTest {
             BackupStatus.DONE,
             done.status,
         )
-        val bigDest = File(dstDir, "e2e-big1.jpg")
-        assertTrue(bigDest.exists())
-        assertTrue(bigDest.readBytes().contentEquals(bigData))
+        assertFileMatchesSeed(File(dstDir, "e2e-big.jpg"), "e2e-big.jpg", size)
         assertTrue("stale .part files remain", dstDir.listFiles()?.none { it.name.endsWith(".part") } == true)
-        println("SMOKE full-flow: resume finished the paused copy, all files byte-identical")
+        println("SMOKE full-flow: resume finished the paused copy, file byte-identical")
     }
 
     @Test
     fun stopThroughNotificationActionKeepsFinishedFiles() {
         activityScenario = ActivityScenario.launch(MainActivity::class.java)
-        val stopData = mapOf(
-            "e2e-stop1.jpg" to seedPhoto("e2e-stop1.jpg", 1_700_000_000_000L, 80 * 1024 * 1024),
-            "e2e-stop2.jpg" to seedPhoto("e2e-stop2.jpg", 1_700_000_100_000L, 80 * 1024 * 1024),
-            "e2e-stop3.jpg" to seedPhoto("e2e-stop3.jpg", 1_700_000_200_000L, 80 * 1024 * 1024),
-        )
+        // Small file first (oldest): it finishes before the stop is
+        // sent, so it must be kept byte-identical. The large second
+        // file is in flight when the stop lands: its .part must go.
+        seedPhoto("e2e-stop1.jpg", 1_700_000_000_000L, 5L * 1024 * 1024)
+        val bigSize = 300L * 1024 * 1024
+        seedPhoto("e2e-stop2.jpg", 1_700_000_100_000L, bigSize)
 
         val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
         startServiceAction(BackupService.ACTION_START)
         waitForState(60_000, 50, seenStates) { it.status == BackupStatus.COPYING }
+        waitForPartInFlight(File(dstDir, "e2e-stop2.jpg.part"), bigSize)
         sendNotificationAction(BackupService.ACTION_STOP)
         val stopped = waitForState(10_000, 50, seenStates) {
             it.status == BackupStatus.STOPPED || it.status == BackupStatus.DONE
@@ -383,23 +468,19 @@ class FullFlowInstrumentedTest {
             stopped.status,
         )
         assertTrue("stale .part files remain after Stop", dstDir.listFiles()?.none { it.name.endsWith(".part") } == true)
-        // Finished files are kept byte-identical (the stop may land
-        // during the first file, in which case there are none yet —
-        // that is correct behaviour, not a failure).
-        val finished = dstDir.listFiles()?.filter { it.isFile && !it.name.endsWith(".part") } ?: emptyList()
-        for (file in finished) {
-            val expected = stopData[file.name]
-                ?: throw AssertionError("unexpected finished file ${file.name}")
-            assertTrue("finished file ${file.name} is not byte-identical", file.readBytes().contentEquals(expected))
-        }
+        assertFileMatchesSeed(File(dstDir, "e2e-stop1.jpg"), "e2e-stop1.jpg", 5L * 1024 * 1024)
         // No further copying after Stop: the destination is stable.
-        val countAfterStop = finished.size
+        val countAfterStop = dstDir.listFiles()?.count { it.isFile } ?: 0
         Thread.sleep(1_000)
-        val countLater = dstDir.listFiles()?.count { it.isFile && !it.name.endsWith(".part") } ?: 0
+        val countLater = dstDir.listFiles()?.count { it.isFile } ?: 0
         assertEquals("files kept copying after Stop", countAfterStop, countLater)
         println(
             "SMOKE full-flow: Stop ended the job, .part deleted, " +
-                "$countAfterStop finished file(s) kept, nothing more copied",
+                "finished file kept byte-identical, nothing more copied",
         )
+    }
+
+    companion object {
+        private const val CHUNK_BYTES = 1024 * 1024
     }
 }
