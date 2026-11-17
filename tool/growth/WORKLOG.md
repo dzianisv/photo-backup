@@ -1,5 +1,25 @@
 # SnapDisk — Work Log
 
+## WL-48 — Complete the Blog post list in llms-full.txt (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  The "## Blog" posts list in docs/llms-full.txt still ended at the
+  Samsung article (11 posts) while the blog has 18 articles — the
+  WL-41–47 articles added their full "## Guides" sections but the
+  Blog list was never extended past Samsung. Added the 7 missing
+  titles in blog order (Pixel, OnePlus, Xiaomi, Motorola, videos,
+  Huawei, Sony Xperia), verified against docs/blog/index.html and
+  docs/feed.xml (18 items). One line changed, nothing else touched;
+  no app code, no Play listing files, applicationId untouched
+  (dev.dzianisv.snapdisk). This work ran from a fresh clone
+  (/tmp/pb-wl48), never the shared checkout.
+  Evidence: PR #61 (commit 3b7aae4, merge fed9e90, merged
+  2026-11-17T02:53:13Z); CI run 44005849540 (build pass, 1m52s)
+  green; post-merge main runs green (Android PR 44006220329,
+  pages 44006219726). Live fetch after Pages deploy: llms-full.txt
+  200, 165731 bytes, Blog posts list counts 18, Pixel and Sony
+  Xperia present.
+
 ## WL-47 — Back up Sony Xperia photos to USB article, 18th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
