@@ -97,5 +97,12 @@
     <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
     <description>OnePlus phones hide one extra switch before a USB drive works at all — OxygenOS turns OTG off unless you enable it. Once it's on, a USB-C flash drive plugs straight in, and the stock route is My Files. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up Xiaomi photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/xiaomi-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/xiaomi-photos-to-usb.html</guid>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Xiaomi phones hide one extra switch before a USB drive works at all — on many MIUI and HyperOS phones OTG is off unless you enable it, and it switches itself off after about 10 minutes. Once it's on, a USB-C flash drive plugs straight in, and the stock route is Mi File Manager. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
