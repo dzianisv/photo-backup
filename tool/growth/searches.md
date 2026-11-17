@@ -561,6 +561,80 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-52, 22nd how-to):
   docs/vivo-photos-to-usb.html.
 
+### 22. "back up photos from Honor to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Honor-specific
+  automated whole-library backup at all, let alone one with
+  progress, Pause/Stop, and resume — the only Honor-specific
+  results are videos of the manual route.
+- Current top results (scored Nov 16, 2026, live web search):
+  YouTube video (youtube.com/watch?v=Acqvw1-hNn8 — Honor-
+  specific: OTG adapter, File Manager, select photos, copy or
+  move to the USB drive; manual, no automation); YouTube video
+  (youtube.com/watch?v=ySOrhwl2Kuw — Honor-specific: USB-C OTG
+  adapter, File Manager, select files in DCIM, Copy or Move,
+  eject before unplugging; manual again); YouTube video
+  (youtube.com/watch?v=voVHMnQEfwI — Honor-specific: USB OTG
+  manual copy in Files, or cloud backup via Huawei Mobile
+  Cloud, Google Drive, or OneDrive; the USB half is manual,
+  the cloud half is not a USB copy); Pixoneye guide
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-
+  stick/ — copy local originals with a file manager, one small
+  batch at a time; notes ThePhotoStick Omni, a dedicated stick
+  with its own app; generic Android and iPhone, not written
+  for Honor); AnExplorer guide (anexplorer.io/transfer/phone-
+  to-usb — manual select-copy-paste, the only one of the six
+  that shows a progress bar with speed and time remaining,
+  still no resume or verification); YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); TheGadgetians guide
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-
+  without-computer/ — OTG adapter + file manager, mentions
+  ThePhotoStick Omni; generic Android and iPhone, not written
+  for Honor); Coolmuster Honor backup guide
+  (coolmuster.com/android/honor-backup-restore.html — the one
+  Honor-specific backup guide found in the wider search, and
+  it is not a phone-to-USB guide at all: Honor Suite PC tool,
+  Honor Cloud, Google backup); Honor's own support page
+  (iknow-dl.service.hihonor.com — Honor's own routes:
+  HonorSuite to a PC, Device Clone to another phone, and
+  Backup & restore to external storage, a USB drive or a
+  memory card, which writes an encrypted backup package, not
+  plain photo files); Honor Share (honor.com — moves files
+  between Honor phones over Wi-Fi Direct, or to an Honor
+  notebook with PC Manager 15.0 and above; phone-to-phone or
+  phone-to-notebook, not phone-to-USB); Photos to USB: OTG
+  Backup (Play listing, com.arzdrz.photos_to_usb — a real
+  phone-to-USB app, one-tap whole-gallery copy, only new
+  photos next time, warns about the FAT32 4 GB limit, free
+  with ads, one-time purchase removes ads — generic Android,
+  not an Honor guide, and it does not promise oldest-first
+  order, detailed progress with Pause and Stop, or size
+  verification). Google Photos is cloud, not USB. Honor
+  specifics: no documented MagicOS OTG switch location was
+  found — the Honor videos show the drive mounting on plug-in
+  with a "USB storage added" notification; if nothing appears,
+  search Settings for "OTG"; whether a switch exists at all,
+  or switches itself off, is unverified; not every Honor phone
+  has OTG; stock file manager is Files (category-based:
+  Images, Videos, Documents, Audio; integrates with Honor
+  Cloud); stock gallery is Gallery; modern Honor phones are
+  USB-C, older ones Micro-USB; whether a model has a microSD
+  slot varies by model (check the model's specs). Honor's own
+  tools: Backup & restore to a USB drive writes an encrypted
+  backup package (Settings > System & updates > Backup &
+  restore > Data backup > External storage > USB storage;
+  password required, restorable only through Honor Backup on
+  an Honor phone) — not plain photo files; Honor Share is
+  phone-to-phone transfer or to an Honor notebook; Device
+  Clone is phone-to-phone migration; Honor Cloud is cloud
+  backup (Settings > Cloud Backup, automatic, free tier
+  limited) — none of them writes plain photo files to a USB
+  drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 16, 2026 (WL-53, 23rd how-to):
+  docs/honor-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos

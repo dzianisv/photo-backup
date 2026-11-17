@@ -38,6 +38,7 @@
 - [Back up Oppo photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/oppo-photos-to-usb.html): back up Oppo photos to a USB drive with no computer — the OTG Connection switch, Clone Phone and HeyTap Cloud compared, File Manager manual copy; original files, byte-for-byte copy, size-checked.
 - [Back up Realme photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/realme-photos-to-usb.html): back up Realme photos to a USB drive with no computer — the OTG Connection switch, Clone Phone, HeyTap Cloud and Local Backup compared, File Manager manual copy; original files, byte-for-byte copy, size-checked.
 - [Back up Vivo photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/vivo-photos-to-usb.html): back up Vivo photos to a USB drive with no computer — the OTG switch under Settings > More settings, EasyShare and vivo Cloud compared, File Manager manual copy; original files, byte-for-byte copy, size-checked.
+- [Back up Honor photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/honor-photos-to-usb.html): back up Honor photos to a USB drive with no computer — no documented OTG switch, Backup & restore encrypted package, Honor Share and Honor Cloud compared, Files manual copy; original files, byte-for-byte copy, size-checked.
 
 ## Blog
 
