@@ -209,18 +209,36 @@ class FullFlowInstrumentedTest {
         dstDir.walkTopDown().filter { it.isFile }.toList()
 
     /**
-     * Dump the enumeration and fail fast if MediaStore did not
-     * preserve the seed order — a cleared DATE_TAKEN (see
-     * [seedPhoto]) would otherwise surface later as a confusing
-     * wrong-order or missing-file failure.
+     * Dump the enumeration and wait until it matches the seed
+     * order (up to 30 s) — the MediaStore scanner mutates
+     * DATE_TAKEN asynchronously after a seed lands: it first
+     * clears it (stored NULL → effective date becomes "now") and
+     * then restores it from the file's EXIF DateTimeOriginal
+     * (smoke run 44194186121: the stop test's dump showed stop1
+     * taken=0, yet its assert 1 s later saw the restored seed
+     * date and passed, while serviceCopies asserted during the
+     * cleared window and failed [new, old, mid]). A single
+     * immediate assert races that window; polling until the
+     * enumeration converges does not. Fails with the last dump
+     * if it never converges.
      */
     private fun assertEnumerationOrder(tag: String, expected: List<String>) {
+        val deadline = System.currentTimeMillis() + 30_000
+        var actual: List<String> = emptyList()
+        while (System.currentTimeMillis() < deadline) {
+            actual = dev.dzianisv.snapdisk.backup.PhotoQuery
+                .queryMediaStoreOldestFirst(ctx)
+                .map { it.displayName }
+            if (actual == expected) {
+                dumpMediaStore(tag)
+                return
+            }
+            Thread.sleep(500)
+        }
         dumpMediaStore(tag)
-        val actual = dev.dzianisv.snapdisk.backup.PhotoQuery
-            .queryMediaStoreOldestFirst(ctx)
-            .map { it.displayName }
         assertEquals(
-            "MediaStore enumeration order != seed order (dates not preserved?)",
+            "MediaStore enumeration order != seed order after 30 s " +
+                "(dates not preserved?)",
             expected,
             actual,
         )
