@@ -1,5 +1,147 @@
 # SnapDisk — Work Log
 
+## WL-58 — Back up Nothing Phone photos to USB article, 28th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/nothing-phone-photos-to-usb.html ("Back up Nothing Phone
+  photos to a USB drive (no computer)"), following the WL-54/WL-55/
+  WL-56/WL-57 article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png as
+  the lead shot — same reuse as the 8th through 27th articles).
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, ProPrefs.PRO_PRICE_LABEL); no INTERNET permission
+  in AndroidManifest.xml; FAT32 files >=4 GiB skipped with
+  reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw byte-stream
+  copy (BackupEngine.copyWithResume — no decode/re-encode)
+  with size verification after copy. Search evidence (Nov 17,
+  2026 live web search): there is no Nothing-specific result in
+  the top results at all — YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); AnExplorer guide
+  (anexplorer.io/transfer/phone-to-usb — manual
+  select-copy-paste, the only one of these guides that shows a
+  progress bar with speed and time remaining, still no resume or
+  verification); Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-drop,
+  Google Drive, or AirDroid; generic Android, most ways need a
+  computer or a cloud account); pixoneye guide
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to USB storage with the phone's file
+  manager, or a computer as a middleman; generic Android, not
+  written for Nothing); VaultDrive page
+  (coticsy.com/vaultdrive.html — a rival phone-to-USB app: plug
+  a flash drive or SSD in, pick what to back up, tap Start; free
+  up to 200 files or 2 GB per backup, Pro $19.99 once, no
+  account; generic Android/iPhone, not a Nothing guide, and it
+  does not promise oldest-first order, detailed progress with
+  Pause and Stop, or size verification of every file).
+  Wider search: Nothing's own support site
+  (support.nothing.tech — Product Feature pages document OTG as
+  a feature: USB OTG lets the phone read data from a USB drive
+  directly; a feature explainer, not a backup guide, but the
+  official confirmation that OTG is supported); O2 Phone (1)
+  backup guide (o2.co.uk — open Photos, back up pictures and
+  videos to Google Drive; a cloud backup guide for one Nothing
+  model, not a phone-to-USB guide; confirms Photos is the gallery
+  app on the Phone (1)); Google Photos help
+  (support.google.com/photos/answer/6193313 — turn Backup on in
+  Photos settings, photos upload to your Google account; cloud,
+  not a USB copy); Google One help
+  (support.google.com/googleone/answer/6193313 — the same Google
+  backup route, via Google One; cloud, not a USB copy); Memeburn
+  backup guide (memeburn.com/how-to-backup-android-phone/ —
+  Google Backup, Google Photos, and a computer; generic Android,
+  not written for Nothing, and none of its routes writes plain
+  photo files to a USB drive); GSMArena Phone (1) vs Phone (2)
+  comparison (gsmarena.com — spec tables list "USB Type-C 2.0,
+  OTG" for both the Phone (1) and the Phone (2); spec tables,
+  not a guide); GSMArena (2a) vs (3a) vs CMF Phone 1 comparison
+  (gsmarena.com — spec tables list "USB Type-C 2.0, OTG" for the
+  Phone (2a) and the Phone (3a), but plain "USB Type-C" with no
+  OTG for the CMF Phone 1; the CMF Phone 1 is the one with a
+  microSDXC card slot; spec tables, not a guide); phonebunch
+  (2a) vs CMF Phone 1 vs (3a) comparison (phonebunch.com — USB
+  OTG Supported for the Phone (2a) and the Phone (3a), Not
+  Supported for the CMF Phone 1; a comparison table, not a
+  guide); cashify CMF Phone 1 vs (2a) vs (2) comparison
+  (cashify.in — lists OTG Support as Yes for all three,
+  including the CMF Phone 1, contradicting GSMArena and
+  phonebunch; a third-party comparison site, so the CMF Phone 1
+  OTG claim is reported, not verified); Android Authority
+  Nothing Gallery leak
+  (androidauthority.com/nothing-gallery-app-beta-hands-on-
+  3506246/ — Nothing is releasing its own Gallery app with
+  Nothing OS 3.0; until then, Nothing phones relied on Google
+  Photos for photo management; so the gallery app depends on OS
+  version: Google Photos on Nothing OS 2.x, Nothing Gallery on
+  Nothing OS 3.0+); Nothing Gallery (Play listing,
+  com.nothing.gallery — Nothing's own gallery app for Nothing
+  OS 3.0, a clean media viewer; a gallery app, not a backup
+  tool); Files by Google (Play listing,
+  com.google.android.apps.nbu.files — Google's file manager:
+  browse files, see space left on device, SD card and USB drive,
+  move files to Drive or an SD card; the Files app the manual
+  method uses); Nothing Community thread (nothing.community —
+  Nothing Phone 2 owners describe the stock setup as Google's
+  apps: Dialler, Contacts, Messages, Gallery, and Files; a user
+  thread, not an official statement, but it matches the
+  near-stock Nothing OS setup, and it is the basis for naming
+  Files by Google as the stock file manager); gadgetsfocus OTG
+  fixes (gadgetsfocus.com/phone-not-reading-usb-flash-drive-ssd-
+  otg-fixes/ — a general OTG troubleshooting guide; its toggle
+  advice is for OnePlus, OPPO, Realme, and Vivo phones, not
+  Nothing; useful background, not a Nothing guide); AnExplorer
+  OTG troubleshooting (anexplorer.io/solve/cant-access-usb —
+  wrong or charge-only adapter, incompatible file system, or
+  missing storage permission; useful background, not a Nothing
+  guide); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb) is the one-tap app alternative
+  from the wider search — a real phone-to-USB app, one-tap
+  whole-gallery copy, only new photos next time, warns about
+  the FAT32 4 GB limit, free with ads, one-time purchase
+  removes ads — generic Android, not a Nothing guide, and it
+  does not promise oldest-first order, detailed progress with
+  Pause and Stop, or size verification of every file;
+  Google Photos (Play listing, com.google.android.apps.photos
+  — 15 GB cloud storage free; cloud, not a USB copy).
+  Nothing specifics: Nothing phones run Nothing OS (a near-stock
+  Android skin); stock file manager is Files by Google
+  (com.google.android.apps.nbu.files — Nothing OS ships Google's
+  apps rather than its own file manager, per the Nothing
+  Community thread); gallery app depends on OS version — Google
+  Photos on Nothing OS 2.x, Nothing Gallery (com.nothing.gallery)
+  on Nothing OS 3.0+; no Nothing-owned cloud backup for photos
+  exists — the backup routes are Google's (Google Photos, Google
+  backup via Google One); OTG: spec tables list USB Type-C 2.0
+  with OTG for the Phone (1), Phone (2), Phone (2a), Phone (2a)
+  Plus, and Phone (3a), and Nothing's own support site documents
+  OTG as a feature; CMF Phone 1 OTG is disputed — GSMArena lists
+  plain USB Type-C with no OTG, phonebunch lists Not Supported,
+  cashify lists Yes — treat as unconfirmed, check your own phone;
+  all Nothing phones are USB-C; only the CMF Phone 1 has a
+  microSD slot — the main Phone models have none, so a USB drive
+  is the plug-in storage for them. Nothing's own tools: Google
+  Photos (Photos settings > Backup, to Google's cloud, 15 GB
+  free) and Google backup (Settings > Google > Backup, Back up
+  by Google One) restore to a new phone from the cloud; the
+  SD-card route copies to a card, not a drive, and only the CMF
+  Phone 1 has a slot; Google Photos / Google One back photos up
+  to Google's cloud — none of them writes plain photo files to a
+  USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-58, 28th how-to):
+  docs/nothing-phone-photos-to-usb.html. Query 27 scored in
+  tool/growth/searches.md. Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml (28 items)
+  updated. PR #83 (article), merge 4c2d43c; this row PR #84.
+
 ## WL-57 — Back up Tecno photos to USB article, 27th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
