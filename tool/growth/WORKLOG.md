@@ -1,5 +1,140 @@
 # SnapDisk — Work Log
 
+## WL-63 — Back up ZTE photos to USB article, 33rd how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/zte-photos-to-usb.html ("Back up ZTE photos to a
+  USB drive (no computer)"), following the WL-54/WL-55/WL-56/
+  WL-57/WL-58/WL-59/WL-60/WL-61/WL-62 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot —
+  same reuse as the 8th through 32nd articles). Facts verified
+  from code on fresh main: SAF tree picker (MainActivity.kt
+  OpenDocumentTree + takePersistableUriPermission); oldest-first
+  via MediaStore DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN
+  else DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price); no INTERNET permission in AndroidManifest.xml;
+  FAT32 files >=4 GiB skipped with reason
+  (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw byte-stream copy
+  (BackupEngine.copyWithResume — no decode/re-encode) with size
+  verification after copy. Search evidence (Nov 17, 2026 live
+  web search): there is no ZTE-specific phone-to-USB guide in
+  the top results at all — the ZTE-specific results are all
+  cloud and PC backup guides. Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-drop,
+  Google Drive, or AirDroid; generic Android, most ways need a
+  computer or a cloud account); AnExplorer guide
+  (anexplorer.io/transfer/phone-to-usb — OTG adapter plus its
+  own file manager app, with a progress bar and a FAT32 4 GB
+  warning; generic Android, not written for ZTE — and it is a
+  guide for its own app); YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); FoneLab guide
+  (fonelab.com/resource/how-to-transfer-photos-from-android-
+  phone-to-usb-flash-drive.html — OTG adapter, a PC tool
+  (FoneLab HyperTrans), or Samsung Smart Switch; generic
+  Android — Smart Switch is Samsung-only — and two of the
+  three ways need a computer); softhandtech guide
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-
+  memory-stick/ — a computer as middleman, direct OTG
+  transfer, or a cloud service; generic Android and iPhone,
+  not written for ZTE); Photos to USB: OTG Backup (Play
+  listing, com.arzdrz.photos_to_usb — a real phone-to-USB app,
+  one-tap whole-gallery copy, only new photos next time, warns
+  about the FAT32 4 GB limit, free with ads, one-time purchase
+  removes ads — generic Android, not a ZTE guide, and it does
+  not promise oldest-first order, detailed progress with Pause
+  and Stop, or size verification of every file).
+  Wider search: mobilespecs.net ZTE Score M backup guide
+  (mobilespecs.net/phone/backup/ZTE/ZTE_Score_M.html — Google
+  sync (Settings > Google > Sync now, Google Photos for
+  photos), then TWRP Recovery, CWM Recovery + ROM Manager, and
+  Titanium Backup; ZTE-specific, but every route is a cloud
+  sync, a custom recovery, or a rooted backup tool — none of
+  them puts plain photo files on a USB drive);
+  mobilespecs.net ZTE Axon tablet backup guide
+  (mobilespecs.net/phone/backup/ZTE/ZTE_Axon_tablet.html — the
+  same pattern: Google sync and Google Photos, then TWRP
+  Recovery, CWM Recovery + ROM Manager, Titanium Backup, plus
+  SP FlashTool and ADB; ZTE-specific, but cloud sync, recovery
+  tools, or PC tools — not a phone-to-USB backup);
+  Coolmuster's ZTE backup guide
+  (coolmuster.com/android/backup-and-restore-zte.html —
+  Coolmuster Android Assistant, Coolmuster Android Backup
+  Manager, a Google account, or manual drag-and-drop through
+  File Explorer; ZTE-specific, but every route backs the phone
+  up to a PC or to Google's cloud — none of them puts plain
+  photo files on a USB drive); samsung-messages-backup's ZTE
+  backup guide
+  (samsung-messages-backup.com/resources/backup-and-restore-
+  zte.html — Samsung Backup and Restore, Samsung Messages
+  Backup, ZTE Recovery software, or a Google account;
+  ZTE-specific in name, but every route is a PC tool or a
+  cloud account — none of them puts plain photo files on a USB
+  drive); ZTE ZMAX 2 user guide
+  (manualshelf.com/manual/zte/z2g111/user-s-guide-english/
+  page-107.html — the manual's own pages: File Manager
+  "quickly access all of your images, videos, audio clips, and
+  other types of files on the phone storage and the microSDHC
+  card", with Copy, Move, Share, or Delete on a long press; a
+  manual, not a backup guide — but it confirms File Manager is
+  the stock file manager on ZTE phones, and that it works by
+  manual copy and paste); ZTE Axon 60 specs
+  (m.gsmarena.com/zte_axon_60-12988.php — USB Type-C 2.0, OTG;
+  Android 13, 256 GB, microSDXC (dedicated slot); spec tables,
+  not a guide — and the confirmation that the current Axon 60
+  has OTG); ZTE Axon 60 Ultra specs
+  (phonebunch.com/phone/zte-axon-60-ultra-5342/ — USB Type-C,
+  OTG; Android 14, 512 GB, no card slot; spec tables, not a
+  guide — and the confirmation that the current Axon 60 Ultra
+  has OTG, but no microSD slot).
+  ZTE specifics: ZTE phones (Axon, Blade, and nubia/RedMagic)
+  run MyOS — ZTE's Android skin (the Axon 60 runs Android 13
+  with MyOS; the Axon 60 Ultra runs Android 14 with MyOS); ZTE
+  has no backup tool of its own — the routes are Google's
+  (Google Photos, Google backup via Google One) plus PC tools
+  (Coolmuster Android Assistant and Coolmuster Android Backup
+  Manager back the phone up to a PC; Samsung Backup and
+  Restore and Samsung Messages Backup are the other PC tools
+  the ZTE guides list; TWRP Recovery and Titanium Backup are
+  the other routes the ZTE backup guides list, needing a custom
+  recovery or root); stock file manager is File Manager (per
+  ZTE's own manuals: it shows phone storage and the microSDHC
+  card, with Copy, Move, Share, or Delete); stock photo backup
+  is Google Photos (per the ZTE backup guides: "the easiest
+  way" not to lose your photos); OTG is genuinely mixed across
+  the ZTE lines: spec tables list USB Type-C with OTG for the
+  Axon 60, the Axon 60 Ultra, the Axon 30 Ultra, and the Blade
+  V10, but the Blade V30, the Blade V8, the Axon 40 Lite, and
+  the Blade A73 5G have no OTG — check your own model's specs;
+  no OTG switch turned up in ZTE's own manuals, so the drive
+  mounts on plug-in on models that support OTG; the microSD
+  slot is mixed too (the Axon 60 has a dedicated microSDXC
+  slot, the Axon 60 Ultra has none) — check your own model's
+  specs; ZTE's current Axon phones list Google as the app
+  store. ZTE's own tools: Google Photos (Photos settings >
+  Backup, to Google's cloud, 15 GB free) backs photos up to
+  Google's cloud; Google backup (Settings > Google > Backup,
+  Back up by Google One) restores to a new phone from the
+  cloud; Coolmuster Android Assistant and Coolmuster Android
+  Backup Manager back the phone up to a PC; Samsung Backup and
+  Restore and Samsung Messages Backup back the phone up to a
+  PC in one click; TWRP Recovery writes a whole-device backup
+  from a custom recovery and Titanium Backup needs a rooted
+  phone; Google Photos / Google backup back photos up to
+  Google's cloud — none of them writes plain photo files to a
+  USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-63, 33rd how-to):
+  docs/zte-photos-to-usb.html. Query 32 scored in
+  tool/growth/searches.md. Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml (33 items)
+  updated. PR #93 (article), merge 3218cfb, CI run 44138590332
+  (Android PR, success); this row PR #94.
+
 ## WL-62 — Back up TCL photos to USB article, 32nd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
