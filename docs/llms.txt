@@ -31,6 +31,7 @@
 - [Back up OnePlus photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/oneplus-photos-to-usb.html): back up OnePlus photos to a USB drive with no computer — OTG toggle and My Files manual copy compared; original files, byte-for-byte copy, size-checked.
 - [Back up Xiaomi photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/xiaomi-photos-to-usb.html): back up Xiaomi photos to a USB drive with no computer — OTG toggle and Mi File Manager manual copy compared; original files, byte-for-byte copy, size-checked.
 - [Back up Motorola photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/motorola-photos-to-usb.html): back up Motorola photos to a USB drive with no computer — no OTG toggle, Files by Google manual copy compared; original files, byte-for-byte copy, size-checked.
+- [Back up videos from Android to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/videos-to-usb.html): back up videos from Android to a USB drive with no computer — Files by Google manual copy compared, FAT32 4 GB limit for long 4K videos; original files, byte-for-byte copy, size-checked.
 
 ## Blog
 
