@@ -1372,6 +1372,146 @@ demand is read off competitor install velocity instead (see
 - Verdict: how-to article material, not a listing keyword.
   Article published Nov 17, 2026 (WL-59, 29th how-to):
   docs/poco-photos-to-usb.html.
+### 29. "back up Redmi photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Redmi-specific
+  guide at all, let alone a Redmi-specific automated
+  whole-library backup with progress, Pause/Stop, and
+  resume — the top results are generic manual guides,
+  PC tools, or rival app pages.
+- Current top results (scored Nov 17, 2026, live web search):
+  Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-
+  drop, Google Drive, or AirDroid; generic Android, most ways
+  need a computer or a cloud account); AnExplorer guide
+  (anexplorer.io/transfer/phone-to-usb — manual
+  select-copy-paste, the only one of these guides that
+  shows a progress bar with speed and time remaining, still no
+  resume or verification); Coolmuster guide
+  (coolmuster.com/android/transfer-files-from-android-to-usb-
+  flash-drive.html — OTG copy, a PC tool, or a cloud service;
+  generic Android, two of the three ways need a computer);
+  YouTube video (youtube.com/watch?v=PYcbV25CczI — generic OTG
+  + file manager walkthrough); Substack piece
+  (curiousbluenoser.substack.com/p/saving-photos-for-
+  necessary-updates — a picture-keeper flash drive piece:
+  plug the maker's drive in, open its app, tap Start;
+  generic, and tied to one maker's drive and app — not a
+  Redmi guide).
+  Wider search: Microsoft Q&A
+  (learn.microsoft.com/en-us/answers/questions/3934384/
+  import-photos-video-from-android-14-g-to-pc-and-fl — a
+  generic Android 14 answer: a USB cable to a PC, a flash
+  disk direct through an OTG adapter, or a cloud service
+  (OneDrive, Google Drive, Google Photos); generic Android,
+  not written for Redmi); AnExplorer OTG feature page
+  (anexplorer.io/features/usb-otg — a file-manager feature
+  page for OTG read/write, not a Redmi backup guide);
+  YouTube video (youtube.com/watch?v=ch1evyu5PPM — same
+  generic route: check OTG, OTG adapter, file manager, Copy
+  or Move, safely eject); askfilo guide (askfilo.com — OTG
+  adapter + file manager, or a PC as a middleman; generic
+  Android, not written for Redmi); VaultDrive page
+  (coticsy.com/vaultdrive.html — a rival phone-to-USB app:
+  plug a flash drive or SSD in, pick what to back up, tap
+  Start; free up to 200 files or 2 GB per backup, Pro $19.99
+  once, no account; generic Android/iPhone, not a Redmi
+  guide, and it does not promise oldest-first order, detailed
+  progress with Pause and Stop, or size verification of every
+  file); AnExplorer Xiaomi device page
+  (anexplorer.io/device/phone/xiaomi — Xiaomi's built-in File
+  Manager, part of MIUI/HyperOS, shows banner ads while
+  browsing your own files; notes phones with SD card slots
+  (Redmi Note series, POCO M series) benefit from moving
+  media to the card; a file-manager page, not a backup guide
+  — but it confirms Redmi phones run MIUI/HyperOS with
+  Xiaomi's File Manager built in, and that the Redmi Note
+  series has the SD card slot); File Manager by Xiaomi (Play
+  listing, com.mi.android.globalFileexplorer — Xiaomi's own
+  file manager: quick search, moving, deleting, opening,
+  renaming, unzipping, and copy-paste; Xiaomi's preinstalled
+  file app on global MIUI and HyperOS phones; the Files app
+  the manual method uses); Xiaomi HyperOS backup guide
+  (xiaomi-plus.com — the three backup options on a HyperOS
+  phone: Google backup, Xiaomi Cloud, and local backup to a
+  computer with a USB cable; a backup guide for Xiaomi phones
+  running HyperOS — the same system Redmi phones run — but
+  none of its three routes writes plain photo files to a USB
+  drive); Google Photos help
+  (support.google.com/photos/answer/14216276 — default-gallery
+  access: Google Photos shares access with your device's
+  default gallery app; Xiaomi is one of the brands that works
+  with this feature — which confirms Xiaomi phones, Redmi
+  included, have their own default gallery app, separate from
+  Google Photos, and Google Photos is the cloud backup behind
+  it); GSMArena Redmi Note 14 Pro 4G specs
+  (m.gsmarena.com/xiaomi_redmi_note_14_pro_4g_(global)-
+  ampp-13614.php — USB Type-C 2.0 with OTG, and a microSDXC
+  card slot (uses the shared SIM slot); spec tables, not a
+  guide); GSMArena Redmi Note 14 Pro 5G specs
+  (m.gsmarena.com/xiaomi_redmi_note_14_pro_5g-ampp-13613.php
+  — Android 14 with HyperOS, USB Type-C 2.0 with OTG, and no
+  card slot; spec tables, not a guide); Photos to USB: OTG
+  Backup (Play listing, com.arzdrz.photos_to_usb — a real
+  phone-to-USB app, one-tap whole-gallery copy, only new
+  photos next time, warns about the FAT32 4 GB limit, free
+  with ads, one-time purchase removes ads — generic Android,
+  not a Redmi guide, and it does not promise oldest-first
+  order, detailed progress with Pause and Stop, or size
+  verification of every file); Google Photos (Play listing,
+  com.google.android.apps.photos — 15 GB cloud storage free;
+  cloud, not a USB copy); umatechnology guide
+  (umatechnology.org — copy photos with Files by Google or
+  Samsung's My Files, or through a computer as a middleman;
+  notes a photo that exists only in the cloud cannot be
+  copied to a drive until it is downloaded to the phone
+  first; generic Android, not written for Redmi);
+  thegadgetians guide (thegadgetians.com — OTG adapter plus
+  the phone's file manager for Android, a Lightning adapter
+  for iPhone; generic, and it pushes one maker's photo stick;
+  not a Redmi guide); pixoneye guide (pixoneye.com — copy
+  local originals to compatible USB storage with the phone's
+  file manager, or through a trusted computer; generic
+  Android and iPhone, not written for Redmi).
+  Redmi specifics: Redmi is Xiaomi's sub-brand and runs
+  HyperOS (Xiaomi's Android skin — the Note 14 Pro 5G runs
+  Android 14 with HyperOS); stock file manager is Mi File
+  Manager (File Manager by Xiaomi,
+  com.mi.android.globalFileexplorer — Xiaomi's preinstalled
+  file app on global MIUI and HyperOS phones; it shows banner
+  ads while browsing your own files); gallery app is Xiaomi
+  Gallery (the HyperOS Gallery app — Google Photos help lists
+  Xiaomi among the brands whose default gallery app
+  integrates with Google Photos, so the gallery is Xiaomi's
+  own and Google Photos is the cloud backup behind it);
+  Redmi's own backup routes are Xiaomi Cloud (gallery sync
+  and backup to a Xiaomi account, free storage limited) and
+  Google's (Google Photos, Google backup via Google One);
+  OTG: spec tables list USB Type-C 2.0 with OTG for the Note
+  14 Pro 4G and the Note 14 Pro 5G; the microSD slot varies
+  by model — the Note 14 Pro 4G has a microSDXC slot (uses
+  the shared SIM slot) while the Note 14 Pro 5G has none —
+  check your own model's specs; on many HyperOS phones OTG
+  is off by default — enable it in Settings > Additional
+  settings > OTG (on some phones under More settings > OTG),
+  and the switch turns itself off after about 10 minutes
+  without a drive (same switch as the Xiaomi guide, WL-era,
+  verified there); all Redmi phones are USB-C. Redmi's own
+  tools: Xiaomi Cloud (Settings > Xiaomi account > Xiaomi
+  Cloud, gallery sync and backup to Xiaomi's servers, free
+  storage limited) and Google backup (Settings > Google >
+  Backup, Back up by Google One) restore to a new phone from
+  the cloud; Google Photos (Photos settings > Backup, to
+  Google's cloud, 15 GB free) backs photos up to Google's
+  cloud; the SD-card route copies to a card, not a drive, and
+  only some Redmi models have a slot (Note 14 Pro 4G does,
+  Note 14 Pro 5G does not); Google Photos / Google One /
+  Xiaomi Cloud back photos up to their clouds — none of them
+  writes plain photo files to a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-60, 30th how-to):
+  docs/redmi-photos-to-usb.html.
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
