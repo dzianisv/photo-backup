@@ -1,5 +1,116 @@
 # SnapDisk — Work Log
 
+## WL-53 — Back up Honor photos to USB article, 23rd how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/honor-photos-to-usb.html ("Back up Honor photos to a
+  USB drive (no computer)"), following the WL-52 article template
+  exactly (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot —
+  same reuse as the 8th through 22nd articles). Facts verified
+  from code on fresh main: SAF tree picker (MainActivity.kt
+  OpenDocumentTree + takePersistableUriPermission); oldest-first
+  via MediaStore DATE_TAKEN ascending; free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy. Search
+  evidence (Nov 16, 2026 live web search): the only
+  Honor-specific results in the top results are videos of the
+  manual route — YouTube video (youtube.com/watch?v=Acqvw1-hNn8
+  — Honor-specific: OTG adapter, File Manager, select photos,
+  copy or move to the USB drive; manual, no automation);
+  YouTube video (youtube.com/watch?v=ySOrhwl2Kuw —
+  Honor-specific: USB-C OTG adapter, File Manager, select files
+  in DCIM, Copy or Move, eject before unplugging; manual again);
+  YouTube video (youtube.com/watch?v=voVHMnQEfwI —
+  Honor-specific: USB OTG manual copy in Files, or cloud backup
+  via Huawei Mobile Cloud, Google Drive, or OneDrive; the USB
+  half is manual, the cloud half is not a USB copy); Pixoneye
+  guide (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-
+  stick/ — copy local originals with a file manager, one small
+  batch at a time; notes ThePhotoStick Omni, a dedicated stick
+  with its own app; generic Android and iPhone, not written for
+  Honor); AnExplorer guide (anexplorer.io/transfer/phone-to-usb;
+  manual select-copy-paste, the only one of the six that shows a
+  progress bar with speed and time remaining, still no resume or
+  verification); YouTube video (youtube.com/watch?v=PYcbV25CczI
+  — generic OTG + file manager walkthrough); TheGadgetians guide
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-
+  without-computer/ — OTG adapter + file manager, mentions
+  ThePhotoStick Omni; generic Android and iPhone, not written
+  for Honor); Coolmuster Honor backup guide
+  (coolmuster.com/android/honor-backup-restore.html — the one
+  Honor-specific backup guide found in the wider search, and it
+  is not a phone-to-USB guide at all: Honor Suite PC tool,
+  Honor Cloud, Google backup); Honor's own support page
+  (iknow-dl.service.hihonor.com — Honor's own routes:
+  HonorSuite to a PC, Device Clone to another phone, and Backup
+  & restore to external storage, a USB drive or a memory card,
+  which writes an encrypted backup package, not plain photo
+  files); Honor Share (honor.com — moves files between Honor
+  phones over Wi-Fi Direct, or to an Honor notebook with PC
+  Manager 15.0 and above; phone-to-phone or phone-to-notebook,
+  not phone-to-USB); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb) is the one-tap app alternative from
+  the wider search — a real phone-to-USB app, one-tap
+  whole-gallery copy, only new photos next time, warns about the
+  FAT32 4 GB limit, free with ads, one-time purchase removes ads
+  — generic Android, not an Honor guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop, or
+  size verification, so the article says so honestly instead of
+  claiming SnapDisk is the only one-tap option. Cloud is Google
+  Photos or Honor Cloud — cloud, not USB. Honor specifics stated
+  honestly: no documented MagicOS OTG switch location was found
+  — the Honor videos show the drive mounting on plug-in with a
+  "USB storage added" notification; if nothing appears, search
+  Settings for "OTG"; whether a switch exists at all, or
+  switches itself off, is unverified; not every Honor phone has
+  OTG; stock file manager is Files (category-based: Images,
+  Videos, Documents, Audio; integrates with Honor Cloud); stock
+  gallery is Gallery; modern Honor phones are USB-C, older ones
+  Micro-USB; whether a model has a microSD slot varies by model
+  (check the model's specs). Honor's own tools: Backup &
+  restore to a USB drive writes an encrypted backup package
+  (Settings > System & updates > Backup & restore > Data backup
+  > External storage > USB storage; password required,
+  restorable only through Honor Backup on an Honor phone) — not
+  plain photo files; Honor Share is phone-to-phone transfer or
+  to an Honor notebook; Device Clone is phone-to-phone
+  migration; Honor Cloud is cloud backup (Settings > Cloud
+  Backup, automatic, free tier limited) — none of them writes
+  plain photo files to a USB drive. Honest contrast stated in
+  the TL;DR: Files works but is manual select-copy-paste with no
+  progress, no resume, no verification; Honor's own tools work
+  but write an encrypted backup package, move data to another
+  phone or a notebook, or back it up to the cloud — not plain
+  photos on a USB drive; Google Photos / Honor Cloud is cloud,
+  not a USB copy; Photos to USB also does one-tap copy with
+  resume — SnapDisk adds oldest-first order, detailed progress
+  with Pause/Stop, size verification, no ads, and free 5 GB per
+  run. Query 22 scored Nov 16, 2026 (searches.md): "back up
+  photos from Honor to USB flash drive without computer" — real
+  how-to gap. Volume unknown (Play publishes no volume);
+  difficulty low. Linked from blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt (full section + Blog
+  posts list, now 23), feed.xml (now 23 items). JSON-LD
+  validated by parse; sitemap.xml and feed.xml parse as XML.
+  Title 46 chars, meta 143 chars. No app code or Play listing
+  files touched; applicationId untouched
+  (dev.dzianisv.snapdisk). Work ran from a persistent scratch
+  clone (~/workspace/pb-wl53-scratch, not the shared checkout,
+  never /tmp). Evidence: PR #71 (commit 81e4052, merge 9f64e47,
+  merged 2026-11-17T07:31:20Z); CI run 44039173134 (build pass,
+  1m6s) green; post-merge main runs green (Android PR
+  44039349387, pages 44039348781). Live fetch after Pages deploy:
+  article 200, 29527 bytes, title "Back up Honor photos to a USB
+  drive — SnapDisk" present; blog index 200, 21408 bytes;
+  feed.xml 200 (23 items); sitemap.xml 200 with the new link;
+  llms-full.txt 200, 244067 bytes, Blog list counts 23 with
+  Honor present.
+
 ## WL-52 — Back up Vivo photos to USB article, 22nd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
