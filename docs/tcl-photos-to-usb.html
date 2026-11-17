@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up TCL photos to a USB drive — SnapDisk</title>
+<meta name="description" content="Back up TCL photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/tcl-photos-to-usb.html">
+<meta property="og:title" content="Back up TCL photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up TCL photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/tcl-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/tcl-photos-to-usb.html#article",
+      "headline": "Back up TCL photos to a USB drive (no computer)",
+      "description": "Back up TCL photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-17",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/tcl-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/tcl-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up TCL photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — on the current lines. Spec tables list USB Type-C with OTG for the TCL 50 XL NxtPaper and the TCL 50 XE NxtPaper, and TCL's own user manual documents OTG on the TCL 30 5G — plug a USB drive in and the phone mounts it. TCL UI has no OTG switch to enable: unlike some other skins, TCL's own documentation describes no on/off toggle, so the drive mounts on plug-in. If nothing appears, check Settings > Storage. The stock route is Files: plug the drive in, open Files, pick the photos, and Copy to the drive. SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later. TCL phones sold in the US and Europe ship with Google Play, so once the listing is live that will be the install route."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/tcl-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up TCL photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/tcl-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up TCL photos to a USB drive (no computer)</h1>
+  <p class="dek">TCL phones (50, 40, and 30 series) run TCL UI — TCL's Android skin — with OTG across the current lines: spec tables list USB Type-C with OTG for the 50 XL NxtPaper and the 50 XE NxtPaper. And TCL has no backup tool of its own: the routes on a TCL phone are Google's — Google Photos and Google backup — plus PC tools, which back your photos up to the cloud or to a computer, not to a USB drive as plain files. A USB-C flash drive plugs straight into any current TCL phone. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 17, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On a TCL phone, plug a USB drive in: OTG models mount it straight away with a "USB storage added" notification — TCL UI has no OTG switch to enable, since TCL's own documentation describes no on/off toggle, so there is nothing to turn on first; if nothing appears, check Settings &gt; Storage — then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: Files works — it is the stock file manager on TCL phones, and it copies photos to a USB drive — but it is manual select-copy-paste with no progress detail, no resume, and no verification; TCL's own backup routes work too, but TCL has no backup tool of its own, so the routes are Google's — Google Photos and Google backup — plus PC tools like Coolmuster Android Assistant, and none of them writes your photos as plain files to a USB drive: Google Photos backs photos up to Google's cloud, Google backup restores your data to a new phone from the cloud, and the PC tools back the phone up to a computer. One rival app does exist — Photos to USB: OTG Backup copies a whole gallery to a pen drive in one tap and resumes where it stopped — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 17, 2026, no top search result for this query is a TCL-specific phone-to-USB guide at all, let alone a TCL-specific automated whole-library backup with progress, Pause/Stop, and resume: the TCL-specific results are cloud and PC backup guides, and the rest are generic manual guides.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up TCL photos to USB drive without computer" and there is no TCL-specific phone-to-USB result in the top results at all — the TCL-specific guides are all cloud or PC routes, and the rest are generic Android guides, in different packaging:</p>
+  <ul>
+    <li><strong>Dr.Fone</strong> (<a href="http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html">4 Practical Ways to Transfer Photos from Android to USB Flash Drive</a>) — OTG copy, PC drag-and-drop, Google Drive, or AirDroid over Wi-Fi. Generic Android, and most of the ways need a computer or a cloud account.</li>
+    <li><strong>AnExplorer</strong> (<a href="https://anexplorer.io/transfer/phone-to-usb">How to Transfer Files from Android to USB Drive (OTG, No Root)</a>) — OTG adapter plus its own file manager app, with a progress bar and a FAT32 4 GB warning. Generic Android, not written for TCL — and it is a guide for its own app.</li>
+    <li><strong>YouTube</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos</a>) — a video walkthrough of the generic route: OTG adapter, the phone's built-in file manager, select photos in DCIM, Copy or Move to the drive. Generic Android, not written for TCL.</li>
+    <li><strong>softhandtech</strong> (<a href="https://softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/">Transfer Photos from Phone to Memory Stick: A Comprehensive Guide</a>) — a computer as middleman, direct OTG transfer, or a cloud service. Generic Android and iPhone, not written for TCL.</li>
+    <li><strong>thegadgetians</strong> (<a href="https://thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/">How to Transfer Files From Phone to USB Without Computer: Ultimate Guide</a>) — OTG adapter plus the file manager, or a Lightning adapter for iPhones. Generic Android and iPhone, not written for TCL.</li>
+    <li><strong>Photos to USB: OTG Backup</strong> (<a href="https://play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb">Google Play</a>) — the one-tap app alternative, from the top results for this job: a real phone-to-USB app that copies the whole gallery to a pen drive in one tap, copies only new photos next time, and warns about the FAT32 4 GB limit. It is free with ads, with a one-time purchase to remove them. It is the closest thing to this article's job — but it is a generic Android listing, not a TCL guide, and it does not promise oldest-first order, detailed progress with Pause and Stop, or size verification of every file.</li>
+    <li><strong>mobilespecs.net's TCL 50 XL backup guide</strong> (<a href="https://mobilespecs.net/phone/backup/TCL/TCL_50_XL.html">How to backup TCL 50 XL</a>) — Google sync (Settings &gt; Google &gt; Synchronization settings, Google Photos for photos), then TWRP Recovery, CWM Recovery + ROM Manager, and Titanium Backup. TCL-specific, but every route is a cloud sync, a custom recovery, or a rooted backup tool — none of them puts plain photo files on a USB drive.</li>
+    <li><strong>mobilespecs.net's TCL 40 X backup guide</strong> (<a href="https://mobilespecs.net/phone/backup/TCL/TCL_40_X.html">How to backup TCL 40 X</a>) — the same pattern: Google sync and Google Photos, then TWRP, CWM, and Titanium Backup. TCL-specific, but cloud sync or recovery tools — not a phone-to-USB backup.</li>
+    <li><strong>mobilespecs.net's TCL 40 Pro backup guide</strong> (<a href="https://mobilespecs.net/phone/backup/TCL/TCL_40_Pro.html">How to backup TCL 40 Pro</a>) — the same pattern again: Google sync and Google Photos, then TWRP, CWM, and Titanium Backup. TCL-specific, but cloud sync or recovery tools — not a phone-to-USB backup.</li>
+    <li><strong>mobilespecs.net's TCL 30 V 5G backup guide</strong> (<a href="https://mobilespecs.net/phone/backup/TCL/TCL_30_V_5G.html">How to backup TCL 30 V 5G</a>) — the same pattern: Google sync and Google Photos, then TWRP, CWM, and Titanium Backup. TCL-specific, but cloud sync or recovery tools — not a phone-to-USB backup.</li>
+    <li><strong>TCL 30 5G user manual</strong> (<a href="https://www.manualowl.com/m/TCL/30-5G/Manual/689562?page=46">Photos, Google Pay, Google Assistant, File Manager | TCL 30 5G</a>) — the manual's own pages: Google Photos "stores and backs up your photos and videos", and Files "displays all data stored on the phone, including both external microSD card and internal storage". A manual, not a backup guide — but it confirms Google Photos is the stock photo backup and Files is the stock file manager, and the same manual documents OTG and the USB connection setting.</li>
+    <li><strong>TCL's own support FAQ</strong> (<a href="https://www.tcl.com/eu/en/support/faq/37307">How can I connect my device to a PC or another device via a USB/OTG cable?</a>) — when the phone connects to a PC, pick the mode under Settings &gt; Connections &gt; USB: File transfer, Transfer photos (PTP), No data transfer, or Charge this device. A support FAQ, not a backup guide — but it confirms where TCL puts the USB mode, and that the default is charge-only.</li>
+    <li><strong>Coolmuster's laptop guide</strong> (<a href="https://www.coolmuster.com/android/transfer-photos-from-android-to-laptop.html">How to Transfer Photos from Android to Laptop? [Top 4 Ways]</a>) — a PC tool (Coolmuster Android Assistant), File Explorer drag-and-drop, Google Photos, or Google Drive. Generic Android — TCL appears only in the compatibility list, not as a guide of its own — and every way needs a laptop or a cloud account.</li>
+    <li><strong>TCL 50 XE NxtPaper specs</strong> (<a href="https://www.gsmarena.com.bd/tcl-50-xe-nxtpaper/">TCL 50 XE NxtPaper</a>) — USB Type-C, OTG Yes; Android 14, 128 GB, microSDXC. Spec tables, not a guide — and the confirmation that the current TCL 50 line has OTG.</li>
+    <li><strong>TCL 50 XL NxtPaper specs</strong> (<a href="https://gsmfind.com/tcl-50-xl-nxtpaper.html">TCL 50 XL NxtPaper Full Specifications</a>) — USB Type-C, OTG; Android 14, 128 GB 6 GB RAM, microSDXC. Spec tables, not a guide.</li>
+    <li><strong>Cloud routes</strong> — Google Photos syncs your gallery to Google's servers, Google backup restores your data to a new phone from Google's cloud, not to a drive you hold; Google Photos' "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Neither route gives you a folder of plain photo files on a USB drive.</li>
+  </ul>
+  <p>None of them is a TCL-specific phone-to-USB guide at all, and none of them offers an automated TCL photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>What you need</h2>
+  <p>A TCL phone (Android 7.0 or later for SnapDisk) that supports OTG — check your model's specs before buying anything; a USB drive your phone can read — a USB-C flash drive plugs straight into any current TCL phone, or a regular USB drive with a USB-C OTG adapter; and enough space on the drive for the photos you want to keep. Three TCL specifics: first, OTG is not a given on every model, and TCL UI has no OTG switch to enable. TCL's own documentation describes no on/off toggle — the drive mounts on plug-in — so if a drive never appears, the model may simply not support OTG rather than needing a setting flipped. Spec tables list USB Type-C with OTG for the 50 XL NxtPaper and the 50 XE NxtPaper, and TCL's own user manual documents OTG on the TCL 30 5G. If the phone ignores the drive, check Settings &gt; Storage. Second, TCL ships Google's apps, so the stock file manager is Files — it shows internal storage and the microSD card — and the stock photo backup is Google Photos, which "stores and backs up your photos and videos" per TCL's own manual; TCL camera photos live in DCIM/Camera — and most current TCL models have a microSDXC slot (the 50 XL, 50 XE, 40 X, and 30 V 5G all do), so check your own model's specs rather than assuming one either way; a USB drive is the plug-in storage that works on every model and plugs into any computer as it is. Third, TCL phones sold in the US and Europe ship with Google Play, so SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live — there is no sideload-only situation here. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the USB drive.</strong> Most OTG models mount it straight away — look for a "USB storage added" notification. TCL UI has no OTG switch to enable, so there is nothing to turn on first. If nothing appears, check Settings &gt; Storage. Spec tables list USB Type-C with OTG for the 50 XL NxtPaper and the 50 XE NxtPaper, and TCL's own user manual documents OTG on the TCL 30 5G.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — TCL camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the phone normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the phone to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: Files (the stock route, no app needed)</h2>
+  <p>TCL phones ship with Files as the stock file manager, and it can copy your photos to the USB drive: 1. Plug in the USB drive — a notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage. 2. Open Files and confirm the USB drive shows up under external storage. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until Files says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: TCL's own tools (Google Photos and Google backup — not phone-to-USB)</h2>
+  <p>If you want TCL's own route, know what each tool actually does — TCL has no backup tool of its own; the routes on a TCL phone are Google's, plus PC tools, and none of them writes your photos as plain files to a USB drive. Google Photos is Google's own photo backup app, and it is the stock photo backup on TCL — TCL's own manual says Google Photos "stores and backs up your photos and videos": open Photos, tap your profile picture, Photos settings, Backup, and turn Backup on — it automatically backs up photos to your Google account, with 15 GB free with every Google account. It is a real backup — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. Google backup is the route the TCL guides point to first: Settings &gt; Google &gt; Backup, Back up by Google One on — it backs the phone up to your Google account so you can restore app settings and data to a new phone. It is a real backup — but the backup lives in Google's cloud and restores to a phone, not a folder of photo files on a USB drive you can plug into any computer and open. Coolmuster Android Assistant is a PC tool: install it on the computer, connect the phone with a USB cable, and back the phone up to the PC — but that needs a PC in between, and the backup lands on the PC, not on a USB drive. TWRP Recovery and Titanium Backup are the other routes the TCL backup guides list: TWRP is a custom recovery that writes a whole-device backup, and Titanium Backup is a backup tool that needs a rooted phone — both are real backups, but they need a custom recovery or root and a PC or a card to hold the backup, and neither gives you a folder of plain photo files on a USB drive. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the TCL phone into the computer with a USB cable, tap the USB notification and choose File transfer (by default a TCL phone charges only — TCL's own FAQ says to pick the mode under Settings &gt; Connections &gt; USB) — and drag the DCIM folder onto the USB drive. The TCL guides offer the same local route: plug the phone into the computer and copy DCIM and Pictures too. This works fine, and it is the only route above that needs a second device in between. If the phone and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the phone is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>No OTG, no USB backup.</strong> On a model without working OTG — spec tables list OTG for the 50 XL NxtPaper and the 50 XE NxtPaper, and TCL's own manual documents OTG on the 30 5G, but check your own model's specs before buying an adapter — a USB drive may simply never appear, and no app can change that. The cloud routes (Google Photos and Google backup) are the backup for those phones.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter before checking OTG.</strong> Not every TCL phone is confirmed to have OTG — check your own model's specs first, or the drive will never appear no matter what you plug in.</li>
+    <li><strong>Looking for an OTG switch that isn't there.</strong> TCL UI has no OTG toggle in TCL's own documentation — the drive mounts on plug-in, so if nothing appears, check Settings &gt; Storage rather than hunting for a switch. TCL's USB mode setting (Settings &gt; Connections &gt; USB) is for connecting to a computer, not for a drive, and its default is charge-only.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google backup and Google Photos back your phone up to Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> Drag-and-drop through a computer works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route, not a desktop tool.</li>
+    <li><strong>Mistaking a PC backup for a USB backup.</strong> Coolmuster Android Assistant backs your TCL phone up to a computer — a real backup, but it lands on the PC, not on a USB drive you can plug into any computer and open.</li>
+    <li><strong>Mistaking a microSD copy for a USB backup.</strong> Copying DCIM to a memory card is a real local copy — but most current TCL models have the slot built in, the card stays in the phone, and opening it anywhere else needs a card reader; a USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 17, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On TCL the cloud routes are Google Photos and Google backup — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="motorola-photos-to-usb.html">Back up Motorola photos to a USB drive (no computer)</a> — Motorola is the closest parallel: another budget Android brand running near-stock Android with Google Photos as the stock backup.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
