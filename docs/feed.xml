@@ -202,5 +202,12 @@
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
     <description>Nothing phones (Phone (1), Phone (2), Phone (2a), and the CMF Phone 1) run Nothing OS — a near-stock Android skin — with OTG support on the main Phone models: spec tables list USB Type-C 2.0 with OTG for the Phone (1), Phone (2), Phone (2a), and Phone (2a) Plus, and Nothing's own support site documents OTG as a feature — but the CMF Phone 1 is the exception to check, because spec tables disagree on whether it supports OTG at all. And Nothing's own backup tools are Google's — Google Photos and Google backup — which back your photos up to the cloud, not to a USB drive as plain files. A USB-C flash drive plugs straight into any Nothing phone. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up POCO photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/poco-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/poco-photos-to-usb.html</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <description>POCO phones (F, X, and M series) run HyperOS — Xiaomi's Android skin, since POCO is Xiaomi's sub-brand — with OTG support on the F and X series: spec tables list USB Type-C 2.0 with OTG for the F7, F7 Pro, X7, and X7 Pro, and USB Type-C 3.2 with OTG for the F9 Ultra — but the budget M series is the exception to check, because spec tables disagree on whether the M7 supports OTG at all. And POCO's own backup tools are Xiaomi Cloud and Google's — Google Photos and Google backup — which back your photos up to the cloud, not to a USB drive as plain files. A USB-C flash drive plugs straight into any POCO phone. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
