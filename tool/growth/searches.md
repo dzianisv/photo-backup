@@ -1649,6 +1649,127 @@ demand is read off competitor install velocity instead (see
 - Verdict: how-to article material, not a listing keyword.
   Article published Nov 17, 2026 (WL-61, 31st how-to):
   docs/iqoo-photos-to-usb.html.
+### 31. "back up TCL photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a TCL-specific
+  phone-to-USB guide at all, let alone a TCL-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the TCL-specific results are cloud and PC
+  backup guides, and the rest are generic manual guides.
+- Current top results (scored Nov 17, 2026, live web search):
+  Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC
+  drag-and-drop, Google Drive, or AirDroid; generic Android,
+  most ways need a computer or a cloud account); AnExplorer
+  guide (anexplorer.io/transfer/phone-to-usb — OTG adapter
+  plus its own file manager app, with a progress bar and a
+  FAT32 4 GB warning; generic Android, not written for TCL
+  — and it is a guide for its own app); YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); softhandtech guide
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-
+  memory-stick/ — a computer as middleman, direct OTG
+  transfer, or a cloud service; generic Android and iPhone,
+  not written for TCL); thegadgetians guide
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-
+  without-computer/ — OTG adapter plus the file manager, or
+  a Lightning adapter for iPhones; generic Android and
+  iPhone, not written for TCL); Photos to USB: OTG Backup
+  (Play listing, com.arzdrz.photos_to_usb — a real
+  phone-to-USB app, one-tap whole-gallery copy, only new
+  photos next time, warns about the FAT32 4 GB limit, free
+  with ads, one-time purchase removes ads — generic Android,
+  not a TCL guide, and it does not promise oldest-first
+  order, detailed progress with Pause and Stop, or size
+  verification of every file).
+  Wider search: mobilespecs.net TCL 50 XL backup guide
+  (mobilespecs.net/phone/backup/TCL/TCL_50_XL.html —
+  Google sync (Settings > Google > Synchronization
+  settings, Google Photos for photos), then TWRP Recovery,
+  CWM Recovery + ROM Manager, and Titanium Backup;
+  TCL-specific, but every route is a cloud sync, a custom
+  recovery, or a rooted backup tool — none of them puts
+  plain photo files on a USB drive); mobilespecs.net TCL 40 X
+  backup guide
+  (mobilespecs.net/phone/backup/TCL/TCL_40_X.html — the same
+  pattern: Google sync and Google Photos, then TWRP, CWM,
+  and Titanium Backup; TCL-specific, but cloud sync or
+  recovery tools — not a phone-to-USB backup);
+  mobilespecs.net TCL 40 Pro backup guide
+  (mobilespecs.net/phone/backup/TCL/TCL_40_Pro.html — the
+  same pattern again; TCL-specific, but cloud sync or
+  recovery tools — not a phone-to-USB backup);
+  mobilespecs.net TCL 30 V 5G backup guide
+  (mobilespecs.net/phone/backup/TCL/TCL_30_V_5G.html — the
+  same pattern; TCL-specific, but cloud sync or recovery
+  tools — not a phone-to-USB backup); TCL 30 5G user manual
+  (manualowl.com/m/TCL/30-5G/Manual/689562?page=46 — the
+  manual's own pages: Google Photos "stores and backs up
+  your photos and videos", and Files "displays all data
+  stored on the phone, including both external microSD card
+  and internal storage"; a manual, not a backup guide — but
+  it confirms Google Photos is the stock photo backup and
+  Files is the stock file manager, and the same manual
+  documents OTG and the USB connection setting); TCL's own
+  support FAQ (tcl.com/eu/en/support/faq/37307 — when the
+  phone connects to a PC, pick the mode under Settings >
+  Connections > USB: File transfer, Transfer photos (PTP),
+  No data transfer, or Charge this device; a support FAQ,
+  not a backup guide — but it confirms where TCL puts the
+  USB mode, and that the default is charge-only);
+  Coolmuster's laptop guide
+  (coolmuster.com/android/transfer-photos-from-android-to-
+  laptop.html — a PC tool (Coolmuster Android Assistant),
+  File Explorer drag-and-drop, Google Photos, or Google
+  Drive; generic Android — TCL appears only in the
+  compatibility list, not as a guide of its own — and every
+  way needs a laptop or a cloud account); TCL 50 XE
+  NxtPaper specs (gsmarena.com.bd/tcl-50-xe-nxtpaper/ —
+  USB Type-C, OTG Yes; Android 14, 128 GB, microSDXC; spec
+  tables, not a guide — and the confirmation that the
+  current TCL 50 line has OTG); TCL 50 XL NxtPaper specs
+  (gsmfind.com/tcl-50-xl-nxtpaper.html — USB Type-C, OTG;
+  Android 14, 128 GB 6 GB RAM, microSDXC; spec tables, not
+  a guide).
+  TCL specifics: TCL phones (50, 40, and 30 series) run TCL
+  UI — TCL's Android skin (the TCL 40 X runs Android 13
+  with TCL UI; the 50 XL and 50 XE run Android 14); TCL has
+  no backup tool of its own — the routes are Google's
+  (Google Photos, Google backup via Google One) plus PC
+  tools (Coolmuster Android Assistant backs the phone up to
+  a PC; TWRP Recovery and Titanium Backup are the other
+  routes the TCL backup guides list, needing a custom
+  recovery or root); stock file manager is Files (per the
+  TCL 30 5G manual: it shows internal storage and the
+  microSD card); stock photo backup is Google Photos (per
+  the same manual: Google Photos "stores and backs up your
+  photos and videos"); OTG: spec tables list USB Type-C
+  with OTG for the 50 XL NxtPaper and the 50 XE NxtPaper,
+  and TCL's own user manual documents OTG on the TCL 30 5G;
+  TCL UI has no OTG switch to enable — TCL's own
+  documentation describes no on/off toggle, so the drive
+  mounts on plug-in (unlike Funtouch OS and HyperOS, which
+  have a switch); TCL's USB mode setting (Settings >
+  Connections > USB) is for connecting to a computer, not
+  for a drive, and its default is charge-only; most current
+  TCL models have a microSDXC slot (the 50 XL, 50 XE, 40 X,
+  and 30 V 5G all do) — check your own model's specs; all
+  current TCL phones are USB-C; TCL phones sold in the US
+  and Europe ship with Google Play. TCL's own tools:
+  Google Photos (Photos settings > Backup, to Google's
+  cloud, 15 GB free) backs photos up to Google's cloud;
+  Google backup (Settings > Google > Backup, Back up by
+  Google One) restores to a new phone from the cloud;
+  Coolmuster Android Assistant backs the phone up to a PC;
+  TWRP Recovery writes a whole-device backup from a custom
+  recovery and Titanium Backup needs a rooted phone;
+  Google Photos / Google backup back photos up to Google's
+  cloud — none of them writes plain photo files to a USB
+  drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-62, 32nd how-to):
+  docs/tcl-photos-to-usb.html.
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
