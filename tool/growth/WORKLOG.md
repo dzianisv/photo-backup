@@ -1,5 +1,78 @@
 # SnapDisk — Work Log
 
+## WL-47 — Back up Sony Xperia photos to USB article, 18th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/sony-xperia-photos-to-usb.html ("Back up Sony Xperia
+  photos to a USB drive (no computer)"), following the WL-46
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png as
+  the lead shot — same reuse as the 8th through 17th articles).
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree + takePersistableUriPermission);
+  oldest-first via MediaStore DATE_TAKEN ascending; free 5 GB per
+  run (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy. Search
+  evidence (Nov 16, 2026 live web search): top results are all
+  generic manual copy — YouTube PYcbV25CczI (OTG + file manager
+  manual copy, suggests Move), AnExplorer guide (manual
+  select-copy-paste, anexplorer.io/transfer/phone-to-usb; the
+  only one showing a progress bar for the manual copy, still no
+  resume or verification), Dr.Fone (Google Drive / PC
+  drag-and-drop / OTG manual copy / AirDroid), YouTube
+  ch1evyu5PPM (OTG + file manager manual copy, suggests Move),
+  askfilo (OTG manual copy or a PC middleman); Photos to USB:
+  OTG Backup (Play listing, com.arzdrz.photos_to_usb) is the
+  one non-manual result — a real phone-to-USB app, one-tap
+  whole-gallery copy with resume, free with ads — generic
+  Android, not an Xperia guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop, or
+  size verification, so the article says so honestly instead of
+  claiming SnapDisk is the only one-tap option. Cloud is Google
+  Photos — cloud, not USB. Sony specifics stated honestly: no
+  OTG toggle — near-stock Android mounts the drive on its own;
+  stock file manager is Files by Google, stock gallery is
+  Google Photos (Sony ships almost no apps of its own on recent
+  Xperia phones); microSDXC in the shared SIM slot varies by
+  model (up to 1.5 TB on the Xperia 1 VI); Xperia 1 VI USB-C
+  is USB 3.2 Gen 1 (5 Gbit/s), Xperia 10 VI is USB 2.0; Sony's
+  own tool is Xperia Companion — PC software that backs the
+  phone up to a computer as a package, not a phone-to-USB copy
+  (older Xperia Backup & Restore could write a backup to a USB
+  drive via a host adapter, again a backup package, not plain
+  photo files). Honest contrast stated in the TL;DR: Files by
+  Google works but is manual select-copy-paste with no progress,
+  no resume, no verification; Xperia Companion works but needs
+  a PC and writes a backup package, not plain photos; Google
+  Photos is cloud, not a USB copy; Photos to USB also does
+  one-tap copy with resume — SnapDisk adds oldest-first order,
+  detailed progress with Pause/Stop, size verification, no ads,
+  and free 5 GB per run. Query 17 scored Nov 16, 2026
+  (searches.md): "back up photos from Sony Xperia to USB flash
+  drive without computer" — real how-to gap. Volume unknown
+  (Play publishes no volume); difficulty low-medium. Linked
+  from blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt (full section), feed.xml (now 18
+  items). JSON-LD validated by parse; sitemap.xml and feed.xml
+  parse as XML. Title 52 chars, meta 149 chars. No app code or
+  Play listing files touched; applicationId untouched
+  (dev.dzianisv.snapdisk). Sitemap priority fixed 0.5 → 0.8
+  before commit to match the sibling article blocks. This work
+  ran from a fresh clone (repo-wl47-sony), never the shared
+  checkout.
+  Evidence: PR #59 (commit c8034ce, merge 1b7c16f, merged
+  2026-11-17T02:38:36Z); CI run 44003965582 (build pass, 1m1s)
+  green; post-merge main runs green (Android PR 44004497108,
+  pages 44004496408). Live fetch after Pages deploy: article
+  200, 25413 bytes, title "Back up Sony Xperia photos to a USB
+  drive — SnapDisk" present, "November 16, 2026" present; blog
+  index 200, 17256 bytes; feed.xml 200 (18 items); sitemap.xml
+  200 with the new link.
+
 ## 2026-11-16 — WL-45 / WL-46 + searches.md numbering dedupe (dispatcher)
 
 - Owner: Product Lead (daily loop). State: DONE.
