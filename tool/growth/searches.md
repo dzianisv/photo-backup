@@ -974,6 +974,142 @@ demand is read off competitor install velocity instead (see
 - Verdict: how-to article material, not a listing keyword.
   Article published Nov 17, 2026 (WL-56, 26th how-to):
   docs/infinix-photos-to-usb.html.
+### 26. "back up photos from Tecno to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Tecno-specific
+  guide at all, let alone a Tecno-specific automated
+  whole-library backup with progress, Pause/Stop, and
+  resume — the top results are generic manual guides,
+  PC tools, or a rival app page.
+- Current top results (scored Nov 17, 2026, live web search):
+  YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); YouTube video
+  (youtube.com/watch?v=ch1evyu5PPM — same generic route:
+  check OTG, OTG adapter, file manager, Copy or Move,
+  safely eject); Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-
+  drop, Google Drive, or AirDroid; generic Android, most ways
+  need a computer or a cloud account); AnExplorer guide
+  (anexplorer.io/transfer/phone-to-usb — manual
+  select-copy-paste, the only one of these guides that
+  shows a progress bar with speed and time remaining, still no
+  resume or verification); askfilo guide (askfilo.com — OTG
+  adapter + file manager, or a PC as a middleman; generic
+  Android, not written for Tecno); epictechtips guide
+  (epictechtips.com/transfer-pictures-from-android-phone-to-
+  usb-flash-drive/ — plug the drive in, file manager, Move
+  to the drive, or a computer, cloud, or email middleman;
+  generic Android, not written for Tecno). Wider search:
+  FoneLab guide
+  (fonelab.com/resource/how-to-transfer-photos-from-android-
+  phone-to-usb-flash-drive.html — OTG adapter copy, a PC
+  file-explorer copy, or the FoneLab HyperTrans PC tool;
+  generic Android, two of the three ways need a computer);
+  MobileTrans OTG guide
+  (mobiletrans.wondershare.com/android-tips/how-to-transfer-
+  files-via-otg.html — OTG cable, select files, Copy, Paste
+  to the drive; generic Android, not written for Tecno);
+  TechDows OTG explainer
+  (techdows.com/usb-otg-everything-you-need-to-know.html —
+  which adapter to buy, how to open OTG storage, what to do
+  when a drive does not show up; useful background, not a
+  Tecno guide); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a real phone-to-USB app, one-tap
+  whole-gallery copy, only new photos next time, warns about
+  the FAT32 4 GB limit, free with ads, one-time purchase
+  removes ads — generic Android, not a Tecno guide, and it
+  does not promise oldest-first order, detailed progress with
+  Pause and Stop, or size verification of every file);
+  Coolmuster Tecno backup guide
+  (coolmuster.com/android/tecno-backup-restore.html — the
+  Coolmuster desktop tool backing the phone up to a computer
+  over USB, built-in Backup & Restore to the phone or an SD
+  card, TECNO Cloud to Tecno's cloud, Google Backup to
+  Google's cloud; a PC, a card, or a cloud, never a USB
+  drive; a third-party tool vendor, not Tecno's own site, so
+  the menu names are reported, not official);
+  helpforsmartphone Camon 30 backup guide
+  (helpforsmartphone.com — Settings, Back up to Google Drive,
+  pick the Google account, sync; a cloud backup guide for
+  one Tecno model, not a phone-to-USB guide); MobiKin Tecno
+  contacts guide
+  (mobikin.com/android-backup/tecno-contact-backup-and-
+  restore.html — Tecno-specific, but for contacts, not
+  photos: desktop tool, Google sync, SD-card .vcf, or a
+  contacts app; a PC, a cloud, or a card); umatechnology.org
+  Tecno OTG page
+  (umatechnology.org/tecno-phone-otg-support-how-to-check-
+  and-connect-usb-devices/ — some Tecno phones support OTG,
+  depending on model and regional variant; official spec
+  pages list OTG for the POP 7 Pro, CAMON 20 Pro, POVA 7,
+  and SPARK Go 2024; a third-party site citing official
+  specs, so the model list is reported, not verified here;
+  a check-and-setup page, not a backup guide); HT Tech
+  Tecno OTG list
+  (tech.hindustantimes.com/mobile-finder/tecno-brand/
+  usb-otg-external-storage — a filter list of Tecno models
+  with USB OTG, not a guide); smartprix Pova 5 Pro spec
+  table (smartprix.com — "USB on-the-go" listed for the
+  Pova 5 Pro); devicesfaq Pova Neo 3 page
+  (devicesfaq.com/en/share-internet/tecno-pova-neo-3 — a
+  tethering guide noting the Pova Neo 3 ships with a USB-C
+  2.0 OTG cable in the box); go.tuxmat.com Pova 4 guide
+  (go.tuxmat.com/total-ask/enable-otg-on-tecno-pova-4-a-
+  quick-guide-1767649009 — OTG toggle reported inside the
+  connection settings on the Pova 4; a low-quality guide,
+  so the toggle location is reported, not verified);
+  performancedriversclub.org F1 page
+  (performancedriversclub.org/tecno-f1-otg-support/ —
+  reports the Tecno F1 supports OTG; a low-quality page);
+  Google Android support thread on the Pop 3
+  (support.google.com/android/thread/108876882/ — the Pop 3
+  lists OTG in its specs, but owners report it not enabled
+  out of the box); YouTube OTG-not-connect video
+  (youtube.com/watch?v=KFoAL46N-nk — OTG not connecting on
+  Tecno and Infinix phones, incl. Spark 20 Pro+ and the
+  Zero 30/40 and Camon 30 series; troubleshooting, not a
+  backup guide); androidguias OTG explainer
+  (en.androidguias.com/USB-OTG-on-Android: Everything you
+  can do — how to check compatibility, which adapter to buy;
+  useful background, not a Tecno guide); Google Photos
+  (Play listing, com.google.android.apps.photos — 15 GB
+  cloud storage free; cloud, not a USB copy); Transsion
+  File Manager (Play listing, com.transsion.filemanagerx —
+  the stock file manager on Tecno phones, by Shanghai
+  Transsion Co., Ltd.); PakObserver Google AI Plus story
+  (pakobserver.net/tecno-makes-everyday-smartphone-use-
+  easier-with-free-2tb-cloud-storage/ — eligible Tecno
+  phones launched from December 2025 get three months of
+  Google AI Plus with 2TB of cloud storage; a cloud offer,
+  not a USB copy). Tecno specifics: Tecno phones run HiOS
+  (Tecno's Android skin); stock file manager is File Manager
+  (Transsion File Manager, com.transsion.filemanagerx);
+  no confirmed stock gallery name was found, so the article
+  does not name one; an OTG toggle location is reported in
+  the connection settings on the Pova 4, but the source is
+  a low-quality guide — treat it as a lead, not a fact;
+  if nothing appears, check Settings > Storage; OTG varies
+  by model and regional variant (POP 7 Pro, CAMON 20 Pro,
+  POVA 7, SPARK Go 2024, Pova 5 Pro listed; Pop 3 lists OTG
+  in its specs but owners report it not enabled); modern
+  Tecno phones are USB-C, older ones Micro-USB; whether a
+  model has a microSD slot varies by model — check the
+  model's specs. Tecno's own tools: built-in Backup &
+  Restore (Settings > System > Back up & reset, Local backup
+  or Phone backup, to internal storage or an SD card);
+  TECNO Cloud / HiOS Cloud (Settings > TECNO Cloud, TECNO
+  account) backs photos up to Tecno's cloud; Google backup
+  (Settings > Google > Backup, Back up by Google One)
+  restores to a new phone from the cloud; Coolmuster backs
+  the phone up to a PC; the SD-card route copies to a card,
+  not a drive; Google Photos / Google One back photos up to
+  Google's cloud (15 GB free) — none of them writes plain
+  photo files to a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-57, 27th how-to):
+  docs/tecno-photos-to-usb.html.
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
