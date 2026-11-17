@@ -1,5 +1,189 @@
 # SnapDisk — Work Log
 
+## WL-67 — Back up Lenovo photos to USB article, 36th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/lenovo-photos-to-usb.html ("Back up Lenovo
+  photos to a USB drive (no computer)"), following the
+  WL-54/WL-55/WL-56/WL-57/WL-58/WL-59/WL-60/WL-61/WL-62/WL-63/
+  WL-64/WL-65/WL-66 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot
+  — same reuse as the 8th through 35th articles). Facts
+  verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price); no INTERNET permission in AndroidManifest.xml;
+  FAT32 files >=4 GiB skipped with reason
+  (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw byte-stream copy
+  (BackupEngine.copyWithResume — no decode/re-encode) with size
+  verification after copy. Search evidence (Nov 17, 2026 live
+  web search): there is no Lenovo-specific phone-to-USB
+  guide in the top results at all — the Lenovo-specific
+  results are store pages for PC backup drives, a PC
+  recovery tool, a tablet guide, and Lenovo's own PC backup
+  app, and the rest are generic manual guides.
+  Lenovo store, WD My Book 6TB USB 3.0 desktop external hard
+  drive (lenovo.com/ca/en/p/accessories-and-software/memory-
+  and-storage/external-hard-drives/78012364 — a desktop drive
+  sold on lenovo.com, with WD Backup software for Windows
+  and Mac; a PC backup product, not a phone-to-USB guide);
+  Lenovo store, WD My Passport 2TB USB 3.2 Gen 1 external
+  hard drive (lenovo.com/ca/en/p/accessories-and-software/
+  memory-and-storage/external-hard-drives/78012407 — the
+  portable version of the same, WD Backup software for
+  Windows and Mac; a PC backup product, not a phone-to-USB
+  guide); Wondershare Recoverit, "Download Lenovo OneKey
+  Recovery Software" (recoverit.wondershare.com/computer-
+  recovery/lenovo-onekey-recovery.html — Lenovo OneKey
+  Recovery restores Lenovo and IdeaPad laptops to factory
+  settings after a system crash and formats the system,
+  erasing all current files; making a recovery USB needs a
+  Windows PC and a 16 GB or larger USB drive; a laptop
+  recovery tool, not a phone backup at all); Lenovo, "USB
+  Flash Drive for Tablets: A Comprehensive Guide"
+  (lenovo.com/us/en/knowledgebase/usb-flash-drive-for-
+  tablets-a-comprehensive-guide — Lenovo's own guide to
+  using a USB flash drive, but written for tablets: expand
+  storage, transfer files, back up photos and videos from a
+  tablet; a Lenovo guide, but for tablets, not a phone-to-
+  USB guide); Lenovo Software Fix (formerly Rescue and Smart
+  Assistant) (pcsupport.lenovo.com/bb/en/products/tablets/
+  yoga-series/yoga-tab-3-10/za0k/solutions/ht102605-how-to-
+  use-rescue-and-smart-assistant-lenovo-moto-smart-assistant-
+  smart-device-with-android-system — Lenovo's own support
+  page: Software Fix is a Windows PC application for Lenovo
+  and Motorola phones and tablets; its Backup & Restore
+  backs up pictures, videos, music, and contacts before a
+  rescue and restores them after; Lenovo-specific, but a PC
+  app — the backup lands on the PC, not on a USB drive as
+  plain files — and it is built around rescuing a broken
+  phone, not backing up a healthy one); Lenovo Smart
+  Assistant download page (gizdev.com/latest-lenovo-smart-
+  assistant-for-lenovo-and-motorola — the same tool under its
+  older name, Rescue and Smart Assistant, now Software Fix,
+  a Windows app that reflashes firmware from Lenovo servers,
+  backs up data, transfers to new phones, and manages files
+  via USB or Wi-Fi; a PC app again — the backup lives on the
+  PC); AnExplorer guide (anexplorer.io/features/usb-otg —
+  plug a USB drive in via OTG and AnExplorer gives full
+  read/write access, FAT32, exFAT, and NTFS; generic
+  Android, not written for Lenovo — and it is a guide for its
+  own app); YouTube video (youtube.com/watch?v=ch1evyu5PPM —
+  generic OTG + file manager walkthrough: OTG adapter, the
+  phone's built-in file manager, select photos in DCIM, Copy
+  or Move to the drive); YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); AnExplorer guide
+  (anexplorer.io/transfer/phone-to-usb — plug in a flash
+  drive via OTG and copy files with a progress bar showing
+  speed and time remaining; generic Android, not written for
+  Lenovo — and it is a guide for its own app); ajakteman
+  guide (en.ajakteman.com/2026/01/how-to-transfer-photos-
+  from-your-phone.html — generic OTG guide: OTG adapter, the
+  phone's default file manager, find the photos, Copy or
+  Move to the drive; notes some brands require enabling OTG
+  in Settings first, by searching Settings for "OTG";
+  generic Android, not written for Lenovo);
+  umatechnology.org explainer
+  (umatechnology.org/how-android-usb-otg-works-with-photo-
+  sticks-and-external-drives — connect the drive, open it in
+  a file manager such as Files by Google, and copy files;
+  Google says Files by Google can access USB storage on
+  Android 7.0 and later; generic Android, not written for
+  Lenovo); askfilo Q&A (askfilo.com/user-question-answers-
+  smart-solutions/how-to-transfer-pictures-from-an-android-
+  phone-to-a-3436303837303432 — generic OTG adapter, file
+  manager, DCIM, Copy or Move, or a PC/Mac as a middleman;
+  generic Android, not written for Lenovo); Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC
+  drag-and-drop, Google Drive, or AirDroid; generic
+  Android, most ways need a computer or a cloud account);
+  Android Central forum thread
+  (forums.androidcentral.com/threads/moving-photos-to-
+  usb.973408 — use the OTG adapter to plug in a USB drive,
+  and it shows up as external storage in the file manager;
+  generic Android, not written for Lenovo); Move Files
+  USB/OTG/Internal (Play listing,
+  com.fbd.moveapps.sdcard.dp — a generic file-manager app:
+  plug in an OTG drive, select hundreds of photos, move
+  them to the drive in one go; generic Android, not written
+  for Lenovo — and a manual file manager, not an automated
+  backup); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a real phone-to-USB app,
+  one-tap whole-gallery copy, only new photos next time,
+  warns about the FAT32 4 GB limit, free with ads, one-time
+  purchase removes ads — generic Android, not a Lenovo
+  guide, and it does not promise oldest-first order,
+  detailed progress with Pause and Stop, or size
+  verification of every file).
+  Wider search: Lenovo K13 specs (techspecs.info/lenovo-
+  k13 — USB Type-C 2.0, OTG; Android 10 Go edition;
+  microSDXC uses shared SIM slot; spec tables, not a guide
+  — and the confirmation that the K13 has OTG); Lenovo K13
+  Pro specs (smartprix.com/mobiles/oneplus_12_5g_vs_lenovo_
+  k13_pro-cpd1y2tx91pl_pd1bgpkm4ok.php — USB-C, USB
+  on-the-go; spec tables, not a guide — and the
+  confirmation that the K13 Pro has OTG); Lenovo K12 specs
+  (smartprix.com/mobiles/lenovo_k12_vs_motorola_moto_g13-
+  cpd1t2pcyru0_pd1fdvqw1cc.php — microUSB v2.0, USB
+  on-the-go; spec tables, not a guide — and the confirmation
+  that even the budget K12 has OTG, over micro-USB); Lenovo
+  Legion Phone Duel specs (ubergizmo.com/products/lang/en_us/
+  devices/lenovo-legion-phone-duel — USB Type-C, USB 3.1,
+  USB OTG; spec tables, not a guide — and the confirmation
+  that the Legion Phone Duel has OTG); Lenovo Legion 2 Pro
+  specs (gsmarena.com/lenovo_legion_2_pro-10827.php — two
+  USB Type-C 2.0 & 3.1, OTG; spec tables, not a guide — and
+  the confirmation that the Legion 2 Pro has OTG); Lenovo
+  Legion Pro specs (m.gsmarena.com/lenovo_legion_pro-
+  10224.php — two USB Type-C, OTG; spec tables, not a guide
+  — and the confirmation that the Legion Pro has OTG).
+  Lenovo specifics: OTG is across the whole Lenovo phone
+  range: spec tables list USB Type-C 2.0 with OTG for the
+  K13, USB-C with OTG for the K13 Pro, and two USB-C ports
+  with OTG for the Legion Phone Duel and the Legion 2 Pro,
+  and even the budget K12 has OTG over micro-USB; on most
+  Lenovo phones the drive mounts on plug-in — if nothing
+  appears, check Settings > Storage, or search Settings for
+  "OTG", since some Android phones need the toggle on first;
+  the K13 has a microSDXC slot (shared SIM slot), the
+  Legion phones have no card slot; Lenovo has no
+  phone-to-USB backup tool of its own — its own tool is
+  Software Fix (formerly Rescue and Smart Assistant), a
+  Windows PC app that backs pictures, videos, music, and
+  contacts up to a PC before a rescue and restores them
+  after, and transfers data to a new Lenovo or Motorola
+  phone; the other routes are Google's (Google Photos,
+  Google backup); Lenovo OneKey Recovery is a laptop tool,
+  not a phone backup — it restores Lenovo/IdeaPad laptops to
+  factory settings and formats the system; Lenovo's own USB
+  flash drive guide is written for tablets; the WD drives on
+  lenovo.com ship with WD Backup software for Windows and
+  Mac. Lenovo's own tools: Software Fix (PC app, connect
+  with a USB cable, Backup & Restore backs pictures, videos,
+  music, and contacts up to the PC before a rescue, restores
+  after) backs the phone up to the PC; Google Photos (Photos
+  settings > Backup, to Google's cloud, 15 GB free) backs
+  photos up to Google's cloud; Google backup (Settings >
+  System > Backup, Back up to Google Drive) restores to a
+  new phone from the cloud; OneKey Recovery restores Lenovo
+  and IdeaPad laptops to factory settings and formats the
+  system — none of them writes plain photo files to a USB
+  drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-67, 36th how-to):
+  docs/lenovo-photos-to-usb.html. Query 35 scored in
+  tool/growth/searches.md. Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml (36 items)
+  updated. PR #100 (article), merge 8f95550, CI run 44191832739
+  (Android PR, success); this row PR #101.
+
 ## WL-66 — Back up Sharp Aquos photos to USB article, 35th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
