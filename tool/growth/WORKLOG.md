@@ -1,5 +1,87 @@
 # SnapDisk — Work Log
 
+## WL-49 — Back up LG photos to USB article, 19th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/lg-photos-to-usb.html ("Back up LG photos to a USB
+  drive (no computer)"), following the WL-47 article template
+  exactly (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot —
+  same reuse as the 8th through 18th articles). Facts verified
+  from code on fresh main: SAF tree picker (MainActivity.kt
+  OpenDocumentTree + takePersistableUriPermission); oldest-first
+  via MediaStore DATE_TAKEN ascending; free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy. Search
+  evidence (Nov 16, 2026 live web search): no top result is an
+  LG-specific guide — Ubuy photo-stick product listing (a
+  dual-connector flash drive sold as compatible with LG,
+  Samsung, Google, Motorola — a stick to buy, not a guide;
+  its URL was truncated in the search output, so the article
+  names it without linking); AnExplorer guide (manual
+  select-copy-paste, anexplorer.io/transfer/phone-to-usb; the
+  only one showing a progress bar for the manual copy, still no
+  resume or verification), YouTube PYcbV25CczI (OTG + file
+  manager manual copy, suggests Move), Dr.Fone (Google Drive /
+  PC drag-and-drop / OTG manual copy / AirDroid); Photos to USB:
+  OTG Backup (Play listing, com.arzdrz.photos_to_usb) is the
+  one non-manual result — a real phone-to-USB app, one-tap
+  whole-gallery copy with resume, free with ads — generic
+  Android, not an LG guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop, or
+  size verification, so the article says so honestly instead of
+  claiming SnapDisk is the only one-tap option. Cloud is Google
+  Photos — cloud, not USB. LG specifics stated honestly: LG
+  left the phone business in April 2021 (wound down July 31,
+  2021) — no new LG phones, no new LG tools, and LG Mobile
+  Switch is no longer updated (struggles on newer Android
+  versions); stock file manager is LG File Manager (Management
+  > File Manager), stock gallery is Gallery; no OTG toggle —
+  plug the drive in and it mounts; late LG phones (G7, G8, V30
+  and later, Velvet, Wing, V60) are USB-C, older ones
+  Micro-USB; most LG phones have a microSD slot. LG's own
+  tools: LG Mobile Switch is phone-to-phone migration (USB
+  cable / Wi-Fi / SD card), LG Bridge is PC software that backs
+  the phone up to a computer, LG Backup (Settings, Backup &
+  reset) writes a backup to an SD card or the cloud — none of
+  them writes plain photo files to a USB drive. Honest contrast
+  stated in the TL;DR: LG File Manager works but is manual
+  select-copy-paste with no progress, no resume, no
+  verification; LG's own tools work but write to another phone,
+  a PC, or a backup package — not plain photos on a USB drive;
+  Google Photos is cloud, not a USB copy; Photos to USB also
+  does one-tap copy with resume — SnapDisk adds oldest-first
+  order, detailed progress with Pause/Stop, size verification,
+  no ads, and free 5 GB per run. Query 18 scored Nov 16, 2026
+  (searches.md): "back up photos from LG to USB flash drive
+  without computer" — real how-to gap. Volume unknown (Play
+  publishes no volume); difficulty low-medium. Linked from blog
+  index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full section + Blog posts list, now 19),
+  feed.xml (now 19 items). JSON-LD validated by parse;
+  sitemap.xml and feed.xml parse as XML. Title 43 chars, meta
+  140 chars. No app code or Play listing files touched;
+  applicationId untouched (dev.dzianisv.snapdisk). NOTE: the
+  first fresh clone for this work (/tmp/pb-wl49) was wiped
+  mid-run by the VM (tmpfs /tmp emptied between exec calls) —
+  the article and all linking edits were rebuilt from scratch
+  in a persistent scratch clone
+  (~/workspace/pb-wl49-scratch, not the shared checkout) and
+  re-verified before the PR; nothing was lost in the rebuild.
+  Evidence: PR #63 (commit c7c9d27, merge 4e1407e, merged
+  2026-11-17T03:42:52Z); CI run 44011824019 (build pass, 1m3s)
+  green; post-merge main runs green (Android PR 44012125216,
+  pages 44012124980). Live fetch after Pages deploy: article
+  200, 25259 bytes, title "Back up LG photos to a USB drive —
+  SnapDisk" present, "November 16, 2026" present; blog index
+  200, 17999 bytes; feed.xml 200 (19 items); sitemap.xml 200
+  with the new link; llms-full.txt 200, 180503 bytes, Blog list
+  counts 19 with LG present.
+
 ## WL-48 — Complete the Blog post list in llms-full.txt (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
