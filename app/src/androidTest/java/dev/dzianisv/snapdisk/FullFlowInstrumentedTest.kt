@@ -42,11 +42,14 @@ import org.junit.Test
  *   Stop through the notification-action receiver → DONE.
  *
  * Oldest-first ORDER at the service level is proven by the
- * destination files' landing order (mtimes strictly increasing
- * old → mid → new); the engine-level order is already proven by
- * BackupEngineInstrumentedTest.oldestFirstCopyOrderAndVerification.
- * The progress notification text carries no file name, so the
- * service test does not (and cannot) observe the order from it.
+ * first-seen order of each file's .part in the destination tree
+ * (the moment its copy starts); the engine-level order is already
+ * proven by BackupEngineInstrumentedTest.oldestFirstCopyOrderAndVerification.
+ * Destination mtimes are NOT the order proof: a resume/retry
+ * re-copies a file and refreshes its mtime, so mtimes reflect the
+ * last copy, not the processing order. The progress notification
+ * text carries no file name, so the service test does not (and
+ * cannot) observe the order from it.
  *
  * Timing discipline (learned from smoke runs 44147560922 and
  * 44154569523, which failed 6 and 4 tests): seed data is written
@@ -382,17 +385,36 @@ class FullFlowInstrumentedTest {
         // startForegroundService call from the receiver).
         activityScenario = ActivityScenario.launch(MainActivity::class.java)
         // Small files: the emulator copies at ~100 KB/s worst case,
-        // so 2 MB each keeps the whole job inside the DONE timeout
-        // while still proving oldest-first order + content.
-        val size = 2L * 1024 * 1024
+        // so 3 MB each keeps the whole job inside the DONE timeout
+        // while still proving oldest-first order + content. Each
+        // file spans >1 s at any observed rate, so the throttled
+        // progress publish reports every file as currentFileName.
+        val size = 3L * 1024 * 1024
         seedPhoto("e2e-old.jpg", 1_700_000_000_000L, size)
         seedPhoto("e2e-mid.jpg", 1_700_000_100_000L, size)
         seedPhoto("e2e-new.jpg", 1_700_000_200_000L, size)
 
+        // Copy-START order, observed directly: the timestamp each
+        // file's .part (or final file) first appears in the
+        // destination tree. This is the oldest-first proof — the
+        // files' mtimes are NOT: a resume/retry re-copies a file
+        // and refreshes its mtime, so mtimes reflect the LAST copy,
+        // not the processing order (smoke run 44163579790 showed
+        // every file opened twice, second pass in rotated order,
+        // and the mtimes followed the second pass).
+        val names = listOf("e2e-old.jpg", "e2e-mid.jpg", "e2e-new.jpg")
+        val firstSeenOrder = mutableListOf<String>()
         val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
         var sawProgressWithPauseStop = false
         startServiceAction(BackupService.ACTION_START)
         val done = waitForState(240_000, 50, seenStates) { state ->
+            for (name in names) {
+                if (name !in firstSeenOrder &&
+                    (partFile(name).exists() || destFile(name).exists())
+                ) {
+                    firstSeenOrder += name
+                }
+            }
             val progress = progressNotification()
             if (progress != null && state.status == BackupStatus.COPYING) {
                 val titles = actionTitles(progress)
@@ -414,6 +436,14 @@ class FullFlowInstrumentedTest {
             sawProgressWithPauseStop,
         )
         assertEquals("DONE state copiedFiles", 3, done.copiedFiles)
+        assertEquals("DONE state totalFiles", 3, done.totalFiles)
+        assertTrue("files were skipped, not copied: ${done.skippedFiles}", done.skippedFiles.isEmpty())
+        assertEquals(
+            "files did not START copying oldest-first; first-seen=$firstSeenOrder " +
+                "states=$seenStates skipped=${done.skippedFiles}",
+            names,
+            firstSeenOrder,
+        )
 
         val oldDest = destFile("e2e-old.jpg")
         val midDest = destFile("e2e-mid.jpg")
@@ -422,15 +452,6 @@ class FullFlowInstrumentedTest {
         assertFileMatchesSeed(midDest, "e2e-mid.jpg", size)
         assertFileMatchesSeed(newDest, "e2e-new.jpg", size)
         assertNoStaleParts()
-        // Landing order is the oldest-first proof at service level:
-        // the engine copies sequentially, so mtimes increase old→new.
-        assertTrue(
-            "files did not land oldest-first " +
-                "(mtimes old=${oldDest.lastModified()} mid=${midDest.lastModified()} " +
-                "new=${newDest.lastModified()})",
-            oldDest.lastModified() <= midDest.lastModified() &&
-                midDest.lastModified() <= newDest.lastModified(),
-        )
         val doneNotification = progressNotification()
         assertEquals(
             "Backup complete",
@@ -439,8 +460,8 @@ class FullFlowInstrumentedTest {
         )
         println(
             "SMOKE full-flow: service copied 3 seeded photos oldest-first " +
-                "(mtimes ${oldDest.lastModified()}/${midDest.lastModified()}/${newDest.lastModified()}), " +
-                "progress with Pause/Stop seen, DONE notified; states=$seenStates",
+                "(first-seen $firstSeenOrder), progress with Pause/Stop seen, " +
+                "DONE notified; states=$seenStates skipped=${done.skippedFiles}",
         )
     }
 
@@ -468,17 +489,45 @@ class FullFlowInstrumentedTest {
         val paused = waitForState(10_000, 50, seenStates) { it.status == BackupStatus.PAUSED }
         assertEquals(BackupStatus.PAUSED, paused.status)
         // The in-flight file's .part must stay frozen while paused.
-        val sizeWhilePaused = part.length()
-        assertTrue("empty .part while paused", sizeWhilePaused > 0)
+        // Settle first: on a loaded emulator a chunk already past
+        // the engine's pause gate (or a stale FUSE stat) can land
+        // a few KB after the PAUSED state is published — smoke run
+        // 44163579790 showed +8 KB in the 500 ms window. Poll until
+        // the size is unchanged for 1 s, then assert it stays
+        // frozen for another 500 ms. If it never settles, the pause
+        // genuinely is not holding the copy.
+        val settleDeadline = System.currentTimeMillis() + 10_000
+        var stableReads = 0
+        var lastSize = -1L
+        var settledSize = -1L
+        while (System.currentTimeMillis() < settleDeadline) {
+            val size = part.length()
+            if (size == lastSize && size > 0) {
+                stableReads++
+                if (stableReads >= 10) {
+                    settledSize = size
+                    break
+                }
+            } else {
+                stableReads = 0
+                lastSize = size
+            }
+            Thread.sleep(100)
+        }
+        assertTrue(
+            ".part size never settled while paused (last=$lastSize, " +
+                "total=$size) — the copy kept progressing after Pause",
+            settledSize > 0,
+        )
         Thread.sleep(500)
-        assertEquals("copy progressed while paused", sizeWhilePaused, part.length())
+        assertEquals("copy progressed while paused", settledSize, part.length())
         assertEquals(
             listOf("Resume", "Stop"),
             actionTitles(progressNotification()),
         )
         println(
             "SMOKE full-flow: pause froze the copy (.part held at " +
-                "$sizeWhilePaused bytes), Resume/Stop offered",
+                "$settledSize bytes), Resume/Stop offered",
         )
 
         sendNotificationAction(BackupService.ACTION_RESUME)
