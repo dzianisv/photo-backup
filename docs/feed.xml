@@ -251,5 +251,12 @@
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
     <description>Sharp Aquos phones (R10, R9, and sense9) run near-stock Android with USB-C and OTG on all three: spec tables list USB Type-C 3.2 with OTG for the Aquos R10 and the Aquos sense9, and USB Type-C 2.0 with OTG for the Aquos R9. And Sharp has no backup tool of its own: the routes on a Sharp Aquos are Google's — Google Photos and Google backup — plus, on Japan carrier models, docomo Data Copy to a microSD card, which back your photos up to the cloud, to a card, or to another phone, not to a USB drive as plain files. A USB-C flash drive plugs straight into any current Aquos. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up Lenovo photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/lenovo-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/lenovo-photos-to-usb.html</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Lenovo phones (K13, K13 Pro, and the Legion gaming phones) have USB-C and OTG across the range: spec tables list USB Type-C 2.0 with OTG for the K13, USB-C with OTG for the K13 Pro, and two USB-C ports with OTG for the Legion Phone Duel and the Legion 2 Pro — and even the budget K12 has OTG over micro-USB. And Lenovo has no phone-to-USB backup tool of its own: its own tool is Software Fix (formerly Rescue and Smart Assistant), a Windows PC app that backs your pictures up to a PC before a rescue, and the other routes are Google's — Google Photos and Google backup — which back your photos up to the cloud, not to a USB drive as plain files. A USB-C flash drive plugs straight into any USB-C Lenovo. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
