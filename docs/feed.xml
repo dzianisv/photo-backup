@@ -216,5 +216,12 @@
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
     <description>Redmi phones (Note, K, and A series) run HyperOS — Xiaomi's Android skin, since Redmi is Xiaomi's sub-brand — with OTG support across the Note 14 line: spec tables list USB Type-C 2.0 with OTG for the Note 14 Pro 4G and the Note 14 Pro 5G — but the microSD slot varies by model: the Note 14 Pro 4G has a microSDXC slot (uses the shared SIM slot) while the Note 14 Pro 5G has none. And Redmi's own backup tools are Xiaomi Cloud and Google's — Google Photos and Google backup — which back your photos up to the cloud, not to a USB drive as plain files. A USB-C flash drive plugs straight into any Redmi phone. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up iQOO photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/iqoo-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/iqoo-photos-to-usb.html</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <description>iQOO phones (13, 12, Neo, and Z series) run Funtouch OS outside China — OriginOS on the China models — since iQOO is Vivo's sub-brand, with OTG across the current lines: spec tables list USB Type-C 3.2 with OTG for the iQOO 13 and USB Type-C 2.0 with OTG for the iQOO 12, the Neo 10, and the Z10 Turbo Pro. And iQOO's own backup tools are iQOO Cloud (vivo Cloud) and Google's — Google Photos and Google backup — plus PC tools, which back your photos up to the cloud or to a computer, not to a USB drive as plain files. A USB-C flash drive plugs straight into any current iQOO phone. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
