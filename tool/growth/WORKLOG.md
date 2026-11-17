@@ -1,5 +1,82 @@
 # SnapDisk — Work Log
 
+## WL-45 — Back up Huawei photos to USB article, 17th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/huawei-photos-to-usb.html ("Back up Huawei photos
+  to a USB drive (no computer)"), following the WL-44
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png as
+  the lead shot — same reuse as the 8th, 9th, 10th, 11th, 12th,
+  13th, 14th, 15th, and 16th articles). Facts verified from code
+  on fresh main: SAF tree picker (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending; free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy. Search
+  evidence (Nov 16, 2026 live web search): top results are
+  Huawei's own OTG tutorial (manual select-copy-paste in the
+  Files app, consumer.huawei.com/ph/community/details/topicId-72169/),
+  Huawei Backup (consumer.huawei.com support — Settings, System &
+  updates, Backup & restore, Data backup, External storage, USB
+  storage — writes an encrypted backup archive, password required
+  to restore, restorable only through Huawei Backup on a Huawei
+  phone, not plain photo files), AnExplorer guide (manual
+  select-copy-paste, anexplorer.io/transfer/phone-to-usb; the
+  only one showing a progress bar for the manual copy, still no
+  resume or verification), MobiKin (PC drag-and-drop, PC tool,
+  OTG manual copy, Files by Google, AirDroid), FoneLab (OTG
+  manual copy in the Files app, PC tool HyperTrans, Samsung
+  Smart Switch — not a Huawei route). Cloud is Huawei Cloud on
+  newer phones (Mate 30 and later ship without Google services —
+  no Google Play, no Google Photos preinstalled), Google Photos
+  on older ones — cloud, not USB. Huawei specifics stated
+  honestly: no OTG toggle — plug the drive in and open Files;
+  stock file manager is Files, stock gallery is Gallery;
+  expandable storage varies by model — many recent Huawei
+  flagships take Huawei's NM (Nano Memory) card (nano-SIM size,
+  64/128/256 GB) instead of microSD, older models take microSD,
+  some have no card slot; Mate 30 and newer have no Google Play,
+  so the v0.1.2 APK from the GitHub release page is the install
+  route. Honest contrast stated in the TL;DR: Huawei Backup works
+  but writes an encrypted archive, not plain photos; Files works
+  but is manual select-copy-paste with no progress, no resume, no
+  verification; cloud backup is cloud, not a USB copy; SnapDisk =
+  plug in, tap Backup, whole library oldest-first with %, GB
+  copied/total, speed, ETA, Pause/Stop, resume on re-plug,
+  size-verified, copies never deletes. Query 15 scored Nov 16,
+  2026 (searches.md): "back up photos from Huawei to USB flash
+  drive without computer" — real how-to gap. Volume unknown
+  (Play publishes no volume); difficulty low-medium. Linked from
+  blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full section), feed.xml (now 17 items). JSON-LD
+  validated by parse; sitemap.xml and feed.xml parse as XML.
+  Title 47 chars, meta 144 chars. No app code or Play listing
+  files touched; applicationId untouched (dev.dzianisv.snapdisk).
+  NUMBERING NOTE: this task was briefed as WL-45 / 16th how-to,
+  but a sibling lane shipped the videos article under the same
+  WL-45 / 16th labels first (PR #53, merge 4d74d9f, merged
+  2026-11-17T01:56:31Z), so this article is the 17th how-to live
+  and the Work Log now carries two WL-45 rows — dispatcher to
+  renumber one. Also: searches.md now carries two "### 13"
+  sections (the videos query was numbered 13, duplicating the
+  Xiaomi row) — flagged, not renamed here. This work ran from a
+  separate fresh clone (repo-wl45-huawei) because the shared
+  checkout was on the sibling's wl-45-videos-to-usb branch with
+  uncommitted changes; no sibling files were touched.
+  Evidence: PR #54 (commit 9545f8a, merge 5ecebeb, merged
+  2026-11-17T02:02:38Z); CI run 43999854157 (build pass, 1m10s)
+  green; post-merge main runs green (Android PR 44000056564,
+  pages 44000055243). Live fetch after Pages deploy: article 200,
+  25184 bytes, title "Back up Huawei photos to a USB drive —
+  SnapDisk" present, "November 16, 2026" present; blog index 200,
+  16481 bytes; feed.xml 200 (17 items); sitemap.xml 200 with the
+  new link.
+
 ## WL-45 — Back up videos from Android to USB article, 16th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
