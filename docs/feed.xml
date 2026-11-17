@@ -118,5 +118,12 @@
     <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
     <description>Videos are the files that fill a phone first — and the ones the manual copy handles worst, one long file at a time. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up Huawei photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/huawei-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/huawei-photos-to-usb.html</guid>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Huawei phones have their own built-in backup app, but it writes an encrypted archive — not plain photos you can open anywhere. A USB-C flash drive plugs straight in, and the stock route is the Files app. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
