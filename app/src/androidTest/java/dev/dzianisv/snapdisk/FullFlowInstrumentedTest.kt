@@ -200,6 +200,24 @@ class FullFlowInstrumentedTest {
     private fun allDestFiles(): List<File> =
         dstDir.walkTopDown().filter { it.isFile }.toList()
 
+    /**
+     * Dump the enumeration and fail fast if MediaStore did not
+     * preserve the seed order — a cleared DATE_TAKEN (see
+     * [seedPhoto]) would otherwise surface later as a confusing
+     * wrong-order or missing-file failure.
+     */
+    private fun assertEnumerationOrder(tag: String, expected: List<String>) {
+        dumpMediaStore(tag)
+        val actual = dev.dzianisv.snapdisk.backup.PhotoQuery
+            .queryMediaStoreOldestFirst(ctx)
+            .map { it.displayName }
+        assertEquals(
+            "MediaStore enumeration order != seed order (dates not preserved?)",
+            expected,
+            actual,
+        )
+    }
+
     private fun assertNoStaleParts() {
         val parts = allDestFiles().filter { it.name.endsWith(".part") }
         assertTrue("stale .part files remain: $parts", parts.isEmpty())
@@ -254,6 +272,34 @@ class FullFlowInstrumentedTest {
                 written += n
             }
         }
+        // Re-apply the dates AFTER the content write: insert + write
+        // does not reliably preserve DATE_TAKEN — the provider's
+        // metadata extraction on write cleared it (smoke run
+        // 44183565903 stored taken=0 for e2e-stop1.jpg although it
+        // was inserted with 1_700_000_000_000), which silently
+        // reorders the copy: the cleared file's effective date
+        // becomes "now", so it sorts last. That also explains run
+        // 44175300406 processing mid → new → old. Setting the
+        // columns after the write sticks; verify by re-query and
+        // fail fast if it did not.
+        val fix = ContentValues().apply {
+            put(MediaStore.MediaColumns.DATE_TAKEN, dateTakenMs)
+            put(MediaStore.MediaColumns.DATE_MODIFIED, dateTakenMs / 1000)
+        }
+        val updated = ctx.contentResolver.update(uri, fix, null, null)
+        ctx.contentResolver.query(
+            uri,
+            arrayOf(MediaStore.MediaColumns.DATE_TAKEN),
+            null, null, null,
+        )?.use { cursor ->
+            assertTrue("seeded row vanished for $name", cursor.moveToFirst())
+            assertEquals(
+                "MediaStore did not preserve DATE_TAKEN for $name " +
+                    "(updated=$updated rows)",
+                dateTakenMs,
+                cursor.getLong(0),
+            )
+        } ?: throw AssertionError("could not re-query DATE_TAKEN for $name")
     }
 
     /** Streaming byte-compare: [file] must match the seeded pattern for [name]. */
@@ -428,7 +474,7 @@ class FullFlowInstrumentedTest {
         val firstSeenOrder = mutableListOf<String>()
         val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
         var sawProgressWithPauseStop = false
-        dumpMediaStore("serviceCopies")
+        assertEnumerationOrder("serviceCopies", names)
         startServiceAction(BackupService.ACTION_START)
         // Prove MY job started first: startForegroundService is
         // async, so stateFlow still holds the previous test's DONE
@@ -483,11 +529,28 @@ class FullFlowInstrumentedTest {
         assertFileMatchesSeed(midDest, "e2e-mid.jpg", size)
         assertFileMatchesSeed(newDest, "e2e-new.jpg", size)
         assertNoStaleParts()
-        val doneNotification = progressNotification()
+        // Poll for the DONE notification: on a loaded emulator the
+        // NotificationManagerService can lag a just-posted
+        // notification by seconds (the same reason the screenshot
+        // tests poll up to 10 s), and publish() updates stateFlow
+        // BEFORE it posts the notification — a single immediate
+        // read can see DONE with no notification yet (smoke run
+        // 44183565903: title read as null). On timeout, dump the
+        // active notifications so a genuinely missing DONE
+        // notification is diagnosable instead of a bare null.
+        val doneTitleDeadline = System.currentTimeMillis() + 10_000
+        var doneTitle: String? = null
+        while (System.currentTimeMillis() < doneTitleDeadline) {
+            doneTitle = progressNotification()?.notification?.extras
+                ?.getCharSequence(Notification.EXTRA_TITLE)?.toString()
+            if (doneTitle == "Backup complete") break
+            Thread.sleep(100)
+        }
         assertEquals(
+            "DONE notification title was not 'Backup complete' within 10 s; " +
+                "active=${notificationManager.activeNotifications.map { it.id to it.notification.extras.getCharSequence(Notification.EXTRA_TITLE)?.toString() }}",
             "Backup complete",
-            doneNotification?.notification?.extras
-                ?.getCharSequence(Notification.EXTRA_TITLE)?.toString(),
+            doneTitle,
         )
         println(
             "SMOKE full-flow: service copied 3 seeded photos oldest-first " +
@@ -589,7 +652,7 @@ class FullFlowInstrumentedTest {
         seedPhoto("e2e-stop2.jpg", 1_700_000_100_000L, bigSize)
 
         val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
-        dumpMediaStore("stop")
+        assertEnumerationOrder("stop", listOf("e2e-stop1.jpg", "e2e-stop2.jpg"))
         startServiceAction(BackupService.ACTION_START)
         waitForState(120_000, 50, seenStates) { it.status == BackupStatus.COPYING }
         waitForPartInFlight(partFile("e2e-stop2.jpg"), bigSize)
