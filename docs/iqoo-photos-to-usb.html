@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up iQOO photos to a USB drive — SnapDisk</title>
+<meta name="description" content="Back up iQOO photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/iqoo-photos-to-usb.html">
+<meta property="og:title" content="Back up iQOO photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up iQOO photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/iqoo-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/iqoo-photos-to-usb.html#article",
+      "headline": "Back up iQOO photos to a USB drive (no computer)",
+      "description": "Back up iQOO photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-17",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/iqoo-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/iqoo-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up iQOO photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — on the current lines. Spec tables list USB Type-C 3.2 with OTG for the iQOO 13 and USB Type-C 2.0 with OTG for the iQOO 12, the Neo 10, and the Z10 Turbo Pro — plug a USB drive in and the phone mounts it. One iQOO specific: on Funtouch OS, OTG is off by default, so enable it first in Settings, More settings, OTG — Vivo's own FAQ says the switch turns itself off if it is not used in 5 minutes, so enable it with the drive already attached. The stock route is File Manager: plug the drive in, open File Manager, pick the photos, and Copy to the drive. SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later. iQOO phones sold outside China ship with Google Play, so once the listing is live that will be the install route."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/iqoo-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up iQOO photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/iqoo-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up iQOO photos to a USB drive (no computer)</h1>
+  <p class="dek">iQOO phones (13, 12, Neo, and Z series) run Funtouch OS outside China — OriginOS on the China models — since iQOO is Vivo's sub-brand, with OTG across the current lines: spec tables list USB Type-C 3.2 with OTG for the iQOO 13 and USB Type-C 2.0 with OTG for the iQOO 12, the Neo 10, and the Z10 Turbo Pro. And iQOO's own backup tools are iQOO Cloud (vivo Cloud) and Google's — Google Photos and Google backup — plus PC tools, which back your photos up to the cloud or to a computer, not to a USB drive as plain files. A USB-C flash drive plugs straight into any current iQOO phone. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 17, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On an iQOO phone, enable OTG first — on Funtouch OS it is off by default, so go to Settings &gt; More settings &gt; OTG and turn it on, with the drive already attached, because Vivo's own FAQ says the switch turns itself off if it is not used in 5 minutes — then plug a USB drive in: OTG models mount it straight away with a "USB storage added" notification; if nothing appears, check Settings &gt; Storage — then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: File Manager works — it is the stock file manager on iQOO phones, and it copies photos to a USB drive — but it is manual select-copy-paste with no progress detail, no resume, and no verification; iQOO's own backup routes work too, but they are iQOO Cloud (vivo Cloud) and Google's routes — iQOO Cloud, Google Photos, and Google backup — plus PC tools like vivo Mobile Assistant, and none of them writes your photos as plain files to a USB drive: iQOO Cloud syncs your gallery to vivo's servers, Google Photos backs photos up to Google's cloud, and Google backup restores your data to a new phone from the cloud. One rival app does exist — Photos to USB: OTG Backup copies a whole gallery to a pen drive in one tap and resumes where it stopped — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 17, 2026, no top search result for this query is an iQOO-specific phone-to-USB guide at all, let alone an iQOO-specific automated whole-library backup with progress, Pause/Stop, and resume: the iQOO-specific results are PC and cloud backup guides, and the rest are generic manual guides.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up iQOO photos to USB drive without computer" and there is no iQOO-specific phone-to-USB result in the top results at all — the iQOO-specific guides are all PC or cloud routes, and the rest are generic Android guides, in different packaging:</p>
+  <ul>
+    <li><strong>Coolmuster's iQOO photos guide</strong> (<a href="https://www.coolmuster.com/android/back-up-iqoo-photos.html">The 5 Most Popular Ways to Back Up iQOO Photos</a>) — the one iQOO-specific photos guide in the top results, and every one of its five ways needs a cloud account or a computer: iQOO Cloud Backup, Google Photos, vivo Mobile Assistant (a PC tool), Coolmuster Android Backup Manager (a PC tool), and drag-and-drop to a PC. iQOO-specific, but not phone-to-USB.</li>
+    <li><strong>Coolmuster's iQOO backup and restore guide</strong> (<a href="https://www.coolmuster.com/android/iqoo-backup-restore.html">How to Perform iQOO Backup and Restore with 4 Reliable Ways</a>) — iQOO Cloud Backup, a Google account, a USB cable to a PC, and the Coolmuster PC tool. iQOO-specific, and three of the four ways need a cloud account or a computer; the USB-cable way copies to the computer, not to a drive.</li>
+    <li><strong>Coolmuster's iQOO to Mac guide</strong> (<a href="https://www.coolmuster.com/android/back-up-iqoo-to-mac.html">Back Up iQOO to Mac [5 Simple &amp; Effective Solutions]</a>) — a PC tool, Android File Transfer to a Mac, vivo Cloud, and EasyShare. iQOO-specific, and every way needs a Mac or a cloud account.</li>
+    <li><strong>Coolmuster's iQOO to PC guide</strong> (<a href="https://www.coolmuster.com/android/sync-iqoo-to-pc.html">How to Sync IQOO to PC in 6 Efficient Solutions</a>) — a PC tool, VIVOCloud, a USB cable, Bluetooth, Phone Link, and an SD card. iQOO-specific, and every way syncs to a PC or a cloud — none of them puts plain photo files on a USB drive.</li>
+    <li><strong>firmwarespro</strong> (<a href="https://firmwarespro.com/pc/vivo-iqoo-neo-7-se-detail">Vivo iQOO Neo 7 SE Doesn't Connect to PC Via USB</a>) — a troubleshooting page for getting one iQOO model to show up on a PC over a USB cable. iQOO-specific, but it is a PC-connection fix, not a backup guide at all.</li>
+    <li><strong>Dr.Fone</strong> (<a href="http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html">4 Practical Ways to Transfer Photos from Android to USB Flash Drive</a>) — OTG copy, PC drag-and-drop, Google Drive, or AirDroid over Wi-Fi. Generic Android, and most of the ways need a computer or a cloud account.</li>
+    <li><strong>Coolmuster's generic USB guide</strong> (<a href="https://www.coolmuster.com/android/transfer-files-from-android-to-usb-flash-drive.html">4 Ways to Transfer Files from Android to USB Flash Drive</a>) — OTG copy, a PC tool (Coolmuster Android Assistant, phone and drive both plugged into the computer), or a cloud service. Generic Android, and two of the three ways need a computer.</li>
+    <li><strong>Coolmuster's generic photos guide</strong> (<a href="https://www.coolmuster.com/android/transfer-photos-from-android-to-usb-flash-drive.html">How to Transfer Photos from Android to Flash Drive [5 Ways]</a>) — drag-and-drop through a computer, OTG copy, a PC tool, Google Drive, or AirDroid. Generic Android, and four of the five ways need a computer or a cloud account.</li>
+    <li><strong>YouTube</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos</a>) — a video walkthrough of the generic route: OTG adapter, the phone's built-in file manager, select photos in DCIM, Copy or Move to the drive. Generic Android, not written for iQOO.</li>
+    <li><strong>YouTube</strong> (<a href="https://www.youtube.com/watch?v=ch1evyu5PPM">How to Transfer Photos, Videos and any Files from Android Phone to USB Pendrive</a>) — the same generic route: check OTG, OTG adapter, file manager, Copy or Move, safely eject. Generic Android, not written for iQOO.</li>
+    <li><strong>askfilo</strong> (<a href="https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432">How to transfer pictures from an Android phone to a flash drive</a>) — OTG adapter plus the file manager, or a PC as a middleman. Generic Android, not written for iQOO.</li>
+    <li><strong>FoneLab</strong> (<a href="https://www.fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html">How to Transfer Photos from Android to Flash Drive in 3 Easy Ways</a>) — OTG adapter plus the file manager, PC File Explorer drag-and-drop, or the HyperTrans PC tool. Generic Android, and two of the three ways need a computer.</li>
+    <li><strong>epictechtips</strong> (<a href="https://epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/">How to Transfer Pictures from Android Phone to USB Flash Drive</a>) — OTG adapter plus the file manager, or a PC as a middleman, or a cloud service. Generic Android, not written for iQOO.</li>
+    <li><strong>umatechnology's iQOO to PC guide</strong> (<a href="https://umatechnology.org/wp-json/wp/v2/posts/2150098">How to Connect iQOO to PC</a>) — a USB cable to a PC, File Transfer mode, drag-and-drop on the computer, or Wi-Fi apps. iQOO-specific, but it connects the phone to a PC — not a phone-to-USB backup.</li>
+    <li><strong>manuals.plus OTG tutorial</strong> (<a href="https://manuals.plus/m/fd7261dc75777b3015f6c8a2c39de0647a4c37266a1590bff9fb7cfb4bc5edd9">OTG Function Usage Tutorial</a>) — confirms Oppo, Vivo, iQOO, Realme, and OnePlus phones can only use OTG when the function is enabled in Settings, and that the switch turns itself off again after 5 to 10 minutes without use. An OTG how-to, not a backup guide — but it confirms the iQOO OTG switch and its timeout.</li>
+    <li><strong>beinfora's OTG guide</strong> (<a href="https://www.beinfora.com/2026/11/what-is-usb-otg-smartphones-connect-external-devices.html">What Is USB OTG in Smartphones?</a>) — a general OTG explainer that names Funtouch OS among the skins that enforce automated security timeouts disabling OTG until it is manually enabled in system settings. A general guide, not an iQOO backup guide — but it confirms the Funtouch OS OTG timeout.</li>
+    <li><strong>Photos to USB: OTG Backup</strong> (<a href="https://play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb">Google Play</a>) — the one-tap app alternative, from the wider search for this job: a real phone-to-USB app that copies the whole gallery to a pen drive in one tap, copies only new photos next time, and warns about the FAT32 4 GB limit. It is free with ads, with a one-time purchase to remove them. It is the closest thing to this article's job — but it is a generic Android listing, not an iQOO guide, and it does not promise oldest-first order, detailed progress with Pause and Stop, or size verification of every file.</li>
+    <li><strong>Google Photos</strong> (<a href="https://play.google.com/store/apps/details?id=com.google.android.apps.photos">Google Play</a>) — Google's own photo backup: 15 GB of cloud storage free with every Google account, automatic upload over Wi-Fi. Cloud, not a USB copy.</li>
+    <li><strong>GSMArena's iQOO 13 specs</strong> (<a href="https://m.gsmarena.com/vivo_iqoo_13-ampp-13462.php">vivo iQOO 13 - Full phone specifications</a>) — USB Type-C 3.2 with OTG; Android 15 with Funtouch 15 on the international model and OriginOS 5 on the China model. Spec tables, not a guide — and the confirmation that the current iQOO flagship runs Funtouch OS outside China with OTG.</li>
+    <li><strong>GSMArena's iQOO 12 / Neo 10 / Z10 Turbo Pro specs</strong> (<a href="https://m.gsmarena.com/compare.php3?idPhone1=12691&amp;idPhone2=13462">vivo iQOO 12 vs. vivo iQOO 13</a>) — USB Type-C 2.0 with OTG for the iQOO 12, the Neo 10, and the Z10 Turbo Pro. Spec tables, not a guide.</li>
+    <li><strong>Cloud routes</strong> — iQOO Cloud syncs your gallery to vivo's servers, Google Photos backs up over Wi-Fi to Google's servers, not to a drive you hold; its "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. iQOO Cloud's free storage is limited, so a large photo library needs a paid plan or Google Photos instead. Neither route gives you a folder of plain photo files on a USB drive.</li>
+  </ul>
+  <p>None of them is an iQOO-specific phone-to-USB guide at all, and none of them offers an automated iQOO photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>What you need</h2>
+  <p>An iQOO phone (Android 7.0 or later for SnapDisk) that supports OTG — check your model's specs before buying anything; a USB drive your phone can read — a USB-C flash drive plugs straight into any current iQOO phone, or a regular USB drive with a USB-C OTG adapter; and enough space on the drive for the photos you want to keep. Three iQOO specifics: first, OTG is not a given on every model, and on Funtouch OS it is off by default. iQOO phones run Funtouch OS outside China — OriginOS on the China models — since iQOO is Vivo's sub-brand, and on Funtouch OS OTG is off unless you enable it in Settings &gt; More settings &gt; OTG (search Settings for "OTG" if you can't find it). Vivo's own FAQ says the switch turns itself off if it is not used in 5 minutes, so enable it with the drive already attached. Spec tables list USB Type-C 3.2 with OTG for the iQOO 13 and USB Type-C 2.0 with OTG for the iQOO 12, the Neo 10, and the Z10 Turbo Pro. If the phone ignores the drive, check Settings &gt; Storage. Second, iQOO ships Vivo's apps, so the stock file manager is File Manager — a category-based browser (Images, Videos, Audio, Documents, Downloads) — which handles the phone's internal storage and connected external storage, and iQOO camera photos live in DCIM/Camera — and whether your model has a microSD slot varies by model, so check your own model's specs rather than assuming one either way; a USB drive is the plug-in storage that works on every model. Third, iQOO phones sold outside China ship with Google Play, so SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live — there is no sideload-only situation here. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Enable OTG first.</strong> On Funtouch OS OTG is off by default: go to Settings &gt; More settings &gt; OTG and turn it on — or search Settings for "OTG" if you can't find it — with the drive already attached, because Vivo's own FAQ says the switch turns itself off if it is not used in 5 minutes. Spec tables list USB Type-C 3.2 with OTG for the iQOO 13 and USB Type-C 2.0 with OTG for the iQOO 12, the Neo 10, and the Z10 Turbo Pro.</li>
+    <li><strong>Plug in the USB drive.</strong> Most OTG models mount it straight away — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage, and check the OTG switch is still on — it turns itself off if it is not used in 5 minutes.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — iQOO camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the phone normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the phone to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: File Manager (the stock route, no app needed)</h2>
+  <p>iQOO phones ship with File Manager — the Funtouch OS file manager — as the stock file manager, and it can copy your photos to the USB drive: 1. Enable OTG first: Settings &gt; More settings &gt; OTG (search for "OTG" if you can't find it), with the drive already attached — Vivo's own FAQ says the switch turns itself off if it is not used in 5 minutes. 2. Plug in the USB drive — a notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage and check the OTG switch is still on. 3. Open File Manager and confirm the USB drive shows up under external storage. 4. Go back to Internal storage, DCIM, Camera, where your camera photos live. 5. Select the photos (long-press the first, tap the rest, or select all). 6. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until File Manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: iQOO's own tools (iQOO Cloud, Google Photos, and Google backup — not phone-to-USB)</h2>
+  <p>If you want iQOO's own route, know what each tool actually does — iQOO has no phone-to-USB backup of its own; the routes on an iQOO phone are iQOO Cloud (vivo Cloud) and Google's, plus PC tools, and none of them writes your photos as plain files to a USB drive. iQOO Cloud Backup is the official cloud backup, powered by vivo's cloud service: sign in with a vivo account and it backs the phone up to vivo's servers — contacts, messages, photos, settings, and app data — and restores them on another iQOO or Vivo phone. It is a real backup — but it lives on vivo's servers, needs a vivo account and a connection, its free storage is limited so a large photo library needs a paid plan, and it still doesn't give you a folder of photo files on a USB drive. Google Photos is Google's own photo backup app: open Photos, tap your profile picture, Photos settings, Backup, and turn Backup on — it automatically backs up photos to your Google account, with 15 GB free with every Google account. Your iQOO's default gallery app is the Albums app, not Google Photos — but either way it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. Google backup is the route the iQOO guides point to first after iQOO Cloud: Settings &gt; Google &gt; Backup, Back up by Google One on — it backs the phone up to your Google account so you can restore app settings and data to a new phone. It is a real backup — but the backup lives in Google's cloud and restores to a phone, not a folder of photo files on a USB drive you can plug into any computer and open. vivo Mobile Assistant is Vivo's PC tool: install it on the computer, connect the phone with a USB cable, and back the phone up to the PC — but that needs a PC in between, and the backup lands on the PC, not on a USB drive. EasyShare is Vivo's phone-switching tool: it moves contacts, messages, photos, and more from an old phone to a new one, or backs the phone up to a PC — but it needs a second phone or a PC on the other end, and it moves data to that device, not to a USB drive. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the iQOO phone into the computer with a USB cable, tap the USB notification and choose File transfer (by default an iQOO phone charges only) — and drag the DCIM folder onto the USB drive. The iQOO guides offer the same local route: plug the phone into the computer and copy DCIM and Pictures too. This works fine, and it is the only route above that needs a second device in between. If the phone and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the phone is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>No OTG, no USB backup.</strong> On a model without working OTG — spec tables list OTG for the 13, 12, Neo 10, and Z10 Turbo Pro, but check your own model's specs before buying an adapter — a USB drive may simply never appear, and no app can change that. The cloud routes (iQOO Cloud, Google Photos, and Google backup) are the backup for those phones.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter before checking OTG.</strong> Not every iQOO phone is confirmed to have OTG — check your own model's specs first, or the drive will never appear no matter what you plug in.</li>
+    <li><strong>Forgetting the OTG switch.</strong> On Funtouch OS OTG is off by default, and Vivo's own FAQ says the switch turns itself off if it is not used in 5 minutes — so a drive that worked yesterday can be ignored today. Enable it in Settings &gt; More settings &gt; OTG with the drive already attached. If there is no OTG setting at all, the phone may not support OTG.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> iQOO Cloud, Google backup, and Google Photos back your phone up to vivo's or Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> Drag-and-drop through a computer works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route, not a desktop tool.</li>
+    <li><strong>Mistaking a PC backup for a USB backup.</strong> vivo Mobile Assistant and Coolmuster Android Backup Manager back your iQOO phone up to a computer — a real backup, but it lands on the PC, not on a USB drive you can plug into any computer and open.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 17, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On iQOO the cloud routes are iQOO Cloud, Google Photos, and Google backup — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="vivo-photos-to-usb.html">Back up Vivo photos to a USB drive (no computer)</a> — iQOO is Vivo's sub-brand, so the Vivo guide covers the same Funtouch OS system.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
