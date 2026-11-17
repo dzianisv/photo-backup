@@ -407,6 +407,14 @@ class FullFlowInstrumentedTest {
         val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
         var sawProgressWithPauseStop = false
         startServiceAction(BackupService.ACTION_START)
+        // Prove MY job started first: startForegroundService is
+        // async, so stateFlow still holds the previous test's DONE
+        // until onStartCommand runs — waiting for DONE directly
+        // can return that stale DONE at once (smoke run 44169947197:
+        // seen=[], no COPYING notification ever observed).
+        waitForState(120_000, 50, seenStates) {
+            it.status == BackupStatus.SCANNING || it.status == BackupStatus.COPYING
+        }
         val done = waitForState(240_000, 50, seenStates) { state ->
             for (name in names) {
                 if (name !in firstSeenOrder &&
