@@ -302,6 +302,39 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-45, 16th how-to):
   docs/videos-to-usb.html.
 
+### 15. "back up photos from Huawei to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low-Medium. No top result offers an automated
+  whole-library photo backup with progress, Pause/Stop, and
+  resume as plain files.
+- Current top results (scored Nov 16, 2026, live web search):
+  Huawei's own OTG tutorial (consumer.huawei.com/ph/community/
+  details/topicId-72169/ — manual select-copy-paste in the
+  Files app); Huawei Backup (consumer.huawei.com support —
+  Settings > System & updates > Backup & restore > Data backup
+  > External storage > USB storage — writes an encrypted
+  backup archive, password required to restore, restorable
+  only through Huawei Backup on a Huawei phone, not plain
+  photo files); AnExplorer guide (manual select-copy-paste,
+  anexplorer.io/transfer/phone-to-usb — the only one of the
+  five that shows a progress bar for the manual copy, still no
+  resume or verification); MobiKin (PC drag-and-drop, PC tool,
+  OTG manual copy, Files by Google, AirDroid); FoneLab (OTG
+  manual copy in the Files app, PC tool HyperTrans, Samsung
+  Smart Switch — not a Huawei route). Cloud is Huawei Cloud on
+  newer phones (Mate 30 and later ship without Google
+  services — no Google Play, no Google Photos preinstalled),
+  Google Photos on older ones — cloud, not USB. Huawei
+  specifics: no OTG toggle — plug the drive in and open
+  Files; stock file manager is Files, stock gallery is
+  Gallery; expandable storage varies by model — many recent
+  Huawei flagships take Huawei's NM (Nano Memory) card
+  (nano-SIM size, 64/128/256 GB) instead of microSD, older
+  models take microSD, some have no card slot.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 16, 2026 (WL-45, 17th how-to):
+  docs/huawei-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
