@@ -11,8 +11,10 @@
   no rows deleted: videos stays WL-45 (16th article, query
   13 → 15); Huawei renumbered WL-45 → WL-46 (17th article,
   query 15 → 16). Both articles live and verified (feed 17 items).
-  Evidence: fix PR below — merge SHA + CI run recorded in the
-  follow-up.
+  Evidence: PR #57 (commit c35f0cc, merge 337deee, merged
+  2026-11-17T02:12:54Z); CI run 44001085487 (build pass, 1m12s)
+  green; post-merge main runs green (Android PR 44001312443,
+  pages 44001312598).
 
 ## WL-46 — Back up Huawei photos to USB article, 17th how-to (DONE)
 
