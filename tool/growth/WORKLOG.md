@@ -1,5 +1,151 @@
 # SnapDisk — Work Log
 
+## WL-61 — Back up iQOO photos to USB article, 31st how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/iqoo-photos-to-usb.html ("Back up iQOO photos to a
+  USB drive (no computer)"), following the WL-54/WL-55/WL-56/
+  WL-57/WL-58/WL-59/WL-60 article template exactly (navy/cyan,
+  TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot —
+  same reuse as the 8th through 30th articles). Facts verified
+  from code on fresh main: SAF tree picker (MainActivity.kt
+  OpenDocumentTree + takePersistableUriPermission); oldest-first
+  via MediaStore DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN
+  else DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price); no INTERNET permission in AndroidManifest.xml;
+  FAT32 files >=4 GiB skipped with reason
+  (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw byte-stream copy
+  (BackupEngine.copyWithResume — no decode/re-encode) with size
+  verification after copy. Search evidence (Nov 17, 2026 live
+  web search): there is no iQOO-specific phone-to-USB guide in
+  the top results at all — the iQOO-specific results are all PC
+  and cloud backup guides. Coolmuster iQOO photos guide
+  (coolmuster.com/android/back-up-iqoo-photos.html — the one
+  iQOO-specific photos guide in the top results, and every one
+  of its five ways needs a cloud account or a computer: iQOO
+  Cloud Backup, Google Photos, vivo Mobile Assistant (a PC
+  tool), Coolmuster Android Backup Manager (a PC tool), and
+  drag-and-drop to a PC; iQOO-specific, but not phone-to-USB);
+  Coolmuster iQOO backup and restore guide
+  (coolmuster.com/android/iqoo-backup-restore.html — iQOO Cloud
+  Backup, a Google account, a USB cable to a PC, and the
+  Coolmuster PC tool; iQOO-specific, and three of the four ways
+  need a cloud account or a computer; the USB-cable way copies
+  to the computer, not to a drive); Coolmuster iQOO to Mac guide
+  (coolmuster.com/android/back-up-iqoo-to-mac.html — a PC tool,
+  Android File Transfer to a Mac, vivo Cloud, and EasyShare;
+  iQOO-specific, and every way needs a Mac or a cloud account);
+  Coolmuster iQOO to PC guide
+  (coolmuster.com/android/sync-iqoo-to-pc.html — a PC tool,
+  VIVOCloud, a USB cable, Bluetooth, Phone Link, and an SD card;
+  iQOO-specific, and every way syncs to a PC or a cloud — none
+  of them puts plain photo files on a USB drive); firmwarespro
+  (firmwarespro.com/pc/vivo-iqoo-neo-7-se-detail — a
+  troubleshooting page for getting one iQOO model to show up on
+  a PC over a USB cable; iQOO-specific, but it is a PC-connection
+  fix, not a backup guide at all). The rest are generic Android
+  guides: Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-drop,
+  Google Drive, or AirDroid; generic Android, most ways need a
+  computer or a cloud account); Coolmuster generic USB guide
+  (coolmuster.com/android/transfer-files-from-android-to-usb-
+  flash-drive.html — OTG copy, a PC tool, or a cloud service;
+  generic Android, two of the three ways need a computer);
+  Coolmuster generic photos guide
+  (coolmuster.com/android/transfer-photos-from-android-to-usb-
+  flash-drive.html — drag-and-drop through a computer, OTG copy,
+  a PC tool, Google Drive, or AirDroid; generic Android, and four
+  of the five ways need a computer or a cloud account); YouTube
+  video (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); YouTube video
+  (youtube.com/watch?v=ch1evyu5PPM — same generic route: check
+  OTG, OTG adapter, file manager, Copy or Move, safely eject);
+  askfilo guide (askfilo.com — OTG adapter plus the file manager,
+  or a PC as a middleman; generic Android, not written for
+  iQOO); FoneLab guide (fonelab.com — OTG adapter plus the file
+  manager, PC File Explorer drag-and-drop, or the HyperTrans PC
+  tool; generic Android, and two of the three ways need a
+  computer); epictechtips guide (epictechtips.com — OTG adapter
+  plus the file manager, or a PC as a middleman, or a cloud
+  service; generic Android, not written for iQOO).
+  Wider search: umatechnology iQOO to PC guide
+  (umatechnology.org — a USB cable to a PC, File Transfer mode,
+  drag-and-drop on the computer, or Wi-Fi apps; iQOO-specific,
+  but it connects the phone to a PC — not a phone-to-USB backup);
+  manuals.plus OTG tutorial (manuals.plus — confirms Oppo, Vivo,
+  iQOO, Realme, and OnePlus phones can only use OTG when the
+  function is enabled in Settings, and that the switch turns
+  itself off again after 5 to 10 minutes without use; an OTG
+  how-to, not a backup guide — but it confirms the iQOO OTG
+  switch and its timeout); beinfora OTG guide (beinfora.com — a
+  general OTG explainer that names Funtouch OS among the skins
+  that enforce automated security timeouts disabling OTG until it
+  is manually enabled in system settings; a general guide, not an
+  iQOO backup guide — but it confirms the Funtouch OS OTG
+  timeout); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a real phone-to-USB app, one-tap
+  whole-gallery copy, only new photos next time, warns about the
+  FAT32 4 GB limit, free with ads, one-time purchase removes ads
+  — generic Android, not an iQOO guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop, or
+  size verification of every file); Google Photos (Play listing,
+  com.google.android.apps.photos — 15 GB cloud storage free;
+  cloud, not a USB copy); GSMArena iQOO 13 specs
+  (m.gsmarena.com/vivo_iqoo_13-ampp-13462.php — USB Type-C 3.2
+  with OTG; Android 15 with Funtouch 15 on the international
+  model and OriginOS 5 on the China model; spec tables, not a
+  guide — and the confirmation that the current iQOO flagship
+  runs Funtouch OS outside China with OTG); GSMArena iQOO 12 /
+  Neo 10 / Z10 Turbo Pro specs
+  (m.gsmarena.com/compare.php3?idPhone1=12691&idPhone2=13462 —
+  USB Type-C 2.0 with OTG for the iQOO 12, the Neo 10, and the
+  Z10 Turbo Pro; spec tables, not a guide).
+  iQOO specifics: iQOO is Vivo's sub-brand and runs Funtouch OS
+  outside China (the iQOO 13 runs Android 15 with Funtouch 15 on
+  the international model and OriginOS 5 on the China model);
+  stock file manager is File Manager (the Funtouch OS file
+  manager — a category-based browser: Images, Videos, Audio,
+  Documents, Downloads); gallery app is the Albums app (the
+  iQOO guides list photos syncing through the Albums app or
+  Google Photos, so the gallery is Vivo's own and Google Photos
+  is the cloud backup behind it); iQOO's own backup routes are
+  iQOO Cloud Backup (powered by vivo's cloud service — gallery
+  sync and backup to a vivo account, free storage limited),
+  Google's (Google Photos, Google backup via Google One), and PC
+  tools (vivo Mobile Assistant, Coolmuster Android Backup Manager
+  — both back the phone up to a computer; EasyShare moves data to
+  another phone or backs it up to a PC); OTG: spec tables list
+  USB Type-C 3.2 with OTG for the iQOO 13 and USB Type-C 2.0 with
+  OTG for the iQOO 12, the Neo 10, and the Z10 Turbo Pro;
+  whether your model has a microSD slot varies by model — check
+  your own model's specs; on Funtouch OS OTG is off by default —
+  enable it in Settings > More settings > OTG (search Settings
+  for "OTG" if you can't find it), and Vivo's own FAQ says the
+  switch turns itself off if it is not used in 5 minutes (same
+  switch as the Vivo guide, WL-52, verified there); all current
+  iQOO phones are USB-C. iQOO's own tools: iQOO Cloud Backup
+  (sign in with a vivo account, backs the phone up to vivo's
+  servers) and Google backup (Settings > Google > Backup, Back
+  up by Google One) restore to a new phone from the cloud;
+  Google Photos (Photos settings > Backup, to Google's cloud,
+  15 GB free) backs photos up to Google's cloud; vivo Mobile
+  Assistant and Coolmuster Android Backup Manager back the phone
+  up to a PC; EasyShare moves data to another phone or backs it
+  up to a PC; Google Photos / Google One / iQOO Cloud back
+  photos up to their clouds — none of them writes plain photo
+  files to a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-61, 31st how-to):
+  docs/iqoo-photos-to-usb.html. Query 30 scored in
+  tool/growth/searches.md. Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml (31 items)
+  updated. PR #89 (article), merge d6e0632, CI run 44115973167
+  (Android PR, success); this row PR #90.
+
 ## WL-60 — Back up Redmi photos to USB article, 30th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
