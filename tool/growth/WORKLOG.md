@@ -1,5 +1,135 @@
 # SnapDisk — Work Log
 
+## WL-66 — Back up Sharp Aquos photos to USB article, 35th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/sharp-aquos-photos-to-usb.html ("Back up Sharp
+  Aquos photos to a USB drive (no computer)"), following the
+  WL-54/WL-55/WL-56/WL-57/WL-58/WL-59/WL-60/WL-61/WL-62/WL-63/
+  WL-64/WL-65 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot
+  — same reuse as the 8th through 34th articles). Facts
+  verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price); no INTERNET permission in AndroidManifest.xml;
+  FAT32 files >=4 GiB skipped with reason
+  (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw byte-stream copy
+  (BackupEngine.copyWithResume — no decode/re-encode) with size
+  verification after copy. Search evidence (Nov 17, 2026 live
+  web search): there is no Sharp-specific phone-to-USB
+  guide in the top results at all — the Sharp-specific
+  results are device manuals and generic FAQ pages about PC
+  and cloud backup, and the rest are generic manual guides.
+  Sharp Aquos Zeta SH-01H user manual
+  (manua.ls/sharp/aquos-zeta-sh-01h/manual?p=85 —
+  "External Device Connection": connect the handset to a PC
+  with the micro USB cable, and use a microSD card as
+  external memory for a PC; a manual, not a guide — and it
+  needs a PC in between); devicesfaq.com, "Frequently asked
+  questions Sharp Aquos Famiredo"
+  (devicesfaq.com/en/frequently-asked-questions/sharp-aquos-
+  famiredo — "How to backup my Sharp Aquos Famiredo?": the
+  most economical method is to connect the phone to a
+  computer with the USB cable and copy the files with the
+  file browser; for a cloud backup, Google Drive (15 GB
+  free) or Google Photos for photos and videos; a generic
+  FAQ template, not a phone-to-USB guide); Sharp Aquos Ever
+  SH-02J user manual
+  (manua.ls/sharp/aquos-ever-sh-02j/manual?p=64 — docomo
+  Data Copy backs up phonebook, mail, and media to a
+  microSD card or directly to another phone, and Data
+  Storage Box backs up call log and music; Sharp-specific,
+  but it backs up to a card or another phone — not to a USB
+  drive as plain files); devicesfaq.com Aquos model FAQs
+  (devicesfaq.com/en/frequently-asked-questions/sharp-aquos-
+  xx — the same backup FAQ on the Aquos Xx, Crystal X,
+  Zero, R3, and K pages: connect to a computer with the USB
+  cable and copy with the file browser, Google Drive for a
+  cloud backup, Google Photos for photos and videos; a
+  generic template repeated across models, not a
+  phone-to-USB guide); AnExplorer guide
+  (anexplorer.io/features/usb-otg — plug a USB drive in via
+  OTG and AnExplorer gives full read/write access, FAT32,
+  exFAT, and NTFS; generic Android, not written for Sharp —
+  and it is a guide for its own app); YouTube video
+  (youtube.com/watch?v=ch1evyu5PPM — generic OTG + file
+  manager walkthrough: OTG adapter, the phone's built-in
+  file manager, select photos in DCIM, Copy or Move to the
+  drive); YouTube video (youtube.com/watch?v=PYcbV25CczI —
+  generic OTG + file manager walkthrough); AnExplorer guide
+  (anexplorer.io/transfer/phone-to-usb — plug in a flash
+  drive via OTG and copy files with a progress bar showing
+  speed and time remaining; generic Android, not written for
+  Sharp — and it is a guide for its own app); askfilo Q&A
+  (askfilo.com/user-question-answers-smart-solutions/how-to-
+  transfer-pictures-from-an-android-phone-to-a-
+  3436303837303432 — generic OTG adapter, file manager,
+  DCIM, Copy or Move, or a PC/Mac as a middleman; generic
+  Android, not written for Sharp); Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC
+  drag-and-drop, Google Drive, or AirDroid; generic
+  Android, most ways need a computer or a cloud account);
+  Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a real phone-to-USB app,
+  one-tap whole-gallery copy, only new photos next time,
+  warns about the FAT32 4 GB limit, free with ads, one-time
+  purchase removes ads — generic Android, not a Sharp
+  guide, and it does not promise oldest-first order,
+  detailed progress with Pause and Stop, or size
+  verification of every file).
+  Wider search: Sharp Aquos R10 specs
+  (smartprix.com/mobiles/sharp-aquos-r10-ppd19w2x8omg —
+  USB-C v3.2, USB on-the-go, Android 15; spec tables, not a
+  guide — and the confirmation that the Aquos R10 has OTG);
+  Sharp Aquos R9 specs (mobileinto.com/ke/Sharp-Aquos-R9 —
+  USB Type-C 2.0, OTG; spec tables, not a guide — and the
+  confirmation that the Aquos R9 has OTG); Sharp Aquos
+  sense9 specs
+  (smartprix.com/mobiles/sharp-aquos-sense-9-ppd17ipy3urx —
+  USB-C v3.2, USB on-the-go; spec tables, not a guide —
+  and the confirmation that the Aquos sense9 has OTG).
+  Sharp specifics: Sharp Aquos phones (R10, R9, and
+  sense9) run near-stock Android (the Aquos R10 ships with
+  Android 15); OTG is on all three current models: spec
+  tables list USB Type-C 3.2 with OTG for the Aquos R10 and
+  the Aquos sense9, and USB Type-C 2.0 with OTG for the
+  Aquos R9 — no OTG switch on Sharp's near-stock Android,
+  so the drive mounts on plug-in; every current Aquos has a
+  microSDXC slot; Sharp has no backup tool of its own —
+  the routes are Google's (Google Photos, Google backup)
+  plus docomo Data Copy on Japan carrier models (backs up
+  to a microSD card or another phone; Data Storage Box for
+  call log and music); stock file manager is Files by Google
+  (Sharp's own FAQ pages point to the Files app for finding
+  downloaded files); stock photo backup is Google Photos
+  (Sharp's own FAQ pages present Google Photos as the route
+  for backing up photos and videos); Sharp phones ship with
+  Google apps including the Play Store, so SnapDisk installs
+  from the v0.1.2 APK today and from Play once the listing
+  is live. Sharp's own tools: Google Photos (Photos
+  settings > Backup, to Google's cloud, 15 GB free) backs
+  photos up to Google's cloud; Google backup (Settings >
+  System > Backup, Back up to Google Drive) restores to a
+  new phone from the cloud; docomo Data Copy backs the
+  phone up to a microSD card or another phone; Data Storage
+  Box backs up call log and music; Sharp's manuals back the
+  phone up to a PC via USB cable — none of them writes
+  plain photo files to a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-66, 35th how-to):
+  docs/sharp-aquos-photos-to-usb.html. Query 34 scored in
+  tool/growth/searches.md. Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml (35 items)
+  updated. PR #98 (article), merge 0644b1b, CI run 44171900387
+  (Android PR, success); this row PR #99.
+
 ## WL-65 — Back up Fairphone photos to USB article, 34th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
