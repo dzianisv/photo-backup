@@ -42,6 +42,7 @@
 - [Back up Nokia photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/nokia-photos-to-usb.html): back up Nokia photos to a USB drive with no computer — no documented OTG switch, Google backup and Nokia PC Suite compared, Files by Google manual copy; original files, byte-for-byte copy, size-checked.
 - [Back up Asus photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/asus-photos-to-usb.html): back up Asus photos to a USB drive with no computer — no documented OTG switch, ASUS Phone Clone and Asus WebStorage compared, Asus File Manager manual copy; original files, byte-for-byte copy, size-checked.
 - [Back up Infinix photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/infinix-photos-to-usb.html): back up Infinix photos to a USB drive with no computer — OTG varies by model (Smart 5 has none; Note 12 G96, Zero 30 5G, Hot 70 do), Google backup, XCloud and Coolmuster compared, File Manager manual copy; original files, byte-for-byte copy, size-checked.
+- [Back up Tecno photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/tecno-photos-to-usb.html): back up Tecno photos to a USB drive with no computer — OTG varies by model (POP 7 Pro, CAMON 20 Pro, POVA 7, SPARK Go 2024, Pova 5 Pro listed; Pop 3 lists OTG but owners report it not enabled), built-in Backup & Restore, TECNO Cloud and Coolmuster compared, File Manager manual copy; original files, byte-for-byte copy, size-checked.
 
 ## Blog
 

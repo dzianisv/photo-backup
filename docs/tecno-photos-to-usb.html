@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Tecno photos to a USB drive — SnapDisk</title>
+<meta name="description" content="Back up Tecno photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/tecno-photos-to-usb.html">
+<meta property="og:title" content="Back up Tecno photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up Tecno photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/tecno-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/tecno-photos-to-usb.html#article",
+      "headline": "Back up Tecno photos to a USB drive (no computer)",
+      "description": "Back up Tecno photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-17",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/tecno-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/tecno-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up Tecno photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — if your model supports OTG. Tecno's official spec pages list OTG for the POP 7 Pro, CAMON 20 Pro, POVA 7, and SPARK Go 2024, and spec tables list it for the Pova 5 Pro too — but support varies by model and regional variant, so check your own model's specs first. Most OTG models mount the drive on plug-in with a \"USB storage added\" notification. One low-quality guide reports an OTG toggle in the connection settings on the Pova 4, but that report is unverified, so treat the location as a lead, not a fact. The Pop 3 lists OTG in its specs, but owners report it not enabled out of the box — check your own phone before buying an adapter. If nothing appears, check Settings > Storage. The stock route is File Manager: plug the drive in, open File Manager, pick the photos, and Copy to the drive. SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later. Tecno phones ship with Google Play, so once the listing is live that will be the install route."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/tecno-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up Tecno photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/tecno-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up Tecno photos to a USB drive (no computer)</h1>
+  <p class="dek">Tecno phones (Spark, Camon, Pova, Phantom, and Pop series) run HiOS — Tecno's Android skin — with OTG support that varies by model: most recent models mount the drive on plug-in with a "USB storage added" notification, but support is not universal, and some older models list OTG in the specs without it working out of the box. And Tecno's own backup tools back your photos up to the cloud, to an SD card, or to a PC, not to a USB drive as plain files. A USB-C flash drive plugs straight into a modern Tecno. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 17, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On a Tecno phone, check your model supports OTG first — Tecno's official spec pages list OTG for the POP 7 Pro, CAMON 20 Pro, POVA 7, and SPARK Go 2024, and spec tables list it for the Pova 5 Pro too — but support varies by model and regional variant, so check your own model's specs, and don't assume a missing toggle means a broken phone: the Pop 3 lists OTG in its specs, but owners report it not enabled out of the box — then plug a USB drive in: most OTG models mount it straight away with a "USB storage added" notification; if nothing appears, check Settings &gt; Storage (one low-quality guide reports an OTG toggle in the connection settings on the Pova 4, but that report is unverified, so treat the location as a lead, not a fact) — then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: Tecno's File Manager works — it is Transsion's file manager, the stock file manager on Tecno phones, and it copies photos to a USB drive — but it is manual select-copy-paste with no progress detail, no resume, and no verification; Tecno's own backup routes work too, but none of them writes your photos as plain files to a USB drive — Google backup restores your data to a new phone from the cloud, TECNO Cloud backs photos up to Tecno's cloud, the built-in Backup &amp; Restore writes to the phone or an SD card, and Coolmuster backs the phone up to a PC. One rival app does exist — Photos to USB: OTG Backup copies a whole gallery to a pen drive in one tap and resumes where it stopped — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 17, 2026, no top search result for this query is a Tecno-specific guide at all, let alone a Tecno-specific automated whole-library backup with progress, Pause/Stop, and resume: the top results are generic manual guides, PC tools, or a rival app page.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up photos from Tecno to USB flash drive without computer" and there is no Tecno-specific result in the top results at all — the rest are generic Android guides, in different packaging:</p>
+  <ul>
+    <li><strong>YouTube</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos</a>) — a video walkthrough of the generic route: OTG adapter, the phone's built-in file manager, select photos in DCIM, Copy or Move to the drive. Generic Android, not written for Tecno.</li>
+    <li><strong>YouTube</strong> (<a href="https://www.youtube.com/watch?v=ch1evyu5PPM">How to Transfer Photos, Videos and any Files from Android Phone to USB Pendrive</a>) — a second video of the same generic route: check OTG compatibility, connect the drive with an OTG adapter, open the file manager, select the files, Copy or Move, safely eject. Generic Android, not written for Tecno.</li>
+    <li><strong>Dr.Fone</strong> (<a href="http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html">4 Practical Ways to Transfer Photos from Android to USB Flash Drive</a>) — OTG copy, PC drag-and-drop, Google Drive, or AirDroid over Wi-Fi. Generic Android, and most of the ways need a computer or a cloud account.</li>
+    <li><strong>AnExplorer</strong> (<a href="https://anexplorer.io/transfer/phone-to-usb">How to Transfer Files from Android to USB Drive (OTG, No Root)</a>) — connect the drive with an OTG adapter, open AnExplorer, long-press to select files in DCIM/Camera, Copy, Paste to the drive. A thorough manual guide, and the only one of these guides that shows a progress bar with speed and time remaining — but it is still a manual copy: you pick the files, and there is no resume or verification.</li>
+    <li><strong>askfilo</strong> (<a href="https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432">How to transfer pictures from an Android phone to a flash drive</a>) — OTG adapter and the phone's file manager, or a PC as a middleman. Generic Android, not written for Tecno.</li>
+    <li><strong>epictechtips</strong> (<a href="https://epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/">How to Transfer Pictures from Android Phone to USB Flash Drive</a>) — plug the drive in, tap the USB notification, open the file manager, select the photos, Move to the drive — or use a computer, cloud storage, or email as the middleman. Generic Android, not written for Tecno.</li>
+    <li><strong>FoneLab</strong> (<a href="https://www.fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html">How to Transfer Photos from Android to Flash Drive in 3 Easy Ways</a>) — OTG adapter copy, a PC file-explorer copy, or the FoneLab HyperTrans PC tool. Generic Android, and two of the three ways need a computer.</li>
+    <li><strong>MobileTrans</strong> (<a href="https://mobiletrans.wondershare.com/android-tips/how-to-transfer-files-via-otg.html">How to Transfer Files from Mobile via OTG?</a>) — connect the phone and the pen drive with an OTG cable, select the files, Copy, Paste to the drive. Generic Android, not written for Tecno.</li>
+    <li><strong>TechDows</strong> (<a href="https://techdows.com/usb-otg-everything-you-need-to-know.html">USB OTG: everything you need to know</a>) — a general OTG explainer: which adapter to buy, how to open OTG storage, and what to do when a drive does not show up. Useful background, not a Tecno guide.</li>
+    <li><strong>Photos to USB: OTG Backup</strong> (<a href="https://play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb">Google Play</a>) — the one-tap app alternative, from the wider search for this job: a real phone-to-USB app that copies the whole gallery to a pen drive in one tap, copies only new photos next time, and warns about the FAT32 4 GB limit. It is free with ads, with a one-time purchase to remove them. It is the closest thing to this article's job — but it is a generic Android listing, not a Tecno guide, and it does not promise oldest-first order, detailed progress with Pause and Stop, or size verification of every file.</li>
+    <li><strong>Coolmuster</strong> (<a href="https://www.coolmuster.com/android/tecno-backup-restore.html">How to Perform TECNO Backup and Restore [4 Solutions]</a>) — the one Tecno-specific backup page found in the wider search, and it is not a phone-to-USB guide at all: the Coolmuster Android Backup Manager desktop tool backs the phone up to a computer over USB with debugging on, the built-in Backup &amp; Restore writes to the phone or an SD card, TECNO Cloud backs up to Tecno's cloud, and Google Backup backs up to Google's cloud — a PC, a card, or a cloud, never a USB drive. Note the source is a third-party tool vendor, not Tecno's own site, so the menu names are reported, not official.</li>
+    <li><strong>helpforsmartphone</strong> (<a href="https://www.helpforsmartphone.com/digiceldm/en/tecno/camon-30/android-14/guides/7/Back%20up%20phone">Back up phone — Tecno Camon 30</a>) — a step-by-step guide for the Camon 30: Settings, Back up to Google Drive, turn it on, pick the Google account, sync. A cloud backup guide for one Tecno model, not a phone-to-USB guide.</li>
+    <li><strong>MobiKin</strong> (<a href="https://www.mobikin.com/android-backup/tecno-contact-backup-and-restore.html">5 Clever Strategies for TECNO Contact Backup and Restore</a>) — a Tecno-specific backup page, but for contacts, not photos: the MobiKin desktop tool, Google account sync, an SD-card .vcf export, or a contacts-backup app. A PC, a cloud, or a card — and contacts, not a photo library on a USB drive.</li>
+    <li><strong>umatechnology.org</strong> (<a href="http://umatechnology.org/tecno-phone-otg-support-how-to-check-and-connect-usb-devices/">Does Your TECNO Phone Support OTG? Check Models and Setup</a>) — the one Tecno-specific OTG page in the wider search: some Tecno phones support OTG, but it depends on the exact model and regional variant, and Tecno's official spec pages list OTG for the POP 7 Pro, CAMON 20 Pro, POVA 7, and SPARK Go 2024. It is a third-party site citing official specs, so treat the model list as reported from those pages, not verified here — and it is a check-and-setup page, not a backup guide.</li>
+    <li><strong>HT Tech's Tecno OTG list</strong> (<a href="https://tech.hindustantimes.com/amp/mobile-finder/tecno-brand/usb-otg-external-storage">Tecno Phones with USB Otg</a>) — a filter list of Tecno models with USB OTG, not a guide. Useful to check your own model against, but it says nothing about how to back photos up.</li>
+    <li><strong>smartprix's Pova 5 Pro spec table</strong> (<a href="https://www.smartprix.com/mobiles/tecno_pova_5_pro_vs_otho_t3-cpd1bngdazz5_pd140qzrbfs.php">Tecno Pova 5 Pro vs Otho T3</a>) — the spec table lists "USB on-the-go" for the Pova 5 Pro. One more model with OTG, from its spec sheet.</li>
+    <li><strong>devicesfaq's Pova Neo 3 page</strong> (<a href="https://www.devicesfaq.com/en/share-internet/tecno-pova-neo-3">How to share internet on Tecno Pova Neo 3</a>) — a tethering guide that notes the Pova Neo 3 ships with a USB Type-C 2.0 OTG cable in the box. A small confirmation that OTG is a shipped feature on that model — but the page is about internet sharing, not photos.</li>
+    <li><strong>go.tuxmat.com's Pova 4 guide</strong> (<a href="https://go.tuxmat.com/total-ask/enable-otg-on-tecno-pova-4-a-quick-guide-1767649009">Enable OTG On Tecno Pova 4: A Quick Guide</a>) — reports an OTG toggle inside the connection settings on the Pova 4, and that some Tecno phones enable OTG automatically when a device is connected. A low-quality guide — treat the toggle location as reported, not verified, and check your own phone.</li>
+    <li><strong>performancedriversclub.org's F1 page</strong> (<a href="https://performancedriversclub.org/tecno-f1-otg-support/">Does Tecno F1 Support Otg?</a>) — reports that the Tecno F1 supports OTG for flash drives, keyboards, and game controllers. A low-quality page — the OTG support itself is the usable claim, not the detail around it.</li>
+    <li><strong>Google's Android support thread on the Pop 3</strong> (<a href="https://support.google.com/android/thread/108876882/how-do-i-enable-usb-otg-on-my-tecno-pop3-phone?hl=en">How Do I Enable USB OTG On My Tecno Pop3 Phone</a>) — the Pop 3 owner found OTG in the phone's specifications, but it is not enabled on the phone, and asks how to turn it on. The honest read: a spec sheet that says OTG does not mean OTG works out of the box on every Tecno — check your own phone before buying an adapter.</li>
+    <li><strong>YouTube</strong> (<a href="https://www.youtube.com/watch?v=KFoAL46N-nk">OTG Not Connect Problem Solution | Tecno, Infinix Mobiles</a>) — a video about OTG not connecting on Tecno and Infinix phones, including the Spark 20 Pro+ and the Zero 30 and 40 and Camon 30 series. A troubleshooting video, not a backup guide — and a reminder that OTG not appearing is a known Tecno issue, not proof the phone is broken.</li>
+    <li><strong>androidguias' OTG explainer</strong> (<a href="https://en.androidguias.com/USB-OTG-on-Android%3A-Everything-you-can-do/">USB OTG on Android: Everything you can do</a>) — a general OTG explainer: how to check compatibility, which adapter to buy, and that some models have a manual setting to enable it. Useful background, not a Tecno guide.</li>
+    <li><strong>Google Photos</strong> (<a href="https://play.google.com/store/apps/details?id=com.google.android.apps.photos">Google Play</a>) — Google's own photo backup: 15 GB of cloud storage free with every Google account, automatic upload over Wi-Fi. Cloud, not a USB copy.</li>
+    <li><strong>Transsion File Manager</strong> (<a href="https://play.google.com/store/apps/details?id=com.transsion.filemanagerx&hl=en">Google Play</a>) — the stock file manager on Tecno phones, by Shanghai Transsion Co., Ltd.: a file manager with category browsing by music, video, image, document, zip, and apk, plus global search. This is the File Manager app the manual method below uses.</li>
+    <li><strong>PakObserver's Google AI Plus story</strong> (<a href="https://pakobserver.net/tecno-makes-everyday-smartphone-use-easier-with-free-2tb-cloud-storage/">TECNO makes Everyday Smartphone Use Easier with Free 2TB Cloud Storage</a>) — eligible Tecno smartphones launched from December 2025 come with three months of Google AI Plus, including 2TB of cloud storage for automatic backups. A cloud offer for newer Tecno phones — generous, but it is still a cloud backup, not a folder of photo files on a USB drive.</li>
+    <li><strong>Cloud routes</strong> — Google Photos backs up over Wi-Fi to Google's servers, not to a drive you hold; its "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Tecno's own cloud is TECNO Cloud, also called HiOS Cloud — it backs the phone up to Tecno's servers, not to a USB drive — and it needs a TECNO account and a connection, so check your own phone before counting on it.</li>
+  </ul>
+  <p>None of them is a Tecno-specific guide at all, and none of them offers an automated Tecno photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>What you need</h2>
+  <p>A Tecno phone (Android 7.0 or later for SnapDisk) that supports OTG — check your model's specs before buying anything; a USB drive your phone can read — a USB-C flash drive plugs straight into a modern Tecno, or a regular USB drive with a USB-C OTG adapter; older Tecno phones with a Micro-USB port need a Micro-USB OTG adapter instead; and enough space on the drive for the photos you want to keep. Three Tecno specifics: first, OTG is not a given. Tecno phones run HiOS — Tecno's Android skin — and the drive mounts on plug-in on models that support OTG: look for a "USB storage added" or "USB drive connected" notification. One low-quality guide reports an OTG toggle in the connection settings on the Pova 4 — but that report is unverified, so treat the path as a lead to check, not a fact. If the phone ignores the drive, check Settings &gt; Storage. And not every Tecno phone has OTG working out of the box — the Pop 3 lists it in the specs while owners report it not enabled — so for any other model check its specs, and don't assume a missing toggle means a broken phone. Second, Tecno's stock file manager is File Manager, Transsion's file manager, which handles the phone's internal storage and connected external storage — and Tecno camera photos live in DCIM/Camera — and whether your model has a microSD slot varies by model, so check your own model's specs rather than assuming one either way; a USB drive is the plug-in storage that works on every OTG model. Third, Tecno phones ship with Google Play, so SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live — there is no sideload-only situation here. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Check your model supports OTG.</strong> Tecno's official spec pages list OTG for the POP 7 Pro, CAMON 20 Pro, POVA 7, and SPARK Go 2024, and spec tables list it for the Pova 5 Pro too. For any other model, check its specs — and remember the Pop 3 lists OTG in its specs while owners report it not enabled, so a spec line alone is not proof.</li>
+    <li><strong>Plug in the USB drive.</strong> Most OTG models mount it straight away — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage; one guide reports an OTG toggle in the connection settings, but that report is unverified, so there may be nothing to turn on.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — Tecno camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the phone normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the phone to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: File Manager (the stock route, no app needed)</h2>
+  <p>Tecno phones ship with File Manager — Transsion's file manager — as the stock file manager, and it can copy your photos to the USB drive: 1. Plug in the USB drive — a notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage. 2. Open File Manager and confirm the USB drive shows up under external storage. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until File Manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: Tecno's own tools (built-in backup, TECNO Cloud, Google backup, or a PC — not phone-to-USB)</h2>
+  <p>If you want Tecno's own route, know what each tool actually does — none of them writes your photos as plain files to a USB drive. The built-in Backup &amp; Restore is the offline route: Settings &gt; System &gt; Back up &amp; reset, Local backup or Phone backup — it backs contacts, messages, call logs, system data, and apps to the phone's internal storage or an SD card, with no computer and no internet. It is a real backup — but it writes to the phone or a card, not to a USB drive, and the menu names come from a third-party tool vendor's guide, not Tecno's own site, so check them on your own phone. TECNO Cloud is Tecno's own cloud backup, also called HiOS Cloud: Settings &gt; TECNO Cloud, sign in with a TECNO account, choose Backup, pick the data types, Back up now — it backs contacts, photos, messages, and app settings up to Tecno's servers and restores them on any Tecno device. It is a real backup too — but it lives on Tecno's servers, needs a TECNO account and a connection, and it still doesn't give you a folder of photo files on a USB drive. Google backup is the route Tecno's guides point to first: Settings &gt; Google &gt; Backup, Back up by Google One on — it backs the phone up to your Google account so you can restore app settings and data to a new phone. It is a real backup — but the backup lives in Google's cloud and restores to a phone, not a folder of photo files on a USB drive you can plug into any computer and open. Google Photos is Google's own photo backup app: it automatically backs up photos to Google's cloud, with 15 GB free with every Google account — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. Eligible Tecno phones launched from December 2025 also get three months of Google AI Plus with 2TB of cloud storage — generous, but still a cloud backup. Coolmuster Android Backup Manager is the PC route the Tecno guides offer: a Windows tool that backs the whole phone up to a computer in one click — but it needs the computer, a USB cable, and USB debugging on. And the SD-card route copies DCIM to a memory card with File Manager — a real local copy, but it stays on a card in the phone (or needs a card reader to open anywhere else), not a USB drive you can plug into any computer. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the Tecno phone into the computer with a USB cable, tap the USB notification and choose File transfer (by default a Tecno phone charges only) — and drag the DCIM folder onto the USB drive. This works fine, and it is the only route above that needs a second device in between. If the phone and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 17, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the phone is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>No OTG, no USB backup.</strong> On a model without working OTG — the Pop 3 lists it in the specs while owners report it not enabled — a USB drive may simply never appear, and no app can change that. The cloud routes (Google Photos, TECNO Cloud) are the backup for those phones.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter before checking OTG.</strong> Not every Tecno phone has working OTG — the Pop 3 lists it in the specs while owners report it not enabled. Check your own model's specs first, or the drive will never appear no matter what you plug in.</li>
+    <li><strong>Hunting for an OTG switch that may not exist.</strong> One guide reports a toggle in the connection settings on the Pova 4, but that report is unverified, and HiOS mounts the drive on plug-in with a "USB storage added" notification on models that support OTG. If your Tecno phone ignores a drive, check Settings &gt; Storage — but a missing switch is not proof the phone is broken; some models simply have no working OTG.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google backup, TECNO Cloud, and Google Photos back your phone up to Google's or Tecno's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> Coolmuster backs the phone up to a computer — it needs the PC, a cable, and USB debugging. If the phone and the drive are all you have, a phone-to-USB copy is the route, not a desktop tool.</li>
+    <li><strong>Mistaking an SD-card copy for a USB backup.</strong> Copying DCIM to a memory card is a real local copy — but the card stays in the phone, and opening it anywhere else needs a card reader. A USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 17, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On Tecno the cloud routes are Google Photos, Google One, and TECNO Cloud — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="infinix-photos-to-usb.html">Back up Infinix photos to a USB drive (no computer)</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
