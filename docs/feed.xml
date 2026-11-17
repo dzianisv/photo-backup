@@ -244,5 +244,12 @@
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
     <description>Fairphone phones (4, 5, and 6) run Fairphone OS — near-stock Android — with USB-C and OTG on all three: spec tables list USB Type-C 3.0 with OTG and DisplayPort for the Fairphone 4 and the Fairphone 5, and USB Type-C 2.0 with OTG for the Fairphone 6. And Fairphone has no backup tool of its own: the routes on a Fairphone are Google's — Google Photos and Google backup — plus PC tools and rooted backup apps, which back your photos up to the cloud, to a computer, or to another device, not to a USB drive as plain files. A USB-C flash drive plugs straight into any current Fairphone. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up Sharp Aquos photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/sharp-aquos-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/sharp-aquos-photos-to-usb.html</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Sharp Aquos phones (R10, R9, and sense9) run near-stock Android with USB-C and OTG on all three: spec tables list USB Type-C 3.2 with OTG for the Aquos R10 and the Aquos sense9, and USB Type-C 2.0 with OTG for the Aquos R9. And Sharp has no backup tool of its own: the routes on a Sharp Aquos are Google's — Google Photos and Google backup — plus, on Japan carrier models, docomo Data Copy to a microSD card, which back your photos up to the cloud, to a card, or to another phone, not to a USB drive as plain files. A USB-C flash drive plugs straight into any current Aquos. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
