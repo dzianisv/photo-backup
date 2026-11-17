@@ -837,6 +837,143 @@ demand is read off competitor install velocity instead (see
 - Verdict: how-to article material, not a listing keyword.
   Article published Nov 17, 2026 (WL-55, 25th how-to):
   docs/asus-photos-to-usb.html.
+### 25. "back up photos from Infinix to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Infinix-specific
+  guide at all, let alone an Infinix-specific automated
+  whole-library backup with progress, Pause/Stop, and
+  resume — the top results are generic manual guides,
+  PC tools, or a rival app page.
+- Current top results (scored Nov 17, 2026, live web search):
+  YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-
+  drop, Google Drive, or AirDroid; generic Android, most ways
+  need a computer or a cloud account); AnExplorer guide
+  (anexplorer.io/transfer/phone-to-usb — manual
+  select-copy-paste, the only one of these guides that
+  shows a progress bar with speed and time remaining, still no
+  resume or verification); askfilo guide (askfilo.com — OTG
+  adapter + file manager, or a PC as a middleman; generic
+  Android, not written for Infinix); TheGadgetians guide
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-
+  without-computer/ — OTG adapter + file manager, mentions
+  ThePhotoStick Omni; generic Android and iPhone, not written
+  for Infinix); Infinix Hot 70 retailer page
+  (mascomintl.com — a shop listing, not a guide: "USB-C with
+  OTG — read flash drives directly", dedicated microSDXC slot;
+  the one Infinix-specific OTG confirmation in the top
+  results). Wider search: Pixoneye guide
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a USB drive with a file manager,
+  one small batch at a time; notes ThePhotoStick Omni;
+  generic Android and iPhone, not written for Infinix);
+  SoftHandTech guide
+  (softhandtech.com/how-do-you-transfer-pictures-from-your-
+  phone-to-a-flash-drive/ — OTG adapter + file manager, or a
+  computer, or cloud storage; generic, not written for
+  Infinix); FoneLab guide
+  (fonelab.com/resource/how-to-transfer-photos-from-android-
+  phone-to-usb-flash-drive.html — OTG adapter copy, a PC
+  file-explorer copy, or the FoneLab HyperTrans PC tool;
+  generic Android, two of the three ways need a computer);
+  MobileTrans OTG guide
+  (mobiletrans.wondershare.com/android-tips/how-to-transfer-
+  files-via-otg.html — OTG cable, select files, Copy, Paste
+  to the drive; generic Android, not written for Infinix);
+  TechDows OTG explainer
+  (techdows.com/usb-otg-everything-you-need-to-know.html —
+  which adapter to buy, how to open OTG storage, what to do
+  when a drive does not show up; useful background, not an
+  Infinix guide); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a real phone-to-USB app, one-tap
+  whole-gallery copy, only new photos next time, warns about
+  the FAT32 4 GB limit, free with ads, one-time purchase
+  removes ads — generic Android, not an Infinix guide, and it
+  does not promise oldest-first order, detailed progress with
+  Pause and Stop, or size verification of every file); the
+  one Infinix-specific backup page found in the wider search,
+  infinixfirmware.io
+  (infinixfirmware.io/how-to-backup-restore-data-on-infinix-
+  smartphones/ — Google Account Backup, XOS backup via
+  Settings > System > Backup & Reset with Local Backup or
+  XCloud Backup, a manual copy to an SD card, or a copy to a
+  laptop over USB; a cloud, a card, or a PC, never a USB
+  drive; a third-party fan site, not Infinix's own site, so
+  the XCloud menu names are reported, not official);
+  Coolmuster Infinix backup guide
+  (coolmuster.com/android/infinix-backup-restore.html —
+  Google Backup to the cloud, Infinix Cloud to Infinix's
+  servers, or the Coolmuster desktop tool backing the phone
+  up to a computer over USB; a cloud or a PC, never a USB
+  drive); Alibaba external-drive guide
+  (alibaba.com/product-insights/how-to-backup-your-entire-
+  smartphone-to-an-external-drive-without-cloud-storage.html
+  — generic Android OTG + file manager full-phone backup to
+  an external drive; not written for Infinix); Trustloud
+  Android backup guide (trustloud.com/back-up-android-phone/
+  — Google One + Google Photos, Samsung Cloud or Smart
+  Switch, or a USB cable to a computer; cloud or a PC,
+  generic, not written for Infinix); Techzei phone backup
+  guide (techzei.com/how-to-back-up-your-phone-android-
+  iphone/ — Google backup and Google Photos plus a monthly
+  USB copy of DCIM to a computer or drive; generic Android
+  and iPhone, not written for Infinix); smallusefultips
+  Smart 5 OTG page
+  (smallusefultips.com/does-infinix-smart-5-support-otg/ —
+  the Infinix Smart 5 (2020, Android 10 Go) does NOT support
+  OTG, a hardware limitation no adapter or setting can fix);
+  accio.com Zero 30 OTG guide
+  (accio.com/business/infinix-zero-30-otg-setting — Zero 30
+  5G supports OTG via Type-C; toggle reported at Settings >
+  More Connections > OTG, with Infinix switching OTG off
+  after 10 minutes idle; an AI-generated report, so the
+  toggle location is reported, not verified, and firmware
+  may move it); docsbot.ai Note 12 G96 OTG page
+  (docsbot.ai/prompts/technical/infinix-note-12-g96-otg-
+  support — the Note 12 G96 supports OTG); FoneArena GT 50
+  Pro unboxing
+  (fonearena.com/blog/497019/infinix-gt-50-pro-unboxing-
+  first-impressions.html — runs Android 16 with XOS 16,
+  USB-C port; OTG support not stated for this model);
+  91mobiles XOS 16 hands-on
+  (91mobiles.com/reviews/infinix-xos-16-hands/amp/ — XOS 16
+  redesigned the first-party Gallery and File Manager apps,
+  Gallery gained AI imaging features); XOS stock apps
+  (toolify.ai and nairaland.com — stock gallery is AI Gallery
+  since XOS 5.5, stock file manager is File Manager);
+  HT Tech Infinix OTG list
+  (tech.hindustantimes.com/mobile-finder/infinix-brand/
+  usb-otg-external-storage — a filter list of Infinix models
+  with USB OTG, not a guide); Google Photos (Play listing,
+  com.google.android.apps.photos — 15 GB cloud storage free;
+  cloud, not a USB copy). Infinix specifics: Infinix phones
+  run XOS (Infinix's Android skin; XOS 16 is current, on
+  Android 16); stock file manager is File Manager (XOS File
+  Manager, handles internal + connected external storage);
+  stock gallery is AI Gallery (XOS AI Gallery, in the box
+  since XOS 5.5); an OTG toggle location is reported at
+  Settings > More Connections on the Zero 30, but the source
+  is an AI-generated report — treat it as a lead, not a fact;
+  if nothing appears, check Settings > Storage; not every
+  Infinix phone has OTG (Smart 5 doesn't; Note 12 G96,
+  Zero 30 5G, Hot 70 do); modern Infinix phones are USB-C,
+  older ones Micro-USB; whether a model has a microSD slot
+  varies by model (Hot 70 has a dedicated slot — check the
+  model's specs). Infinix's own tools: Google backup
+  (Settings > Google > Backup) restores to a new phone from
+  the cloud; XCloud (Settings > System > Backup & Reset,
+  Local Backup or XCloud Backup, on models that have it)
+  backs photos up to Infinix's cloud; Coolmuster backs the
+  phone up to a PC; the SD-card route copies to a card, not
+  a drive; Google Photos / Google One back photos up to
+  Google's cloud (15 GB free) — none of them writes plain
+  photo files to a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-56, 26th how-to):
+  docs/infinix-photos-to-usb.html.
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
