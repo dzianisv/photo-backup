@@ -276,7 +276,7 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-44, 15th how-to):
   docs/motorola-photos-to-usb.html.
 
-### 13. "back up videos from Android to USB flash drive without computer" — HOW-TO GAP
+### 15. "back up videos from Android to USB flash drive without computer" — HOW-TO GAP
 - Volume: unknown (Play publishes no volume).
 - Difficulty: Low-Medium. No top result offers an automated
   whole-library video backup with progress, Pause/Stop, and
@@ -302,7 +302,7 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-45, 16th how-to):
   docs/videos-to-usb.html.
 
-### 15. "back up photos from Huawei to USB flash drive without computer" — HOW-TO GAP
+### 16. "back up photos from Huawei to USB flash drive without computer" — HOW-TO GAP
 - Volume: unknown (Play publishes no volume).
 - Difficulty: Low-Medium. No top result offers an automated
   whole-library photo backup with progress, Pause/Stop, and
