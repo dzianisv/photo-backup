@@ -721,6 +721,122 @@ demand is read off competitor install velocity instead (see
   Article published Nov 17, 2026 (WL-54, 24th how-to):
   docs/nokia-photos-to-usb.html.
 
+### 24. "back up photos from Asus to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Asus-specific
+  guide at all, let alone an Asus-specific automated
+  whole-library backup with progress, Pause/Stop, and
+  resume — the top results are generic manual guides,
+  PC tools, or a rival app page.
+- Current top results (scored Nov 17, 2026, live web search):
+  Pixoneye guide
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a USB drive with a file manager,
+  one small batch at a time; notes ThePhotoStick Omni; generic
+  Android and iPhone, not written for Asus); Photos to USB:
+  OTG Backup (Play listing, com.arzdrz.photos_to_usb — a real
+  phone-to-USB app, one-tap whole-gallery copy, only new
+  photos next time, warns about the FAT32 4 GB limit, free
+  with ads, one-time purchase removes ads — generic Android,
+  not an Asus guide, and it does not promise oldest-first
+  order, detailed progress with Pause and Stop, or size
+  verification of every file); TheGadgetians guide
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-
+  without-computer/ — OTG adapter + file manager, mentions
+  ThePhotoStick Omni; generic Android and iPhone, not written
+  for Asus); YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); SoftHandTech guide
+  (softhandtech.com/how-do-you-transfer-pictures-from-your-
+  phone-to-a-flash-drive/ — OTG adapter + file manager, or a
+  computer, or cloud storage; generic, not written for
+  Asus); AnExplorer guide (anexplorer.io/transfer/phone-to-usb
+  — manual select-copy-paste, the only one of these guides
+  that shows a progress bar with speed and time remaining,
+  still no resume or verification); Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-
+  drop, Google Drive, or AirDroid; generic Android, most ways
+  need a computer or a cloud account); askfilo guide
+  (askfilo.com — OTG adapter + file manager, or a PC as a
+  middleman; generic Android, not written for Asus); FoneLab
+  guide (fonelab.com/resource/how-to-transfer-photos-from-
+  android-phone-to-usb-flash-drive.html — OTG adapter copy, a
+  PC file-explorer copy, or the FoneLab HyperTrans PC tool;
+  generic Android, two of the three ways need a computer);
+  MobileTrans OTG guide
+  (mobiletrans.wondershare.com/android-tips/how-to-transfer-
+  files-via-otg.html — OTG cable, select files, Copy, Paste
+  to the drive; generic Android, not written for Asus);
+  TechDows OTG explainer
+  (techdows.com/usb-otg-everything-you-need-to-know.html —
+  which adapter to buy, how to open OTG storage, what to do
+  when a drive does not show up; useful background, not an
+  Asus guide); the one Asus-specific backup page found in the
+  wider search, mobilespecs.net
+  (mobilespecs.net/phone/backup/ASUS/ASUS_ZenFone_4_ZE554KL.html
+  — sync data to Google's cloud, back photos up with Google
+  Photos, or use TWRP Recovery, Titanium Backup, or ADB; a
+  PC, a custom recovery, or the cloud, never a USB drive);
+  devicesfaq Asus Zenfone 9 and Zenfone 7 FAQ pages
+  (devicesfaq.com — copy files to a computer over USB, back
+  up to Google Drive's cloud, or use Google Photos; a PC or a
+  cloud, never a USB drive); manualsnet ZenFone Selfie user
+  manual (manualsnet.com/asus/zenfone-selfie-zd551kl —
+  connect the phone to a computer with a USB cable, choose
+  File Transfer mode, copy the photos on the computer; a PC
+  in between, not a phone-to-USB copy); ASUS Phone Clone
+  (Play listing, com.futuredial.asusdatatransfer — Asus's own
+  migration app, formerly ASUS Data Transfer: moves contacts,
+  messages, photos, videos, music, files, and apps from an
+  old Android phone to a new Asus phone over Wi-Fi, no cable;
+  phone-to-phone, not phone-to-USB, and stock-AOSP Zenfones
+  are not supported); Asus's own FAQ
+  (asus.com/in/support/faq/1043100/ — Phone Clone is a
+  migration tool for a new Asus phone, covering Zenfone 6
+  through Zenfone 10 and ROG Phone 3 through ROG Phone 7);
+  ZenTalk (zentalk.asus.com — on Zenfone 9 and 10 the default
+  gallery is Asus's own Gallery app, and Google Photos cannot
+  be set as the default); Zenfone 5 Selfie manual
+  (gebruikershandleiding.com — File Manager "allows you to
+  easily locate and manage your data on the internal storage
+  of your ASUS Phone and its connected external storage
+  devices", launched from ASUS > File Manager); Notebookcheck
+  Zenfone 7 Pro review — the one Asus-specific OTG
+  confirmation from a review (the Zenfone 7 Pro's USB-C port
+  "supports USB OTG", ZenUI 7 is "only minimally different
+  to standard Android", preinstalled file manager + Asus Data
+  Transfer); OTG spec sheets — OTG confirmed on most Zenfones
+  but not all: Zenfone 3 Laser "OTG Compatible, Yes"
+  (Flipkart), Zenfone 6 lists OTG, Zenfone 4 and Zenfone 3
+  Max reviews confirm OTG — but the original Zenfone 5
+  "doesn't support USB OTG" (91mobiles) and the Zenfone 2
+  lists "USB OTG — No"; Google Photos (Play listing,
+  com.google.android.apps.photos — 15 GB cloud storage free;
+  cloud, not a USB copy). Asus specifics: Asus phones run
+  ZenUI (close to stock Android on recent models); stock file
+  manager is Asus File Manager (ZenUI File Manager, handles
+  internal + connected external storage); stock gallery is
+  Asus Gallery (on Zenfone 9/10 Google Photos cannot be set
+  as the default); no documented Asus OTG switch location was
+  found — the drive mounts on plug-in with a "USB storage
+  added" notification; if nothing appears, check Settings >
+  Storage; whether a switch exists at all is unverified; not
+  every Asus phone has OTG (original Zenfone 5 and Zenfone 2
+  don't; Zenfone 3 Laser, 4, 6, 7 Pro do); modern Asus phones
+  are USB-C, older ones Micro-USB; whether a model has a
+  microSD slot varies by model (check the model's specs).
+  Asus's own tools: ASUS Phone Clone (formerly ASUS Data
+  Transfer) moves data from an old phone to a new Asus phone
+  over Wi-Fi — phone-to-phone, not phone-to-USB; Google backup
+  (Settings > System > Backup) restores to a new phone from
+  the cloud; Asus WebStorage is Asus's own cloud (5 GB free
+  with older Zenfones); Google Photos / Google One back photos
+  up to Google's cloud (15 GB free) — none of them writes
+  plain photo files to a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-55, 25th how-to):
+  docs/asus-photos-to-usb.html.
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos

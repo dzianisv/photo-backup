@@ -5,7 +5,7 @@
   <link>https://dzianisv.github.io/photo-backup/blog/</link>
   <description>How to back up photos to a USB drive on Android — no cloud, no account, no upload.</description>
   <language>en</language>
-  <lastBuildDate>Mon, 16 Nov 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 17 Nov 2026 00:00:00 +0000</lastBuildDate>
   <item>
     <title>How to back up photos to a USB drive without uploading them</title>
     <link>https://dzianisv.github.io/photo-backup/backup-photos-to-usb.html</link>
@@ -173,6 +173,13 @@
     <guid>https://dzianisv.github.io/photo-backup/nokia-photos-to-usb.html</guid>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
     <description>Nokia phones (made by HMD Global) run near-stock Android — Android One on most models — with no OTG switch to hunt for: the drive mounts on plug-in on most models, with a "USB storage added" notification. And Nokia has no backup app of its own: HMD's own guides point to Google backup, which restores to a new phone or to the cloud, never to a USB drive as plain files. A USB-C flash drive plugs straight in. Here is the manual way, and the one-tap version.</description>
+  </item>
+  <item>
+    <title>Back up Asus photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/asus-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/asus-photos-to-usb.html</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Asus phones (Zenfone and ROG Phone) run ZenUI — close to stock Android on recent models — with no OTG switch to hunt for: the drive mounts on plug-in on most models, with a "USB storage added" notification. And Asus's own backup tool moves your data to a new Asus phone, not to a USB drive as plain files. A USB-C flash drive plugs straight in. Here is the manual way, and the one-tap version.</description>
   </item>
 </channel>
 </rss>
