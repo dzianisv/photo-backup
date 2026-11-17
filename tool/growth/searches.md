@@ -214,6 +214,37 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-42, 13th how-to):
   docs/oneplus-photos-to-usb.html.
 
+### 13. "back up photos from Xiaomi to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low-Medium. No top result offers an automated
+  whole-library photo backup with progress, Pause/Stop, and
+  resume.
+- Current top results (scored Nov 16, 2026, live web search):
+  AnExplorer guide (manual select-copy-paste,
+  anexplorer.io/transfer/phone-to-usb — the only one of the
+  five that shows a progress bar for the manual copy, still no
+  resume or verification); FoneLab (OTG manual copy in the
+  Files app, plus PC tool HyperTrans and Samsung Smart
+  Switch); Dr.Fone (Google Drive / PC drag-and-drop / OTG
+  manual copy / AirDroid); YouTube PYcbV25CczI (OTG + file
+  manager manual copy, suggests Move); EpicTechTips (file
+  manager manual copy, suggests Move; PC middleman or cloud
+  as alternatives). Google Photos is cloud, not USB. Xiaomi
+  specifics: OTG is off by default on many MIUI/HyperOS
+  phones — Settings, Additional settings, OTG (on some
+  phones: Settings, More settings, OTG), auto-off after about
+  10 minutes without a drive; Xiaomi's own support note says
+  the switch was removed from MIUI 11 onward on some versions
+  while newer model-specific pages still document a toggle,
+  so a missing switch means OTG works directly, not a broken
+  phone; stock file manager is Mi File Manager, stock gallery
+  is Gallery; microSD slot varies by model — most Redmi and
+  Redmi Note phones have one, POCO F-series and Xiaomi
+  flagships often don't.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 16, 2026 (WL-43, 14th how-to):
+  docs/xiaomi-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
