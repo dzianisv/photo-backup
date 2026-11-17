@@ -410,6 +410,47 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-49, 19th how-to):
   docs/lg-photos-to-usb.html.
 
+### 19. "back up photos from Oppo to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low-Medium. No top result is an Oppo-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume; the one Oppo-specific result is a manual guide.
+- Current top results (scored Nov 16, 2026, live web search):
+  Coolmuster guide (coolmuster.com/android/transfer-files-from-oppo-to-usb-flash-drive.html
+  — the one Oppo-specific result: OTG adapter + File Manager
+  manual copy, USB-C flash drive direct, or the Coolmuster
+  Android Assistant PC tool); FoneLab guide (generic: OTG +
+  file manager, PC File Explorer, HyperTrans PC tool);
+  Dr.Fone (Google Drive / PC drag-and-drop / OTG manual copy /
+  AirDroid); AnExplorer guide (manual select-copy-paste,
+  anexplorer.io/transfer/phone-to-usb — the only one of the
+  five that shows a progress bar for the manual copy, still no
+  resume or verification); MobiKin guide (generic: PC
+  drag-and-drop, Assistant PC tool, OTG copy, Files by Google,
+  AirDroid); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a real phone-to-USB app, one-tap
+  whole-gallery copy with resume, free with ads, one-time
+  purchase removes ads — generic Android, not an Oppo guide,
+  and it does not promise oldest-first order, detailed
+  progress with Pause and Stop, or size verification). Google
+  Photos is cloud, not USB. Oppo specifics: ColorOS has an
+  "OTG connection" switch (Settings > Additional settings on
+  older ColorOS, System settings on some versions, Accessibility
+  & convenience on ColorOS 15 and newer — search Settings for
+  "OTG") that switches off automatically after about 10 minutes
+  without a connected accessory, and not every Oppo phone has
+  OTG; stock file manager is File Manager, stock gallery is
+  Photos; modern Oppo phones (Find X, Reno, recent A-series)
+  are USB-C, older ones Micro-USB; most recent Oppo phones have
+  no microSD slot. Oppo's own tools: Clone Phone is
+  phone-to-phone migration over Wi-Fi Direct (needs a second
+  phone), HeyTap Cloud is cloud backup (Settings > HeyTap
+  Cloud) — neither of them writes plain photo files to a USB
+  drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 16, 2026 (WL-50, 20th how-to):
+  docs/oppo-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
