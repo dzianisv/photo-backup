@@ -37,6 +37,7 @@
 - [Back up LG photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/lg-photos-to-usb.html): back up LG photos to a USB drive with no computer — LG Mobile Switch, LG Bridge, and LG Backup compared, LG File Manager manual copy; original files, byte-for-byte copy, size-checked.
 - [Back up Oppo photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/oppo-photos-to-usb.html): back up Oppo photos to a USB drive with no computer — the OTG Connection switch, Clone Phone and HeyTap Cloud compared, File Manager manual copy; original files, byte-for-byte copy, size-checked.
 - [Back up Realme photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/realme-photos-to-usb.html): back up Realme photos to a USB drive with no computer — the OTG Connection switch, Clone Phone, HeyTap Cloud and Local Backup compared, File Manager manual copy; original files, byte-for-byte copy, size-checked.
+- [Back up Vivo photos to a USB drive (no computer)](https://dzianisv.github.io/photo-backup/vivo-photos-to-usb.html): back up Vivo photos to a USB drive with no computer — the OTG switch under Settings > More settings, EasyShare and vivo Cloud compared, File Manager manual copy; original files, byte-for-byte copy, size-checked.
 
 ## Blog
 
