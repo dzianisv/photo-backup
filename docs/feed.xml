@@ -139,5 +139,12 @@
     <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
     <description>LG stopped making phones in 2021, so no LG guide or LG tool will ever be written for this — and LG's own backup tools move data phone-to-phone or phone-to-PC, never phone-to-USB as plain photos. A USB-C flash drive plugs straight in. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up Oppo photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/oppo-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/oppo-photos-to-usb.html</guid>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Oppo's ColorOS hides one switch between you and a USB drive — OTG Connection, which turns itself off after about 10 minutes unused — and Oppo's own backup tools move photos to another phone or to the cloud, never to a USB drive as plain files. A USB-C flash drive plugs straight in once the switch is on. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
