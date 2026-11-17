@@ -1,5 +1,56 @@
 # SnapDisk — Work Log
 
+## WL-45 — Back up videos from Android to USB article, 16th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/videos-to-usb.html ("Back up videos from Android to a
+  USB drive (no computer)"), following the WL-44 article template
+  exactly (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot —
+  same reuse as the 8th, 9th, 10th, 11th, 12th, 13th, 14th, and
+  15th articles). Facts verified from code on fresh main: video
+  support in PhotoQuery.kt (MediaStore.Video + VIDEO_EXTENSIONS
+  .mp4/.mov/.mkv/.webm/.3gp/.m4v/.avi), oldest-first via MediaStore
+  DATE_TAKEN ascending; free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy. Search
+  evidence (Nov 16, 2026 live web search): top results are all
+  manual copy — YouTube PYcbV25CczI (OTG + file manager manual
+  copy, suggests Move), mobilityarena.com (USB-C manual copy via
+  Files by Google, with the FAT32 4 GB warning for large videos),
+  thetechylife.com (OTG manual copy or a PC), YouTube
+  ch1evyu5PPM (OTG + file manager manual copy, suggests Move),
+  sekin.in (Files by Google / My Files manual copy, or a PC);
+  VaultDrive's own page (coticsy.com/vaultdrive.html) is the
+  closest result — a real phone-to-USB app that backs up videos
+  original-quality — but a product page, not a videos how-to,
+  and its Pro is $19.99 once. Google Photos is cloud, not USB,
+  and Storage saver downscales video. Video-specific angle
+  stated honestly: a single file over 4 GB cannot live on a
+  FAT32 drive, so exFAT is the format note; videos live in
+  DCIM/Camera and Movies/Downloads. Honest contrast stated in
+  the TL;DR: the file manager works but is manual
+  select-copy-paste with no progress, no resume, no
+  verification; VaultDrive also backs up videos original-quality
+  — SnapDisk is not the only app that does; what it adds is the
+  automated whole-library run and half the Pro price. Query 13
+  scored Nov 16, 2026 (searches.md): "back up videos from
+  Android to USB flash drive without computer" — real how-to
+  gap. Volume unknown (Play publishes no volume); difficulty
+  low-medium. Linked from blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt (full section), feed.xml
+  (now 16 items). JSON-LD validated by parse; sitemap.xml and
+  feed.xml parse as XML. Title 53 chars, meta 150 chars. No app
+  code or Play listing files touched; applicationId untouched
+  (dev.dzianisv.snapdisk).
+  Evidence: PR #TODO (pending merge — PR number + CI run + live
+  fetch recorded in follow-up).
+
+
 The only task tracker for this product. One row per task: what, who,
 state, evidence, date.
 

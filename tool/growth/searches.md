@@ -276,6 +276,32 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-44, 15th how-to):
   docs/motorola-photos-to-usb.html.
 
+### 13. "back up videos from Android to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low-Medium. No top result offers an automated
+  whole-library video backup with progress, Pause/Stop, and
+  resume.
+- Current top results (scored Nov 16, 2026, live web search):
+  YouTube PYcbV25CczI (OTG + file manager manual copy, suggests
+  Move); VaultDrive vendor page (coticsy.com/vaultdrive.html —
+  a real phone-to-USB app that backs up videos original-quality,
+  Pro $19.99 once, but a product page, not a videos how-to);
+  mobilityarena.com (USB-C flash drive manual copy via Files by
+  Google, with the FAT32 4 GB warning for large videos);
+  thetechylife.com (OTG manual copy or a PC in between);
+  YouTube ch1evyu5PPM (OTG + file manager manual copy, suggests
+  Move); sekin.in (Files by Google / Samsung My Files manual
+  copy, or a PC). Google Photos is cloud, not USB, and its
+  Storage saver setting downscales video. Videos are the files
+  that hit the FAT32 4 GB single-file limit — a long 4K clip
+  cannot live on a FAT32 drive at all, so exFAT is the format
+  note. SnapDisk copies videos (MP4, MOV, MKV, WebM and more)
+  the same way it copies photos: oldest-first, byte-for-byte,
+  size-verified (PhotoQuery.kt VIDEO_EXTENSIONS).
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 16, 2026 (WL-45, 16th how-to):
+  docs/videos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos

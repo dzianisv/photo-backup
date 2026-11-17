@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up videos from Android to a USB drive — SnapDisk</title>
+<meta name="description" content="Back up videos from Android to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/videos-to-usb.html">
+<meta property="og:title" content="Back up videos from Android to a USB drive (no computer)">
+<meta property="og:description" content="Back up videos from Android to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/videos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/videos-to-usb.html#article",
+      "headline": "Back up videos from Android to a USB drive (no computer)",
+      "description": "Back up videos from Android to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-16",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/videos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/videos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up videos from Android to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A USB-C flash drive plugs straight into a modern Android phone, or a regular USB drive through a USB-C OTG adapter. The stock route is the phone's file manager: open Files by Google (or My Files on Samsung), find the videos in DCIM/Camera or Movies, and Copy them to the drive. SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo and video library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up videos to USB lose quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink videos: Google Photos' Storage saver setting downscales video, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much video can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped. One format note: a single video over 4 GB cannot live on a FAT32 drive — format the drive as exFAT, or those files are skipped with their reason listed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/videos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up videos from Android to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/videos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up videos from Android to a USB drive (no computer)</h1>
+  <p class="dek">Videos are the files that fill a phone first — and the ones the manual copy handles worst, one long file at a time. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 16, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> Plug a USB drive into your Android phone, tap Backup in SnapDisk, and your whole video library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: the file manager works — Files by Google or Samsung My Files copies videos to a USB drive — but it is manual select-copy-paste with no progress detail, no resume, and no verification; and Google Photos backup is a cloud copy, not a USB copy. VaultDrive also backs up videos to USB, original quality, no re-encoding — SnapDisk is not the only app that does; what it adds is the automated whole-library run and half the Pro price ($9.99 once vs $19.99). SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few videos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. One video-specific warning: a single file over 4 GB cannot live on a FAT32 drive, so format the drive as exFAT before backing up long 4K videos. As of November 16, 2026, no top search result for this query offers an automated whole-library video backup with progress, Pause/Stop, and resume: the top results are YouTube OTG walkthroughs, a USB-C flash drive guide, and manual file-manager or PC routes.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up videos from Android to USB flash drive without computer" and every top result teaches the same manual job, in different packaging:</p>
+  <ul>
+    <li><strong>YouTube</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos</a>) — plug the drive in via OTG, open the phone's built-in file manager, select photos and videos in DCIM, Move or Copy to the drive. Manual select-copy-paste, start to finish — and it suggests Move, which deletes the originals as it goes.</li>
+    <li><strong>VaultDrive</strong> (<a href="https://coticsy.com/vaultdrive.html">VaultDrive: Back Up Phone Photos to a USB Drive, No Computer</a>) — plug a flash drive or SSD in, choose what to back up, tap Start; original photos, videos and files copied straight to the drive, HEIC, ProRAW, ProRes and 4K video copied as they are, never compressed or re-encoded. A real phone-to-USB app, and the closest result to an automated backup — but its page is a product page, not a how-to, and its Pro is $19.99 once. It also says plainly that it does not free up space yet.</li>
+    <li><strong>MobilityArena</strong> (<a href="https://mobilityarena.com/how-to-use-a-usb-c-flash-drive-on-android/">How to Use a USB-C Flash Drive on Android (No Adapter Needed)</a>) — plug a USB-C flash drive straight into the phone, open Files by Google, select the files in DCIM or Videos, Copy to the drive. A clear manual guide, with the honest format warning: FAT32 can't hold a single file over 4 GB, use exFAT for large videos.</li>
+    <li><strong>TheTechyLife</strong> (<a href="https://thetechylife.com/how-do-i-transfer-videos-from-android-phone-to-flash-drive/">Unlocking Your Android Phone's Storage: A Step-by-Step Guide to Transferring Videos to a Flash Drive</a>) — OTG adapter plus file manager, select the videos in DCIM or Videos, Copy or Move; or a computer in between. The phone-only way is the same manual select-copy-paste.</li>
+    <li><strong>YouTube</strong> (<a href="https://www.youtube.com/watch?v=ch1evyu5PPM">How to Transfer Photos, Videos and any Files from Android Phone to USB Pendrive</a>) — verify OTG support, plug the drive in, open the file manager, select the videos, Copy or Move to the drive. Manual select-copy-paste again, and it too suggests Move.</li>
+    <li><strong>sekin.in</strong> (<a href="https://sekin.in/how-to-transfer-files-from-android-phone-to-usb-drive-full-guide/">How To Transfer Files From Android Phone To USB Drive</a>) — Files by Google or Samsung My Files, select the videos in DCIM, Pictures, or Movies, Copy to the drive; or a Windows PC or Chromebook in between. The phone-only way is the same manual copy, and it notes that some drives draw more power than the phone can provide.</li>
+    <li><strong>Cloud routes</strong> — Google Photos backs up over Wi-Fi to Google's servers, not to a drive you hold. Its "Storage saver" setting downscales video, so that is where quality is actually lost, not on a USB copy. And a cloud backup stops working the day you stop paying for storage.</li>
+  </ul>
+  <p>None of them offers an automated video-library backup: nothing that takes every video on the phone, copies it oldest-first in the background, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 16, 2026.</p>
+
+  <h2>What you need</h2>
+  <p>An Android phone (Android 7.0 or later for SnapDisk); a USB drive your phone can read — a USB-C flash drive plugs straight into a modern Android phone, or a regular USB drive with a USB-C OTG adapter; and enough space on the drive for the videos you want to keep. Two video-specific notes. First, the format: videos are the files that hit the FAT32 limit. A single video over 4 GB — easy for a long 4K recording — cannot live on a FAT32 drive at all, so format the drive as exFAT before you start; exFAT has no 4 GB file limit and works on Windows and Mac too. SnapDisk skips files over 4 GB on a FAT32 drive and lists them with their reason instead of failing the whole backup. Second, where videos live: camera videos sit in DCIM/Camera next to your photos, and downloaded or app-saved videos sit in Movies or Downloads. SnapDisk's default From folder is /sdcard/DCIM, which covers the camera roll; point the From picker at Movies or another folder if your videos live elsewhere, or at a parent folder that contains them.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos and videos), To /disk/DCIM on the drive. If your videos live in Movies or Downloads, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Plug in the USB drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"</li>
+    <li><strong>Tap Backup.</strong> Your whole library — photos and videos together — copies oldest-first in the background, while you use the phone normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time. This matters most for videos: a 20 GB library is hours of copying, and the notification is the only place you see it honestly.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos and videos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera roll and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the phone to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. It copies video files (MP4, MOV, MKV, WebM and more) the same way it copies photos, oldest-first, with the same verification. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your videos physically cannot leave your device.</p>
+
+  <h2>Method 2: Files by Google (the stock route, no app needed)</h2>
+  <p>Most Android phones ship with Files by Google as the stock file manager (Samsung Galaxy phones use My Files, which works the same way), and it can copy your videos to the USB drive: 1. Plug in the USB drive — a "USB available" notification should appear; tap it, then tap the drive and Allow. 2. Open Files by Google, scroll to Storage devices, and tap your USB drive to confirm it mounted. 3. Go back to Internal storage, DCIM, Camera for camera videos, or Movies for the rest. 4. Select the videos (long-press the first, tap the rest, or tap the three dots and Select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until Files by Google says it's done. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses videos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time videos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the phone into the computer with a USB cable, tap the USB notification and choose File transfer (by default an Android phone charges only) — and drag the DCIM and Movies folders onto the USB drive, or use a tool like Dr.Fone to bulk-export the videos first. This works fine, and it is the only route above that needs a second device in between. If the phone and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 16, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google Photos' cloud backup is the tool if you want everything, not just photos and videos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos and videos. Videos in other folders (Movies, Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> Videos eat the cap fast — a few 4K clips can fill 5 GB. A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Long 4K videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the phone is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Backing up long videos to a FAT32 drive.</strong> The 4 GB single-file limit is a video problem first — a photo never hits it, a 4K video does. Format the drive as exFAT before a big video backup, or the longest clips will be skipped and listed.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works, but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 16, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your videos are safe, that's a cloud subscription with a USB step. Your videos sit on someone else's server, and the backup stops working the day you stop paying. Check Google Photos' "Storage saver" setting, too — it downscales video, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few videos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, videos are already gone from the phone. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos and videos to a USB drive — free, no ads, no account, no cloud, and your files never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="free-up-space-move-photos-to-usb.html">How to free up space by moving photos to a USB drive</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
