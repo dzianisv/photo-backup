@@ -1,5 +1,158 @@
 # SnapDisk — Work Log
 
+## WL-55 — Back up Asus photos to USB article, 25th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/asus-photos-to-usb.html ("Back up Asus photos to a
+  USB drive (no computer)"), following the WL-54 article template
+  exactly (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot —
+  same reuse as the 8th through 24th articles). Facts verified
+  from code on fresh main: SAF tree picker (MainActivity.kt
+  OpenDocumentTree + takePersistableUriPermission); oldest-first
+  via MediaStore DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN
+  else DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size; no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy. Search
+  evidence (Nov 17, 2026 live web search): there is no
+  Asus-specific result in the top results at all — Pixoneye
+  guide (pixoneye.com/how-to-transfer-photos-from-phone-to-
+  usb-stick/ — copy local originals to a USB drive with a file
+  manager, one small batch at a time; notes ThePhotoStick Omni;
+  generic Android and iPhone, not written for Asus); Photos to
+  USB: OTG Backup (Play listing, com.arzdrz.photos_to_usb) is
+  the one-tap app alternative from the wider search — a real
+  phone-to-USB app, one-tap whole-gallery copy, only new photos
+  next time, warns about the FAT32 4 GB limit, free with ads,
+  one-time purchase removes ads — generic Android, not an Asus
+  guide, and it does not promise oldest-first order, detailed
+  progress with Pause and Stop, or size verification of every
+  file; TheGadgetians guide
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-
+  without-computer/ — OTG adapter + file manager, mentions
+  ThePhotoStick Omni; generic Android and iPhone, not written
+  for Asus); YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file manager
+  walkthrough); SoftHandTech guide
+  (softhandtech.com/how-do-you-transfer-pictures-from-your-
+  phone-to-a-flash-drive/ — OTG adapter + file manager, or a
+  computer, or cloud storage; generic, not written for Asus);
+  AnExplorer guide (anexplorer.io/transfer/phone-to-usb —
+  manual select-copy-paste, the only one of these guides that
+  shows a progress bar with speed and time remaining, still no
+  resume or verification); Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-drop,
+  Google Drive, or AirDroid; generic Android, most ways need a
+  computer or a cloud account); askfilo guide (askfilo.com —
+  OTG adapter + file manager, or a PC as a middleman; generic
+  Android, not written for Asus); FoneLab guide
+  (fonelab.com/resource/how-to-transfer-photos-from-android-
+  phone-to-usb-flash-drive.html — OTG adapter copy, a PC
+  file-explorer copy, or the FoneLab HyperTrans PC tool;
+  generic Android, two of the three ways need a computer);
+  MobileTrans OTG guide
+  (mobiletrans.wondershare.com/android-tips/how-to-transfer-
+  files-via-otg.html — OTG cable, select files, Copy, Paste to
+  the drive; generic Android, not written for Asus); TechDows
+  OTG explainer
+  (techdows.com/usb-otg-everything-you-need-to-know.html —
+  which adapter to buy, how to open OTG storage, what to do
+  when a drive does not show up; useful background, not an
+  Asus guide); the one Asus-specific backup page found in the
+  wider search, mobilespecs.net
+  (mobilespecs.net/phone/backup/ASUS/ASUS_ZenFone_4_ZE554KL.html
+  — sync data to Google's cloud, back photos up with Google
+  Photos, or use TWRP Recovery, Titanium Backup, or ADB; a PC,
+  a custom recovery, or the cloud, never a USB drive);
+  devicesfaq Asus Zenfone 9 and Zenfone 7 FAQ pages
+  (devicesfaq.com — copy files to a computer over USB, back up
+  to Google Drive's cloud, or use Google Photos; a PC or a
+  cloud, never a USB drive); manualsnet ZenFone Selfie user
+  manual (manualsnet.com/asus/zenfone-selfie-zd551kl — connect
+  the phone to a computer with a USB cable, choose File
+  Transfer mode, copy the photos on the computer; a PC in
+  between, not a phone-to-USB copy); ASUS Phone Clone (Play
+  listing, com.futuredial.asusdatatransfer — Asus's own
+  migration app, formerly ASUS Data Transfer: moves contacts,
+  messages, photos, videos, music, files, and apps from an old
+  Android phone to a new Asus phone over Wi-Fi, no cable;
+  phone-to-phone, not phone-to-USB, and stock-AOSP Zenfones
+  are not supported); Asus's own FAQ
+  (asus.com/in/support/faq/1043100/ — Phone Clone is a
+  migration tool for a new Asus phone, covering Zenfone 6
+  through Zenfone 10 and ROG Phone 3 through ROG Phone 7);
+  ZenTalk (zentalk.asus.com — on Zenfone 9 and 10 the default
+  gallery is Asus's own Gallery app, and Google Photos cannot
+  be set as the default); Zenfone 5 Selfie manual
+  (gebruikershandleiding.com — File Manager "allows you to
+  easily locate and manage your data on the internal storage
+  of your ASUS Phone and its connected external storage
+  devices", launched from ASUS > File Manager); Notebookcheck
+  Zenfone 7 Pro review — the one Asus-specific OTG
+  confirmation from a review (the Zenfone 7 Pro's USB-C port
+  "supports USB OTG", ZenUI 7 is "only minimally different to
+  standard Android", preinstalled file manager + Asus Data
+  Transfer); OTG spec sheets — OTG confirmed on most Zenfones
+  but not all: Zenfone 3 Laser "OTG Compatible, Yes"
+  (Flipkart), Zenfone 6 lists OTG, Zenfone 4 and Zenfone 3 Max
+  reviews confirm OTG — but the original Zenfone 5 "doesn't
+  support USB OTG" (91mobiles) and the Zenfone 2 lists "USB
+  OTG — No"; Google Photos (Play listing,
+  com.google.android.apps.photos — 15 GB cloud storage free;
+  cloud, not a USB copy). Asus specifics stated honestly:
+  Asus phones run ZenUI (close to stock Android on recent
+  models); stock file manager is Asus File Manager (ZenUI File
+  Manager, handles internal + connected external storage);
+  stock gallery is Asus Gallery (on Zenfone 9/10 Google Photos
+  cannot be set as the default); no documented Asus OTG switch
+  location was found — the drive mounts on plug-in with a "USB
+  storage added" notification; if nothing appears, check
+  Settings > Storage; whether a switch exists at all is
+  unverified; not every Asus phone has OTG (original Zenfone 5
+  and Zenfone 2 don't; Zenfone 3 Laser, 4, 6, 7 Pro do);
+  modern Asus phones are USB-C, older ones Micro-USB; whether
+  a model has a microSD slot varies by model (check the model's
+  specs). Asus's own tools: ASUS Phone Clone (formerly ASUS
+  Data Transfer) moves data from an old phone to a new Asus
+  phone over Wi-Fi — phone-to-phone, not phone-to-USB; Google
+  backup (Settings > System > Backup) restores to a new phone
+  from the cloud; Asus WebStorage is Asus's own cloud (5 GB
+  free with older Zenfones); Google Photos / Google One back
+  photos up to Google's cloud (15 GB free) — none of them
+  writes plain photo files to a USB drive. Honest contrast
+  stated in the TL;DR: Asus File Manager works but is manual
+  select-copy-paste with no progress, no resume, no
+  verification; Asus's own routes work but move photos to a
+  new Asus phone, to Google's cloud, or to Asus's cloud — not
+  plain photos on a USB drive; Google Photos backup is a cloud
+  copy, not a USB copy; Photos to USB also does one-tap copy
+  with resume — SnapDisk adds oldest-first order, detailed
+  progress with Pause and Stop, size verification, no ads, and
+  free 5 GB per run. Query 24 scored Nov 17, 2026
+  (searches.md): "back up photos from Asus to USB flash drive
+  without computer" — real how-to gap. Volume unknown (Play
+  publishes no volume); difficulty low. Linked from blog index
+  (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full section + Blog posts list, now 25),
+  feed.xml (now 25 items). JSON-LD validated by parse;
+  sitemap.xml and feed.xml parse as XML. Title 45 chars, meta
+  142 chars. No app code or Play listing files touched;
+  applicationId untouched (dev.dzianisv.snapdisk). Work ran from
+  a persistent scratch clone (~/workspace/pb-wl55-scratch, not
+  the shared checkout, never /tmp). Evidence: PR #77 (commit
+  c1f05e6, merge 9fb0bf9, merged 2026-11-17T09:35:40Z); CI run
+  44056668839 (build pass, 1m12s) green; post-merge main runs
+  green (Android PR 44056992617, pages 44056991219). Live
+  fetch after Pages deploy: article 200, 34000 bytes, title
+  "Back up Asus photos to a USB drive — SnapDisk" present;
+  blog index 200, 23208 bytes; feed.xml 200 (25 items);
+  sitemap.xml 200 with the new link; llms-full.txt 200,
+  275423 bytes, Blog list counts 25 with Asus present.
 ## WL-54 — Back up Nokia photos to USB article, 24th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
