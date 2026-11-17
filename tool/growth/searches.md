@@ -245,6 +245,37 @@ demand is read off competitor install velocity instead (see
   Article published Nov 16, 2026 (WL-43, 14th how-to):
   docs/xiaomi-photos-to-usb.html.
 
+### 14. "back up photos from Motorola to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low-Medium. No top result offers an automated
+  whole-library photo backup with progress, Pause/Stop, and
+  resume.
+- Current top results (scored Nov 16, 2026, live web search):
+  YouTube PYcbV25CczI (OTG + file manager manual copy,
+  suggests Move; names the Motorola file manager as Files, or
+  Files by Google); AnExplorer guide (manual select-copy-paste,
+  anexplorer.io/transfer/phone-to-usb — the only one of the
+  five that shows a progress bar for the manual copy, still no
+  resume or verification); Dr.Fone (Google Drive / PC
+  drag-and-drop / OTG manual copy / AirDroid); MobiKin (PC
+  drag-and-drop, PC tool, OTG manual copy, Files by Google,
+  AirDroid); YouTube ch1evyu5PPM (OTG + file manager manual
+  copy, suggests Move); thegadgetians (file manager manual
+  copy; mentions ThePhotoStick Omni, a dedicated stick with its
+  own app, not an ordinary flash drive). Google Photos is cloud,
+  not USB. Motorola specifics: no OTG toggle — near-stock
+  Android mounts the drive on its own ("USB available"
+  notification, Files by Google under Storage devices); if the
+  notification says the phone is charging a connected device,
+  tap it and switch "Controlled by" to "This device"; stock
+  file manager is Files by Google, stock gallery is Google
+  Photos; microSD slot varies by model — most Moto G phones
+  have one (up to 1 TB on recent models), Motorola Edge 2024
+  and 2025 have none.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 16, 2026 (WL-44, 15th how-to):
+  docs/motorola-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
