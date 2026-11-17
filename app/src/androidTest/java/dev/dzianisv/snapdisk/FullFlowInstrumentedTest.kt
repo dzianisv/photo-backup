@@ -6,10 +6,12 @@ import android.app.NotificationManager
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Environment
 import android.provider.MediaStore
 import androidx.core.content.ContextCompat
+import androidx.exifinterface.media.ExifInterface
 import androidx.test.core.app.ActivityScenario
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.rule.GrantPermissionRule
@@ -22,6 +24,10 @@ import dev.dzianisv.snapdisk.service.BackupService
 import dev.dzianisv.snapdisk.service.NotificationHelper
 import dev.dzianisv.snapdisk.service.StorageReceiver
 import java.io.File
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import java.util.TimeZone
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
@@ -87,6 +93,7 @@ class FullFlowInstrumentedTest {
     private lateinit var notificationManager: NotificationManager
     private lateinit var dstDir: File
     private val seededUris = mutableListOf<Uri>()
+    private val seedPrefixes = mutableMapOf<String, ByteArray>()
     private var activityScenario: ActivityScenario<MainActivity>? = null
 
     @Before
@@ -122,6 +129,7 @@ class FullFlowInstrumentedTest {
             try { ctx.contentResolver.delete(uri, null, null) } catch (_: Exception) { /* gone */ }
         }
         seededUris.clear()
+        seedPrefixes.clear()
         try { dstDir.deleteRecursively() } catch (_: Exception) { /* best effort */ }
         BackupPrefs(ctx).fromTreeUri = null
         BackupPrefs(ctx).toTreeUri = null
@@ -241,12 +249,62 @@ class FullFlowInstrumentedTest {
         ((position + name.hashCode()) % 251).toByte()
 
     /**
+     * A real 1x1 JPEG carrying EXIF DateTimeOriginal for
+     * [dateTakenMs] — the seed's date header. Rendered in the
+     * device's default timezone so the scanner's parse of the
+     * EXIF string returns exactly [dateTakenMs] (the seeds are
+     * whole seconds, so no sub-second loss).
+     */
+    private fun jpegPrefixWithExif(dateTakenMs: Long): ByteArray {
+        val bitmap = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
+        val tmp = File(ctx.cacheDir, "e2e-seed-${dateTakenMs}.jpg")
+        tmp.outputStream().use { out ->
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 90, out)
+        }
+        bitmap.recycle()
+        val exifDate = SimpleDateFormat("yyyy:MM:dd HH:mm:ss", Locale.US).apply {
+            timeZone = TimeZone.getDefault()
+        }.format(Date(dateTakenMs))
+        ExifInterface(tmp).apply {
+            setAttribute(ExifInterface.TAG_DATETIME_ORIGINAL, exifDate)
+            setAttribute(ExifInterface.TAG_DATETIME, exifDate)
+            saveAttributes()
+        }
+        return tmp.readBytes().also { tmp.delete() }
+    }
+
+    /** Seeded content byte at [position]: JPEG prefix, then the pattern. */
+    private fun seedByte(name: String, position: Long): Byte {
+        val prefix = seedPrefixes[name] ?: return patternByte(name, position)
+        return if (position < prefix.size) prefix[position.toInt()]
+        else patternByte(name, position - prefix.size)
+    }
+
+    /**
      * Seed one JPEG into MediaStore (DCIM/snapdisk-e2e) with a fixed
      * DATE_TAKEN, written in 1 MB chunks — never hold the whole file
      * in memory (the test heap is ~200 MB).
+     *
+     * The content is a REAL JPEG (EXIF DateTimeOriginal = the seed
+     * date) followed by pattern bytes: MediaStore's async scanner
+     * re-extracts image metadata after the write and overwrites
+     * DATE_TAKEN from the file — with random bytes it stored 0
+     * (smoke run 44183565903: e2e-stop1.jpg inserted with
+     * 1_700_000_000_000, stored taken=0), which silently reorders
+     * the copy (effective date becomes "now", sorts last) and also
+     * explains run 44175300406 processing mid → new → old. A
+     * post-write update() does NOT fix it: the update races the
+     * scanner — run 44189068044 saw it update 0 rows once and get
+     * re-cleared after verify another time. With EXIF in the file
+     * the scanner itself derives the right date, so no update is
+     * needed; the stored value is polled until it converges to the
+     * seed date (insert value, or scanner's EXIF extraction).
      */
     private fun seedPhoto(name: String, dateTakenMs: Long, sizeBytes: Long) {
         deletePreExisting(name)
+        val prefix = jpegPrefixWithExif(dateTakenMs)
+        require(sizeBytes > prefix.size) { "seed $name too small for its JPEG prefix" }
+        seedPrefixes[name] = prefix
         val values = ContentValues().apply {
             put(MediaStore.MediaColumns.DISPLAY_NAME, name)
             put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg")
@@ -263,46 +321,36 @@ class FullFlowInstrumentedTest {
         val out = ctx.contentResolver.openOutputStream(uri)
             ?: throw AssertionError("could not open output stream for $name")
         out.use { stream ->
+            stream.write(prefix)
             val chunk = ByteArray(CHUNK_BYTES)
-            var written = 0L
+            var written = prefix.size.toLong()
             while (written < sizeBytes) {
                 val n = minOf(CHUNK_BYTES.toLong(), sizeBytes - written).toInt()
-                for (i in 0 until n) chunk[i] = patternByte(name, written + i)
+                for (i in 0 until n) chunk[i] = patternByte(name, written - prefix.size + i)
                 stream.write(chunk, 0, n)
                 written += n
             }
         }
-        // Re-apply the dates AFTER the content write: insert + write
-        // does not reliably preserve DATE_TAKEN — the provider's
-        // metadata extraction on write cleared it (smoke run
-        // 44183565903 stored taken=0 for e2e-stop1.jpg although it
-        // was inserted with 1_700_000_000_000), which silently
-        // reorders the copy: the cleared file's effective date
-        // becomes "now", so it sorts last. That also explains run
-        // 44175300406 processing mid → new → old. Setting the
-        // columns after the write sticks; verify by re-query and
-        // fail fast if it did not.
-        val fix = ContentValues().apply {
-            put(MediaStore.MediaColumns.DATE_TAKEN, dateTakenMs)
-            put(MediaStore.MediaColumns.DATE_MODIFIED, dateTakenMs / 1000)
+        val deadline = System.currentTimeMillis() + 15_000
+        var stored: Long? = null
+        while (System.currentTimeMillis() < deadline) {
+            stored = ctx.contentResolver.query(
+                uri,
+                arrayOf(MediaStore.MediaColumns.DATE_TAKEN),
+                null, null, null,
+            )?.use { cursor ->
+                if (cursor.moveToFirst()) cursor.getLong(0) else null
+            } ?: throw AssertionError("could not re-query DATE_TAKEN for $name")
+            if (stored == dateTakenMs) return
+            Thread.sleep(200)
         }
-        val updated = ctx.contentResolver.update(uri, fix, null, null)
-        ctx.contentResolver.query(
-            uri,
-            arrayOf(MediaStore.MediaColumns.DATE_TAKEN),
-            null, null, null,
-        )?.use { cursor ->
-            assertTrue("seeded row vanished for $name", cursor.moveToFirst())
-            assertEquals(
-                "MediaStore did not preserve DATE_TAKEN for $name " +
-                    "(updated=$updated rows)",
-                dateTakenMs,
-                cursor.getLong(0),
-            )
-        } ?: throw AssertionError("could not re-query DATE_TAKEN for $name")
+        throw AssertionError(
+            "MediaStore DATE_TAKEN for $name did not converge to the seed date " +
+                "within 15 s: expected $dateTakenMs, last stored $stored",
+        )
     }
 
-    /** Streaming byte-compare: [file] must match the seeded pattern for [name]. */
+    /** Streaming byte-compare: [file] must match the seeded content for [name]. */
     private fun assertFileMatchesSeed(file: File, name: String, sizeBytes: Long) {
         assertTrue("missing file ${file.name}", file.exists())
         assertEquals("wrong size for ${file.name}", sizeBytes, file.length())
@@ -313,7 +361,7 @@ class FullFlowInstrumentedTest {
                 val n = stream.read(chunk, 0, minOf(CHUNK_BYTES.toLong(), sizeBytes - read).toInt())
                 if (n < 0) throw AssertionError("${file.name} ended early at $read bytes")
                 for (i in 0 until n) {
-                    if (chunk[i] != patternByte(name, read + i)) {
+                    if (chunk[i] != seedByte(name, read + i)) {
                         throw AssertionError("${file.name} differs at byte ${read + i}")
                     }
                 }
