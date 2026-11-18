@@ -133,7 +133,7 @@
   tool/growth/searches.md. Blog index (JSON-LD + post block),
   sitemap.xml, llms.txt, llms-full.txt, feed.xml (40 items)
   updated. PR #108 (article), merge e61bd2a, CI run 44219885942
-  (Android PR, success); this row PR #TBD.
+  (Android PR, success); this row PR #109.
 
 ## WL-70 — Back up Ulefone photos to USB article, 39th how-to (DONE)
 
