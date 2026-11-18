@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up FOSSiBOT photos to a USB drive — SnapDisk</title>
+<meta name="description" content="Back up FOSSiBOT photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/fossibot-photos-to-usb.html">
+<meta property="og:title" content="Back up FOSSiBOT photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up FOSSiBOT photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/fossibot-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/fossibot-photos-to-usb.html#article",
+      "headline": "Back up FOSSiBOT photos to a USB drive (no computer)",
+      "description": "Back up FOSSiBOT photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-18",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/fossibot-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/fossibot-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up FOSSiBOT photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, on the FOSSiBOT F-series Android phones with USB host support. The spec tables list USB OTG as Yes for the F101, the F101 PRO, the F102, the F110 Pro 5G, and the F113, the F112 Pro's spec page lists USB OTG Type-C, and the F107 Pro's official-site spec says you can connect USB flash drives via an OTG cable — while the F101P's official page mentions OTG only as reverse charging (powering other devices, not hosting a drive) and the F115 Ultra's spec data conflicts, so owners of those two models should test with a drive before relying on it; all of them have USB-C, so a USB-C flash drive plugs straight in. FOSSiBOT has no phone-to-USB backup tool of its own: its backup advice is a computer copy or Google Drive and Google Photos in the cloud. The stock route is a file manager: connect the drive, open the file manager, pick the photos in DCIM/Camera, and Copy to the drive. SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/fossibot-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up FOSSiBOT photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/fossibot-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up FOSSiBOT photos to a USB drive (no computer)</h1>
+  <p class="dek">FOSSiBOT's rugged F-series Android phones (F101, F101 Pro, F102, F107 Pro, F110 Pro 5G, F112 Pro, and F113) list USB OTG support in their spec tables, and FOSSiBOT has no phone-to-USB backup tool of its own: its backup advice is a computer copy or Google Drive and Google Photos in the cloud. Two honest caveats up front: the F101P's official page mentions OTG only as reverse charging — powering another device from the phone's battery, not hosting a drive — and the F115 Ultra's spec data conflicts (one source lists USB OTG as false while also listing USB-C as false), so check Settings &gt; Storage on those two models before relying on it; and the original F101 went on sale in October 2020, and I did not verify its Android version in the sources above, so owners of that model should check Settings &gt; About phone — SnapDisk needs Android 7.0 or later. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 18, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On a FOSSiBOT F-series Android phone with USB host support, plug a USB drive in — the spec tables list USB OTG as Yes for the F101, the F101 PRO, the F102, the F110 Pro 5G, and the F113, the F112 Pro's spec page lists USB OTG Type-C, and the F107 Pro's official-site spec says you can connect USB flash drives via an OTG cable, while the F101P's official page mentions OTG only as reverse charging and the F115 Ultra's spec data conflicts, so test with a drive on those two models — then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: a file manager works — the YouTube guides' route is an OTG adapter copy with the built-in file manager, and askfilo's route is the same — but the direct route is manual select-copy-paste with no progress detail, no resume, and no verification; FOSSiBOT's own backup advice works too, but there is none pointing at a USB drive — devicesfaq's advice for the F102 is a computer copy with a USB cable and a file browser, or Google Drive and Google Photos in the cloud, which back your photos up to Google's servers, not to a USB drive as plain files. One rival app does exist — Photos to USB: OTG Backup copies a whole gallery to a pen drive in one tap and resumes where it stopped — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 18, 2026, no top search result for this query is a FOSSiBOT-specific phone-to-USB guide at all, let alone a FOSSiBOT-specific automated whole-library backup with progress, Pause/Stop, and resume: the FOSSiBOT-specific results are spec tables and FAQ pages that give no USB-drive advice at all, and the rest are generic manual guides.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up FOSSiBOT photos to USB drive without computer" and there is no FOSSiBOT-specific phone-to-USB guide in the top results at all — the FOSSiBOT-specific results are spec tables and FAQ pages that give no USB-drive advice at all, and the rest are generic Android guides, in different packaging:</p>
+  <ul>
+    <li><strong>Dr.Fone, "4 Practical Ways to Transfer Photos from Android to USB Flash Drive"</strong> (<a href="http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html">4 Practical Ways to Transfer Photos from Android to USB Flash Drive</a>) — transfer photos with an OTG adapter, through Google Drive, by drag-and-drop through a PC, or wirelessly through AirDroid. Generic Android, and the direct route is a manual file-manager copy.</li>
+    <li><strong>askfilo, "how to transfer pictures from an android phone to a flashdrive"</strong> (<a href="https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432">how to transfer pictures from an android phone to a flashdrive</a>) — plug the flash drive into an OTG adapter, open the file manager, find the DCIM folder, and copy to the USB drive. Generic Android, and a manual file-manager guide.</li>
+    <li><strong>YouTube, "How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)"</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos</a>) — OTG connection and the phone's built-in file manager, no computer or internet needed. Generic Android, and a manual file-manager guide.</li>
+    <li><strong>Pixoneye, "How to Transfer Photos from Your Phone to a USB Stick"</strong> (<a href="https://pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/">How to Transfer Photos from Your Phone to a USB Stick</a>) — "Copy local originals to compatible USB storage, open the files from the destination, then make an independent backup before deleting anything" — Android with a file manager, or a computer in between. Generic Android and iPhone, and a manual file-manager guide.</li>
+    <li><strong>Softhandtech, "Transfer Photos from Phone to Memory Stick: A Comprehensive Guide"</strong> (<a href="https://softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/">Transfer Photos from Phone to Memory Stick</a>) — a computer copy, a direct OTG transfer "if your device supports it", or cloud services. Generic Android and iPhone, and the direct route is a manual file-manager copy — or a computer in between.</li>
+    <li><strong>Fossibot F110 Pro 5G, NeoTeo</strong> (<a href="https://www.neoteo.com/en/fossibot/f110-pro-5g">Fossibot F110 Pro 5G</a>) — "Connectivity Features: Computer Sync, NFC, OTA Sync, Tethering, VoLTE, USB Charging, USB Mass Storage, USB Host 2.0, USB OTG, USB Type-C". A spec table, not a guide — and the confirmation that the F110 Pro 5G lists USB OTG.</li>
+    <li><strong>Fossibot F101, Kimovil</strong> (<a href="https://www.kimovil.com/en/where-to-buy-fossibot-f101-pro">Fossibot F101</a>) — the spec table lists "USB On-The-Go (OTG): Yes" and "USB Type C: Yes". A spec table, not a guide — and the confirmation that the F101 lists OTG.</li>
+    <li><strong>NEW FOSSiBOT F107 PRO, mychooz</strong> (<a href="https://mychooz.com/en/news/new-fossibot-f107-pro-111377">NEW FOSSiBOT F107 PRO</a>) — "A slot is available for installing MicroSD memory cards up to 2 TB. You can also connect USB flash drives, hard drives, and other external storage devices via an OTG cable." A news page quoting the official site, not a guide — and the confirmation that the F107 Pro's official spec names flash drives over OTG.</li>
+    <li><strong>FOSSiBOT F112 Pro, devicesfaq</strong> (<a href="https://www.devicesfaq.com/en/characteristics/fossibot-f112-pro">FOSSiBOT F112 Pro</a>) — the spec table lists "USB: OTG Type-C". A spec table, not a guide — and the confirmation that the F112 Pro lists OTG.</li>
+    <li><strong>FOSSiBOT F102, Cashify</strong> (<a href="https://www.cashify.in/fossibot-f102-price-in-india">FOSSiBOT F102</a>) — "OTG Support, Yes" and expandable storage up to 2 TB, with a 16500 mAh battery and USB Type-C. A spec table, not a guide — and the confirmation that the F102 lists OTG.</li>
+    <li><strong>FOSSiBOT F113 Review, Banggood blog</strong> (<a href="https://blog.banggood.com/fossibot-f113-phone-review-74825.html">FOSSiBOT F113 Review</a>) — Android 15, 256 GB of storage with a TF card up to 2 TB, and "Ports: USB Type-C (Charging/Data/Headphone), OTG support". A review, not a guide — and the confirmation that the F113 lists OTG support.</li>
+    <li><strong>FOSSIBOT F101P, official site</strong> (<a href="https://www.fossibotrugged.com/rugged-phones/f101p/">FOSSIBOT F101P</a>) — Android 13, a 10600 mAh battery, and "The 10600mAh battery supports 18W charging and OTG reverse charging." A product page, not a guide — and the confirmation that the F101P's official page mentions OTG only as reverse charging, which powers another device from the phone's battery and is not the same as hosting a drive.</li>
+    <li><strong>FOSSIBOT F107 Pro Rugged Phone User Manual, manuals.plus</strong> (<a href="https://manuals.plus/asin/B0FGQB7T67.pdf">FOSSIBOT F107 Pro user manual</a>) — Android 15, 512 GB of storage expandable to 2 TB, a 28000 mAh battery, and "10W OTG reverse charging, allowing you to power other devices." A user manual, not a guide — and the confirmation that the manual's own OTG mention is reverse charging only, while the official-site spec is the one that names flash drives over an OTG cable.</li>
+    <li><strong>FOSSiBOT F101 PRO, Geekbuying</strong> (<a href="https://www.geekbuying.com/item/FOSSiBOT-F101-PRO-Rugged-Smartphone-Orange-522632.html">FOSSiBOT F101 PRO</a>) — Android 13.0, "OTG: Support", a TF card up to 1 TB, and a 10600 mAh battery. A retailer spec table, not a guide — and a second source for the F101 Pro's Android 13 and OTG support.</li>
+    <li><strong>FOSSiBOT F102 Specs, Price and 2026 Buying Advice, RottenWifi</strong> (<a href="https://rottenwifi.com/fossibot-f102-full-specifications-price-and-features/">FOSSiBOT F102</a>) — Android 13, 256 GB of storage with "microSD/TF expansion up to 1TB", and "OTG Reverse Charge" on the 16500 mAh battery. A review, not a guide — and the confirmation that the F102 runs Android 13, with the card size disagreeing with Cashify's 2 TB.</li>
+    <li><strong>F115 Ultra Review, SpecsBattle</strong> (<a href="https://specsbattle.com/phones/fossibot-f115-ultra">F115 Ultra</a>) — "Connectivity — USB: USB charging and USB host supported; USB-C listed as false; USB OTG listed as false", and "That combination is unusual. Buyers should confirm the port type and accessory support before purchasing." A spec-comparison page, not a guide — and the confirmation that the F115 Ultra's spec data conflicts, so its OTG support is unverified.</li>
+    <li><strong>Frequently asked questions FOSSiBOT F102, devicesfaq</strong> (<a href="https://www.devicesfaq.com/en/frequently-asked-questions/fossibot-f102">FOSSiBOT F102 FAQ</a>) — "How to backup my FOSSiBOT F102? … The most economical method to make a backup is to connect the FOSSiBOT F102 to a computer using the USB cable and make a copy of the files using the file browser." — and photos via Google Photos, with downloads in "Files", previously known as "Files by Google". A FAQ page, not a backup guide — and the confirmation that FOSSiBOT's own backup advice points at a computer or the cloud, never at a USB drive.</li>
+    <li><strong>How to update the software for FOSSiBOT F101, devicesfaq</strong> (<a href="https://www.devicesfaq.com/en/update/fossibot-f101">FOSSiBOT F101 update guide</a>) — "Your FOSSiBOT F101 went on sale in October 2020, 6 years ago." An update guide, not a backup guide — and the confirmation that the original F101 is the oldest F-series model I found.</li>
+    <li><strong>Photos to USB: OTG Backup</strong> (<a href="https://play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb">Google Play</a>) — the one-tap app alternative: a real phone-to-USB app that copies the whole gallery to a pen drive in one tap, copies only new photos next time, and warns about the FAT32 4 GB limit. It is free with ads, with a one-time purchase to remove them. It is the closest thing to this article's job — but it is a generic Android listing, not a FOSSiBOT guide, and it does not promise oldest-first order, detailed progress with Pause and Stop, or size verification of every file.</li>
+    <li><strong>Cloud routes</strong> — Google Photos syncs your gallery to Google's servers, Google Drive backs your data up to Google's cloud with 15 GB free, and Google backup restores your data to a new phone from Google's cloud, not to a drive you hold; Google Photos' "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Neither route gives you a folder of plain photo files on a USB drive.</li>
+  </ul>
+  <p>None of them is a FOSSiBOT-specific phone-to-USB guide at all, and none of them offers an automated FOSSiBOT photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What you need</h2>
+  <p>A FOSSiBOT F-series Android phone (Android 7.0 or later for SnapDisk) — the F101 Pro and the F101P run Android 13, the F102 runs Android 13, and the F107 Pro and the F113 run Android 15 — so a USB-C flash drive plugs straight into any of them, while a regular USB-A drive needs a USB-C OTG adapter — and enough space on the drive for the photos you want to keep. Three FOSSiBOT specifics: first, OTG is confirmed on most of the line — the spec tables list USB OTG as Yes for the F101, the F101 PRO, the F102, the F110 Pro 5G, and the F113, the F112 Pro's spec page lists USB OTG Type-C, and the F107 Pro's official-site spec says you can connect USB flash drives via an OTG cable — but the F101P's official page mentions OTG only as reverse charging and the F115 Ultra's spec data conflicts, so plug a drive in and check Settings &gt; Storage before relying on it on those two models. Second, FOSSiBOT has no phone-to-USB backup tool of its own — its backup advice is a computer copy or Google Drive and Google Photos; the stock photo backup is Google Photos; the stock file manager is Files by Google; FOSSiBOT camera photos live in DCIM/Camera, as on any Android phone. The F101 Pro takes a microSD card up to 1 TB, and the F107 Pro and the F113 take one up to 2 TB — the F102's card size is the one disagreement in my sources, 1 TB per RottenWifi and 2 TB per Cashify — so a card is an option, and it still stays in the phone and opening it anywhere else needs a card reader, while a USB drive plugs into any computer as it is. Third, SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the USB drive.</strong> It mounts on plug-in on most FOSSiBOT Android phones — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage for the drive. OTG is listed as Yes for the F101, the F101 PRO, the F102, the F110 Pro 5G, and the F113, the F112 Pro lists USB OTG Type-C, and the F107 Pro's official-site spec names flash drives over an OTG cable, so the drive should appear on them; on the F101P and the F115 Ultra, whose OTG host support is unlisted or conflicting, check Settings &gt; Storage to confirm the drive mounted.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — FOSSiBOT camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the phone normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the phone to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: a file manager (the stock route, no app needed)</h2>
+  <p>A file manager can copy your photos to the USB drive — the YouTube guides' route is an OTG adapter copy, and askfilo's route is the same, and either is the manual route for external storage: 1. Plug in the USB drive — a notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage for the drive. 2. Open the file manager (Files by Google on FOSSiBOT phones) and confirm the USB drive shows up under storage devices. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until the file manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: FOSSiBOT's own tools (Google Photos, Google Drive, or a microSD card — not phone-to-USB)</h2>
+  <p>If you want FOSSiBOT's own route, know what each tool actually does — there is no FOSSiBOT backup page pointing at a USB drive at all, and none of the stock tools writes your photos as plain files to a USB drive automatically. <strong>1. Google Photos</strong> is Google's own photo backup app, and it is the stock photo backup on FOSSiBOT Android phones: it automatically backs up photos to your Google account. It is a real backup — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. <strong>2. Google Drive</strong> is the cloud backup Android names by default — "on Android devices the default built-in service is Google Drive. With Google Drive you have 15Gb free" — it backs your data up to Google's cloud. It is a real backup — but it is a cloud backup, not a USB copy, and Google accounts only offer 15 GB of free storage. <strong>3. A microSD card</strong> is the local option FOSSiBOT documents — the F101 Pro takes a card up to 1 TB, and the F107 Pro and the F113 take one up to 2 TB, with the F102's card size disputed between sources (1 TB per RottenWifi, 2 TB per Cashify) — and the F107 Pro's own spec page names the card slot alongside the OTG cable. It is a real local copy — but the card stays in the phone, and opening the card anywhere else needs a card reader. <strong>4. A computer copy</strong> is the other way to move files off the phone — "connect the FOSSiBOT F102 to a computer using the USB cable and make a copy of the files using the file browser", per devicesfaq. It is a real backup — but it needs a PC in between, and the backup lands on the PC, not on a USB drive as plain files straight from the phone. None of them is a one-tap way to copy your camera roll to a drive. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works — and it is the route FOSSiBOT's own backup advice names: plug the FOSSiBOT phone into the computer with a USB cable, tap the USB notification and choose File transfer — and drag the DCIM folder onto the USB drive. This works fine, and it is the only route above that needs a second device in between. If the phone and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the phone is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>OTG is not confirmed on every FOSSiBOT model.</strong> The spec tables list USB OTG as Yes for the F101, the F101 PRO, the F102, the F110 Pro 5G, and the F113, the F112 Pro's spec page lists USB OTG Type-C, and the F107 Pro's official-site spec says you can connect USB flash drives via an OTG cable — but the F101P's official page mentions OTG only as reverse charging, which powers another device and is not hosting a drive, and the F115 Ultra's spec data conflicts (one source lists USB OTG as false while also listing USB-C as false), so confirm the drive mounts in Settings &gt; Storage on those two models before relying on it. SnapDisk still needs Android 7.0 or later.</li>
+    <li><strong>The oldest FOSSiBOT phone is out of scope until checked.</strong> The original F101 went on sale in October 2020, and I did not verify its Android version in the sources above, so owners of that model should check Settings &gt; About phone first — SnapDisk needs Android 7.0 or later and cannot install on anything older. Every other F-series model I found runs Android 13 or 15.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter you don't need — or the wrong one.</strong> A USB-C flash drive plugs straight into the F101, the F101 Pro, the F102, the F107 Pro, the F110 Pro 5G, the F112 Pro, and the F113, which all have USB-C — so an adapter is only needed for a regular USB-A drive, and it must be a USB-C OTG adapter, not a micro-USB one. A plain USB-C charging cable is not an OTG adapter: it connects the phone to a computer, which is the opposite direction.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google Drive and Google Photos back your phone up to Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> FOSSiBOT's own backup advice is a computer copy with a USB cable and a file browser — but it is a copy to a computer, and the backup lands on the PC. If the phone and the drive are all you have, a phone-to-USB copy is the route, not a desktop copy.</li>
+    <li><strong>Mistaking a spec table or a user manual for a phone-to-USB guide.</strong> The F107 Pro manual page and the F102 FAQ page are real FOSSiBOT pages — but the manual only mentions OTG as reverse charging ("10W OTG reverse charging, allowing you to power other devices"), and the FAQ only says to connect the phone to a computer and copy the files with a file browser. Neither of them describes copying your camera roll straight to a USB drive from the phone.</li>
+    <li><strong>Mistaking "OTG reverse charging" for OTG host support.</strong> The F101P's official page and the F107 Pro manual both mention OTG reverse charging — that is the phone sharing its battery with another device, not the phone reading a flash drive. The host evidence for the F107 Pro is the official-site spec saying flash drives connect via an OTG cable; for the F101P there is no host evidence at all, so test with a drive.</li>
+    <li><strong>Mistaking a microSD card copy for a USB backup.</strong> Copying DCIM to a microSD card is a real local copy — the F101 Pro takes a card up to 1 TB, and the F107 Pro and the F113 take one up to 2 TB — but the card stays in the phone, and opening it anywhere else needs a card reader; a USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 18, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On FOSSiBOT the cloud routes are Google Photos and Google Drive — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Installing SnapDisk on a FOSSiBOT that is too old to run it.</strong> The original F101 went on sale in October 2020 and its Android version is unverified in my sources — SnapDisk needs Android 7.0 or later. Check Settings &gt; About phone before installing on that model; every other F-series model I found runs Android 13 or 15.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="hammer-photos-to-usb.html">Back up Hammer photos to a USB drive (no computer)</a> — Hammer is the closest parallel: another rugged brand whose own backup advice is a computer copy or cloud, not a phone-to-USB copy.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
