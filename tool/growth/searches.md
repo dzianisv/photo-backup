@@ -5060,6 +5060,256 @@ demand is read off competitor install velocity instead (see
   Fallback for WL-87: Nomu — no Nomu article exists in docs/
   yet.
 
+### 55. "back up Nomu photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Nomu-specific
+  phone-to-USB guide at all, let alone a Nomu-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Nomu-specific results are FAQ pages
+  that give no USB-drive advice at all, and the rest are
+  generic manual guides.
+- Current top results (scored Nov 18, 2026, live web search):
+  Dr.Fone (Wondershare), "4 Practical Ways to Transfer Photos
+  from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — connect the drive directly with an OTG adapter, use a PC
+  as a middleman with USB "File Transfer" mode, or go wireless
+  through Google Drive or AirDroid; the Dr.Fone PC software
+  bulk-exports photos to a computer. Generic Android, and a
+  manual guide — every route is hand-picked files, a computer
+  in between, or the cloud); YouTube, "How to Connect USB Drive
+  to Android Phone to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet needed.
+  Generic Android, and a manual file-manager guide); YouTube,
+  "How to Transfer Photos, Videos and any Files from Android
+  Phone to USB Pendrive (USB Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — verify OTG compatibility
+  first, connect the drive via an OTG adapter, open the file
+  manager, and copy or move. Generic Android, and a manual
+  file-manager guide); askfilo,
+  "how to transfer pictures from an android phone to a
+  flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — plug the flash drive into an OTG adapter, open the file
+  manager, find the DCIM folder, and copy to the USB drive.
+  Generic Android, and a manual file-manager guide);
+  groovypost, "How to Transfer Photos from Android to a USB
+  Drive"
+  (groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — plug the drive into a PC, connect the phone, choose File
+  Transfer, and drag DCIM onto the drive — or use a dual USB-C
+  flash drive straight into the phone and copy with the file
+  manager. Generic Android, and a manual guide — the first
+  route needs a PC in between); epictechtips, "How to Transfer
+  Pictures from Android Phone to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive in, tap the USB notification and choose
+  "Transfer photos", then use the file manager — or use a PC as
+  an intermediary. Generic Android, and a manual file-manager
+  guide); sekin.in, "How To Transfer Files From Android Phone
+  To USB Drive"
+  (sekin.in/how-to-transfer-files-from-android-phone-to-usb-drive-full-guide/
+  — connect a USB OTG drive or a normal drive through a
+  USB-OTG adapter and copy with Files by Google, or transfer
+  through a Windows PC or Chromebook instead. Generic Android,
+  and a manual file-manager guide); coolmuster, "How to Transfer
+  Photos from Android to Flash Drive [5 Ways]"
+  (coolmuster.com/android/transfer-photos-from-android-to-usb-flash-drive.html
+  — drag and drop, an OTG adapter, a PC tool, Google Drive, or
+  AirDroid. Generic Android, and a manual guide — every route is
+  hand-picked files or a computer in between); Frequently asked
+  questions Nomu S10, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/nomu-s10
+  — "How to backup my Nomu S10? … The most economical method
+  to make a backup is to connect the Nomu S10 to a computer
+  using the USB cable and make a copy of the files using the
+  file browser." — and photos via Google Photos, with Google
+  Drive at 15 GB free. A FAQ page, not a backup guide — and the
+  confirmation that Nomu's own backup advice points at a
+  computer or the cloud, never at a USB drive); Frequently asked
+  questions Nomu S30 Mini, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/nomu-s30-mini
+  — the same template on the S30 Mini page: a computer copy
+  with a USB cable and a file browser, or Google Drive with
+  15 GB free, or Google Photos in the cloud. A FAQ page, not a
+  backup guide — and the confirmation that the same
+  computer-or-cloud advice is the only backup advice Nomu's
+  pages give for the models I checked); NOMU S10 Pro, PhoneMore
+  (phonemore.com/compare/phones/nomu-s10-pro-vs-samsung-galaxy-s20-fe-5g-sm-g781bds-128gb8gb/24882853
+  — "USB OTG On-The-Go" in the miscellaneous features,
+  microUSB 2.0, Android 7.0, 3 GB of RAM, 32 GB of storage,
+  microSD up to 64 GB. A spec table, not a guide — and the
+  confirmation that the S10 Pro lists OTG support); Nomu S10
+  Pro, Smartprix
+  (smartprix.com/mobiles/nomu-s10-pro-ppd1l661h3wj — Android
+  7.0 (Nougat), MediaTek MT6737T, 3 GB of RAM, 32 GB of
+  storage, microSD up to 32 GB, 5000 mAh. A spec table, not a
+  guide — and a second source for the S10 Pro's Android 7.0,
+  against PhoneMore's microSD size of up to 64 GB, so the S10
+  Pro card size is disputed); NOMU S10, PhoneMore
+  (phonemore.com/compare/phones/nomu-s10-vs-quantum-sky/6590257
+  — Android 6.0 Marshmallow, MediaTek MT6737T, 2 GB of RAM,
+  16 GB of storage, microSD up to 64 GB, "USB: MicroUSB 2.0".
+  A spec table, not a guide — and the confirmation that the
+  S10 runs Android 6.0 with microUSB and no OTG mention); The
+  Nomu S20 is Drop & Waterproof (Hands-on Review), Review Hub
+  (review-hub.co.uk/nomu-s20-smartphone-review/ — "USB OTG:
+  YES", "USB Type: micro-USB", Android 6.0, MediaTek MT6735,
+  32 GB of storage, 3000 mAh. A review, not a guide — and the
+  confirmation that the S20 lists OTG but runs Android 6.0);
+  Nomu S20 Review, UL benchmarks
+  (benchmarks.ul.com/hardware/phone/Nomu+S20+review — chipset
+  MT6737T, 3 GB of memory, 32 GB of storage, Android 6.0,
+  "USB, Yes, microUSB 2.0". A spec table, not a guide — and a
+  second source for the S20's Android 6.0, against Review Hub's
+  MT6735 chipset, so the S20 chipset is disputed); NOMU S30,
+  PhoneMore
+  (phonemore.com/compare/phones/nomu-s30-vs-samsung-galaxy-s10-sm-g9730-128gb/10137946
+  — "USB OTG On-The-Go" in the miscellaneous features,
+  microUSB 2.0, Android 6.0, MediaTek MT6755 Helio P10, 4 GB
+  of RAM, 64 GB of storage, microSD up to 64 GB. A spec table,
+  not a guide — and the confirmation that the S30 lists OTG
+  but runs Android 6.0); Nomu S30 Smartphone Review,
+  Notebookcheck
+  (notebookcheck.net/Nomu-S30-Smartphone-Review.212938.0.html
+  — Android 6.0 Marshmallow, 64 GB of storage, microSD up to
+  32 GB, "OTG" in the connections list. A review, not a guide
+  — and a second source for the S30's Android 6.0 and OTG,
+  against PhoneMore's microSD size of up to 64 GB, so the S30
+  card size is disputed); NOMU S30 mini, PhoneMore
+  (phonemore.com/compare/phones/oneplus-nord-ce-2-lite-128gb8gb-vs-nomu-s30-mini/19296291
+  — "USB OTG On-The-Go" in the miscellaneous features,
+  microUSB 2.0, Android 7.0 Nougat, MediaTek MT6737T, 3 GB of
+  RAM, 32 GB of storage, microSD up to 64 GB, 3000 mAh. A spec
+  table, not a guide — and the confirmation that the S30 Mini
+  lists OTG and runs Android 7.0); Nomu S30 Mini, Smartprix
+  (smartprix.com/mobiles/nomu-s30-mini-ppd12mhv21ns — Android
+  7.0 (Nougat), MediaTek MT6737T, 3 GB of RAM, 32 GB of
+  storage, 3000 mAh. A spec table, not a guide — and a second
+  source for the S30 Mini's Android 7.0); Nomu M6, phonesdata
+  (phonesdata.com/en/smartphones/nomu/nomu-m6-5460419/ —
+  Android 7.0 Nougat, MediaTek MT6737T, 2 GB of RAM, 16 GB of
+  storage, "USB: Yes, USB On-The-Go (OTG)", 3000 mAh, launched
+  February 2018. A spec table, not a guide — and the
+  confirmation that the M6 lists OTG and runs Android 7.0);
+  Nomu M6 Smartphone Review, Notebookcheck
+  (notebookcheck.net/Nomu-M6-Smartphone-Review.299774.0.html —
+  "The Nomu M6 is equipped with a Micro-USB port supporting
+  the transfer standard 2.0. The port is unable to output
+  video signals, but it does support OTG, meaning external
+  storage media and peripherals can be connected to the
+  smartphone." Android 7.0 Nougat, 16 GB of storage, microSD
+  up to 32 GB. A review, not a guide — and a second source for
+  the M6's Android 7.0 and OTG, against unite4buy's microSD
+  size of up to 64 GB, so the M6 card size is disputed); Nomu
+  M8, phonesdata
+  (phonesdata.com/en/smartphones/nomu/nomu-m8-5460417/ —
+  Android 7.0 Nougat, MediaTek MT6750T, 4 GB of RAM, 64 GB of
+  storage, "USB: Yes, USB Type C, USB On-The-Go (OTG)",
+  launched January 2019. A spec table, not a guide — and the
+  confirmation that the M8 is the only Nomu model I found with
+  USB-C and OTG); Nomu M8, devicesfaq
+  (devicesfaq.com/en/characteristics/nomu-m8 — Android 7.0
+  Nougat, MediaTek MT6750T, 4 GB of RAM, 64 GB of storage,
+  "USB: USB Type-C", 2950 mAh. A spec table, not a guide — and
+  a second source for the M8's Android 7.0 and USB-C, with no
+  OTG mention on this page and a 2950 mAh battery against
+  unite4buy's 3000 mAh, so the M8 battery is disputed); Nomu
+  T18, gizmochina
+  (gizmochina.com/product/nomu-t-18-smartphone-full-specification-and-features/
+  — Android 7.0 Nougat, MediaTek MT6737, 3 GB of RAM, 32 GB of
+  storage, microSD up to 32 GB, "Micro USB 2.0 With OTG,
+  Charging and Mass Storage Function", 5200 mAh, released
+  November 18, 2017. A spec table, not a guide — and the
+  confirmation that the T18 lists OTG and runs Android 7.0);
+  Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — the one-tap app alternative:
+  copies the whole gallery to a pen drive in one tap, copies
+  only new photos next time, warns about the FAT32 4 GB limit.
+  Free with ads, one-time purchase to remove them. Generic
+  Android, not a Nomu guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop,
+  or size verification of every file); PhotoSaver
+  Phone-to-Drive (Play listing, com.clevx.photosaver — a second
+  one-tap app alternative: save photos and videos to any USB-C
+  drive with one click, no cloud, no upload. Generic Android,
+  not a Nomu guide, and it needs a USB-C connection, so it is
+  no use on the microUSB Nomu models, only on the M8, which is
+  the one Nomu model with USB-C); cloud routes — Google Photos
+  syncs the gallery to Google's servers, Google Drive backs
+  data up to Google's cloud with 15 GB free, and Google backup
+  restores data to a new phone from Google's cloud, not to a
+  drive you hold; Google Photos' "Storage saver" setting
+  compresses photos, and a cloud backup stops working the day
+  you stop paying for storage. Neither route gives a folder of
+  plain photo files on a USB drive.
+  Nomu specifics: OTG is listed for seven of the eight models
+  I found — the S10 Pro, the S20, the S30, the S30 Mini, the
+  M6, the M8, and the T18 — and unconfirmed only on the S10,
+  where PhoneMore lists microUSB 2.0 with no OTG mention, so
+  the article tells owners of that model to check Settings >
+  Storage before relying on it instead of claiming OTG across
+  the range. Three models cannot run SnapDisk at all: the S10,
+  the S20, and the S30 run Android 6.0, below SnapDisk's
+  Android 7.0 minimum, even though the S20 and the S30 list
+  OTG support. The five models that can run SnapDisk all run
+  Android 7.0: the S10 Pro, the S30 Mini, the M6, the M8, and
+  the T18. The M8 is the only Nomu model I found with a USB-C
+  port — every other model has microUSB 2.0. The specs are
+  disputed between sources on several models: the S20 chipset
+  (MediaTek MT6735 per Review Hub, MT6737T per UL benchmarks);
+  the T18 chipset (MT6737 per gizmochina, MT6737T per
+  unite4buy); the M8 Android version (7.0 per phonesdata and
+  devicesfaq, 7.1 per unite4buy) and battery (2950 mAh per
+  devicesfaq, 3000 mAh per unite4buy); the microSD size on the
+  S10 Pro (up to 64 GB per PhoneMore, up to 32 GB per
+  Smartprix), the S30 (up to 64 GB per PhoneMore, up to 32 GB
+  per Notebookcheck), and the M6 (up to 32 GB per Notebookcheck,
+  up to 64 GB per unite4buy). The S10 takes a microSD card up
+  to 64 GB, the S30 Mini takes one up to 64 GB, and the T18
+  takes one up to 32 GB — but a card is still not a USB drive:
+  it stays in the phone and opening it anywhere else needs a
+  card reader.
+  Nomu's own tools: devicesfaq's backup advice for the S10 (a
+  computer copy with a USB cable and a file browser, or Google
+  Drive with 15 GB free and Google Photos in the cloud) points
+  at a computer or the cloud, never at a USB drive, and the same
+  template appears on the S30 Mini page; Google Photos (the
+  stock photo backup on Nomu Android phones) backs photos up to
+  Google's cloud; Google Drive (Android's default built-in
+  service, 15 GB free) backs data up to Google's cloud; a
+  microSD card (up to 64 GB on the S10, up to 64 GB on the S30
+  Mini, up to 32 GB on the T18) is a real local copy, but the
+  card stays in the phone and needs a reader elsewhere; a
+  computer copy (connect the phone to a computer using the USB
+  cable and make a copy of the files using the file browser)
+  lands on the PC, not on a USB drive; no Nomu backup page
+  points at a USB drive at all — none of them writes plain photo
+  files to a USB drive automatically. Out of scope, named in
+  the article: OTG support is unconfirmed on the S10, so owners
+  of that model should check Settings > Storage before relying
+  on it; the S10, the S20, and the S30 run Android 6.0, below
+  SnapDisk's Android 7.0 minimum, so SnapDisk cannot run on
+  them; the S20 chipset is disputed (MT6735 per Review Hub,
+  MT6737T per UL benchmarks); the T18 chipset is disputed
+  (MT6737 per gizmochina, MT6737T per unite4buy); the M8
+  Android version is disputed (7.0 per phonesdata and
+  devicesfaq, 7.1 per unite4buy) and its battery is disputed
+  (2950 mAh per devicesfaq, 3000 mAh per unite4buy); the
+  microSD size is disputed on the S10 Pro (64 GB per PhoneMore,
+  32 GB per Smartprix), the S30 (64 GB per PhoneMore, 32 GB per
+  Notebookcheck), and the M6 (32 GB per Notebookcheck, 64 GB
+  per unite4buy); the M8 is the only Nomu model with USB-C, so
+  owners of the microUSB models should buy a micro-USB OTG
+  adapter, not a USB-C one — SnapDisk needs Android 7.0 or
+  later.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-87, 56th how-to):
+  docs/nomu-photos-to-usb.html.
+  Fallback for WL-88: Conquest — no Conquest article exists in
+  docs/ yet.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
