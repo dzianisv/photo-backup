@@ -4396,6 +4396,180 @@ demand is read off competitor install velocity instead (see
   docs/hammer-photos-to-usb.html.
   Fallback for WL-84: FOSSiBOT (F-series line) — no FOSSiBOT
   article exists in docs/ yet.
+
+### 52. "back up FOSSiBOT photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a FOSSiBOT-specific
+  phone-to-USB guide at all, let alone a FOSSiBOT-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the FOSSiBOT-specific results are spec tables
+  and FAQ pages that give no USB-drive advice at all, and the
+  rest are generic manual guides.
+- Current top results (scored Nov 18, 2026, live web search):
+  Dr.Fone, "4 Practical Ways to Transfer Photos from Android
+  to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos with an OTG adapter, through Google Drive,
+  by drag-and-drop through a PC, or wirelessly through AirDroid.
+  Generic Android, and the direct route is a manual file-manager
+  copy); askfilo, "how to transfer pictures from an android
+  phone to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — plug the flash drive into an OTG adapter, open the file
+  manager, find the DCIM folder, and copy to the USB drive.
+  Generic Android, and a manual file-manager guide); YouTube,
+  "How to Connect USB Drive to Android Phone to Move Photos &
+  Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet needed.
+  Generic Android, and a manual file-manager guide); Pixoneye,
+  "How to Transfer Photos from Your Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — "Copy local originals to compatible USB storage, open the
+  files from the destination, then make an independent backup
+  before deleting anything" — Android with a file manager, or a
+  computer in between. Generic Android and iPhone, and a manual
+  file-manager guide); Softhandtech, "Transfer Photos from Phone
+  to Memory Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — a computer copy, a direct OTG transfer "if your device
+  supports it", or cloud services. Generic Android and iPhone,
+  and the direct route is a manual file-manager copy — or a
+  computer in between); Fossibot F110 Pro 5G, NeoTeo
+  (neoteo.com/en/fossibot/f110-pro-5g — "Connectivity Features:
+  Computer Sync, NFC, OTA Sync, Tethering, VoLTE, USB Charging,
+  USB Mass Storage, USB Host 2.0, USB OTG, USB Type-C". A spec
+  table, not a guide — and the confirmation that the F110 Pro 5G
+  lists USB OTG); Fossibot F101, Kimovil
+  (kimovil.com/en/where-to-buy-fossibot-f101-pro — the spec table
+  lists "USB On-The-Go (OTG): Yes" and "USB Type C: Yes". A spec
+  table, not a guide — and the confirmation that the F101 lists
+  OTG); NEW FOSSiBOT F107 PRO, mychooz
+  (mychooz.com/en/news/new-fossibot-f107-pro-111377 — "A slot is
+  available for installing MicroSD memory cards up to 2 TB. You
+  can also connect USB flash drives, hard drives, and other
+  external storage devices via an OTG cable." A news page quoting
+  the official site, not a guide — and the confirmation that the
+  F107 Pro's official spec names flash drives over OTG); FOSSiBOT
+  F112 Pro, devicesfaq
+  (devicesfaq.com/en/characteristics/fossibot-f112-pro — the spec
+  table lists "USB: OTG Type-C". A spec table, not a guide — and
+  the confirmation that the F112 Pro lists OTG); FOSSiBOT F102,
+  Cashify (cashify.in/fossibot-f102-price-in-india — "OTG
+  Support, Yes" and expandable storage up to 2 TB, with a 16500
+  mAh battery and USB Type-C. A spec table, not a guide — and the
+  confirmation that the F102 lists OTG); FOSSiBOT F113 Review,
+  Banggood blog
+  (blog.banggood.com/fossibot-f113-phone-review-74825.html —
+  Android 15, 256 GB of storage with a TF card up to 2 TB, and
+  "Ports: USB Type-C (Charging/Data/Headphone), OTG support". A
+  review, not a guide — and the confirmation that the F113 lists
+  OTG support); FOSSIBOT F101P, official site
+  (fossibotrugged.com/rugged-phones/f101p/ — Android 13, a 10600
+  mAh battery, and "The 10600mAh battery supports 18W charging
+  and OTG reverse charging." A product page, not a guide — and the
+  confirmation that the F101P's official page mentions OTG only
+  as reverse charging, which powers another device from the
+  phone's battery and is not the same as hosting a drive);
+  FOSSIBOT F107 Pro Rugged Phone User Manual, manuals.plus
+  (manuals.plus/asin/B0FGQB7T67.pdf — Android 15, 512 GB of
+  storage expandable to 2 TB, a 28000 mAh battery, and "10W OTG
+  reverse charging, allowing you to power other devices." A user
+  manual, not a guide — and the confirmation that the manual's
+  own OTG mention is reverse charging only, while the
+  official-site spec is the one that names flash drives over an
+  OTG cable); FOSSiBOT F101 PRO, Geekbuying
+  (geekbuying.com/item/FOSSiBOT-F101-PRO-Rugged-Smartphone-Orange-522632.html
+  — Android 13.0, "OTG: Support", a TF card up to 1 TB, and a
+  10600 mAh battery. A retailer spec table, not a guide — and a
+  second source for the F101 Pro's Android 13 and OTG support);
+  FOSSiBOT F102 Specs, Price and 2026 Buying Advice, RottenWifi
+  (rottenwifi.com/fossibot-f102-full-specifications-price-and-features/
+  — Android 13, 256 GB of storage with "microSD/TF expansion up
+  to 1TB", and "OTG Reverse Charge" on the 16500 mAh battery. A
+  review, not a guide — and the confirmation that the F102 runs
+  Android 13, with the card size disagreeing with Cashify's
+  2 TB); F115 Ultra Review, SpecsBattle
+  (specsbattle.com/phones/fossibot-f115-ultra — "Connectivity —
+  USB: USB charging and USB host supported; USB-C listed as
+  false; USB OTG listed as false", and "That combination is
+  unusual. Buyers should confirm the port type and accessory
+  support before purchasing." A spec-comparison page, not a guide
+  — and the confirmation that the F115 Ultra's spec data
+  conflicts, so its OTG support is unverified); Frequently asked
+  questions FOSSiBOT F102, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/fossibot-f102 —
+  "How to backup my FOSSiBOT F102? … The most economical method
+  to make a backup is to connect the FOSSiBOT F102 to a computer
+  using the USB cable and make a copy of the files using the file
+  browser." — and photos via Google Photos, with downloads in
+  "Files", previously known as "Files by Google". A FAQ page, not
+  a backup guide — and the confirmation that FOSSiBOT's own
+  backup advice points at a computer or the cloud, never at a USB
+  drive); How to update the software for FOSSiBOT F101,
+  devicesfaq (devicesfaq.com/en/update/fossibot-f101 — "Your
+  FOSSiBOT F101 went on sale in October 2020, 6 years ago." An
+  update guide, not a backup guide — and the confirmation that
+  the original F101 is the oldest F-series model I found); Photos
+  to USB: OTG Backup (Play listing, com.arzdrz.photos_to_usb —
+  the one-tap app alternative: copies the whole gallery to a pen
+  drive in one tap, copies only new photos next time, warns about
+  the FAT32 4 GB limit. Free with ads, one-time purchase to
+  remove them. Generic Android, not a FOSSiBOT guide, and it does
+  not promise oldest-first order, detailed progress with Pause
+  and Stop, or size verification of every file); cloud routes —
+  Google Photos syncs the gallery to Google's servers, Google
+  Drive backs data up to Google's cloud with 15 GB free, and
+  Google backup restores data to a new phone from Google's cloud,
+  not to a drive you hold; Google Photos' "Storage saver" setting
+  compresses photos, and a cloud backup stops working the day
+  you stop paying for storage. Neither route gives a folder of
+  plain photo files on a USB drive.
+  FOSSiBOT specifics: OTG is confirmed on most of the line — the
+  spec tables list USB OTG as Yes for the F101, the F101 PRO,
+  the F102, the F110 Pro 5G, and the F113, the F112 Pro's spec
+  page lists USB OTG Type-C, and the F107 Pro's official-site
+  spec says you can connect USB flash drives via an OTG cable —
+  but the F101P's official page mentions OTG only as reverse
+  charging and the F115 Ultra's spec data conflicts, so the
+  article tells owners of those two models to check Settings >
+  Storage before relying on it instead of claiming OTG across
+  the range; all seven named models have USB-C, so a USB-C flash
+  drive plugs straight in and a regular USB-A drive needs a
+  USB-C OTG adapter; the F101 Pro takes a microSD card up to
+  1 TB, and the F107 Pro and the F113 take one up to 2 TB — the
+  F102's card size is the one disagreement in the sources, 1 TB
+  per RottenWifi and 2 TB per Cashify — but a card is still not a
+  USB drive: it stays in the phone and opening it anywhere else
+  needs a card reader.
+  FOSSiBOT's own tools: devicesfaq's backup advice for the F102
+  (a computer copy with a USB cable and a file browser, or Google
+  Drive with 15 GB free and Google Photos in the cloud) points at
+  a computer or the cloud, never at a USB drive; the F107 Pro
+  manual's OTG mention is reverse charging only; Google Photos
+  (the stock photo backup on FOSSiBOT Android phones) backs
+  photos up to Google's cloud; Google Drive (Android's default
+  built-in service, 15 GB free) backs data up to Google's cloud;
+  a microSD card (up to 1 TB on the F101 Pro, up to 2 TB on the
+  F107 Pro and the F113) is a real local copy, but the card stays
+  in the phone and needs a reader elsewhere; a computer copy
+  (connect the phone to a computer using the USB cable and make a
+  copy of the files using the file browser) lands on the PC, not
+  on a USB drive; no FOSSiBOT backup page points at a USB drive
+  at all — none of them writes plain photo files to a USB drive
+  automatically. Out of scope, named in the article: the F101P's
+  OTG host support is unlisted (official page mentions OTG only
+  as reverse charging); the F115 Ultra's spec data conflicts
+  (USB OTG listed as false while USB-C is also listed as false),
+  so its OTG support is unverified; the original F101 went on
+  sale in October 2020 and its Android version is unverified in
+  the sources above, so owners of that model should check
+  Settings > About phone — SnapDisk needs Android 7.0 or later.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-84, 53rd how-to):
+  docs/fossibot-photos-to-usb.html.
+  Fallback for WL-85: UMIDIGI Bison (Bison line) — no UMIDIGI
+  article exists in docs/ yet.
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
