@@ -2608,6 +2608,99 @@ demand is read off competitor install velocity instead (see
   Article published Nov 17, 2026 (WL-70, 39th how-to):
   docs/ulefone-photos-to-usb.html.
 
+### 39. "back up Doogee photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Doogee-specific
+  phone-to-USB guide at all, let alone a Doogee-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Doogee-specific results are per-model FAQ
+  pages whose backup advice is a computer copy or a cloud
+  backup, and the rest are generic manual guides.
+- Current top results (scored Nov 17, 2026, live web search):
+  devicesfaq, "Frequently asked questions Doogee S118 Pro"
+  (devicesfaq.com/en/frequently-asked-questions/doogee-s118-pro
+  — "How to backup my Doogee S118 Pro?" The most economical
+  method is to connect the phone to a computer using the USB
+  cable and make a copy of the files using the file browser;
+  for a cloud backup use Google Drive (15 GB free); for photos
+  and videos only, use Google Photos, configured to upload
+  automatically or when on Wi-Fi. Doogee-specific, but
+  PC-or-cloud. No phone-to-USB route in it at all);
+  manuals.plus, "DOOGEE S118 Rugged Phone User Manual"
+  (manuals.plus/asin/B0CXJ21G46.pdf — storage management:
+  utilize cloud storage services for backups, move large files
+  to an installed microSD card. Doogee-specific, but
+  cloud-or-card. No phone-to-USB route in it at all); Google
+  Android Help, "Back up your phone"
+  (support.google.com/android/answer/12760783 — Settings >
+  Google > All services > Backup, turn on Backup by Google One,
+  tap Back up now. A cloud backup to Google's servers — not a
+  phone-to-USB copy); YouTube, "How to Connect USB Drive to
+  Android Phone to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet needed.
+  Generic Android, and a manual file-manager guide); AnExplorer,
+  "How to Transfer Files from Android to USB Drive (OTG, No
+  Root)" (anexplorer.io/transfer/phone-to-usb — USB OTG lets the
+  phone act as a USB host: plug in a flash drive and copy with
+  the file manager, no cloud, no Wi-Fi, no PC. Generic Android,
+  and a manual file-manager guide — with a useful warning that
+  FAT32 has a 4 GB maximum single file size); YouTube, "How to
+  Transfer Photos, Videos and any Files from Android Phone to
+  USB Pendrive (USB Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — check OTG compatibility,
+  connect the drive with an OTG adapter, open the file manager,
+  find DCIM, copy or move to the drive. Generic Android, and a
+  manual file-manager guide); Dr.Fone, "4 Practical Ways to
+  Transfer Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — direct transfer with an OTG adaptor, a PC as a middleman,
+  Google Drive, or AirDroid. Generic Android, and three of the
+  four ways need a computer or a cloud account); AskFilo, "how
+  to transfer pictures from an android phone to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — USB OTG adapter plus a file manager: find the DCIM folder,
+  open Camera, select the photos, copy to the USB drive — or use
+  a PC or Mac as a middleman. Generic Android, and the direct
+  route is manual select-copy-paste); Coolmuster, "4 Ways to
+  Transfer Files from Android to USB Flash Drive"
+  (coolmuster.com/android/transfer-files-from-android-to-usb-flash-drive.html
+  — OTG transfer, a PC tool, a computer copy, or a cloud
+  service. Generic Android, and three of the four ways need a
+  computer or a cloud account); Photos to USB: OTG Backup (Play
+  listing, com.arzdrz.photos_to_usb — the one-tap app
+  alternative, known from earlier scoring of this niche; it did
+  not surface in this query's top results: copies the whole
+  gallery to a pen drive in one tap, copies only new photos
+  next time, warns about the FAT32 4 GB limit. Free with ads,
+  one-time purchase to remove them. Generic Android, not a
+  Doogee guide, and it does not promise oldest-first order,
+  detailed progress with Pause and Stop, or size verification
+  of every file); Doogee S118 Pro specs
+  (m.gsmarena.com/doogee_s118_pro-13631.php — "USB Type-C 2.0,
+  OTG", Android 14, 512 GB of storage, microSDXC card slot,
+  10,800 mAh battery. A spec listing, not a guide — and the
+  confirmation that the S118 Pro has OTG); Doogee S118 Pro
+  manual
+  (manuals.plus/m/ca5516b6189523d77aea148e8314f310f44b5d975f32fb09053a91350c4d6260
+  — "OTG: Support (supports reverse charging)", 512 GB of
+  storage, TF card up to 2 TB. A manual, not a guide — and a
+  second confirmation that the S118 Pro has OTG); Doogee S98 vs
+  S118 Pro specs
+  (devicespecifications.com/en/comparison/225f24f7b2 — USB
+  features for both models list "Charging, Mass storage,
+  On-The-Go". A spec comparison, not a guide — and the
+  confirmation that the S98 has OTG too); cloud routes — Google
+  Photos syncs the gallery to Google's servers, Google backup
+  restores data to a new phone from Google's cloud, not to a
+  drive you hold; Google Photos' "Storage saver" setting
+  compresses photos, and a cloud backup stops working the day
+  you stop paying for storage. Neither route gives a folder of
+  plain photo files on a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-71, 40th how-to):
+  docs/doogee-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
