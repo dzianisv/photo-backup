@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Getac photos to a USB drive</title>
+<meta name="description" content="Back up Getac ZX10 photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/getac-photos-to-usb.html">
+<meta property="og:title" content="Back up Getac photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up Getac ZX10 photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/getac-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/getac-photos-to-usb.html#article",
+      "headline": "Back up Getac photos to a USB drive (no computer)",
+      "description": "Back up Getac ZX10 photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-18",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/getac-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/getac-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up Getac ZX-series photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On the ZX10, yes — and it is the one ZX model with USB host support confirmed in the sources I found: its spec listings give the I/O as \"USB 3.2 Gen 1 Type-C w/ DP & PD\" plus a dedicated \"USB 2.0 (Host)\" port, so a regular USB-A flash drive plugs straight into it with no adapter at all. The ZX10 G2 and the ZX10-Ex G2 list the same \"USB 2.0 (Host)\" port in their specs. On the ZX80, no source I found labels any port as a host port — its I/O list is a single USB-C port — so plug a drive in and check Settings > Storage: the drive mounting is the test. The ZX70 cannot run SnapDisk at all: it runs Android 6.0, below SnapDisk's Android 7.0 minimum, so the computer copy in Method 4 is the route on that model. Getac has no phone-to-USB backup tool of its own. The stock route is a file manager: connect the drive, open the file manager, pick the photos in DCIM/Camera, and Copy to the drive. On a model that hosts drives and runs SnapDisk, SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/getac-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up Getac photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/getac-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up Getac photos to a USB drive (no computer)</h1>
+  <p class="dek">The ZX series is Getac's line of fully rugged Android tablets (ZX70, ZX80, ZX10), and Getac has no phone-to-USB backup tool of its own: the only Getac-specific backup advice found is the ZX70 manual's USB connection to a host computer, with no USB-drive route at all. Three honest caveats up front: USB host support is confirmed in the sources I found only on the ZX10 line — the ZX10 and the ZX10-Ex G2 spec listings give the I/O as a USB-C port plus a dedicated "USB 2.0 (Host)" port, so a regular USB-A flash drive plugs straight into them with no adapter at all — while no source I found labels any port on the ZX80 as a host port at all, so plug a drive in and check Settings &gt; Storage on that model before relying on it; the ZX70 cannot run SnapDisk at all — it runs Android 6.0, below SnapDisk's Android 7.0 minimum — while the ZX80 runs Android 13 (Getac's current spec lists Android 15) and the ZX10 runs Android 11, and the ZX10-Ex G2 runs Android 15 (some older listings say Android 13), so the minimum is not the blocker on the newer models, the host support is; and no ZX50 or ZX90 model turned up in the sources found, so this article covers only the ZX70, the ZX80, and the ZX10. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 18, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On the ZX models that can host a USB drive — in practice, the ZX10, whose spec listings give the I/O as a USB-C port plus a dedicated "USB 2.0 (Host)" port, and the ZX10 G2 and ZX10-Ex G2, which list the same host port — plug the drive in, then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: on the ZX80 no source I found confirms host or OTG support at all, so the drive mounting is itself the test — if the drive appears in Settings &gt; Storage, the device hosts drives and the rest of this method works; if it never appears, the device does not host drives and Method 4 is the route — and the ZX70 cannot run SnapDisk at all, since it runs Android 6.0, below the Android 7.0 minimum, so Method 4 is the route on that model too. A file manager works — the generic guides' route is an OTG connection with the built-in file manager — but the direct route is manual select-copy-paste with no progress detail, no resume, and no verification; Getac's own file advice works too, but there is none pointing at a USB drive — the ZX70 manual only offers a USB connection to a host computer. Four rival apps do exist — Photos to USB: OTG Backup copies the whole gallery to a pen drive in one tap, free with ads, a one-time purchase removing the ads; VaultDrive copies photos, videos, and files straight to a USB drive with no computer, free for up to 200 files or 2 GB per backup, Pro $19.99 once; Photo Backup Stick DC backs up pictures and videos straight to its own OTG drive, free, but it only works with genuine Photo Backup Stick drives; FotoSafe backs up Android photos to a USB drive through the system picker, and needs Android 9 or later with USB host or OTG support — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, works with any drive, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the tablet afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 18, 2026, no top search result for this query is a Getac-specific phone-to-USB guide at all: not one of the top results even mentions Getac — they are generic Android guides and a rival app.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up Getac photos to USB drive without computer" and there is no Getac-specific phone-to-USB guide in the top results at all — not one result even mentions Getac. The results are generic Android guides and a rival app, in different packaging:</p>
+  <ul>
+    <li><strong>Dr.Fone, "4 Practical Ways to Transfer Photos from Android to USB Flash Drive"</strong> (<a href="http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html">4 Practical Ways to Transfer Photos from Android to USB Flash Drive</a>) — connect a USB drive with an OTG adapter and copy with the file manager, use a PC as a middleman via USB File Transfer mode, or go wireless through Google Drive or AirDroid. Generic Android, and a manual guide — and its bulk-export route is Dr.Fone's own Windows and Mac software, which needs a computer in between.</li>
+    <li><strong>YouTube, "How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)"</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)</a>) — connect a USB drive with an OTG connection and move photos with the phone's built-in file manager. Generic Android, and a manual file-manager guide — and it is a video, not a Getac guide.</li>
+    <li><strong>Pixoneye, "How to Transfer Photos from Your Phone to a USB Stick"</strong> (<a href="https://pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/">How to Transfer Photos from Your Phone to a USB Stick</a>) — connect a USB drive with an OTG adapter, open Files by Google, find DCIM/Camera, select a small batch, and Copy to the drive. Generic Android, and a manual file-manager guide — and it warns that a connector fitting physically does not prove the phone can read or write the drive, and that not every phone supports USB host at all.</li>
+    <li><strong>FotoSafe, "Back up Android photos to USB"</strong> (<a href="https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/">Back up Android photos to USB</a>) — connect the drive, select it as the destination in FotoSafe, review the media and start copying, picking the USB drive in Android's system picker. A rival app, not a guide — and it needs Android 9 or later with USB host or OTG support, and if Android does not show the USB storage in the file manager, FotoSafe cannot select it either.</li>
+    <li><strong>EpicTechTips, "How to Transfer Pictures from Android Phone to USB Flash Drive"</strong> (<a href="https://epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/">How to Transfer Pictures from Android Phone to USB Flash Drive</a>) — plug the flash drive into the phone, tap the USB notification and select "Transfer photos", then copy with the file manager — or use a computer, cloud storage, or email as the middleman. Generic Android, and a manual guide — and it says outright to confirm first that the phone supports USB OTG at all.</li>
+    <li><strong>AskFilo, "How to transfer pictures from an android phone to a flashdrive"</strong> (<a href="https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432">How to transfer pictures from an android phone to a flashdrive</a>) — connect a USB drive with an OTG adapter, open the file manager, find DCIM/Camera, and Copy to the drive — or use a PC as a middleman. Generic Android, and a manual file-manager guide — and its computer route is the only one that works if the device does not host drives at all.</li>
+    <li><strong>Getac ZX10 spec listing</strong> (<a href="https://www.pbtech.com/product/TABGETZX1005/Getac-ZX10-10-Rugged-Tablet-128GB-Storage---6GB-RA?type=ex-demo">Getac ZX10 10" Rugged Tablet</a>) — the ZX10: Android 11, Snapdragon 660, 6 GB RAM and 128 GB storage, with I/O listed as "DC in Jack x 1, USB 3.2 Gen 1 Type-C w/ DP &amp; PD x 1, USB 2.0 (Host) x 1". A spec listing, not a guide — and the confirmation that the ZX10 has a dedicated USB host port, the one ZX model with host support confirmed in a spec listing.</li>
+    <li><strong>Getac ZX10-Ex G2 spec listing</strong> (<a href="https://www.ultima-computers.com/rugged-computers-getac-tablets/getac-zx10-ex-g2-atex-windows-tablet">Getac ZX10-Ex G2</a>) — the ZX10-Ex G2: Android 15, Snapdragon QCS6490, 8 GB RAM, 16 MP rear camera, with I/O listed as "USB 2.0 (Host) x 1" plus a USB-C port. A spec listing, not a guide — and the confirmation that the G2 generation keeps the dedicated host port, and runs Android 15, so it clears SnapDisk's Android 7.0 minimum by a wide margin.</li>
+    <li><strong>Getac ZX80 spec sheet</strong> (<a href="https://www.getac.com/content/dam/getac/product-spec-data-pdf/us/Getac_ZX80_US_Product.pdf">ZX80 Fully Rugged Tablet</a>) — the ZX80: Android 15, Snapdragon QCS6490, 12 GB RAM and 256 GB storage, with I/O listed as a single "USB 3.2 Gen 1 Type-C (with DisplayPort &amp; Power Delivery)" port plus MicroSD and a docking connector. A spec sheet, not a guide — and the confirmation that the ZX80 runs Android 15 in Getac's current spec, with a USB-C port and no host or OTG mention anywhere in it.</li>
+    <li><strong>Getac ZX80 tech specs</strong> (<a href="https://www.thirdwaverugged.com/zx80-tech-specs/">Getac ZX80 Tech Specs</a>) — the ZX80: Android 15, Snapdragon QCS6490, 12 GB RAM, 256 GB storage, with I/O listed as a USB-C port, MicroSD, and a docking connector. A spec page, not a guide — and the confirmation that the ZX80's current spec is Android 15, while older datasheets list Android 13, so either way it clears SnapDisk's Android 7.0 minimum, with a USB-C port and no host or OTG mention anywhere in it.</li>
+    <li><strong>Getac ZX70 user manual</strong> (<a href="https://www.usermanuals.au/getac/zx70/manual?p=24">Getac ZX70 User Manual</a>) — connect the device to a computer with the USB cable to transfer files, under "Connecting to a Computer via USB". A manual, not a guide — and the confirmation that Getac's own file advice for the ZX70 is a connection to a host computer, with no USB-drive route at all.</li>
+    <li><strong>Getac ZX70 specifications</strong> (<a href="https://www.usermanuals.au/getac/zx70/manual?p=55">Getac ZX70 specifications</a>) — the ZX70: Android 6.0, 7-inch display, 32 GB storage, with ports listed as one USB 2.0 port and one Micro-USB 2.0 port. A spec page, not a guide — and the confirmation that the ZX70 runs Android 6.0, below SnapDisk's Android 7.0 minimum, so it cannot run SnapDisk at all.</li>
+    <li><strong>Cloud routes</strong> — Google Photos syncs your gallery to Google's servers, Google Drive backs your data up to Google's cloud with 15 GB free, and Google backup restores your data to a new phone from Google's cloud, not to a drive you hold; Google Photos' "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Neither route gives you a folder of plain photo files on a USB drive.</li>
+  </ul>
+  <p>None of them is a Getac-specific phone-to-USB guide at all, and none of them offers an automated Getac photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 18, 2026 — for the ZX models that can host a drive at all.</p>
+
+  <h2>What you need</h2>
+  <p>A Getac tablet that can run SnapDisk and host a USB drive — in practice, the ZX10, which runs Android 11, with a USB-C port plus a dedicated USB 2.0 host port — so a regular USB-A flash drive plugs straight into the host port with no adapter at all, while a USB-C flash drive plugs into the USB-C port, and enough space on the drive for the photos you want to keep. Three Getac specifics: first, the ZX70 cannot run SnapDisk at all — it runs Android 6.0, below the Android 7.0 minimum — while the ZX80 runs Android 13 (Getac's current spec lists Android 15) and the ZX10 runs Android 11, and the ZX10-Ex G2 runs Android 15 (some older listings say Android 13), so every ZX model except the ZX70 clears the minimum, and the blocker on this line is host support, not the Android version. Second, USB host support is confirmed in the sources I found only on the ZX10 line — the ZX10 and the ZX10-Ex G2 spec listings give a dedicated "USB 2.0 (Host)" port — while the ZX80's I/O list is a single USB-C port with no host or OTG mention at all, so plug a drive in and check Settings &gt; Storage before relying on it: if the drive appears, the device hosts drives and the rest of this method works; if it never appears, the device does not host drives and Method 4 is the route. Third, Getac has no phone-to-USB backup tool of its own — the only Getac-specific backup advice found is the ZX70 manual's USB connection to a host computer; the stock photo backup is Google Photos; the stock file manager is Files by Google; Getac camera photos live in DCIM/Camera, as on any Android tablet. The ZX10 takes a microSD card, and the ZX80 takes one too, so a card is an option, and it still stays in the device and opening it anywhere else needs a card reader, while a USB drive plugs into any computer as it is. SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Check your model can host a drive.</strong> The ZX10 is the one ZX model with host support confirmed in the sources I found — its spec listings give a dedicated "USB 2.0 (Host)" port, and the ZX10-Ex G2 lists the same host port. On the ZX80 (Android 13, or Android 15 in Getac's current spec), no source I found mentions host or OTG support — the drive mounting is the test on that model: if it appears in Settings &gt; Storage, the device hosts drives and the rest of this method works; if it never appears, the device does not host drives and Method 4 is the route. The ZX70 (Android 6.0) cannot run SnapDisk at all, so Method 4 is the route on that model. Every model except the ZX70 clears the Android 7.0 minimum, so SnapDisk installs on all of them — the question is only whether the drive mounts.</li>
+    <li><strong>Plug in the USB drive.</strong> On the ZX10, a regular USB-A flash drive plugs straight into the dedicated USB 2.0 host port — no adapter needed — while a USB-C drive plugs into the USB-C port. On the ZX80, a USB-C flash drive plugs straight into its USB-C port, and a regular USB-A drive needs a USB-C OTG adapter. It mounts on plug-in on most Android devices with USB host support — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage for the drive. Host support is confirmed only on the ZX10 line — so on the ZX80 the drive mounting is the test itself: if it appears in Settings &gt; Storage, the device hosts drives and the rest of this method works; if it never appears, the device does not host drives and Method 4 is the route.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — Getac camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the device normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the device to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: a file manager (the stock route, no app needed)</h2>
+  <p>A file manager can copy your photos to the USB drive — the generic guides' route is an OTG connection with the built-in file manager, and it is the manual route for external storage: 1. Plug in the USB drive — on the ZX10, a regular USB-A drive plugs straight into the dedicated host port; on the ZX80, a USB-C drive plugs into the USB-C port, and a USB-A drive needs a USB-C OTG adapter. A notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage for the drive. On the ZX80, the drive mounting is the test itself, since no source I found confirms host or OTG support on that model. 2. Open the file manager (Files by Google on Getac tablets) and confirm the USB drive shows up under storage devices. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until the file manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option. One note: the file-manager route works on the ZX80 too, if the device hosts the drive at all — it needs no app install, so the Android 7.0 minimum does not apply to it — but that model's host support is just as unconfirmed, so the drive mounting is the test there too.</p>
+
+  <h2>Method 3: Getac's own tools (Google Photos, Google Drive, or a microSD card — not phone-to-USB)</h2>
+  <p>If you want Getac's own route, know what each tool actually does — there is no Getac backup page pointing at a USB drive at all, and none of the stock tools writes your photos as plain files to a USB drive automatically. <strong>1. Google Photos</strong> is Google's own photo backup app, and it is the stock photo backup on Getac tablets: it automatically backs up photos to your Google account. It is a real backup — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. <strong>2. Google Drive</strong> is the cloud backup Android names by default — "on Android devices the default built-in service is Google Drive. With Google Drive you have 15Gb free" — it backs your data up to Google's cloud. It is a real backup — but it is a cloud backup, not a USB copy, and Google accounts only offer 15 GB of free storage. <strong>3. Google backup</strong> is what Android itself names: personal settings back up to Google's servers with a Google account, and are restored to a new phone when you sign in with that account. It is a real backup — but it backs up settings, not a folder of photo files on a drive you hold. <strong>4. A microSD card</strong> is the local option on the ZX10 and the ZX80. It is a real local copy — but the card stays in the device, and opening the card anywhere else needs a card reader. <strong>5. A computer copy</strong> is the other way to move files off the device — the ZX70 manual's own route is a USB connection that lets you read and write files on the device from a host computer. It is a real backup — but it needs a PC in between, and the backup lands on the PC, not on a USB drive as plain files straight from the device. None of them is a one-tap way to copy your camera roll to a drive. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the tablet into the computer with a USB cable, tap the USB notification and choose File transfer — and drag the DCIM folder onto the USB drive. This works fine, and it is the only route above that needs a second device in between. It is also the only route that works if the ZX80 turns out not to host USB drives at all — since every model still connects to a computer as storage — and the only route that works at all on the ZX70, which cannot run SnapDisk, and if no ZX model you own mounts a drive. If the device and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the device is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>USB host support is confirmed only on the ZX10 line.</strong> The ZX10 and the ZX10-Ex G2 spec listings give a dedicated "USB 2.0 (Host)" port — but the ZX80's I/O list is a single USB-C port with no host or OTG mention at all, so plug a drive in and check Settings &gt; Storage on that model before relying on it. The drive mounting is the test.</li>
+    <li><strong>The ZX70 cannot run SnapDisk at all.</strong> The ZX70 runs Android 6.0, below SnapDisk's Android 7.0 minimum — so on that model the computer copy in Method 4 is the route, not this article's one-tap method. The ZX80 runs Android 13 (Getac's current spec lists Android 15) and the ZX10 runs Android 11, and the ZX10-Ex G2 runs Android 15 (some older listings say Android 13) — so every ZX model except the ZX70 clears the minimum, and SnapDisk installs on all of them. The blocker on this line is host support, not the Android version.</li>
+    <li><strong>The ZX80's Android version differs by source.</strong> Getac's current spec (generated November 10, 2026) lists Android 15, while older datasheets and retailer listings list Android 13 — either way it clears SnapDisk's Android 7.0 minimum by a wide margin, so the version is not the question on this model; whether the drive mounts is.</li>
+    <li><strong>No ZX50 or ZX90 model turned up in the sources found.</strong> This article covers only the ZX70, the ZX80 (including the ZX80-Ex), and the ZX10 (including the ZX10 G2 and ZX10-Ex G2) — if your tablet is a different ZX model, check Settings &gt; About phone for its Android version and Settings &gt; Storage for drive mounting, the same two tests used here.</li>
+    <li><strong>The ZX80's host support is unconfirmed.</strong> No source I found mentions host or OTG support on the ZX80 (Android 13, or Android 15 in Getac's current spec) — so plug a drive in and check Settings &gt; Storage on that model before relying on it. The drive mounting is the test.</li>
+    <li><strong>Anything below Android 7.0 cannot run SnapDisk at all.</strong> The ZX70 runs Android 6.0, so it cannot install SnapDisk — and older Getac tablets exist, so check Settings &gt; About phone if you are unsure: below Android 7.0, SnapDisk cannot install, and the computer copy in Method 4 is the route.</li>
+    <li><strong>The adapter differs by drive, not by model.</strong> The ZX10 has a dedicated USB 2.0 host port, so a regular USB-A flash drive plugs straight into it with no adapter at all, and a USB-C drive plugs into its USB-C port. The ZX80 has only a USB-C port, so a USB-C flash drive plugs straight into it and a regular USB-A drive needs a USB-C OTG adapter. A plain USB-C charging cable is not an OTG adapter: it connects the device to a computer, which is the opposite direction.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter you don't need — or the wrong one.</strong> A regular USB-A flash drive plugs straight into the ZX10's dedicated host port — so no adapter is needed on that model at all — while on the ZX80 an adapter is only needed for a regular USB-A drive, and it must be a USB-C OTG adapter. A plain USB-C charging cable is not an OTG adapter: it connects the device to a computer, which is the opposite direction.</li>
+    <li><strong>Assuming host support on the ZX80.</strong> The ZX10 lists a dedicated "USB 2.0 (Host)" port — but no source I found mentions host or OTG support on the ZX80. Test with a drive on that model, and use Method 2 or 4 on it if the drive never mounts.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google Drive and Google Photos back your device up to Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> A computer copy with a USB cable moves files to a computer — but it is a copy to a computer, and the backup lands on the PC. If the device and the drive are all you have, a phone-to-USB copy is the route, not a desktop copy.</li>
+    <li><strong>Mistaking a spec table or a product page for a phone-to-USB guide.</strong> The Getac datasheets and the ZX10 spec pages are real Getac pages — but the datasheets only list an Android version, a chipset, or a USB connector type, and the spec pages only describe the hardware. Neither of them describes copying your camera roll straight to a USB drive from the device.</li>
+    <li><strong>Mistaking host support on one model for host support on the other.</strong> The ZX10 lists a dedicated "USB 2.0 (Host)" port — but no source I found mentions host or OTG support on the ZX80. Test with a drive on that model, and use Method 2 or 4 on it if the drive never mounts.</li>
+    <li><strong>Mistaking a drive-locked app for a general backup.</strong> Photo Backup Stick DC is a real one-tap backup app — but it only works with genuine Photo Backup Stick OTG drives. If the drive you already own is any other brand, that app cannot use it: SnapDisk, Photos to USB, and FotoSafe work with any drive.</li>
+    <li><strong>Mistaking a camera-card bridge for a tablet backup.</strong> Using a phone as a bridge between a camera's memory card and an SSD is a real field backup — but it backs up the camera's card, not the tablet's own gallery. If your photos are on the ZX10 itself, the drive plugs straight into the tablet, and Method 1 or 2 is the route.</li>
+    <li><strong>Mistaking a microSD card copy for a USB backup.</strong> Copying DCIM to a microSD card is a real local copy — the ZX10 and the ZX80 both take a card — but the card stays in the device, and opening it anywhere else needs a card reader; a USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the device and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 18, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On a Getac tablet the cloud routes are Google Photos and Google Drive — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the device — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the device. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the device.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the device. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="urovo-photos-to-usb.html">Back up Urovo photos to a USB drive (no computer)</a> — Urovo DT-series is the closest parallel: another enterprise rugged line whose own backup advice is a computer copy, not a phone-to-USB copy.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
