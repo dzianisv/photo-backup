@@ -1,5 +1,134 @@
 # SnapDisk — Work Log
 
+## WL-98 — Back up Getac photos to USB article, 67th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/getac-photos-to-usb.html ("Back up Getac photos
+  to a USB drive (no computer)"), following the WL-54–WL-97 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 35 chars, meta
+  description 148 chars, JSON-LD validated by parse; sitemap and
+  feed XML parse. Feed now counts 67 items.
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search): Query 66 ("back
+  up Getac photos to USB drive without computer") is a real gap —
+  no Getac-specific phone-to-USB guide in the top results at all;
+  not one result even mentions Getac.
+  Dr.Fone, "4 Practical Ways to Transfer Photos from Android to
+  USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — connect a USB drive with an OTG adapter and copy with the file
+  manager, use a PC as a middleman via USB File Transfer mode, or
+  go wireless through Google Drive or AirDroid. Generic Android,
+  and a manual guide — and its bulk-export route is Dr.Fone's own
+  Windows and Mac software, which needs a computer in between);
+  YouTube, "How to Connect USB Drive to Android Phone to Move
+  Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — connect a USB drive with an
+  OTG connection and move photos with the phone's built-in file
+  manager. Generic Android, and a manual file-manager guide — and
+  it is a video, not a Getac guide); Pixoneye, "How to Transfer
+  Photos from Your Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/ —
+  connect a USB drive with an OTG adapter, open Files by Google,
+  find DCIM/Camera, select a small batch, and Copy to the drive.
+  Generic Android, and a manual file-manager guide — and it warns
+  that a connector fitting physically does not prove the phone can
+  read or write the drive, and that not every phone supports USB
+  host at all); FotoSafe, "Back up Android photos to USB"
+  (fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/
+  — connect the drive, select it as the destination in FotoSafe,
+  review the media and start copying, picking the USB drive in
+  Android's system picker. A rival app, not a guide — and it needs
+  Android 9 or later with USB host or OTG support, and if Android
+  does not show the USB storage in the file manager, FotoSafe
+  cannot select it either); EpicTechTips, "How to Transfer
+  Pictures from Android Phone to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive into the phone, tap the USB notification
+  and select "Transfer photos", then copy with the file manager —
+  or use a computer, cloud storage, or email as the middleman.
+  Generic Android, and a manual guide — and it says outright to
+  confirm first that the phone supports USB OTG at all); AskFilo,
+  "How to transfer pictures from an android phone to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — connect a USB drive with an OTG adapter, open the file
+  manager, find DCIM/Camera, and Copy to the drive — or use a PC
+  as a middleman. Generic Android, and a manual file-manager guide
+  — and its computer route is the only one that works if the
+  device does not host drives at all); Getac ZX10 spec listing
+  (pbtech.com/product/TABGETZX1005/Getac-ZX10-10-Rugged-Tablet-128GB-Storage---6GB-RA?type=ex-demo
+  — the ZX10: Android 11, Snapdragon 660, 6 GB RAM and 128 GB
+  storage, with I/O listed as "DC in Jack x 1, USB 3.2 Gen 1
+  Type-C w/ DP & PD x 1, USB 2.0 (Host) x 1". A spec listing, not
+  a guide — and the confirmation that the ZX10 has a dedicated USB
+  host port, the one ZX model with host support confirmed in a
+  spec listing); Getac ZX10-Ex G2 spec listing
+  (ultima-computers.com/rugged-computers-getac-tablets/getac-zx10-ex-g2-atex-windows-tablet
+  — the ZX10-Ex G2: Android 15, Snapdragon QCS6490, 8 GB RAM,
+  16 MP rear camera, with I/O listed as "USB 2.0 (Host) x 1" plus
+  a USB-C port. A spec listing, not a guide — and the confirmation
+  that the G2 generation keeps the dedicated host port, and runs
+  Android 15, so it clears SnapDisk's Android 7.0 minimum by a
+  wide margin); Getac ZX80 spec sheet
+  (getac.com/content/dam/getac/product-spec-data-pdf/us/Getac_ZX80_US_Product.pdf
+  — the ZX80: Android 15, Snapdragon QCS6490, 12 GB RAM and
+  256 GB storage, with I/O listed as a single "USB 3.2 Gen 1
+  Type-C (with DisplayPort & Power Delivery)" port plus MicroSD
+  and a docking connector. A spec sheet, not a guide — and the
+  confirmation that the ZX80 runs Android 15 in Getac's current
+  spec, with a USB-C port and no host or OTG mention anywhere in
+  it); Getac ZX80 tech specs
+  (thirdwaverugged.com/zx80-tech-specs/ — the ZX80: Android 15,
+  Snapdragon QCS6490, 12 GB RAM, 256 GB storage, with I/O listed
+  as a USB-C port, MicroSD, and a docking connector. A spec page,
+  not a guide — and the confirmation that the ZX80's current spec
+  is Android 15, while older datasheets list Android 13, so either
+  way it clears SnapDisk's Android 7.0 minimum, with a USB-C port
+  and no host or OTG mention anywhere in it); Getac ZX70 user
+  manual (usermanuals.au/getac/zx70/manual?p=24 — connect the
+  device to a computer with the USB cable to transfer files, under
+  "Connecting to a Computer via USB". A manual, not a guide — and
+  the confirmation that Getac's own file advice for the ZX70 is a
+  connection to a host computer, with no USB-drive route at all);
+  Getac ZX70 specifications (usermanuals.au/getac/zx70/manual?p=55
+  — the ZX70: Android 6.0, 7-inch display, 32 GB storage, with
+  ports listed as one USB 2.0 port and one Micro-USB 2.0 port. A
+  spec page, not a guide — and the confirmation that the ZX70 runs
+  Android 6.0, below SnapDisk's Android 7.0 minimum, so it cannot
+  run SnapDisk at all).
+  Honest limits recorded in the article: USB host support is
+  confirmed in the sources found only on the ZX10 line — the ZX10
+  and the ZX10-Ex G2 spec listings give a dedicated "USB 2.0
+  (Host)" port, so a regular USB-A flash drive plugs straight into
+  them with no adapter at all — while no source found mentions
+  host or OTG support on the ZX80 at all, so the drive mounting is
+  the test; the ZX70 cannot run SnapDisk at all — it runs Android
+  6.0, below SnapDisk's Android 7.0 minimum — while the ZX80 runs
+  Android 13 (Getac's current spec lists Android 15) and the ZX10
+  runs Android 11, and the ZX10-Ex G2 runs Android 15 (some older
+  listings say Android 13), so the minimum is not the blocker on
+  the newer models, the host support is; no ZX50 or ZX90 model
+  turned up in the sources found, so the article covers only the
+  ZX70, the ZX80, and the ZX10.
+  Article published Nov 18, 2026 (WL-98, 67th how-to):
+  docs/getac-photos-to-usb.html.
+  Fallback for WL-99: Chainway — no Chainway article exists in
+  docs/ yet (C-series enterprise Android handhelds).
+
 ## WL-97 — Back up Urovo photos to USB article, 66th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
