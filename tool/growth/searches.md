@@ -3095,8 +3095,140 @@ demand is read off competitor install velocity instead (see
   storage. Neither route gives a folder of plain photo files
   on a USB drive.
 - Verdict: how-to article material, not a listing keyword.
-  Article published Nov 17, 2026 (WL-75, 44th how-to):
-  docs/cubot-photos-to-usb.html.
+  Article published Nov 17, 2026 (WL-76, 45th how-to):
+  docs/unihertz-photos-to-usb.html.
+
+### 44. "back up Unihertz photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Unihertz-specific
+  phone-to-USB guide at all, let alone a Unihertz-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Unihertz-specific results are per-model
+  FAQ pages whose advice is a computer copy or a cloud sync,
+  and the rest are generic manual guides.
+- Current top results (scored Nov 17, 2026, live web search):
+  Pixoneye, "How to Transfer Photos from Your Phone to a USB
+  Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage with a
+  file manager, or import to a computer first and then copy
+  to USB. Generic Android, and the direct route is manual
+  select-copy-paste); YouTube, "How to Connect USB Drive to
+  Android Phone to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet
+  needed. Generic Android, and a manual file-manager guide);
+  Android Central forum, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — use an OTG adapter to plug in a USB drive, and it shows
+  up as external storage in the file manager, where you can
+  move files to it. Generic Android, and a manual
+  file-manager guide); Photos to USB: OTG Backup (Play
+  listing, com.arzdrz.photos_to_usb — the one-tap app
+  alternative: copies the whole gallery to a pen drive in one
+  tap, copies only new photos next time, warns about the
+  FAT32 4 GB limit. Free with ads, one-time purchase to
+  remove them. Generic Android, not a Unihertz guide, and it
+  does not promise oldest-first order, detailed progress with
+  Pause and Stop, or size verification of every file);
+  Alibaba, "How To Quickly Backup Your Phone Photos Without
+  Using Cloud Storage"
+  (alibaba.com/product-insights/how-to-quickly-backup-your-phone-photos-without-using-cloud-storage.html
+  — transfer via USB cable and computer, a portable SSD or
+  flash drive with OTG support, or a local network drive.
+  Generic Android and iPhone, and the direct route is a
+  manual file-manager copy); askfilo, "how to transfer
+  pictures from an android phone to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — connect the drive with a USB OTG adapter, find
+  DCIM/Camera in the file manager, and copy the photos to the
+  drive — or use a PC as a middleman. Generic Android, and
+  the direct route is manual select-copy-paste); Unihertz
+  Tank specs
+  (unigadgetz.in/product/unihertz-tank-22000mah-battery-ultimate-rugged-phone
+  — USB Type C, "USB OTG: Yes", 22,000 mAh battery. A spec
+  listing, not a guide — and the confirmation that the Tank
+  has OTG); Unihertz Titan Pocket vs Unihertz Tank 2 specs
+  (smartprix.com/mobiles/unihertz_titan_pocket_vs_unihertz_tank_2-cpd14689dv9m_pd11dqfsgck.php
+  — USB features "USB Tethering, USB on-the-go, USB
+  Charging" for both phones. A spec listing, not a guide —
+  and the confirmation that the Titan Pocket and the Tank 2
+  have OTG); Unihertz Tank specs
+  (phonesdata.com/en/smartphones/unihertz/unihertz-tank-5464128/
+  — USB "Yes, USB Type C, USB On-The-Go (OTG)". A spec
+  listing, not a guide — and the confirmation that the Tank
+  has OTG); Unihertz Titan 2
+  (danzaastore.com/shop/unihertz-phones/unihertz-titan-2-5g-12gb512gb-storage-phone-global-version/
+  — lists USB OTG among the features, Android 15, 12 GB RAM,
+  512 GB storage. A store listing, not a guide — and the
+  confirmation that the Titan 2 has OTG); Unihertz Jelly 2
+  review
+  (androidpolice.com/2020/08/22/unihertz-jelly-2-review/ —
+  the spec table lists USB OTG, 6 GB RAM, 128 GB storage,
+  microSD expandable. A review, not a guide — and the
+  confirmation that the Jelly 2 has OTG); Unihertz Jelly Star
+  vs Unihertz Titan Pocket specs
+  (smartprix.com/mobiles/unihertz_jelly_star_vs_unihertz_titan_pocket-cpd19mlg5wvg_pd14689dv9m.php
+  — USB features "USB Tethering, USB on-the-go, USB
+  Charging, USB Storage" for the Jelly Star and "USB
+  Tethering, USB on-the-go, USB Charging" for the Titan
+  Pocket. A spec listing, not a guide — and the confirmation
+  that the Jelly Star and the Titan Pocket have OTG);
+  Frequently asked questions Unihertz Titan Slim
+  (devicesfaq.com/en/frequently-asked-questions/unihertz-titan-slim
+  — "How to backup my Unihertz Titan Slim? The most
+  economical method to make a backup is to connect the
+  Unihertz Titan Slim to a computer using the USB cable and
+  make a copy of the files using the file browser. To perform
+  a cloud backup you need a cloud backup service, on Android
+  devices the default built-in service is Google Drive. With
+  Google Drive you have 15Gb free. If what you want is to
+  make a backup only of the photos and videos made with your
+  Unihertz you can use Google Photos." A Unihertz-specific
+  backup page — and the confirmation that Unihertz's own
+  backup advice is a computer copy or Google cloud, not a USB
+  drive); Frequently asked questions Unihertz Titan 2
+  (devicesfaq.com/en/frequently-asked-questions/unihertz-titan-2
+  — the same advice for the Titan 2: connect the phone to a
+  computer using the USB cable and make a copy of the files
+  using the file browser, or use Google Drive or Google
+  Photos. A Unihertz-specific backup page — and the
+  confirmation that the Titan line's own backup advice is a
+  computer copy or cloud); Frequently asked questions
+  Unihertz Jelly Star
+  (devicesfaq.com/en/frequently-asked-questions/unihertz-jelly-star
+  — the same advice for the Jelly Star: connect the phone to
+  a computer using the USB cable and make a copy of the files
+  using the file browser, or use Google Drive or Google
+  Photos. A Unihertz-specific backup page — and the
+  confirmation that the Jelly line's own backup advice is a
+  computer copy or cloud); Frequently asked questions
+  Unihertz Jelly
+  (devicesfaq.com/en/frequently-asked-questions/unihertz-jelly
+  — the same advice for the Jelly: connect the phone to a
+  computer using the USB cable and make a copy of the files
+  using the file browser, or use Google Drive or Google
+  Photos. A Unihertz-specific backup page — and the
+  confirmation that the Jelly line's own backup advice is a
+  computer copy or cloud); Frequently asked questions
+  Unihertz 8849 Tank 3
+  (devicesfaq.com/en/frequently-asked-questions/unihertz-8849-tank-3
+  — the same advice for the 8849 Tank 3: connect the phone to
+  a computer using the USB cable and make a copy of the files
+  using the file browser, or use Google Drive or Google
+  Photos. A Unihertz-specific backup page — and the
+  confirmation that the Tank line's own backup advice is a
+  computer copy or cloud); cloud routes — Google Photos syncs
+  the gallery to Google's servers, Google Drive backs data up
+  to Google's cloud with 15 GB free, and Google backup
+  restores data to a new phone from Google's cloud, not to a
+  drive you hold; Google Photos' "Storage saver" setting
+  compresses photos, and a cloud backup stops working the day
+  you stop paying for storage. Neither route gives a folder of
+  plain photo files on a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-76, 45th how-to):
+  docs/unihertz-photos-to-usb.html.
 
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
