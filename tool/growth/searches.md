@@ -5310,6 +5310,196 @@ demand is read off competitor install velocity instead (see
   Fallback for WL-88: Conquest — no Conquest article exists in
   docs/ yet.
 
+### 56. "back up Conquest photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Conquest-specific
+  phone-to-USB guide at all, let alone a Conquest-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Conquest-specific results are FAQ pages
+  that give no USB-drive advice at all, and the rest are
+  generic manual guides.
+- Current top results (scored Nov 18, 2026, live web search):
+  Dr.Fone (Wondershare), "4 Practical Ways to Transfer Photos
+  from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — connect the drive directly with an OTG adapter, use a PC
+  as a middleman with USB "File Transfer" mode, or go wireless
+  through Google Drive or AirDroid; the Dr.Fone PC software
+  bulk-exports photos to a computer. Generic Android, and a
+  manual guide — every route is hand-picked files, a computer
+  in between, or the cloud); YouTube, "How to Connect USB Drive
+  to Android Phone to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet needed.
+  Generic Android, and a manual file-manager guide); YouTube,
+  "How to Transfer Photos, Videos and any Files from Android
+  Phone to USB Pendrive (USB Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — verify OTG compatibility
+  first, connect the drive via an OTG adapter, open the file
+  manager, and copy or move. Generic Android, and a manual
+  file-manager guide); askfilo,
+  "how to transfer pictures from an android phone to a
+  flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — plug the flash drive into an OTG adapter, open the file
+  manager, find the DCIM folder, and copy to the USB drive.
+  Generic Android, and a manual file-manager guide);
+  groovypost, "How to Transfer Photos from Android to a USB
+  Drive"
+  (groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — plug the drive into a PC, connect the phone, choose File
+  Transfer, and drag DCIM onto the drive — or use a dual USB-C
+  flash drive straight into the phone and copy with the file
+  manager. Generic Android, and a manual guide — the first
+  route needs a PC in between); thegadgetians, "How to Transfer
+  Files From Phone to USB Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — connect a USB drive to an Android phone with an OTG adapter
+  or to an iPhone with a Lightning-to-USB adapter, open the file
+  manager, select and copy files, then paste onto the drive.
+  Generic Android, and a manual file-manager guide — and it
+  notes that not all Android phones support OTG);
+  Frequently asked questions Conquest S8, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/conquest-s8 —
+  "How to backup my Conquest S8? … The most economical method
+  to make a backup is to connect the Conquest S8 to a computer
+  using the USB cable and make a copy of the files using the
+  file browser." — and photos via Google Photos, with Google
+  Drive at 15 GB free. A FAQ page, not a backup guide — and the
+  confirmation that Conquest's own backup advice points at a
+  computer or the cloud, never at a USB drive); Frequently asked
+  questions Conquest S8 KT35A-S8, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/conquest-s8-kt35a-s8
+  — the same template on the KT35A-S8 variant page: a computer
+  copy with a USB cable and a file browser, or Google Drive with
+  15 GB free, or Google Photos in the cloud. A FAQ page, not a
+  backup guide — and the confirmation that the same
+  computer-or-cloud advice is the only backup advice Conquest's
+  pages give for the models checked); Conquest S8 2017 Edition,
+  FindPare
+  (findpare.com/smartphone/conquest-s8-2017-edition/add-my-review&counturl=https
+  — "USB OTG: Yes", "micro USB 2.0: Yes", MediaTek Helio P10
+  (MT6755), 6000 mAh. A spec table, not a guide — and the
+  confirmation that the S8 lists OTG support); Conquest S8+
+  4GB 64GB, phoneinfo
+  (phoneinfo.co.uk/conquest/s8-plus-4gb-64gb/caracteristiques —
+  Android 6.0 (Marshmallow), MediaTek Helio P10 MT6755, 4 GB of
+  RAM, 64 GB of storage, microSD up to 128 GB, 6000 mAh,
+  launched December 2017. A spec table, not a guide — and the
+  confirmation that the S8+ runs Android 6.0); Conquest S8 Pro
+  64GB, mobilexfiles
+  (mobilexfiles.com/phones/conquest/conquest_s8_pro_64gb/secret_codes/
+  — Android 6.0, MediaTek Helio P10 (MT6755), 4 GB of RAM,
+  64 GB of storage, microSD up to 128 GB, 6000 mAh. A spec
+  table, not a guide — and a second source for the S8 Pro's
+  Android 6.0); Conquest S10 3GB 32GB, phoneinfo
+  (phoneinfo.co.uk/conquest/s10-3gb-32gb/description — Android
+  7.1.1 (Nougat), MediaTek MT6753T, 3 GB of RAM, 32 GB or 64 GB
+  of storage, microSD up to 128 GB, launched January 2018. A
+  spec table, not a guide — and the confirmation that the S10
+  runs Android 7.1, with a USB connection for data exchange with
+  a laptop and no OTG mention); Conquest S9, devicesfaq
+  (devicesfaq.com/en/characteristics/conquest-s9 — Android
+  5.1.1 Lollipop, Qualcomm Snapdragon 615 MSM8939, 32 GB of
+  storage, 6000 mAh. A spec table, not a guide — and one side
+  of the S9 dispute); Conquest S9 MT6757, trak.in
+  (trak.in/stories/smartphone/conquest-s9-mt6757 — Android
+  7.1.1 Nougat, MediaTek Helio P25 (MT6757CD), 6000 mAh. A spec
+  table, not a guide — and the other side of the S9 dispute: a
+  different Android version and a different chipset from
+  devicesfaq, so the S9's Android version is disputed and
+  SnapDisk support on it is unconfirmed either way); Conquest
+  S6 OCTA, mobilexfiles
+  (mobilexfiles.com/phones/conquest/conquest_s6_octa/ — Android
+  5.1, MediaTek MT6752, 3 GB of RAM, 32 GB of storage, 6000 mAh.
+  A spec table, not a guide — and the confirmation that the S6
+  OCTA runs Android 5.1); The Conquest S6 Is China's Take On A
+  Rugged Smartphone, Ubergizmo
+  (ubergizmo.com/2015/02/the-conquest-s6-is-chinas-take-on-a-rugged-smartphone/
+  — the original 2015 S6: 64-bit MediaTek MT6732 quad-core,
+  1 GB of RAM, 8 GB of storage, 13 MP rear camera, 4000 mAh
+  battery. A launch story, not a guide — and the confirmation
+  that the original S6 is a different, weaker variant from the
+  S6 OCTA, though both run Android 5.1); Conquest S12 data
+  sheet, Cenava
+  (cenava.co.za/content/Conquest%20S12-data-Sheet-Cenava%20.pdf
+  — Android 8.1.0, MTK6763, 6 GB of RAM with 64 GB or 128 GB
+  of storage, 8000 mAh, "Charger Jack type-c USB" and "I/O
+  Connector type-c". A data sheet, not a guide — and the
+  confirmation that the S12 runs Android 8.1 with a USB-C port);
+  Conquest S12 Pro 4GB 64GB, phoneinfo
+  (phoneinfo.co.uk/conquest/s12-pro-4gb-64gb/technische-daten —
+  Android 8.1 (Oreo), MediaTek Helio P70, 4 GB of RAM, 64 GB of
+  storage, 8000 mAh, launched December 2018. A spec table, not
+  a guide — and the confirmation that the S12 Pro runs Android
+  8.1); Conquest S16 Walkie Talkie 8GB 128GB, phoneinfo
+  (phoneinfo.co.uk/conquest/s16-walkie-talkie-8gb-128gb/specyfikacje
+  — Android 9.0 (Pie), MediaTek Helio P90 MT6779, 8 GB of RAM,
+  128 GB of storage, microSD up to 128 GB, 6000 mAh, launched
+  February 2020. A spec table, not a guide — and the
+  confirmation that the S16 runs Android 9.0); CONQUEST S16
+  Rugged Smartphone Waterproof User Manual, manuals.plus
+  (manuals.plus/conquest/s16-rugged-smartphone-waterproof-manual
+  — "Type-C Interface" in the button description, TF card
+  extendable to 2 TB. A manual, not a guide — and the
+  confirmation that the S16 has a USB-C port); CONQUEST S22 5G
+  Walkie Talkie Rugged Phone Tablet, Sunsky
+  (sunsky-online.com/p/WMC0843B/CONQUEST-S22-5G-Walkie-Talkie-Rugged-Phone-Tablet-Thermal-Imaging-6GB-128GB-Dual-Back-Cameras-Night-Vision-Camera-IP68-IP69K-Waterproof-Dustproof-Shockproof-Face-ID-&-Fingerprint-Identification-8.0-inch-Android-11-MTK6873-Dimensity-800-Octa-Core-up-to-2.0GHz-Network-5G-NFC-PoC-Black-.htm
+  — Android 11, MTK6873 Dimensity 800, 6 GB of RAM with 128 GB
+  of storage, 15200 mAh. A store listing, not a guide — and the
+  confirmation that the S22 5G runs Android 11, with no USB port
+  type stated on the page); Photos to USB: OTG Backup
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — the one-tap app alternative: a real phone-to-USB app that
+  copies the whole gallery to a pen drive in one tap, copies only
+  new photos next time, and warns about the FAT32 4 GB limit.
+  It is free with ads, with a one-time purchase to remove them.
+  It is the closest thing to this article's job — but it is a
+  generic Android listing, not a Conquest guide, and it does not
+  promise oldest-first order, detailed progress with Pause and
+  Stop, or size verification of every file); PhotoSaver
+  Phone-to-Drive
+  (play.google.com/store/apps/details?id=com.clevx.photosaver —
+  a second one-tap app alternative: save photos and videos to
+  any USB-C drive with one click, no cloud, no upload. It is a
+  generic Android listing, not a Conquest guide, and it needs a
+  USB-C connection — so it is no use on the micro-USB Conquest
+  models, only on the S12 and the S16, which are the Conquest
+  models found with USB-C); Cloud routes — Google Photos syncs
+  your gallery to Google's servers, Google Drive backs your data
+  up to Google's cloud with 15 GB free, and Google backup
+  restores your data to a new phone from Google's cloud, not to
+  a drive you hold; Google Photos' "Storage saver" setting
+  compresses photos, and a cloud backup stops working the day
+  you stop paying for storage. Neither route gives you a folder
+  of plain photo files on a USB drive.
+- What the models mean: four Conquest models cannot run
+  SnapDisk at all — the S6 runs Android 5.1, and the S8, the
+  S8+, and the S8 Pro run Android 6.0, below SnapDisk's Android
+  7.0 minimum, even though the S8 lists USB OTG support; the
+  S9's Android version is disputed (5.1.1 per devicesfaq, 7.1.1
+  per trak.in), so check Settings > About phone on that model
+  before installing; OTG support is confirmed in the sources
+  found only on the S8, which cannot run SnapDisk — on the S10,
+  the S12, the S12 Pro, the S16, the S22 5G, and the EX201 it is
+  unconfirmed, so owners of those models should plug a drive in
+  and check Settings > Storage before relying on it; the USB
+  port type is unconfirmed on the S22 5G and the EX201 — the S10
+  has micro USB, the S12 and the S16 have USB-C, and the S8 has
+  micro USB 2.0 — so owners should check their own port before
+  buying an adapter; the S6 comes in two variants (MT6732, 1 GB
+  RAM, 8 GB storage, 4000 mAh per Ubergizmo against MT6752,
+  3 GB RAM, 32 GB storage, 6000 mAh for the S6 OCTA per
+  mobilexfiles), though both run Android 5.1; the S10 takes a
+  microSD card up to 128 GB, the S8+ takes one up to 128 GB,
+  and the S16 takes one up to 128 GB (ATEX variant up to 2 TB)
+  — SnapDisk needs Android 7.0 or later.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-88, 57th how-to):
+  docs/conquest-photos-to-usb.html.
+  Fallback for WL-89: Land Rover Explore — no Land Rover article
+  exists in docs/ yet.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
