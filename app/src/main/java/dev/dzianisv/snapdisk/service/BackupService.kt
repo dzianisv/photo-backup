@@ -202,11 +202,19 @@ class BackupService : Service() {
         if (state.status == BackupStatus.DONE || state.status == BackupStatus.ERROR ||
             state.status == BackupStatus.LIMIT_REACHED
         ) {
+            // Detach from the foreground FIRST, then post the
+            // terminal notification: a notification posted while
+            // the service is still foreground is removed when the
+            // service stops (smoke run 44199483316: after DONE +
+            // stopSelf() the shade was empty — active=[] after a
+            // 10 s poll — so the user never saw "Backup complete").
+            // Posted after stopForeground(false) it is a plain
+            // notification and outlives the service.
+            stopForeground(false)
             manager.notify(
                 NotificationHelper.NOTIFICATION_ID_PROGRESS,
                 NotificationHelper.buildProgressNotification(this, state),
             )
-            stopForeground(false)
         } else {
             startForegroundWith(state)
         }

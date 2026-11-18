@@ -1,0 +1,763 @@
+package dev.dzianisv.snapdisk
+
+import android.Manifest
+import android.app.Notification
+import android.app.NotificationManager
+import android.content.ContentValues
+import android.content.Context
+import android.content.Intent
+import android.graphics.Bitmap
+import android.net.Uri
+import android.os.Environment
+import android.provider.MediaStore
+import androidx.core.content.ContextCompat
+import androidx.exifinterface.media.ExifInterface
+import androidx.test.core.app.ActivityScenario
+import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.rule.GrantPermissionRule
+import dev.dzianisv.snapdisk.backup.BackupPrefs
+import dev.dzianisv.snapdisk.backup.BackupState
+import dev.dzianisv.snapdisk.backup.BackupStatus
+import dev.dzianisv.snapdisk.backup.ProPrefs
+import dev.dzianisv.snapdisk.service.BackupActionReceiver
+import dev.dzianisv.snapdisk.service.BackupService
+import dev.dzianisv.snapdisk.service.NotificationHelper
+import dev.dzianisv.snapdisk.service.StorageReceiver
+import java.io.File
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import java.util.TimeZone
+import org.junit.After
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
+import org.junit.Before
+import org.junit.Rule
+import org.junit.Test
+
+/**
+ * Full-flow proof on the emulator (WL-64; Den, Nov 17: the emulator
+ * end-to-end pass is the proof — a real device is never required and
+ * never a gate). The wired user flow, driven through the same
+ * entry points a real disk + real taps use:
+ *
+ *   mount broadcast → offer notification (Backup/Cancel)
+ *   → BackupService start → copy oldest-first into virtual external
+ *   storage (the app's own external files dir, via a SAF tree URI)
+ *   → progress notification (bar + Pause/Stop) → Pause/Resume and
+ *   Stop through the notification-action receiver → DONE.
+ *
+ * Oldest-first ORDER at the service level is proven by the
+ * first-seen order of each file's .part in the destination tree
+ * (the moment its copy starts); the engine-level order is already
+ * proven by BackupEngineInstrumentedTest.oldestFirstCopyOrderAndVerification.
+ * Destination mtimes are NOT the order proof: a resume/retry
+ * re-copies a file and refreshes its mtime, so mtimes reflect the
+ * last copy, not the processing order. The progress notification
+ * text carries no file name, so the service test does not (and
+ * cannot) observe the order from it.
+ *
+ * Timing discipline (learned from smoke runs 44147560922 and
+ * 44154569523, which failed 6 and 4 tests): seed data is written
+ * and verified in 1 MB chunks — the test process heap is ~200 MB,
+ * so holding whole 80 MB files as byte arrays OOMs. Pause/Stop
+ * are sent only after the in-flight file's .part is observed on
+ * disk, never on a sleep — on a loaded emulator a sleep can
+ * overshoot and the copy finishes first. Every test stops any
+ * leftover service in setUp/tearDown: BackupService.stateFlow is
+ * process-static, so a paused service left by a failed test would
+ * make the next test's startBackup() a no-op (job still active)
+ * and the next test would time out in PAUSED.
+ *
+ * Destination mirroring (root cause of the run-2 failures):
+ * the service mirrors the source tree under the To folder (TDD
+ * C6), so a photo seeded with RELATIVE_PATH "DCIM/snapdisk-e2e"
+ * lands in <dst>/DCIM/snapdisk-e2e/<name> — NOT in <dst>/<name>.
+ * Run 2 asserted the flat path, so it reported "missing file"
+ * and ".part never observed" while the service was copying
+ * correctly (logcat showed the MediaProvider opens for every
+ * seeded file). Every assertion here goes through destFile(),
+ * which applies the same mirroring rule, and every "no .part
+ * left" / file-count check walks the tree recursively.
+ */
+class FullFlowInstrumentedTest {
+
+    @get:Rule
+    val permissionRule: GrantPermissionRule = GrantPermissionRule.grant(
+        Manifest.permission.POST_NOTIFICATIONS,
+        Manifest.permission.READ_MEDIA_IMAGES,
+        Manifest.permission.READ_MEDIA_VIDEO,
+    )
+
+    private lateinit var ctx: Context
+    private lateinit var notificationManager: NotificationManager
+    private lateinit var dstDir: File
+    private val seededUris = mutableListOf<Uri>()
+    private val seedPrefixes = mutableMapOf<String, ByteArray>()
+    private var activityScenario: ActivityScenario<MainActivity>? = null
+
+    @Before
+    fun setUp() {
+        ctx = InstrumentationRegistry.getInstrumentation().targetContext
+        notificationManager =
+            ctx.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        NotificationHelper.ensureChannels(ctx)
+        // Never inherit a running job from a previous test in this
+        // process: stop it first (best effort, never fails setUp).
+        stopServiceIfRunning()
+        notificationManager.cancelAll()
+        // Free tier for every test here; the service must never take
+        // the Pro auto-backup path (the receiver test asserts the
+        // free offer notification instead).
+        ProPrefs(ctx).isPro = false
+        ProPrefs(ctx).jobVolumeUuid = null
+        BackupPrefs(ctx).fromTreeUri = null
+        dstDir = File(ctx.getExternalFilesDir(null), "snapdisk-e2e-dst").apply {
+            deleteRecursively()
+            mkdirs()
+        }
+        BackupPrefs(ctx).toTreeUri = treeUriFor(dstDir)
+    }
+
+    @After
+    fun tearDown() {
+        try { activityScenario?.close() } catch (_: Exception) { /* already closed */ }
+        activityScenario = null
+        stopServiceIfRunning()
+        try { notificationManager.cancelAll() } catch (_: Exception) { /* best effort */ }
+        for (uri in seededUris) {
+            try { ctx.contentResolver.delete(uri, null, null) } catch (_: Exception) { /* gone */ }
+        }
+        seededUris.clear()
+        seedPrefixes.clear()
+        try { dstDir.deleteRecursively() } catch (_: Exception) { /* best effort */ }
+        BackupPrefs(ctx).fromTreeUri = null
+        BackupPrefs(ctx).toTreeUri = null
+        ProPrefs(ctx).jobVolumeUuid = null
+    }
+
+    /**
+     * If a backup job is active (a previous test left the service
+     * COPYING/PAUSED), stop it and wait for STOPPED so the next
+     * test's startBackup() is not a no-op. Fails setUp outright if
+     * the previous job will not stop within 60 s: a stale active
+     * job would make this test observe the previous test's states
+     * and fail downstream with a misleading message.
+     */
+    private fun stopServiceIfRunning() {
+        val state = BackupService.stateFlow.value.status
+        if (state != BackupStatus.SCANNING && state != BackupStatus.COPYING &&
+            state != BackupStatus.PAUSED
+        ) return
+        try {
+            ContextCompat.startForegroundService(
+                ctx,
+                Intent(ctx, BackupService::class.java).setAction(BackupService.ACTION_STOP),
+            )
+        } catch (_: Exception) { /* service may already be gone */ }
+        val deadline = System.currentTimeMillis() + 60_000
+        while (System.currentTimeMillis() < deadline) {
+            if (BackupService.stateFlow.value.status == BackupStatus.STOPPED) return
+            Thread.sleep(100)
+        }
+        throw AssertionError(
+            "previous backup job did not stop within 60 s " +
+                "(state=${BackupService.stateFlow.value.status}) — refusing to run " +
+                "on top of a stale active job",
+        )
+    }
+
+    /** MediaStore RELATIVE_PATH every seeded photo is inserted with. */
+    private val seedRelativePath = "DCIM/snapdisk-e2e"
+
+    /**
+     * Where the service puts a seeded photo: it mirrors the source
+     * tree under the To folder (TDD C6), so the destination is
+     * <dst>/DCIM/snapdisk-e2e/<name>. Asserting the flat
+     * <dst>/<name> path is wrong — that is what failed run 2.
+     */
+    private fun destFile(name: String): File = File(File(dstDir, seedRelativePath), name)
+
+    /** The in-flight .part next to [name]'s destination (PRD A3). */
+    private fun partFile(name: String): File =
+        dev.dzianisv.snapdisk.backup.BackupEngine.partFileFor(destFile(name))
+
+    /**
+     * Diagnostic: print exactly what the service's enumeration
+     * sees (same query + sort), so a wrong copy order can be
+     * traced to the MediaStore rows rather than guessed at.
+     * Smoke run 44175300406 processed mid → new → old although
+     * the seeds carry old < mid < new DATE_TAKEN — the dump shows
+     * whether the stored dates/ids are not what was inserted.
+     */
+    private fun dumpMediaStore(tag: String) {
+        val items = dev.dzianisv.snapdisk.backup.PhotoQuery
+            .queryMediaStoreOldestFirst(ctx)
+        println("SMOKE e2e $tag: enumeration sees ${items.size} items")
+        for (item in items) {
+            println(
+                "SMOKE e2e $tag: ${item.displayName} id=${item.id} " +
+                    "taken=${item.dateTakenMillis} modified=${item.dateModifiedMillis} " +
+                    "effective=${item.effectiveDateMillis} size=${item.sizeBytes} " +
+                    "rel=${item.relativePath}",
+            )
+        }
+    }
+
+    /** Every file under the destination, recursively (mirrored tree). */
+    private fun allDestFiles(): List<File> =
+        dstDir.walkTopDown().filter { it.isFile }.toList()
+
+    /**
+     * Dump the enumeration and wait until it matches the seed
+     * order (up to 30 s) — the MediaStore scanner mutates
+     * DATE_TAKEN asynchronously after a seed lands: it first
+     * clears it (stored NULL → effective date becomes "now") and
+     * then restores it from the file's EXIF DateTimeOriginal
+     * (smoke run 44194186121: the stop test's dump showed stop1
+     * taken=0, yet its assert 1 s later saw the restored seed
+     * date and passed, while serviceCopies asserted during the
+     * cleared window and failed [new, old, mid]). A single
+     * immediate assert races that window; polling until the
+     * enumeration converges does not. Fails with the last dump
+     * if it never converges.
+     */
+    private fun assertEnumerationOrder(tag: String, expected: List<String>) {
+        val deadline = System.currentTimeMillis() + 30_000
+        var actual: List<String> = emptyList()
+        while (System.currentTimeMillis() < deadline) {
+            actual = dev.dzianisv.snapdisk.backup.PhotoQuery
+                .queryMediaStoreOldestFirst(ctx)
+                .map { it.displayName }
+            if (actual == expected) {
+                dumpMediaStore(tag)
+                return
+            }
+            Thread.sleep(500)
+        }
+        dumpMediaStore(tag)
+        assertEquals(
+            "MediaStore enumeration order != seed order after 30 s " +
+                "(dates not preserved?)",
+            expected,
+            actual,
+        )
+    }
+
+    private fun assertNoStaleParts() {
+        val parts = allDestFiles().filter { it.name.endsWith(".part") }
+        assertTrue("stale .part files remain: $parts", parts.isEmpty())
+    }
+
+    /**
+     * The SAF tree URI for [dir], in the same shape the document-tree
+     * picker returns: content://com.android.externalstorage.documents/
+     * tree/primary%3A<path>. BackupService.destinationBaseDir maps it
+     * back to /storage/emulated/0/<path>.
+     */
+    private fun treeUriFor(dir: File): String {
+        val externalRoot = Environment.getExternalStorageDirectory().absolutePath
+        val relative = dir.absolutePath.removePrefix("$externalRoot/")
+        return "content://com.android.externalstorage.documents/tree/" +
+            Uri.encode("primary:$relative")
+    }
+
+    /** Deterministic content byte at [position] for a seeded file [name]. */
+    private fun patternByte(name: String, position: Long): Byte =
+        ((position + name.hashCode()) % 251).toByte()
+
+    /**
+     * A real 1x1 JPEG carrying EXIF DateTimeOriginal for
+     * [dateTakenMs] — the seed's date header. Rendered in the
+     * device's default timezone so the scanner's parse of the
+     * EXIF string returns exactly [dateTakenMs] (the seeds are
+     * whole seconds, so no sub-second loss).
+     */
+    private fun jpegPrefixWithExif(dateTakenMs: Long): ByteArray {
+        val bitmap = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
+        val tmp = File(ctx.cacheDir, "e2e-seed-${dateTakenMs}.jpg")
+        tmp.outputStream().use { out ->
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 90, out)
+        }
+        bitmap.recycle()
+        val exifDate = SimpleDateFormat("yyyy:MM:dd HH:mm:ss", Locale.US).apply {
+            timeZone = TimeZone.getDefault()
+        }.format(Date(dateTakenMs))
+        ExifInterface(tmp).apply {
+            setAttribute(ExifInterface.TAG_DATETIME_ORIGINAL, exifDate)
+            setAttribute(ExifInterface.TAG_DATETIME, exifDate)
+            saveAttributes()
+        }
+        return tmp.readBytes().also { tmp.delete() }
+    }
+
+    /** Seeded content byte at [position]: JPEG prefix, then the pattern. */
+    private fun seedByte(name: String, position: Long): Byte {
+        val prefix = seedPrefixes[name] ?: return patternByte(name, position)
+        return if (position < prefix.size) prefix[position.toInt()]
+        else patternByte(name, position - prefix.size)
+    }
+
+    /**
+     * Seed one JPEG into MediaStore (DCIM/snapdisk-e2e) with a fixed
+     * DATE_TAKEN, written in 1 MB chunks — never hold the whole file
+     * in memory (the test heap is ~200 MB).
+     *
+     * The content is a REAL JPEG (EXIF DateTimeOriginal = the seed
+     * date) followed by pattern bytes: MediaStore's async scanner
+     * re-extracts image metadata after the write and overwrites
+     * DATE_TAKEN from the file — with random bytes it stored 0
+     * (smoke run 44183565903: e2e-stop1.jpg inserted with
+     * 1_700_000_000_000, stored taken=0), which silently reorders
+     * the copy (effective date becomes "now", sorts last) and also
+     * explains run 44175300406 processing mid → new → old. A
+     * post-write update() does NOT fix it: the update races the
+     * scanner — run 44189068044 saw it update 0 rows once and get
+     * re-cleared after verify another time. With EXIF in the file
+     * the scanner itself derives the right date, so no update is
+     * needed; the stored value is polled until it converges to the
+     * seed date (insert value, or scanner's EXIF extraction).
+     */
+    private fun seedPhoto(name: String, dateTakenMs: Long, sizeBytes: Long) {
+        deletePreExisting(name)
+        val prefix = jpegPrefixWithExif(dateTakenMs)
+        require(sizeBytes > prefix.size) { "seed $name too small for its JPEG prefix" }
+        seedPrefixes[name] = prefix
+        val values = ContentValues().apply {
+            put(MediaStore.MediaColumns.DISPLAY_NAME, name)
+            put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg")
+            put(MediaStore.MediaColumns.RELATIVE_PATH, seedRelativePath)
+            put(MediaStore.MediaColumns.DATE_TAKEN, dateTakenMs)
+            put(MediaStore.MediaColumns.DATE_ADDED, dateTakenMs / 1000)
+            put(MediaStore.MediaColumns.DATE_MODIFIED, dateTakenMs / 1000)
+            put(MediaStore.MediaColumns.SIZE, sizeBytes)
+        }
+        val uri = ctx.contentResolver.insert(
+            MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values,
+        ) ?: throw AssertionError("MediaStore insert failed for $name")
+        seededUris += uri
+        val out = ctx.contentResolver.openOutputStream(uri)
+            ?: throw AssertionError("could not open output stream for $name")
+        out.use { stream ->
+            stream.write(prefix)
+            val chunk = ByteArray(CHUNK_BYTES)
+            var written = prefix.size.toLong()
+            while (written < sizeBytes) {
+                val n = minOf(CHUNK_BYTES.toLong(), sizeBytes - written).toInt()
+                for (i in 0 until n) chunk[i] = patternByte(name, written - prefix.size + i)
+                stream.write(chunk, 0, n)
+                written += n
+            }
+        }
+        // The scanner restores DATE_TAKEN from the file's EXIF
+        // asynchronously; give it 30 s to converge. If it has not
+        // converged, do NOT fail here: with taken=0 the effective
+        // date is DATE_MODIFIED, and sequentially seeded files
+        // still sort in seed order (smoke run 44215438437:
+        // serviceCopies passed with taken=0 for all three). The
+        // real gate is assertEnumerationOrder, which polls the
+        // enumeration the service itself will use; the copy order
+        // is fixed at scan time, so a later scanner mutation
+        // cannot reorder the in-flight copy. Failing the seed on
+        // a slow scanner (run 44215438437: stop2/big never
+        // converged within 15 s) blocks tests whose order the
+        // enumeration assert would still have verified.
+        val deadline = System.currentTimeMillis() + 30_000
+        var stored: Long? = null
+        while (System.currentTimeMillis() < deadline) {
+            stored = ctx.contentResolver.query(
+                uri,
+                arrayOf(MediaStore.MediaColumns.DATE_TAKEN),
+                null, null, null,
+            )?.use { cursor ->
+                if (cursor.moveToFirst()) cursor.getLong(0) else null
+            } ?: throw AssertionError("could not re-query DATE_TAKEN for $name")
+            if (stored == dateTakenMs) return
+            Thread.sleep(200)
+        }
+        println(
+            "SMOKE e2e seed $name: DATE_TAKEN stayed $stored " +
+                "(expected $dateTakenMs); order is guarded by the " +
+                "enumeration assert",
+        )
+    }
+
+    /** Streaming byte-compare: [file] must match the seeded content for [name]. */
+    private fun assertFileMatchesSeed(file: File, name: String, sizeBytes: Long) {
+        assertTrue("missing file ${file.name}", file.exists())
+        assertEquals("wrong size for ${file.name}", sizeBytes, file.length())
+        file.inputStream().use { stream ->
+            val chunk = ByteArray(CHUNK_BYTES)
+            var read = 0L
+            while (read < sizeBytes) {
+                val n = stream.read(chunk, 0, minOf(CHUNK_BYTES.toLong(), sizeBytes - read).toInt())
+                if (n < 0) throw AssertionError("${file.name} ended early at $read bytes")
+                for (i in 0 until n) {
+                    if (chunk[i] != seedByte(name, read + i)) {
+                        throw AssertionError("${file.name} differs at byte ${read + i}")
+                    }
+                }
+                read += n
+            }
+        }
+    }
+
+    private fun deletePreExisting(name: String) {
+        ctx.contentResolver.query(
+            MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+            arrayOf(MediaStore.MediaColumns._ID),
+            "${MediaStore.MediaColumns.DISPLAY_NAME} = ?",
+            arrayOf(name),
+            null,
+        )?.use { cursor ->
+            val idCol = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns._ID)
+            while (cursor.moveToNext()) {
+                val uri = Uri.withAppendedPath(
+                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                    cursor.getLong(idCol).toString(),
+                )
+                ctx.contentResolver.delete(uri, null, null)
+            }
+        }
+    }
+
+    private fun offerNotification() =
+        notificationManager.activeNotifications.firstOrNull {
+            it.id == NotificationHelper.NOTIFICATION_ID_OFFER
+        }
+
+    private fun progressNotification() =
+        notificationManager.activeNotifications.firstOrNull {
+            it.id == NotificationHelper.NOTIFICATION_ID_PROGRESS
+        }
+
+    private fun actionTitles(notification: android.service.notification.StatusBarNotification?) =
+        notification?.notification?.actions?.map { it.title.toString() } ?: emptyList()
+
+    private fun startServiceAction(action: String) {
+        ContextCompat.startForegroundService(
+            ctx,
+            Intent(ctx, BackupService::class.java).setAction(action),
+        )
+    }
+
+    /** The same path a notification action tap takes (manifest receiver). */
+    private fun sendNotificationAction(action: String) {
+        BackupActionReceiver().onReceive(ctx, Intent(action))
+    }
+
+    /**
+     * Poll [condition] until true or [timeoutMs] elapses. Records
+     * every distinct (status, currentFile) pair the service
+     * publishes, so the test can assert on the state sequence
+     * instead of only the final state.
+     */
+    private fun waitForState(
+        timeoutMs: Long,
+        pollMs: Long = 50,
+        seenStates: MutableList<Pair<BackupStatus, String?>> = mutableListOf(),
+        condition: (BackupState) -> Boolean,
+    ): BackupState {
+        val deadline = System.currentTimeMillis() + timeoutMs
+        var last: BackupState = BackupService.stateFlow.value
+        while (System.currentTimeMillis() < deadline) {
+            val state = BackupService.stateFlow.value
+            if (state.status != last.status || state.currentFileName != last.currentFileName) {
+                seenStates += state.status to state.currentFileName
+            }
+            last = state
+            if (condition(state)) return state
+            Thread.sleep(pollMs)
+        }
+        throw AssertionError(
+            "timed out after ${timeoutMs}ms waiting for state; " +
+                "last=${last.status} error=${last.error?.summary} " +
+                "seen=$seenStates",
+        )
+    }
+
+    /** Wait until [file] exists with a partial size (a copy is in flight), or fail. */
+    private fun waitForPartInFlight(file: File, totalBytes: Long, timeoutMs: Long = 120_000) {
+        val deadline = System.currentTimeMillis() + timeoutMs
+        while (System.currentTimeMillis() < deadline) {
+            if (file.exists() && file.length() in 1 until totalBytes) return
+            Thread.sleep(20)
+        }
+        throw AssertionError(
+            "${file.name} was never observed mid-copy " +
+                "(exists=${file.exists()} size=${if (file.exists()) file.length() else "n/a"} " +
+                "of $totalBytes) — the copy finished before the action landed?",
+        )
+    }
+
+    @Test
+    fun mountBroadcastPostsOfferWithBackupAndCancel() {
+        StorageReceiver().onReceive(
+            ctx,
+            Intent(Intent.ACTION_MEDIA_MOUNTED).apply {
+                data = Uri.parse("file:///storage/1234-ABCD")
+            },
+        )
+        val deadline = System.currentTimeMillis() + 5_000
+        var offer = offerNotification()
+        while (offer == null && System.currentTimeMillis() < deadline) {
+            Thread.sleep(100)
+            offer = offerNotification()
+        }
+        assertTrue("offer notification was not posted after mount broadcast", offer != null)
+        assertEquals(
+            listOf("Backup", "Cancel"),
+            actionTitles(offer),
+        )
+        println("SMOKE full-flow: mount broadcast posted the offer (Backup/Cancel)")
+
+        // Cancel dismisses the offer through the same receiver the
+        // notification action uses. Poll for the dismissal: on a
+        // loaded emulator the NotificationManagerService can take
+        // seconds to propagate the cancel (smoke run 44147560922
+        // showed 200-300 ms monitor contention on this call).
+        sendNotificationAction(StorageReceiver.ACTION_DISMISS_OFFER)
+        val dismissDeadline = System.currentTimeMillis() + 5_000
+        while (offerNotification() != null && System.currentTimeMillis() < dismissDeadline) {
+            Thread.sleep(100)
+        }
+        assertTrue("offer was not dismissed by Cancel", offerNotification() == null)
+        println("SMOKE full-flow: Cancel dismissed the offer")
+    }
+
+    @Test
+    fun serviceCopiesSeededPhotosOldestFirstWithProgressAndDone() {
+        // The app must be foreground for a foreground-service start:
+        // launching the settings screen mirrors the user tapping
+        // Backup in the app (the offer's Backup action does the same
+        // startForegroundService call from the receiver).
+        activityScenario = ActivityScenario.launch(MainActivity::class.java)
+        // Small files: the emulator copies at ~100 KB/s worst case,
+        // so 3 MB each keeps the whole job inside the DONE timeout
+        // while still proving oldest-first order + content. Each
+        // file spans >1 s at any observed rate, so the throttled
+        // progress publish reports every file as currentFileName.
+        val size = 3L * 1024 * 1024
+        seedPhoto("e2e-old.jpg", 1_700_000_000_000L, size)
+        seedPhoto("e2e-mid.jpg", 1_700_000_100_000L, size)
+        seedPhoto("e2e-new.jpg", 1_700_000_200_000L, size)
+
+        // Copy-START order, observed directly: the timestamp each
+        // file's .part (or final file) first appears in the
+        // destination tree. This is the oldest-first proof — the
+        // files' mtimes are NOT: a resume/retry re-copies a file
+        // and refreshes its mtime, so mtimes reflect the LAST copy,
+        // not the processing order (smoke run 44163579790 showed
+        // every file opened twice, second pass in rotated order,
+        // and the mtimes followed the second pass).
+        val names = listOf("e2e-old.jpg", "e2e-mid.jpg", "e2e-new.jpg")
+        val firstSeenOrder = mutableListOf<String>()
+        val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
+        var sawProgressWithPauseStop = false
+        assertEnumerationOrder("serviceCopies", names)
+        startServiceAction(BackupService.ACTION_START)
+        // Prove MY job started first: startForegroundService is
+        // async, so stateFlow still holds the previous test's DONE
+        // until onStartCommand runs — waiting for DONE directly
+        // can return that stale DONE at once (smoke run 44169947197:
+        // seen=[], no COPYING notification ever observed).
+        waitForState(120_000, 50, seenStates) {
+            it.status == BackupStatus.SCANNING || it.status == BackupStatus.COPYING
+        }
+        val done = waitForState(240_000, 50, seenStates) { state ->
+            for (name in names) {
+                if (name !in firstSeenOrder &&
+                    (partFile(name).exists() || destFile(name).exists())
+                ) {
+                    firstSeenOrder += name
+                }
+            }
+            val progress = progressNotification()
+            if (progress != null && state.status == BackupStatus.COPYING) {
+                val titles = actionTitles(progress)
+                if (titles.contains("Pause") && titles.contains("Stop")) {
+                    val max = progress.notification.extras.getInt(Notification.EXTRA_PROGRESS_MAX)
+                    val value = progress.notification.extras.getInt(Notification.EXTRA_PROGRESS)
+                    if (max == 100 && value in 0..100) sawProgressWithPauseStop = true
+                }
+            }
+            state.status == BackupStatus.DONE || state.status == BackupStatus.ERROR
+        }
+        assertEquals(
+            "service ended in ${done.status}, not DONE: ${done.error?.detail}",
+            BackupStatus.DONE,
+            done.status,
+        )
+        // Assert the DONE notification FIRST, before the slow file
+        // verification: the service does post it (smoke run
+        // 44210493197: its sound played right after DONE), but the
+        // harness destroys MainActivity and removes both tasks
+        // ~15 s after DONE, which cancels it — a 10 s poll started
+        // after the ~17 s file verification (runs 44199483316,
+        // 44203932318) always sees active=[]. Checking promptly
+        // catches it while it is alive.
+        val doneTitleDeadline = System.currentTimeMillis() + 10_000
+        var doneTitle: String? = null
+        while (System.currentTimeMillis() < doneTitleDeadline) {
+            doneTitle = progressNotification()?.notification?.extras
+                ?.getCharSequence(Notification.EXTRA_TITLE)?.toString()
+            if (doneTitle == "Backup complete") break
+            Thread.sleep(100)
+        }
+        assertEquals(
+            "DONE notification title was not 'Backup complete' within 10 s of DONE; " +
+                "active=${notificationManager.activeNotifications.map { it.id to it.notification.extras.getCharSequence(Notification.EXTRA_TITLE)?.toString() }}",
+            "Backup complete",
+            doneTitle,
+        )
+        assertTrue(
+            "no COPYING progress notification with Pause/Stop was observed; seen=$seenStates",
+            sawProgressWithPauseStop,
+        )
+        assertEquals("DONE state copiedFiles", 3, done.copiedFiles)
+        assertEquals("DONE state totalFiles", 3, done.totalFiles)
+        assertTrue("files were skipped, not copied: ${done.skippedFiles}", done.skippedFiles.isEmpty())
+        assertEquals(
+            "files did not START copying oldest-first; first-seen=$firstSeenOrder " +
+                "states=$seenStates skipped=${done.skippedFiles}",
+            names,
+            firstSeenOrder,
+        )
+
+        val oldDest = destFile("e2e-old.jpg")
+        val midDest = destFile("e2e-mid.jpg")
+        val newDest = destFile("e2e-new.jpg")
+        assertFileMatchesSeed(oldDest, "e2e-old.jpg", size)
+        assertFileMatchesSeed(midDest, "e2e-mid.jpg", size)
+        assertFileMatchesSeed(newDest, "e2e-new.jpg", size)
+        assertNoStaleParts()
+        println(
+            "SMOKE full-flow: service copied 3 seeded photos oldest-first " +
+                "(first-seen $firstSeenOrder), progress with Pause/Stop seen, " +
+                "DONE notified; states=$seenStates skipped=${done.skippedFiles}",
+        )
+    }
+
+    @Test
+    fun pauseAndResumeThroughNotificationActions() {
+        activityScenario = ActivityScenario.launch(MainActivity::class.java)
+        // One file, big enough to stay in flight for seconds at any
+        // observed emulator copy rate (~100 KB/s–2 MB/s): the pause
+        // is sent only after its .part is observed mid-copy, so
+        // there is no between-files window for the pause to land in
+        // (the engine-level pause is already proven deterministically
+        // by BackupEngineInstrumentedTest with a slow stream; this
+        // test proves the notification action path). 300 MB (run 2)
+        // made the job run for many minutes and invited cross-test
+        // interference; 10 MB is the same proof in seconds.
+        val size = 10L * 1024 * 1024
+        seedPhoto("e2e-big.jpg", 1_700_000_000_000L, size)
+
+        val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
+        startServiceAction(BackupService.ACTION_START)
+        waitForState(120_000, 50, seenStates) { it.status == BackupStatus.COPYING }
+        val part = partFile("e2e-big.jpg")
+        waitForPartInFlight(part, size)
+        sendNotificationAction(BackupService.ACTION_PAUSE)
+        val paused = waitForState(10_000, 50, seenStates) { it.status == BackupStatus.PAUSED }
+        assertEquals(BackupStatus.PAUSED, paused.status)
+        // The in-flight file's .part must stay frozen while paused.
+        // Settle first: on a loaded emulator a chunk already past
+        // the engine's pause gate (or a stale FUSE stat) can land
+        // a few KB after the PAUSED state is published — smoke run
+        // 44163579790 showed +8 KB in the 500 ms window. Poll until
+        // the size is unchanged for 1 s, then assert it stays
+        // frozen for another 500 ms. If it never settles, the pause
+        // genuinely is not holding the copy.
+        val settleDeadline = System.currentTimeMillis() + 10_000
+        var stableReads = 0
+        var lastSize = -1L
+        var settledSize = -1L
+        while (System.currentTimeMillis() < settleDeadline) {
+            val size = part.length()
+            if (size == lastSize && size > 0) {
+                stableReads++
+                if (stableReads >= 10) {
+                    settledSize = size
+                    break
+                }
+            } else {
+                stableReads = 0
+                lastSize = size
+            }
+            Thread.sleep(100)
+        }
+        assertTrue(
+            ".part size never settled while paused (last=$lastSize, " +
+                "total=$size) — the copy kept progressing after Pause",
+            settledSize > 0,
+        )
+        Thread.sleep(500)
+        assertEquals("copy progressed while paused", settledSize, part.length())
+        assertEquals(
+            listOf("Resume", "Stop"),
+            actionTitles(progressNotification()),
+        )
+        println(
+            "SMOKE full-flow: pause froze the copy (.part held at " +
+                "$settledSize bytes), Resume/Stop offered",
+        )
+
+        sendNotificationAction(BackupService.ACTION_RESUME)
+        val done = waitForState(180_000, 50, seenStates) {
+            it.status == BackupStatus.DONE || it.status == BackupStatus.ERROR
+        }
+        assertEquals(
+            "service ended in ${done.status} after resume: ${done.error?.detail}",
+            BackupStatus.DONE,
+            done.status,
+        )
+        assertFileMatchesSeed(destFile("e2e-big.jpg"), "e2e-big.jpg", size)
+        assertNoStaleParts()
+        println("SMOKE full-flow: resume finished the paused copy, file byte-identical")
+    }
+
+    @Test
+    fun stopThroughNotificationActionKeepsFinishedFiles() {
+        activityScenario = ActivityScenario.launch(MainActivity::class.java)
+        // Small file first (oldest): it finishes before the stop is
+        // sent, so it must be kept byte-identical. The second file
+        // is in flight when the stop lands: its .part must go.
+        // 300 MB (run 2) made the job run for many minutes; 10 MB
+        // stays in flight for seconds at any observed copy rate.
+        val firstSize = 2L * 1024 * 1024
+        seedPhoto("e2e-stop1.jpg", 1_700_000_000_000L, firstSize)
+        val bigSize = 10L * 1024 * 1024
+        seedPhoto("e2e-stop2.jpg", 1_700_000_100_000L, bigSize)
+
+        val seenStates = mutableListOf<Pair<BackupStatus, String?>>()
+        assertEnumerationOrder("stop", listOf("e2e-stop1.jpg", "e2e-stop2.jpg"))
+        startServiceAction(BackupService.ACTION_START)
+        waitForState(120_000, 50, seenStates) { it.status == BackupStatus.COPYING }
+        waitForPartInFlight(partFile("e2e-stop2.jpg"), bigSize)
+        sendNotificationAction(BackupService.ACTION_STOP)
+        val stopped = waitForState(30_000, 50, seenStates) {
+            it.status == BackupStatus.STOPPED || it.status == BackupStatus.DONE
+        }
+        assertEquals(
+            "service ended in ${stopped.status} after Stop (copy may have finished first)",
+            BackupStatus.STOPPED,
+            stopped.status,
+        )
+        assertNoStaleParts()
+        assertFileMatchesSeed(destFile("e2e-stop1.jpg"), "e2e-stop1.jpg", firstSize)
+        // No further copying after Stop: the destination is stable.
+        val countAfterStop = allDestFiles().size
+        Thread.sleep(1_000)
+        val countLater = allDestFiles().size
+        assertEquals("files kept copying after Stop", countAfterStop, countLater)
+        println(
+            "SMOKE full-flow: Stop ended the job, .part deleted, " +
+                "finished file kept byte-identical, nothing more copied",
+        )
+    }
+
+    companion object {
+        private const val CHUNK_BYTES = 1024 * 1024
+    }
+}
