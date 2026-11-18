@@ -3926,9 +3926,10 @@ state, evidence, date.
 - Owner: Dzianis. Due: Nov 16. State: OPEN.
   Google rejected the saved password twice Nov 15 (15:33 and 16:22
   UTC); the Console was never reached, so his claimed SnapDisk push
-  stays unverified. Paths: re-enter the password carefully, use
-  "Forgot password?" recovery, or sign in himself in the live
-  browser. Once in: verify the push, or upload the v0.1.2 AAB
+  stays unverified. Paths: re-enter the password carefully, or sign
+  in himself in the live browser. Never start a password reset or
+  account recovery unless he explicitly asks for one in his own words
+  (Nov 17 hard rule). Once in: verify the push, or upload the v0.1.2 AAB
   (tool/play-store/); first production review usually 1–3 days,
   up to 7. Unblocks: listing verification, sandbox Pro purchase,
   SnapDisk name check on Play. Do not retry the saved login from
@@ -3974,8 +3975,9 @@ state, evidence, date.
   the Notion hub page carries the same paragraph — verified present
   Nov 16, see the follow-up entry below). Timeout
   behavior verified against Android Developers "Foreground service
-  timeouts". Still owed: real-device check on the Pixel 9a with the
-  adb timeout commands from the spec note.
+  timeouts". Real-device check closed by the Nov 17 emulator-proof
+  rule (WL-64): the emulator end-to-end pass is the proof; never
+  his phone.
 
 ## 2026-11-16 WITA — WL-34 Notion follow-up closed (hourly supervisor)
 
