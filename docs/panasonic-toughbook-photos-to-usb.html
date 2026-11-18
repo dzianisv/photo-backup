@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Panasonic Toughbook photos to a USB drive</title>
+<meta name="description" content="Back up Panasonic Toughbook photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/panasonic-toughbook-photos-to-usb.html">
+<meta property="og:title" content="Back up Panasonic Toughbook photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up Panasonic Toughbook photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/panasonic-toughbook-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/panasonic-toughbook-photos-to-usb.html#article",
+      "headline": "Back up Panasonic Toughbook photos to a USB drive (no computer)",
+      "description": "Back up Panasonic Toughbook photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-18",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/panasonic-toughbook-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/panasonic-toughbook-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up Panasonic Toughbook photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, on the Android Toughbook models that can run SnapDisk — the FZ-N1 mk2 runs Android 8.1 with a micro-USB port listed as host-capable, the FZ-L1 runs Android 8.1 with the same host-capable micro-USB listing, the FZ-S1 runs Android 10 with a USB-C port, the FZ-A3 runs Android 9.0 with USB-C, the FZ-T1 runs Android 8.1 with micro-USB, and the P-01K runs Android 8.1 with micro-USB, though USB host support is unconfirmed in the sources I found on the FZ-T1, the FZ-S1, the FZ-A3, and the P-01K, so plug a drive in and check Settings > Storage — the drive mounting is the test. The original FZ-N1 runs Android 6.0.1, below SnapDisk's Android 7.0 minimum, so it cannot run it at all. Most of the rest of the Toughbook line is Windows laptops, not Android devices, so they are out of scope entirely. Panasonic has no phone-to-USB backup tool of its own. The stock route is a file manager: connect the drive, open the file manager, pick the photos in DCIM/Camera, and Copy to the drive. SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/panasonic-toughbook-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up Panasonic Toughbook photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/panasonic-toughbook-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up Panasonic Toughbook photos to a USB drive (no computer)</h1>
+  <p class="dek">The Toughbook line is mostly Windows laptops — this article is only about the Android handhelds and tablets (FZ-N1, FZ-T1, FZ-S1, FZ-A3, FZ-L1, P-01K), and Panasonic has no phone-to-USB backup tool of its own: the only Toughbook-specific backup advice found is the P-01K FAQ's computer copy or cloud, with no USB-drive route at all. Four honest caveats up front: the original FZ-N1 runs Android 6.0.1, below SnapDisk's Android 7.0 minimum, so it cannot run SnapDisk at all — only the FZ-N1 mk2, on Android 8.1, can; USB host support is listed only on the FZ-N1 mk2 and the FZ-L1 — Panasonic's own spec sheets list their micro-USB port as "option to be host" — while no source I found mentions host or OTG support on the FZ-T1, the FZ-S1, the FZ-A3, or the P-01K at all, so plug a drive in and check Settings &gt; Storage on those models before relying on it; the FZ-S1's microSD support is unconfirmed in the sources I found, so the card is not leaned on for that model; and most search results for this query are not about the Toughbook's own photos at all — they are about using a phone as a bridge to copy a camera's memory card, with "Panasonic" meaning the camera brand, not the device. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 18, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On the Android Toughbook models that can run SnapDisk — the FZ-N1 mk2 runs Android 8.1 with a micro-USB port listed as host-capable, the FZ-L1 runs Android 8.1 with the same host-capable listing, the FZ-S1 runs Android 10 with a USB-C port, the FZ-A3 runs Android 9.0 with USB-C, the FZ-T1 runs Android 8.1 with micro-USB, and the P-01K runs Android 8.1 with micro-USB, though host support is unconfirmed on the FZ-T1, the FZ-S1, the FZ-A3, and the P-01K — plug the drive in, then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: a file manager works — the generic guides' route is an OTG connection with the built-in file manager — but the direct route is manual select-copy-paste with no progress detail, no resume, and no verification; Panasonic's own file advice works too, but there is none pointing at a USB drive — the P-01K FAQ only offers a computer copy or cloud. Two rival apps do exist — Photos to USB: OTG Backup copies the whole gallery to a pen drive in one tap, free with ads, a one-time purchase removing the ads; VaultDrive copies photos, videos, and files straight to a USB drive with no computer, free for up to 200 files or 2 GB per backup, Pro $19.99 once — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 18, 2026, no top search result for this query is a Toughbook-specific phone-to-USB guide at all, let alone a Toughbook-specific automated whole-library backup with progress, Pause/Stop, and resume: the one Toughbook-specific result is a FAQ page whose backup advice is a computer copy or cloud, and the rest are generic manual guides — most of them about camera memory cards, not the Toughbook's own gallery.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up Panasonic Toughbook photos to USB drive without computer" and there is no Toughbook-specific phone-to-USB guide in the top results at all — the one Toughbook-specific result is a FAQ page whose backup advice is a computer copy or cloud, and the rest are generic Android guides, in different packaging:</p>
+  <ul>
+    <li><strong>PetaPixel, "No Laptop? No Problem: How to Back Up Photos in the Field With Your Smartphone"</strong> (<a href="https://petapixel.com/2025/05/11/no-laptop-no-problem-how-to-back-up-photos-in-the-field-with-your-smartphone/">No Laptop? No Problem: How to Back Up Photos in the Field With Your Smartphone</a>) — a phone plus a USB hub plus a card reader plus an SSD, copying a camera's SD or CFexpress card to the drive with the phone's file manager. Generic, and a manual file-manager guide — and it is about a camera's memory card, not the Toughbook's own gallery: "Panasonic" appears only as one of the camera brands it works with.</li>
+    <li><strong>Luminous Landscape forum, "Transferring files from camera to hard drive without laptop"</strong> (<a href="https://forum.luminous-landscape.com/index.php?topic=129861.0%3Bwap2">Transferring files from camera to hard drive without laptop</a>) — wireless hard drives with an SD slot that copy a card automatically, such as the WD My Passport Wireless Pro. A forum thread, not a guide — and it is about camera cards and a dedicated drive, not the Toughbook's own gallery.</li>
+    <li><strong>desnoulez.fr, "How to back up camera photos or SD Card without a laptop"</strong> (<a href="https://www.desnoulez.fr/en/how-to-back-up-camera-photos-while-traveling-no-laptop-needed/">How to back up camera photos or SD Card without a laptop</a>) — the same phone-as-bridge idea: a smartphone or tablet, a USB hub, a card reader, and an SSD, copying a camera's card with the file manager. Generic, and a manual guide — and again about a camera's card, not the Toughbook's own gallery.</li>
+    <li><strong>devicesfaq, "Frequently asked questions Panasonic Toughbook P-01K"</strong> (<a href="https://www.devicesfaq.com/en/frequently-asked-questions/panasonic-toughbook-p-01k">Frequently asked questions Panasonic Toughbook P-01K</a>) — the only Toughbook-specific result: its backup answer is to connect the P-01K to a computer with a USB cable and copy the files with the file browser, or use Google Drive (15 GB free) or Google Photos. A FAQ page, not a guide — and the confirmation that the P-01K runs Android 8.1 with 16 GB of internal memory and a micro-USB charging port, with no USB-drive route offered at all.</li>
+    <li><strong>Photos to USB: OTG Backup</strong> (<a href="https://play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb&amp;referrer=utm_source%3Dappbrain%26utm_medium%3Dappbrain_web%26utm_campaign%3Dappbrain_web">Photos to USB: OTG Backup</a>) — the one-tap app alternative on Google Play: plug a pen drive into your phone, one tap copies every photo and video on the phone to the drive, no internet, no cloud, no account; free with ads, a one-time purchase removes the ads. It is the closest thing to this article's job — but it is a generic Android listing, not a Toughbook guide, and it does not promise oldest-first order, detailed progress with Pause and Stop, or size verification of every file.</li>
+    <li><strong>thegadgetians, "How to Transfer Files From Phone to USB Without Computer: Ultimate Guide"</strong> (<a href="https://thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/">How to Transfer Files From Phone to USB Without Computer</a>) — connect a USB drive with an OTG adapter, open the file manager, select and copy files, then paste onto the USB drive. Generic Android, and a manual file-manager guide — and it notes that not all Android phones support OTG.</li>
+    <li><strong>Panasonic TOUGHBOOK N1 spec sheet</strong> (<a href="https://na.panasonic.com/ns/278094_TOUGHBOOK_N1_spec_sheet_v4SS.pdf">TOUGHBOOK N1 spec sheet</a>) — Panasonic's own sheet for the FZ-N1 mk2: Android 8.1 (Oreo), micro-USB "option to be host or client interface 2.0", microSDXC up to 64 GB. A spec sheet, not a guide — and the confirmation that the FZ-N1 mk2 lists host-capable USB and runs Android 8.1, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>FZ-N1, Panasonic Wiki</strong> (<a href="https://panasonic.fandom.com/wiki/FZ-N1">FZ-N1</a>) — the original FZ-N1: Android 6.0.1 (Marshmallow), micro-USB 2.0, microSDXC up to 64 GB. A spec page, not a guide — and the confirmation that the original FZ-N1 runs Android 6.0.1, below SnapDisk's Android 7.0 minimum, so it cannot run SnapDisk at all.</li>
+    <li><strong>Notebookcheck, "Panasonic Toughbook FZ-S1 Rugged Tablet Review"</strong> (<a href="https://www.notebookcheck.net/Panasonic-Toughbook-FZ-S1-Rugged-Tablet-Review-Optimized-For-The-Mobile-Workforce.545944.0.html">Panasonic Toughbook FZ-S1 Rugged Tablet Review</a>) — the FZ-S1: Android 10, a single USB-C port, 7-inch tablet. A review, not a guide — and the confirmation that the FZ-S1 runs Android 10 with USB-C, with no host or OTG mention anywhere in it.</li>
+    <li><strong>MobileGizmo, "Compare Panasonic ToughBook FZ-T1"</strong> (<a href="https://www.mobilegizmo.net/compare/panasonic_toughbook-fz-t1/huawei_honor-x50-gt-5g/samsung_samsung-galaxy-xcover-7-5g/huawei_huawei-nova-y72/">Compare Panasonic ToughBook FZ-T1</a>) — the FZ-T1: Android 8.1 (Oreo), microUSB 2.0. A spec page, not a guide — and the confirmation that the FZ-T1 runs Android 8.1, with no host or OTG mention anywhere in it.</li>
+    <li><strong>UL benchmarks, "Panasonic Toughbook A3 Review"</strong> (<a href="https://benchmarks.ul.com/de-pt/hardware/tablet/Panasonic+Toughbook+A3+review">Panasonic Toughbook A3 Review</a>) — the FZ-A3: Android 9.0, USB Type-C, microSD / microSDHC / microSDXC. A spec page, not a guide — and the confirmation that the FZ-A3 runs Android 9.0 with USB-C, with no host or OTG mention anywhere in it.</li>
+    <li><strong>Coretek, "Panasonic FZ-L1 ToughPad Business Tablet"</strong> (<a href="https://coretekcomputers.com/products/panasonic-fz-l1-toughpad-business-tablet">Panasonic FZ-L1 ToughPad Business Tablet</a>) — the FZ-L1: Android 8.1 (Oreo), micro-USB "option to be host or client interface 2.0", microSDXC up to 64 GB. A retailer page, not a guide — and the confirmation that the FZ-L1 lists host-capable USB and runs Android 8.1, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>Cloud routes</strong> — Google Photos syncs your gallery to Google's servers, Google Drive backs your data up to Google's cloud with 15 GB free, and Google backup restores your data to a new phone from Google's cloud, not to a drive you hold; Google Photos' "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Neither route gives you a folder of plain photo files on a USB drive.</li>
+  </ul>
+  <p>None of them is a Toughbook-specific phone-to-USB guide at all, and none of them offers an automated Toughbook photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What you need</h2>
+  <p>An Android Toughbook that can run SnapDisk — the FZ-N1 mk2 runs Android 8.1 with a micro-USB port listed as host-capable, the FZ-L1 runs Android 8.1 with the same host-capable listing, the FZ-S1 runs Android 10 with a USB-C port, the FZ-A3 runs Android 9.0 with USB-C, the FZ-T1 runs Android 8.1 with micro-USB, and the P-01K runs Android 8.1 with micro-USB, so a USB-C flash drive plugs straight into the FZ-S1 and the FZ-A3, while a regular USB-A drive needs an OTG adapter: USB-C on the FZ-S1 and the FZ-A3, micro-USB on the FZ-N1 mk2, the FZ-T1, the FZ-L1, and the P-01K — and enough space on the drive for the photos you want to keep. Three Toughbook specifics: first, USB host support is confirmed in the sources I found only on the FZ-N1 mk2 and the FZ-L1 — Panasonic's own spec sheets list their micro-USB port as "option to be host" — while on the FZ-T1, the FZ-S1, the FZ-A3, and the P-01K no source I found mentions host or OTG support at all, so plug a drive in and check Settings &gt; Storage before relying on it: if the drive appears, the device hosts drives and the rest of this method works; if it never appears, the device does not host drives and Method 4 is the route. Second, Panasonic has no phone-to-USB backup tool of its own — the only Toughbook-specific backup advice found is the P-01K FAQ's computer copy or cloud; the stock photo backup is Google Photos; the stock file manager is Files by Google; Toughbook camera photos live in DCIM/Camera, as on any Android phone. The FZ-N1 mk2 and the FZ-L1 take a microSDXC card up to 64 GB, so a card is an option, and it still stays in the device and opening it anywhere else needs a card reader, while a USB drive plugs into any computer as it is. Third, SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the USB drive.</strong> It mounts on plug-in on most Android devices with USB host support — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage for the drive. Host support is confirmed in the sources I found only on the FZ-N1 mk2 and the FZ-L1 — so on the FZ-T1, the FZ-S1, the FZ-A3, and the P-01K the drive mounting is the test itself: if it appears in Settings &gt; Storage, the device hosts drives and the rest of this method works; if it never appears, the device does not host drives and Method 4 is the route. The FZ-N1 mk2, the FZ-T1, the FZ-L1, and the P-01K run Android 8.1, the FZ-A3 runs Android 9.0, and the FZ-S1 runs Android 10, so SnapDisk installs on all of them; the original FZ-N1 cannot run it at all.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — Toughbook camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the device normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the device to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: a file manager (the stock route, no app needed)</h2>
+  <p>A file manager can copy your photos to the USB drive — the generic guides' route is an OTG connection with the built-in file manager, and it is the manual route for external storage: 1. Plug in the USB drive — a notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage for the drive. 2. Open the file manager (Files by Google on Android Toughbooks) and confirm the USB drive shows up under storage devices. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until the file manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: Panasonic's own tools (Google Photos, Google Drive, or a microSD card — not phone-to-USB)</h2>
+  <p>If you want Panasonic's own route, know what each tool actually does — there is no Panasonic backup page pointing at a USB drive at all, and none of the stock tools writes your photos as plain files to a USB drive automatically. <strong>1. Google Photos</strong> is Google's own photo backup app, and it is the stock photo backup on Android Toughbooks: it automatically backs up photos to your Google account. It is a real backup — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. <strong>2. Google Drive</strong> is the cloud backup Android names by default — "on Android devices the default built-in service is Google Drive. With Google Drive you have 15Gb free" — it backs your data up to Google's cloud. It is a real backup — but it is a cloud backup, not a USB copy, and Google accounts only offer 15 GB of free storage. <strong>3. Google backup</strong> is what Android itself names: personal settings back up to Google's servers with a Google account, and are restored to a new phone when you sign in with that account. It is a real backup — but it backs up settings, not a folder of photo files on a drive you hold. <strong>4. A microSD card</strong> is the local option on the FZ-N1 mk2 and the FZ-L1 — both take a card up to 64 GB. It is a real local copy — but the card stays in the device, and opening the card anywhere else needs a card reader. <strong>5. A computer copy</strong> is the other way to move files off the device — connect the Toughbook to a computer with a USB cable and copy DCIM to the computer. It is a real backup — but it needs a PC in between, and the backup lands on the PC, not on a USB drive as plain files straight from the device. None of them is a one-tap way to copy your camera roll to a drive. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the Toughbook into the computer with a USB cable, tap the USB notification and choose File transfer — and drag the DCIM folder onto the USB drive. This works fine, and it is the only route above that needs a second device in between. It is also the only route that works if the FZ-T1, the FZ-S1, the FZ-A3, or the P-01K turns out not to host USB drives at all — since every model still connects to a computer as storage — and the only route that works at all on the original FZ-N1, which cannot run SnapDisk, and on the Windows Toughbook laptops, which are not Android devices at all. If the device and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the device is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>USB host support is unconfirmed on four models.</strong> The FZ-N1 mk2 and the FZ-L1 list host-capable USB — Panasonic's own spec sheets list their micro-USB port as "option to be host" — but no source I found mentions host or OTG support on the FZ-T1, the FZ-S1, the FZ-A3, or the P-01K at all, so plug a drive in and check Settings &gt; Storage on those models before relying on it. The drive mounting is the test.</li>
+    <li><strong>The original FZ-N1 cannot run SnapDisk at all.</strong> It runs Android 6.0.1, below SnapDisk's Android 7.0 minimum — only the FZ-N1 mk2, on Android 8.1, can. Check Settings &gt; About phone if you are unsure which FZ-N1 you have: the mk2 has the Snapdragon 660, the original has the older quad-core chip.</li>
+    <li><strong>Windows Toughbooks are out of scope.</strong> Most of the Toughbook line is Windows laptops, not Android devices — SnapDisk is Android-only, so no Windows Toughbook can run it. On those machines the computer copy in Method 4, with the drive plugged into the laptop itself, is the route.</li>
+    <li><strong>The FZ-S1's microSD support is unconfirmed.</strong> The sources I found for the FZ-S1 list 64 GB of internal storage and a single USB-C port, with no microSD mention anywhere in them, so the card is not leaned on for that model — the FZ-N1 mk2 and the FZ-L1 take a microSDXC card up to 64 GB, and the FZ-A3 takes microSD cards, with the capacity unconfirmed in the source found.</li>
+    <li><strong>Most search results are about camera cards, not the Toughbook's own photos.</strong> The PetaPixel and desnoulez guides use a phone as a bridge to copy a camera's memory card to a drive — "Panasonic" there means the camera brand, not the device. This article is about the photos stored on the Toughbook itself.</li>
+    <li><strong>The adapter differs by model.</strong> The FZ-S1 and the FZ-A3 have a USB Type-C port, so a USB-C flash drive plugs straight into either of them and a regular USB-A drive needs a USB-C OTG adapter on either of them. The FZ-N1 mk2, the FZ-T1, the FZ-L1, and the P-01K have a micro-USB port, so a regular USB-A drive needs a micro-USB OTG adapter on those models. A plain USB-C charging cable is not an OTG adapter: it connects the device to a computer, which is the opposite direction.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter you don't need — or the wrong one.</strong> A USB-C flash drive plugs straight into the FZ-S1 and the FZ-A3, both of which have USB-C — so an adapter is only needed for a regular USB-A drive, and it must be a USB-C OTG adapter on those models, a micro-USB OTG adapter on the FZ-N1 mk2, the FZ-T1, the FZ-L1, and the P-01K. A plain USB-C charging cable is not an OTG adapter: it connects the device to a computer, which is the opposite direction.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google Drive and Google Photos back your device up to Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> A computer copy with a USB cable moves files to a computer — but it is a copy to a computer, and the backup lands on the PC. If the device and the drive are all you have, a phone-to-USB copy is the route, not a desktop copy.</li>
+    <li><strong>Mistaking a spec table or a review page for a phone-to-USB guide.</strong> The Panasonic spec sheets and the Toughbook reviews are real Panasonic pages — but the spec sheets only list an Android version, a chipset, or a USB connector type, and the reviews only test the hardware. Neither of them describes copying your camera roll straight to a USB drive from the device.</li>
+    <li><strong>Mistaking OTG support on one model for OTG support on the other.</strong> The FZ-N1 mk2 and the FZ-L1 list host-capable USB — but no source I found mentions host or OTG support on the FZ-T1, the FZ-S1, the FZ-A3, or the P-01K. Test with a drive on those models, and use Method 2 or 4 on that model if the drive never mounts.</li>
+    <li><strong>Mistaking a camera-card guide for a Toughbook guide.</strong> The PetaPixel and desnoulez guides are real phone-to-USB guides — but they copy a camera's memory card through a hub, with "Panasonic" meaning the camera brand. If your photos are on the Toughbook itself, the card-reader hub is the wrong tool: the drive plugs straight into the Toughbook, and Method 1 or 2 is the route.</li>
+    <li><strong>Mistaking a microSD card copy for a USB backup.</strong> Copying DCIM to a microSD card is a real local copy — the FZ-N1 mk2 and the FZ-L1 take a card up to 64 GB — but the card stays in the device, and opening it anywhere else needs a card reader; a USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the device and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 18, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On an Android Toughbook the cloud routes are Google Photos and Google Drive — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the device — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the device. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the device.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the device. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="evolveo-photos-to-usb.html">Back up Evolveo photos to a USB drive (no computer)</a> — Evolveo is the closest parallel: another rugged brand whose own backup advice is a computer copy or cloud, not a phone-to-USB copy.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
