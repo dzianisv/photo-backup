@@ -1,5 +1,94 @@
 # SnapDisk — Work Log
 
+## WL-95 — Back up Datalogic photos to USB article, 64th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/datalogic-photos-to-usb.html ("Back up Datalogic photos
+  to a USB drive (no computer)"), following the WL-54–WL-94 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 39 chars, meta
+  description 153 chars, JSON-LD validated by parse; sitemap and
+  feed XML parse. Feed now counts 64 items.
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search): Query 63 ("back
+  up Datalogic photos to USB drive without computer") is a real gap —
+  no Datalogic-specific phone-to-USB guide in the top results at all;
+  not one result even mentions Datalogic.
+  YouTube, "How to Connect USB Drive to Android Phone to Move
+  Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet needed.
+  Generic Android, and a manual file-manager guide); Dr.Fone,
+  "4 Practical Ways to Transfer Photos from Android to USB Flash
+  Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — OTG adaptor and the file manager, a PC as middleman via USB
+  File Transfer mode, Google Drive, or AirDroid. Generic Android,
+  and a manual guide — and its bulk-export route is Dr.Fone's own
+  Windows and Mac software, which needs a computer in between);
+  Photo Backup Stick DC
+  (play.google.com/store/apps/details?id=com.photo.backup.stick —
+  the official backup app for Photo Backup Stick OTG flash drives:
+  plug the stick in and back up pictures and videos directly, no
+  computer or Wi-Fi, no account, free. A rival app, not a guide —
+  and it only works with genuine Photo Backup Stick OTG drives);
+  Photos to USB: OTG Backup
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — one tap copies the whole gallery to a pen drive, only new
+  photos next time; no internet, no cloud, no account. A rival
+  app, not a guide — and free with ads, a one-time purchase
+  removing the ads); Pixoneye, "How to Transfer Photos from Your
+  Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/ —
+  connect a USB drive with an OTG adapter, open Files by Google,
+  find DCIM/Camera, select a small batch, and Copy to the drive.
+  Generic Android, and a manual file-manager guide — and it warns
+  that a connector fitting physically does not prove the phone can
+  read or write the drive); Desnoulez, "How to back up camera
+  photos or SD Card without a laptop"
+  (desnoulez.fr/en/how-to-back-up-camera-photos-while-traveling-no-laptop-needed/
+  — use a smartphone as a bridge between a camera's memory card
+  and an external SSD via a USB hub, no laptop needed. Generic,
+  and a manual guide — and about a camera's card, not the
+  handheld's own gallery).
+  Honest limits recorded in the article: USB host support is
+  confirmed only on the Memor 10 (Android 8.1, USB-C, "High Speed
+  USB 2.0 Host and Client with USB Type C" — Datalogic Memor 10
+  user's manual) and the Memor 20 (Android 9, USB-C, "Device can
+  work as host and client" — Memor 20 datasheet), while host or
+  OTG support is unconfirmed in the sources found on the Memor 11
+  (Android 11, upgradable to Android 15, USB 2.0 — Esper specs),
+  the Memor 30 and the Memor 35 (Android 13, upgradable to Android
+  18, microSD up to 2 TB — Technowave product page) — the drive
+  mounting is the test on those models; the Memor 10's stock cable
+  94A050044 works "only in client mode" and a "Special USB-C OTG
+  cable is needed for Memor 10 to work in host mode" (Memor 10
+  manual), while the Memor 20's host cable is included with the
+  device; every model listed clears SnapDisk's Android 7.0
+  minimum, but the original Memor from 2008 runs Windows Mobile
+  and cannot run SnapDisk at all; all five models have a USB-C
+  port; Datalogic's own photo advice is the Memor 10 manual's USB
+  file transfer to a host computer, with no USB-drive route at
+  all; "Datalogic" also means barcode scanners — none of the top
+  results for this query even mentions Datalogic.
+  Article published Nov 18, 2026 (WL-95, 64th how-to):
+  docs/datalogic-photos-to-usb.html.
+  Fallback for WL-96: Bluebird — no Bluebird article exists in
+  docs/ yet (EF-series enterprise Android handhelds).
+
 ## WL-94 — Back up Honeywell photos to USB article, 63rd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
