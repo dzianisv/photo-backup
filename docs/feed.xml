@@ -272,5 +272,12 @@
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
     <description>Blackview rugged phones (BV9300, BV9300 Pro, and BV6200 Pro) have USB-C and OTG across the range: spec tables list USB Type-C with OTG for the BV9300, OTG reverse charging for the BV9300 Pro, and OTG for the BV6200 Pro — and Blackview's own backup guide lists USB OTG as an external-storage option you can copy files to by hand. And Blackview has no phone-to-USB backup tool of its own: its own guide's six ways are a Google account backup, a local backup to a computer, third-party backup apps, a manual copy to external storage, ADB, and custom recovery — none of them an automated phone-to-USB copy. A USB-C flash drive plugs straight into any current Blackview. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up Ulefone photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/ulefone-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/ulefone-photos-to-usb.html</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Ulefone Armor phones (Armor 28 Ultra, Armor 34 Pro, Armor 27 Pro, and Armor Mini 20) have USB-C and OTG across the range: spec tables list OTG support for the Armor 28 Ultra and the Armor 34 Pro, USB Type-C 2.0 with OTG for the Armor 27 Pro, and USB OTG expansion for the Armor Mini 20 — and Ulefone has no phone-to-USB backup tool of its own: the per-model backup guides all point to a computer copy, Google Drive, or Google Photos, with TWRP and Titanium Backup for experts. A USB-C flash drive plugs straight into any current Ulefone. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
