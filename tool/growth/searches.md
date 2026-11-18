@@ -2701,6 +2701,93 @@ demand is read off competitor install velocity instead (see
   Article published Nov 17, 2026 (WL-71, 40th how-to):
   docs/doogee-photos-to-usb.html.
 
+### 40. "back up CAT photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a CAT-specific
+  phone-to-USB guide at all, let alone a CAT-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the CAT-specific results are per-model FAQ
+  pages whose backup advice is a computer copy or a cloud
+  backup, and the rest are generic manual guides.
+- Current top results (scored Nov 17, 2026, live web search):
+  devicesfaq, "Frequently asked questions Cat S75"
+  (devicesfaq.com/en/frequently-asked-questions/cat-s75
+  — "How to backup my Cat S75?" The most economical
+  method is to connect the Cat S75 to a computer using the
+  USB cable and make a copy of the files using the file
+  browser; for a cloud backup use Google Drive (15 GB
+  free); for photos and videos only, use Google Photos,
+  configured to upload automatically or when on Wi-Fi.
+  CAT-specific, but PC-or-cloud. No phone-to-USB route in
+  it at all); VaultDrive: Back Up Phone Photos to a USB
+  Drive, No Computer (coticsy.com/vaultdrive.html — a
+  phone-to-USB backup app page: plug a flash drive or SSD
+  into your phone, choose what to back up and tap Start,
+  copies original photos, videos and files straight to the
+  drive. Free to try, Pro $19.99 once, no account, Android
+  8 or later. Generic, not a CAT guide); AskFilo, "how
+  to transfer pictures from an android phone to a
+  flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — USB OTG adapter plus a file manager: find the DCIM
+  folder, open Camera, select the photos, copy to the USB
+  drive — or use a PC or Mac as a middleman. Generic
+  Android, and the direct route is manual select-copy-paste);
+  YouTube, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet
+  needed. Generic Android, and a manual file-manager guide);
+  Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — the one-tap app alternative;
+  it did surface in this query's top results: copies the
+  whole gallery to a pen drive in one tap, copies only new
+  photos next time, warns about the FAT32 4 GB limit. Free
+  with ads, one-time purchase to remove them. Generic
+  Android, not a CAT guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop,
+  or size verification of every file); Alibaba, "How To
+  Quickly Backup Your Phone Photos Without Using Cloud
+  Storage"
+  (alibaba.com/product-insights/how-to-quickly-backup-your-phone-photos-without-using-cloud-storage.html
+  — USB cable + computer, portable SSD/flash drive with OTG
+  + file manager, NAS, Wi-Fi transfer apps. Generic
+  Android, and the direct route is manual select-copy-paste
+  with the file manager); Google Photos Help, "Back up
+  photos & videos" (support.google.com/photos/answer/6193313
+  — automatically save your photos and videos to your
+  Google Account when you turn on backup. A cloud backup to
+  Google's servers — not a phone-to-USB copy); Google
+  Android Help, "Back up your phone"
+  (support.google.com/android/answer/12760783 — Settings >
+  Google > All services > Backup, turn on Backup by Google
+  One, tap Back up now. A cloud backup to Google's servers
+  — not a phone-to-USB copy); Cat S62 Pro vs Cat S75 specs
+  (smartprix.com/mobiles/cat_s62_pro_vs_cat_s75-cpd1xabx2rup_pd1kvjohf8x.php
+  — USB "Yes, USB-C v2.0", USB features "USB on-the-go, USB
+  Charging" for both models. A spec comparison, not a guide
+  — and the confirmation that the S75 and the S62 Pro have
+  OTG); Cat S53 specs (m.gsmarena.com/cat_s53-ampp-11766.php
+  — "USB Type-C 3.0, OTG", microSDXC card slot using the
+  shared SIM slot, 128 GB of storage, 6 GB RAM, 5,500 mAh
+  battery. A spec listing, not a guide — and the
+  confirmation that the S53 has OTG); Notebookcheck, "The
+  CAT S62 Pro Rugged Smartphone Review"
+  (notebookcheck.net/The-CAT-S62-Pro-Rugged-Smartphone-Review-Robustness-burdened-by-big-compromises.496845.0.html
+  — "Thanks to USB OTG functionality, users can connect
+  peripheral devices to the CAT smartphone." A review, not a
+  guide — and a second confirmation that the S62 Pro has
+  OTG); cloud routes — Google Photos syncs the gallery to
+  Google's servers, Google backup restores data to a new
+  phone from Google's cloud, not to a drive you hold; Google
+  Photos' "Storage saver" setting compresses photos, and a
+  cloud backup stops working the day you stop paying for
+  storage. Neither route gives a folder of plain photo files
+  on a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-72, 41st how-to):
+  docs/cat-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
