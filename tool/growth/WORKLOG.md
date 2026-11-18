@@ -1,5 +1,151 @@
 # SnapDisk — Work Log
 
+## WL-70 — Back up Ulefone photos to USB article, 39th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/ulefone-photos-to-usb.html ("Back up Ulefone
+  photos to a USB drive (no computer)"), following the
+  WL-54/WL-55/WL-56/WL-57/WL-58/WL-59/WL-60/WL-61/WL-62/WL-63/
+  WL-64/WL-65/WL-66/WL-67/WL-68/WL-69 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot
+  — same reuse as the 8th through 38th articles). Facts
+  verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price); no INTERNET permission in AndroidManifest.xml;
+  FAT32 files >=4 GiB skipped with reason
+  (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw byte-stream copy
+  (BackupEngine.copyWithResume — no decode/re-encode) with size
+  verification after copy. Search evidence (Nov 17, 2026 live
+  web search): there is no Ulefone-specific phone-to-USB
+  guide in the top results at all — the Ulefone-specific
+  results are per-model FAQ pages whose backup advice is a
+  computer copy or a cloud backup, and the rest are generic
+  manual guides.
+  devicesfaq, "Frequently asked questions Ulefone Armor 25T"
+  (devicesfaq.com/en/frequently-asked-questions/ulefone-armor-25t
+  — "How to backup my Ulefone Armor 25T?" The most economical
+  method is to connect the phone to a computer using the USB
+  cable and make a copy of the files using the file browser;
+  for a cloud backup use Google Drive (15 GB free); for photos
+  and videos only, use Google Photos, configured to upload
+  automatically or when on Wi-Fi. Ulefone-specific, but
+  PC-or-cloud — and the same page confirms the Armor 25T has a
+  USB Type-C 2.0, OTG charging port. No phone-to-USB route in
+  it at all); devicesfaq, "Frequently asked questions Ulefone
+  Armor Pad"
+  (devicesfaq.com/en/frequently-asked-questions/ulefone-armor-pad
+  — the same backup answer in the same shape: connect the Armor
+  Pad to a computer with the USB cable and copy the files, or
+  use Google Drive for a cloud backup, or Google Photos for
+  photos and videos. Ulefone-specific, but PC-or-cloud — and the
+  same page confirms the Armor Pad has a USB Type-C 2.0, OTG,
+  magnetic connector charging port. No phone-to-USB route in it
+  at all); tutorial.info, "How to Enable Google Backup in
+  ULEFONE Armor 5s"
+  (tutorial.info/video/how-to-enable-google-backup-in-ulefone-armor-5s-find-google-backup-section
+  — Settings > System > Backup, enable "Back up to Google
+  Drive", add your Google account. Ulefone-specific, but a cloud
+  backup to Google Drive — not a phone-to-USB copy);
+  mobilespecs, "How to backup Ulefone Armor 27T"
+  (mobilespecs.net/phone/backup/Ulefone/Ulefone_Armor_27T.html —
+  the same per-model backup page exists for the Armor 2S, Armor
+  2, Power 3L, Power Armor 18 Ultra, and MIX: sync data with
+  cloud storage (Google account sync, Google Photos for photos),
+  or the expert methods — TWRP Recovery, CWM Recovery with ROM
+  Manager, Titanium Backup (needs root). Ulefone-specific, but
+  cloud-or-expert — and no phone-to-USB route in any of them);
+  AskFilo, "how to transfer pictures from an android phone to
+  a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-
+  transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — USB OTG adapter plus a file manager: find the DCIM folder,
+  open Camera, select the photos, copy to the USB drive — or use
+  a PC or Mac as a middleman. Generic Android, and the direct
+  route is manual select-copy-paste); FotoSafe, "Back up Android
+  photos to a USB | FotoSafe"
+  (fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/
+  — Android 9 or later with USB host/OTG support, a
+  data-capable OTG adapter where needed: connect the drive,
+  select it as the destination in FotoSafe, review the media,
+  start copying — and Android file managers can often copy
+  folders such as DCIM/Camera to USB for free. A real
+  phone-to-USB guide for a rival app — but generic Android, not
+  a Ulefone guide, and it does not promise oldest-first order,
+  detailed progress with Pause and Stop, or size verification of
+  every file); YouTube, "How to Connect USB Drive to Android
+  Phone to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet needed.
+  Generic Android, and a manual file-manager guide); TechBloat,
+  "How to Transfer Photos from Android to a USB Drive"
+  (techbloat.com/how-to-transfer-photos-from-android-to-a-usb-drive.html
+  — direct transfer using USB OTG, a PC transfer, or cloud
+  services. Generic Android, and two of the three ways need a
+  computer or a cloud account); SoftHandTech guide
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — a computer, direct OTG transfer, or cloud services;
+  generic Android, and two of the three ways need a computer or
+  a cloud account); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — the one-tap app alternative, known
+  from earlier scoring of this niche; it did not surface in this
+  query's top results: copies the whole gallery to a pen drive
+  in one tap, copies only new photos next time, warns about the
+  FAT32 4 GB limit, free with ads, one-time purchase removes ads
+  — generic Android, not a Ulefone guide, and it does not
+  promise oldest-first order, detailed progress with Pause and
+  Stop, or size verification of every file).
+  Wider search: Ulefone Armor 28 Ultra specs
+  (alza.hu/EN/ulefone-armor-28-ultra-16gb-1tb-black-sleva-d13192025.htm
+  — "with fast charging and OTG support", 1 TB of storage, a TF
+  card slot. A retailer spec listing, not a guide — and the
+  confirmation that the Armor 28 Ultra has OTG); Ulefone Armor
+  34 Pro specs
+  (alza.de/EN/ulefone-armor-34-pro-16gb-512gb-pulse-black-d12990246.htm
+  — Functions list includes OTG, Android 15, 512 GB of storage,
+  a TF card slot. A retailer spec listing, not a guide — and the
+  confirmation that the Armor 34 Pro has OTG); Ulefone Armor 27
+  Pro specs (mobilemaya.net/product/ulefone-armor-27-pro/ —
+  "USB Type-C 2.0 with OTG support", 256 GB of storage. A spec
+  listing, not a guide — and the confirmation that the Armor 27
+  Pro has OTG); Ulefone Armor Mini 20 specs
+  (mobilemaya.net/product/ulefone-armor-mini-20/ — storage
+  "expandable via USB OTG", USB Type-C 2.0, 256 GB of storage. A
+  spec listing, not a guide — and the confirmation that the
+  Armor Mini 20 supports USB OTG).
+  Ulefone specifics: OTG is across the current Ulefone Armor
+  range: spec tables list OTG support for the Armor 28 Ultra
+  and the Armor 34 Pro, USB Type-C 2.0 with OTG for the Armor
+  27 Pro, and USB OTG expansion for the Armor Mini 20; Ulefone
+  has no phone-to-USB backup tool of its own — the per-model
+  backup guides all point to a computer copy, Google Drive, or
+  Google Photos, with TWRP, CWM, and Titanium Backup (root) for
+  experts; the Armor 28 Ultra and the Armor 28 Pro both have a
+  TF card slot, and on the Armor 28 Pro the slot is separate
+  from the SIM tray, while the Armor 27 Pro has no microSD card
+  support mentioned; the stock photo backup is Google Photos.
+  Ulefone's own tools: Google backup (Settings > System >
+  Backup, "Back up to Google Drive", to Google's cloud, 15 GB
+  free) backs the phone up to Google's cloud; Google Photos
+  (Photos settings > Backup on) backs photos up to Google's
+  cloud; the per-model guides' most economical method (USB
+  cable, copy the files with the file browser) backs the phone
+  up to the PC; TWRP, CWM, and Titanium Backup are expert
+  methods needing an unlocked bootloader or root — none of them
+  writes plain photo files to a USB drive automatically.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-70, 39th how-to):
+  docs/ulefone-photos-to-usb.html. Query 38 scored in
+  tool/growth/searches.md. Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml (39 items)
+  updated. PR #106 (article), merge ddd2daa, CI run 44216765567
+  (Android PR, success); this row PR #107.
+
 ## WL-69 — Back up Blackview photos to USB article, 38th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
