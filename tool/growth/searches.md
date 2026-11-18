@@ -3968,6 +3968,191 @@ demand is read off competitor install velocity instead (see
   docs/kyocera-photos-to-usb.html.
   Fallback for WL-82: Crosscall (Core-X5 / Action-X5 line)
   — no Crosscall article exists in docs/ yet.
+
+### 50. "back up Crosscall photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Crosscall-specific
+  phone-to-USB guide at all, let alone a Crosscall-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Crosscall-specific results are spec tables,
+  datasheets, user manuals, and FAQ pages that give no
+  USB-drive advice at all, and the rest are generic manual
+  guides.
+- Current top results (scored Nov 18, 2026, live web search):
+  Android Central forum, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — "You can use the OTG Adapter to plug in any external device
+  that's supported … and it should be visible as external storage
+  in the File Manager … and you can move files to it from there."
+  A forum thread, not a guide — and a manual file-manager copy);
+  Pixoneye, "How to Transfer Photos from Your Phone to a USB
+  Stick" (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — "Copy local originals to compatible USB storage, open the
+  files from the destination, then make an independent backup
+  before deleting anything" — Android with a file manager, or a
+  computer in between. Generic Android and iPhone, and a manual
+  file-manager guide); askfilo, "how to transfer pictures from
+  an android phone to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — plug the flash drive into an OTG adapter, open the file
+  manager, find the DCIM folder, and copy to the USB drive.
+  Generic Android, and a manual file-manager guide); YouTube,
+  "How to Connect USB Drive to Android Phone to Move Photos &
+  Videos (Best Method)" (youtube.com/watch?v=PYcbV25CczI —
+  OTG connection and the phone's built-in file manager, no
+  computer or internet needed. Generic Android, and a manual
+  file-manager guide); YouTube, "How To Move Photos From iPhone
+  To USB Flash Drive (No Computer)"
+  (youtube.com/watch?v=NJHeuEYJhto — move photos from an iPhone
+  straight onto a USB flash drive, with no computer in between.
+  An iPhone guide, not an Android one — and not a Crosscall
+  guide); CellularNews, "How to Move Pictures to a Flash Drive
+  From a Google Phone"
+  (cellularnews.com/device-reviews-and-comparisons/smartphones/how-to-move-pictures-to-a-flash-drive-from-google-phone/
+  — connect a USB storage device using an OTG adapter and then
+  copy or move the photos using the Files app. A Google Pixel
+  guide, not a Crosscall guide — and a manual file-manager
+  copy); Dr.Fone, "4 Practical Ways to Transfer Photos from
+  Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos with an OTG adapter, through Google Drive,
+  by drag-and-drop through a PC, or wirelessly through AirDroid.
+  Generic Android, and the direct route is a manual file-manager
+  copy); Trustloud, "How to Back Up an Android Phone: 5 Free
+  Ways (2026)" (trustloud.com/back-up-android-phone/ — "open
+  Settings > Google > All services > Backup, turn on Backup by
+  Google One" and turn on Backup in Google Photos; anyone can
+  copy files to a Windows PC over USB for an offline copy. A
+  generic Android backup guide, not a Crosscall guide — and the
+  backup it describes is a cloud backup or a PC copy, never a
+  phone-to-USB copy); Google Photos Help, "Back up photos &
+  videos" (support.google.com/photos/answer/6193313 — "You can
+  automatically save your photos and videos to your Google
+  Account when you turn on backup." A Google help page, not a
+  Crosscall guide — and a cloud backup, not a USB copy);
+  Frequently asked questions Crosscall Action-X3, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/crosscall-crosscall-action-x3
+  — "How to backup my CROSSCALL Crosscall Action-X3? … The most
+  economical method to make a backup is to connect the CROSSCALL
+  Crosscall Action-X3 to a computer using the USB cable and make
+  a copy of the files using the file browser. To perform a cloud
+  backup you need a cloud backup service, on Android devices the
+  default built-in service is Google Drive. With Google Drive
+  you have 15Gb free" — and photos via Google Photos. A FAQ
+  page, not a backup guide — and the confirmation that
+  Crosscall's own backup advice points at a computer or the
+  cloud, never at a USB drive); Frequently asked questions
+  Crosscall Trekker-M1, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/crosscall-crosscall-trekker-m1
+  — the same backup advice again: a computer copy with a USB
+  cable and a file browser, or a cloud backup through Google
+  Drive (15 GB free), with photos via Google Photos. A FAQ
+  page, not a guide); Crosscall Trekker-X4 manual, libble
+  (libble.eu/crosscall-trekker-x4/online-manual-841915/?page=0058
+  — "Using a USB cable, connect your device to a computer. Open
+  the notification panel, then tap Device connected in charging
+  mode > Transfer files. Press Transfer photos (PTP) if your
+  computer does not support the Media Transfer Protocol (MTP)
+  format." A user manual, not a backup guide — and the
+  confirmation that the manual's own photo-transfer advice needs
+  a computer); Crosscall CORE-X5 user manual, manuals.ca
+  (manuals.ca/crosscall/core-x5/manual?p=56 — Android 11, 64 GB
+  of storage, a microSD card up to 512 GB, "USB version 3.2 Gen
+  1 (3.1 Gen 1)", and "USB On-The-Go support: Yes". A spec
+  table, not a guide — and the confirmation that the Core-X5
+  has OTG); Action-X5 product sheet, Crosscall
+  (doc.crosscall.com/distributor-area/PRODUCT%20SHEETS/SMARTPHONES/ACTION-X5/EN/EN_ACTION-X5_FICHE_PRODUIT_V3.pdf
+  — Android 11, "USB Type-C 2.0", and "OTG: Yes". Crosscall's
+  own product sheet — and the confirmation that the Action-X5
+  has OTG); Crosscall ACTION-X5, cartronics
+  (cartronics.be/en/crosscall/22142-crosscall-action-x5-138-cm-545-dual-sim-android-11-4g-usb-type-c-4-gb-64-gb-3850-mah-black-3700764722220.html
+  — Android 11, 64 GB of storage expandable to 512 GB, and "USB
+  connector type: USB Type-C". A spec page, not a guide — and a
+  second source for the Action-X5's Android 11 and 512 GB card);
+  Crosscall CORE-Z5 product specification, AiO
+  (aio.lv/en/product--crosscall-1001012001980--10956595/specification
+  — "USB On-The-Go support: Yes", "USB version 3.2 Gen 1 (3.1
+  Gen 1)", and "USB connector type: USB Type-C". A spec table,
+  not a guide — and the confirmation that the Core-Z5 has OTG);
+  Crosscall Core-Z5, benchmarks.ul.com
+  (benchmarks.ul.com/de-jp/hardware/phone/Crosscall+Core-Z5+review
+  — Android 12, 64 GB of storage, a microSD card, and a 48 MP
+  camera. A spec page, not a guide — and the confirmation that
+  the Core-Z5 runs Android 12); Crosscall CORE-Z5, quzo
+  (quzo.co.uk/corez5-6gb-uk-1001013317561-pid382332.html — 64 GB
+  of storage and a "Maximum memory card size 1 TB". A spec page,
+  not a guide — and the confirmation that the Core-Z5 takes a
+  microSD card up to 1 TB); Crosscall STELLAR-X5 user manual,
+  manuals.ca (manuals.ca/crosscall/stellar-x5/manual?p=56 —
+  Android 13, 128 GB of storage, and a "USB connector type: USB
+  Type-C". A spec table, not a guide — and it does not list OTG
+  either way); Crosscall Trekker M1 Core, benchmarks.ul.com
+  (benchmarks.ul.com/de-pt/hardware/phone/Crosscall+Trekker+M1+Core+review
+  — Android 5.1, a Snapdragon 210 processor, and a microUSB 2.0
+  port. A spec page, not a guide — and the confirmation that
+  the Trekker-M1 Core runs Android 5.1, below SnapDisk's Android
+  7.0 minimum); Crosscall Trekker-M1 vs Punkt. MP02, versus.com
+  (versus.com/en/crosscall-trekker-m1-vs-punkt-mp02 — the
+  Trekker-M1 runs Android 5.1 Lollipop, released October 2016. A
+  comparison page, not a guide — and a second source confirming
+  the Trekker-M1 runs Android 5.1); Synchronize Crosscall
+  Core-X4, PhoneCopy (phonecopy.com/en/phones/view/crosscall_core-x4
+  — "Transfer your contacts, photos, videos, sms messages and
+  call logs from Crosscall Core-X4 to an online storage and back
+  to keep them safe and up to date." A cloud sync service, not a
+  phone-to-USB guide — and the confirmation that the
+  third-party route for Crosscall is an online storage account,
+  not a USB drive); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — the one-tap app alternative:
+  copies the whole gallery to a pen drive in one tap, copies
+  only new photos next time, warns about the FAT32 4 GB limit.
+  Free with ads, one-time purchase to remove them. Generic
+  Android, not a Crosscall guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop, or
+  size verification of every file); cloud routes — Google Photos
+  syncs the gallery to Google's servers, Google Drive backs
+  data up to Google's cloud with 15 GB free, and Google backup
+  restores data to a new phone from Google's cloud, not to a
+  drive you hold; Google Photos' "Storage saver" setting
+  compresses photos, and a cloud backup stops working the day
+  you stop paying for storage. Neither route gives a folder of
+  plain photo files on a USB drive.
+  Crosscall specifics: OTG is confirmed on the Core-X5 (spec
+  tables list USB On-The-Go support as Yes), on the Action-X5
+  (Crosscall's own product sheet lists OTG as Yes), and on the
+  Core-Z5 (spec tables list USB On-The-Go support as Yes) — but
+  the Stellar-X5 spec pages do not list OTG either way, so the
+  article tells owners of that model to check Settings >
+  Storage before relying on it instead of claiming OTG across
+  the range; all four phones have USB-C, so a USB-C flash drive
+  plugs straight in and a regular USB-A drive needs a USB-C OTG
+  adapter; the Core-X5 takes a microSD card up to 512GB, the
+  Action-X5 takes one up to 512GB, and the Core-Z5 takes one up
+  to 1TB, but a card is still not a USB drive: it stays in the
+  phone and opening it anywhere else needs a card reader.
+  Crosscall's own tools: devicesfaq's backup advice (a computer
+  copy with a USB cable and a file browser, or Google Drive
+  with 15 GB free and Google Photos in the cloud) points at a
+  computer or the cloud, never at a USB drive; the Trekker-X4
+  manual's transfer advice (connect to a computer with a USB
+  cable, Transfer files via MTP or Transfer photos via PTP)
+  needs a computer; Google Photos (the stock photo backup on
+  Crosscall Android phones) backs photos up to Google's cloud;
+  Google Drive (Android's default built-in service, 15 GB free)
+  backs data up to Google's cloud; a microSD card (up to 512GB
+  on the Core-X5, up to 512GB on the Action-X5, up to 1TB on
+  the Core-Z5) is a real local copy, but the card stays in the
+  phone and needs a reader elsewhere; a computer copy (connect
+  the phone to a computer using the USB cable and make a copy
+  of the files using the file browser) lands on the PC, not on
+  a USB drive; no Crosscall backup page points at a USB drive
+  at all — none of them writes plain photo files to a USB drive
+  automatically.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-82, 51st how-to):
+  docs/crosscall-photos-to-usb.html.
+  Fallback for WL-83: Hammer (MyPhone Hammer line) — no Hammer
+  article exists in docs/ yet.
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
