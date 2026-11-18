@@ -1,5 +1,92 @@
 # SnapDisk — Work Log
 
+## WL-93 — Back up Zebra photos to USB article, 62nd how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/zebra-photos-to-usb.html ("Back up Zebra photos to a
+  USB drive (no computer)"), following the WL-54–WL-92 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 35 chars, meta
+  description 153 chars, JSON-LD validated by parse; sitemap and
+  feed XML parse. Feed now counts 62 items.
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search): Query 61 ("back
+  up Zebra photos to USB drive without computer") is a real gap —
+  no Zebra-specific phone-to-USB guide in the top results at all;
+  the one Zebra-specific result is a guide to connecting a TC21
+  to a PC, and the top result is a Zebra printer manual.
+  Zebra docs, "Exercise 3: Copy Files to/from a USB Flash Drive"
+  (docs.zebra.com/us/en/printers/industrial/zt400-series-industrial-printer-user-guide/c-zt4x1-usb/c-zt4x1-usb-host/t-zt4x0-ug-exercise-3-copy-files-to-from-a-usb-flash-drive.html
+  — copy files from a USB flash drive to a ZT400 industrial
+  printer's flash memory, or store a file from the printer to the
+  drive. A printer exercise, not a guide — and about a printer's
+  flash memory, not the photos on a TC-series handheld);
+  YouTube, "How to Connect USB Drive to Android Phone to Move
+  Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet needed.
+  Generic Android, and a manual file-manager guide);
+  Cleverence, "How to Connect Zebra TC21 to PC? Step-by-step USB,
+  Wi-Fi, ADB and Sync Guide"
+  (cleverence.com/articles/technical-manuals/how-to-connect-zebra-tc21-to-pc/
+  — connect the TC21 to a PC with a data-capable USB-C cable,
+  tap the USB notification, choose File transfer (MTP), and move
+  files in Windows File Explorer. A PC guide, not a phone-to-USB
+  guide — and the confirmation that the TC21 has a USB-C port and
+  its photos live in DCIM); Techwalla, "How to Move Pictures from
+  Camera to Flash Drive With No Computer"
+  (techwalla.com/articles/how-to-move-pictures-from-camera-to-flash-drive-with-no-computer
+  — a combination memory-card reader and USB flash drive for a
+  camera's memory card. Generic, and a manual guide — and about a
+  camera's card, not the handheld's own gallery); Substack,
+  "saving Photos for necessary updates"
+  (curiousbluenoser.substack.com/p/saving-photos-for-necessary-updates
+  — plug a picture-keeper flash drive into the phone's charging
+  port, open the drive's app, and tap Start. Generic, built
+  around a specific drive's own app); Pixoneye, "How to Transfer
+  Photos from Your Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/ —
+  connect a USB drive with an OTG adapter, open Files by Google,
+  find DCIM/Camera, select a small batch, and Copy to the drive.
+  Generic Android, and a manual file-manager guide — and it warns
+  that a connector fitting physically does not prove the phone can
+  read or write the drive).
+  Honest limits recorded in the article: USB host support is
+  listed only on the TC21/TC26 (Android 10, USB 2.0 OTG
+  host/client, Type-C — Zebra spec sheet), the TC52/TC57
+  (Android 8.1, USB 2.0 High Speed Host and Client, USB-C —
+  Zebra spec sheet) and the TC52x/TC57x (Android 10, same
+  host-and-client USB listing), while host or OTG support is
+  unconfirmed in the sources found on the TC72 (Android 8.1,
+  USB 2.0), the TC77 (Android 8.1, USB 2.0), the TC20 and the
+  TC25 (Android 7.x) — the drive mounting is the test on those
+  models; the connector type is unconfirmed in the sources found
+  on the TC72, the TC77, the TC20, and the TC25, so the adapter
+  is not leaned on for those models; every model listed clears
+  SnapDisk's Android 7.0 minimum, but anything older — check
+  Settings > About phone — below Android 7.0 cannot run SnapDisk
+  at all; "Zebra" also means printers — the top search result is
+  a printer manual about a ZT400's flash memory, not photos off a
+  handheld; Zebra's own photo advice is the TC52 manual's PTP
+  transfer to a host computer, with no USB-drive route at all.
+  Article published Nov 18, 2026 (WL-93, 62nd how-to):
+  docs/zebra-photos-to-usb.html.
+  Fallback for WL-94: Honeywell — no Honeywell article exists in
+  docs/ yet (CT-series enterprise Android handhelds).
+
 ## WL-92 — Back up Panasonic Toughbook photos to USB article, 61st how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
