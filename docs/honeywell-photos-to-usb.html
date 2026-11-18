@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Honeywell photos to a USB drive</title>
+<meta name="description" content="Back up Honeywell CT-series photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/honeywell-photos-to-usb.html">
+<meta property="og:title" content="Back up Honeywell photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up Honeywell CT-series photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/honeywell-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/honeywell-photos-to-usb.html#article",
+      "headline": "Back up Honeywell photos to a USB drive (no computer)",
+      "description": "Back up Honeywell CT-series photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-18",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/honeywell-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/honeywell-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up Honeywell CT-series photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, on the CT-series models that can run SnapDisk — the CT45 and the CT47 list USB OTG support in Honeywell's own datasheets, the CT30 XP, the CT40, and the CT60 all have a USB-C port but no source I found mentions host or OTG support on them, so plug a drive in and check Settings > Storage — the drive mounting is the test. The CT45 runs Android 11 to 13, the CT47 runs Android 12 to 16, the CT30 XP runs Android 11 to 13, and the CT40 and the CT60 run Android 7.1, upgradable to Android 11, so every model listed clears SnapDisk's Android 7.0 minimum; the older CT50 runs Android 6.0 and cannot run SnapDisk at all. Honeywell has no phone-to-USB backup tool of its own. The stock route is a file manager: connect the drive, open the file manager, pick the photos in DCIM/Camera, and Copy to the drive. SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/honeywell-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up Honeywell photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/honeywell-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up Honeywell photos to a USB drive (no computer)</h1>
+  <p class="dek">The CT-series is Honeywell's line of enterprise Android handhelds (CT30 XP, CT40, CT45, CT47, CT60), and Honeywell has no phone-to-USB backup tool of its own: the only Honeywell-specific backup advice found is the CT60 and EDA51 manuals' file sync to a host computer, with no USB-drive route at all. Four honest caveats up front: USB OTG support is listed only on the CT45 and the CT47 — Honeywell's own datasheets say "USB OTG supported via I/O ports" — while no source I found mentions host or OTG support on the CT30 XP, the CT40, or the CT60 at all, so plug a drive in and check Settings &gt; Storage on those models before relying on it; every model listed clears SnapDisk's Android 7.0 minimum — the CT40 and the CT60 run Android 7.1, upgradable to Android 11, the CT30 XP and the CT45 run Android 11 to 13, and the CT47 runs Android 12 to 16 — but the older CT50 runs Android 6.0 and cannot run SnapDisk at all; all five models have a USB-C port, so a USB-C flash drive plugs straight into any of them; and "Honeywell" also means DVRs and USB drives — the top search result for this query is a Honeywell DVR manual about archiving video to a USB stick, not photos off a handheld. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 18, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On the CT-series models that can run SnapDisk — the CT45 runs Android 11 to 13 and the CT47 runs Android 12 to 16, and Honeywell's own datasheets list USB OTG support on both; the CT30 XP runs Android 11 to 13, the CT40 and the CT60 run Android 7.1, upgradable to Android 11, all three with a USB-C port, though host or OTG support is unconfirmed on all three — plug the drive in, then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: a file manager works — the generic guides' route is an OTG connection with the built-in file manager — but the direct route is manual select-copy-paste with no progress detail, no resume, and no verification; Honeywell's own file advice works too, but there is none pointing at a USB drive — the CT60 manual only offers a file sync to a host computer. Two rival apps do exist — Photos to USB: OTG Backup copies the whole gallery to a pen drive in one tap, free with ads, a one-time purchase removing the ads; VaultDrive copies photos, videos, and files straight to a USB drive with no computer, free for up to 200 files or 2 GB per backup, Pro $19.99 once — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the handheld afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 18, 2026, no top search result for this query is a Honeywell-specific phone-to-USB guide at all, let alone a Honeywell-specific automated whole-library backup with progress, Pause/Stop, and resume: the two Honeywell-specific results are guides to connecting a CT60 to a PC, and the top result is a DVR manual, not a handheld guide at all.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up Honeywell photos to USB drive without computer" and there is no Honeywell-specific phone-to-USB guide in the top results at all — the two Honeywell-specific results are guides to connecting a CT60 to a PC, and the rest are generic Android guides or Honeywell hardware that is not a handheld, in different packaging:</p>
+  <ul>
+    <li><strong>Honeywell HRDE4X4 user manual, "Archiving still images onto usb"</strong> (<a href="https://www.manualsdir.com/manuals/89728/honeywell-hrde4x4.html?page=44">Archiving still images onto usb, Archiving video onto usb, Archive mode screen | Honeywell HRDE4X4 User Manual</a>) — the top result, and it is a DVR manual: press ARCH on a Honeywell HRDE4X4 DVR to archive a still image or a video clip onto a USB memory stick through the front-panel USB port. A DVR exercise, not a guide — and it is about a DVR's recorded video, not the photos on a CT-series handheld: "Honeywell" here means the DVR brand, not the device.</li>
+    <li><strong>Honeywell SecuraDrive 80GB USB pocket drive</strong> (<a href="https://archive.techplayboy.com/reviews/honeywell-securadrive-80gb-usb-18-inch-pocket-drive.html">Honeywell SecuraDrive 80GB USB 1.8-Inch Pocket Drive</a>) — a Honeywell-branded portable USB hard drive for storing photos, videos, and MP3s, with password-protection software that is Windows-only. A drive, not a guide — and it is a piece of hardware from the Windows XP era, not a way to copy photos off a CT-series handheld.</li>
+    <li><strong>Honeywell CT60 user guide, "Sync Data"</strong> (<a href="https://manualspro.net/572965-honeywell-ct60-handheld-computer-user-guide">Honeywell CT60 Handheld Computer User Guide</a>) — the Honeywell-specific result: connect the CT60 to a computer with a USB charge/communication accessory, tap the USB charging notification, choose Transfer files or Transfer photos (PTP), and copy files in the computer's file browser. A PC guide, not a phone-to-USB guide — and the confirmation that the CT60's photos move off the device only through a computer, with no USB-drive route offered at all. The same guide recommends an industrial-grade microSD card for the CT60.</li>
+    <li><strong>Honeywell EDA51 user guide, "Sync Data"</strong> (<a href="https://manuals.plus/honeywell/eda51-scanpal-handheld-computer-manual">Honeywell EDA51 ScanPal Handheld Computer User Guide</a>) — the same Sync Data route on the ScanPal EDA51: connect to a computer, choose Transfer files or Transfer photos (PTP), and copy in the computer's file browser. A PC guide, not a phone-to-USB guide — and the EDA51 is a ScanPal, not a CT-series handheld, so it is the adjacent line's version of the same advice.</li>
+    <li><strong>Cleverence, "How to Connect Honeywell Dolphin CT60 to PC? USB, Drivers, ADB and File Transfer Guide"</strong> (<a href="https://www.cleverence.com/articles/technical-manuals/how-to-connect-honeywell-dolphin-ct60-to-pc/">How to Connect Honeywell Dolphin CT60 to PC? USB, Drivers, ADB and File Transfer Guide</a>) — connect the CT60 to a PC with a data-capable USB-C cable, tap the USB notification, choose File transfer (MTP), and move files in Windows File Explorer. A PC guide, not a phone-to-USB guide — and the confirmation that the CT60 has a USB-C port and that its photos live where MTP exposes them, with no USB-drive route offered at all.</li>
+    <li><strong>Techwalla, "How to Move Pictures from Camera to Flash Drive With No Computer"</strong> (<a href="https://www.techwalla.com/articles/how-to-move-pictures-from-camera-to-flash-drive-with-no-computer">How to Move Pictures from Camera to Flash Drive With No Computer</a>) — a combination memory-card reader and USB flash drive: pull the card out of the camera, put it in the reader, and let it copy. Generic, and a manual guide — and it is about a camera's memory card, not the handheld's own gallery.</li>
+    <li><strong>YouTube, "How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)"</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)</a>) — connect a USB drive with an OTG adapter, open the file manager, select and copy photos, then paste onto the USB drive. Generic Android, and a manual file-manager guide — and it notes that most modern phones support OTG, without naming any Honeywell model.</li>
+    <li><strong>Pixoneye, "How to Transfer Photos from Your Phone to a USB Stick"</strong> (<a href="https://pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/">How to Transfer Photos from Your Phone to a USB Stick</a>) — connect a USB drive with an OTG adapter, open Files by Google, find DCIM/Camera, select a small batch, and Copy to the drive. Generic Android, and a manual file-manager guide — and it warns that a connector fitting physically does not prove the phone can read or write the drive, and that not every phone supports USB host at all.</li>
+    <li><strong>Substack, "saving Photos for necessary updates"</strong> (<a href="https://curiousbluenoser.substack.com/p/saving-photos-for-necessary-updates">saving Photos for necessary updates</a>) — plug a picture-keeper flash drive into the phone's charging port, open the drive's own app, and tap Start. Generic, and built around a specific drive's own app — not a Honeywell guide.</li>
+    <li><strong>Honeywell CT45 datasheet</strong> (<a href="https://www.kreski.pl/wp-content/uploads/2026/03/honeywell-ct45-doc-1.pdf">CT45 XP/CT45 Datasheet | Honeywell</a>) — Honeywell's own sheet for the CT45: Android 11 to 13 guaranteed, "USB OTG supported via I/O ports", "USB 3.0 is supported via USB Type C", microSD up to 512 GB. A spec sheet, not a guide — and the confirmation that the CT45 lists host-capable USB and runs Android 11 to 13, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>Honeywell CT47 datasheet</strong> (<a href="https://assets.media-quzo.co.uk/pdf/2024/11/04/mmo_104630716_1712660840_2463_2019156.pdf">CT47 Mobile Computer Datasheet | Honeywell</a>) — Honeywell's own sheet for the CT47: Android 12 to 16 guaranteed, "USB OTG supported via I/O ports", "USB 3.1 is supported via USB Type C", microSD up to 2 TB. A spec sheet, not a guide — and the confirmation that the CT47 lists host-capable USB and runs Android 12 to 16, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>Honeywell CT60 specs</strong> (<a href="https://www.esper.io/devices/honeywell-dolphin-ct60-handheld-computer">Honeywell Dolphin CT60 Handheld Computer Specs | Esper Device Management</a>) — the CT60: USB Type-C port, Android 7.1 upgradable to Android 11, 13 MP camera. A spec page, not a guide — and the confirmation that the CT60 has a USB-C port and clears SnapDisk's Android 7.0 minimum, with no host or OTG mention anywhere in it.</li>
+    <li><strong>Honeywell CT40 specs</strong> (<a href="https://www.esper.io/devices/honeywell-ct40-mobile-computer">Honeywell CT40 Mobile Computer Specs | Esper Device Management</a>) — the CT40: USB Type-C port, Android 7.1 upgradable to Android 11, microSD slot. A spec page, not a guide — and the confirmation that the CT40 has a USB-C port and clears SnapDisk's Android 7.0 minimum, with no host or OTG mention anywhere in it.</li>
+    <li><strong>Honeywell CT30 XP datasheet</strong> (<a href="https://millennium-tech.com/wp-content/uploads/2025/04/IMS_ct30-xp-mobile-computer-datasheet-en.pdf">CT30 XP Datasheet | Honeywell</a>) — Honeywell's own sheet for the CT30 XP: Android 11 to 13 guaranteed, "USB 3.0 is supported via USB Type C". A spec sheet, not a guide — and the confirmation that the CT30 XP has a USB-C port and runs Android 11 to 13, so it clears SnapDisk's Android 7.0 minimum, with no host or OTG mention anywhere in it.</li>
+    <li><strong>Honeywell support, "What Android versions is Honeywell offering for the Dolphin CT60?"</strong> (<a href="https://sps-support.honeywell.com/s/article/What-Android-versions-is-Honeywell-offering-for-the-Dolphin-CT60">What Android versions is Honeywell offering for the Dolphin CT60?</a>) — Honeywell's own support page: the CT60 comes in Android 7, Android 8, and Android 9 flavors. A support page, not a guide — and the confirmation that every CT60 flavor clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>Cloud routes</strong> — Google Photos syncs your gallery to Google's servers, Google Drive backs your data up to Google's cloud with 15 GB free, and Google backup restores your data to a new phone from Google's cloud, not to a drive you hold; Google Photos' "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Neither route gives you a folder of plain photo files on a USB drive.</li>
+  </ul>
+  <p>None of them is a Honeywell-specific phone-to-USB guide at all, and none of them offers an automated Honeywell photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What you need</h2>
+  <p>A CT-series handheld that can run SnapDisk — the CT45 runs Android 11 to 13 and the CT47 runs Android 12 to 16, both with USB OTG listed in Honeywell's own datasheets; the CT30 XP runs Android 11 to 13, the CT40 and the CT60 run Android 7.1, upgradable to Android 11, all three with a USB-C port — so a USB-C flash drive plugs straight into any of the five models, while a regular USB-A drive needs a USB-C OTG adapter, and enough space on the drive for the photos you want to keep. Three Honeywell specifics: first, USB host support is confirmed in the sources I found only on the CT45 and the CT47 — Honeywell's own datasheets say "USB OTG supported via I/O ports" — while on the CT30 XP, the CT40, and the CT60 no source I found mentions host or OTG support at all, so plug a drive in and check Settings &gt; Storage before relying on it: if the drive appears, the device hosts drives and the rest of this method works; if it never appears, the device does not host drives and Method 4 is the route. Second, Honeywell has no phone-to-USB backup tool of its own — the only Honeywell-specific backup advice found is the CT60 manual's file sync to a host computer; the stock photo backup is Google Photos; the stock file manager is Files by Google; CT-series camera photos live in DCIM/Camera, as on any Android phone. The CT40 and the CT60 take a microSD card, the CT45 takes one up to 512 GB, and the CT47 takes one up to 2 TB, so a card is an option, and it still stays in the device and opening it anywhere else needs a card reader, while a USB drive plugs into any computer as it is. Third, SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the USB drive.</strong> It mounts on plug-in on most Android devices with USB host support — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage for the drive. Host support is confirmed in the sources I found only on the CT45 and the CT47 — so on the CT30 XP, the CT40, and the CT60 the drive mounting is the test itself: if it appears in Settings &gt; Storage, the device hosts drives and the rest of this method works; if it never appears, the device does not host drives and Method 4 is the route. The CT45 and the CT30 XP run Android 11 to 13, the CT47 runs Android 12 to 16, and the CT40 and the CT60 run Android 7.1, upgradable to Android 11, so SnapDisk installs on all of them; the older CT50 runs Android 6.0 and cannot run it at all.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — CT-series camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the device normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the device to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: a file manager (the stock route, no app needed)</h2>
+  <p>A file manager can copy your photos to the USB drive — the generic guides' route is an OTG connection with the built-in file manager, and it is the manual route for external storage: 1. Plug in the USB drive — a notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage for the drive. 2. Open the file manager (Files by Google on CT-series handhelds) and confirm the USB drive shows up under storage devices. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until the file manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: Honeywell's own tools (Google Photos, Google Drive, or a microSD card — not phone-to-USB)</h2>
+  <p>If you want Honeywell's own route, know what each tool actually does — there is no Honeywell backup page pointing at a USB drive at all, and none of the stock tools writes your photos as plain files to a USB drive automatically. <strong>1. Google Photos</strong> is Google's own photo backup app, and it is the stock photo backup on CT-series handhelds: it automatically backs up photos to your Google account. It is a real backup — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. <strong>2. Google Drive</strong> is the cloud backup Android names by default — "on Android devices the default built-in service is Google Drive. With Google Drive you have 15Gb free" — it backs your data up to Google's cloud. It is a real backup — but it is a cloud backup, not a USB copy, and Google accounts only offer 15 GB of free storage. <strong>3. Google backup</strong> is what Android itself names: personal settings back up to Google's servers with a Google account, and are restored to a new phone when you sign in with that account. It is a real backup — but it backs up settings, not a folder of photo files on a drive you hold. <strong>4. A microSD card</strong> is the local option on the CT40, the CT45 (up to 512 GB), the CT47 (up to 2 TB), and the CT60 — the CT60 manual recommends an industrial-grade card. It is a real local copy — but the card stays in the device, and opening the card anywhere else needs a card reader. <strong>5. A computer copy</strong> is the other way to move files off the device — the CT60 manual's own route is a file sync (MTP/PTP) to a host computer, and the CT60-to-PC guide uses a USB-C cable with File transfer (MTP). It is a real backup — but it needs a PC in between, and the backup lands on the PC, not on a USB drive as plain files straight from the device. None of them is a one-tap way to copy your camera roll to a drive. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the handheld into the computer with a USB cable, tap the USB notification and choose File transfer — and drag the DCIM folder onto the USB drive. This works fine, and it is the only route above that needs a second device in between. It is also the only route that works if the CT30 XP, the CT40, or the CT60 turns out not to host USB drives at all — since every model still connects to a computer as storage — and the only route that works at all on the CT50, which runs Android 6.0 and cannot run SnapDisk. If the device and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the device is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>USB host support is unconfirmed on three models.</strong> The CT45 and the CT47 list USB OTG support — Honeywell's own datasheets say "USB OTG supported via I/O ports" — but no source I found mentions host or OTG support on the CT30 XP, the CT40, or the CT60 at all, so plug a drive in and check Settings &gt; Storage on those models before relying on it. The drive mounting is the test.</li>
+    <li><strong>The CT50 cannot run SnapDisk at all.</strong> The older CT50 runs Android 6.0, below SnapDisk's Android 7.0 minimum — the CT40 and the CT60 run Android 7.1, so they clear it, but the CT50 does not, and the computer copy in Method 4 is the route for it.</li>
+    <li><strong>Anything below Android 7.0 cannot run SnapDisk at all.</strong> Every model listed here clears the minimum — the CT40 and the CT60 run Android 7.1, the CT30 XP and the CT45 run Android 11 to 13, and the CT47 runs Android 12 to 16 — but older CT-series models exist, so check Settings &gt; About phone if you are unsure: below Android 7.0, SnapDisk cannot install, and the computer copy in Method 4 is the route.</li>
+    <li><strong>"Honeywell" also means DVRs and USB drives.</strong> The top search result for this query is a Honeywell DVR manual about archiving video from an HRDE4X4 DVR to a USB stick, and another result is the Honeywell SecuraDrive pocket USB drive — "Honeywell" there means the DVR or the drive brand, not the handheld. This article is about the photos stored on the CT-series handheld itself.</li>
+    <li><strong>The adapter differs by model.</strong> All five models have a USB Type-C port, so a USB-C flash drive plugs straight into any of them and a regular USB-A drive needs a USB-C OTG adapter on any of them. A plain USB-C charging cable is not an OTG adapter: it connects the device to a computer, which is the opposite direction.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter you don't need — or the wrong one.</strong> A USB-C flash drive plugs straight into the CT30 XP, the CT40, the CT45, the CT47, and the CT60, all of which have USB-C — so an adapter is only needed for a regular USB-A drive, and it must be a USB-C OTG adapter on those models. A plain USB-C charging cable is not an OTG adapter: it connects the device to a computer, which is the opposite direction.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google Drive and Google Photos back your device up to Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> A computer copy with a USB cable moves files to a computer — but it is a copy to a computer, and the backup lands on the PC. If the device and the drive are all you have, a phone-to-USB copy is the route, not a desktop copy.</li>
+    <li><strong>Mistaking a spec table or a review page for a phone-to-USB guide.</strong> The Honeywell datasheets and the CT40/CT60 spec pages are real Honeywell pages — but the datasheets only list an Android version, a chipset, or a USB connector type, and the spec pages only compare the hardware. Neither of them describes copying your camera roll straight to a USB drive from the device.</li>
+    <li><strong>Mistaking OTG support on one model for OTG support on the other.</strong> The CT45 and the CT47 list USB OTG support — but no source I found mentions host or OTG support on the CT30 XP, the CT40, or the CT60. Test with a drive on those models, and use Method 2 or 4 on that model if the drive never mounts.</li>
+    <li><strong>Mistaking a DVR manual for a handheld guide.</strong> The Honeywell docs result is a real Honeywell page — but it archives video from an HRDE4X4 DVR to a USB stick. If your photos are on a CT-series handheld, the DVR exercise is the wrong tool: the drive plugs straight into the handheld, and Method 1 or 2 is the route.</li>
+    <li><strong>Mistaking a microSD card copy for a USB backup.</strong> Copying DCIM to a microSD card is a real local copy — the CT40 and the CT60 take a card, the CT45 takes one up to 512 GB, and the CT47 takes one up to 2 TB — but the card stays in the device, and opening it anywhere else needs a card reader; a USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the device and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 18, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On a CT-series handheld the cloud routes are Google Photos and Google Drive — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the device — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the device. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the device.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the device. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="zebra-photos-to-usb.html">Back up Zebra photos to a USB drive (no computer)</a> — Zebra TC-series is the closest parallel: another enterprise rugged line whose own backup advice is a computer copy or cloud, not a phone-to-USB copy.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
