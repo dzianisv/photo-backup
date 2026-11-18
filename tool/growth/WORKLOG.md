@@ -1034,6 +1034,55 @@
   updated. PR #96 (article), merge 73d5216, CI run 44149731191
   (Android PR, success); this row PR #97.
 
+## WL-64 — Emulator end-to-end proof: full backup flow green (DONE)
+
+- Owner: Product Lead agent. State: DONE Nov 18, 2026.
+  Per Den's Nov 17 rule (product-framework commit 8803ffc):
+  the emulator end-to-end pass is the proof; a real device is
+  never required and never a gate; never ask him to test on
+  his phone. Full backup flow verified on the emulator with
+  virtual external storage, every step by evidence, not claims:
+  disk detection (StorageReceiver mount broadcast -> offer
+  notification) -> offer backup -> copy oldest-first (3 seeded
+  photos, byte-verified at the destination) -> progress display
+  (notification with progress bar, Pause/Stop actions) -> Pause
+  (copy freezes, resume continues byte-exact) -> Stop (finished
+  files kept, in-flight .part deleted) -> DONE notification
+  ("Backup complete"). Evidence: emulator smoke run
+  44219739812, green in 27m20s, JUnit XML in the run's
+  smoke-evidence artifact: 18 tests, 0 failures, 0 errors,
+  0 skipped — FullFlowInstrumentedTest (mount->offer,
+  serviceCopies oldest-first + progress + DONE, pause/resume
+  via notification actions, stop via notification action) plus
+  NotificationScreenshotTest (offer/progress/done) and the
+  engine/billing suites. PR #95 (14 commits), merge 57bc3ab,
+  merged 2026-11-18T02:25:54Z; PR CI green.
+  Two real findings fixed along the way, both in PR #95: (1) a
+  genuine app bug — BackupService.publish() posted the terminal
+  DONE/ERROR/LIMIT notification while still foreground, so
+  stopForeground() removed it and the user never saw "Backup
+  complete" (smoke runs 44199483316, 44203932318, 44210493197);
+  fixed by detaching first (stopForeground(false)) and then
+  posting via manager.notify(). (2) Two test-harness timing
+  lessons, test-only: the DONE title must be asserted promptly
+  at DONE time — the harness destroys MainActivity and removes
+  both tasks ~15 s after DONE, which cancels the notification,
+  so a poll after the ~17 s file verification always saw
+  active=[] (run 44210493197's logcat proved the service DID
+  post it: its sound played); and the seed DATE_TAKEN converge
+  poll is now a warning, not a failure — the MediaStore scanner
+  restores DATE_TAKEN from EXIF asynchronously, and with
+  taken=0 the effective date (DATE_MODIFIED) still sorts
+  sequentially seeded files oldest-first; the enumeration-order
+  assert is the real gate.
+  "Real-device proof (Pixel 9a + real USB disk)" removed from
+  the Blocked (owner) lists in the v0.1.2 and v0.1.1 entries
+  below (this row's PR). Honest limit: the emulator has no USB
+  mount event, so the mount trigger itself is exercised via a
+  synthetic broadcast, not a real OTG plug; the real-disk check
+  (NTFS read-only detection) stays open in the Open section,
+  route: Firebase Test Lab free tier, never his phone.
+
 ## WL-63 — Back up ZTE photos to USB article, 33rd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
@@ -4278,8 +4327,7 @@ state, evidence, date.
   wrong for attempt 2. v0.1.2 is the current shipped version.
   Blocked (owner): Play Console account ($25 — the one remaining
   Play gate), stable upload keystore, PostHog project, Sentry DSN,
-  real-device proof (Pixel 9a + real USB disk), sandbox Pro
-  purchase (needs the Play Console app + product).
+  sandbox Pro purchase (needs the Play Console app + product).
 
 ## 2026-11-14 — v0.1.1 MVP shipped (v0.1.0 deleted, unannounced)
 
@@ -4340,8 +4388,7 @@ state, evidence, date.
   (commit 5712671, no force-push).
   Blocked (owner): Play Console account ($25 — the one remaining
   Play gate), stable upload keystore, PostHog project, Sentry DSN,
-  real-device proof (Pixel 9a + real USB disk), sandbox Pro
-  purchase (needs the Play Console app + product).
+  sandbox Pro purchase (needs the Play Console app + product).
 
 ## Open
 
@@ -4352,7 +4399,10 @@ state, evidence, date.
   added to `tool/play-store/listing.md`. Re-score after launch.
 - PRD + TDD + implementation spec + project doc DONE Nov 14
   (Notion, verified by re-fetch — links in the product file).
-- Follow-ups: NTFS read-only detection (needs real-disk test).
+- Follow-ups: NTFS read-only detection (needs real-disk test —
+  route: Firebase Test Lab free tier with a real device + NTFS
+  disk, never the owner's phone; not attempted yet, no account
+  set up).
   First article DONE Nov 14 (pulled forward from Nov 26 — see
   entry above).
 
