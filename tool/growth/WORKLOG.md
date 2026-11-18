@@ -1,5 +1,168 @@
 # SnapDisk — Work Log
 
+## WL-75 — Back up Cubot photos to USB article, 44th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/cubot-photos-to-usb.html ("Back up Cubot photos to
+  a USB drive (no computer)"), following the
+  WL-54/WL-55/WL-56/WL-57/WL-58/WL-59/WL-60/WL-61/WL-62/WL-63/
+  WL-64/WL-65/WL-66/WL-67/WL-68/WL-69/WL-70/WL-71/WL-72/WL-73/
+  WL-74 article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot — same reuse as the 8th through 43rd
+  articles). Facts verified from code on fresh main: SAF tree
+  picker (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price); no INTERNET permission in AndroidManifest.xml;
+  FAT32 files >=4 GiB skipped with reason
+  (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw byte-stream copy
+  (BackupEngine.copyWithResume — no decode/re-encode) with size
+  verification after copy. Search evidence (Nov 17, 2026 live
+  web search): there is no Cubot-specific phone-to-USB guide in
+  the top results at all — the Cubot-specific results are
+  per-model backup pages whose advice is a cloud sync or
+  root-only tools, and the rest are generic manual guides.
+  Dr.Fone, "4 Practical Ways to Transfer Photos from Android
+  to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — direct transfer with an OTG adaptor, a PC as a middleman
+  via drag and drop, Google Drive, or AirDroid. Generic
+  Android, and three of the four ways need a computer or a
+  cloud account); askfilo, "how to transfer pictures from an
+  android phone to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — connect the drive with a USB OTG adapter, find
+  DCIM/Camera in the file manager, and copy the photos to the
+  drive — or use a PC as a middleman. Generic Android, and
+  the direct route is manual select-copy-paste); YouTube,
+  "How to Connect USB Drive to Android Phone to Move Photos &
+  Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet
+  needed. Generic Android, and a manual file-manager guide);
+  Pixoneye, "How to Transfer Photos from Your Phone to a USB
+  Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage with a
+  file manager, or import to a computer first and then copy
+  to USB. Generic Android, and the direct route is manual
+  select-copy-paste); Android Central forum, "Moving photos
+  to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — use an OTG adapter to plug in a USB drive, and it shows
+  up as external storage in the file manager, where you can
+  move files to it. Generic Android, and a manual
+  file-manager guide); GroovyPost, "How to Transfer Photos
+  from Android to a USB Drive"
+  (groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — plug the drive into a PC and drag and drop from the
+  phone, or use a dual USB-C/USB-A flash drive and copy with
+  the file manager. Generic Android, and the PC route needs a
+  computer in between); Photos to USB: OTG Backup (Play
+  listing, com.arzdrz.photos_to_usb — the one-tap app
+  alternative, known from earlier scoring of this niche; it
+  did not surface in this query's top results: copies the
+  whole gallery to a pen drive in one tap, copies only new
+  photos next time, warns about the FAT32 4 GB limit. Free
+  with ads, one-time purchase to remove them. Generic
+  Android, not a Cubot guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop,
+  or size verification of every file); Cubot KingKong X specs
+  (smartprix.com/mobiles/cubot-kingkong-x-ppd1skjqy2ia — USB
+  "Yes, USB-C", USB features "USB Tethering, USB on-the-go,
+  USB Charging, USB Storage", Android 14, 100MP + 24MP + 5MP
+  triple rear camera, 10,200 mAh battery. A spec listing, not
+  a guide — and the confirmation that the KingKong X has
+  OTG); Cubot KingKong 11 specs
+  (gsmarena.com.bd/cubot-kingkong-11/ — "USB Type-C", "OTG
+  Yes", microSDXC on a shared SIM slot. A spec listing, not
+  a guide — and the confirmation that the KingKong 11 has
+  OTG); Cubot KingKong Mini 4 specs
+  (gsmarena.com.bd/cubot-kingkong-mini-4/ — "USB Type-C 2.0",
+  "OTG Yes", microSDXC on a shared SIM slot. A spec listing,
+  not a guide — and the confirmation that the KingKong Mini 4
+  has OTG); Cubot KingKong Dura specs
+  (m.gsmarena.com/cubot_kingkong_dura-ampp-14854.php — "USB
+  Type-C 2.0, OTG", announced July 2026, microSDXC on a
+  shared SIM slot. A spec listing, not a guide — and the
+  confirmation that the KingKong Dura has OTG); Cubot
+  KingKong X Pro specs
+  (smartprix.com/mobiles/cubot-kingkong-x-pro-ppd1yrc091hh —
+  USB "Yes, USB-C", USB features "USB Tethering, USB
+  on-the-go, USB Charging, USB Storage", Android 14. A spec
+  listing, not a guide — and the confirmation that the
+  KingKong X Pro has OTG); Google backup on Cubot Note 50
+  (tutorial.info/video/how-to-perform-a-google-backup-on-cubot-note-50
+  — Settings, System, Backup, link a Google account, and back
+  up to Google One, with 15 GB free on the Google account. A
+  Cubot-specific backup guide — and the confirmation that
+  Cubot's own backup route is Google's cloud, not a USB
+  drive); How to backup Cubot X11
+  (mobilespecs.net/phone/backup/Cubot/CUBOT_X11.html — sync
+  personal data with Google cloud storage, use Google Photos
+  for photos, and the other methods are TWRP Recovery, CWM
+  Recovery, and Titanium Backup. A Cubot-specific backup page
+  — and the confirmation that the non-cloud methods need a
+  custom recovery or root); How to backup Cubot KingKong
+  MINI 3
+  (mobilespecs.net/phone/backup/Cubot/Cubot_King_Kong_MINI_3.html
+  — the same advice for the KingKong Mini 3: Google cloud
+  sync, Google Photos for photos, then TWRP, CWM, and
+  Titanium Backup. A Cubot-specific backup page — and the
+  confirmation that the KingKong line's own backup advice is
+  cloud or root-only tools); Cubot P40 user manual
+  (cdn4.guidesimo.com/view/2100/2100082-p40.pdf — "Backup
+  Data – Will back up all application data, WLAN passwords,
+  and other settings to Google's servers", and to transfer
+  files, select MTP in the connection mode. A manual, not a
+  guide — and the confirmation that Cubot's own backup is to
+  Google's servers and its file transfer is a PC copy over
+  MTP); cloud routes — Google Photos syncs the gallery to
+  Google's servers, Google backup restores data to a new
+  phone from Google's cloud, not to a drive you hold; Google
+  Photos' "Storage saver" setting compresses photos, and a
+  cloud backup stops working the day you stop paying for
+  storage. Neither route gives a folder of plain photo files
+  on a USB drive.
+  Cubot specifics: OTG is across the current Cubot KingKong
+  family: spec tables list USB On-The-Go as Yes for the
+  KingKong X, the KingKong 11, and the KingKong Mini 4, the
+  KingKong Dura lists USB Type-C 2.0 with OTG, and the
+  KingKong X Pro lists USB on-the-go too; Cubot has no
+  phone-to-USB backup tool of its own — the per-model backup
+  guides all point to Google cloud sync, Google Photos, or
+  TWRP, CWM, and Titanium Backup, which need a custom
+  recovery or root, and the stock photo backup is Google
+  Photos; there is no Cubot backup FAQ on devicesfaq at all.
+  The KingKong X takes a microSD card up to 1 TB and the
+  KingKong 11 takes one too, but on a shared SIM slot — so a
+  card costs a second SIM, unlike the dedicated slot on some
+  other rugged phones — but a card is still not a USB drive:
+  it stays in the phone and needs a reader elsewhere.
+  Cubot's own tools: Google backup (Settings > System >
+  Backup, "Backup by Google One" on, to Google's cloud, 15 GB
+  free) backs the phone up to Google's cloud; Google Photos
+  (Photos settings > Backup on) backs photos up to Google's
+  cloud; the P40 manual's backup mention is to Google's
+  servers and its file transfer is MTP to a PC; a microSD
+  card (shared SIM slot, up to 1 TB on the KingKong X) is a
+  real local copy, but the card stays in the phone and needs
+  a reader elsewhere; TWRP, CWM, and Titanium Backup need a
+  custom recovery or root — none of them writes plain photo
+  files to a USB drive automatically.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-75, 44th how-to):
+  docs/cubot-photos-to-usb.html. Query 43 scored in
+  tool/growth/searches.md. Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml (44 items)
+  updated. llms-full.txt Blog posts list also gains the AGM
+  entry WL-74 omitted. PR #118 (article), merge 5784558, CI
+  run 44244985025 (Android PR, success); this row PR #119.
+
 ## WL-74 — Back up AGM photos to USB article, 43rd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
