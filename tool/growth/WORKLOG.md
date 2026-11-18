@@ -124,8 +124,8 @@
   docs/cat-photos-to-usb.html. Query 40 scored in
   tool/growth/searches.md. Blog index (JSON-LD + post block),
   sitemap.xml, llms.txt, llms-full.txt, feed.xml (41 items)
-  updated. PR #TBD (article), merge TBD, CI run TBD
-  (Android PR, TBD); this row PR #TBD.
+  updated. PR #111 (article), merge TBD, CI run 44225039300
+  (Android PR, success); this row PR #TBD.
 
 ## WL-71 — Back up Doogee photos to USB article, 40th how-to (DONE)
 
