@@ -144,7 +144,7 @@
   tool/growth/searches.md. Blog index (JSON-LD + post block),
   sitemap.xml, llms.txt, llms-full.txt, feed.xml (39 items)
   updated. PR #106 (article), merge ddd2daa, CI run 44216765567
-  (Android PR, success); this row PR #TBD.
+  (Android PR, success); this row PR #107.
 
 ## WL-69 — Back up Blackview photos to USB article, 38th how-to (DONE)
 
