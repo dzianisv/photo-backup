@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Conquest photos to a USB drive — SnapDisk</title>
+<meta name="description" content="Back up Conquest photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/conquest-photos-to-usb.html">
+<meta property="og:title" content="Back up Conquest photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up Conquest photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/conquest-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/conquest-photos-to-usb.html#article",
+      "headline": "Back up Conquest photos to a USB drive (no computer)",
+      "description": "Back up Conquest photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-18",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/conquest-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/conquest-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up Conquest photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, on the Conquest models that run Android 7.0 and mount a USB drive — the S10, the S12, the S12 Pro, the S16, the S22 5G, and the EX201. Four models cannot run SnapDisk at all: the S6 runs Android 5.1 and the S8, the S8+, and the S8 Pro run Android 6.0, below SnapDisk's Android 7.0 minimum. The S9 is disputed between sources — Android 5.1.1 per devicesfaq, Android 7.1.1 per trak.in — so check Settings > About phone on that model before installing. OTG support is confirmed in the sources I found only on the S8, which cannot run SnapDisk; on the S10, the S12, the S12 Pro, the S16, the S22 5G, and the EX201 it is unconfirmed, so plug a drive in and check Settings > Storage — the drive mounting is the test. Conquest has no phone-to-USB backup tool of its own: its backup advice is a computer copy or Google Drive and Google Photos in the cloud. The stock route is a file manager: connect the drive, open the file manager, pick the photos in DCIM/Camera, and Copy to the drive. SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/conquest-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up Conquest photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/conquest-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up Conquest photos to a USB drive (no computer)</h1>
+  <p class="dek">Conquest makes rugged phones with big batteries and walkie-talkie hardware, and Conquest has no phone-to-USB backup tool of its own: its backup advice is a computer copy or Google Drive and Google Photos in the cloud. Four honest caveats up front: four models cannot run SnapDisk at all — the S6 runs Android 5.1, and the S8, the S8+, and the S8 Pro run Android 6.0 — below SnapDisk's Android 7.0 minimum, so SnapDisk cannot run on them at all, even though the S8 lists USB OTG support; the S9 is disputed between sources — Android 5.1.1 with a Snapdragon 615 per devicesfaq, Android 7.1.1 with a Helio P25 per trak.in — so check Settings &gt; About phone on that model before installing; OTG support is confirmed in the sources I found only on the S8, which cannot run SnapDisk — on the S10, the S12, the S12 Pro, the S16, the S22 5G, and the EX201 it is unconfirmed, so plug a drive in and check Settings &gt; Storage before relying on it; and the USB port type is unconfirmed on the S22 5G and the EX201 — the S10 has micro USB, the S12 and the S16 have USB-C, and the S8 has micro USB 2.0 — so check your own port before buying an adapter. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 18, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On a Conquest phone that runs Android 7.0 and mounts a USB drive — the S10, the S12, the S12 Pro, the S16, the S22 5G, and the EX201 — plug the drive in, then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: a file manager works — the YouTube guides' route is an OTG connection with the built-in file manager, and askfilo's route is the same — but the direct route is manual select-copy-paste with no progress detail, no resume, and no verification; Conquest's own backup advice works too, but there is none pointing at a USB drive — devicesfaq's advice for the S8 is a computer copy with a USB cable and a file browser, or Google Drive and Google Photos in the cloud, which back your photos up to Google's servers, not to a USB drive as plain files. One rival app does exist — Photos to USB: OTG Backup copies a whole gallery to a pen drive in one tap and resumes where it stopped — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 18, 2026, no top search result for this query is a Conquest-specific phone-to-USB guide at all, let alone a Conquest-specific automated whole-library backup with progress, Pause/Stop, and resume: the Conquest-specific results are FAQ pages that give no USB-drive advice at all, and the rest are generic manual guides.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up Conquest photos to USB drive without computer" and there is no Conquest-specific phone-to-USB guide in the top results at all — the Conquest-specific results are FAQ pages that give no USB-drive advice at all, and the rest are generic Android guides, in different packaging:</p>
+  <ul>
+    <li><strong>Dr.Fone (Wondershare), "4 Practical Ways to Transfer Photos from Android to USB Flash Drive"</strong> (<a href="http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html">4 Practical Ways to Transfer Photos from Android to USB Flash Drive</a>) — connect the drive directly with an OTG adapter, use a PC as a middleman with USB "File Transfer" mode, or go wireless through Google Drive or AirDroid; the Dr.Fone PC software bulk-exports photos to a computer. Generic Android, and a manual guide — every route is hand-picked files, a computer in between, or the cloud.</li>
+    <li><strong>YouTube, "How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)"</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos</a>) — OTG connection and the phone's built-in file manager, no computer or internet needed. Generic Android, and a manual file-manager guide.</li>
+    <li><strong>YouTube, "How to Transfer Photos, Videos and any Files from Android Phone to USB Pendrive (USB Drive Tutorial)"</strong> (<a href="https://www.youtube.com/watch?v=ch1evyu5PPM">How to Transfer Photos, Videos and any Files from Android Phone to USB Pendrive</a>) — verify OTG compatibility first, connect the drive via an OTG adapter, open the file manager, and copy or move. Generic Android, and a manual file-manager guide.</li>
+    <li><strong>askfilo, "how to transfer pictures from an android phone to a flashdrive"</strong> (<a href="https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432">how to transfer pictures from an android phone to a flashdrive</a>) — plug the flash drive into an OTG adapter, open the file manager, find the DCIM folder, and copy to the USB drive. Generic Android, and a manual file-manager guide.</li>
+    <li><strong>groovypost, "How to Transfer Photos from Android to a USB Drive"</strong> (<a href="https://www.groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/">How to Transfer Photos from Android to a USB Drive</a>) — plug the drive into a PC, connect the phone, choose File Transfer, and drag DCIM onto the drive — or use a dual USB-C flash drive straight into the phone and copy with the file manager. Generic Android, and a manual guide — the first route needs a PC in between.</li>
+    <li><strong>thegadgetians, "How to Transfer Files From Phone to USB Without Computer: Ultimate Guide"</strong> (<a href="https://thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/">How to Transfer Files From Phone to USB Without Computer</a>) — connect a USB drive to an Android phone with an OTG adapter or to an iPhone with a Lightning-to-USB adapter, open the file manager, select and copy files, then paste onto the drive. Generic Android, and a manual file-manager guide — and it notes that not all Android phones support OTG.</li>
+    <li><strong>Frequently asked questions Conquest S8, devicesfaq</strong> (<a href="https://www.devicesfaq.com/en/frequently-asked-questions/conquest-s8">Conquest S8 FAQ</a>) — "How to backup my Conquest S8? … The most economical method to make a backup is to connect the Conquest S8 to a computer using the USB cable and make a copy of the files using the file browser." — and photos via Google Photos, with Google Drive at 15 GB free. A FAQ page, not a backup guide — and the confirmation that Conquest's own backup advice points at a computer or the cloud, never at a USB drive.</li>
+    <li><strong>Frequently asked questions Conquest S8 KT35A-S8, devicesfaq</strong> (<a href="https://www.devicesfaq.com/en/frequently-asked-questions/conquest-s8-kt35a-s8">Conquest S8 KT35A-S8 FAQ</a>) — the same template on the KT35A-S8 variant page: a computer copy with a USB cable and a file browser, or Google Drive with 15 GB free, or Google Photos in the cloud. A FAQ page, not a backup guide — and the confirmation that the same computer-or-cloud advice is the only backup advice Conquest's pages give for the models I checked.</li>
+    <li><strong>Conquest S8 2017 Edition, FindPare</strong> (<a href="https://www.findpare.com/smartphone/conquest-s8-2017-edition/add-my-review&amp;counturl=https">Conquest S8 2017 Edition</a>) — "USB OTG: Yes", "micro USB 2.0: Yes", MediaTek Helio P10 (MT6755), 6000 mAh. A spec table, not a guide — and the confirmation that the S8 lists OTG support.</li>
+    <li><strong>Conquest S8+ 4GB 64GB, phoneinfo</strong> (<a href="https://www.phoneinfo.co.uk/conquest/s8-plus-4gb-64gb/caracteristiques">Conquest S8+ 4GB 64GB</a>) — Android 6.0 (Marshmallow), MediaTek Helio P10 MT6755, 4 GB of RAM, 64 GB of storage, microSD up to 128 GB, 6000 mAh, launched December 2017. A spec table, not a guide — and the confirmation that the S8+ runs Android 6.0.</li>
+    <li><strong>Conquest S8 Pro 64GB, mobilexfiles</strong> (<a href="https://mobilexfiles.com/phones/conquest/conquest_s8_pro_64gb/secret_codes/">Conquest S8 Pro 64GB</a>) — Android 6.0, MediaTek Helio P10 (MT6755), 4 GB of RAM, 64 GB of storage, microSD up to 128 GB, 6000 mAh. A spec table, not a guide — and a second source for the S8 Pro's Android 6.0.</li>
+    <li><strong>Conquest S10 3GB 32GB, phoneinfo</strong> (<a href="https://www.phoneinfo.co.uk/conquest/s10-3gb-32gb/description">Conquest S10 3GB 32GB</a>) — Android 7.1.1 (Nougat), MediaTek MT6753T, 3 GB of RAM, 32 GB or 64 GB of storage, microSD up to 128 GB, launched January 2018. A spec table, not a guide — and the confirmation that the S10 runs Android 7.1, with a USB connection for data exchange with a laptop and no OTG mention.</li>
+    <li><strong>Conquest S9, devicesfaq</strong> (<a href="https://www.devicesfaq.com/en/characteristics/conquest-s9">Conquest S9 technical characteristics</a>) — Android 5.1.1 Lollipop, Qualcomm Snapdragon 615 MSM8939, 32 GB of storage, 6000 mAh. A spec table, not a guide — and one side of the S9 dispute.</li>
+    <li><strong>Conquest S9 MT6757, trak.in</strong> (<a href="https://trak.in/stories/smartphone/conquest-s9-mt6757">Conquest S9 MT6757</a>) — Android 7.1.1 Nougat, MediaTek Helio P25 (MT6757CD), 6000 mAh. A spec table, not a guide — and the other side of the S9 dispute: a different Android version and a different chipset from devicesfaq, so the S9's Android version is disputed and SnapDisk support on it is unconfirmed either way.</li>
+    <li><strong>Conquest S6 OCTA, mobilexfiles</strong> (<a href="https://mobilexfiles.com/phones/conquest/conquest_s6_octa/">Conquest S6 OCTA</a>) — Android 5.1, MediaTek MT6752, 3 GB of RAM, 32 GB of storage, 6000 mAh. A spec table, not a guide — and the confirmation that the S6 OCTA runs Android 5.1.</li>
+    <li><strong>The Conquest S6 Is China's Take On A Rugged Smartphone, Ubergizmo</strong> (<a href="http://www.ubergizmo.com/2015/02/the-conquest-s6-is-chinas-take-on-a-rugged-smartphone/">The Conquest S6 Is China's Take On A Rugged Smartphone</a>) — the original 2015 S6: 64-bit MediaTek MT6732 quad-core, 1 GB of RAM, 8 GB of storage, 13 MP rear camera, 4000 mAh battery. A launch story, not a guide — and the confirmation that the original S6 is a different, weaker variant from the S6 OCTA, though both run Android 5.1.</li>
+    <li><strong>Conquest S12 data sheet, Cenava</strong> (<a href="https://www.cenava.co.za/content/Conquest%20S12-data-Sheet-Cenava%20.pdf">S12 data sheet</a>) — Android 8.1.0, MTK6763, 6 GB of RAM with 64 GB or 128 GB of storage, 8000 mAh, "Charger Jack type-c USB" and "I/O Connector type-c". A data sheet, not a guide — and the confirmation that the S12 runs Android 8.1 with a USB-C port.</li>
+    <li><strong>Conquest S12 Pro 4GB 64GB, phoneinfo</strong> (<a href="https://www.phoneinfo.co.uk/conquest/s12-pro-4gb-64gb/technische-daten">Conquest S12 Pro 4GB 64GB</a>) — Android 8.1 (Oreo), MediaTek Helio P70, 4 GB of RAM, 64 GB of storage, 8000 mAh, launched December 2018. A spec table, not a guide — and the confirmation that the S12 Pro runs Android 8.1.</li>
+    <li><strong>Conquest S16 Walkie Talkie 8GB 128GB, phoneinfo</strong> (<a href="https://www.phoneinfo.co.uk/conquest/s16-walkie-talkie-8gb-128gb/specyfikacje">Conquest S16 Walkie Talkie 8GB 128GB</a>) — Android 9.0 (Pie), MediaTek Helio P90 MT6779, 8 GB of RAM, 128 GB of storage, microSD up to 128 GB, 6000 mAh, launched February 2020. A spec table, not a guide — and the confirmation that the S16 runs Android 9.0.</li>
+    <li><strong>CONQUEST S16 Rugged Smartphone Waterproof User Manual, manuals.plus</strong> (<a href="https://manuals.plus/conquest/s16-rugged-smartphone-waterproof-manual">CONQUEST S16 user manual</a>) — "Type-C Interface" in the button description, TF card extendable to 2 TB. A manual, not a guide — and the confirmation that the S16 has a USB-C port.</li>
+    <li><strong>CONQUEST S22 5G Walkie Talkie Rugged Phone Tablet, Sunsky</strong> (<a href="https://www.sunsky-online.com/p/WMC0843B/CONQUEST-S22-5G-Walkie-Talkie-Rugged-Phone-Tablet-Thermal-Imaging-6GB-128GB-Dual-Back-Cameras-Night-Vision-Camera-IP68-IP69K-Waterproof-Dustproof-Shockproof-Face-ID-&amp;-Fingerprint-Identification-8.0-inch-Android-11-MTK6873-Dimensity-800-Octa-Core-up-to-2.0GHz-Network-5G-NFC-PoC-Black-.htm">CONQUEST S22 5G</a>) — Android 11, MTK6873 Dimensity 800, 6 GB of RAM with 128 GB of storage, 15200 mAh. A store listing, not a guide — and the confirmation that the S22 5G runs Android 11, with no USB port type stated on the page.</li>
+    <li><strong>Photos to USB: OTG Backup</strong> (<a href="https://play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb">Google Play</a>) — the one-tap app alternative: a real phone-to-USB app that copies the whole gallery to a pen drive in one tap, copies only new photos next time, and warns about the FAT32 4 GB limit. It is free with ads, with a one-time purchase to remove them. It is the closest thing to this article's job — but it is a generic Android listing, not a Conquest guide, and it does not promise oldest-first order, detailed progress with Pause and Stop, or size verification of every file.</li>
+    <li><strong>PhotoSaver Phone-to-Drive</strong> (<a href="https://play.google.com/store/apps/details?id=com.clevx.photosaver">Google Play</a>) — a second one-tap app alternative: save photos and videos to any USB-C drive with one click, no cloud, no upload. It is a generic Android listing, not a Conquest guide, and it needs a USB-C connection — so it is no use on the micro-USB Conquest models, only on the S12 and the S16, which are the Conquest models I found with USB-C.</li>
+    <li><strong>Cloud routes</strong> — Google Photos syncs your gallery to Google's servers, Google Drive backs your data up to Google's cloud with 15 GB free, and Google backup restores your data to a new phone from Google's cloud, not to a drive you hold; Google Photos' "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Neither route gives you a folder of plain photo files on a USB drive.</li>
+  </ul>
+  <p>None of them is a Conquest-specific phone-to-USB guide at all, and none of them offers an automated Conquest photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What you need</h2>
+  <p>A Conquest Android phone that runs Android 7.0 or later for SnapDisk — the S10 runs Android 7.1, the S12 runs Android 8.1, the S12 Pro runs Android 8.1, the S16 runs Android 9.0, the S22 5G runs Android 11, and the EX201 runs Android 12 — so a USB-C flash drive plugs straight into the S12 and the S16, which have USB-C, while the S10 has micro USB, so a regular USB-A drive needs a micro-USB OTG adapter on that model — and enough space on the drive for the photos you want to keep. Four Conquest specifics: first, four models cannot run SnapDisk at all — the S6 runs Android 5.1, and the S8, the S8+, and the S8 Pro run Android 6.0, below SnapDisk's Android 7.0 minimum, even though the S8 lists USB OTG support, so their photos move off the phone by file manager or computer copy instead; the S9's Android version is disputed — 5.1.1 per devicesfaq, 7.1.1 per trak.in — so check Settings &gt; About phone on that model before installing, since SnapDisk cannot run on it if the 5.1.1 source is right. Second, OTG support is confirmed in the sources I found only on the S8, which cannot run SnapDisk — on the S10, the S12, the S12 Pro, the S16, the S22 5G, and the EX201 it is unconfirmed, so plug a drive in and check Settings &gt; Storage before relying on it: if the drive appears, the phone hosts drives and the rest of this method works; if it never appears, the phone does not host drives and Method 4 is the route. Third, Conquest has no phone-to-USB backup tool of its own — its backup advice is a computer copy or Google Drive and Google Photos; the stock photo backup is Google Photos; the stock file manager is Files by Google; Conquest camera photos live in DCIM/Camera, as on any Android phone. The S8+ takes a microSD card up to 128 GB, the S10 takes one up to 128 GB, and the S16 takes one up to 128 GB — the S16 ATEX variant takes one up to 2 TB — so a card is an option, and it still stays in the phone and opening it anywhere else needs a card reader, while a USB drive plugs into any computer as it is. Fourth, SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the USB drive.</strong> It mounts on plug-in on most Android phones with USB host support — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage for the drive. OTG support is unconfirmed in the sources I found on every Conquest model that can run SnapDisk — the S10, the S12, the S12 Pro, the S16, the S22 5G, and the EX201 — so the drive mounting is the test itself: if it appears in Settings &gt; Storage, the phone hosts drives and the rest of this method works; if it never appears, the phone does not host drives and Method 4 is the route. The S6, the S8, the S8+, and the S8 Pro run Android 5.1 or 6.0, below SnapDisk's Android 7.0 minimum, so SnapDisk cannot run on those four at all — and the S9's Android version is disputed, so check Settings &gt; About phone on that model first.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — Conquest camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the phone normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the phone to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: a file manager (the stock route, no app needed)</h2>
+  <p>A file manager can copy your photos to the USB drive — the YouTube guides' route is an OTG connection with the built-in file manager, and askfilo's route is the same, and either is the manual route for external storage: 1. Plug in the USB drive — a notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage for the drive. 2. Open the file manager (Files by Google on Conquest phones) and confirm the USB drive shows up under storage devices. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until the file manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: Conquest's own tools (Google Photos, Google Drive, or a microSD card — not phone-to-USB)</h2>
+  <p>If you want Conquest's own route, know what each tool actually does — there is no Conquest backup page pointing at a USB drive at all, and none of the stock tools writes your photos as plain files to a USB drive automatically. <strong>1. Google Photos</strong> is Google's own photo backup app, and it is the stock photo backup on Conquest Android phones: it automatically backs up photos to your Google account. It is a real backup — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. <strong>2. Google Drive</strong> is the cloud backup Android names by default — "on Android devices the default built-in service is Google Drive. With Google Drive you have 15Gb free" — it backs your data up to Google's cloud. It is a real backup — but it is a cloud backup, not a USB copy, and Google accounts only offer 15 GB of free storage. <strong>3. A microSD card</strong> is the local option Conquest documents — the S8+ takes a card up to 128 GB, the S10 takes one up to 128 GB, and the S16 takes one up to 128 GB, with the S16 ATEX variant taking one up to 2 TB. It is a real local copy — but the card stays in the phone, and opening the card anywhere else needs a card reader. <strong>4. A computer copy</strong> is the other way to move files off the phone — "connect the Conquest S8 to a computer using the USB cable and make a copy of the files using the file browser", per devicesfaq, and the same advice appears on the S8 KT35A-S8 page. It is a real backup — but it needs a PC in between, and the backup lands on the PC, not on a USB drive as plain files straight from the phone. None of them is a one-tap way to copy your camera roll to a drive. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works — and it is the route Conquest's own backup advice names: plug the Conquest phone into the computer with a USB cable, tap the USB notification and choose File transfer — and drag the DCIM folder onto the USB drive. This works fine, and it is the only route above that needs a second device in between. It is also the only route that works on the four models SnapDisk cannot run on — the Android 5.1 S6 and the Android 6.0 S8, S8+, and S8 Pro — since all four still connect to a computer as storage. If the phone and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the phone is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>Four Conquest models cannot run SnapDisk at all.</strong> The S6 runs Android 5.1, and the S8, the S8+, and the S8 Pro run Android 6.0, below SnapDisk's Android 7.0 minimum — so SnapDisk cannot install on any of the four, even though the S8 lists OTG support. Their photos move off the phone by file manager or computer copy instead.</li>
+    <li><strong>The S9's Android version is disputed.</strong> devicesfaq lists the S9 as Android 5.1.1 with a Qualcomm Snapdragon 615, while trak.in lists it as Android 7.1.1 with a MediaTek Helio P25 — so check Settings &gt; About phone on that model before installing; if the 5.1.1 source is right, SnapDisk cannot run on it at all.</li>
+    <li><strong>OTG support is unconfirmed on every model that can run SnapDisk.</strong> The only Conquest model with an OTG listing in the sources I found is the S8 — FindPare lists "USB OTG: Yes" with micro USB 2.0 — and the S8 runs Android 6.0, so it cannot run SnapDisk. On the S10, the S12, the S12 Pro, the S16, the S22 5G, and the EX201, no source I found mentions OTG at all — so plug a drive in and check Settings &gt; Storage before relying on it. The drive mounting is the test.</li>
+    <li><strong>The USB port type is unconfirmed on the S22 5G and the EX201.</strong> The S10 has micro USB — the root guide for it says to connect the phone to a computer using a micro USB cable — and the S12 and the S16 have USB-C, while the S8 has micro USB 2.0. The S22 5G store listing and the EX201 spec sheet I found state no USB port type, so check your own port before buying an adapter.</li>
+    <li><strong>The S6 comes in two variants.</strong> The original 2015 S6 has a MediaTek MT6732, 1 GB of RAM, 8 GB of storage, and a 4000 mAh battery per Ubergizmo, while the S6 OCTA has a MediaTek MT6752, 3 GB of RAM, 32 GB of storage, and a 6000 mAh battery per mobilexfiles — but both run Android 5.1, so neither can run SnapDisk.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter you don't need — or the wrong one.</strong> A USB-C flash drive plugs straight into the S12 and the S16, which have USB-C — so an adapter is only needed for a regular USB-A drive, and it must be a USB-C OTG adapter, not a micro-USB one. The S10 has micro USB instead, so it needs a micro-USB OTG adapter. The S22 5G and the EX201 have no USB port type stated in the sources I found, so check the port first. A plain micro-USB charging cable is not an OTG adapter: it connects the phone to a computer, which is the opposite direction.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google Drive and Google Photos back your phone up to Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> Conquest's own backup advice is a computer copy with a USB cable and a file browser — but it is a copy to a computer, and the backup lands on the PC. If the phone and the drive are all you have, a phone-to-USB copy is the route, not a desktop copy.</li>
+    <li><strong>Mistaking a spec table or a FAQ page for a phone-to-USB guide.</strong> The S8 FAQ page and the Conquest spec tables are real Conquest pages — but the FAQ only says to connect the phone to a computer and copy the files with a file browser, and the spec tables only list an Android version, a chipset, or a USB connector type. Neither of them describes copying your camera roll straight to a USB drive from the phone.</li>
+    <li><strong>Mistaking OTG support for SnapDisk support.</strong> The S8 lists USB OTG support — FindPare lists "USB OTG: Yes" — but it runs Android 6.0, below SnapDisk's Android 7.0 minimum. OTG lets a file manager copy photos to a drive; it does not make the phone new enough to install SnapDisk. Test with a drive, and use Method 2 or 4 on that model.</li>
+    <li><strong>Mistaking a microSD card copy for a USB backup.</strong> Copying DCIM to a microSD card is a real local copy — the S8+ takes a card up to 128 GB, the S10 takes one up to 128 GB, and the S16 takes one up to 128 GB — but the card stays in the phone, and opening it anywhere else needs a card reader; a USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 18, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On Conquest the cloud routes are Google Photos and Google Drive — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Installing SnapDisk on a Conquest phone that cannot run it.</strong> The S6 runs Android 5.1, and the S8, the S8+, and the S8 Pro run Android 6.0 — SnapDisk needs Android 7.0 or later and cannot install on any of the four. Check Settings &gt; About phone before installing; every other Conquest model I found runs Android 7.1, 8.1, 9.0, 11, or 12, except the S9, whose Android version is disputed.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="nomu-photos-to-usb.html">Back up Nomu photos to a USB drive (no computer)</a> — Nomu is the closest parallel: another rugged brand whose own backup advice is a computer copy or cloud, not a phone-to-USB copy.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
