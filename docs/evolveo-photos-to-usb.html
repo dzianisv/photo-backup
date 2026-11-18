@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Evolveo photos to a USB drive — SnapDisk</title>
+<meta name="description" content="Back up Evolveo StrongPhone photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/evolveo-photos-to-usb.html">
+<meta property="og:title" content="Back up Evolveo photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up Evolveo StrongPhone photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/evolveo-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/evolveo-photos-to-usb.html#article",
+      "headline": "Back up Evolveo photos to a USB drive (no computer)",
+      "description": "Back up Evolveo StrongPhone photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-18",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/evolveo-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/evolveo-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up Evolveo StrongPhone photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, on the models that can run SnapDisk — the StrongPhone G9 runs Android 10 with USB OTG listed, and the StrongPhone G5 runs Android 9.0 with a USB-C port, though no source I found mentions OTG on the G5, so plug a drive in and check Settings > Storage — the drive mounting is the test. The StrongPhone Q5 runs Android 5.1 and the StrongPhone Q8 LTE runs Android 4.4, both below SnapDisk's Android 7.0 minimum, so neither can run it at all. The StrongPhone G4's Android version is unconfirmed in the sources I found, so check Settings > About phone on that model before installing. The Z4, the X5, and the Z6 are feature phones, not Android phones, so they cannot run SnapDisk either. Evolveo has no phone-to-USB backup tool of its own. The stock route is a file manager: connect the drive, open the file manager, pick the photos in DCIM/Camera, and Copy to the drive. SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/evolveo-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up Evolveo photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/evolveo-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up Evolveo photos to a USB drive (no computer)</h1>
+  <p class="dek">The Evolveo StrongPhone is a line of rugged Android phones, and Evolveo has no phone-to-USB backup tool of its own: no Evolveo backup page pointing at a USB drive was found at all. Four honest caveats up front: two StrongPhone models cannot run SnapDisk at all — the StrongPhone Q5 runs Android 5.1 and the StrongPhone Q8 LTE runs Android 4.4, both below SnapDisk's Android 7.0 minimum; the StrongPhone G4's Android version is unconfirmed in the sources I found, so check Settings &gt; About phone on that model before installing; OTG support is unconfirmed on the StrongPhone G5 — the G9 lists USB OTG support, but no source I found mentions OTG on the G5 at all, so plug a drive in and check Settings &gt; Storage on that model before relying on it; and the Q8 LTE's OTG support is disputed between sources — the retailer's own description lists "microUSB OTG" while a spec aggregator lists USB OTG as No — so the Q8's OTG is not leaned on here, and it cannot run SnapDisk anyway on Android 4.4. The StrongPhone Z4, X5, and Z6 are feature phones, not Android phones, so they are out of scope entirely. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 18, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On the Evolveo models that can run SnapDisk — the StrongPhone G9 runs Android 10 with USB OTG listed, and the StrongPhone G5 runs Android 9.0 with a USB-C port, though OTG is unconfirmed on the G5 — plug the drive in, then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: a file manager works — the YouTube guide's route is an OTG connection with the built-in file manager — but the direct route is manual select-copy-paste with no progress detail, no resume, and no verification; Evolveo's own file advice works too, but there is none pointing at a USB drive — no Evolveo backup page was found at all. One rival app does exist — VaultDrive copies photos, videos, and files straight to a USB drive with no computer, free for up to 200 files or 2 GB per backup, Pro $19.99 once — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 18, 2026, no top search result for this query is an Evolveo-specific phone-to-USB guide at all, let alone an Evolveo-specific automated whole-library backup with progress, Pause/Stop, and resume: the Evolveo-specific results are spec pages and manuals that give no USB-drive advice at all, and the rest are generic manual guides.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up Evolveo photos to USB drive without computer" and there is no Evolveo-specific phone-to-USB guide in the top results at all — the Evolveo-specific results are spec pages and manuals that give no USB-drive advice at all, and the rest are generic Android guides, in different packaging:</p>
+  <ul>
+    <li><strong>YouTube, "How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)"</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos</a>) — OTG connection and the phone's built-in file manager, no computer or internet needed. Generic Android, and a manual file-manager guide.</li>
+    <li><strong>VaultDrive</strong> (<a href="https://coticsy.com/vaultdrive.html">VaultDrive: Back Up Phone Photos to a USB Drive, No Computer</a>) — the one-tap app alternative: plug a flash drive or SSD into your phone, choose what to back up, and tap Start; copies original photos straight to the drive, no computer, no cloud, no account; free for up to 200 files or 2 GB per backup, Pro $19.99 once; needs Android 8 or later. It is the closest thing to this article's job — but it is a generic Android listing, not an Evolveo guide, and it does not promise oldest-first order, detailed progress with Pause and Stop, or size verification of every file.</li>
+    <li><strong>softhandtech, "Transfer Photos from Phone to Memory Stick: A Comprehensive Guide"</strong> (<a href="https://softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/">Transfer Photos from Phone to Memory Stick</a>) — a computer as middleman, a direct OTG transfer, or cloud services. Generic Android, and a manual guide — the first and third routes need a computer in between or the cloud.</li>
+    <li><strong>thegadgetians, "How to Transfer Files From Phone to USB Without Computer: Ultimate Guide"</strong> (<a href="https://thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/">How to Transfer Files From Phone to USB Without Computer</a>) — connect a USB drive with an OTG adapter, open the file manager, select and copy files, then paste onto the USB drive. Generic Android, and a manual file-manager guide — and it notes that not all Android phones support OTG.</li>
+    <li><strong>Substack, "saving Photos for necessary updates"</strong> (<a href="https://curiousbluenoser.substack.com/p/saving-photos-for-necessary-updates">saving Photos for necessary updates</a>) — plug a picture-keeper flash drive into the phone's charging port, open the drive's app, and tap Start. Generic, and a manual guide built around a specific drive's own app.</li>
+    <li><strong>EVOLVEO StrongPhone Q8 LTE, Alza</strong> (<a href="https://m.alza.cz/EN/evolveo-strongphone-q8-lte-d4036213.htm">EVOLVEO StrongPhone Q8 LTE</a>) — a retailer page: 4.5-inch display, Android 4.4, 16 GB of internal memory expandable by microSDHC / SDXC card, and "microUSB OTG" in the description. A retailer page, not a guide — and the confirmation that the Q8 LTE runs Android 4.4, below SnapDisk's Android 7.0 minimum, so it cannot run SnapDisk at all; its OTG listing is also disputed, see below.</li>
+    <li><strong>Evolveo StrongPhone G4, FindPare</strong> (<a href="https://www.findpare.com/smartphone/evolveo-strongphone-g4/camera&counturl=https">Evolveo StrongPhone G4</a>) — a spec page: released December 2016, "USB OTG: Yes", micro USB 2.0. A spec page, not a guide — and the confirmation that the G4 lists OTG support, with the caveat that the site itself says its information is "not ascertained" and no source I found states the G4's Android version, so check Settings &gt; About phone before installing SnapDisk.</li>
+    <li><strong>Evolveo StrongPhone Q5, mobilespecs.net</strong> (<a href="https://mobilespecs.net/phone/unlock/EVOLVEO/Evolveo_StrongPhone_Q5.html">How to unlock Evolveo StrongPhone Q5</a>) — a spec page: Android 5.1 Lollipop, "USB: yes v2.0 OTG", microSD up to 64 GB. A spec page, not a guide — and the confirmation that the Q5 lists OTG support but runs Android 5.1, below SnapDisk's Android 7.0 minimum, so it cannot run SnapDisk at all.</li>
+    <li><strong>Evolveo StrongPhone G5 user manual</strong> (<a href="https://www.qollanmalar.uz/evolveo/strongphone-g5/qo%E2%80%98llanma">Evolveo StrongPhone G5 manual</a>) — the manual: Android 9.0, USB Type-C, microSD up to 128 GB via the spec table. A manual, not a guide — and the confirmation that the G5 runs Android 9.0 with USB-C, with no OTG mention anywhere in it.</li>
+    <li><strong>Evolveo StrongPhone Q8 LTE, FindPare</strong> (<a href="https://www.findpare.com/smartphone/evolveo-strongphone-q8-lte">Evolveo StrongPhone Q8 LTE</a>) — a spec page: "USB OTG: No", micro USB 2.0. A spec page, not a guide — and the dispute: Alza's description lists "microUSB OTG" for the same phone, so the Q8's OTG support is disputed between sources and is not leaned on here; either way the Q8 runs Android 4.4 and cannot run SnapDisk.</li>
+    <li><strong>Evolveo StrongPhone G9, mobilespecs.net</strong> (<a href="https://mobilespecs.net/phone/unlock/EVOLVEO/Evolveo_StrongPhone_G9.html">How to unlock Evolveo StrongPhone G9</a>) — a spec page: Android 10, "USB: yes v2.0 OTG; Type-C", microSD up to 128 GB. A spec page, not a guide — and the confirmation that the G9 lists OTG support and runs Android 10, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>EVOLVEO StrongPhone Z4 user guide, manuals.plus</strong> (<a href="https://manuals.plus/m/962fa9360985c283fb6a2b181e047d1a46bf9b7c6cf6ae978669fe67f4fc04d1">EVOLVEO StrongPhone Z4 Waterproof Durable Phone User Guide</a>) — the manual for the Z4 feature phone: its "OTG charger" lets the phone charge other devices as a power bank. A manual, not a guide — and the confirmation that the Z4 is a feature phone whose OTG is a charging function, not a USB-drive host, so it is out of scope.</li>
+    <li><strong>Evolveo StrongPhone X5 user manual, manuals.co.uk</strong> (<a href="https://www.manuals.co.uk/evolveo/strongphone-x5/manual?file=4268027">Evolveo StrongPhone X5 user manual</a>) — the manual: a rugged phone with a 2.4-inch display, no touchscreen, microSDHC up to 32 GB, USB Type-C. A manual, not a guide — and the confirmation that the X5 is a feature phone, not an Android phone, so it is out of scope.</li>
+    <li><strong>Evolveo StrongPhone Z6 user manual, manua.ls</strong> (<a href="https://www.manua.ls/evolveo/strongphone-z6/manual?p=5">User manual Evolveo StrongPhone Z6</a>) — the manual: a rugged phone with a 2.8-inch display, dual SIM, USB Type-C. A manual, not a guide — and the confirmation that the Z6 is a feature phone, not an Android phone, so it is out of scope.</li>
+    <li><strong>Cloud routes</strong> — Google Photos syncs your gallery to Google's servers, Google Drive backs your data up to Google's cloud with 15 GB free, and Google backup restores your data to a new phone from Google's cloud, not to a drive you hold; Google Photos' "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Neither route gives you a folder of plain photo files on a USB drive.</li>
+  </ul>
+  <p>None of them is an Evolveo-specific phone-to-USB guide at all, and none of them offers an automated Evolveo photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What you need</h2>
+  <p>An Evolveo StrongPhone that can run SnapDisk — the G9 runs Android 10 with USB OTG listed, and the G5 runs Android 9.0 with a USB-C port, so a USB-C flash drive plugs straight into either of them, while a regular USB-A drive needs an OTG adapter: USB-C on the G5 and the G9, micro-USB on the G4 if it turns out to run Android 7.0 or later — and enough space on the drive for the photos you want to keep. Three Evolveo specifics: first, OTG support is confirmed in the sources I found on the G9 and the G4 — mobilespecs lists "USB: yes v2.0 OTG" for the G9 and FindPare lists "USB OTG: Yes" for the G4 — while on the G5 no source I found mentions OTG at all, so plug a drive in and check Settings &gt; Storage before relying on it: if the drive appears, the phone hosts drives and the rest of this method works; if it never appears, the phone does not host drives and Method 4 is the route. Second, Evolveo has no phone-to-USB backup tool of its own — no Evolveo backup page was found at all; the stock photo backup is Google Photos; the stock file manager is Files by Google; Evolveo StrongPhone camera photos live in DCIM/Camera, as on any Android phone. The G5 and the G9 take a microSD card up to 128 GB, so a card is an option, and it still stays in the phone and opening it anywhere else needs a card reader, while a USB drive plugs into any computer as it is. Third, SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the USB drive.</strong> It mounts on plug-in on most Android phones with USB host support — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage for the drive. OTG support is confirmed in the sources I found on the G9 and the G4, but unconfirmed on the G5 — so on the G5 the drive mounting is the test itself: if it appears in Settings &gt; Storage, the phone hosts drives and the rest of this method works; if it never appears, the phone does not host drives and Method 4 is the route. The G9 runs Android 10 and the G5 runs Android 9.0, so SnapDisk installs on either of them; the G4 needs an Android version check first, and the Q5 and the Q8 LTE cannot run it at all.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — Evolveo StrongPhone camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the phone normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the phone to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: a file manager (the stock route, no app needed)</h2>
+  <p>A file manager can copy your photos to the USB drive — the YouTube guide's route is an OTG connection with the built-in file manager, and it is the manual route for external storage: 1. Plug in the USB drive — a notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage for the drive. 2. Open the file manager (Files by Google on Evolveo StrongPhone phones) and confirm the USB drive shows up under storage devices. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until the file manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: Evolveo's own tools (Google Photos, Google Drive, or a microSD card — not phone-to-USB)</h2>
+  <p>If you want Evolveo's own route, know what each tool actually does — there is no Evolveo backup page pointing at a USB drive at all, and none of the stock tools writes your photos as plain files to a USB drive automatically. <strong>1. Google Photos</strong> is Google's own photo backup app, and it is the stock photo backup on Evolveo StrongPhone Android phones: it automatically backs up photos to your Google account. It is a real backup — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. <strong>2. Google Drive</strong> is the cloud backup Android names by default — "on Android devices the default built-in service is Google Drive. With Google Drive you have 15Gb free" — it backs your data up to Google's cloud. It is a real backup — but it is a cloud backup, not a USB copy, and Google accounts only offer 15 GB of free storage. <strong>3. Google backup</strong> is what Android itself names: personal settings back up to Google's servers with a Google account, and are restored to a new phone when you sign in with that account. It is a real backup — but it backs up settings, not a folder of photo files on a drive you hold. <strong>4. A microSD card</strong> is the local option on the G5 and the G9 — both take a card up to 128 GB. It is a real local copy — but the card stays in the phone, and opening the card anywhere else needs a card reader. <strong>5. A computer copy</strong> is the other way to move files off the phone — connect the phone to a computer with a USB cable and copy DCIM to the computer. It is a real backup — but it needs a PC in between, and the backup lands on the PC, not on a USB drive as plain files straight from the phone. None of them is a one-tap way to copy your camera roll to a drive. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the Evolveo StrongPhone into the computer with a USB cable, tap the USB notification and choose File transfer — and drag the DCIM folder onto the USB drive. This works fine, and it is the only route above that needs a second device in between. It is also the only route that works if the G5 turns out not to host USB drives at all — since every model still connects to a computer as storage — and the only route that works at all on the Q5, the Q8 LTE, the Z4, the X5, and the Z6, which cannot run SnapDisk. If the phone and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the phone is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>OTG support is unconfirmed on the G5.</strong> The G9 lists USB OTG support — mobilespecs lists "USB: yes v2.0 OTG" — and FindPare lists "USB OTG: Yes" for the G4, but no source I found mentions OTG on the G5 at all, so plug a drive in and check Settings &gt; Storage on that model before relying on it. The drive mounting is the test.</li>
+    <li><strong>The Q8 LTE's OTG support is disputed between sources.</strong> Alza's own description lists "microUSB OTG" for the Q8 LTE, while FindPare lists USB OTG as No for the same phone. The Q8's OTG is not leaned on here — and it cannot run SnapDisk anyway, since it runs Android 4.4.</li>
+    <li><strong>The G4's Android version is unconfirmed.</strong> FindPare lists "USB OTG: Yes" for the G4, released December 2016, but no source I found states which Android version it runs — and the site itself says its information is "not ascertained". Check Settings &gt; About phone on the G4 before installing: SnapDisk needs Android 7.0 or later.</li>
+    <li><strong>Five Evolveo models cannot run SnapDisk at all.</strong> The Q5 runs Android 5.1 and the Q8 LTE runs Android 4.4 — both below SnapDisk's Android 7.0 minimum — and the Z4, the X5, and the Z6 are feature phones, not Android phones at all. On those phones the computer copy in Method 4 is the route.</li>
+    <li><strong>The adapter differs by model.</strong> The G5 and the G9 have a USB Type-C port, so a USB-C flash drive plugs straight into either of them and a regular USB-A drive needs a USB-C OTG adapter on either of them. The G4, the Q5, and the Q8 LTE have a micro-USB port, so a regular USB-A drive needs a micro-USB OTG adapter on those models. A plain USB-C charging cable is not an OTG adapter: it connects the phone to a computer, which is the opposite direction.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter you don't need — or the wrong one.</strong> A USB-C flash drive plugs straight into the G5 and the G9, both of which have USB-C — so an adapter is only needed for a regular USB-A drive, and it must be a USB-C OTG adapter on those models, a micro-USB OTG adapter on the G4, the Q5, and the Q8 LTE. A plain USB-C charging cable is not an OTG adapter: it connects the phone to a computer, which is the opposite direction.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google Drive and Google Photos back your phone up to Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> A computer copy with a USB cable moves files to a computer — but it is a copy to a computer, and the backup lands on the PC. If the phone and the drive are all you have, a phone-to-USB copy is the route, not a desktop copy.</li>
+    <li><strong>Mistaking a spec table or a manual page for a phone-to-USB guide.</strong> The G5 manual and the Evolveo StrongPhone spec pages are real Evolveo pages — but the manual only lists an Android version and a USB connector type, and the spec pages only list an Android version, a chipset, or a USB connector type. Neither of them describes copying your camera roll straight to a USB drive from the phone.</li>
+    <li><strong>Mistaking OTG support on one model for OTG support on the other.</strong> The G9 lists USB OTG support and the G4 lists it too — but no source I found mentions OTG on the G5, and the Q8 LTE's OTG is disputed between sources. Test with a drive on the G5, and use Method 2 or 4 on that model if the drive never mounts.</li>
+    <li><strong>Mistaking a microSD card copy for a USB backup.</strong> Copying DCIM to a microSD card is a real local copy — the G5 and the G9 take a card up to 128 GB — but the card stays in the phone, and opening it anywhere else needs a card reader; a USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 18, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On an Evolveo StrongPhone the cloud routes are Google Photos and Google Drive — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="jcb-photos-to-usb.html">Back up JCB photos to a USB drive (no computer)</a> — JCB is the closest parallel: another rugged brand whose own backup advice is a computer copy or cloud, not a phone-to-USB copy.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
