@@ -3230,6 +3230,98 @@ demand is read off competitor install velocity instead (see
   Article published Nov 17, 2026 (WL-76, 45th how-to):
   docs/unihertz-photos-to-usb.html.
 
+### 45. "back up Hotwav photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Hotwav-specific
+  phone-to-USB guide at all, let alone a Hotwav-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Hotwav-specific results are user manuals
+  whose backup advice is cloud storage or an external device,
+  and the rest are generic manual guides.
+- Current top results (scored Nov 17, 2026, live web search):
+  Coolmuster, "4 Ways to Transfer Files from Android to USB
+  Flash Drive"
+  (coolmuster.com/android/transfer-files-from-android-to-usb-flash-drive.html
+  — transfer files to a USB drive with an OTG cable and the
+  file manager, or with the Coolmuster Android Assistant PC
+  tool, or through a computer, or through a cloud service.
+  Generic Android, and the direct route is manual
+  select-copy-paste); YouTube, "How to Connect USB Drive to
+  Android Phone to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet
+  needed. Generic Android, and a manual file-manager guide);
+  Dr.Fone, "4 Practical Ways to Transfer Photos from Android
+  to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos with an OTG adapter, through Google
+  Drive, by drag-and-drop through a PC, or wirelessly
+  through AirDroid. Generic Android, and the direct route is
+  a manual file-manager copy); askfilo, "how to transfer
+  pictures from an android phone to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — connect the drive with a USB OTG adapter, find
+  DCIM/Camera in the file manager, and copy the photos to the
+  drive — or use a PC as a middleman. Generic Android, and
+  the direct route is manual select-copy-paste);
+  TheGadgetians, "How to Transfer Files From Phone to USB
+  Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — connect a USB drive to an Android phone with an OTG
+  adapter, open the file manager, select files, and paste
+  them onto the drive. Generic Android and iPhone, and a
+  manual file-manager guide); YouTube, "How to Transfer
+  Photos, Videos and any Files from Android Phone to USB
+  Pendrive (USB Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — OTG adapter and the
+  phone's built-in file manager, with a FAT32 or exFAT drive.
+  Generic Android, and a manual file-manager guide); Photos
+  to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — the one-tap app alternative:
+  copies the whole gallery to a pen drive in one tap, copies
+  only new photos next time, warns about the FAT32 4 GB
+  limit. Free with ads, one-time purchase to remove them.
+  Generic Android, not a Hotwav guide, and it does not
+  promise oldest-first order, detailed progress with Pause
+  and Stop, or size verification of every file); HOTWAV Note
+  13 Max Smartphone User Manual
+  (manuals.plus/asin/B0DL5KT8SC.pdf — the box includes an OTG
+  cable, the phone runs Android 14 with a 48MP main camera
+  and 5160mAh battery, and the manual's backup advice is
+  "Regularly back up your data to cloud storage or an
+  external device to prevent data loss." A user manual, not a
+  guide — and the confirmation that Hotwav's own backup
+  advice is cloud or an external device in general, not a USB
+  drive); HOTWAV Note 13 Pro Smartphone User Manual
+  (manuals.plus/ae/1005008799108866 — the spec table lists OTG
+  as Yes, the box includes an OTG cable, the phone runs
+  Android 13 with a 50MP main camera and 5160mAh battery,
+  and the TF card slot is shared with one of the SIM slots. A
+  user manual, not a guide — and the confirmation that the
+  Note 13 Pro has OTG); HOTWAV Cyber 13 Pro Rugged Phone
+  (hotwav.com/products/hotwav-cyber-13-pro-rugged-phone —
+  OTG reverse charging that lets the phone charge other
+  devices from its 10800mAh battery, 256GB storage with up
+  to 2TB TF expansion. A product page, not a guide — and the
+  confirmation that the Cyber 13 Pro has OTG); HOTWAV CYBER
+  13 Pro Rugged Phone user manual
+  (manuals.plus/cs/ae/1005006019824620 — the box includes an
+  OTG cable, the phone runs Android 13, and the manual
+  describes OTG reverse charging as a way to power other
+  devices when away from a power source. A user manual, not a
+  guide — and the confirmation that the Cyber 13 Pro ships
+  with an OTG cable); cloud routes — Google Photos syncs the
+  gallery to Google's servers, Google Drive backs data up to
+  Google's cloud with 15 GB free, and Google backup restores
+  data to a new phone from Google's cloud, not to a drive you
+  hold; Google Photos' "Storage saver" setting compresses
+  photos, and a cloud backup stops working the day you stop
+  paying for storage. Neither route gives a folder of plain
+  photo files on a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-77, 46th how-to):
+  docs/hotwav-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
