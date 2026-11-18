@@ -5500,6 +5500,173 @@ demand is read off competitor install velocity instead (see
   Fallback for WL-89: Land Rover Explore — no Land Rover article
   exists in docs/ yet.
 
+### 57. "back up Land Rover Explore photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Land Rover Explore-specific
+  phone-to-USB guide at all, let alone a Land Rover Explore-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Land Rover-specific results are user-manual
+  pages that give no USB-drive advice at all, and the rest are
+  generic manual guides.
+- Current top results (scored Nov 18, 2026, live web search):
+  MobiKin, "5 Ways: How to Transfer Photos from Android to Flash
+  Drive"
+  (mobikin.com/android-backup/transfer-photos-from-android-to-flash-drive.html
+  — File Explorer with a PC tool, OTG with the file manager, or
+  Google Photos in the cloud. Generic Android, and a manual guide
+  — every route is hand-picked files, a computer in between, or
+  the cloud); Dr.Fone (Wondershare), "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — connect the drive directly with an OTG adapter, use a PC
+  as a middleman with USB "File Transfer" mode, or go wireless
+  through Google Drive or AirDroid; the Dr.Fone PC software
+  bulk-exports photos to a computer. Generic Android, and a
+  manual guide — every route is hand-picked files, a computer
+  in between, or the cloud); YouTube, "How to Connect USB Drive
+  to Android Phone to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet needed.
+  Generic Android, and a manual file-manager guide); YouTube,
+  "How to Transfer Photos, Videos and any Files from Android
+  Phone to USB Pendrive (USB Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — verify OTG compatibility
+  first, connect the drive via an OTG adapter, open the file
+  manager, and copy or move. Generic Android, and a manual
+  file-manager guide); askfilo,
+  "how to transfer pictures from an android phone to a
+  flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — plug the flash drive into an OTG adapter, open the file
+  manager, find the DCIM folder, and copy to the USB drive.
+  Generic Android, and a manual file-manager guide);
+  epictechtips, "How to Transfer Pictures from Android Phone to
+  USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive in, tap the USB notification and choose
+  "Transfer photos", then use the file manager — or use a PC as
+  an intermediary. Generic Android, and a manual file-manager
+  guide); Coolmuster, "How to Transfer Photos from Android to
+  Flash Drive [5 Ways]"
+  (coolmuster.com/android/transfer-photos-from-android-to-usb-flash-drive.html
+  — drag and drop through a computer, or an OTG adapter with the
+  file manager. Generic Android, and a manual guide — the first
+  route needs a PC in between, and it notes that not all Android
+  devices support OTG); Land Rover Explore user manual (English
+  — 762 pages), manuals.co.uk
+  (manuals.co.uk/land-rover/explore/manual?p=602 — the official
+  manual: personal settings back up to Google's servers with a
+  Google account, photos are viewed in the Google Photos app, and
+  music files move from a PC onto the phone with the USB power
+  cable. A manual, not a backup guide — and the confirmation
+  that Land Rover's own backup advice points at Google's servers
+  or a computer, never at a USB drive); Land Rover Explore user
+  manual, gebruikershandleiding.com
+  (gebruikershandleiding.com/LandRover-Explore/preview-handleiding-841917.html?page=0174
+  — the same 762-page manual: synchronising information is
+  through Google accounts, and files move between the phone and
+  a PC with the USB cable. A manual, not a backup guide — and the
+  confirmation that the same computer-or-cloud advice is the only
+  backup advice Land Rover's pages give for the Explore);
+  Land Rover Explore Smartphone Review, Notebookcheck
+  (notebookcheck.net/Land-Rover-Explore-Smartphone-Review.320806.0.html
+  — pure Android 7.1.1, with an update to Android 8 to follow;
+  the USB Type-C connection transfers data at USB 2.0 speeds and
+  "supports USB OTG". A review, not a guide — and the
+  confirmation that the Explore lists OTG support and runs
+  Android 7.1); Land Rover Explore smartphone, FindPare
+  (findpare.com/smartphone/land-rover-explore — "USB OTG: Yes",
+  "USB Type C: Yes", Android 7, MediaTek Helio X27 (MT6797X),
+  4 GB of RAM, 64 GB of storage. A spec table, not a guide —
+  and a second source for the Explore's OTG support. FindPare
+  itself says its information is not ascertained); Land Rover
+  Explore R, mobiles4sale
+  (mobiles4sale.com/models/land-rover-explore-r — Android 9 with
+  upgrade to 10, MediaTek Helio P35 MT6765, 4 GB of RAM, 64 GB of
+  storage, USB-C port, 3,100 mAh battery. A spec page, not a
+  guide — and the confirmation that the Explore R runs Android 9,
+  with no OTG mention); Land Rover Explore R Review, UL
+  benchmarks
+  (benchmarks.ul.com/zh-hans-jp/hardware/phone/Land+Rover+Explore+R+review
+  — Android 9.0, Helio P35, 4 GB of RAM, 64 GB of storage, 12 MP
+  camera, USB Type-C, microSD / microSDHC / microSDXC. A
+  benchmark page, not a guide — and a second source for the
+  Explore R's Android 9.0, with no OTG mention); Land Rover's
+  New Explore R Smartphone, outdoorsmagic
+  (outdoorsmagic.com/article/land-rover-explore-r-phone-first-look/
+  — Android 9 (with upgrade to 10), 4 GB RAM, 64 GB ROM,
+  expandable storage (microSD), dual SIM with nano SIM and
+  microSD. A first-look article, not a guide — and a third source
+  for the Explore R's Android 9, with no OTG mention); Land Rover
+  launches Explore R ruggedized smartphone, Notebookcheck
+  (notebookcheck.net/Land-Rover-launches-Explore-R-ruggedized-smartphone.490991.0.html
+  — IP68, MIL-STD 810H, 5.7-inch HD+ display with Gorilla Glass
+  6, 4 GB of RAM, 64 GB of storage expandable with a microSD card,
+  3,100 mAh battery, shipping at £399. A launch story, not a
+  guide — and the confirmation that the Explore R is the 2020
+  successor with a bigger screen and a smaller battery than the
+  original); Land Rover Explore Android Smartphone With Battery,
+  Adventure Packs Launched, Gadgets360
+  (gadgets360.com/mobiles/news/land-rover-explore-smartphone-battery-adventure-packs-price-specifications-1816305
+  — 5-inch full-HD display with Gorilla Glass 5, Android Nougat
+  with an upgrade to Android Oreo expected, 2.6 GHz deca-core
+  MediaTek X27, 4 GB of RAM, 64 GB of storage expandable via
+  microSD, 4000 mAh battery, IP68. A launch story, not a guide —
+  and the confirmation that the original Explore runs Android 7
+  with 64 GB of storage and a 4000 mAh battery); Photos to USB:
+  OTG Backup (Play listing, com.arzdrz.photos_to_usb — the
+  one-tap app alternative: copies the whole gallery to a pen drive
+  in one tap, copies only new photos next time, warns about the
+  FAT32 4 GB limit. Free with ads, one-time purchase to remove
+  them. Generic Android, not a Land Rover Explore guide, and it
+  does not promise oldest-first order, detailed progress with
+  Pause and Stop, or size verification of every file);
+  PhotoSaver Phone-to-Drive (Play listing, com.clevx.photosaver
+  — a second one-tap app alternative: save photos and videos to
+  any USB-C drive with one click, no cloud, no upload. Generic
+  Android, not a Land Rover Explore guide — but it does work on
+  both Explore models, since both have USB-C); cloud routes —
+  Google Photos syncs the gallery to Google's servers, Google
+  Drive backs data up to Google's cloud with 15 GB free, and
+  Google backup restores data to a new phone from Google's cloud,
+  not to a drive you hold; Google Photos' "Storage saver" setting
+  compresses photos, and a cloud backup stops working the day you
+  stop paying for storage. Neither route gives a folder of plain
+  photo files on a USB drive.
+  Land Rover specifics: OTG is confirmed in the sources found
+  only on the original Explore — FindPare lists "USB OTG: Yes"
+  and Notebookcheck's review says the USB-C connection "supports
+  USB OTG" — and the Explore runs Android 7.1, so it can run
+  SnapDisk; on the Explore R no source found mentions OTG at all,
+  so the article tells owners of that model to plug a drive in and
+  check Settings > Storage before relying on it instead of
+  claiming OTG across the range. Both models can run SnapDisk:
+  the Explore runs Android 7.1 and the Explore R runs Android 9
+  with an upgrade to 10. One spec page disagrees about the
+  Explore R: mobilespecs.net lists it as Android 7.0 with a
+  Helio X27 — the original Explore's spec — against Android 9
+  with a Helio P35 per mobiles4sale, UL benchmarks, and
+  outdoorsmagic, so that page is not used as a source for the
+  Explore R. Both models have USB-C. Both models take a microSD
+  card, but the capacity is unlisted in the sources found.
+  Land Rover's own tools: the Explore manual's backup is Google
+  backup to Google's servers, its photo backup is Google Photos,
+  and its file advice is a computer copy with a USB cable; a
+  microSD card is the local option on both models; no Land Rover
+  backup page points at a USB drive at all — none of them writes
+  plain photo files to a USB drive automatically. Out of scope,
+  named in the article: OTG support is unconfirmed on the
+  Explore R, so owners of that model should check Settings >
+  Storage before relying on it; one spec page (mobilespecs.net)
+  disagrees about the Explore R (Android 7.0 / Helio X27 against
+  Android 9 / Helio P35 per three other sources); the microSD
+  capacity is unlisted in the sources found — SnapDisk needs
+  Android 7.0 or later.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-89, 58th how-to):
+  docs/land-rover-explore-photos-to-usb.html.
+  Fallback for WL-90: JCB — no JCB article exists in docs/ yet.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
