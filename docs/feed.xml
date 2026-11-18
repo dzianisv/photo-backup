@@ -363,5 +363,12 @@
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
     <description>Crosscall's rugged Android phones (Core-X5, Action-X5, Core-Z5, and Stellar-X5) have USB host support on at least three of them — the spec tables list USB On-The-Go support as Yes for the Core-X5, Crosscall's own product sheet lists OTG as Yes for the Action-X5, and the Core-Z5 spec tables list USB On-The-Go support as Yes — and Crosscall has no phone-to-USB backup tool of its own: its backup advice is a computer copy or Google Drive and Google Photos in the cloud. One honest caveat up front: the Stellar-X5 spec pages I found list USB-C without mentioning OTG either way, so check Settings > Storage before relying on it on that model, and the older Trekker-M1 phones are out of scope — they run Android 5.1, below SnapDisk's Android 7.0 minimum. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up Hammer photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/hammer-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/hammer-photos-to-usb.html</guid>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Hammer's rugged Android phones (Blade V 5G, Iron 4, Blade 3, and Explorer Pro) have USB-C ports, and the only per-model OTG listings I found are FindPare's — USB OTG as Yes for the Energy 18x9 and the Blade 2 Pro — but FindPare itself says its information is not ascertained, and the current models' spec pages list USB-C without mentioning OTG either way, so check Settings > Storage before relying on it — and Hammer has no phone-to-USB backup tool of its own: its backup advice is a computer copy or Google Drive and Google Photos in the cloud. One honest caveat up front: the Hammer 6 LTE is a feature phone, not an Android phone at all, so SnapDisk cannot install on it, and the original Hammer Iron runs Android 4.2 and the AXE M LTE runs Android 6.0, below SnapDisk's Android 7.0 minimum. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
