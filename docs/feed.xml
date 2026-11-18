@@ -314,5 +314,12 @@
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
     <description>Cubot rugged phones (KingKong X, KingKong 11, and KingKong Mini 4) have USB-C and OTG across the range: spec tables list USB On-The-Go as Yes for the KingKong X, the KingKong 11, and the KingKong Mini 4, and the KingKong Dura lists USB Type-C 2.0 with OTG too — and Cubot has no phone-to-USB backup tool of its own: the per-model backup guides all point to a computer copy, Google cloud, or root-only tools, and the stock photo backup is Google Photos. A USB-C flash drive plugs straight into any current Cubot. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up Unihertz photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/unihertz-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/unihertz-photos-to-usb.html</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Unihertz phones (Titan 2, Titan Pocket, Jelly 2, Jelly Star, and Tank) have USB-C and OTG across the range: spec tables list USB On-The-Go as Yes for the Tank, USB on-the-go for the Titan Pocket and the Tank 2, USB OTG for the Titan 2, and USB OTG for the Jelly 2 and the Jelly Star — and Unihertz has no phone-to-USB backup tool of its own: the per-model FAQ pages all point to a computer copy, Google Drive, or Google Photos, and the stock photo backup is Google Photos. A USB-C flash drive plugs straight into any current Unihertz. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
