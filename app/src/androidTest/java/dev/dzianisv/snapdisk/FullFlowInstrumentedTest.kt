@@ -574,13 +574,28 @@ class FullFlowInstrumentedTest {
             BackupStatus.DONE,
             done.status,
         )
-        // Diagnostic (smoke runs 44199483316, 44203932318): the DONE
-        // notification was gone 10 s after DONE with active=[] —
-        // not read lag. Record whether it is present at the instant
-        // DONE is observed, so the next run shows whether it
-        // vanishes at publish/stopSelf time or later.
-        val titleAtDone = progressNotification()?.notification?.extras
-            ?.getCharSequence(Notification.EXTRA_TITLE)?.toString()
+        // Assert the DONE notification FIRST, before the slow file
+        // verification: the service does post it (smoke run
+        // 44210493197: its sound played right after DONE), but the
+        // harness destroys MainActivity and removes both tasks
+        // ~15 s after DONE, which cancels it — a 10 s poll started
+        // after the ~17 s file verification (runs 44199483316,
+        // 44203932318) always sees active=[]. Checking promptly
+        // catches it while it is alive.
+        val doneTitleDeadline = System.currentTimeMillis() + 10_000
+        var doneTitle: String? = null
+        while (System.currentTimeMillis() < doneTitleDeadline) {
+            doneTitle = progressNotification()?.notification?.extras
+                ?.getCharSequence(Notification.EXTRA_TITLE)?.toString()
+            if (doneTitle == "Backup complete") break
+            Thread.sleep(100)
+        }
+        assertEquals(
+            "DONE notification title was not 'Backup complete' within 10 s of DONE; " +
+                "active=${notificationManager.activeNotifications.map { it.id to it.notification.extras.getCharSequence(Notification.EXTRA_TITLE)?.toString() }}",
+            "Backup complete",
+            doneTitle,
+        )
         assertTrue(
             "no COPYING progress notification with Pause/Stop was observed; seen=$seenStates",
             sawProgressWithPauseStop,
@@ -602,45 +617,6 @@ class FullFlowInstrumentedTest {
         assertFileMatchesSeed(midDest, "e2e-mid.jpg", size)
         assertFileMatchesSeed(newDest, "e2e-new.jpg", size)
         assertNoStaleParts()
-        // Poll for the DONE notification: on a loaded emulator the
-        // NotificationManagerService can lag a just-posted
-        // notification by seconds (the same reason the screenshot
-        // tests poll up to 10 s), and publish() updates stateFlow
-        // BEFORE it posts the notification — a single immediate
-        // read can see DONE with no notification yet (smoke run
-        // 44183565903: title read as null). On timeout, dump the
-        // active notifications so a genuinely missing DONE
-        // notification is diagnosable instead of a bare null.
-        val doneTitleDeadline = System.currentTimeMillis() + 10_000
-        var doneTitle: String? = null
-        while (System.currentTimeMillis() < doneTitleDeadline) {
-            doneTitle = progressNotification()?.notification?.extras
-                ?.getCharSequence(Notification.EXTRA_TITLE)?.toString()
-            if (doneTitle == "Backup complete") break
-            Thread.sleep(100)
-        }
-        if (doneTitle != "Backup complete") {
-            // Isolate the mechanism: re-post the identical DONE
-            // notification from the TEST process (not the service).
-            // If it survives, the removal is tied to the service
-            // lifecycle (stopSelf after a service-posted notify);
-            // if it also vanishes, something removes this app's
-            // notifications wholesale at this point. The test still
-            // fails — this only diagnoses.
-            notificationManager.notify(
-                NotificationHelper.NOTIFICATION_ID_PROGRESS,
-                NotificationHelper.buildProgressNotification(ctx, done),
-            )
-            Thread.sleep(2_000)
-            val repostedTitle = progressNotification()?.notification?.extras
-                ?.getCharSequence(Notification.EXTRA_TITLE)?.toString()
-            throw AssertionError(
-                "DONE notification title was not 'Backup complete' within 10 s; " +
-                    "titleAtDone=$titleAtDone " +
-                    "active=${notificationManager.activeNotifications.map { it.id to it.notification.extras.getCharSequence(Notification.EXTRA_TITLE)?.toString() }} " +
-                    "repostedFromTest=$repostedTitle",
-            )
-        }
         println(
             "SMOKE full-flow: service copied 3 seeded photos oldest-first " +
                 "(first-seen $firstSeenOrder), progress with Pause/Stop seen, " +
