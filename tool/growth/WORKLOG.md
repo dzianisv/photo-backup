@@ -1,5 +1,85 @@
 # SnapDisk — Work Log
 
+## WL-96 — Back up Bluebird photos to USB article, 65th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/bluebird-photos-to-usb.html ("Back up Bluebird photos
+  to a USB drive (no computer)"), following the WL-54–WL-95 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 38 chars, meta
+  description 152 chars, JSON-LD validated by parse; sitemap and
+  feed XML parse. Feed now counts 65 items.
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search): Query 64 ("back
+  up Bluebird photos to USB drive without computer") is a real gap —
+  no Bluebird-specific phone-to-USB guide in the top results at all;
+  not one result even mentions Bluebird.
+  Pixoneye, "How to Transfer Photos from Your Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/ —
+  connect a USB drive with an OTG adapter, open Files by Google,
+  find DCIM/Camera, select a small batch, and Copy to the drive.
+  Generic Android, and a manual file-manager guide — and it warns
+  that a connector fitting physically does not prove the phone can
+  read or write the drive); The Gadgetians, "How to Transfer Files
+  From Phone to USB Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — OTG adapter and the file manager, select and paste onto the
+  drive. Generic Android, and a manual file-manager guide — and it
+  notes that not all Android phones support OTG at all);
+  Organizertone, "Easy Guide to Backing Up Phone Photos to an
+  External Drive for Seniors"
+  (organizertone.com/en/easy-guide-to-backing-up-phone-photos-to-an-external-drive-for-seniors-1058835/
+  — plug a USB-C flash drive straight into the phone, open the
+  file manager, find DCIM, and Copy to the drive. Generic Android,
+  and a manual file-manager guide — and it is written for consumer
+  phones from Samsung, Google, and Motorola, not enterprise
+  handhelds); Alibaba, "How To Quickly Backup Your Phone Photos
+  Without Using Cloud Storage"
+  (alibaba.com/product-insights/how-to-quickly-backup-your-phone-photos-without-using-cloud-storage.html
+  — a portable SSD or flash drive with OTG support and the file
+  manager, or a USB cable and a computer. Generic, and a manual
+  guide — and its fastest route is the one that needs a computer
+  in between); Photos to USB: OTG Backup
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — one tap copies the whole gallery to a pen drive, only new
+  photos next time; no internet, no cloud, no account. A rival
+  app, not a guide — and free with ads, a one-time purchase
+  removing the ads).
+  Honest limits recorded in the article: the EF550 (Android 10,
+  upgradable to Android 11 or 14, USB Type-C — Bluebird EF550
+  datasheet, Esper specs) clears SnapDisk's Android 7.0 minimum,
+  but host or OTG support is unconfirmed in the sources found on
+  every EF model — the drive mounting is the test; the EF400
+  (Android 5.1 or 6.x — EF400 datasheet) and the EF500 and the
+  EF500R (Android 5.1 or 6.x, microUSB 2.0 — UL Benchmarks, SOTI)
+  run below the Android 7.0 minimum and cannot run SnapDisk at
+  all; the EF501R ships with a USB Type-C cable and its manual
+  connects the device to a host computer, but its Android version
+  is unconfirmed in the sources found; the one Bluebird model with
+  OTG confirmed in its own datasheet is the CF550 (Android 11,
+  "USB Type C Connector (OTG)" — CF550 datasheet), a different
+  line from the EF series; Bluebird's own photo advice is the
+  EF501R manual's USB connection to a host computer, with no
+  USB-drive route at all; "Bluebird" also means school buses —
+  none of the top results for this query even mentions Bluebird.
+  Article published Nov 18, 2026 (WL-96, 65th how-to):
+  docs/bluebird-photos-to-usb.html.
+  Fallback for WL-97: Urovo — no Urovo article exists in
+  docs/ yet (DT-series enterprise Android handhelds).
+
 ## WL-95 — Back up Datalogic photos to USB article, 64th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
