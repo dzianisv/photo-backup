@@ -286,5 +286,12 @@
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
     <description>Doogee rugged phones (S118 Pro, S118, and S98) have USB-C and OTG across the range: spec tables list USB Type-C 2.0 with OTG for the S118 Pro, the S118 Pro manual lists OTG with reverse charging, and the S98 lists On-The-Go among its USB features — and Doogee has no phone-to-USB backup tool of its own: the per-model backup guides all point to a computer copy, Google Drive, or Google Photos, with a microSD card as the local option. A USB-C flash drive plugs straight into any current Doogee. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up CAT photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/cat-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/cat-photos-to-usb.html</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <description>CAT rugged phones (S75, S62 Pro, and S53) have USB-C and OTG across the range: spec tables list USB Type-C 2.0 with OTG for the S75 and the S62 Pro, and USB Type-C 3.0 with OTG for the S53 — and CAT has no phone-to-USB backup tool of its own: the per-model backup guides all point to a computer copy, Google Drive, or Google Photos, with a microSD card as the local option. A USB-C flash drive plugs straight into any current CAT. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
