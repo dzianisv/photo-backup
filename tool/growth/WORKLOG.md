@@ -1,5 +1,158 @@
 # SnapDisk — Work Log
 
+## WL-97 — Back up Urovo photos to USB article, 66th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/urovo-photos-to-usb.html ("Back up Urovo photos
+  to a USB drive (no computer)"), following the WL-54–WL-96 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 35 chars, meta
+  description 148 chars, JSON-LD validated by parse; sitemap and
+  feed XML parse. Feed now counts 66 items.
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search): Query 65 ("back
+  up Urovo photos to USB drive without computer") is a real gap —
+  no Urovo-specific phone-to-USB guide in the top results at all;
+  not one result even mentions Urovo.
+  Dr.Fone, "4 Practical Ways to Transfer Photos from Android to
+  USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — connect a USB drive with an OTG adapter and copy with the file
+  manager, use a PC as a middleman via USB File Transfer mode, or
+  go wireless through Google Drive or AirDroid. Generic Android,
+  and a manual guide — and its bulk-export route is Dr.Fone's own
+  Windows and Mac software, which needs a computer in between);
+  YouTube, "How to Connect USB Drive to Android Phone to Move
+  Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — connect a USB drive with an
+  OTG connection and move photos with the phone's built-in file
+  manager. Generic Android, and a manual file-manager guide — and
+  it is a video, not a Urovo guide); Pixoneye, "How to Transfer
+  Photos from Your Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/ —
+  connect a USB drive with an OTG adapter, open Files by Google,
+  find DCIM/Camera, select a small batch, and Copy to the drive.
+  Generic Android, and a manual file-manager guide — and it warns
+  that a connector fitting physically does not prove the phone can
+  read or write the drive, and that not every phone supports USB
+  host at all); FotoSafe, "Back up Android photos to USB"
+  (fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/
+  — connect the drive, select it as the destination in FotoSafe,
+  review the media and start copying, picking the USB drive in
+  Android's system picker. A rival app, not a guide — and it needs
+  Android 9 or later with USB host or OTG support, and if Android
+  does not show the USB storage in the file manager, FotoSafe
+  cannot select it either); EpicTechTips, "How to Transfer
+  Pictures from Android Phone to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive into the phone, tap the USB notification
+  and select "Transfer photos", then copy with the file manager —
+  or use a computer, cloud storage, or email as the middleman.
+  Generic Android, and a manual guide — and it says outright to
+  confirm first that the phone supports USB OTG at all); Urovo
+  DT50 spec listings
+  (globalsources.com/product/rugged-pda_1206814742f.htm — the DT50:
+  Android 9, 10, or 11 optional, charging interface Type-C and
+  pogo pin, and the data interface listed as "USB Type-C(OTG)*1".
+  A spec listing, not a guide — and the confirmation that the
+  DT50's USB-C port is an OTG port, the one DT model with host
+  support confirmed in a spec listing); Urovo DT50 review
+  (benchmarks.ul.com/jp-jp/hardware/phone/Urovo+DT50+(SMD660)+review
+  — the DT50 (Snapdragon 660): Android 9.0, USB Type-C, microSD
+  expansion. A spec page, not a guide — and the confirmation that
+  the DT50 runs Android 9.0, so it clears SnapDisk's Android 7.0
+  minimum, with a USB Type-C port); Urovo DT50U/DT50P user guide
+  (manuals.plus/urovo/dt50u-handheld-barcode-scanner-manual —
+  connect the device to a PC with the USB cable, drag the
+  notification bar down, and pick a USB mode — "Transfer images"
+  among them — and "when the device is connected as a HOST to other
+  devices, 'Connected device' will be automatically selected". A
+  manual, not a guide — and the confirmation that the DT50U/DT50P
+  has a host mode at all, plus the fact that Urovo's own file
+  advice is a connection to a host computer, with no USB-drive
+  route); Urovo DT50S user manual
+  (manuals.plus/urovo/dt50s-mobile-data-terminal-manual — connect
+  the device to a PC with the USB cable, open the USB setting
+  interface from the notification bar, and pick "Transfer images"
+  to move images to the computer. A manual, not a guide — and the
+  confirmation that Urovo's own file advice for the DT50S is a
+  connection to a host computer, with no USB-drive route at all);
+  Urovo DT50D specifications
+  (carema.de/wp-content/uploads/2025/04/DT50DEN-SPEC-S20230413.pdf
+  — the DT50D runs Android 13.0, octa-core 2.45 GHz, 4 GB RAM and
+  64 GB ROM, microSD up to 256 GB. A spec sheet, not a guide — and
+  the confirmation that the newest DT50 variant runs Android 13,
+  so it clears SnapDisk's Android 7.0 minimum by a wide margin);
+  Urovo DT40 datasheet
+  (posmarket-product-uploads.s3-ap-southeast-2.amazonaws.com/10259/DT40EN-SPEC-S20201010.pdf
+  — the DT40 runs Android 9.0, octa-core 1.8 GHz, with interfaces
+  listed as "USB Type-C、3.5mm ear phone jack、Pogopin" and a
+  microSD card up to 256 GB. A datasheet, not a guide — and the
+  confirmation that the DT40 runs Android 9.0, so it clears
+  SnapDisk's Android 7.0 minimum, with a USB Type-C port and no
+  host or OTG mention anywhere in it); Urovo DT40S datasheet
+  (cdn.sanity.io/files/es9t8zhu/production/233e07c9ba7fcddf1c07386b2d77234d0231b128.pdf
+  — the DT40S runs Android 12.0, octa-core 1.8 GHz, with a 4-inch
+  display and a microSD card up to 128 GB. A datasheet, not a guide
+  — and the confirmation that the DT40S runs Android 12, so it
+  clears SnapDisk's Android 7.0 minimum, with no host or OTG
+  mention anywhere in it); Urovo DT66 datasheet
+  (acventis.com/media/e8/b2/99/1751374707/ACVENTIS_urovo_dt66_datasheet.pdf
+  — the DT66 runs Android 13.0, GMS/AER, upgradable to Android 18,
+  octa-core 2.4 GHz, with interfaces listed as "USB Type-C,
+  Pogo-pin" and a microSD card up to 256 GB. A datasheet, not a
+  guide — and the confirmation that the DT66 runs Android 13, so
+  it clears SnapDisk's Android 7.0 minimum, with a USB Type-C port
+  and no host or OTG mention anywhere in it); Urovo DT50 5G
+  instruction manual (manuals.plus/ae/1005008655164534.pdf — the
+  DT50 5G runs Android 10, with a 16 MP rear camera, and it "does
+  not support Google Mobile Services (GMS)". A manual, not a guide
+  — and the confirmation that the DT50 5G runs Android 10, so it
+  clears SnapDisk's Android 7.0 minimum, plus the warning that its
+  Play Store route is closed: install the APK from GitHub, not
+  from Play); Cleverence, "How to Connect the Urovo DT50 to a PC"
+  (cleverence.com/articles/technical-manuals/how-to-connect-the-urovo-dt50-to-a-pc/
+  — connect the DT50 to a PC with a USB-C cable, tap the USB
+  notification, choose File Transfer (MTP), and drag and drop
+  files in File Explorer. A PC guide, not a phone-to-USB guide —
+  and the confirmation that every Urovo-specific transfer guide
+  found is a computer guide, with no USB-drive route at all).
+  Honest limits recorded in the article: USB host or OTG support
+  is confirmed in the sources found only on the DT50 — its spec
+  listings give the data interface as "USB Type-C(OTG)", and the
+  DT50U/DT50P user guide describes a host mode — while no source
+  found mentions host or OTG support on the DT40 or the DT66 at
+  all, so the drive mounting is the test; every DT model listed
+  clears SnapDisk's Android 7.0 minimum — the DT40 runs Android
+  9.0, the DT40S runs Android 12, the DT50 runs Android 9.0, 11,
+  or 13 depending on the variant, the DT50 5G runs Android 10, and
+  the DT66 runs Android 13, upgradable to Android 18 — so the
+  minimum is not the blocker on this line, the host support is;
+  no DT30 or DT60 model turned up in the sources found, so the
+  article covers only the DT40, the DT50, and the DT66; the DT50
+  5G ships without Google Mobile Services, so the Play Store is not
+  on it — install the APK from GitHub, not from Play; Urovo has no
+  phone-to-USB backup tool of its own — the only Urovo-specific
+  backup advice found is the DT50 manuals' USB connection to a host
+  computer, with no USB-drive route at all.
+  Article published Nov 18, 2026 (WL-97, 66th how-to):
+  docs/urovo-photos-to-usb.html.
+  Fallback for WL-98: Getac — no Getac article exists in
+  docs/ yet (ZX-series rugged Android tablets/handhelds).
+
 ## WL-96 — Back up Bluebird photos to USB article, 65th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
