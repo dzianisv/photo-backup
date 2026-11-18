@@ -1,5 +1,144 @@
 # SnapDisk — Work Log
 
+## WL-69 — Back up Blackview photos to USB article, 38th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/blackview-photos-to-usb.html ("Back up Blackview
+  photos to a USB drive (no computer)"), following the
+  WL-54/WL-55/WL-56/WL-57/WL-58/WL-59/WL-60/WL-61/WL-62/WL-63/
+  WL-64/WL-65/WL-66/WL-67/WL-68 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot
+  — same reuse as the 8th through 37th articles). Facts
+  verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price); no INTERNET permission in AndroidManifest.xml;
+  FAT32 files >=4 GiB skipped with reason
+  (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw byte-stream copy
+  (BackupEngine.copyWithResume — no decode/re-encode) with size
+  verification after copy. Search evidence (Nov 17, 2026 live
+  web search): there is no Blackview-specific phone-to-USB
+  guide in the top results at all — the Blackview-specific
+  result is Blackview's own generic Android backup guide, and
+  the rest are generic manual guides.
+  Blackview blog, "6 Ways to backup data on your Android
+  phone"
+  (blackview.hk/blog/how-to/backup-data-on-android-phone —
+  Blackview's own backup guide: 1. Google Account Backup, 2.
+  Local Backup to Computer (connect the phone to a computer
+  with a USB cable and copy files to the computer or an
+  external hard drive), 3. Third-party backup apps (Google
+  One, Dropbox, MEGA, Box, Samsung Smart Switch, OneDrive,
+  Titanium Backup with root), 4. Backup to External Storage
+  ("many Android phones support the use of a microSD card or
+  USB OTG storage — you can use these external storage options
+  to manually copy your important files, photos, and other data
+  for a local backup"), 5. ADB backup (needs a computer and
+  command-line tools), 6. Custom recovery and full system
+  backup (TWRP, unlock the bootloader, expert level, may void
+  warranties). Blackview-specific, but generic Android — and
+  the one USB route in it is a manual copy, not an automated
+  backup); Blackview store blog, "How do I transfer data from
+  my phone's storage if it won't turn on?"
+  (store.blackview.hk/en-us/blogs/gadgets-guides/how-transfer-
+  data-phone-not-turn-on — connect the phone to a computer,
+  check it appears as external storage, navigate through
+  folders like DCIM (photos), Downloads, or Documents, and copy
+  files directly to the computer — or check cloud backups
+  (Google Drive, Dropbox, OneDrive). A PC-or-cloud recovery
+  guide, not a phone-to-USB backup); Blackview Active 6 store
+  page, Data Migration
+  (store.blackview.hk/products/active-6-tablet-price — Data
+  Migration transfers all your data from an old device to a new
+  one in a few taps. Phone-to-phone, not phone-to-USB);
+  AskFilo, "how to transfer pictures from an android phone to
+  a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-
+  transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — USB OTG adapter plus a file manager: find the DCIM folder,
+  open Camera, select the photos, copy to the USB drive — or use
+  a PC or Mac as a middleman. Generic Android, and the direct
+  route is manual select-copy-paste); YouTube, "How to Connect
+  USB Drive to Android Phone to Move Photos & Videos (Best
+  Method)" (youtube.com/watch?v=PYcbV25CczI — OTG connection
+  and the phone's built-in file manager, no computer or
+  internet needed. Generic Android, and a manual file-manager
+  guide); Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-drop,
+  Google Drive, or AirDroid over Wi-Fi; generic Android, and
+  most of the ways need a computer or a cloud account);
+  Android Central forum, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-
+  usb.973408/ — use the OTG adapter, plug in any supported
+  external device, and it shows up as external storage in the
+  File Manager. Generic Android, and a forum thread, not a
+  guide); SoftHandTech guide
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-
+  memory-stick/ — a computer, direct OTG transfer, or cloud
+  services; generic Android, and two of the three ways need a
+  computer or a cloud account); EpicTechTips guide
+  (epictechtips.com/transfer-pictures-from-android-phone-to-
+  usb-flash-drive/ — plug the flash drive in, tap the USB
+  notification, select "Transfer photos", open the file
+  manager, select the photos, Move to the USB drive — or cloud
+  storage, email, or a computer transfer. Generic Android, and
+  a manual file-manager guide); Photos to USB: OTG Backup (Play
+  listing, com.arzdrz.photos_to_usb — a real phone-to-USB app,
+  one-tap whole-gallery copy, only new photos next time,
+  warns about the FAT32 4 GB limit, free with ads, one-time
+  purchase removes ads — generic Android, not a Blackview
+  guide, and it does not promise oldest-first order,
+  detailed progress with Pause and Stop, or size
+  verification of every file).
+  Wider search: Blackview BV9300 specs
+  (m.gsmarena.com/_bv9300-12266.php — USB Type-C, OTG; spec
+  tables, not a guide — and the confirmation that the BV9300
+  has OTG); Blackview BV9300 Pro user manual
+  (manuals.plus/asin/B0DHRXS57Q.pdf — OTG functionality is
+  supported, enabling the phone to charge other devices; 5W OTG
+  reverse charging. A manual, not a guide — and the confirmation
+  that the BV9300 Pro has OTG); Blackview BV6200 Pro user
+  manual (manuals.plus/ae/1005005996698718 — OTG is listed
+  among the features, and reverse charging uses an OTG cable to
+  charge other devices. A manual, not a guide — and the
+  confirmation that the BV6200 Pro has OTG).
+  Blackview specifics: OTG is across the current Blackview
+  rugged range: spec tables list USB Type-C with OTG for the
+  BV9300, OTG reverse charging for the BV9300 Pro, and OTG for
+  the BV6200 Pro; Blackview's own backup guide lists USB OTG as
+  an external-storage option you can copy files to by hand; the
+  BV9300 and the BV6200 Pro both have a microSDXC slot up to
+  1 TB, and on the BV9300 the card uses the shared SIM slot;
+  Blackview has no phone-to-USB backup tool of its own — its
+  own guide's six ways are a Google account backup, a local
+  backup to a computer, third-party backup apps, a manual copy
+  to external storage, ADB, and custom recovery, and none of
+  them is an automated phone-to-USB copy; Data Migration is
+  Blackview's phone-to-phone tool, not a USB backup; the other
+  routes are Google's (Google Photos, Google backup). Blackview's
+  own tools: Google Account Backup (Settings > Google > Backup,
+  "Back up to Google One", to Google's cloud, 15 GB free — which
+  Blackview's own guide says may not be sufficient for photos
+  and videos) backs the phone up to Google's cloud; Local Backup
+  to Computer (USB cable, File Explorer or Finder, copy to the
+  computer or an external hard drive) backs the phone up to the
+  PC; Backup to External Storage (manually copy files to microSD
+  or USB OTG storage) is the manual copy in Method 2 — none of
+  them writes plain photo files to a USB drive automatically.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-69, 38th how-to):
+  docs/blackview-photos-to-usb.html. Query 37 scored in
+  tool/growth/searches.md. Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml (38 items)
+  updated. PR #104 (article), merge a7dca3c, CI run 44209086755
+  (Android PR, success); this row PR #105.
+
 ## WL-68 — Back up HTC photos to USB article, 37th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
