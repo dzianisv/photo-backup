@@ -1,5 +1,106 @@
 # SnapDisk — Work Log
 
+## WL-94 — Back up Honeywell photos to USB article, 63rd how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/honeywell-photos-to-usb.html ("Back up Honeywell photos
+  to a USB drive (no computer)"), following the WL-54–WL-93 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 39 chars, meta
+  description 157 chars, JSON-LD validated by parse; sitemap and
+  feed XML parse. Feed now counts 63 items.
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search): Query 62 ("back
+  up Honeywell photos to USB drive without computer") is a real gap —
+  no Honeywell-specific phone-to-USB guide in the top results at all;
+  the two Honeywell-specific results are guides to connecting a CT60
+  to a PC, and the top result is a Honeywell DVR manual.
+  Honeywell HRDE4X4 user manual, "Archiving still images onto usb"
+  (manualsdir.com/manuals/89728/honeywell-hrde4x4.html?page=44
+  — press ARCH on an HRDE4X4 DVR to archive a still image or a
+  video clip onto a USB memory stick through the front-panel USB
+  port. A DVR exercise, not a guide — and about a DVR's recorded
+  video, not the photos on a CT-series handheld);
+  Honeywell SecuraDrive 80GB USB pocket drive
+  (archive.techplayboy.com/reviews/honeywell-securadrive-80gb-usb-18-inch-pocket-drive.html
+  — a Honeywell-branded portable USB hard drive for storing photos,
+  videos, and MP3s, with Windows-only password software. A drive,
+  not a guide — and Windows-XP-era hardware, not a way to copy
+  photos off a CT-series handheld);
+  Honeywell CT60 user guide, "Sync Data"
+  (manualspro.net/572965-honeywell-ct60-handheld-computer-user-guide
+  — connect the CT60 to a computer with a USB charge/communication
+  accessory, tap the USB charging notification, choose Transfer
+  files or Transfer photos (PTP), and copy files in the computer's
+  file browser. A PC guide, not a phone-to-USB guide — and the
+  confirmation that the CT60's photos move off the device only
+  through a computer);
+  Honeywell EDA51 user guide, "Sync Data"
+  (manuals.plus/honeywell/eda51-scanpal-handheld-computer-manual
+  — the same Sync Data route on the ScanPal EDA51. A PC guide, not
+  a phone-to-USB guide — and the EDA51 is a ScanPal, not a
+  CT-series handheld);
+  Cleverence, "How to Connect Honeywell Dolphin CT60 to PC? USB,
+  Drivers, ADB and File Transfer Guide"
+  (cleverence.com/articles/technical-manuals/how-to-connect-honeywell-dolphin-ct60-to-pc/
+  — connect the CT60 to a PC with a data-capable USB-C cable,
+  tap the USB notification, choose File transfer (MTP), and move
+  files in Windows File Explorer. A PC guide, not a phone-to-USB
+  guide — and the confirmation that the CT60 has a USB-C port);
+  Techwalla, "How to Move Pictures from Camera to Flash Drive With
+  No Computer"
+  (techwalla.com/articles/how-to-move-pictures-from-camera-to-flash-drive-with-no-computer
+  — a combination memory-card reader and USB flash drive for a
+  camera's memory card. Generic, and a manual guide — and about a
+  camera's card, not the handheld's own gallery); YouTube, "How to
+  Connect USB Drive to Android Phone to Move Photos & Videos (Best
+  Method)" (youtube.com/watch?v=PYcbV25CczI — OTG connection and
+  the phone's built-in file manager, no computer or internet needed.
+  Generic Android, and a manual file-manager guide); Pixoneye, "How
+  to Transfer Photos from Your Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/ —
+  connect a USB drive with an OTG adapter, open Files by Google,
+  find DCIM/Camera, select a small batch, and Copy to the drive.
+  Generic Android, and a manual file-manager guide — and it warns
+  that a connector fitting physically does not prove the phone can
+  read or write the drive).
+  Honest limits recorded in the article: USB OTG support is
+  listed only on the CT45 (Android 11 to 13, USB 3.0 via USB Type C
+  — Honeywell CT45 datasheet) and the CT47 (Android 12 to 16, USB
+  3.1 via USB Type C — Honeywell CT47 datasheet), both "USB OTG
+  supported via I/O ports", while host or OTG support is
+  unconfirmed in the sources found on the CT30 XP (Android 11 to 13,
+  USB 3.0 via USB Type C — Honeywell datasheet), the CT40 (Android
+  7.1, upgradable to Android 11, USB Type-C — Esper specs) and the
+  CT60 (Android 7.1, upgradable to Android 11, USB Type-C — Esper
+  specs; Android 7/8/9 flavors per Honeywell support) — the drive
+  mounting is the test on those models; every model listed clears
+  SnapDisk's Android 7.0 minimum, but the older CT50 runs Android
+  6.0 and cannot run SnapDisk at all; all five models have a USB-C
+  port, so a USB-C flash drive plugs straight into any of them;
+  "Honeywell" also means DVRs and USB drives — the top search result
+  is an HRDE4X4 DVR manual about archiving video to a USB stick, not
+  photos off a handheld; Honeywell's own photo advice is the CT60
+  manual's file sync to a host computer, with no USB-drive route at
+  all.
+  Article published Nov 18, 2026 (WL-94, 63rd how-to):
+  docs/honeywell-photos-to-usb.html.
+  Fallback for WL-95: Datalogic — no Datalogic article exists in
+  docs/ yet (Memor-series enterprise Android handhelds).
+
 ## WL-93 — Back up Zebra photos to USB article, 62nd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
