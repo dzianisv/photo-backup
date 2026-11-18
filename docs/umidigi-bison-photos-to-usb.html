@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up UMIDIGI Bison photos to a USB drive — SnapDisk</title>
+<meta name="description" content="Back up UMIDIGI Bison photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/umidigi-bison-photos-to-usb.html">
+<meta property="og:title" content="Back up UMIDIGI Bison photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up UMIDIGI Bison photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/umidigi-bison-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/umidigi-bison-photos-to-usb.html#article",
+      "headline": "Back up UMIDIGI Bison photos to a USB drive (no computer)",
+      "description": "Back up UMIDIGI Bison photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-18",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/umidigi-bison-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/umidigi-bison-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up UMIDIGI Bison photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, on the UMIDIGI Bison models with USB host support. The spec tables list USB OTG as Yes for the Bison, the Bison Pro, the Bison Plus, the Bison 2 Pro, the Bison X10, the Bison X10G, and the Bison X10 Pro, while the Bison X20's OTG host support is unverified — one source lists OTG Support as No, the others list USB Type-C only, and the reviews mention OTG reverse charging only — and the Bison GT, the Bison GT2 Pro, the Bison GT2 Pro 5G, the Bison X10S, and the Bison X10S NFC have no OTG listing in the sources I found, so check Settings > Storage on those models before relying on it; the confirmed models all have USB-C, so a USB-C flash drive plugs straight in. UMIDIGI has no phone-to-USB backup tool of its own: its backup advice is a computer copy or Google Drive and Google Photos in the cloud. The stock route is a file manager: connect the drive, open the file manager, pick the photos in DCIM/Camera, and Copy to the drive. SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/umidigi-bison-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up UMIDIGI Bison photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/umidigi-bison-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up UMIDIGI Bison photos to a USB drive (no computer)</h1>
+  <p class="dek">UMIDIGI's rugged Bison line (Bison, Bison Pro, Bison Plus, Bison 2 Pro, Bison X10, Bison X10G, and Bison X10 Pro) lists USB OTG support in its spec tables, and UMIDIGI has no phone-to-USB backup tool of its own: its backup advice is a computer copy or Google Drive and Google Photos in the cloud. Three honest caveats up front: the Bison X20's OTG host support is unverified — one source lists OTG Support as No, the others list USB Type-C only, and the reviews mention OTG reverse charging only — and the Bison GT, the Bison GT2 Pro, the Bison GT2 Pro 5G, the Bison X10S, and the Bison X10S NFC have no OTG listing in the sources I found, so check Settings &gt; Storage on those models before relying on it; the original Bison's connector itself is disputed between sources — GSMArena and MySmartPrice list USB-C, while mobility.com.ng lists microUSB — so check your own port before buying an adapter; and I did not verify the Android version of the Bison X10, X10G, or X10 Pro in the sources above, so owners of those models should check Settings &gt; About phone — SnapDisk needs Android 7.0 or later. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 18, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On a UMIDIGI Bison Android phone with USB host support, plug a USB drive in — the spec tables list USB OTG as Yes for the Bison, the Bison Pro, the Bison Plus, the Bison 2 Pro, the Bison X10, the Bison X10G, and the Bison X10 Pro, while the Bison X20's OTG host support is unverified and the Bison GT, the Bison GT2 Pro, the Bison GT2 Pro 5G, the Bison X10S, and the Bison X10S NFC have no OTG listing in the sources I found, so test with a drive on those models — then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: a file manager works — the YouTube guides' route is an OTG connection with the built-in file manager, and askfilo's route is the same — but the direct route is manual select-copy-paste with no progress detail, no resume, and no verification; UMIDIGI's own backup advice works too, but there is none pointing at a USB drive — devicesfaq's advice for the Bison is a computer copy with a USB cable and a file browser, or Google Drive and Google Photos in the cloud, which back your photos up to Google's servers, not to a USB drive as plain files. One rival app does exist — Photos to USB: OTG Backup copies a whole gallery to a pen drive in one tap and resumes where it stopped — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 18, 2026, no top search result for this query is a UMIDIGI Bison-specific phone-to-USB guide at all, let alone a UMIDIGI Bison-specific automated whole-library backup with progress, Pause/Stop, and resume: the UMIDIGI-specific results are FAQ pages that give no USB-drive advice at all, and the rest are generic manual guides.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up UMIDIGI Bison photos to USB drive without computer" and there is no UMIDIGI Bison-specific phone-to-USB guide in the top results at all — the UMIDIGI-specific results are FAQ pages that give no USB-drive advice at all, and the rest are generic Android guides, in different packaging:</p>
+  <ul>
+    <li><strong>YouTube, "How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)"</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos</a>) — OTG connection and the phone's built-in file manager, no computer or internet needed. Generic Android, and a manual file-manager guide.</li>
+    <li><strong>askfilo, "how to transfer pictures from an android phone to a flashdrive"</strong> (<a href="https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432">how to transfer pictures from an android phone to a flashdrive</a>) — plug the flash drive into an OTG adapter, open the file manager, find the DCIM folder, and copy to the USB drive. Generic Android, and a manual file-manager guide.</li>
+    <li><strong>epictechtips, "How to Transfer Pictures from Android Phone to USB Flash Drive"</strong> (<a href="https://epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/">How to Transfer Pictures from Android Phone to USB Flash Drive</a>) — plug the flash drive in, tap the USB notification and choose "Transfer photos", then use the file manager — or use a PC as an intermediary. Generic Android, and a manual file-manager guide.</li>
+    <li><strong>techsolutions.support.com, "How to Move Photos from a Phone to an SD Card or Flash Drive"</strong> (<a href="https://www.techsolutions.support.com/how-to/move-photos-from-phone-sd-card-flash-drive">How to Move Photos from a Phone to an SD Card or Flash Drive</a>) — connect the OTG adapter, insert the flash drive, open the file manager, and copy to USB — or move photos to an SD card instead. Generic Android, and a manual file-manager guide.</li>
+    <li><strong>techdows, "USB OTG: everything you need to know"</strong> (<a href="https://techdows.com/usb-otg-everything-you-need-to-know.html">USB OTG: everything you need to know</a>) — an OTG explainer: connect the drive through an OTG adapter, open Files by Google, tap the "USB available" notification, and copy. Generic Android, and a guide to OTG itself, not a Bison guide.</li>
+    <li><strong>Frequently asked questions UMIDIGI BISON, devicesfaq</strong> (<a href="https://www.devicesfaq.com/en/frequently-asked-questions/umidigi-bison">UMIDIGI BISON FAQ</a>) — "How to backup my UMIDIGI BISON? … The most economical method to make a backup is to connect the UMIDIGI BISON to a computer using the USB cable and make a copy of the files using the file browser." — and photos via Google Photos, with downloads in "Files", previously known as "Files by Google". A FAQ page, not a backup guide — and the confirmation that UMIDIGI's own backup advice points at a computer or the cloud, never at a USB drive.</li>
+    <li><strong>Frequently asked questions UMIDIGI Bison GT, Bison Pro, Bison X10, Bison X10 PRO, Bison X10S NFC, Bison 2021, and BISON GT2 5G, devicesfaq</strong> (<a href="https://www.devicesfaq.com/en/frequently-asked-questions/umidigi-bison-pro">Bison Pro FAQ</a>, <a href="https://www.devicesfaq.com/en/frequently-asked-questions/umidigi-bison-gt">Bison GT FAQ</a>) — the same template on every Bison model page: a computer copy with a USB cable and a file browser, or Google Drive with 15 GB free, or Google Photos in the cloud. FAQ pages, not backup guides — and the confirmation that the same computer-or-cloud advice is the only backup advice UMIDIGI's pages give for the whole Bison line.</li>
+    <li><strong>Umidigi Bison, MySmartPrice</strong> (<a href="https://www.mysmartprice.com/mobile/umidigi-bison-msp17087">Umidigi Bison</a>) — "USB Type-C, Mass storage device, USB charging, USB On-The-Go" and "USB OTG Support, Yes", with 128 GB of storage and a microSD slot up to 256 GB. A spec table, not a guide — and the confirmation that the original Bison lists OTG.</li>
+    <li><strong>Umidigi Bison, GSMArena</strong> (<a href="http://m.gsmarena.com/umidigi_bison-13110.php">Umidigi Bison</a>) — "Released 2020 … Android 10 … USB Type-C, OTG", with a microSDXC slot. A spec table, not a guide — and the confirmation that the original Bison runs Android 10 with USB-C and OTG.</li>
+    <li><strong>UMIDIGI BISON, mobility.com.ng</strong> (<a href="https://mobility.com.ng/umidigi-bison/">UMIDIGI BISON</a>) — "USB: microUSB v2.0. USB-OTG", with external storage "microSD, up to 128 GB (dedicated slot)". A spec table, not a guide — and the confirmation that one source lists the original Bison as microUSB, against GSMArena and MySmartPrice listing USB-C, so the connector is disputed.</li>
+    <li><strong>Umidigi Bison Pro, MySmartPrice</strong> (<a href="https://www.mysmartprice.com/mobile/umidigi-bison-pro-msp18180">Umidigi Bison Pro</a>) — Android 11, "USB Type-C, Mass storage device, USB charging, USB On-The-Go", with a microSD slot up to 256 GB. A spec table, not a guide — and the confirmation that the Bison Pro lists OTG.</li>
+    <li><strong>Umidigi Bison Pro, GSMArena</strong> (<a href="https://m.gsmarena.com/umidigi_bison_pro-ampp-13099.php">Umidigi Bison Pro</a>) — "Announced 2021. Released 2021 … OS Android 11 … USB Type-C, OTG". A spec table, not a guide — and a second source for the Bison Pro's Android 11 and OTG support.</li>
+    <li><strong>Umidigi Bison Pro, Smartprix</strong> (<a href="https://www.smartprix.com/mobiles/umidigi-bison-pro-ppd1cpjfsbe7">Umidigi Bison Pro</a>) — "Android 11 Smartphone … USB Features: USB on-the-go", with NFC, IP68 and IP69K, and expandable storage. A spec table, not a guide — and a third source for the Bison Pro's OTG support.</li>
+    <li><strong>Umidigi Bison Plus, Alza</strong> (<a href="https://www.alza.sk/EN/umidigi-bison-plus-orange-d6635663.htm">Umidigi Bison Plus</a>) — Android 11, "In its specification, one can find the term OTG. That means that you can connect flash drives or an external HDD to this mobile phone", with USB-C and a hybrid slot. A retailer spec page, not a guide — and the confirmation that the Bison Plus lists OTG.</li>
+    <li><strong>Umidigi Bison 2 Pro, MySmartPrice</strong> (<a href="https://www.mysmartprice.com/mobile/umidigi-bison-2-pro-msp22553">Umidigi Bison 2 Pro</a>) — Android 12, "USB Type-C, Mass storage device, USB charging, USB On-The-Go" and "USB OTG Support, Yes", with 256 GB of storage and a microSD slot up to 512 GB. A spec table, not a guide — and the confirmation that the Bison 2 Pro lists OTG.</li>
+    <li><strong>Umidigi Bison X10G vs Bison X10, phonesdata</strong> (<a href="https://phonesdata.com/en/smartphones/umidigi/bison-x10g-5464853/--bison-x10-5461676/">Bison X10G vs Bison X10</a>) — "USB: USB Type-C, OTG" for the X10G and "Yes, USB Type C, USB On-The-Go (OTG)" for the X10. A spec comparison, not a guide — and the confirmation that the Bison X10 and X10G list OTG.</li>
+    <li><strong>Umidigi Bison X10G vs Bison X10 Pro, phonesdata</strong> (<a href="https://phonesdata.com/en/smartphones/umidigi/bison-x10g-5464853/--bison-x10-pro-5461675/">Bison X10G vs Bison X10 Pro</a>) — "USB: USB Type-C, OTG" for the X10G and "Yes, USB Type C, USB On-The-Go (OTG)" for the X10 Pro. A spec comparison, not a guide — and the confirmation that the Bison X10 Pro lists OTG.</li>
+    <li><strong>Umidigi Bison X20, maxbhi</strong> (<a href="https://www.maxbhi.com/umidigi-bison-x20-spare-parts-and-accessories-en.html">Umidigi Bison X20</a>) — "USB Data Cable Support Yes … Data Cable Connector Type USB-C … OTG Support No". A spec table, not a guide — and the confirmation that one source lists the Bison X20's OTG support as No.</li>
+    <li><strong>Umidigi Bison X20, pkgsm</strong> (<a href="https://www.pkgsm.com/product/umidigi-bison-x20/">Umidigi Bison X20</a>) — Android 13, "USB: USB Type-C", with no OTG mention. A spec table, not a guide — and the confirmation that another source lists the X20's USB as Type-C only, with no OTG either way.</li>
+    <li><strong>UMIDIGI BISON X20, official site</strong> (<a href="http://umidigi.com/page-umidigi_bisonx20_overview.html">UMIDIGI BISON X20</a>) — Android 13, 128 GB of storage with a microSD card slot up to 1 TB, NFC, and no OTG mention in the page I found. A product page, not a guide — and the confirmation that UMIDIGI's own X20 page does not list OTG host support.</li>
+    <li><strong>Umidigi Bison X20 review, acciyo</strong> (<a href="https://www.acciyo.com/umidigi-bison-x20-rugged-smartphone-a-complete-2025-review-of-price-specs-and-durability/">Umidigi Bison X20 review</a>) — "The phone also supports OTG reverse charging, meaning you can use the Bison X20 to give a small boost to other devices like your wireless Earbuds or a friend's phone". A review, not a guide — and the confirmation that the X20's OTG mention is reverse charging only, which powers another device and is not hosting a drive.</li>
+    <li><strong>Umidigi Bison GT2 Pro 5G, gsmfind</strong> (<a href="https://gsmfind.com/umidigi-bison-gt2-pro-5g.html">Umidigi Bison GT2 Pro 5G</a>) — Android 12, "USB: USB Type-C", with no OTG mention; the GT2 Pro page (<a href="https://gsmfind.com/umidigi-bison-gt2-pro.html">Umidigi Bison GT2 Pro</a>) lists the same, Android 12 with "USB: USB Type-C". Spec tables, not guides — and the confirmation that neither GT2 Pro model lists OTG in the sources I found.</li>
+    <li><strong>Frequently asked questions UMIDIGI BISON GT2 PRO 5G, devicesfaq</strong> (<a href="https://www.devicesfaq.com/en/frequently-asked-questions/umidigi-bison-gt2-pro-5g">BISON GT2 PRO 5G FAQ</a>) — "Check the BISON GT2 PRO 5G's 2.0 OTG Type-C charging port, for example, with a flashlight" and "it comes from the factory with the Android 11 operating system", against gsmfind's Android 12. A FAQ page, not a backup guide — and the confirmation that the GT2 Pro 5G's OTG mention is about the charging port, and its Android version is disputed between sources.</li>
+    <li><strong>Photos to USB: OTG Backup</strong> (<a href="https://play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb">Google Play</a>) — the one-tap app alternative: a real phone-to-USB app that copies the whole gallery to a pen drive in one tap, copies only new photos next time, and warns about the FAT32 4 GB limit. It is free with ads, with a one-time purchase to remove them. It is the closest thing to this article's job — but it is a generic Android listing, not a UMIDIGI Bison guide, and it does not promise oldest-first order, detailed progress with Pause and Stop, or size verification of every file.</li>
+    <li><strong>Cloud routes</strong> — Google Photos syncs your gallery to Google's servers, Google Drive backs your data up to Google's cloud with 15 GB free, and Google backup restores your data to a new phone from Google's cloud, not to a drive you hold; Google Photos' "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Neither route gives you a folder of plain photo files on a USB drive.</li>
+  </ul>
+  <p>None of them is a UMIDIGI Bison-specific phone-to-USB guide at all, and none of them offers an automated UMIDIGI Bison photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What you need</h2>
+  <p>A UMIDIGI Bison Android phone (Android 7.0 or later for SnapDisk) — the Bison runs Android 10, the Bison Pro and the Bison Plus run Android 11, and the Bison 2 Pro runs Android 12 — so a USB-C flash drive plugs straight into any of them, while a regular USB-A drive needs a USB-C OTG adapter — and enough space on the drive for the photos you want to keep. Three UMIDIGI specifics: first, OTG is confirmed on most of the line — the spec tables list USB OTG as Yes for the Bison, the Bison Pro, the Bison Plus, the Bison 2 Pro, the Bison X10, the Bison X10G, and the Bison X10 Pro — but the Bison X20's OTG host support is unverified and the Bison GT, the Bison GT2 Pro, the Bison GT2 Pro 5G, the Bison X10S, and the Bison X10S NFC have no OTG listing in the sources I found, so plug a drive in and check Settings &gt; Storage before relying on it on those models. Second, UMIDIGI has no phone-to-USB backup tool of its own — its backup advice is a computer copy or Google Drive and Google Photos; the stock photo backup is Google Photos; the stock file manager is Files by Google; UMIDIGI camera photos live in DCIM/Camera, as on any Android phone. The Bison Pro takes a microSD card up to 256 GB, the Bison 2 Pro takes one up to 512 GB, and the Bison X20 takes one up to 1 TB — the original Bison's card size is the one disagreement in my sources, 256 GB per MySmartPrice and 128 GB per mobility.com.ng — so a card is an option, and it still stays in the phone and opening it anywhere else needs a card reader, while a USB drive plugs into any computer as it is. Third, SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the USB drive.</strong> It mounts on plug-in on most UMIDIGI Bison Android phones — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage for the drive. OTG is listed as Yes for the Bison, the Bison Pro, the Bison Plus, the Bison 2 Pro, the Bison X10, the Bison X10G, and the Bison X10 Pro, so the drive should appear on them; on the Bison X20, the Bison GT, the Bison GT2 Pro, the Bison GT2 Pro 5G, the Bison X10S, and the Bison X10S NFC, whose OTG host support is unverified or unlisted, check Settings &gt; Storage to confirm the drive mounted.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — UMIDIGI camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the phone normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the phone to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: a file manager (the stock route, no app needed)</h2>
+  <p>A file manager can copy your photos to the USB drive — the YouTube guides' route is an OTG connection with the built-in file manager, and askfilo's route is the same, and either is the manual route for external storage: 1. Plug in the USB drive — a notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage for the drive. 2. Open the file manager (Files by Google on UMIDIGI phones) and confirm the USB drive shows up under storage devices. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until the file manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: UMIDIGI's own tools (Google Photos, Google Drive, or a microSD card — not phone-to-USB)</h2>
+  <p>If you want UMIDIGI's own route, know what each tool actually does — there is no UMIDIGI backup page pointing at a USB drive at all, and none of the stock tools writes your photos as plain files to a USB drive automatically. <strong>1. Google Photos</strong> is Google's own photo backup app, and it is the stock photo backup on UMIDIGI Bison Android phones: it automatically backs up photos to your Google account. It is a real backup — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. <strong>2. Google Drive</strong> is the cloud backup Android names by default — "on Android devices the default built-in service is Google Drive. With Google Drive you have 15Gb free" — it backs your data up to Google's cloud. It is a real backup — but it is a cloud backup, not a USB copy, and Google accounts only offer 15 GB of free storage. <strong>3. A microSD card</strong> is the local option UMIDIGI documents — the Bison Pro takes a card up to 256 GB, the Bison 2 Pro takes one up to 512 GB, and the Bison X20 takes one up to 1 TB, with the original Bison's card size disputed between sources (256 GB per MySmartPrice, 128 GB per mobility.com.ng) — and the Bison FAQ names passing media files to a memory card as one of the backup steps. It is a real local copy — but the card stays in the phone, and opening the card anywhere else needs a card reader. <strong>4. A computer copy</strong> is the other way to move files off the phone — "connect the UMIDIGI BISON to a computer using the USB cable and make a copy of the files using the file browser", per devicesfaq, and the same advice appears on the Bison GT, Bison Pro, Bison X10, Bison X10 Pro, Bison X10S, X10S NFC, Bison 2021, and GT2 5G pages. It is a real backup — but it needs a PC in between, and the backup lands on the PC, not on a USB drive as plain files straight from the phone. None of them is a one-tap way to copy your camera roll to a drive. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works — and it is the route UMIDIGI's own backup advice names: plug the UMIDIGI Bison phone into the computer with a USB cable, tap the USB notification and choose File transfer — and drag the DCIM folder onto the USB drive. This works fine, and it is the only route above that needs a second device in between. If the phone and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the phone is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>OTG is not confirmed on every Bison model.</strong> The spec tables list USB OTG as Yes for the Bison, the Bison Pro, the Bison Plus, the Bison 2 Pro, the Bison X10, the Bison X10G, and the Bison X10 Pro — but the Bison X20's OTG host support is unverified (one source lists OTG Support as No, the others list USB Type-C only, and the reviews mention OTG reverse charging only, which powers another device and is not hosting a drive), and the Bison GT, the Bison GT2 Pro, the Bison GT2 Pro 5G, the Bison X10S, and the Bison X10S NFC have no OTG listing in the sources I found, so confirm the drive mounts in Settings &gt; Storage on those models before relying on it. SnapDisk still needs Android 7.0 or later.</li>
+    <li><strong>The original Bison's connector is disputed.</strong> GSMArena and MySmartPrice list the original Bison as USB-C, while mobility.com.ng lists it as microUSB v2.0 — so check your own port before buying an adapter: a USB-C flash drive plugs straight into a USB-C port, while a micro-USB port needs a micro-USB OTG adapter instead.</li>
+    <li><strong>The Bison X10 models' Android versions are unverified.</strong> I did not verify the Android version of the Bison X10, the Bison X10G, or the Bison X10 Pro in the sources above, so owners of those models should check Settings &gt; About phone first — SnapDisk needs Android 7.0 or later and cannot install on anything older. Every other Bison model I found runs Android 10, 11, 12, or 13.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter you don't need — or the wrong one.</strong> A USB-C flash drive plugs straight into the Bison, the Bison Pro, the Bison Plus, the Bison 2 Pro, the Bison X10, the Bison X10G, and the Bison X10 Pro, which all have USB-C — so an adapter is only needed for a regular USB-A drive, and it must be a USB-C OTG adapter, not a micro-USB one. A plain USB-C charging cable is not an OTG adapter: it connects the phone to a computer, which is the opposite direction. And if your original Bison turns out to have the microUSB port that mobility.com.ng lists instead of the USB-C that GSMArena and MySmartPrice list, you need a micro-USB OTG adapter, not a USB-C one — check the port first.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google Drive and Google Photos back your phone up to Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> UMIDIGI's own backup advice is a computer copy with a USB cable and a file browser — but it is a copy to a computer, and the backup lands on the PC. If the phone and the drive are all you have, a phone-to-USB copy is the route, not a desktop copy.</li>
+    <li><strong>Mistaking a spec table or a FAQ page for a phone-to-USB guide.</strong> The Bison FAQ page and the Bison spec tables are real UMIDIGI pages — but the FAQ only says to connect the phone to a computer and copy the files with a file browser, and the spec tables only list "USB OTG: Yes". Neither of them describes copying your camera roll straight to a USB drive from the phone.</li>
+    <li><strong>Mistaking "OTG reverse charging" for OTG host support.</strong> The Bison X20 reviews mention OTG reverse charging — that is the phone sharing its battery with another device, not the phone reading a flash drive. The host evidence for the X20 is absent: one source lists OTG Support as No and the others list USB Type-C only, so test with a drive.</li>
+    <li><strong>Mistaking a microSD card copy for a USB backup.</strong> Copying DCIM to a microSD card is a real local copy — the Bison Pro takes a card up to 256 GB, the Bison 2 Pro takes one up to 512 GB, and the Bison X20 takes one up to 1 TB — but the card stays in the phone, and opening it anywhere else needs a card reader; a USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 18, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On UMIDIGI the cloud routes are Google Photos and Google Drive — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Installing SnapDisk on a Bison that is too old to run it.</strong> The Bison X10, X10G, and X10 Pro have unverified Android versions in my sources — SnapDisk needs Android 7.0 or later. Check Settings &gt; About phone before installing on those models; every other Bison model I found runs Android 10, 11, 12, or 13.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="fossibot-photos-to-usb.html">Back up FOSSiBOT photos to a USB drive (no computer)</a> — FOSSiBOT is the closest parallel: another rugged brand whose own backup advice is a computer copy or cloud, not a phone-to-USB copy.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

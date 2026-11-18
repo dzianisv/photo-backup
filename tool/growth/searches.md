@@ -4570,6 +4570,225 @@ demand is read off competitor install velocity instead (see
   docs/fossibot-photos-to-usb.html.
   Fallback for WL-85: UMIDIGI Bison (Bison line) — no UMIDIGI
   article exists in docs/ yet.
+
+### 53. "back up UMIDIGI Bison photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a UMIDIGI Bison-specific
+  phone-to-USB guide at all, let alone a UMIDIGI Bison-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the UMIDIGI-specific results are FAQ pages
+  that give no USB-drive advice at all, and the rest are
+  generic manual guides.
+- Current top results (scored Nov 18, 2026, live web search):
+  YouTube, "How to Connect USB Drive to Android Phone to Move
+  Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet needed.
+  Generic Android, and a manual file-manager guide); askfilo,
+  "how to transfer pictures from an android phone to a
+  flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — plug the flash drive into an OTG adapter, open the file
+  manager, find the DCIM folder, and copy to the USB drive.
+  Generic Android, and a manual file-manager guide);
+  epictechtips, "How to Transfer Pictures from Android Phone
+  to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive in, tap the USB notification and choose
+  "Transfer photos", then use the file manager — or use a PC as
+  an intermediary. Generic Android, and a manual file-manager
+  guide); techsolutions.support.com, "How to Move Photos from
+  a Phone to an SD Card or Flash Drive"
+  (techsolutions.support.com/how-to/move-photos-from-phone-sd-card-flash-drive
+  — connect the OTG adapter, insert the flash drive, open the
+  file manager, and copy to USB — or move photos to an SD card
+  instead. Generic Android, and a manual file-manager guide);
+  techdows, "USB OTG: everything you need to know"
+  (techdows.com/usb-otg-everything-you-need-to-know.html — an
+  OTG explainer: connect the drive through an OTG adapter, open
+  Files by Google, tap the "USB available" notification, and
+  copy. Generic Android, and a guide to OTG itself, not a Bison
+  guide); Frequently asked questions UMIDIGI BISON, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/umidigi-bison —
+  "How to backup my UMIDIGI BISON? … The most economical method
+  to make a backup is to connect the UMIDIGI BISON to a computer
+  using the USB cable and make a copy of the files using the file
+  browser." — and photos via Google Photos, with downloads in
+  "Files", previously known as "Files by Google". A FAQ page, not
+  a backup guide — and the confirmation that UMIDIGI's own
+  backup advice points at a computer or the cloud, never at a USB
+  drive); Frequently asked questions UMIDIGI Bison GT, Bison
+  Pro, Bison X10, Bison X10 PRO, Bison X10S NFC, Bison 2021, and
+  BISON GT2 5G, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/umidigi-bison-pro
+  and devicesfaq.com/en/frequently-asked-questions/umidigi-bison-gt
+  — the same template on every Bison model page: a computer copy
+  with a USB cable and a file browser, or Google Drive with 15 GB
+  free, or Google Photos in the cloud. FAQ pages, not backup
+  guides — and the confirmation that the same computer-or-cloud
+  advice is the only backup advice UMIDIGI's pages give for the
+  whole Bison line); Umidigi Bison, MySmartPrice
+  (mysmartprice.com/mobile/umidigi-bison-msp17087 — "USB Type-C,
+  Mass storage device, USB charging, USB On-The-Go" and "USB OTG
+  Support, Yes", with 128 GB of storage and a microSD slot up to
+  256 GB. A spec table, not a guide — and the confirmation that
+  the original Bison lists OTG); Umidigi Bison, GSMArena
+  (m.gsmarena.com/umidigi_bison-13110.php — "Released 2020 …
+  Android 10 … USB Type-C, OTG", with a microSDXC slot. A spec
+  table, not a guide — and the confirmation that the original
+  Bison runs Android 10 with USB-C and OTG); UMIDIGI BISON,
+  mobility.com.ng (mobility.com.ng/umidigi-bison/ — "USB:
+  microUSB v2.0. USB-OTG", with external storage "microSD, up to
+  128 GB (dedicated slot)". A spec table, not a guide — and the
+  confirmation that one source lists the original Bison as
+  microUSB, against GSMArena and MySmartPrice listing USB-C, so
+  the connector is disputed); Umidigi Bison Pro, MySmartPrice
+  (mysmartprice.com/mobile/umidigi-bison-pro-msp18180 — Android
+  11, "USB Type-C, Mass storage device, USB charging, USB
+  On-The-Go", with a microSD slot up to 256 GB. A spec table, not
+  a guide — and the confirmation that the Bison Pro lists OTG);
+  Umidigi Bison Pro, GSMArena
+  (m.gsmarena.com/umidigi_bison_pro-ampp-13099.php — "Announced
+  2021. Released 2021 … OS Android 11 … USB Type-C, OTG". A spec
+  table, not a guide — and a second source for the Bison Pro's
+  Android 11 and OTG support); Umidigi Bison Pro, Smartprix
+  (smartprix.com/mobiles/umidigi-bison-pro-ppd1cpjfsbe7 —
+  "Android 11 Smartphone … USB Features: USB on-the-go", with
+  NFC, IP68 and IP69K, and expandable storage. A spec table, not
+  a guide — and a third source for the Bison Pro's OTG support);
+  Umidigi Bison Plus, Alza
+  (alza.sk/EN/umidigi-bison-plus-orange-d6635663.htm — Android 11,
+  "In its specification, one can find the term OTG. That means
+  that you can connect flash drives or an external HDD to this
+  mobile phone", with USB-C and a hybrid slot. A retailer spec
+  page, not a guide — and the confirmation that the Bison Plus
+  lists OTG); Umidigi Bison 2 Pro, MySmartPrice
+  (mysmartprice.com/mobile/umidigi-bison-2-pro-msp22553 — Android
+  12, "USB Type-C, Mass storage device, USB charging, USB
+  On-The-Go" and "USB OTG Support, Yes", with 256 GB of storage
+  and a microSD slot up to 512 GB. A spec table, not a guide —
+  and the confirmation that the Bison 2 Pro lists OTG); Umidigi
+  Bison X10G vs Bison X10, phonesdata
+  (phonesdata.com/en/smartphones/umidigi/bison-x10g-5464853/--bison-x10-5461676/
+  — "USB: USB Type-C, OTG" for the X10G and "Yes, USB Type C,
+  USB On-The-Go (OTG)" for the X10. A spec comparison, not a
+  guide — and the confirmation that the Bison X10 and X10G list
+  OTG); Umidigi Bison X10G vs Bison X10 Pro, phonesdata
+  (phonesdata.com/en/smartphones/umidigi/bison-x10g-5464853/--bison-x10-pro-5461675/
+  — "USB: USB Type-C, OTG" for the X10G and "Yes, USB Type C,
+  USB On-The-Go (OTG)" for the X10 Pro. A spec comparison, not a
+  guide — and the confirmation that the Bison X10 Pro lists OTG);
+  Umidigi Bison X20, maxbhi
+  (maxbhi.com/umidigi-bison-x20-spare-parts-and-accessories-en.html
+  — "USB Data Cable Support Yes … Data Cable Connector Type
+  USB-C … OTG Support No". A spec table, not a guide — and the
+  confirmation that one source lists the Bison X20's OTG support
+  as No); Umidigi Bison X20, pkgsm
+  (pkgsm.com/product/umidigi-bison-x20/ — Android 13, "USB: USB
+  Type-C", with no OTG mention. A spec table, not a guide — and
+  the confirmation that another source lists the X20's USB as
+  Type-C only, with no OTG either way); UMIDIGI BISON X20,
+  official site (umidigi.com/page-umidigi_bisonx20_overview.html
+  — Android 13, 128 GB of storage with a microSD card slot up to
+  1 TB, NFC, and no OTG mention in the page I found. A product
+  page, not a guide — and the confirmation that UMIDIGI's own X20
+  page does not list OTG host support); Umidigi Bison X20 review,
+  acciyo
+  (acciyo.com/umidigi-bison-x20-rugged-smartphone-a-complete-2025-review-of-price-specs-and-durability/
+  — "The phone also supports OTG reverse charging, meaning you
+  can use the Bison X20 to give a small boost to other devices
+  like your wireless Earbuds or a friend's phone". A review, not
+  a guide — and the confirmation that the X20's OTG mention is
+  reverse charging only, which powers another device and is not
+  hosting a drive); Umidigi Bison GT2 Pro 5G, gsmfind
+  (gsmfind.com/umidigi-bison-gt2-pro-5g.html — Android 12, "USB:
+  USB Type-C", with no OTG mention; the GT2 Pro page
+  (gsmfind.com/umidigi-bison-gt2-pro.html) lists the same,
+  Android 12 with "USB: USB Type-C". Spec tables, not guides —
+  and the confirmation that neither GT2 Pro model lists OTG in
+  the sources I found); Frequently asked questions UMIDIGI BISON
+  GT2 PRO 5G, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/umidigi-bison-gt2-pro-5g
+  — "Check the BISON GT2 PRO 5G's 2.0 OTG Type-C charging port,
+  for example, with a flashlight" and "it comes from the factory
+  with the Android 11 operating system", against gsmfind's
+  Android 12. A FAQ page, not a backup guide — and the
+  confirmation that the GT2 Pro 5G's OTG mention is about the
+  charging port, and its Android version is disputed between
+  sources); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — the one-tap app alternative: copies
+  the whole gallery to a pen drive in one tap, copies only new
+  photos next time, warns about the FAT32 4 GB limit. Free with
+  ads, one-time purchase to remove them. Generic Android, not a
+  UMIDIGI Bison guide, and it does not promise oldest-first
+  order, detailed progress with Pause and Stop, or size
+  verification of every file); cloud routes — Google Photos syncs
+  the gallery to Google's servers, Google Drive backs data up to
+  Google's cloud with 15 GB free, and Google backup restores data
+  to a new phone from Google's cloud, not to a drive you hold;
+  Google Photos' "Storage saver" setting compresses photos, and
+  a cloud backup stops working the day you stop paying for
+  storage. Neither route gives a folder of plain photo files on a
+  USB drive.
+  UMIDIGI specifics: OTG is confirmed on most of the line — the
+  spec tables list USB OTG as Yes for the Bison, the Bison Pro,
+  the Bison Plus, the Bison 2 Pro, the Bison X10, the Bison X10G,
+  and the Bison X10 Pro — but the Bison X20's OTG host support is
+  unverified (one source lists OTG Support as No, the others list
+  USB Type-C only, and the reviews mention OTG reverse charging
+  only) and the Bison GT, the Bison GT2 Pro, the Bison GT2 Pro
+  5G, the Bison X10S, and the Bison X10S NFC have no OTG listing
+  in the sources I found, so the article tells owners of those
+  models to check Settings > Storage before relying on it instead
+  of claiming OTG across the range; the original Bison's
+  connector is disputed between sources (USB-C per GSMArena and
+  MySmartPrice, microUSB per mobility.com.ng), so the article
+  tells owners to check their own port before buying an adapter;
+  all seven named models have USB-C per the spec tables, so a
+  USB-C flash drive plugs straight in and a regular USB-A drive
+  needs a USB-C OTG adapter; the Bison Pro takes a microSD card
+  up to 256 GB, the Bison 2 Pro takes one up to 512 GB, and the
+  Bison X20 takes one up to 1 TB — the original Bison's card size
+  is the one disagreement in the sources, 256 GB per MySmartPrice
+  and 128 GB per mobility.com.ng — but a card is still not a USB
+  drive: it stays in the phone and opening it anywhere else needs
+  a card reader.
+  UMIDIGI's own tools: devicesfaq's backup advice for the Bison
+  (a computer copy with a USB cable and a file browser, or Google
+  Drive with 15 GB free and Google Photos in the cloud) points at
+  a computer or the cloud, never at a USB drive, and the same
+  template appears on the Bison GT, Bison Pro, Bison X10, Bison
+  X10 Pro, Bison X10S, X10S NFC, Bison 2021, and GT2 5G pages;
+  the Bison X20 reviews' OTG mention is reverse charging only;
+  Google Photos (the stock photo backup on UMIDIGI Bison Android
+  phones) backs photos up to Google's cloud; Google Drive
+  (Android's default built-in service, 15 GB free) backs data up
+  to Google's cloud; a microSD card (up to 256 GB on the Bison
+  Pro, up to 512 GB on the Bison 2 Pro, up to 1 TB on the Bison
+  X20) is a real local copy, but the card stays in the phone and
+  needs a reader elsewhere; a computer copy (connect the phone to
+  a computer using the USB cable and make a copy of the files
+  using the file browser) lands on the PC, not on a USB drive; no
+  UMIDIGI backup page points at a USB drive at all — none of them
+  writes plain photo files to a USB drive automatically. Out of
+  scope, named in the article: the Bison X20's OTG host support
+  is unverified (one source lists OTG Support as No, the others
+  list USB Type-C only, and the reviews mention reverse charging
+  only); the Bison GT, the Bison GT2 Pro, the Bison GT2 Pro 5G,
+  the Bison X10S, and the Bison X10S NFC have no OTG listing in
+  the sources I found, so their OTG support is unverified; the
+  Bison GT2 Pro 5G's Android version is disputed between sources
+  (Android 11 per devicesfaq, Android 12 per gsmfind); the
+  original Bison's connector is disputed (USB-C per GSMArena and
+  MySmartPrice, microUSB per mobility.com.ng); the Bison X10,
+  X10G, and X10 Pro have unverified Android versions in the
+  sources above, so owners of those models should check Settings
+  > About phone — SnapDisk needs Android 7.0 or later.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-85, 54th how-to):
+  docs/umidigi-bison-photos-to-usb.html.
+  Fallback for WL-86: Energizer (Hard Case line) — no Energizer
+  article exists in docs/ yet.
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
