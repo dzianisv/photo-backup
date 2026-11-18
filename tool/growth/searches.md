@@ -4789,6 +4789,277 @@ demand is read off competitor install velocity instead (see
   docs/umidigi-bison-photos-to-usb.html.
   Fallback for WL-86: Energizer (Hard Case line) — no Energizer
   article exists in docs/ yet.
+### 54. "back up Energizer photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Energizer-specific
+  phone-to-USB guide at all, let alone an Energizer-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Energizer-specific results are FAQ pages
+  that give no USB-drive advice at all, and the rest are
+  generic manual guides.
+- Current top results (scored Nov 18, 2026, live web search):
+  YouTube, "How to Connect USB Drive to Android Phone to Move
+  Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet needed.
+  Generic Android, and a manual file-manager guide); pixoneye,
+  "How to Transfer Photos from Your Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage with a file
+  manager, make a trial copy first, use Copy rather than Move;
+  a computer is the fallback when direct connection is
+  unreliable. Generic Android and iPhone, and a manual
+  file-manager guide); YouTube, "How to Transfer Photos, Videos
+  and any Files from Android Phone to USB Pendrive (USB Drive
+  Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — verify OTG compatibility
+  first, connect the drive via an OTG adapter, open the file
+  manager, and copy or move. Generic Android, and a manual
+  file-manager guide); askfilo,
+  "how to transfer pictures from an android phone to a
+  flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — plug the flash drive into an OTG adapter, open the file
+  manager, find the DCIM folder, and copy to the USB drive.
+  Generic Android, and a manual file-manager guide);
+  epictechtips, "How to Transfer Pictures from Android Phone
+  to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive in, tap the USB notification and choose
+  "Transfer photos", then use the file manager — or use a PC as
+  an intermediary. Generic Android, and a manual file-manager
+  guide); Android Central forum, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — use the OTG adapter to plug in a USB drive and it should be
+  visible as external storage in the file manager. A forum
+  thread, not a guide — and a manual file-manager route);
+  coolmuster, "How to Transfer Photos from Android to Flash
+  Drive [5 Ways]"
+  (coolmuster.com/android/transfer-photos-from-android-to-usb-flash-drive.html
+  — drag and drop, an OTG adapter, a PC tool, Google Drive, or
+  AirDroid. Generic Android, and a manual guide — every route is
+  hand-picked files or a computer in between); Frequently asked
+  questions Energizer Hardcase H550S, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/energizer-hardcase-h550s
+  — "How to backup my Energizer Hardcase H550S? … The most
+  economical method to make a backup is to connect the
+  Energizer Hardcase H550S to a computer using the USB cable and
+  make a copy of the files using the file browser." — and photos
+  via Google Photos, with Google Drive at 15 GB free. A FAQ
+  page, not a backup guide — and the confirmation that
+  Energizer's own backup advice points at a computer or the
+  cloud, never at a USB drive); Frequently asked questions
+  Energizer Hardcase H590S, H620S, H501S, H240S, H280S, and
+  H242, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/energizer-hardcase-h590s
+  and devicesfaq.com/en/frequently-asked-questions/energizer-hardcase-h620s
+  — the same template on every Hard Case model page: a computer
+  copy with a USB cable and a file browser, or Google Drive with
+  15 GB free, or Google Photos in the cloud. FAQ pages, not
+  backup guides — and the confirmation that the same
+  computer-or-cloud advice is the only backup advice
+  Energizer's pages give for the whole Hard Case line);
+  Energizer Hardcase H550S, gsmarena.com.bd
+  (gsmarena.com.bd/energizer-hardcase-h550s/ — Android 7.0,
+  MediaTek MT6750, 32 GB of storage, microSD up to 32 GB,
+  "USB: Type-C 1.0 reversible connector". A spec table, not a
+  guide — and the confirmation that the H550S lists USB-C with
+  no OTG mention); Energizer Hardcase H550S, pkgsm
+  (pkgsm.com/product/energizer-hardcase-h550s/ — Android 7.0
+  (Nougat), 3 GB of RAM, MediaTek MT6750, 4000 mAh, "USB:
+  Type-C 1.0 reversible connector". A spec table, not a guide —
+  and a second source for the H550S's Android 7.0 and USB-C with
+  no OTG mention); Energizer Hardcase H570S, Gadgets360
+  (gadgets360.com/energizer-hardcase-h570s-4651 — Android 8.0,
+  MediaTek Helio P18, 3 GB of RAM, 32 GB of storage, microSD up
+  to 128 GB, 4800 mAh, released February 2018. A spec table, not
+  a guide — and the confirmation that one source lists the H570S
+  as the 2018 Helio P18 phone); Energizer Hardcase H570S,
+  phonesdata
+  (phonesdata.com/en/smartphones/energizer/hardcase-h570s-5644/
+  — MediaTek MT6739, 16 GB of storage, 2 GB of RAM, microSD up
+  to 32 GB, 6500 mAh, "USB: 2.0, Type-C 1.0 reversible
+  connector", announced February 2019. A spec table, not a guide
+  — and the confirmation that another source lists the H570S as
+  a different, 2019 MT6739 phone, against Gadgets360's 2018
+  Helio P18 version, so the H570S specs are disputed);
+  Energizer Hardcase H570S, specspro
+  (specspro.net/phones/9469-energizer-hardcase-h570s/ — Android
+  9.0 (Pie), MediaTek MT6739, 2 GB of RAM, 16 GB of storage,
+  microSD up to 32 GB, 6500 mAh, "2.0, Type-C 1.0 reversible
+  connector". A spec table, not a guide — and a third source for
+  the 2019 MT6739 version of the H570S, with a third Android
+  version on top of the dispute); Energizer Hardcase H590S,
+  devicesfaq
+  (devicesfaq.com/en/characteristics/energizer-hardcase-h590s —
+  Android 8.0 Oreo, MediaTek Helio P23, 128 GB of storage, 6 GB
+  of RAM, "USB: USB Type-C", 5800 mAh. A spec table, not a guide
+  — and the confirmation that the H590S lists USB-C with no OTG
+  mention); Energizer Hardcase H620S, gsm-arena
+  (gsm-arena.com/mobiles/1387/energizer-hardcase-h620s —
+  Android 10, MediaTek Helio P22, 4 GB of RAM, 64 GB of storage,
+  microSDHC on a shared SIM slot, "USB: USB Type-C 2.0", 5000
+  mAh. A spec table, not a guide — and the confirmation that the
+  H620S lists USB-C with no OTG mention); Energizer Hardcase
+  H621S, gadgetsfocus
+  (gadgetsfocus.com/product/energizer-hardcase-h621s/ — Android
+  11, MediaTek Helio P22, 4 GB of RAM, 64 GB of storage, 5000
+  mAh, released June 2021. A spec page, not a guide — and the
+  confirmation that the H621S runs Android 11, with no USB or
+  OTG detail in the page I found); Energizer Hardcase H500S,
+  pkgsm
+  (pkgsm.com/product/energizer-hardcase-h500s/ — Android 8.0
+  (Oreo), MediaTek MT6737M, 1 GB of RAM, "USB: microUSB 2.0". A
+  spec table, not a guide — and the confirmation that one source
+  lists the H500S as Android 8.0 with microUSB); Energizer
+  Hardcase H500S, mobilespecs
+  (mobilespecs.net/phone/reviews/Energizer/Energizer_Hardcase_H500S.html
+  — Android 7.0 (Nougat), MediaTek MT6737, 16 GB of storage, 2
+  GB of RAM, microSD up to 64 GB. A spec table, not a guide —
+  and the confirmation that another source lists the H500S as
+  Android 7.0, against pkgsm's Android 8.0, so the H500S Android
+  version is disputed); Energizer Hardcase H500S, spec411
+  (spec411.com/phones/energizer/energizer_hardcase_h500s —
+  Android 7 (Nougat), MediaTek MT6737, 2 GB of RAM, 16 GB of
+  storage, 3000 mAh. A spec table, not a guide — and a third
+  source for the H500S's Android 7.0); Energizer Energy E500S,
+  phonesdata
+  (phonesdata.com/en/smartphones/energizer/energy-e500s-5288/ —
+  Android 8.0 (Oreo), MediaTek MT6737M, 8 GB of storage, 1 GB of
+  RAM, "USB: microUSB 2.0", 2000 mAh. A spec table, not a guide
+  — and the confirmation that the Energy E500S, from the
+  non-rugged Energy line, runs Android 8.0 with microUSB and no
+  OTG mention); Energizer Hardcase H280S, pkgsm
+  (pkgsm.com/product/energizer-hardcase-h280s/ — KaiOS,
+  Spreadtrum SC9820E, 512 MB of RAM, 4 GB of storage, microSDXC,
+  "USB: microUSB 2.0". A spec table, not a guide — and the
+  confirmation that the H280S runs KaiOS, not Android);
+  Energizer Hardcase H280S, gsm.cool
+  (gsm.cool/specs/energizer-hardcase-h280s — KaiOS, Spreadtrum
+  SC9820E, microSD up to 64 GB, "USB: microUSB 2.0". A spec
+  table, not a guide — and a second source for the H280S's KaiOS
+  and microUSB); Energizer launches new rugged phone, Hard Case
+  H280S, Review Central Middle East
+  (reviewcentralme.com/2020/03/04/energizer-launches-new-rugged-phone-hard-case-h280s/
+  — "Avenir Telecom, under the exclusive Energizer brand
+  license, announces the release of its new rugged phone, the
+  Hard Case H280S. … Running KaiOS, it provides access to
+  hundreds of applications and has 4G LTE connectivity." A launch
+  report, not a guide — and the confirmation that Avenir Telecom
+  makes the Hard Case phones under license and that the H280S
+  runs KaiOS); Energizer Hardcase H242S, phonesdata
+  (phonesdata.com/en/smartphones/energizer/hardcase-h242s-5641/
+  — KaiOS, Spreadtrum SC7731E, 512 MB of storage, 256 MB of RAM,
+  2.4-inch display, 0.3 MP camera, announced February 2019. A
+  spec table, not a guide — and the confirmation that the H242S
+  runs KaiOS, not Android); Energizer Hardcase H242S, zakphone
+  (zakphone.com/phone/energizer-hardcase-h242s/ — KaiOS 2.5.1,
+  Spreadtrum SC7731E, 512 MB of storage, 256 MB of RAM,
+  "Announced Date 2019, February", "Status Information
+  Cancelled". A spec table, not a guide — and the confirmation
+  that the H242S runs KaiOS 2.5.1 and was cancelled); Energizer
+  Hardcase H240S, Gadgets360
+  (gadgets360.com/energizer-hardcase-h240s-4590/amp — Android
+  6.0, MediaTek MT6737M, 1 GB of RAM, 8 GB of storage, microSD
+  up to 32 GB, 2000 mAh. A spec table, not a guide — and the
+  confirmation that the H240S runs Android 6.0, below SnapDisk's
+  minimum); Energizer Hardcase H240S Feature Phone With 4G VoLTE
+  Support Launched, Gadgets360
+  (gadgets360.com/mobiles/news/energizer-hardcase-h240s-4g-feature-phone-1803739
+  — "Avenir Telecom, a licensee of the Energizer brand, launched
+  a new feature phone on Tuesday. The Energizer Hardcase H240S is
+  a 4G feature phone. Notably, the phone runs Android, but
+  without access to Google Play - users will have to settle for
+  the pre-installed apps on board." A launch report, not a guide
+  — and the confirmation that the H240S runs Android 6.0 with no
+  Google Play access); Energizer Ultimate U620S Pop, GSMArena
+  (m.gsmarena.com/energizer_ultimate_u620s_pop-9548.php —
+  "Cancelled … Android 9.0 … 128GB storage, microSDXC", "USB:
+  USB Type-C 2.0, OTG". A spec table, not a guide — and the
+  confirmation that the only Energizer phone I found with an OTG
+  listing is a cancelled phone from the Ultimate line, not a Hard
+  Case phone); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — the one-tap app alternative: copies
+  the whole gallery to a pen drive in one tap, copies only new
+  photos next time, warns about the FAT32 4 GB limit. Free with
+  ads, one-time purchase to remove them. Generic Android, not an
+  Energizer guide, and it does not promise oldest-first order,
+  detailed progress with Pause and Stop, or size verification of
+  every file); PhotoSaver Phone-to-Drive (Play listing,
+  com.clevx.photosaver — a second one-tap app alternative: save
+  photos and videos to any USB-C drive with one click, no cloud,
+  no upload. Generic Android, not an Energizer guide, and it
+  needs a USB-C connection, so it is no use on the microUSB Hard
+  Case models); cloud routes — Google Photos syncs the gallery
+  to Google's servers, Google Drive backs data up to Google's
+  cloud with 15 GB free, and Google backup restores data to a new
+  phone from Google's cloud, not to a drive you hold; Google
+  Photos' "Storage saver" setting compresses photos, and a cloud
+  backup stops working the day you stop paying for storage.
+  Neither route gives a folder of plain photo files on a USB
+  drive.
+  Energizer specifics: OTG is unconfirmed across the whole Hard
+  Case line — no Hard Case model lists USB OTG support in the
+  sources I found; the spec tables list USB Type-C for the H550S,
+  the H570S, the H590S, and the H620S and microUSB 2.0 for the
+  H500S, with no OTG mention on any of them — so the article
+  tells owners of every model to check Settings > Storage before
+  relying on it instead of claiming OTG across the range; the
+  only Energizer OTG listing found is the cancelled Ultimate
+  U620S Pop, a different line that was never sold. Two models
+  cannot run SnapDisk at all: the H280S and the H242S run KaiOS,
+  not Android, and the H240S runs Android 6.0 with no Google Play
+  access, below SnapDisk's Android 7.0 minimum. The H550S runs
+  Android 7.0, exactly the minimum; the H590S runs Android 8.0,
+  the H620S runs Android 10, and the H621S runs Android 11; the
+  H621S connector is unverified in the sources I found. The
+  H570S specs are disputed between sources (Android 8.0, Helio
+  P18, 3 GB RAM, 32 GB storage, microSD up to 128 GB, 4800 mAh
+  per Gadgets360's 2018 launch story, against Android 9.0,
+  MediaTek MT6739, 2 GB RAM, 16 GB storage, microSD up to 32 GB,
+  6500 mAh per phonesdata, specspro, and others); the H500S
+  Android version is disputed (Android 8.0 per pkgsm, Android
+  7.0 per mobilespecs and spec411); the H550S takes a microSD
+  card up to 32 GB, the H500S takes one up to 64 GB, and the
+  H240S takes one up to 32 GB — but a card is still not a USB
+  drive: it stays in the phone and opening it anywhere else needs
+  a card reader.
+  Energizer's own tools: devicesfaq's backup advice for the
+  H550S (a computer copy with a USB cable and a file browser, or
+  Google Drive with 15 GB free and Google Photos in the cloud)
+  points at a computer or the cloud, never at a USB drive, and
+  the same template appears on the H590S, H620S, H501S, H240S,
+  H280S, and H242 pages; Google Photos (the stock photo backup on
+  Energizer Hard Case Android phones) backs photos up to Google's
+  cloud; Google Drive (Android's default built-in service, 15 GB
+  free) backs data up to Google's cloud; a microSD card (up to
+  32 GB on the H550S, up to 64 GB on the H500S, up to 32 GB on
+  the H240S) is a real local copy, but the card stays in the
+  phone and needs a reader elsewhere; a computer copy (connect
+  the phone to a computer using the USB cable and make a copy of
+  the files using the file browser) lands on the PC, not on a USB
+  drive; no Energizer backup page points at a USB drive at all —
+  none of them writes plain photo files to a USB drive
+  automatically. Out of scope, named in the article: OTG host
+  support is unconfirmed on every Hard Case model, so owners of
+  every model should check Settings > Storage before relying on
+  it; the H280S and the H242S run KaiOS, not Android, so SnapDisk
+  cannot run on them; the H240S runs Android 6.0 with no Google
+  Play access, below SnapDisk's Android 7.0 minimum; the H570S
+  specs are disputed between sources (Android 8.0 / Helio P18 /
+  3 GB / 32 GB / 4800 mAh per Gadgets360, against Android 9.0 /
+  MT6739 / 2 GB / 16 GB / 6500 mAh per phonesdata and specspro);
+  the H500S Android version is disputed (8.0 per pkgsm, 7.0 per
+  mobilespecs and spec411); the H621S connector is unverified in
+  the sources above, so owners of that model should check their
+  own port before buying an adapter — SnapDisk needs Android 7.0
+  or later.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-86, 55th how-to):
+  docs/energizer-photos-to-usb.html.
+  Fallback for WL-87: Nomu — no Nomu article exists in docs/
+  yet.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
