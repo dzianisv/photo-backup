@@ -5667,6 +5667,201 @@ demand is read off competitor install velocity instead (see
   docs/land-rover-explore-photos-to-usb.html.
   Fallback for WL-90: JCB — no JCB article exists in docs/ yet.
 
+### 58. "back up JCB Toughphone photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a JCB-specific
+  phone-to-USB guide at all, let alone a JCB-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the JCB-specific results are a user-manual
+  page and spec pages that give no USB-drive advice at all,
+  and the rest are generic manual guides.
+- Current top results (scored Nov 18, 2026, live web search):
+  MobiKin, "5 Ways: How to Transfer Photos from Android to Flash
+  Drive"
+  (mobikin.com/android-backup/transfer-photos-from-android-to-flash-drive.html
+  — File Explorer with a PC tool, OTG with the file manager, or
+  Google Photos in the cloud. Generic Android, and a manual guide
+  — every route is hand-picked files, a computer in between, or
+  the cloud); Dr.Fone (Wondershare), "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — connect the drive directly with an OTG adapter, use a PC
+  as a middleman with USB "File Transfer" mode, or go wireless
+  through Google Drive or AirDroid; the Dr.Fone PC software
+  bulk-exports photos to a computer. Generic Android, and a
+  manual guide — every route is hand-picked files, a computer
+  in between, or the cloud); YouTube, "How to Connect USB Drive
+  to Android Phone to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet needed.
+  Generic Android, and a manual file-manager guide); YouTube,
+  "How to Transfer Photos, Videos and any Files from Android
+  Phone to USB Pendrive (USB Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — verify OTG compatibility
+  first, connect the drive via an OTG adapter, open the file
+  manager, and copy or move. Generic Android, and a manual
+  file-manager guide); thegadgetians, "How to Transfer Files
+  From Phone to USB Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — connect a USB drive with an OTG adapter, open the file
+  manager, select and copy files, then paste onto the USB drive.
+  Generic Android, and a manual file-manager guide — and it
+  notes that not all Android devices support OTG); softhandtech,
+  "Transfer Photos from Phone to Memory Stick: A Comprehensive
+  Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — a computer as middleman, a direct OTG transfer, or cloud
+  services. Generic Android, and a manual guide — the first and
+  third routes need a computer in between or the cloud);
+  Android Central forum, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — use the OTG adapter to plug a USB drive in and move files
+  in the file manager. Generic Android, and a manual
+  file-manager guide); askfilo,
+  "how to transfer pictures from an android phone to a
+  flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — plug the flash drive into an OTG adapter, open the file
+  manager, find the DCIM folder, and copy to the USB drive.
+  Generic Android, and a manual file-manager guide);
+  epictechtips, "How to Transfer Pictures from Android Phone to
+  USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive in, tap the USB notification and choose
+  "Transfer photos", then use the file manager — or use a PC as
+  an intermediary. Generic Android, and a manual file-manager
+  guide); Coolmuster, "How to Transfer Photos from Android to
+  Flash Drive [5 Ways]"
+  (coolmuster.com/android/transfer-photos-from-android-to-usb-flash-drive.html
+  — drag and drop through a computer, or an OTG adapter with the
+  file manager. Generic Android, and a manual guide — the first
+  route needs a PC in between, and it notes that not all Android
+  devices support OTG); JCB ToughPhone TP802 User Manual,
+  manualmachine.com
+  (manualmachine.com/jcb/toughphonetp802/21089801-user-manual/
+  — the manual for the old TP802 feature phone: connect the
+  phone to a PC with the USB cable, select "Mass Storage", and
+  copy files to the PC; the T-Flash card is formatted via a PC
+  first. A manual, not a backup guide — and the confirmation
+  that JCB's own file advice is a computer copy, never a USB
+  drive); JCB Toughphone and Toughphone Max announced, GSMArena
+  (m.gsmarena.com/jcb_toughphone_and_toughphone_max_announced-news-58927.php
+  — the Toughphone boots Android 13 and the Toughphone Max
+  ships with Android 12; Helio P22 with 6 GB of RAM and 128 GB
+  of storage on the Toughphone, Dimensity 700 with 8 GB and
+  256 GB on the Max; 4,050 mAh against 12,200 mAh; £300 and
+  £600. A launch story, not a guide — and the confirmation that
+  both 2023 models run Android 12 or later); JCB Toughphone,
+  cashify.in
+  (cashify.in/jcb-toughphone-price-in-india — Android 13,
+  MediaTek Helio P22, 6 GB / 128 GB, expandable storage up to
+  1 TB, "OTG Support, Yes", USB Type-C. A spec page, not a
+  guide — and the confirmation that the Toughphone lists OTG
+  support and runs Android 13); JCB Toughphone MAX, cashify.in
+  (cashify.in/jcb-toughphone-max-price-in-india — Android 12,
+  MediaTek Dimensity 700, 8 GB / 256 GB, expandable storage up
+  to 1 TB, "OTG Support, Yes", USB Type-C, 12,200 mAh. A spec
+  page, not a guide — and the confirmation that the Toughphone
+  Max lists OTG support and runs Android 12); JCB Toughphone
+  E10 rugged phone review, europesays.com
+  (europesays.com/ie/513477/ — a ruggedised Android 15 phone
+  per the review text, with a MediaTek Helio G36, 4 GB of RAM,
+  64 GB of storage, a microSD card up to 512 GB, and "USB-C
+  2.0 (OTG)". A review, not a guide — and the confirmation
+  that the E10 lists OTG support; its own spec table says
+  Android 16 and its text says Android 15, so the Android
+  version is taken as 15 from JCB's own site instead); JCB
+  Toughphone E10, Clove
+  (clove.co.uk/collections/smartphones-jcb/products/jcb-toughphone-e10?variant=43070213423147
+  — Android 15, a 6,500 mAh battery, dual SIM + eSIM, microSD
+  up to 512 GB, USB Type-C, IP69K / MIL-STD-810H. A retailer
+  page, not a guide — and a second source for the E10's
+  Android 15, against the review's spec table saying 16); JCB
+  Toughphone E50 5G Rugged Smartphone, rugged.co.uk
+  (rugged.co.uk/jcb-toughphone-e50/ — Android 16, 6 GB of RAM
+  expandable to 14 GB with virtual RAM, 128 GB of storage
+  extendable to 1 TB via microSD, IP68 and IP69K. A retailer
+  page, not a guide — and the confirmation that the E50 runs
+  Android 16, with no OTG mention); JCB Toughphone T10 Rugged
+  Tablet, jcbphone.com
+  (jcbphone.com/products/jcb-toughphone-t10 — JCB's own page:
+  Android 16, 128 GB of storage expandable to 2 TB via
+  microSD, and "18W wired, USB-C with OTG support". A product
+  page, not a guide — and the confirmation, from JCB itself,
+  that the T10 tablet lists OTG support and runs Android 16);
+  JCB Toughphone Pro-Smart Review, SlashGear
+  (slashgear.com/jcb-toughphone-pro-smart-review-21229122/ —
+  the 2012 Toughphone Pro-Smart TP909 runs Android 2.3.5
+  Gingerbread on an 800 MHz single-core processor with 256 MB
+  of ROM. A review, not a guide — and the confirmation that
+  the old Pro-Smart runs Android 2.3.5, far below SnapDisk's
+  Android 7.0 minimum, so it cannot run SnapDisk at all);
+  Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — the one-tap app alternative:
+  copies the whole gallery to a pen drive in one tap, copies
+  only new photos next time, warns about the FAT32 4 GB limit.
+  Free with ads, one-time purchase to remove them. Generic
+  Android, not a JCB guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop,
+  or size verification of every file); PhotoSaver Phone-to-Drive
+  (Play listing, com.clevx.photosaver — a second one-tap app
+  alternative: save photos and videos to any USB-C drive with
+  one click, no cloud, no upload. Generic Android, not a JCB
+  guide — but it does work on the current JCB models, since
+  all of them have USB-C); cloud routes — Google Photos syncs
+  the gallery to Google's servers, Google Drive backs data up
+  to Google's cloud with 15 GB free, and Google backup restores
+  data to a new phone from Google's cloud, not to a drive you
+  hold; Google Photos' "Storage saver" setting compresses
+  photos, and a cloud backup stops working the day you stop
+  paying for storage. Neither route gives a folder of plain
+  photo files on a USB drive.
+  JCB specifics: OTG is confirmed in the sources found on the
+  Toughphone, the Toughphone Max, the E10, and the T10 —
+  cashify lists "OTG Support, Yes" for the Toughphone and the
+  Toughphone Max, the E10 review lists "USB-C 2.0 (OTG)", and
+  JCB's own T10 page lists "USB-C with OTG support" — and
+  every current model can run SnapDisk: the Toughphone runs
+  Android 13, the Toughphone Max runs Android 12, the E10
+  runs Android 15, the E50 runs Android 16, and the T10 tablet
+  runs Android 16; on the E50 no source found mentions OTG at
+  all, so the article tells owners of that model to plug a
+  drive in and check Settings > Storage before relying on it
+  instead of claiming OTG across the range. Two old JCB phones
+  cannot run SnapDisk at all: the TP802 is a feature phone,
+  not an Android phone, and the Toughphone Pro-Smart TP909
+  from 2012 runs Android 2.3.5, below SnapDisk's Android 7.0
+  minimum. The E10's specs are disputed between sources: one
+  review's own spec table says Android 16 while its text and
+  JCB's own site say Android 15, its chipset is a Helio G36
+  per that review against an MT6765X per Clove and
+  rugged.co.uk, and its RAM is 4 GB per that review against
+  8 GB per rugged.co.uk — so the chipset and RAM are not leaned
+  on in the article, and the Android version is taken as 15
+  from JCB's own site. All current models have USB-C. All
+  current models take a microSD card — up to 1 TB on the
+  Toughphone, the Toughphone Max, and the E50, up to 512 GB on
+  the E10, and up to 2 TB on the T10 tablet.
+  JCB's own tools: the only JCB file advice found is the old
+  TP802 manual's PC copy with a USB cable (Mass Storage); the
+  stock photo backup is Google Photos, and the stock file
+  manager is Files by Google; a microSD card is the local
+  option on every current model; no JCB backup page points at
+  a USB drive at all — none of them writes plain photo files
+  to a USB drive automatically. Out of scope, named in the
+  article: OTG support is unconfirmed on the E50, so owners of
+  that model should check Settings > Storage before relying
+  on it; the E10's specs are disputed between sources
+  (Android 15/16, Helio G36 vs MT6765X, 4 GB vs 8 GB of RAM);
+  the TP802 and the Toughphone Pro-Smart TP909 cannot run
+  SnapDisk (feature phone / Android 2.3.5) — SnapDisk needs
+  Android 7.0 or later.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-90, 59th how-to):
+  docs/jcb-photos-to-usb.html.
+  Fallback for WL-91: Evolveo — no Evolveo article exists in
+  docs/ yet.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
