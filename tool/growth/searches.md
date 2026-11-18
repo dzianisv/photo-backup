@@ -4153,6 +4153,249 @@ demand is read off competitor install velocity instead (see
   docs/crosscall-photos-to-usb.html.
   Fallback for WL-83: Hammer (MyPhone Hammer line) — no Hammer
   article exists in docs/ yet.
+### 51. "back up Hammer photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Hammer-specific
+  phone-to-USB guide at all, let alone a Hammer-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Hammer-specific results are spec tables,
+  datasheets, user manuals, and FAQ pages that give no
+  USB-drive advice at all, and the rest are generic manual
+  guides.
+- Current top results (scored Nov 18, 2026, live web search):
+  Pixoneye, "How to Transfer Photos from Your Phone to a USB
+  Stick" (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — "Copy local originals to compatible USB storage, open the
+  files from the destination, then make an independent backup
+  before deleting anything" — Android with a file manager, or a
+  computer in between. Generic Android and iPhone, and a manual
+  file-manager guide); YouTube, "How to Connect USB Drive to
+  Android Phone to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet needed.
+  Generic Android, and a manual file-manager guide); YouTube,
+  "How to Transfer Photos, Videos and any Files from Android
+  Phone to USB Pendrive (USB Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — "You can easily move photos,
+  videos, and other files from your Android phone to a USB flash
+  drive by connecting the drive via a USB OTG adapter and using
+  your phone's built-in file manager." Generic Android, and a
+  manual file-manager guide); Dr.Fone, "4 Practical Ways to
+  Transfer Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos with an OTG adapter, through Google Drive,
+  by drag-and-drop through a PC, or wirelessly through AirDroid.
+  Generic Android, and the direct route is a manual file-manager
+  copy); Android Central forum, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — "You can use the OTG Adapter to plug in any external device
+  that's supported … and it should be visible as external storage
+  in the File Manager … and you can move files to it from there."
+  A forum thread, not a guide — and a manual file-manager copy);
+  askfilo, "how to transfer pictures from an android phone to a
+  flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — plug the flash drive into an OTG adapter, open the file
+  manager, find the DCIM folder, and copy to the USB drive.
+  Generic Android, and a manual file-manager guide); Coolmuster,
+  "How to Transfer Photos from Android to Flash Drive [5 Ways]"
+  (coolmuster.com/android/transfer-photos-from-android-to-usb-flash-drive.html
+  — "An OTG (On The Go) cable has a larger USB port at one end
+  and a micro USB connector at the other end. It enables you to
+  directly connect a USB flash device or an SD card reader to
+  your phone." Generic Android, and a manual file-manager guide);
+  Softhandtech, "Easy Guide: Transferring Pictures from Your
+  Phone to a Flash Drive"
+  (softhandtech.com/how-do-you-transfer-pictures-from-your-phone-to-a-flash-drive/
+  — "To transfer pictures from your phone to a flash drive, you
+  can connect your phone to a computer using a USB cable. Once
+  connected, navigate to your phone's storage on the computer,
+  locate the pictures you want to transfer, and then copy and
+  paste them onto the flash drive. Alternatively, you can use a
+  USB flash drive that is compatible with your phone to directly
+  transfer the pictures without using a computer." Generic Android
+  and iPhone, and the direct route is a manual file-manager copy
+  — or a computer in between); Alibaba, "How To Quickly Backup
+  Your Phone Photos Without Using Cloud Storage"
+  (alibaba.com/product-insights/how-to-quickly-backup-your-phone-photos-without-using-cloud-storage.html
+  — "With simple tools and accessible hardware, you can create
+  fast, secure, and private backups of all your important images
+  directly from your phone to physical storage devices" — plug
+  the drive into your phone using an OTG adapter, open your file
+  manager, navigate to the photo gallery folder, and select
+  photos and choose "Copy to" or "Move to". Generic Android and
+  iPhone, and a manual file-manager copy); Techdows, "USB OTG:
+  everything you need to know"
+  (techdows.com/usb-otg-everything-you-need-to-know.html —
+  "USB OTG (USB On-The-Go) lets a phone or tablet act as the USB
+  host, so you can plug a flash drive, card reader, keyboard or
+  mouse straight into it without a computer." A USB OTG explainer,
+  not a phone-to-USB backup guide — and not a Hammer guide);
+  Beinfora, "What Is USB OTG in Smartphones? Complete Guide to
+  Connecting External Devices"
+  (beinfora.com/2026/11/what-is-usb-otg-smartphones-connect-external-devices.html
+  — "USB OTG is an open hardware and software specification that
+  empowers a mobile smartphone or tablet to dynamically switch
+  its electrical and logical roles" and act as a USB host. A USB
+  OTG explainer, not a phone-to-USB backup guide — and not a
+  Hammer guide); Frequently asked questions MyPhone Hammer Blade,
+  devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/myphone-hammer-blade
+  — "How to backup my MyPhone Hammer Blade? … The most economical
+  method to make a backup is to connect the MyPhone Hammer Blade
+  to a computer using the USB cable and make a copy of the files
+  using the file browser. To perform a cloud backup you need a
+  cloud backup service, on Android devices the default built-in
+  service is Google Drive. With Google Drive you have 15Gb free"
+  — and photos via Google Photos. A FAQ page, not a backup guide
+  — and the confirmation that Hammer's own backup advice points
+  at a computer or the cloud, never at a USB drive); Frequently
+  asked questions MyPhone Hammer Energy, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/myphone-hammer-energy
+  — the same backup advice again: a computer copy with a USB
+  cable and a file browser, or a cloud backup through Google
+  Drive (15 GB free), with photos via Google Photos. A FAQ
+  page, not a guide); Frequently asked questions MyPhone Hammer
+  Blade 2 Pro, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/myphone-hammer-blade-2-pro
+  — the same backup advice again: a computer copy with a USB
+  cable and a file browser, or a cloud backup through Google
+  Drive (15 GB free), with photos via Google Photos. A FAQ
+  page, not a guide); Frequently asked questions MyPhone Hammer
+  5 Smart, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/myphone-hammer-5-smart
+  — "First and foremost, we recommend making a backup of all your
+  data on the MyPhone HAMMER 5 Smart. You can do this by
+  connecting the HAMMER 5 Smart to a computer via a cable and
+  transferring your data using a file browser or a dedicated
+  backup program. Alternatively, you can use an SD card or the
+  simplest method: back up to the cloud through services like
+  Google Drive, Microsoft OneDrive, Apple iCloud, Dropbox, or
+  Amazon Drive." A FAQ page, not a guide — and the confirmation
+  that the SD-card and cloud routes are the ones Hammer's own
+  advice names); User manual myPhone Hammer Iron 4, manua.ls
+  (manua.ls/myphone/hammer-iron-4/manual?p=2 — Android 12, 32 GB
+  of storage, a microSD card up to 128 GB, and "You can transfer
+  files between your myPhone Hammer Iron 4 and computer using a
+  USB cable." A spec table and a user manual, not a guide — and
+  the confirmation that the manual's own file-transfer advice
+  needs a computer); Hammer Blade 3 datasheet, mPTech
+  (nortonimages.blob.core.windows.net/documents/Datasheet_Hammer_Blade3.pdf
+  — Android 10, 64 GB of storage, a microSD card up to 128 GB,
+  and "USB Type-C, waterproof". A datasheet, not a guide — and it
+  does not list OTG either way); Product specification myPhone
+  Hammer Blade 3, AiO
+  (aio.lv/en/product--myphone-hammer-blade-3-158-cm-62-divas-sim-kartes-android-100-4g-usb-veids-c-4-gb-64-gb-5000-mah-melns--3931854/specification
+  — Android 10, 64 GB of storage, a 48 MP camera, and "USB
+  connector type: USB Type-C". A spec table, not a guide — and it
+  does not list OTG either way); myPhone Hammer Blade V 5G, Alza
+  (alza.sk/EN/myphone-hammer-blade-v-5g-black-d12322045.htm —
+  Android 13, 256 GB of storage, a 50 Mpx camera, and "Jack
+  (3,5mm) and USB-C". A spec page, not a guide — and it does not
+  list OTG either way); HAMMER Blade V (5G), Clove
+  (clove.co.uk/products/hamp-blade-v-5g — Android 13, 256 GB of
+  storage, a microSD card up to 1 TB, and "Power port: Type C /
+  Data port: Type C". A spec page, not a guide — and a second
+  source for the Blade V 5G's Android 13 and 1 TB card); myPhone
+  Hammer Explorer Pro, Alza
+  (alza.sk/EN/myphone-hammer-explorer-pro-orange-d6482006.htm —
+  Android 10, 128 GB of storage, and "USB-C". A spec page, not a
+  guide — and it does not list OTG either way); HAMMER Explorer
+  PRO Test Summary, magazinebike
+  (magazinebike.com/2021/11/11/hammer-explorer-pro-test-summary/ —
+  Android 10, 128 GB of storage, a microSD slot up to 128 GB, and
+  "charged via USB-C". A review, not a guide — and a second source
+  for the Explorer Pro's Android 10 and 128 GB card); Hammer
+  Rugged Smartphones, RUGGED (rugged.co.uk/manufacturers/hammer/ —
+  "Its line-up spans simple SOS feature phones such as the Hammer
+  6 LTE through to larger Android smartphones like the IRON V and
+  the Blade and Explorer families." A retailer line-up page, not
+  a guide — and the confirmation that the Hammer 6 LTE is a
+  feature phone while the Iron V, Blade, and Explorer phones are
+  Android smartphones); MyPhone Hammer Energy 18x9, FindPare
+  (findpare.com/smartphone/myphone-hammer-energy-18x9 — released
+  July 2018, "USB OTG: Yes", and "USB Type C: Yes". A
+  price-comparison spec table, not a guide — and the only
+  per-model OTG Yes listing I found for a Hammer phone, from a
+  source that says its information is "not ascertained"); MyPhone
+  Hammer Blade 2 Pro, FindPare
+  (findpare.com/smartphone/myphone-hammer-blade-2-pro/battery-life&counturl=https
+  — released November 2018, "USB OTG: Yes", and "USB Type C:
+  Yes". A price-comparison spec table, not a guide — and the
+  second per-model OTG Yes listing, from the same source that says
+  its information is "not ascertained"); MyPhone Hammer Active 2
+  LTE, FindPare
+  (findpare.com/smartphone/myphone-hammer-active-2-lte/user-reviews&counturl=https
+  — released 2019, "USB OTG: No", and "micro USB 2.0: Yes". A
+  price-comparison spec table, not a guide — and the confirmation
+  that at least one Hammer Android phone has no USB host support
+  at all); MyPhone Hammer Iron secret codes, mobilexfiles
+  (mobilexfiles.com/phones/myphone/myphone_hammer_iron/secret_codes/
+  — "MyPhone Hammer Iron smartphone runs on Android 4.2 operating
+  system." A spec page, not a guide — and the confirmation that
+  the original Hammer Iron runs Android 4.2, below SnapDisk's
+  Android 7.0 minimum); MyPhone Hammer AXE M LTE secret codes,
+  mobilexfiles
+  (mobilexfiles.com/phones/myphone/myphone_hammer_axe_m_lte/secret_codes/
+  — "MyPhone Hammer AXE M LTE smartphone runs on Android 6.0
+  operating system." A spec page, not a guide — and the
+  confirmation that the AXE M LTE runs Android 6.0, below
+  SnapDisk's Android 7.0 minimum); Photos to USB: OTG Backup
+  (Play listing, com.arzdrz.photos_to_usb — the one-tap app
+  alternative: copies the whole gallery to a pen drive in one
+  tap, copies only new photos next time, warns about the FAT32
+  4 GB limit. Free with ads, one-time purchase to remove them.
+  Generic Android, not a Hammer guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop, or
+  size verification of every file); cloud routes — Google Photos
+  syncs the gallery to Google's servers, Google Drive backs
+  data up to Google's cloud with 15 GB free, and Google backup
+  restores data to a new phone from Google's cloud, not to a
+  drive you hold; Google Photos' "Storage saver" setting
+  compresses photos, and a cloud backup stops working the day
+  you stop paying for storage. Neither route gives a folder of
+  plain photo files on a USB drive.
+  Hammer specifics: OTG is the honest unknown on the current
+  models — the only per-model OTG listings I found are FindPare's
+  Yes for the Energy 18x9 and the Blade 2 Pro, and FindPare itself
+  says its information is "not ascertained", while the Blade V 5G,
+  Iron 4, Blade 3, and Explorer Pro spec pages list USB-C without
+  mentioning OTG either way, so the article tells owners of those
+  models to check Settings > Storage before relying on it instead
+  of claiming OTG across the range; all four current phones have
+  USB-C, so a USB-C flash drive plugs straight in and a regular
+  USB-A drive needs a USB-C OTG adapter; the Blade V 5G takes a
+  microSD card up to 1TB, and the Blade 3, the Iron 4, and the
+  Explorer Pro take one up to 128GB, but a card is still not a USB
+  drive: it stays in the phone and opening it anywhere else needs
+  a card reader.
+  Hammer's own tools: devicesfaq's backup advice (a computer
+  copy with a USB cable and a file browser, or Google Drive
+  with 15 GB free and Google Photos in the cloud) points at a
+  computer or the cloud, never at a USB drive; the Iron 4
+  manual's transfer advice (transfer files to a computer using a
+  USB cable) needs a computer; Google Photos (the stock photo
+  backup on Hammer Android phones) backs photos up to Google's
+  cloud; Google Drive (Android's default built-in service, 15 GB
+  free) backs data up to Google's cloud; a microSD card (up to
+  1TB on the Blade V 5G, up to 128GB on the Blade 3, the Iron 4,
+  and the Explorer Pro) is a real local copy, but the card stays
+  in the phone and needs a reader elsewhere; a computer copy
+  (connect the phone to a computer using the USB cable and make a
+  copy of the files using the file browser) lands on the PC, not
+  on a USB drive; no Hammer backup page points at a USB drive
+  at all — none of them writes plain photo files to a USB drive
+  automatically. Out of scope, named in the article: the Hammer
+  6 LTE is a feature phone, not an Android phone at all, so
+  SnapDisk cannot install on it; the original Hammer Iron runs
+  Android 4.2 and the AXE M LTE runs Android 6.0, below SnapDisk's
+  Android 7.0 minimum; the Active 2 LTE has no OTG at all
+  (FindPare lists USB OTG as No).
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-83, 52nd how-to):
+  docs/hammer-photos-to-usb.html.
+  Fallback for WL-84: FOSSiBOT (F-series line) — no FOSSiBOT
+  article exists in docs/ yet.
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
