@@ -349,5 +349,12 @@
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
     <description>Sonim's Android phones (XP8 and XP10) have USB host support on at least the XP8 — the XP8 user guide lists the USB-C port as "High Speed, OTG" — and Sonim has no phone-to-USB backup tool of its own: Sonim SCOUT is a device-management app, not a backup, and the stock photo backup is Google Photos. One honest caveat up front: the XP10 datasheet I found does not list OTG either way, so check Settings > Storage before relying on it, and the XP5s is not an Android phone at all — it runs a proprietary OS, so SnapDisk cannot install on it. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up Kyocera photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/kyocera-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/kyocera-photos-to-usb.html</guid>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Kyocera's DuraForce Android phones (Pro 2, Ultra 5G, PRO 3, and DuraSport) have USB host support on at least two of them — the spec tables list USB OTG as Yes for the DuraForce Pro 2, and the DuraSport's spec pages list its port as "USB Type-C, USB On-The-Go" — and Kyocera has no phone-to-USB backup tool of its own: its backup advice is a computer copy or Google Drive and Google Photos in the cloud. One honest caveat up front: the Ultra 5G and PRO 3 datasheets list USB-C without mentioning OTG either way, so check Settings > Storage before relying on it on those models, and the older DuraForce phones are out of scope — the original DuraForce runs Android 4.4, the DuraForce XD runs Android 5.1, and the original DuraForce PRO's spec tables list USB OTG as No. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
