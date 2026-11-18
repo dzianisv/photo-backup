@@ -3553,6 +3553,200 @@ demand is read off competitor install velocity instead (see
 - Verdict: how-to article material, not a listing keyword.
   Article published Nov 18, 2026 (WL-79, 48th how-to):
   docs/ruggear-photos-to-usb.html.
+
+### 48. "back up Sonim photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Sonim-specific
+  phone-to-USB guide at all, let alone a Sonim-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Sonim-specific results are spec tables,
+  datasheets, and user manuals that give no backup advice
+  at all, and the rest are generic manual guides.
+- Current top results (scored Nov 18, 2026, live web search):
+  Sonim XP8 User Guide
+  (manuals.plus/m/e1f8674db6d80cb1048cf43b790d0727e31f4c9b44914d169f6141912527c454
+  — the phone specifications list the ports as
+  "Waterproof USB3.1 type-C, High Speed, OTG". A user
+  guide, not a backup guide — and the confirmation that
+  the XP8 has OTG); Sonim XP8 Data Sheet
+  (exloc.co.uk/wp-content/uploads/2020/03/Sonim_DataSheet_XP8_Global_2020_Final.pdf
+  — Android O, a Snapdragon 630 processor, a 4900mAh
+  removable battery, 4GB of RAM with 64GB of storage,
+  and a microSD card up to 128GB. A datasheet, not a
+  guide); Sonim XP8 Data Sheet, Verizon 2021
+  (sonim-tech.files.svdcdn.com/production/documents/XP8/Sonim_XP8_DataSheet_VZW_Final_031821.pdf
+  — Android 10, a Snapdragon 630 processor, a 4900mAh
+  removable battery, and a microSD card up to 128GB. A
+  datasheet, not a guide); Sonim XP10 Data Sheet
+  (manuals.plus/m/107053c2c1f6501d43809f1e5e8f6e2606c1c31dd11f747ce66b2c89c1f72171.pdf
+  — Android 12, Google AER certified, a Snapdragon 480
+  5G processor, a 5000mAh removable battery, 6GB of RAM
+  with 128GB of storage, and a microSD card up to 1TB.
+  The ports are listed as USB-C, with no OTG mention. A
+  datasheet, not a guide — and it does not list OTG
+  either way); Sonim XP10, sonimtech.com product page
+  (sonimtech.com/products/phones/xp10 — Android 12,
+  Google AER certified, a 5000mAh removable battery,
+  and a microSD card up to 1TB. The ports are listed as
+  USB-C, SecureAudio connector, and charging pins. A
+  product page, not a guide — and it does not list OTG
+  either way); Sonim XP10, mobilemaya
+  (mobilemaya.net/product/sonim-xp10/ — Android 12 with
+  a 50MP dual-camera system, and the page claims the
+  phone has "built-in USB OTG support" that "allows
+  external storage access". A third-party spec page, not
+  Sonim's own datasheet — and the only source found
+  that claims OTG on the XP10); Sonim XP5s User Manual
+  (manualmachine.com/sonim/xp5800/2565173-user-manual/
+  — "an LTE enabled feature phone", with the ports
+  listed as "Water-proof USB2.0 type-C, High Speed,
+  OTG". A user manual, not a backup guide — and the
+  confirmation that the XP5s has OTG but is not an
+  Android phone); Sonim XP5s Data Sheet
+  (scotia-radio.co.uk/wp-content/uploads/2020/04/Sonim_DataSheet_XP5s.pdf
+  — Operating System: Proprietary OS, a 2.64-inch
+  screen, a 5MP camera, 2GB of RAM with 16GB of
+  storage, and a microSD card up to 128GB. A datasheet,
+  not a guide — and the confirmation that the XP5s runs
+  a proprietary OS); Sonim XP5s Review, PhoneCurious
+  (phonecurious.com/sonim-xp5s-review/ — a proprietary
+  OS, a 2.64-inch screen, a 5MP camera, and "this phone
+  also supports OTG, which means it can read data from
+  a USB pen drive". A review, not a guide); Sonim XP3
+  Data Sheet
+  (sonimtech.com/hubfs/sonim%20support%20guides/Sonim_DataSheet_XP3_USC_ACG_092220_Final-1.pdf
+  — Operating System: Proprietary OS, a flip phone. A
+  datasheet, not a guide — and the confirmation that
+  the XP3 is not an Android phone either); Sonim SCOUT,
+  sonimtech.com (sonimtech.com/our-difference/sonimware
+  — "SonimWare's free, pre-loaded intelligent
+  application for device configuration, management, and
+  support". A device-management app, not a backup — and
+  the confirmation that Sonim's own preloaded tool does
+  not back up photos to a USB drive); Dr.Fone,
+  "4 Practical Ways to Transfer Photos from Android to
+  USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos with an OTG adapter, through Google
+  Drive, by drag-and-drop through a PC, or wirelessly
+  through AirDroid. Generic Android, and the direct
+  route is a manual file-manager copy); groovypost,
+  "How to Transfer Photos from Android to a USB Drive"
+  (groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — drag-and-drop through a PC, or a USB-C dual drive
+  plugged straight into the phone with a manual
+  file-manager copy. Generic Android, and the direct
+  route is a manual file-manager copy); Pixoneye, "How
+  to Transfer Photos from Your Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage with
+  a file manager, or import to a computer first.
+  Generic Android and iPhone, and a manual
+  file-manager guide); epictechtips, "How to Transfer
+  Pictures from Android Phone to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the drive in with an OTG adapter and copy with
+  the file manager, or use a PC or cloud storage
+  instead. Generic Android, and the direct route is a
+  manual file-manager copy); YouTube, "How to Connect
+  USB Drive to Android Phone to Move Photos & Videos
+  (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and
+  the phone's built-in file manager, no computer or
+  internet needed. Generic Android, and a manual
+  file-manager guide); Techwalla, "How to Move Pictures
+  from Camera to Flash Drive With No Computer"
+  (techwalla.com/articles/how-to-move-pictures-from-camera-to-flash-drive-with-no-computer
+  — a memory card reader and USB flash drive combination
+  for a camera's card. A camera guide, not a phone guide
+  — and it still needs you to pull the card out of the
+  camera); TheGadgetians, "How to Transfer Files From
+  Phone to USB Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — connect a USB drive to an Android phone with an OTG
+  adapter, open the file manager, select files, and
+  paste them onto the drive. Generic Android and
+  iPhone, and a manual file-manager guide); Alibaba,
+  "How To Quickly Backup Your Phone Photos Without Using
+  Cloud Storage"
+  (alibaba.com/product-insights/how-to-quickly-backup-your-phone-photos-without-using-cloud-storage.html
+  — a portable SSD or flash drive with OTG support, a
+  USB cable and computer, or a local NAS. Generic
+  Android and iPhone, and the direct route is a manual
+  file-manager copy); AnExplorer, "How to Transfer
+  Files from Android to USB Drive (OTG, No Root)"
+  (anexplorer.io/transfer/phone-to-usb — connect the
+  drive with an OTG adapter, open AnExplorer, and copy
+  the files with a progress bar, with a FAT32 4 GB
+  limit note. Generic Android, and a manual
+  file-manager guide — the closest generic guide to
+  this article's job, but it still needs you to pick
+  the files yourself); YouTube, "How to Transfer
+  Photos, Videos and any Files from Android Phone to
+  USB Pendrive (USB Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — OTG adapter and the
+  phone's built-in file manager, with a FAT32 or exFAT
+  drive. Generic Android, and a manual file-manager
+  guide); sekin.in, "How To Transfer Files From Android
+  Phone To USB Drive"
+  (sekin.in/how-to-transfer-files-from-android-phone-to-usb-drive-full-guide/
+  — connect a USB OTG drive or a regular flash drive
+  through a USB-OTG adapter and copy the files with
+  Files by Google, or through a Windows PC instead.
+  Generic Android, and the direct route is a manual
+  file-manager copy); Photos to USB: OTG Backup (Play
+  listing, com.arzdrz.photos_to_usb — the one-tap app
+  alternative: copies the whole gallery to a pen drive
+  in one tap, copies only new photos next time, warns
+  about the FAT32 4 GB limit. Free with ads, one-time
+  purchase to remove them. Generic Android, not a Sonim
+  guide, and it does not promise oldest-first order,
+  detailed progress with Pause and Stop, or size
+  verification of every file); cloud routes — Google
+  Photos syncs the gallery to Google's servers, Google
+  Drive backs data up to Google's cloud with 15 GB
+  free, and Google backup restores data to a new phone
+  from Google's cloud, not to a drive you hold; Google
+  Photos' "Storage saver" setting compresses photos,
+  and a cloud backup stops working the day you stop
+  paying for storage. Neither route gives a folder of
+  plain photo files on a USB drive.
+  Sonim specifics: OTG is confirmed on the XP8 (user
+  guide lists the port as "High Speed, OTG") — but the
+  XP10 datasheet does not list OTG either way, so the
+  article tells owners of that model to check Settings >
+  Storage before relying on it instead of claiming OTG
+  across the range; one third-party spec page claims the
+  XP10 supports USB OTG, but Sonim's own datasheet does
+  not say so; both phones have USB-C, so a USB-C flash
+  drive plugs straight in and a regular USB-A drive
+  needs a USB-C OTG adapter; the XP8 takes a microSD
+  card up to 128GB per Sonim's datasheet and the XP10
+  takes one up to 1TB, but a card is still not a USB
+  drive: it stays in the phone and opening it anywhere
+  else needs a card reader.
+  Sonim's own tools: Sonim SCOUT (the preloaded
+  device-management app) manages the phone but does not
+  back up photos; Google Photos (the stock photo backup
+  on Sonim Android phones) backs photos up to Google's
+  cloud; Google Drive (Android's default built-in
+  service, 15 GB free) backs data up to Google's cloud;
+  a microSD card (up to 128GB on the XP8, up to 1TB on
+  the XP10) is a real local copy, but the card stays in
+  the phone and needs a reader elsewhere; a computer
+  copy (connect the phone to a computer using the USB
+  cable and make a copy of the files using the file
+  browser) lands on the PC, not on a USB drive; no
+  Sonim backup page points at a USB drive at all — none
+  of them writes plain photo files to a USB drive
+  automatically. The XP5s runs a proprietary OS, not
+  Android, so SnapDisk cannot install on it at all —
+  the article is scoped to the Android Sonim phones
+  (XP8 and XP10); the XP3 flip phones run a proprietary
+  OS too.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-80, 49th how-to):
+  docs/sonim-photos-to-usb.html.
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
