@@ -2889,6 +2889,100 @@ demand is read off competitor install velocity instead (see
   Article published Nov 17, 2026 (WL-73, 42nd how-to):
   docs/oukitel-photos-to-usb.html.
 
+### 42. "back up AGM photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an AGM-specific
+  phone-to-USB guide at all, let alone an AGM-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the AGM-specific results are user manuals and
+  a screenshot guide, and the rest are generic manual guides.
+- Current top results (scored Nov 17, 2026, live web search):
+  Google Photos Community, "How do I back up photos to a
+  plug in drive"
+  (support.google.com/photos/thread/443333707/how-do-i-back-up-photos-to-a-plug-in-drive?hl=en
+  — download the photos from Google Photos cloud storage to
+  the phone, then move the photos and files to USB with Files
+  by Google. Generic Android, and the route starts in the
+  cloud, not on the phone); Android Central forum, "Moving
+  photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — use an OTG adapter to plug in a USB drive, and it shows
+  up as external storage in the file manager, where you can
+  move files to it. Generic Android, and a manual
+  file-manager guide); Pixoneye, "How to Transfer Photos from
+  Your Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage with a
+  file manager, or import to a computer first and then copy
+  to USB. Generic Android, and the direct route is manual
+  select-copy-paste); YouTube, "How to Connect USB Drive to
+  Android Phone to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet
+  needed. Generic Android, and a manual file-manager guide);
+  Dr.Fone, "4 Practical Ways to Transfer Photos from Android
+  to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — direct transfer with an OTG adaptor, a PC as a middleman
+  via drag and drop, Google Drive, or AirDroid. Generic
+  Android, and three of the four ways need a computer or a
+  cloud account); CellularNews, "How to Move Pictures to a
+  Flash Drive From a Google Phone"
+  (cellularnews.com/device-reviews-and-comparisons/smartphones/how-to-move-pictures-to-a-flash-drive-from-google-phone/
+  — connect a USB storage device using an OTG adapter and
+  copy the photos using the Files app. Generic Android, and
+  the direct route is manual select-copy-paste);
+  TheGadgetians, "How to Transfer Files From Phone to USB
+  Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — connect a USB drive to Android with an OTG adapter, open
+  the file manager, select and copy files, then paste onto
+  the USB drive. Generic Android, and the direct route is
+  manual select-copy-paste); Photos to USB: OTG Backup (Play
+  listing, com.arzdrz.photos_to_usb — the one-tap app
+  alternative, known from earlier scoring of this niche; it
+  did not surface in this query's top results: copies the
+  whole gallery to a pen drive in one tap, copies only new
+  photos next time, warns about the FAT32 4 GB limit. Free
+  with ads, one-time purchase to remove them. Generic
+  Android, not an AGM guide, and it does not promise
+  oldest-first order, detailed progress with Pause and Stop,
+  or size verification of every file); AGM H6 specs
+  (kimovil.com/en/where-to-buy-agm-h6-global-8gb-256gb — USB
+  "Mass Storage Yes, USB On-The-Go (OTG) Yes, USB Type C
+  Yes", Android 13, 50MP primary camera. A spec listing, not
+  a guide — and the confirmation that the H6 has OTG); AGM H6
+  Pro specs (kimovil.com/en/where-to-buy-agm-h6-pro — USB
+  "Mass Storage Yes, USB On-The-Go (OTG) Yes, USB Type C
+  Yes". A spec listing, not a guide — and the confirmation
+  that the H6 Pro has OTG); AGM H6 Lite specs
+  (phonesdata.com/en/smartphones/agm/agm-h6-lite-5464528/ —
+  "USB Yes, USB Type C, USB On-The-Go (OTG)", microSDXC on a
+  dedicated slot. A spec listing, not a guide — and the
+  confirmation that the H6 Lite has OTG); AGM H6 official
+  product page (eu.agmmobile.com/products/agm-h6/ — lists
+  "OTG" among the H6's features, a 3-card slot with two SIM
+  slots and a dedicated microSD slot that can support up to
+  512GB of storage, Android 13, IP68/IP69K/MIL-STD-810H. A
+  product page, not a guide — and the confirmation that the
+  H6 has OTG and a dedicated card slot); AGM H6 user manual
+  (manuals.plus/asin/B0F32DGQR9.pdf — "USB-C Port: For
+  charging and data transfer", 50MP primary lens with a 2MP
+  macro lens and an 8MP front camera, Android 13, and
+  "Drive: Store your content on the cloud, access it from
+  anywhere, and share it with others". A manual, not a guide
+  — and the confirmation that AGM's own storage route is the
+  cloud, not a USB drive); cloud routes — Google Photos syncs
+  the gallery to Google's servers, Google backup restores
+  data to a new phone from Google's cloud, not to a drive you
+  hold; Google Photos' "Storage saver" setting compresses
+  photos, and a cloud backup stops working the day you stop
+  paying for storage. Neither route gives a folder of plain
+  photo files on a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-74, 43rd how-to):
+  docs/agm-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos

@@ -300,5 +300,12 @@
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
     <description>Oukitel rugged phones (WP39, WP35, and WP33 Pro) have USB-C and OTG across the range: spec tables list USB Type-C 2.0 with OTG for the WP39 and the WP35, and the WP33 Pro manual lists 18W reverse charging over OTG — and Oukitel has no phone-to-USB backup tool of its own: the per-model backup guides all point to a computer copy, Google Drive, or Google Photos, with a microSD card as the local option. A USB-C flash drive plugs straight into any current Oukitel. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up AGM photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/agm-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/agm-photos-to-usb.html</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <description>AGM rugged phones (H6, H6 Pro, and H6 Lite) have USB-C and OTG across the range: spec tables list USB On-The-Go as Yes for the H6 and the H6 Pro, and USB Type-C with USB On-The-Go for the H6 Lite, and AGM's own product page lists OTG among the H6's features — and AGM has no phone-to-USB backup tool of its own: the H6 manual's storage mention is Drive, Google's cloud, and the stock photo backup is Google Photos. A USB-C flash drive plugs straight into any current AGM. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
