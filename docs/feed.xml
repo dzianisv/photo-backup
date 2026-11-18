@@ -356,5 +356,12 @@
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
     <description>Kyocera's DuraForce Android phones (Pro 2, Ultra 5G, PRO 3, and DuraSport) have USB host support on at least two of them — the spec tables list USB OTG as Yes for the DuraForce Pro 2, and the DuraSport's spec pages list its port as "USB Type-C, USB On-The-Go" — and Kyocera has no phone-to-USB backup tool of its own: its backup advice is a computer copy or Google Drive and Google Photos in the cloud. One honest caveat up front: the Ultra 5G and PRO 3 datasheets list USB-C without mentioning OTG either way, so check Settings > Storage before relying on it on those models, and the older DuraForce phones are out of scope — the original DuraForce runs Android 4.4, the DuraForce XD runs Android 5.1, and the original DuraForce PRO's spec tables list USB OTG as No. Here is the manual way, and the one-tap version.</description>
   </item>
+  <item>
+    <title>Back up Crosscall photos to a USB drive (no computer)</title>
+    <link>https://dzianisv.github.io/photo-backup/crosscall-photos-to-usb.html</link>
+    <guid>https://dzianisv.github.io/photo-backup/crosscall-photos-to-usb.html</guid>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    <description>Crosscall's rugged Android phones (Core-X5, Action-X5, Core-Z5, and Stellar-X5) have USB host support on at least three of them — the spec tables list USB On-The-Go support as Yes for the Core-X5, Crosscall's own product sheet lists OTG as Yes for the Action-X5, and the Core-Z5 spec tables list USB On-The-Go support as Yes — and Crosscall has no phone-to-USB backup tool of its own: its backup advice is a computer copy or Google Drive and Google Photos in the cloud. One honest caveat up front: the Stellar-X5 spec pages I found list USB-C without mentioning OTG either way, so check Settings > Storage before relying on it on that model, and the older Trekker-M1 phones are out of scope — they run Android 5.1, below SnapDisk's Android 7.0 minimum. Here is the manual way, and the one-tap version.</description>
+  </item>
 </channel>
 </rss>
