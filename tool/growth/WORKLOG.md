@@ -1,5 +1,186 @@
 # SnapDisk — Work Log
 
+## WL-79 — Back up RugGear photos to USB article, 48th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/ruggear-photos-to-usb.html ("Back up RugGear photos to
+  a USB drive (no computer)"), following the
+  WL-54/WL-55/WL-56/WL-57/WL-58/WL-59/WL-60/WL-61/WL-62/WL-63/
+  WL-64/WL-65/WL-66/WL-67/WL-68/WL-69/WL-70/WL-71/WL-72/WL-73/
+  WL-74/WL-75/WL-76/WL-77/WL-78 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot —
+  same reuse as the 8th through 47th articles). Facts verified
+  from code on fresh main: SAF tree picker (MainActivity.kt
+  OpenDocumentTree + takePersistableUriPermission); oldest-first
+  via MediaStore DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN
+  else DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price); no INTERNET permission in AndroidManifest.xml;
+  FAT32 files >=4 GiB skipped with reason
+  (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw byte-stream copy
+  (BackupEngine.copyWithResume — no decode/re-encode) with size
+  verification after copy. Search evidence (Nov 18, 2026 live
+  web search): there is no RugGear-specific phone-to-USB guide
+  in the top results at all — the RugGear-specific results are
+  spec tables, datasheets, and a user manual that gives no
+  backup advice at all, and the rest are generic manual guides.
+  RugGear RG655 smartphone, FindPare spec table
+  (findpare.com/smartphone/ruggear-rg655 — the spec table
+  lists USB OTG as Yes, with a micro USB 2.0 port. A spec
+  table, not a guide — and the confirmation that the RG655
+  has OTG); RugGear RG655 Smartphone User Guide
+  (manuals.plus/ruggear/rg655-smartphone-manual.pdf — the USB
+  port is a micro USB port for mobile phone charging and data
+  transmission, and the phone takes a micro SD memory card up
+  to 128GB (microSDHC, FAT32 format). A user guide, not a
+  backup guide — and the confirmation that the RG655 manual
+  gives no backup advice at all); RugGear RG655 Smartphone
+  Review, Notebookcheck
+  (notebookcheck.net/RugGear-RG655-Smartphone-Review-A-pleasant-outdoor-handset-with-a-few-useful-extras-and-shortcomings.428352.0.html
+  — the phone runs Android 11 with a 13MP rear camera and a
+  4200mAh battery, the card reader takes microSD cards up to
+  128 GB (FAT, FAT32) and does not support exFAT, and the
+  second SIM slot is a hybrid slot, so a card costs you a
+  second SIM. A review, not a guide); RG655 datasheet
+  (techsolutions.id/wp-content/uploads/2025/11/RG655-Datasheet.pdf
+  — Android 11, 4G LTE, a 5.5-inch display, a 4200mAh battery,
+  a 13MP rear camera (PDAF), and a Helio P22 processor. A
+  datasheet, not a guide); RG850 datasheet
+  (testar.com.sg/wp-content/uploads/2022/11/RG850_datasheet__2022-01-21_-min.pdf
+  — Android Oreo, a 5.99-inch display, a 4000mAh battery, a
+  12MP rear camera, 32GB with a microSD card up to 128GB, and
+  a Snapdragon 430 processor. A datasheet, not a guide — and
+  it does not list OTG either way); RG935 RugGear 10.1"
+  Rugged Tablet
+  (rugged.co.uk/rg935-ruggear-10-1-rugged-tablet/ — Android
+  11, a microSD card up to 256GB, and "NFC and OTG
+  supported", with a USB-C charging port (USB 3.1) and a
+  Type-A (USB 2.0) port. A product page, not a guide — and
+  the confirmation that OTG is supported on the RG935
+  tablet); RG310 RugGear Rugged Smartphone
+  (rugged.co.uk/rg310-ruggear-smartphone/ — "USB on-the-go,
+  able to charge other USB devices". A product page, not a
+  guide — and the confirmation that the RG310 has OTG);
+  RG170 / RG360 RugGear PTT handsets
+  (rugged.co.uk/rg170-ruggear-compact-ppt-ready-mobile-phone/
+  and rugged.co.uk/rg360-ruggear-rugged-smartphone-ptt-ready/
+  — both run a proprietary OS, not Android, with 2MP
+  cameras, so SnapDisk cannot install on them at all. A
+  product page, not a guide — and the reason the article is
+  scoped to the Android RugGear phones); Pixoneye, "How to
+  Transfer Photos from Your Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage with a
+  file manager, or import to a computer first. Generic
+  Android and iPhone, and a manual file-manager guide);
+  YouTube, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet
+  needed. Generic Android, and a manual file-manager guide);
+  Techwalla, "How to Move Pictures from Camera to Flash
+  Drive With No Computer"
+  (techwalla.com/articles/how-to-move-pictures-from-camera-to-flash-drive-with-no-computer
+  — a memory card reader and USB flash drive combination
+  for a camera's card. A camera guide, not a phone guide —
+  and it still needs you to pull the card out of the
+  camera); Dr.Fone, "4 Practical Ways to Transfer Photos
+  from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos with an OTG adapter, through Google
+  Drive, by drag-and-drop through a PC, or wirelessly
+  through AirDroid. Generic Android, and the direct route
+  is a manual file-manager copy); TheGadgetians, "How to
+  Transfer Files From Phone to USB Without Computer:
+  Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — connect a USB drive to an Android phone with an OTG
+  adapter, open the file manager, select files, and paste
+  them onto the drive. Generic Android and iPhone, and a
+  manual file-manager guide); Alibaba, "How To Quickly
+  Backup Your Phone Photos Without Using Cloud Storage"
+  (alibaba.com/product-insights/how-to-quickly-backup-your-phone-photos-without-using-cloud-storage.html
+  — a portable SSD or flash drive with OTG support, a USB
+  cable and computer, or a local NAS. Generic Android and
+  iPhone, and the direct route is a manual file-manager
+  copy); AnExplorer, "How to Transfer Files from Android
+  to USB Drive (OTG, No Root)"
+  (anexplorer.io/transfer/phone-to-usb — connect the drive
+  with an OTG adapter, open AnExplorer, and copy the files
+  with a progress bar, with a FAT32 4 GB limit note.
+  Generic Android, and a manual file-manager guide — the
+  closest generic guide to this article's job, but it
+  still needs you to pick the files yourself); YouTube,
+  "How to Transfer Photos, Videos and any Files from
+  Android Phone to USB Pendrive (USB Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — OTG adapter and the
+  phone's built-in file manager, with a FAT32 or exFAT
+  drive. Generic Android, and a manual file-manager guide);
+  sekin.in, "How To Transfer Files From Android Phone To
+  USB Drive"
+  (sekin.in/how-to-transfer-files-from-android-phone-to-usb-drive-full-guide/
+  — connect a USB OTG drive or a regular flash drive
+  through a USB-OTG adapter and copy the files with Files
+  by Google, or through a Windows PC instead. Generic
+  Android, and the direct route is a manual file-manager
+  copy); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — the one-tap app alternative:
+  copies the whole gallery to a pen drive in one tap,
+  copies only new photos next time, warns about the FAT32
+  4 GB limit. Free with ads, one-time purchase to remove
+  them. Generic Android, not a RugGear guide, and it does
+  not promise oldest-first order, detailed progress with
+  Pause and Stop, or size verification of every file);
+  cloud routes — Google Photos syncs the gallery to
+  Google's servers, Google Drive backs data up to Google's
+  cloud with 15 GB free, and Google backup restores data to
+  a new phone from Google's cloud, not to a drive you hold;
+  Google Photos' "Storage saver" setting compresses
+  photos, and a cloud backup stops working the day you
+  stop paying for storage. Neither route gives a folder of
+  plain photo files on a USB drive.
+  RugGear specifics: OTG is confirmed on the RG655 (spec
+  table lists USB OTG as Yes), the RG310 (USB on-the-go),
+  and the RG935 tablet (OTG supported) — but the RG850 and
+  RG880 datasheets found do not list OTG either way, so the
+  article tells owners of those models to check Settings >
+  Storage before relying on it instead of claiming OTG
+  across the range; the RG655 has a micro USB port and needs
+  a micro-USB OTG adapter, while the RG850 and RG880 are
+  USB-C; RugGear has no phone-to-USB backup tool of its
+  own — the RG655 manual gives no backup advice at all, and
+  the stock photo backup is Google Photos; there is no
+  RugGear backup page pointing at a USB drive at all.
+  The RG655 takes a microSD card up to 128GB in FAT32
+  format, the RG850 takes one up to 128GB, and the RG880
+  takes one too, but on a hybrid SIM slot — so a card costs
+  a second SIM, unlike the dedicated slot on some other
+  rugged phones — but a card is still not a USB drive: it
+  stays in the phone, the RG655's card reader does not
+  support exFAT, and opening it anywhere else needs a card
+  reader.
+  RugGear's own tools: Google Photos (the stock photo
+  backup on RugGear Android phones) backs photos up to
+  Google's cloud; Google Drive (Android's default built-in
+  service, 15 GB free) backs data up to Google's cloud; a
+  microSD card (up to 128GB on the RG655 in FAT32 format,
+  up to 128GB on the RG850, hybrid SIM slot) is a real
+  local copy, but the card stays in the phone and needs a
+  reader elsewhere; a computer copy (connect the phone to
+  a computer using the USB cable and make a copy of the
+  files using the file browser) lands on the PC, not on a
+  USB drive; the RG655 user manual gives no backup advice
+  at all — none of them writes plain photo files to a USB
+  drive automatically. The RG170 and RG360 PTT handsets run
+  a proprietary OS, not Android, so SnapDisk cannot install
+  on them at all — the article is scoped to the Android
+  RugGear phones (RG655, RG850, RG880) and the RG935
+  tablet.
+- Verdict: how-to article material, not a listing keyword.
+  Fallback for WL-80: Sonim (XP8 / XP10 / XP5s) — no Sonim
+  article exists in docs/ yet.
 ## WL-78 — Back up IIIF150 photos to USB article, 47th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
