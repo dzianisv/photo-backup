@@ -2788,6 +2788,107 @@ demand is read off competitor install velocity instead (see
   Article published Nov 17, 2026 (WL-72, 41st how-to):
   docs/cat-photos-to-usb.html.
 
+### 41. "back up Oukitel photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Oukitel-specific
+  phone-to-USB guide at all, let alone an Oukitel-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Oukitel-specific results are per-model FAQ
+  pages whose backup advice is a computer copy or a cloud
+  backup, and the rest are generic manual guides.
+- Current top results (scored Nov 17, 2026, live web search):
+  devicesfaq, "Frequently asked questions Oukitel OT6"
+  (devicesfaq.com/en/frequently-asked-questions/oukitel-ot6
+  — "How to backup my Oukitel OT6?" The most economical
+  method is to connect the Oukitel OT6 to a computer using
+  the USB cable and make a copy of the files using the file
+  browser; for a cloud backup use Google Drive (15 GB free);
+  for photos and videos only, use Google Photos, configured
+  to upload automatically or when on Wi-Fi.
+  Oukitel-specific, but PC-or-cloud. No phone-to-USB route in
+  it at all); devicesfaq, "Frequently asked questions
+  Oukitel OKT3"
+  (devicesfaq.com/en/frequently-asked-questions/oukitel-okt3
+  — the same backup advice, word for word, for the OKT3
+  tablet: computer copy as the most economical method, Google
+  Drive for cloud backup, Google Photos for photos and
+  videos. Oukitel-specific, but PC-or-cloud. No phone-to-USB
+  route in it at all); devicesfaq, "Frequently asked
+  questions Oukitel Ouk C32"
+  (devicesfaq.com/en/frequently-asked-questions/oukitel-ouk-c32
+  — the same backup advice again for the C32: computer copy,
+  Google Drive, Google Photos. Oukitel-specific, but
+  PC-or-cloud. No phone-to-USB route in it at all); Dr.Fone,
+  "4 Practical Ways to Transfer Photos from Android to USB
+  Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — direct transfer with an OTG adaptor, a PC as a middleman
+  via drag and drop, Google Drive, or AirDroid. Generic
+  Android, and three of the four ways need a computer or a
+  cloud account); YouTube, "How to Connect USB Drive to
+  Android Phone to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the
+  phone's built-in file manager, no computer or internet
+  needed. Generic Android, and a manual file-manager guide);
+  EpicTechTips, "How to Transfer Pictures from Android Phone
+  to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the drive in, tap the USB notification, open the file
+  manager, select the photos in DCIM, and Move or Copy them to
+  the drive — or use a PC as a middleman. Generic Android, and
+  the direct route is manual select-copy-paste);
+  connect.gmb.org.uk, "How to Transfer Pictures from Android
+  to a Flash Drive A Simple Guide"
+  (connect.gmb.org.uk/how-to-transfer-pictures-from-android-to-flash-drive/
+  — a USB OTG cable for the direct route, or a computer as a
+  middleman. Generic Android, and the direct route is manual
+  select-copy-paste with the file manager); SoftHandTech,
+  "Transfer Photos from Phone to Memory Stick: A
+  Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — a computer copy, a direct OTG transfer, or cloud services.
+  Generic Android, and the direct route is manual
+  select-copy-paste); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — the one-tap app alternative,
+  known from earlier scoring of this niche; it did not surface
+  in this query's top results: copies the whole gallery to a
+  pen drive in one tap, copies only new photos next time, warns
+  about the FAT32 4 GB limit. Free with ads, one-time purchase
+  to remove them. Generic Android, not an Oukitel guide, and it
+  does not promise oldest-first order, detailed progress with
+  Pause and Stop, or size verification of every file); Oukitel
+  WP39 specs
+  (mysmartprice.com/mobile/oukitel-wp39-msp619305 — USB "USB
+  2.0, USB Type-C, Mass storage device, USB charging, USB
+  On-The-Go" with USB OTG Support "Yes", microSD expandable up
+  to 2 TB (Hybrid Slot). A spec listing, not a guide — and the
+  confirmation that the WP39 has OTG); Oukitel WP35 specs
+  (mobileinto.com/gh/Oukitel-WP35/ — "USB Type-C 2.0, OTG",
+  11,000 mAh battery, microSD up to 2 TB (Hybrid Slot). A spec
+  listing, not a guide — and the confirmation that the WP35 has
+  OTG); OUKITEL WP33 Pro user manual (manuals.plus/asin/B0CSYNG2FH
+  — "18W Reverse Charging (OTG): Use your WP33 Pro as a power
+  bank to charge other devices via an OTG cable", microSD
+  expandable up to 1 TB, 22,000 mAh battery. A manual, not a
+  guide — and the confirmation that the WP33 Pro has OTG);
+  Oukitel WP210 specs (oukitel.store/products/oukitel-wp210 —
+  "USB, Type-C, OTG, Support", Android 15, 8,800 mAh battery. A
+  store spec listing, not a guide — and the confirmation that
+  the WP210 has OTG); Oukitel WP100 Plus specs
+  (oukitel.store/products/oukitel-wp100-plus-rugged-phone —
+  "USB, Type-C, OTG, Yes", 33,000 mAh battery. A store spec
+  listing, not a guide — and the confirmation that the WP100
+  Plus has OTG); cloud routes — Google Photos syncs the gallery
+  to Google's servers, Google backup restores data to a new
+  phone from Google's cloud, not to a drive you hold; Google
+  Photos' "Storage saver" setting compresses photos, and a
+  cloud backup stops working the day you stop paying for
+  storage. Neither route gives a folder of plain photo files
+  on a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-73, 42nd how-to):
+  docs/oukitel-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
