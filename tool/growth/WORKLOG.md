@@ -1,5 +1,146 @@
 # SnapDisk — Work Log
 
+## WL-78 — Back up IIIF150 photos to USB article, 47th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/iiif150-photos-to-usb.html ("Back up IIIF150 photos to
+  a USB drive (no computer)"), following the
+  WL-54/WL-55/WL-56/WL-57/WL-58/WL-59/WL-60/WL-61/WL-62/WL-63/
+  WL-64/WL-65/WL-66/WL-67/WL-68/WL-69/WL-70/WL-71/WL-72/WL-73/
+  WL-74/WL-75/WL-76/WL-77 article template exactly (navy/cyan,
+  TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot —
+  same reuse as the 8th through 46th articles). Facts verified
+  from code on fresh main: SAF tree picker (MainActivity.kt
+  OpenDocumentTree + takePersistableUriPermission); oldest-first
+  via MediaStore DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN
+  else DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price); no INTERNET permission in AndroidManifest.xml;
+  FAT32 files >=4 GiB skipped with reason
+  (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw byte-stream copy
+  (BackupEngine.copyWithResume — no decode/re-encode) with size
+  verification after copy. Search evidence (Nov 18, 2026 live
+  web search): there is no IIIF150-specific phone-to-USB guide
+  in the top results at all — the IIIF150-specific results are
+  per-model FAQ pages whose backup advice is a computer copy,
+  Google Drive, or Google Photos, plus a user manual that gives
+  no backup advice at all, and the rest are generic manual
+  guides. Frequently asked questions IIIF150 B3C
+  (devicesfaq.com/en/frequently-asked-questions/iiif150-b3c —
+  "How to backup my IIIF150 B3C?" The most economical method
+  is to connect the phone to a computer using the USB cable and
+  make a copy of the files using the file browser; a cloud
+  backup is Google Drive with 15 GB free; for photos only,
+  Google Photos; and "Pass media files to memory card." A
+  per-model FAQ page, not a guide — and the confirmation that
+  the IIIF150 backup advice is a computer copy or a cloud sync,
+  not a USB drive); Frequently asked questions IIIF150 Air3
+  (devicesfaq.com/en/frequently-asked-questions/iiif150-air3_eea
+  — the same backup advice: a computer copy via USB cable and
+  file browser, Google Drive, or Google Photos, plus passing
+  media files to a memory card. A per-model FAQ page, not a
+  guide); Frequently asked questions IIIF150 Air3S
+  (devicesfaq.com/en/frequently-asked-questions/iiif150-air3s
+  — the same backup advice. A per-model FAQ page, not a
+  guide); Frequently asked questions IIIF150 Raptor LTD
+  (devicesfaq.com/en/frequently-asked-questions/iiif150-raptor-ltd
+  — the same backup advice. A per-model FAQ page, not a
+  guide); Frequently asked questions IIIF150 B1 Pro
+  (devicesfaq.com/en/frequently-asked-questions/iiif150-b1-pro
+  — the same backup advice. A per-model FAQ page, not a
+  guide); IIIF150 B3C Ultra-Thin Rugged Smartphone User Manual
+  (manuals.plus/ae/1005008797996459 — the phone runs Android
+  14 with a 50MP main camera and a 10800mAh battery, the spec
+  table lists OTG as Support, the manual says to connect
+  compatible USB devices such as flash drives via an OTG
+  adapter to the Type-C port, and the TF card slot takes a
+  card up to 1TB on a shared Nano+Nano/TF tray. A user manual,
+  not a guide — and the confirmation that the B3C has OTG,
+  with no backup advice in it at all); Techdows, "USB OTG:
+  everything you need to know"
+  (techdows.com/usb-otg-everything-you-need-to-know.html — an
+  OTG explainer: plug a flash drive into the phone with an OTG
+  adapter, open Files by Google, and copy the files. Generic
+  Android, and a manual file-manager guide); YouTube, "How to
+  Connect USB Drive to Android Phone to Move Photos & Videos
+  (Best Method)" (youtube.com/watch?v=PYcbV25CczI — OTG
+  connection and the phone's built-in file manager, no computer
+  or internet needed. Generic Android, and a manual
+  file-manager guide); Dr.Fone, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos with an OTG adapter, through Google Drive,
+  by drag-and-drop through a PC, or wirelessly through
+  AirDroid. Generic Android, and the direct route is a manual
+  file-manager copy); AnExplorer, "How to Transfer Files from
+  Android to USB Drive (OTG, No Root)"
+  (anexplorer.io/transfer/phone-to-usb — connect the drive
+  with an OTG adapter, open AnExplorer, and copy the files
+  with a progress bar, with a FAT32 4 GB limit note. Generic
+  Android, and a manual file-manager guide — the closest
+  generic guide to this article's job, but it still needs you
+  to pick the files yourself); YouTube, "How to Transfer
+  Photos, Videos and any Files from Android Phone to USB
+  Pendrive (USB Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — OTG adapter and the
+  phone's built-in file manager, with a FAT32 or exFAT drive.
+  Generic Android, and a manual file-manager guide);
+  sekin.in, "How To Transfer Files From Android Phone To USB
+  Drive"
+  (sekin.in/how-to-transfer-files-from-android-phone-to-usb-drive-full-guide/
+  — connect a USB OTG drive or a regular flash drive through a
+  USB-OTG adapter and copy the files with Files by Google, or
+  through a Windows PC instead. Generic Android, and the direct
+  route is a manual file-manager copy); Photos to USB: OTG
+  Backup (Play listing, com.arzdrz.photos_to_usb — the one-tap
+  app alternative: copies the whole gallery to a pen drive in
+  one tap, copies only new photos next time, warns about the
+  FAT32 4 GB limit. Free with ads, one-time purchase to remove
+  them. Generic Android, not a IIIF150 guide, and it does not
+  promise oldest-first order, detailed progress with Pause and
+  Stop, or size verification of every file); cloud routes —
+  Google Photos syncs the gallery to Google's servers, Google
+  Drive backs data up to Google's cloud with 15 GB free, and
+  Google backup restores data to a new phone from Google's
+  cloud, not to a drive you hold; Google Photos' "Storage
+  saver" setting compresses photos, and a cloud backup stops
+  working the day you stop paying for storage. Neither route
+  gives a folder of plain photo files on a USB drive.
+  IIIF150 specifics: OTG is across the current IIIF150 B, Air,
+  and Raptor lines: the B3C spec table lists OTG as Support,
+  the B3C manual says to connect flash drives via an OTG
+  adapter to the Type-C port, and the Air3, the B2 Ultra, the
+  Air1 Ultra, the Air2 Ultra, and the Raptor all list USB
+  On-The-Go as Yes; IIIF150 has no phone-to-USB backup tool of
+  its own — the per-model FAQ pages' backup advice is only a
+  computer copy, Google Drive, or Google Photos, and the stock
+  photo backup is Google Photos; there is no IIIF150 backup
+  page pointing at a USB drive at all.
+  The B3C takes a TF card up to 1 TB, the Air3 takes one up to
+  1 TB, and the B2 Ultra takes one up to 1 TB, but on a shared
+  SIM slot — so a card costs a second SIM, unlike the dedicated
+  slot on some other rugged phones — but a card is still not a
+  USB drive: it stays in the phone and needs a reader
+  elsewhere.
+  IIIF150's own tools: a computer copy (the FAQ pages' most
+  economical method, connect the phone to a computer using the
+  USB cable and make a copy of the files using the file
+  browser) lands on the PC, not on a USB drive; Google Drive
+  (the FAQ pages' "default built-in service", 15 GB free)
+  backs data up to Google's cloud; Google Photos (the stock
+  photo backup, "If what you want is to make a backup only of
+  the photos and videos made with your IIIF150 you can use
+  Google Photos") backs photos up to Google's cloud; a TF card
+  (the FAQ pages' "Pass media files to memory card", shared
+  SIM slot, up to 1 TB on the B3C, the Air3, and the B2 Ultra)
+  is a real local copy, but the card stays in the phone and
+  needs a reader elsewhere; the B3C user manual gives no
+  backup advice at all — none of them writes plain photo files
+  to a USB drive automatically.
+- Verdict: how-to article material, not a listing keyword.
+
 ## WL-77 — Back up Hotwav photos to USB article, 46th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
