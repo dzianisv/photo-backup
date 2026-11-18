@@ -1,5 +1,98 @@
 # SnapDisk — Work Log
 
+## WL-92 — Back up Panasonic Toughbook photos to USB article, 61st how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/panasonic-toughbook-photos-to-usb.html ("Back up Panasonic
+  Toughbook photos to a USB drive (no computer)"), following the
+  WL-54–WL-91 article template exactly (navy/cyan, TL;DR first, no
+  JS, text-only, reuses docs/screenshots-01-settings-defaults.png as
+  the lead shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 49 chars, meta
+  description 157 chars, JSON-LD validated by parse; sitemap and
+  feed XML parse. Feed now counts 61 items.
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search): Query 60 ("back
+  up Panasonic Toughbook photos to USB drive without computer") is
+  a real gap — no Toughbook-specific phone-to-USB guide in the top
+  results at all; the one Toughbook-specific result is a FAQ page
+  whose backup advice is a computer copy or cloud, and the rest are
+  generic manual guides — most of them about camera memory cards,
+  not the Toughbook's own gallery. PetaPixel, "No Laptop? No
+  Problem: How to Back Up Photos in the Field With Your
+  Smartphone" (petapixel.com/2025/05/11/no-laptop-no-problem-how-to-back-up-photos-in-the-field-with-your-smartphone/
+  — a phone plus a USB hub plus a card reader plus an SSD, copying
+  a camera's SD or CFexpress card with the phone's file manager.
+  Generic, and a manual guide — and about a camera's memory card,
+  not the Toughbook's own gallery); Luminous Landscape forum,
+  "Transferring files from camera to hard drive without laptop"
+  (forum.luminous-landscape.com/index.php?topic=129861.0%3Bwap2 —
+  wireless hard drives with an SD slot that copy a card
+  automatically, such as the WD My Passport Wireless Pro. A forum
+  thread, not a guide — and about camera cards and a dedicated
+  drive); desnoulez.fr, "How to back up camera photos or SD Card
+  without a laptop"
+  (desnoulez.fr/en/how-to-back-up-camera-photos-while-traveling-no-laptop-needed/
+  — the same phone-as-bridge idea, copying a camera's card with
+  the file manager. Generic, and a manual guide — and again about
+  a camera's card); devicesfaq, "Frequently asked questions
+  Panasonic Toughbook P-01K"
+  (devicesfaq.com/en/frequently-asked-questions/panasonic-toughbook-p-01k
+  — the only Toughbook-specific result: its backup answer is to
+  connect the P-01K to a computer with a USB cable and copy the
+  files with the file browser, or use Google Drive (15 GB free) or
+  Google Photos. A FAQ page, not a guide — and the confirmation
+  that the P-01K runs Android 8.1 with 16 GB of internal memory
+  and a micro-USB charging port, with no USB-drive route offered at
+  all); Photos to USB: OTG Backup
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — plug a pen drive into your phone, one tap copies every photo
+  and video to the drive, no internet, no cloud, no account; free
+  with ads, a one-time purchase removes the ads. The one-tap app
+  alternative, generic Android, not a Toughbook guide);
+  thegadgetians, "How to Transfer Files From Phone to USB Without
+  Computer"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — connect a USB drive with an OTG adapter, open the file
+  manager, select and copy files, then paste onto the USB drive.
+  Generic Android, and a manual file-manager guide).
+  Honest limits recorded in the article: the Toughbook line is
+  mostly Windows laptops, so the article covers only the Android
+  handhelds and tablets (FZ-N1, FZ-T1, FZ-S1, FZ-A3, FZ-L1,
+  P-01K); the original FZ-N1 runs Android 6.0.1 (Panasonic Wiki),
+  below SnapDisk's Android 7.0 minimum, so it cannot run SnapDisk
+  at all — only the FZ-N1 mk2, on Android 8.1 (Panasonic spec
+  sheet), can; USB host support is listed only on the FZ-N1 mk2
+  and the FZ-L1 (Panasonic's own spec sheets list their micro-USB
+  port as "option to be host"), while host or OTG support is
+  unconfirmed in the sources found on the FZ-T1 (Android 8.1,
+  MobileGizmo), the FZ-S1 (Android 10, USB-C, Notebookcheck), the
+  FZ-A3 (Android 9.0, USB-C, UL benchmarks), and the P-01K
+  (Android 8.1, micro-USB, devicesfaq) — the drive mounting is the
+  test on those models; the FZ-S1's microSD support is unconfirmed
+  in the sources found, so the card is not leaned on for that
+  model; most search results are about camera memory cards, with
+  "Panasonic" meaning the camera brand, not the device — the
+  article is about the photos stored on the Toughbook itself; the
+  adapter differs by model (USB-C OTG on the FZ-S1/FZ-A3,
+  micro-USB OTG on the FZ-N1 mk2/FZ-T1/FZ-L1/P-01K); Windows
+  Toughbooks are out of scope entirely.
+  Article published Nov 18, 2026 (WL-92, 61st how-to):
+  docs/panasonic-toughbook-photos-to-usb.html.
+  Fallback for WL-93: Zebra — no Zebra article exists in docs/
+  yet (TC-series enterprise Android handhelds).
+
 ## WL-91 — Back up Evolveo photos to USB article, 60th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
