@@ -3747,6 +3747,227 @@ demand is read off competitor install velocity instead (see
 - Verdict: how-to article material, not a listing keyword.
   Article published Nov 18, 2026 (WL-80, 49th how-to):
   docs/sonim-photos-to-usb.html.
+
+### 49. "back up Kyocera photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Kyocera-specific
+  phone-to-USB guide at all, let alone a Kyocera-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Kyocera-specific results are spec tables,
+  datasheets, user manuals, and FAQ pages that give no
+  USB-drive advice at all, and the rest are generic manual
+  guides.
+- Current top results (scored Nov 18, 2026, live web search):
+  Frequently asked questions Kyocera DuraForce, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/kyocera-duraforce
+  — "How to backup my Kyocera DuraForce? … The most
+  economical method to make a backup is to connect the
+  Kyocera DuraForce to a computer using the USB cable and
+  make a copy of the files using the file browser. To
+  perform a cloud backup you need a cloud backup service,
+  on Android devices the default built-in service is
+  Google Drive. With Google Drive you have 15Gb free" —
+  and photos via Google Photos. A FAQ page, not a backup
+  guide — and the confirmation that Kyocera's own backup
+  advice points at a computer or the cloud, never at a
+  USB drive); Kyocera DuraForce User Manual, ManualsLib
+  (manualslib.com/manual/898083/Kyocera-Duraforce.html?page=14
+  — "How do I transfer photos from my Kyocera DuraForce
+  to a computer? … connecting your phone as a media
+  device" via a USB cable and Media device (MTP), or
+  sharing via Bluetooth. A user manual, not a backup
+  guide — and the confirmation that the manual's own
+  photo-transfer advice needs a computer); Frequently
+  asked questions Kyocera DuraForce Pro 3, devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/kyocera-duraforce-pro-3
+  — the same backup advice as the DuraForce page: a
+  computer copy with a USB cable and a file browser, or
+  a cloud backup through Google Drive (15 GB free), with
+  photos via Google Photos. A FAQ page, not a guide);
+  Frequently asked questions Kyocera DuraForce Pro 2,
+  devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/kyocera-duraforce-pro-2
+  — the same backup advice again: a computer copy with
+  a USB cable and a file browser, or Google Drive and
+  Google Photos in the cloud. A FAQ page, not a guide);
+  Frequently asked questions Kyocera DuraForce XD,
+  devicesfaq
+  (devicesfaq.com/en/frequently-asked-questions/kyocera-duraforce-xd
+  — "The Kyocera DuraForce XD … comes from the factory
+  with the Android 5.1 (Lollipop) operating system", and
+  the backup advice is the same computer copy or cloud
+  backup. A FAQ page, not a guide — and the confirmation
+  that the XD runs Android 5.1, below SnapDisk's Android
+  7.0 minimum); Kyocera DuraForce Ultra 5G UW — Move
+  Files from Internal Storage to SD / Memory Card,
+  Verizon (verizon.com/support/knowledge-base-236269/
+  — open Settings, Storage, pick Images or Videos, then
+  Move to the SD card. A carrier support page for moving
+  files to a microSD card — not a phone-to-USB guide);
+  Kyocera DuraForce Pro 2, GSMArena
+  (m.gsmarena.com/kyocera_duraforce_pro_2-9407.php
+  — Android 8.0 (Oreo), a Snapdragon 630 processor,
+  64GB of storage with a microSDXC card slot, and "USB
+  Type-C 3.1". A spec table, not a guide); Kyocera
+  DuraForce Pro 2, FindPare comparisons
+  (findpare.com/comparison/kyocera-duraforce-pro-kc-s702-VS-kyocera-digno-a-VS-kyocera-duraforce-pro-2
+  — spec tables listing "USB OTG, No, Yes, Yes" across
+  the compared phones: No for the original DuraForce PRO
+  (KC-S702), Yes for the DuraForce Pro 2. A spec table,
+  not a guide — and the confirmation that the Pro 2 has
+  OTG while the original PRO does not); Kyocera DuraForce
+  Pro 2, pkgsm (pkgsm.com/product/kyocera-duraforce-pro-2/
+  — 64 GB of storage and "USB 3.1, Type-C 1.0 reversible
+  connector". A spec page, not a guide); Kyocera
+  DuraForce Pro 2 E6910 User Manual, manuals.plus
+  (manuals.plus/pl/asin/B07PT3R6P6 — Android 8 (Oreo), a
+  Snapdragon SDM630 processor, 64GB of storage expandable
+  up to 512GB via microSD, and USB Type-C with Qi
+  wireless charging. A user manual, not a backup guide);
+  DuraForce PRO 3 Spec Sheet, Kyocera (August 2025)
+  (irp.cdn-website.com/8ac3ee00/files/uploaded/DuraForce+PRO+3+Spec+Sheet+Android+15.pdf
+  — "Superspeed USB 3.2 Gen 1, Type-C (5Gbps)", a
+  microSDXC card up to 2TB, and a Qualcomm Snapdragon 7
+  Gen 1 processor. A spec sheet, not a guide — and it
+  does not list OTG either way); Kyocera DuraForce Pro 3,
+  pkgsm (pkgsm.com/product/kyocera-duraforce-pro-3/ —
+  released September 2023, with "USB Type-C 3.2". A spec
+  page, not a guide — and it does not list OTG either
+  way); Kyocera DuraForce Ultra 5G UW E7110 User Manual,
+  manuals.plus (manuals.plus/asin/B093XYRGFN — Android
+  11.0, a Snapdragon 765G processor, and a "USB/Charger
+  Port: USB 3.1 with PD 3.0 for fast charging and data
+  transfer", with storage expandable via microSD. A user
+  manual, not a backup guide — and it does not list OTG
+  either way); Kyocera Duraforce Ultra review, Android
+  Authority
+  (androidauthority.com/kyocera-duraforce-ultra-review-2733718/
+  — the phone "ships with Android 10", with 6GB of RAM
+  and 128GB of storage "expandable up to 1TB via a
+  microSD card", and a single covered USB-C port. A
+  review, not a guide); KYOCERA DuraSport 5G UW,
+  naijaknowhow (naijaknowhow.net/kyocera-durasport-5g-uw/
+  — Android 11, a Snapdragon 480 5G processor, 4GB of
+  RAM with 64GB of storage (microSD compatible up to
+  1TB), and "USB Port: USB Type-C, USB On-The-Go". A spec
+  page, not a guide — and the confirmation that the
+  DuraSport has OTG); Kyocera DuraSport UW, mobilemaya
+  (mobilemaya.net/product/kyocera-durasport-uw/ — "The
+  inclusion of USB OTG", with USB Type-C 3.1, a
+  Snapdragon 480 5G processor, and 4GB of RAM with 64GB
+  of storage. A third-party spec page, not a guide — and
+  a second source claiming OTG on the DuraSport); Kyocera
+  DuraSport 5G UW C6930 User Manual, manuals.plus
+  (manuals.plus/asin/B09M5YQNZ9 — Android 11, a
+  "High-Speed USB 3.1 Type-C" port, and a microSDXC
+  slot. A user manual, not a backup guide); Kyocera
+  DuraForce PRO, FindPare
+  (findpare.com/smartphone/kyocera-duraforce-pro/mobile-carriers&counturl=https
+  — a Snapdragon 617 processor, micro USB 2.0, and "USB
+  OTG: No". A spec table, not a guide — and the
+  confirmation that the original PRO has no OTG); Kyocera
+  DuraForce Pro, Gadgets360
+  (gadgets360.com/kyocera-duraforce-pro-3697 — "The
+  Kyocera DuraForce Pro runs Android 6.0", with 32GB of
+  storage expandable via microSD card up to 256GB, and
+  "USB OTG: No". A spec page, not a guide — and a second
+  source confirming the original PRO has no OTG); Kyocera
+  DuraXV Extreme review, Sapiens Digital
+  (sapiensdigital.com/kyocera-duraxv-extreme-review-2020.html
+  — "The DuraXV's operating system is Android-based, but
+  designed to work as much like a 2004-era flip phone as
+  possible", with the operating system listed as "Other"
+  and a Qualcomm Snapdragon 215 chipset. A review, not a
+  guide — and the confirmation that the DuraXV flips are
+  a different shape of phone, not a standard Android
+  smartphone); YouTube, "How to Transfer Photos, Videos
+  and any Files from Android Phone to USB Pendrive (USB
+  Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — OTG adapter and the
+  phone's built-in file manager, with a FAT32 or exFAT
+  drive. Generic Android, and a manual file-manager
+  guide); YouTube, "How to Connect USB Drive to Android
+  Phone to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and
+  the phone's built-in file manager, no computer or
+  internet needed. Generic Android, and a manual
+  file-manager guide); askfilo, "how to transfer pictures
+  from an android phone to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — plug the flash drive into an OTG adapter, open the
+  file manager, find the DCIM folder, and copy to the USB
+  drive. Generic Android, and a manual file-manager
+  guide); Techdows, "USB OTG: everything you need to
+  know" (techdows.com/usb-otg-everything-you-need-to-know.html
+  — USB OTG lets a phone act as the USB host, USB-C is a
+  connector shape while OTG is a role the phone takes on,
+  and Google's Files by Google app reads USB storage on
+  Android 7.0 and later. A generic explainer, not a
+  Kyocera guide — and the confirmation that a USB-C port
+  does not guarantee host support); Photos to USB: OTG
+  Backup (Play listing, com.arzdrz.photos_to_usb — the
+  one-tap app alternative: copies the whole gallery to a
+  pen drive in one tap, copies only new photos next time,
+  warns about the FAT32 4 GB limit. Free with ads,
+  one-time purchase to remove them. Generic Android, not
+  a Kyocera guide, and it does not promise oldest-first
+  order, detailed progress with Pause and Stop, or size
+  verification of every file); cloud routes — Google
+  Photos syncs the gallery to Google's servers, Google
+  Drive backs data up to Google's cloud with 15 GB free,
+  and Google backup restores data to a new phone from
+  Google's cloud, not to a drive you hold; Google Photos'
+  "Storage saver" setting compresses photos, and a cloud
+  backup stops working the day you stop paying for
+  storage. Neither route gives a folder of plain photo
+  files on a USB drive.
+  Kyocera specifics: OTG is confirmed on the DuraForce
+  Pro 2 (spec tables list USB OTG as Yes) and on the
+  DuraSport (spec pages list the port as "USB Type-C, USB
+  On-The-Go") — but the DuraForce Ultra 5G and DuraForce
+  PRO 3 datasheets do not list OTG either way, so the
+  article tells owners of those models to check Settings
+  > Storage before relying on it instead of claiming OTG
+  across the range; all four phones have USB-C, so a USB-C
+  flash drive plugs straight in and a regular USB-A drive
+  needs a USB-C OTG adapter; the Pro 2 takes a microSD
+  card up to 512GB, the Ultra 5G and the DuraSport take
+  one up to 1TB, and the PRO 3 takes one up to 2TB, but a
+  card is still not a USB drive: it stays in the phone
+  and opening it anywhere else needs a card reader.
+  Correction to the brief: the brief listed the DuraForce
+  line as the scope, but the older DuraForce phones are
+  not Android 7.0+ smartphones with USB host support —
+  the original DuraForce runs Android 4.4.2 and the
+  DuraForce XD runs Android 5.1, so SnapDisk cannot
+  install on them at all, and the original DuraForce PRO's
+  spec tables list USB OTG as No, so it cannot host a USB
+  drive either; the DuraXV flip phones run a flip-phone
+  build of Android and are a different shape of phone.
+  The article is scoped to the Android DuraForce
+  smartphones (Pro 2, Ultra 5G, PRO 3, and DuraSport).
+  Kyocera's own tools: devicesfaq's backup advice (a
+  computer copy with a USB cable and a file browser, or
+  Google Drive with 15 GB free and Google Photos in the
+  cloud) points at a computer or the cloud, never at a
+  USB drive; Google Photos (the stock photo backup on
+  Kyocera Android phones) backs photos up to Google's
+  cloud; Google Drive (Android's default built-in service,
+  15 GB free) backs data up to Google's cloud; a microSD
+  card (up to 512GB on the Pro 2, up to 1TB on the Ultra
+  5G and the DuraSport, up to 2TB on the PRO 3) is a real
+  local copy, but the card stays in the phone and needs a
+  reader elsewhere; a computer copy (connect the phone to
+  a computer using the USB cable and make a copy of the
+  files using the file browser) lands on the PC, not on a
+  USB drive; no Kyocera backup page points at a USB drive
+  at all — none of them writes plain photo files to a USB
+  drive automatically.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-81, 50th how-to):
+  docs/kyocera-photos-to-usb.html.
+  Fallback for WL-82: Crosscall (Core-X5 / Action-X5 line)
+  — no Crosscall article exists in docs/ yet.
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
