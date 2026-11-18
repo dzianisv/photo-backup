@@ -2396,6 +2396,109 @@ demand is read off competitor install velocity instead (see
   Article published Nov 17, 2026 (WL-68, 37th how-to):
   docs/htc-photos-to-usb.html.
 
+### 37. "back up Blackview photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Blackview-specific
+  phone-to-USB guide at all, let alone a Blackview-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Blackview-specific result is Blackview's
+  own generic Android backup guide, and the rest are generic
+  manual guides.
+- Current top results (scored Nov 17, 2026, live web search):
+  Blackview blog, "6 Ways to backup data on your Android
+  phone"
+  (blackview.hk/blog/how-to/backup-data-on-android-phone —
+  Blackview's own backup guide: 1. Google Account Backup, 2.
+  Local Backup to Computer (connect the phone to a computer
+  with a USB cable and copy files to the computer or an
+  external hard drive), 3. Third-party backup apps (Google
+  One, Dropbox, MEGA, Box, Samsung Smart Switch, OneDrive,
+  Titanium Backup with root), 4. Backup to External Storage
+  ("many Android phones support the use of a microSD card or
+  USB OTG storage — you can use these external storage options
+  to manually copy your important files, photos, and other data
+  for a local backup"), 5. ADB backup (needs a computer and
+  command-line tools), 6. Custom recovery and full system
+  backup (TWRP, unlock the bootloader, expert level, may void
+  warranties). Blackview-specific, but generic Android — and
+  the one USB route in it is a manual copy, not an automated
+  backup); Blackview store blog, "How do I transfer data from
+  my phone's storage if it won't turn on?"
+  (store.blackview.hk/en-us/blogs/gadgets-guides/how-transfer-
+  data-phone-not-turn-on — connect the phone to a computer,
+  check it appears as external storage, navigate through
+  folders like DCIM (photos), Downloads, or Documents, and copy
+  files directly to the computer — or check cloud backups
+  (Google Drive, Dropbox, OneDrive). A PC-or-cloud recovery
+  guide, not a phone-to-USB backup); Blackview Active 6 store
+  page, Data Migration
+  (store.blackview.hk/products/active-6-tablet-price — Data
+  Migration transfers all your data from an old device to a new
+  one in a few taps. Phone-to-phone, not phone-to-USB);
+  AskFilo, "how to transfer pictures from an android phone to
+  a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-
+  transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — USB OTG adapter plus a file manager: find the DCIM folder,
+  open Camera, select the photos, copy to the USB drive — or use
+  a PC or Mac as a middleman. Generic Android, and the direct
+  route is manual select-copy-paste); YouTube, "How to Connect
+  USB Drive to Android Phone to Move Photos & Videos (Best
+  Method)" (youtube.com/watch?v=PYcbV25CczI — OTG connection
+  and the phone's built-in file manager, no computer or
+  internet needed. Generic Android, and a manual file-manager
+  guide); Dr.Fone, "4 Practical Ways to Transfer Photos from
+  Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-drop,
+  Google Drive, or AirDroid over Wi-Fi. Generic Android, and
+  most of the ways need a computer or a cloud account); Android
+  Central forum, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-
+  usb.973408/ — use the OTG adapter, plug in any supported
+  external device, and it shows up as external storage in the
+  File Manager. Generic Android, and a forum thread, not a
+  guide); SoftHandTech, "Transfer Photos from Phone to Memory
+  Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-
+  memory-stick/ — a computer, direct OTG transfer, or cloud
+  services. Generic Android, and two of the three ways need a
+  computer or a cloud account); EpicTechTips, "How to Transfer
+  Pictures from Android Phone to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-
+  usb-flash-drive/ — plug the flash drive in, tap the USB
+  notification, select "Transfer photos", open the file
+  manager, select the photos, Move to the USB drive — or cloud
+  storage, email, or a computer transfer. Generic Android, and
+  a manual file-manager guide); Photos to USB: OTG Backup (Play
+  listing, com.arzdrz.photos_to_usb — the one-tap app
+  alternative: copies the whole gallery to a pen drive in one
+  tap, copies only new photos next time, warns about the FAT32
+  4 GB limit. Free with ads, one-time purchase to remove them.
+  Generic Android, not a Blackview guide, and it does not
+  promise oldest-first order, detailed progress with Pause and
+  Stop, or size verification of every file); Blackview BV9300
+  specs (m.gsmarena.com/_bv9300-12266.php — USB Type-C, OTG.
+  Spec tables, not a guide — and the confirmation that the
+  BV9300 has OTG); Blackview BV9300 Pro user manual
+  (manuals.plus/asin/B0DHRXS57Q.pdf — OTG functionality is
+  supported, enabling the phone to charge other devices; 5W OTG
+  reverse charging. A manual, not a guide — and the confirmation
+  that the BV9300 Pro has OTG); Blackview BV6200 Pro user
+  manual (manuals.plus/ae/1005005996698718 — OTG is listed
+  among the features, and reverse charging uses an OTG cable to
+  charge other devices. A manual, not a guide — and the
+  confirmation that the BV6200 Pro has OTG); cloud routes —
+  Google Photos syncs the gallery to Google's servers, Google
+  backup restores data to a new phone from Google's cloud, not
+  to a drive you hold; Google Photos' "Storage saver" setting
+  compresses photos, and a cloud backup stops working the day
+  you stop paying for storage. Neither route gives a folder of
+  plain photo files on a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 17, 2026 (WL-69, 38th how-to):
+  docs/blackview-photos-to-usb.html.
+
 ## Not a gap (scored, no article)
 - "back up photos from Android to USB without losing quality"
   (the WL-40 brief query): NOT a gap. The top result, Photos
