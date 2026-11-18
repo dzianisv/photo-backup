@@ -1,5 +1,71 @@
 # SnapDisk — Work Log
 
+## WL-91 — Back up Evolveo photos to USB article, 60th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/evolveo-photos-to-usb.html ("Back up Evolveo photos to a
+  USB drive (no computer)"), following the WL-54–WL-90 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 48 chars, meta description
+  157 chars, JSON-LD validated by parse; sitemap and feed XML parse.
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search): Query 59 ("back
+  up Evolveo photos to USB drive without computer") is a real gap —
+  no Evolveo-specific phone-to-USB guide in the top 5 results at
+  all; the Evolveo-specific results are spec pages and manuals that
+  give no USB-drive advice, and the rest are generic manual guides.
+  YouTube, "How to Connect USB Drive to Android Phone to Move
+  Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG connection and the phone's
+  built-in file manager, no computer or internet needed. Generic
+  Android, and a manual file-manager guide); VaultDrive
+  (coticsy.com/vaultdrive.html — plug a flash drive or SSD into your
+  phone, choose what to back up, tap Start; free for up to 200 files
+  or 2 GB per backup, Pro $19.99 once; needs Android 8 or later. The
+  one-tap app alternative, generic Android, not an Evolveo guide);
+  softhandtech, "Transfer Photos from Phone to Memory Stick"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — a computer as middleman, a direct OTG transfer, or cloud
+  services. Generic Android, and a manual guide); thegadgetians,
+  "How to Transfer Files From Phone to USB Without Computer"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — connect a USB drive with an OTG adapter, open the file manager,
+  select and copy files, then paste onto the USB drive. Generic
+  Android, and a manual file-manager guide); Substack, "saving
+  Photos for necessary updates"
+  (curiousbluenoser.substack.com/p/saving-photos-for-necessary-updates
+  — plug a picture-keeper flash drive into the phone's charging port,
+  open the drive's app, and tap Start. Generic, built around a
+  specific drive's own app).
+  Honest limits recorded in the article: the G9 runs Android 10 with
+  USB OTG listed (mobilespecs) and the G5 runs Android 9.0 with USB-C
+  (manual) but OTG is unconfirmed on the G5; the G4 lists OTG
+  (FindPare, which says its information is "not ascertained") but its
+  Android version is unconfirmed in the sources found; the Q8 LTE's
+  OTG is disputed (Alza's description lists "microUSB OTG", FindPare
+  lists USB OTG as No) and it runs Android 4.4; the Q5 runs Android
+  5.1 — both below SnapDisk's Android 7.0 minimum, so neither can run
+  it; the Z4, the X5, and the Z6 are feature phones, not Android
+  phones, so they are out of scope; the adapter differs by model
+  (USB-C OTG on the G5/G9, micro-USB OTG on the G4/Q5/Q8).
+  Article published Nov 18, 2026 (WL-91, 60th how-to):
+  docs/evolveo-photos-to-usb.html.
+  Fallback for WL-92: Panasonic Toughbook — no Panasonic article
+  exists in docs/ yet.
+
 ## WL-90 — Back up JCB photos to USB article, 59th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
