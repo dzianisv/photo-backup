@@ -1,5 +1,137 @@
 # SnapDisk — Work Log
 
+## WL-110 — Back up Winmate photos to USB article, 78th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/winmate-photos-to-usb.html ("Back up Winmate
+  photos to a USB drive (no computer)"), following the
+  WL-54–WL-109 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 37 chars,
+  meta description 140 chars, JSON-LD validated by parse;
+  sitemap and feed XML parse. Feed now counts 78 items; blog
+  JSON-LD counts 78 BlogPosting entries. Article PR #187
+  (unmerged — supervisor merges after readback
+  verification). CI run 44480263412 green (build pass,
+  1m22s).
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (backup/PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (backup/ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99
+  one-time = auto-backup on connect + unlimited size
+  (strings.xml pro_price, pro_unlocked); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB
+  skipped with reason (util/FilesystemInfo.FAT32_MAX_FILE_BYTES);
+  raw byte-stream copy (backup/BackupEngine.copyWithResume —
+  no decode/re-encode) with size verification after copy.
+  ApplicationId unchanged (dev.dzianisv.snapdisk,
+  app/build.gradle.kts); app tree untouched vs main.
+  Search evidence (Nov 18, 2026 live web search): Query 77
+  ("back up Winmate photos to USB drive without computer")
+  is a real gap — no Winmate-specific phone-to-USB guide
+  in the top results at all; not one result even mentions
+  Winmate. pixoneye.com, "How to Transfer Photos from Your
+  Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage with a
+  supported file manager on Android or Photos and Files on
+  iPhone, make a trial copy first, use Copy rather than Move.
+  Generic Android and iPhone, and a manual guide — and it
+  says nothing about a Winmate device);
+  YouTube, "How to Connect USB Drive to Android Phone to Move
+  Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG adapter + the
+  phone's built-in file manager, no computer or internet.
+  Generic Android, and a manual guide — and it says nothing
+  about a Winmate device); drfone.wondershare.com, "4
+  Practical Ways to Transfer Photos from Android to USB Flash
+  Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer directly with an OTG adapter, through a PC as a
+  middleman in File Transfer mode, wirelessly through Google
+  Drive or AirDroid, or in bulk with Wondershare Dr.Fone on
+  Windows or Mac. Generic Android, and a manual guide — and it
+  says nothing about a Winmate device, and its bulk-export
+  route needs a computer); alibaba.com, "How To Quickly
+  Backup Your Phone Photos Without Using Cloud Storage"
+  (alibaba.com/product-insights/how-to-quickly-backup-your-phone-photos-without-using-cloud-storage.html
+  — transfer via a USB cable and a computer, or use a portable
+  SSD or flash drive with OTG support, or a NAS device.
+  Generic Android and iPhone, and a manual guide — and it
+  says nothing about a Winmate device, and its fastest method
+  needs a computer); softhandtech.com, "Transfer Photos from
+  Phone to Memory Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — transfer with a computer as a middleman, directly with OTG
+  support, or through cloud services. Generic Android and
+  iPhone, and a manual guide — and it says nothing about a
+  Winmate device, and its first method needs a computer).
+  Winmate M700DQ8-EX, M700DQ9, M700DM9, M900MGN, P400M9 and
+  G900G7 covered (Winmate product pages + reseller listing,
+  Nov 18): M700DQ8-EX — Android 9.0, Snapdragon 660, 3 GB/32
+  GB, 7-inch 1280x720, 8 MP front + 13 MP rear with LED
+  auxiliary light and autofocus, USB Port "1 x USB 3.0 Type C
+  OTG", micro SD card slot, IP65, ATEX Zone 2; discontinued,
+  phased out and replaced by the M700DQ9; M700DQ9 — Qualcomm
+  QCS6490 octa-core up to 2.7 GHz, 8 GB/128 GB, 7-inch
+  1280x720, USB Port "1 x USB 3.0 Type C OTG", 5,300 mAh,
+  20 hours, IP65, MIL-STD-810H; Android version conflicts
+  across Winmate's own page (15.0 spec table, 13 body, 11
+  summary line); M700DM9 — Android 11.0, ARM A73 + A53, 4
+  GB/64 GB, 7-inch 1280x720, USB Port "1 x USB Type C OTG",
+  micro SD card slot, IP65, MIL-STD-810G, 5,300 mAh, 20
+  hours; M900MGN — Android 13.0, ARM Genio 510, 4 GB/64 GB,
+  8-inch 1280x800, 8 MP front + 13 MP rear with LED auxiliary
+  light and autofocus, USB Port "1 x USB 3.0 Type A" and
+  "1 x USB 2.0 Type C OTG (support PD 3.0 charging)", micro SD
+  card slot, RJ45, IP65, MIL-STD-810H, 4,200 mAh; FAQ says the
+  Type-A port is "for connecting standard USB drives";
+  P400M9 — Android 11.0, ARM A73 + A53, 4 GB/64 GB, 4-inch
+  800x480, 8 MP front + 13 MP rear with LED auxiliary light
+  and autofocus, USB Port "1 x USB Type C OTG (support PD 2.0
+  charging)", micro SD card slot, IP65, MIL-STD-810H, 2,700
+  mAh, 8 hours; screen 4.0 inches in its spec table and 4.3
+  inches in its FAQ, battery 2,700 mAh in its spec table and
+  "typically around 3000-4000mAh" in its FAQ; G900G7 — 8-inch
+  rugged handheld robotic controller, Android 13 (Ubuntu
+  Linux 22.04 optional), ARM Genio 510, 4 GB/64 GB, USB Port
+  "1 x USB 3.0 (Type-A)" and "1 x USB 2.0 (Type C,PD)",
+  IP65, MIL-STD-810H, 3,500 mAh, 5.5 hours (7.5 hours
+  high-capacity). All six clear SnapDisk's Android 7.0
+  minimum; only the M900MGN and the G900G7 take a standard
+  USB-A drive with no adapter — the other four need a USB-C
+  OTG adapter, and the G900G7's Type-C port is not labelled
+  OTG in either source, so the Type-A port is the confirmed
+  host route on that model.
+  Honest limits recorded in the article: OTG is confirmed in
+  the spec tables on five of the six models, host only
+  through the Type-A port on the G900G7; the G900AD runs
+  Windows (Intel Core i5) and cannot run SnapDisk at all;
+  two Android versions differ by source (M700DQ9 15.0 vs 13
+  vs 11 on one Winmate page; P400M9 screen 4.0in vs 4.3in and
+  battery 2,700 mAh vs 3000–4000 mAh across its spec table
+  and FAQ — all covered models clear the minimum either
+  way); no source found states a camera spec for the
+  M700DQ9, the M700DM9 or the G900G7, or a microSD capacity
+  for any of the six models, or names the stock file manager
+  on a Winmate device, or states the port position on any of
+  the six; three Winmate models turned up but are not covered
+  (M700DM8 by name only in accessory listings, G500G7's
+  Android version and OTG support not sourced, FM10MG-V a
+  vehicle-mount terminal out of scope); SOTI MobiControl is
+  device management, not a photo backup; no other Winmate
+  rugged handheld or tablet model turned up in the sources
+  found.
+  Article published Nov 18, 2026 (WL-110, 78th how-to):
+  docs/winmate-photos-to-usb.html.
+  Fallback for WL-111: Juniper Systems — no Juniper article
+  exists in docs/ yet and no searches.md row (Mesa/Archer
+  rugged Android handhelds/tablets).
+
 ## WL-109 — Back up Handheld photos to USB article, 77th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
