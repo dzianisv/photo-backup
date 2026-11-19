@@ -1,5 +1,76 @@
 # SnapDisk — Work Log
 
+## WL-128 — Back up Sigma Mobile photos to USB article, 96th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #224 OPEN (head c85afe7, CI run 44542560272
+  success, mergeable MERGEABLE, merge state CLEAN);
+  supervisor merges after readback — no merge receipt yet.
+  Query 95 verified by the lead from live evidence (no top
+  result is a Sigma Mobile-specific phone-to-USB photo-backup
+  guide); lead-verified by readback (feed 96 items incl.
+  Sigma Mobile, sitemap incl. URL, title correct, Query 95 row
+  present, only docs/ + tool/growth changed).
+  New docs/sigma-mobile-photos-to-usb.html ("Back up Sigma
+  Mobile photos to a USB drive (no computer)"), following the
+  WL-54–WL-127 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot,
+  with an honest caption: the PQ34 and the PQ37 can run that
+  screen but can't host a drive; on the PQ36, PQ38, PQ39 Max,
+  PQ39 Ultra and PQ54 MAX the drive mounting is the test).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 42 chars, meta
+  description 151 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 96 items; blog JSON-LD
+  counts 96 BlogPosting entries. searches.md Query 95 row
+  present ("back up Sigma Mobile photos to USB drive without
+  computer" — HOW-TO GAP): top results are a PQ29 hard-reset
+  page, two generic Android-to-USB guides, a generic
+  memory-stick guide, a forum thread, and a generic
+  thumb-drive guide, none is a guide for a Sigma Mobile phone.
+  Sigma Mobile specifics verified live: five X-treme phones
+  clear SnapDisk's Android 7.0 minimum and list USB OTG —
+  the PQ29 (Android 8.1), PQ39, PQ51 and PQ52 (Android 7.0)
+  and PQ54 (Android 8.1) — so the one-tap route exists on
+  those five; every covered Sigma clears Android 7.0, so none
+  is blocked by its Android version, unlike Casio; the PQ34
+  (Android 7.0) and the PQ37 (Android 8.1) list USB OTG No,
+  so they can run SnapDisk but cannot host a drive; OTG is
+  unconfirmed on the PQ36 (Android 9.0), PQ38 (Android 10),
+  PQ39 Max (Android 9.0), PQ39 Ultra (Android 10) and PQ54
+  MAX (Android 10) — no source found states OTG for any of
+  them, not even the PQ54 MAX's official manual — so on those
+  five the drive mounting is the test; the PQ29 carries an
+  8 MP rear camera and a 2 MP front camera, the PQ34, PQ39,
+  PQ51 and PQ52 a 13 MP rear camera and a 4.9 MP (PQ51/PQ52:
+  5 MP) front camera, the PQ37 a 13 MP rear camera and an
+  8 MP front camera, the PQ38 a 13 MP rear camera and a 5 MP
+  front camera, the PQ39 Max a 13 MP rear camera and a 5 MP
+  front camera, the PQ39 Ultra a 12.98 MP rear camera and a
+  1.92 MP front camera, and the PQ54 a 13 MP + 0.3 MP dual
+  rear camera and a 5 MP front camera; only the PQ29 and the
+  PQ39 Max have a sourced microSD ceiling, both up to 128 GB;
+  the PQ51's memory is 2 GB RAM and 16 GB storage per
+  devicesfaq and mobilexfiles and 3 GB RAM and 32 GB storage
+  per findpare; the PQ37's connector is disputed — findpare
+  lists both USB Type-C and micro USB 2.0 for the same phone;
+  VaultDrive needs Android 8 or later per its own site, so
+  the four Android 7.0 Sigmas can't run it either (AppBrain
+  lists 12.1 or later, which no covered Sigma clears); Sigma
+  Mobile has no phone-to-USB backup tool of its own — the
+  only Sigma-specific backup advice found is the hard-reset
+  page telling you to export photos to a PC via USB or use
+  Google Photos; no source found names the stock file manager
+  on a Sigma Mobile phone; no source in this run's searches
+  names an X-treme model below the PQ29; the PQ29 is IP69
+  and the PQ34, the PQ39 and the PQ54 are IP68.
+  Fallback for WL-129: Plum — no Plum article exists in
+  docs/ yet and no searches.md row (rugged Gator phones:
+  Gator 7, Android 11, IP68/IP69K, 8 MP rear camera, microSD
+  up to 128 GB; Gator 5, Android 8.1, IP68, 3700 mAh;
+  Gator 4, Android 6.0, IP68, 13 MP rear camera).
+
 ## WL-127 — Back up Archos photos to USB article, 95th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
