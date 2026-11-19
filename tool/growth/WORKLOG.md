@@ -285,9 +285,10 @@
 ## WL-128 — Back up Sigma Mobile photos to USB article, 96th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #224 OPEN (head c85afe7, CI run 44542560272
-  success, mergeable MERGEABLE, merge state CLEAN);
-  supervisor merges after readback — no merge receipt yet.
+  Article PR #224 MERGED (head c85afe7, CI run 44542560272
+  success, merge commit 3b4f8d1, merged 2026-11-19T14:24:04Z);
+  worklog-row PR #225 MERGED (merge 36329e8, merged
+  2026-11-19T14:24:18Z).
   Query 95 verified by the lead from live evidence (no top
   result is a Sigma Mobile-specific phone-to-USB photo-backup
   guide); lead-verified by readback (feed 96 items incl.
@@ -356,9 +357,10 @@
 ## WL-127 — Back up Archos photos to USB article, 95th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #222 OPEN (head 5f5a097, CI run 44539130458
-  success, mergeable MERGEABLE, merge state CLEAN);
-  supervisor merges after readback — no merge receipt yet.
+  Article PR #222 MERGED (head 5f5a097, CI run 44539130458
+  success, merge commit 683770b, merged 2026-11-19T14:06:51Z);
+  worklog-row PR #223 MERGED (merge dd9c265, merged
+  2026-11-19T14:07:06Z).
   Query 94 verified by the lead from live evidence (no top
   result is an Archos-specific phone-to-USB photo-backup
   guide); lead-verified by readback (feed 95 items incl.
@@ -423,9 +425,10 @@
 ## WL-126 — Back up Casio photos to USB article, 94th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #220 OPEN (head 5ccedac, CI run 44535862939
-  success, mergeable MERGEABLE); supervisor merges after
-  readback — no merge receipt yet. Query 93 verified by the
+  Article PR #220 MERGED (head 5ccedac, CI run 44535862939
+  success, merge commit 4f606c7, merged 2026-11-19T13:44:51Z);
+  worklog-row PR #221 MERGED (merge 3b06719, merged
+  2026-11-19T13:45:07Z). Query 93 verified by the
   lead from live evidence (no top result mentions a Casio
   phone); lead-verified by readback (feed 94 items incl.
   Casio, sitemap incl. URL, title correct, Query 93 row
@@ -484,9 +487,10 @@
 ## WL-125 — Back up Bittium photos to USB article, 93rd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #218 OPEN (head 3f223bd, CI run 44532670988
-  success, mergeable MERGEABLE); supervisor merges after
-  readback — no merge receipt yet. Query 92 verified by the
+  Article PR #218 MERGED (head 3f223bd, CI run 44532670988
+  success, merge commit 55159ee, merged 2026-11-19T13:31:21Z);
+  worklog-row PR #219 MERGED (merge f5d8613, merged
+  2026-11-19T13:31:49Z). Query 92 verified by the
   lead from live evidence (no top result mentions Bittium);
   lead-verified by readback (feed 93 items incl. Bittium,
   sitemap incl. URL, title correct, Query 92 row present,
