@@ -8313,6 +8313,143 @@ demand is read off competitor install velocity instead (see
   yet and no searches.md row (enterprise Android handhelds,
   M50 Android 10 GMS, 8 MP rear camera; M51 successor).
 
+### 90. "back up Elo photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Elo-specific
+  guide to backing up photos to a USB drive at all, let
+  alone an Elo-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer Android photos to a USB flash drive by OTG
+  adaptor and file manager, by PC drag-and-drop, by
+  Google Drive, or by AirDroid. A generic Android guide —
+  it says nothing about Elo, or about a rugged handheld);
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any
+  modern Android phone to a USB drive is a USB On-The-Go
+  (OTG) connection and the phone's built-in file manager:
+  connect the drive with an OTG adapter, open the file
+  manager, find DCIM/Camera, and Move or Copy to the drive.
+  A generic Android video guide — it says nothing about
+  Elo, or about a handheld at all);
+  pixoneye.com, "How to Transfer Photos from Your Phone
+  to an USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage, open
+  the files from the destination, make an independent
+  backup before deleting anything; on Android, connect
+  the drive with the matching connector or OTG adapter,
+  open Files by Google or the phone's file manager, find
+  DCIM/Camera, select a small batch and choose Copy to.
+  A generic Android and iPhone guide — it says nothing
+  about Elo, or about a rugged handheld);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — a forum thread about moving photos to a USB drive:
+  use an OTG adapter to plug in a thumb drive and it
+  should show as external storage in the file manager,
+  then move files from there. A generic Android thread —
+  it says nothing about Elo, or about a handheld at
+  all);
+  photocleanse.app, "Transfer Photos from iPhone to an
+  External Hard Drive"
+  (photocleanse.app/guides/transfer-photos-iphone-external-drive/
+  — to transfer photos from an iPhone to an external hard
+  drive without a computer, connect the drive to the
+  iPhone, open Photos and select the photos, tap Share,
+  then Export Unmodified Original, tap the drive below
+  Locations and tap Save. An iPhone guide — it says
+  nothing about Elo, or about Android at all);
+  ubackup.com, "6 Easy Ways to Transfer Photos from iPhone
+  to USB"
+  (ubackup.com/phone-backup/transfer-photos-from-iphone-to-usb.html
+  — transfer iPhone photos to a USB flash drive on a PC
+  or Mac, or without a computer by connecting the iPhone
+  directly to the USB drive with a Lightning to USB
+  adapter and copying through the Files app. An iPhone
+  guide — it says nothing about Elo, or about Android
+  at all).
+  A second search ("Elo M50 Android handheld specs GMS
+  camera USB") returned the M50 data sheet (5.5-inch HD
+  touch display, Android 10 with Google Play Services,
+  AOSP capable, Qualcomm Snapdragon 660 octa-core,
+  4GB RAM, 64GB storage, microSD up to 32GB SDHC and
+  up to 256 GB SDXC, USB Type-C for display, charging
+  and data, 8 MP auto-focus rear camera with flash LED,
+  4,000 mAh user-swappable battery; China model runs
+  Android 10 AOSP), the M50 launch (January 12, 2021,
+  Android 10 GMS, MIL-STD-810G, IP-65), and a reseller
+  page stating the M50 has been succeeded by the M51
+  and remaining M50 hardware is best suited to expanding
+  or maintaining an existing fleet — no Elo-specific
+  backup guide. A third search ("Elo M51 mobile computer
+  specs Android camera USB-C") returned the M51 support
+  page (6-inch Full HD+ 2160 x 1080, Qualcomm QCM6490
+  octa-core, Android 14 with GMS, upgradable through
+  Android 16 via OS 360, 8 GB RAM, 128 GB storage
+  expandable up to 1 TB via microSD, USB Type-C, 13 MP
+  rear autofocus camera with LED flash and 8 MP front
+  camera, optional Zebra SE4100 scan engine, Wi-Fi 6E,
+  5G, Bluetooth 5.2, NFC, 4,500 mAh warm-swappable
+  battery, IP68, MIL-STD-810G) and the M51 launch
+  (September 9, 2024) — plus Samsung's Galaxy M51 in
+  the same results, a different brand's phone, so "M51"
+  collides across brands — no Elo-specific backup guide.
+  A fourth search ("Elo M50 USB OTG host support external
+  drive") returned only generic OTG explainers (cleanor,
+  copyprogramming, source.android.com, itechguides,
+  sandisk) and no Elo result at all — no source found
+  labels either Elo USB-C port OTG. A fifth search
+  ("Elo M50C mobile computer no camera variant difference
+  M50") returned the user manual titled "Elo Mobile
+  Computer M50/M50C" and a reseller note that the M50
+  and the M50C both met Google's Android Enterprise
+  Recommended requirements — but no source found states
+  how the M50C differs from the M50. A sixth search
+  ("VaultDrive photo backup USB Pro price $19.99 Photos to
+  USB OTG Backup app") re-verified the rivals this run:
+  VaultDrive (free up to 200 files or 2 GB per backup, Pro
+  $19.99 once, Android 8 or later per its own site, though
+  AppBrain lists Android 12.1 or later — which the M51
+  clears at Android 14 and the M50 does not at Android
+  10), Photos to USB: OTG Backup (free with ads,
+  one-time purchase removes the ads).
+  Elo specifics: no Elo-specific guide to backing up
+  photos to a USB drive turned up at all — not one top
+  result even mentions Elo; no source found labels
+  either Elo USB-C port OTG — the M50 data sheet says
+  only "USB Type-C for display, charging and data" and
+  the M51 support page says only "USB Type-C" — so on
+  both models the drive mounting is the test; the M50
+  runs Android 10 and the M51 runs Android 14, so both
+  clear SnapDisk's Android 7.0 minimum; the GMS models
+  ship Google Play Services, while the China-model M50
+  runs Android 10 AOSP with no Google services, so
+  sideload the APK there; the M50 carries an 8 MP rear
+  camera with flash LED and the M51 a 13 MP rear camera
+  with LED flash and an 8 MP front camera; no source
+  found states what the M50C variant is; "M51" collides
+  with Samsung's Galaxy M51, a different brand's phone;
+  the M50 is end-of-life, succeeded by the M51, and M50
+  accessories do not fit the M51; both models take
+  microSD — the M50 up to 256 GB SDXC and the M51 up
+  to 1 TB; Elo has no handheld-to-USB photo backup tool
+  of its own — its own software is EloView, a device-
+  management platform for zero-touch deployment, kiosk
+  lockdown and remote configuration; no source found
+  names the stock file manager on an Elo device.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-123, 91st how-to):
+  docs/elo-photos-to-usb.html.
+  Fallback for WL-124: Fujitsu — no Fujitsu article
+  exists in docs/ yet and no searches.md row (enterprise
+  Android handhelds/tablets, Arrows and Stylistic lines).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
