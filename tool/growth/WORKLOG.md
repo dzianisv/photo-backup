@@ -1,9 +1,22 @@
 # SnapDisk — Work Log
 
-## WL-117 — Back up iData photos to USB article, 85th how-to (DRAFT — article PR open)
+## WL-117 — Back up iData photos to USB article, 85th how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: DRAFT — article PR #202 open
-  (head 005a195), supervisor merges after readback.
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #202 MERGED (merge ff465bc, 2026-11-19T11:16:22Z, CI run
+  44513033018 success on rebased head 226b507); post-merge main runs
+  Android PR 44513317670 success + pages 44513316273 success. Live
+  fetch: idata-photos-to-usb.html 200 (correct title, fresh crawl
+  11:17 UTC), feed.xml 85 items incl. iData. Query 84 re-scored by
+  supervisor from a fresh live re-search: iDiskk iPhone stick manual,
+  pixoneye generic guide, two MacRumors iPhone threads, JDTDC iPhone
+  manual, photocleanse iPhone guide — not one result mentions iData
+  (the brand); the engine reads "iData" as an iPhone question;
+  verdict stands. Rebase note: PR #202 was CONFLICTING after WL-116
+  row PR #201 merged; supervisor rebased wl-117-bullitt onto f28ac0c,
+  resolved the WORKLOG.md conflict (WL-117 row on top, WL-116 DONE
+  row intact — including removing a stale duplicate WL-116 DRAFT
+  header left by the rebase), force-pushed with lease.
   New docs/idata-photos-to-usb.html ("Back up
   iData photos to a USB drive (no computer)"),
   following the WL-54–WL-116 article template exactly
