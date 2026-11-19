@@ -10373,9 +10373,117 @@ demand is read off competitor install velocity instead (see
 - Verdict: how-to article material, not a listing keyword.
   Article published Nov 19, 2026 (WL-140, 108th how-to):
   docs/elephone-photos-to-usb.html.
-  Fallback for WL-141: Hisense — no Hisense article exists
-  in docs/ yet and no searches.md row (Hisense, the Chinese
-  phone brand; C and A series).
+
+### 108. "back up Hisense photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Hisense-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Hisense-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and two covered Hisense
+  phones run Android 6.0 or older, so SnapDisk does not
+  install on them at all.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  youtube.com, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most direct
+  method for moving photos and videos from any modern Android
+  phone to a USB drive is a USB On-The-Go (OTG) connection and
+  the phone's built-in file manager app; it needs Android 7.0
+  or newer and a USB-C or micro-USB OTG adapter. A generic
+  Android video guide — it says nothing about Hisense);
+  drfone.wondershare.com, "4 Practical Ways to Transfer Photos
+  from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash drive
+  by connecting them directly with an OTG adaptor, using a PC
+  as a middleman via USB File Transfer mode, or downloading
+  them wirelessly through Google Drive or AirDroid; for direct
+  transfers without a computer, connect a USB-C OTG adaptor
+  from the phone to the flash drive. A generic Android guide —
+  it says nothing about Hisense);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — use the OTG adapter to plug in any external device that is
+  supported and does not require additional power, and it
+  should be visible as external storage in the file manager. A
+  generic forum thread — it says nothing about Hisense);
+  thecomputerbasics.com, "Transfer Files Without a Computer"
+  (thecomputerbasics.com/how-to-transfer-videos-from-iphone-to-usb-stick-without-computer/
+  — phones and tablets can read and write external drives
+  directly; on Android, connect with a USB-C adapter or an
+  OTG cable, and the drive appears in the Files app. A generic
+  guide — it says nothing about Hisense);
+  epictechtips.com, "How to Transfer Pictures from Android
+  Phone to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive into your Android device, tap the USB
+  charging notification and select "Transfer photos", then use
+  the file manager to move pictures to the drive; before you
+  begin, confirm that your Android phone supports USB OTG. A
+  generic Android guide — it says nothing about Hisense).
+- The one-tap route exists on two phones only — the A2 Pro
+  and A6 clear Android 7.0 and list USB OTG; one more clears
+  Android 7.0 but its OTG is half-stated — the C30 Rock
+  (mobilexfiles' secret-code page lists OTG in the
+  *#*#64663#*#* hardware-test menu, but no spec listing states
+  OTG for it) — and five more clear Android 7.0 but no source
+  states OTG for them at all — the C30 Lite, A5, A5 Pro CC,
+  A6L and A7 — so on those six SnapDisk installs but the
+  one-tap route is unproven until a drive mounts; two run below
+  Android 7.0 and cannot run SnapDisk at all — the C20 on 5.0,
+  5.1 per versus.com, and the A2 on 6.0. Six take USB Type-C,
+  so a USB-C drive plugs straight into those six; three take
+  micro-USB; no source found states the C20's connector at
+  all. Five take a microSD card, so the card-reader route
+  works on five of them, with the A2 Pro's card implied rather
+  than stated; no source states a card slot for the other five
+  at all.
+- Conflicts between sources, all named in the article: the
+  C20's Android is two numbers — 5.0 per phonesdata, 5.1 per
+  versus.com; the C30 Lite's release date is two listings —
+  February 2016 per phonesdata, which sits oddly against its
+  Android 7.0, since Android 7.0 shipped in August 2016; the
+  A2 Pro's chipset and RAM are two numbers — Snapdragon 625
+  with 4 GB per notebookcheck, gizmochina and phonesdata,
+  Snapdragon 660 with 6 GB per namu.wiki's Yotaphone page,
+  which reads like the Yota 3+; the A5's chipset is two numbers
+  on the same pages — Snapdragon 660 in one paragraph of
+  projects-raspberry and electronics-lab, Snapdragon 439
+  everywhere else on those pages and per MobileRead, devicesfaq
+  and goodereader — and its storage is two listings — 32 GB in
+  goodereader's review unit, 32 GB or 64 GB per MobileRead; the
+  A6's Android is three numbers — 8.0 per phonesdata, 8.1 per
+  UL benchmarks and phoneinfo, 9.0 per goodereader, whose
+  review describes the A6L's 6.53-inch LCD hardware — and its
+  display is two numbers — a 6.01-inch AMOLED per phonesdata, a
+  6.53-inch IPS per goodereader, which is the A6L's screen —
+  and its battery is two numbers — 3300 mAh per UL benchmarks
+  and chinacoupon, 3800 mAh per goodereader, which is the A6L's
+  battery — and its microSD ceiling is two numbers — up to 128
+  GB per phoneinfo, up to 256 GB per goodereader's A6L piece;
+  the A7's rear camera is two numbers — 16 MP per ereaderx, 13
+  MP per liliputing's A7 CC piece. Four covered models ship
+  with no Google Play at all — the A5, A5 Pro CC, A6L and A7
+  per goodereader — so on those four the GitHub APK sideload is
+  the only install route.
+- VaultDrive needs Android 8 or later per its own site, so
+  five of the ten can run it — the A5, A5 Pro CC, A6, A6L and
+  A7 — and AppBrain lists 12.1 or later, which no covered
+  Hisense phone clears, since the newest covered model runs
+  Android 10. FotoSafe needs Android 9 or later with USB host
+  or OTG support, so four of the ten clear the version floor —
+  the A5, A5 Pro CC, A6L and A7 — but none of the four lists
+  OTG, so FotoSafe is unproven on all four until a drive
+  mounts. Hisense has no phone-to-USB backup tool of its own —
+  no Hisense-specific backup advice turned up in any source
+  beyond a computer copy, Google Drive, or Google Photos; the
+  devicesfaq backup FAQ names the computer copy as the most
+  economical method, and names the file manager on a Hisense
+  phone as Files, or Files by Google.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-141, 109th how-to):
+  docs/hisense-photos-to-usb.html.
 
 ## Winners and what changed
 
