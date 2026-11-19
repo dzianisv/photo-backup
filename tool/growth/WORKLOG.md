@@ -1,5 +1,124 @@
 # SnapDisk — Work Log
 
+## WL-113 — Back up Samsung Galaxy XCover photos to USB article, 81st how-to (DRAFT — article PR open)
+
+- Owner: SEO/GEO lane lead. State: DRAFT — article PR #194 open
+  (head ca6fbb4), supervisor merges after readback. CI run
+  44506212968 green (build pass, 1m0s).
+  New docs/samsung-galaxy-xcover-photos-to-usb.html ("Back up
+  Galaxy XCover photos to a USB drive (no computer)"),
+  following the WL-54–WL-112 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 43 chars,
+  meta description 153 chars, JSON-LD validated by parse;
+  sitemap and feed XML parse. Feed now counts 81 items; blog
+  JSON-LD counts 81 BlogPosting entries.
+  searches.md Query 80 row present ("back up Samsung Galaxy
+  XCover photos to USB drive without computer" — HOW-TO GAP).
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (backup/PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (backup/ProPrefs.FREE_BACKUP_BYTES_LIMIT = 5 GiB); Pro
+  $9.99 one-time = auto-backup on connect + unlimited size
+  (strings.xml pro_price, pro_unlocked); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB
+  skipped with reason (util/FilesystemInfo.FAT32_MAX_FILE_BYTES);
+  raw byte-stream copy (backup/BackupEngine.copyWithResume —
+  no decode/re-encode, .part resume, size verification after
+  copy, retry once) with size verification after copy.
+  ApplicationId unchanged (dev.dzianisv.snapdisk,
+  app/build.gradle.kts, minSdk 24 = Android 7.0); app tree
+  untouched vs main (only docs/ + tool/growth/searches.md
+  changed).
+  Search evidence (Nov 19, 2026 live web search): Query 80
+  is a real gap — no top result is an XCover-specific guide
+  to backing up photos to a USB drive without a computer at
+  all; the one XCover-specific result is a hard-reset archive
+  page, not a guide. sekin.in, "How To Transfer Files From
+  Android Phone To USB Drive" (generic Android, Samsung My
+  Files section, manual guide, says nothing about an XCover
+  model); Samsung Members community, "How to take pictures
+  off phone and put on memory stick" (Samsung's own community
+  answer: OTG adapter + My Files, generic Galaxy, manual
+  copy); hard-reset.org, "Solutions for SAMSUNG GALAXY
+  XCOVER6 PRO" (the only XCover-specific result: confirms
+  OTG on the XCover6 Pro and names a USB flash drive as a
+  backup destination — a hard-reset archive FAQ, not a
+  photo-backup guide); itechguides.com, "How to Back Up Your
+  Samsung Phone to an External Hard Drive" (generic Samsung,
+  Smart Switch + My Files to an external hard drive, no
+  XCover model); YouTube, "How to Connect USB Drive to
+  Android Phone to Move Photos & Videos" (generic Android,
+  OTG + file manager, recommends Move); Samsung, "Backing up
+  my Samsung Device using an SD Card or USB" (Samsung's own
+  support page: Smart Switch to USB, generic Galaxy,
+  structured backup, not plain photo files).
+  XCover7 Pro, XCover6 Pro, XCover7, XCover5, XCover Pro,
+  XCover4s, XCover4 and XCover FieldPro covered (carrier spec
+  pages + spec databases + reviews, Nov 19): XCover7 Pro —
+  Android 15, Snapdragon 7s Gen 3, 6 GB/128 GB (also 8/256),
+  microSDXC dedicated slot, USB Type-C 3.2, OTG per neoteo
+  (USB Host 2.0, USB OTG), Smartprix (USB on-the-go), Kimovil
+  (OTG) and PhoneDB (USB Host, USB OTG 1.3), removable
+  4350 mAh, 50 MP + 8 MP rear + 13 MP front; XCover6 Pro —
+  Android 12 at launch (upgradable to Android 16),
+  Snapdragon 778G, 6 GB/128 GB, microSD up to 1 TB, USB
+  Type-C, OTG per Three ("OTG compatible, Yes"), neoteo
+  (USB Host 3.1, USB OTG), Kimovil (OTG) and hard-reset.org,
+  removable 4050 mAh, 50 MP + 8 MP rear + 13 MP front;
+  XCover7 — Android 14 (upgradable to Android 16), Dimensity
+  6100+, 6 GB/128 GB, microSDXC dedicated slot up to 1 TB,
+  USB Type-C 2.0, removable 4050 mAh, 50 MP rear + 5 MP
+  front; XCover5 — Android 11, Exynos 850, 4 GB/64 GB,
+  microSD up to 1 TB, USB Type-C 2.0, OTG per Three ("OTG
+  compatible, Yes"), removable 3000 mAh, 16 MP rear + 5 MP
+  front; XCover Pro — Android 10 (upgradable to Android 11),
+  Exynos 9611, 4 GB/64 GB, USB Type-C 2.0, removable
+  4050 mAh, 25 MP front; XCover4s — Android 9.0 (upgradable
+  to Android 10), Exynos 7885, 3 GB/32 GB, microSDXC up to
+  512 GB, USB Type-C 2.0, removable 2800 mAh, 16 MP rear +
+  5 MP front; XCover4 — Android 7.0 at launch (upgradable to
+  Android 9.0), Exynos 7570, 2 GB/16 GB, microSDXC up to
+  256 GB, microUSB 2.0, removable 2800 mAh, 13 MP rear +
+  5 MP front; XCover FieldPro — Android 8.0, Exynos 9810,
+  4 GB/64 GB, microSDXC up to 512 GB, USB Type-C 2.0,
+  4500 mAh.
+  Honest limits recorded in the article: OTG confirmed on
+  only three of the eight — the XCover7, XCover Pro,
+  XCover4s, XCover4 and FieldPro have no source that labels
+  their USB port OTG, so the drive mounting is the test
+  before buying an adapter; PhoneBunch says "Not Supported"
+  for OTG on the XCover7 Pro, the XCover5 and the XCover6
+  Pro, contradicting Three, neoteo, Smartprix, Kimovil,
+  PhoneDB and hard-reset.org — PhoneBunch's OTG column is
+  not trusted, because it also denies OTG on the XCover6 Pro,
+  which three other sources confirm; the XCover6 Pro's USB
+  version differs by source (USB 3.2 in GSMArena and neoteo,
+  USB Type-C 2.0 in a reseller listing) and the XCover Pro's
+  microSD capacity differs by source (up to 512 GB in one
+  comparison, up to 1 TB in a manual listing), so the article
+  states no capacity for the XCover Pro; the XCover4 is the
+  only covered model with micro-USB, so it needs a micro-USB
+  OTG adapter, and it launched on Android 7.0, exactly
+  SnapDisk's minimum; FotoSafe needs Android 9, so it cannot
+  run on an XCover4 still on its launch Android 7.0; no source
+  found states a microSD capacity for the XCover7 Pro or the
+  XCover Pro, or the port position on any of the eight models;
+  the original XCover (Android 2.3), the XCover2 (Android
+  4.1) and the XCover3 (Android 4.4, upgradable to 5.1) run
+  below Android 7.0 and cannot run SnapDisk; Samsung's stock
+  file manager is My Files, and Samsung says files cannot be
+  transferred directly to the USB drive from Gallery.
+  Article published Nov 19, 2026 (WL-113, 81st how-to):
+  docs/samsung-galaxy-xcover-photos-to-usb.html.
+  Fallback for WL-114: i.safe MOBILE — no i.safe article
+  exists in docs/ yet and no searches.md row (rugged
+  intrinsically safe Android phones, IS530.x line).
+
 ## WL-112 — Back up Trimble photos to USB article, 80th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
