@@ -8151,6 +8151,168 @@ demand is read off competitor install velocity instead (see
   exists in docs/ yet and no searches.md row (rugged Android
   tablets, DT311 / DA323EP Android).
 
+### 89. "back up DT Research photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a DT Research-specific
+  guide to backing up photos to a USB drive at all, let
+  alone a DT Research-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  pixoneye.com, "How to Transfer Photos from Your Phone
+  to an USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage, open
+  the files from the destination, make an independent
+  backup before deleting anything; on Android, connect
+  the drive with the matching connector or OTG adapter,
+  open Files by Google or the phone's file manager, find
+  DCIM/Camera, select a small batch and choose Copy to.
+  A generic Android and iPhone guide — it says nothing
+  about DT Research, or about a rugged tablet);
+  thecomputerbasics.com, "Transfer Files Without a
+  Computer"
+  (thecomputerbasics.com/how-to-transfer-videos-from-iphone-to-usb-stick-without-computer/
+  — phones and tablets can read and write external drives
+  directly; on Android, connect with a USB-C adapter or
+  an OTG cable and the drive appears in the Files app,
+  then copy and paste as with any folder; a drive not
+  recognised is usually a file-system problem, a drive
+  that appears then disconnects is usually power.
+  A generic Android and iPhone guide — it says nothing
+  about DT Research, or about a rugged tablet);
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any
+  modern Android phone to a USB drive is a USB On-The-Go
+  (OTG) connection and the phone's built-in file manager:
+  connect the drive with an OTG adapter, open the file
+  manager, find DCIM/Camera, and Move or Copy to the drive.
+  A generic Android video guide — it says nothing about
+  DT Research, or about a tablet at all);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer Android photos to a USB flash drive by OTG
+  adaptor and file manager, by PC drag-and-drop, by
+  Google Drive, or by AirDroid. A generic Android guide —
+  it says nothing about DT Research, or about a tablet at
+  all);
+  connect.gmb.org.uk, "Transferring pictures to a thumb
+  drive"
+  (connect.gmb.org.uk/wp-json/wp/v2/posts/8277/ — a generic
+  guide to moving pictures to a thumb drive for backup and
+  freeing up phone storage, with USB-C, micro-USB and
+  USB-A drive types. A generic Android guide — it says
+  nothing about DT Research, or about a rugged tablet);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — a forum thread about moving photos to a USB drive:
+  use an OTG adapter to plug in a thumb drive and it
+  should show as external storage in the file manager,
+  then move files from there. A generic Android thread —
+  it says nothing about DT Research, or about a tablet at
+  all).
+  A second search ("DT Research DT311 rugged tablet Android
+  specs") returned the DT311 as a Windows tablet, not an
+  Android tablet at all: the DT301C/DT301S/DT311C/DT311H/
+  DT395CR run Microsoft Windows 7 or Windows 10 IoT
+  Enterprise on Intel Core i5/i7, Celeron or Atom (ScanSource
+  training sheet), the DT311Y runs Windows 10 IoT Enterprise
+  on Intel 8th generation Core i5/i7, the DT311 datasheet
+  lists Windows 10 IoT Enterprise (Pro), and the DT311H
+  review and the DT312RP round-up list Windows 10 and
+  Windows 11 — no DT Research-specific backup guide. A
+  third search ("DT Research DA323EP Android tablet specs")
+  returned the DA323EP launch (GMS-enabled Android rugged
+  tablet, 13.3-inch display, Qualcomm 8-core, Android 13,
+  hot-swappable batteries, IP65, MIL-STD-810H, optional 4G
+  LTE, available Q2 2026) and the DA323EP basic operation
+  guide (Android operating system, USB 3.0 port, back
+  camera optional) — no DT Research-specific backup guide.
+  A fourth search ("DT Research Android tablet models
+  rugged") returned the DT361ND/DT381ND launch (ND models
+  powered by Android 13, Qualcomm 6490, customer-specified
+  connectors including USB, night vision displays, IP65,
+  MIL-STD-810H, MIL-STD-461G), the DA573LF installation
+  guide (17.3-inch medical-cart computer, Qualcomm
+  octa-core, Android 14), and the DT312RP as a Windows 11
+  tablet — no DT Research-specific backup guide. A fifth
+  search ("DT Research DA361ND DA381ND Android rugged
+  tablet specs USB camera") returned the DA381ND data sheet
+  (Android 13, Qualcomm 8-core 1.9–2.7 GHz, 12GB RAM,
+  256GB flash, 8-inch 1400x720 1000 nits, 5 MP front and
+  13 MP back camera, 1 x latest USB/charging, optional
+  24-pin Fischer MiniMax connector, hot-swappable battery)
+  and the DA361ND installation guide (Android 13, Qualcomm
+  8-core 1.9–2.7 GHz, 12GB RAM, 256GB flash, 6-inch 850
+  nits, 1 x latest USB/charging, USB 3.0 port for
+  peripherals including data storage, optional Fischer
+  MiniMax connector, hot-swappable battery) — no DT
+  Research-specific backup guide. A sixth search ("DT
+  Research DA323EP USB OTG host support camera megapixels
+  microSD") returned no DT Research result at all —
+  unrelated DOOGEE, Oukitel and Motorola pages — no source
+  found labels any DT Research Android USB port OTG and no
+  source found states a camera megapixel count for the
+  DA323EP or microSD support for any covered model. A
+  seventh search ("DT Research DA573LF Android 14 medical
+  cart computer specs USB camera") returned the DT573/DT556
+  launch (configurations include Windows 11 IoT Enterprise
+  or Ubuntu or Android 13 — Android is one option among
+  three, not the only operating system) — no DT
+  Research-specific backup guide. An eighth search
+  ("VaultDrive photo backup USB Pro price $19.99 Photos to
+  USB OTG Backup app") re-verified the rivals this run:
+  VaultDrive (free up to 200 files or 2 GB per backup, Pro
+  $19.99 once, Android 8 or later per its own site, though
+  AppBrain lists Android 12.1 or later), Photos to USB:
+  OTG Backup (free with ads, one-time purchase removes the
+  ads). A ninth search ("Google Photos Storage saver
+  compresses photos Google Drive 5 GB free storage") re-verified
+  this run that Google Photos' Storage saver compresses
+  photos to a maximum of 16 megapixels and videos to 1080p,
+  and that since May 2026 Google accounts get 5 GB free by
+  default, with the full 15 GB available only after
+  verifying a phone number on the account.
+  DT Research specifics: no DT Research-specific guide to
+  backing up photos to a USB drive turned up at all — not
+  one top result even mentions DT Research; no source found
+  labels any DT Research Android USB port OTG — the DA323EP
+  guide says only "USB 3.0 Port" and the DA381ND and
+  DA361ND data sheets say only "1 x latest USB/charging" —
+  so on all covered models the drive mounting is the test,
+  and no source found even states the DT361ND, the DT381ND
+  or the DA573LF's USB ports by type; the DA323EP, the
+  DA381ND, the DA361ND, the DT361ND and the DT381ND run
+  Android 13 and the DA573LF runs Android 14, so all clear
+  SnapDisk's Android 7.0 minimum; no source found states
+  whether the DA361ND, the DA381ND, the DT361ND, the
+  DT381ND or the DA573LF ship Google Play, while only the
+  DA323EP is Google Mobile Services certified; the DA323EP's
+  back camera is optional with no megapixel count stated, the
+  DA381ND carries a 5 MP front and 13 MP back camera, and no
+  source found states any camera for the DA361ND, the
+  DT361ND or the DT381ND; no source found states microSD
+  support for any covered model; the DT311, the DT301, the
+  DT313, the DT312RP, the DT323RP, the DT323PA, the DT362DN
+  and the DT382DN run Windows, not Android, so they cannot
+  run SnapDisk at all — the WL-121 fallback's naming of the
+  DT311 as an Android tablet was wrong, corrected here by
+  live evidence; the DT361DM and the DT361SC ship Windows 10
+  IoT Enterprise or Android 10/12 by configuration, and the
+  DT573 and the DT556 offer Android 13 as one configuration
+  among three, so neither is covered as an Android tablet;
+  DT Research has no tablet-to-USB photo backup tool of its
+  own; no source found names the stock file manager on a DT
+  Research device.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-122, 90th how-to):
+  docs/dt-research-photos-to-usb.html.
+  Fallback for WL-123: Elo — no Elo article exists in docs/
+  yet and no searches.md row (enterprise Android handhelds,
+  M50 Android 10 GMS, 8 MP rear camera; M51 successor).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
