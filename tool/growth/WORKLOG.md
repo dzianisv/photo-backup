@@ -1,9 +1,17 @@
 # SnapDisk — Work Log
 
-## WL-121 — Back up MobileDemand photos to USB article, 89th how-to (DRAFT)
+## WL-121 — Back up MobileDemand photos to USB article, 89th how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: DRAFT — article PR open,
-  supervisor merges after readback.
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #210 MERGED (merge 49bf126, 2026-11-19T12:05:25Z, CI run
+  44520190054 success on head a6e5730); post-merge main runs
+  Android PR 44520644383 success + pages 44520643659 success. Live
+  fetch: mobiledemand-photos-to-usb.html 200 (correct title, fresh crawl
+  12:07 UTC), feed.xml 89 items incl. MobileDemand. Query 88 verified by
+  the lead from live evidence (no top result mentions MobileDemand);
+  supervisor re-verified pre-merge by readback (feed 89 items incl.
+  MobileDemand, sitemap incl. URL, title correct, Query 88 row present,
+  only docs/ + tool/growth changed). No rebase needed (mergeable CLEAN).
   New docs/mobiledemand-photos-to-usb.html ("Back up
   MobileDemand photos to a USB drive (no computer)"),
   following the WL-54–WL-120 article template exactly
