@@ -8824,6 +8824,111 @@ demand is read off competitor install velocity instead (see
   Fallback for WL-128: Sigma Mobile — no Sigma Mobile
   article exists in docs/ yet and no searches.md row.
 
+### 95. "back up Sigma Mobile photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Sigma Mobile-specific
+  guide to backing up photos to a USB drive at all, let
+  alone a Sigma Mobile-specific automated whole-library backup
+  with progress, Pause/Stop, and resume — and two covered
+  Sigma phones cannot host a drive at all.
+- Current top results (scored Nov 19, 2026, live web search):
+  firmwarespro.com, "How to Perform a Hard Reset on Sigma
+  mobile X-treme PQ29"
+  (firmwarespro.com/hard/sigma-mobile-x-treme-pq29-detail
+  — the hard-reset page for the X-treme PQ29: before the
+  reset, export your photos, documents and videos to your PC
+  via USB, use Google Photos to back up images and Google
+  Drive for documents and folders, and enable "Cloud Sync"
+  in Settings > System > Other > Backup. The only
+  Sigma-specific backup advice in the top results — and it
+  needs a PC or the cloud, not a USB drive plugged into the
+  phone);
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI
+  — the best and most direct method for moving photos and
+  videos from any modern Android phone to a USB drive is a
+  USB On-The-Go connection and the phone's built-in file
+  manager; it needs Android 7.0 or newer. A generic video
+  guide — it says nothing about Sigma Mobile);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — connect a USB-C OTG adapter from the phone to the flash
+  drive and copy files with the file manager, use a PC as a
+  middleman in File Transfer mode, download wirelessly
+  through Google Drive or AirDroid, or bulk-export with
+  Dr.Fone software. A generic Android guide — it says
+  nothing about Sigma Mobile);
+  softhandtech.com, "Transfer Photos from Phone to Memory
+  Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — transfer photos to a memory stick with a computer as a
+  middleman, direct transfer with OTG support if the phone
+  supports it, or cloud services; check OTG compatibility
+  in the device specifications first. A generic phone
+  guide — it says nothing about Sigma Mobile);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — a forum thread: use the OTG adapter to plug in any
+  supported external device and it should be visible as
+  external storage in the file manager, then move files to
+  it from there. A forum thread, not a guide — it says
+  nothing about Sigma Mobile);
+  epictechtips.com, "How to Transfer Pictures from Android
+  Phone to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive into the phone, tap the USB
+  charging notification and select "Transfer photos", then
+  use the file manager to move pictures to the drive;
+  confirm the phone supports USB OTG first. A generic phone
+  guide — it says nothing about Sigma Mobile).
+- Five Sigma Mobile phones clear SnapDisk's Android 7.0
+  minimum and list USB OTG — the X-treme PQ29 (Android 8.1),
+  PQ39 (Android 7.0), PQ51 (Android 7.0), PQ52 (Android 7)
+  and PQ54 (Android 8.1) — so the one-tap route exists on
+  those five; every covered Sigma clears Android 7.0, so
+  none is blocked by its Android version, unlike Casio; the
+  PQ34 (Android 7.0) and the PQ37 (Android 8.1) list USB OTG
+  No, so they can run SnapDisk but cannot host a drive; OTG
+  is unconfirmed on the PQ36 (Android 9.0), PQ38 (Android
+  10), PQ39 Max (Android 9.0), PQ39 Ultra (Android 10) and
+  PQ54 MAX (Android 10) — no source found states OTG for any
+  of them, not even the PQ54 MAX's official manual — so on
+  those five the drive mounting is the test; the PQ29
+  carries an 8 MP rear camera and a 2 MP front camera, the
+  PQ34, PQ39, PQ51 and PQ52 a 13 MP rear camera and a 4.9 MP
+  (PQ51/PQ52: 5 MP) front camera, the PQ37 a 13 MP rear
+  camera and an 8 MP front camera, the PQ38 a 13 MP rear
+  camera and a 5 MP front camera, the PQ39 Max a 13 MP rear
+  camera and a 5 MP front camera, the PQ39 Ultra a 12.98 MP
+  rear camera and a 1.92 MP front camera, and the PQ54 a
+  13 MP + 0.3 MP dual rear camera and a 5 MP front camera;
+  only the PQ29 and the PQ39 Max have a sourced microSD
+  ceiling, both up to 128 GB; the PQ51's memory is 2 GB RAM
+  and 16 GB storage per devicesfaq and mobilexfiles and
+  3 GB RAM and 32 GB storage per findpare; the PQ37's
+  connector is disputed — findpare lists both USB Type-C and
+  micro USB 2.0 for the same phone; VaultDrive needs Android
+  8 or later per its own site, so the four Android 7.0
+  Sigmas can't run it either (AppBrain lists 12.1 or later,
+  which no covered Sigma clears); Sigma Mobile has no
+  phone-to-USB backup tool of its own — the only
+  Sigma-specific backup advice found is the hard-reset page
+  telling you to export photos to a PC via USB or use Google
+  Photos; no source found names the stock file manager on a
+  Sigma Mobile phone; no source in this run's searches names
+  an X-treme model below the PQ29; the PQ29 is IP69 and the
+  PQ34, the PQ39 and the PQ54 are IP68.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-128, 96th how-to):
+  docs/sigma-mobile-photos-to-usb.html.
+  Fallback for WL-129: Plum — no Plum article exists in
+  docs/ yet and no searches.md row (rugged Gator phones:
+  Gator 7, Android 11, IP68/IP69K, 8 MP rear camera,
+  microSD up to 128 GB; Gator 5, Android 8.1, IP68, 3700
+  mAh; Gator 4, Android 6.0, IP68, 13 MP rear camera).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
