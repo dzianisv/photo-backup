@@ -5877,6 +5877,71 @@ demand is read off competitor install velocity instead (see
   and the article says so. The Galaxy query above is the
   closest real gap found, per the WL-40 brief's fallback.
 
+### 71. "back up Point Mobile photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Point Mobile-specific
+  guide at all, let alone a Point Mobile-specific automated
+  whole-library backup with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 18, 2026, live web search,
+  re-checked independently by the growth sweep):
+  Trucoteca, "How to download photos from your mobile phone
+  to a USB? Tutorial"
+  (trucoteca.com/en/how-to-download-photos-from-your-mobile-phone-to-the-device/
+  — OTG adapter + file manager, or a PC with a USB cable.
+  Generic Android, and a manual guide — and its second method
+  needs a computer in between); Digiera Global, "How to Back
+  Up an iPhone to an External Drive Without iCloud"
+  (digieraglobal.com/blogs/news/back-up-iphone-to-external-drive
+  — Finder / Apple Devices app, or copy photos to an SSD from
+  the iPhone itself. An iPhone guide, not an Android guide —
+  and it says nothing about a Point Mobile handheld);
+  VaultDrive, "Back Up Phone Photos to a USB Drive, No
+  Computer" (coticsy.com/vaultdrive.html — a rival app's own
+  page, generic Android and iPhone, not a Point Mobile guide:
+  free for up to 200 files or 2 GB per backup, Pro $19.99
+  once; needs Android 8 or later, so a PM45 still on Android 7
+  cannot use it); CellularNews, "How to Move Pictures to a
+  Flash Drive From a Google Phone"
+  (cellularnews.com/device-reviews-and-comparisons/smartphones/how-to-move-pictures-to-a-flash-drive-from-google-phone/
+  — OTG adapter + Files app manual copy. A Google-phone guide,
+  and a manual file-manager guide — and it warns that not all
+  Android phones support OTG functionality); itechguides,
+  "Transfer Photos from Phone to Memory Stick: iPhone and
+  Android"
+  (itechguides.com/transfer-photos-from-phone-to-memory-stick-a-comprehensive-guide/
+  — match the drive to the phone's connector, copy a test
+  batch, verify, delete originals only afterward. Generic
+  Android and iPhone, and a manual guide — and it warns that
+  file-manager menus and USB-host support vary by manufacturer
+  and model, which is exactly the Point Mobile question);
+  Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a real phone-to-USB app, one-tap
+  whole-gallery copy, only new photos next time, free with ads,
+  one-time purchase removes ads — generic Android, not a Point
+  Mobile guide, and it does not promise oldest-first order,
+  detailed progress with Pause and Stop, or size verification
+  of every file). Google Photos is cloud, not USB. Point
+  Mobile specifics: no Point Mobile-specific file advice
+  pointing at a USB drive turned up at all; OTG/host support is
+  confirmed in the spec listings on only five of the ten
+  handhelds (PM30, PM30hc, PM45, PM75, PM90); the PM45's port
+  differs by source (datasheet USB-C, UL benchmarks microUSB
+  2.0); no source found states the connector type on the PM95
+  or the PM451 at all; every handheld listed clears SnapDisk's
+  Android 7.0 minimum except the PM80 (Android 5.0), the PM66
+  (Android 6.0.1) and the PM60 (Android 4.2), and the PM450 runs
+  Windows Embedded, not Android. Point Mobile's own apps
+  (EmKit, EmKiosk, PULS, Scan2Stage, Direct Clone, OEMConfig)
+  manage devices and settings — none of them copies photos to
+  a USB drive.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-103, 72nd how-to):
+  docs/point-mobile-photos-to-usb.html.
+  NOTE: queries 59–70 (WL-91–WL-102) have no searches.md rows —
+  their evidence lives only in WORKLOG.md. Backfill owed.
+  Fallback for WL-104: Opticon — no Opticon article exists in
+  docs/ yet (H-31/H-33 Android 9 rugged mobile computers).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
