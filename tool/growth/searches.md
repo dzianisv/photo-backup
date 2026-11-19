@@ -10108,6 +10108,137 @@ demand is read off competitor install velocity instead (see
   docs/ yet and no searches.md row (Coolpad, the Chinese phone
   brand; Note and Mega series).
 
+### 106. "back up Coolpad photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Coolpad-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Coolpad-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and nine covered Coolpad
+  phones run Android 6.0 or older, so SnapDisk does not
+  install on them at all.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any modern
+  Android phone to a USB drive is a USB On-The-Go (OTG)
+  connection and the phone's built-in file manager; it needs
+  Android 7.0 or newer, a USB flash drive, and an OTG adapter
+  or a dual USB-C/USB-A drive; copy DCIM/Camera in the file
+  manager. A generic Android video guide — it says nothing
+  about Coolpad);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — a forum thread about moving photos from a phone to a USB
+  stick; a generic Android discussion, not a guide, and it
+  says nothing about Coolpad);
+  coolmuster.com, "4 Ways to Transfer Files from Android to
+  USB Flash Drive"
+  (coolmuster.com/android/transfer-files-from-android-to-usb-flash-drive.html
+  — transfer files from an Android phone to a USB flash drive
+  via an OTG connection, a computer, or a cloud service. A
+  generic Android guide — it says nothing about Coolpad);
+  softhandtech.com, "Transfer Photos from Phone to Memory
+  Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — transfer photos from a phone to a memory stick via a
+  computer, an OTG adapter, or a cloud service. A generic
+  guide — it says nothing about Coolpad);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash
+  drive by connecting them directly with an OTG adaptor,
+  using a PC as a middleman via USB File Transfer mode, or
+  downloading them wirelessly through Google Drive or
+  AirDroid. A generic Android guide — it says nothing about
+  Coolpad).
+- The one-tap route exists on one phone only — the Cool 3
+  clears Android 9 and lists USB OTG; five more clear Android
+  7.0 but their OTG is half-stated or disputed — the Note 6
+  (gadgets360 lists USB OTG Yes, gadgetsnow leaves the line
+  blank), the Note 8 (gadgets360 and gadgetsnow leave the
+  line blank, mobilespecs and mobilegizmo list OTG, a
+  gadgets360 user comment says it does not support OTG), the
+  Mega 5 and Mega 5A (gadgets360 leaves the line blank,
+  mobilegizmo lists USB OTG Support Yes), and the Cool Play 6
+  (gadgets360 lists USB OTG No, techlomedia and pc-tablet say
+  it supports USB OTG) — so on those five SnapDisk installs
+  but the one-tap route is unproven until a drive mounts; nine
+  run below Android 7.0 and cannot run SnapDisk at all — the
+  Note 5 Lite, Note 5, Note 3S, Mega 3, Mega 2.5D and Cool 1
+  Dual on 6.0, and the Note 3 Plus, Note 3 Lite and Note 3 on
+  5.1. The Cool 1 Dual and Cool Play 6 take USB Type-C, so a
+  USB-C drive plugs straight into those two; the other
+  thirteen take micro-USB. Thirteen take a microSD card, so
+  the card-reader route works on thirteen of them; the Cool
+  Play 6's slot is disputed — gadgets360 lists expandable
+  storage Yes, mobigyaan, techlomedia, pc-tablet and 91mobiles
+  say it takes none — and the Cool 1 Dual takes no card at
+  all.
+- Conflicts between sources, all named in the article: the
+  Cool 3's processor is three listings — 1.3 GHz octa-core
+  Unisoc per gadgets360's launch report, 1.6 GHz octa-core
+  SC9863A per smartprix, 1.3 GHz quad-core MediaTek Helio A22
+  per rechargemytopup — and its rear camera is two numbers —
+  13 MP + 0.3 MP per smartprix, 8 MP + 0.3 MP per indiatvnews
+  — and its front camera is two numbers — 8 MP per smartprix,
+  5 MP per rechargemytopup; the Note 6's Android is two
+  numbers — 7.1.1 per gadgets360, 7.1 per gadgetsnow and
+  smartprix — and its Snapdragon is two numbers — 435 per
+  gadgets360, telecomtalk and timesnownews, 425 per
+  androidauthority and notebookcheck; the Note 8's chipset is
+  two numbers — MT6750 per the spec page, MT6750T per the
+  launch report — and its card slot is two kinds — hybrid per
+  gadgets360, dedicated per mobilegizmo; the Mega 5's microSD
+  ceiling is two numbers — up to 64 GB per gadgetsnow and
+  giznext, up to 128 GB per mobilegizmo; the Mega 5A's card
+  slot is two kinds — dedicated per mobilegizmo, uses the SIM
+  2 slot per phonesdata; the Cool Play 6's Android is two
+  numbers — 7.1.1 per most sources, 7.1 per 91mobiles — and
+  its battery is two numbers — 4060 mAh per most sources,
+  4000 mAh per rechargemytopup, moneycontrol and smartprix;
+  the Note 5's Android is two numbers — 6.0 per gadgets360,
+  6.0.1 per gadgetguide4u, mobigyaan and gadgetsnow — and its
+  microSD ceiling is two numbers — up to 64 GB per
+  gadgets360, up to 128 GB per techulator and phonesdata — and
+  its battery is two states — non-removable per gadgets360,
+  removable per gizmochina; the Note 5 Lite's microSD ceiling
+  is two numbers — up to 64 GB per gadgets360, up to 128 GB
+  for the 32 GB model per besttechguru; the Note 3S's Android
+  is two numbers — 6.0 per gadgets360, 6.0.1 per techpp — and
+  its microSD ceiling is two numbers — up to 32 GB per
+  gadgets360, up to 128 GB per techpp; the Mega 3's Android is
+  two numbers — 6.0 per gadgets360, 6.0.1 per techpp; the
+  Mega 2.5D's microSD ceiling is two numbers — up to 32 GB
+  per gadgets360, up to 128 GB per deltadigit; the Cool 1
+  Dual's EUI is two numbers — 5.8 per gadgetstouse, 5.6 per
+  dekhnews — and it comes in 3 GB and 4 GB RAM options, and
+  in 32 GB and 64 GB storage options; the Note 3 Lite's
+  processor is two numbers — MT6735 per gadgets360, MT6753
+  per ibtimes. Phonepik lists a second Note 5 and a second
+  Note 3S, both "Released 15 June 2023" on Android 14 with a
+  6.67-inch display, against the September 2016 Note 5 and
+  November 2016 Note 3S launches every other source lists —
+  neither 2023 listing is used as a source.
+- VaultDrive needs Android 8 or later per its own site, so
+  four of the fifteen can run it — the Note 8, Mega 5, Mega 5A
+  and Cool 3 — and AppBrain lists 12.1 or later, which no
+  covered Coolpad phone clears, since the newest covered model
+  runs Android 9. FotoSafe needs Android 9 or later, so only
+  the Cool 3 clears it. Coolpad has no phone-to-USB backup
+  tool of its own — no Coolpad-specific backup advice turned
+  up in any source beyond a computer copy, Google Drive, or
+  Google Photos; no source found names the stock file manager
+  on a Coolpad phone.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-139, 107th how-to):
+  docs/coolpad-photos-to-usb.html.
+  Fallback for WL-140: Elephone — no Elephone article exists
+  in docs/ yet and no searches.md row (Elephone, the Chinese
+  phone brand; P and U series).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
