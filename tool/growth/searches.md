@@ -8542,6 +8542,99 @@ demand is read off competitor install velocity instead (see
   rugged phones, Tough Mobile 2 Android 9, Snapdragon 670,
   12 MP rear camera, microSD up to 256 GB).
 
+### 92. "back up Bittium photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Bittium-specific
+  guide to backing up photos to a USB drive at all, let
+  alone a Bittium-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash
+  drive by connecting them directly with an OTG adaptor,
+  using a PC as a middleman, or wirelessly through Google
+  Drive or AirDroid. A generic Android guide — it says
+  nothing about Bittium, or about a Tough Mobile phone);
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI
+  — the best and most direct method for moving photos and
+  videos from any modern Android phone to a USB drive is
+  a USB On-The-Go (OTG) connection and the phone's
+  built-in file manager app. A generic video guide — it
+  says nothing about Bittium, or about a Tough Mobile
+  phone);
+  pixoneye.com, "How to Transfer Photos from Your Phone
+  to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage, open
+  the files from the destination, make an independent
+  backup before deleting anything; on Android, connect
+  the drive with the matching connector or OTG adapter,
+  open Files by Google or the phone's file manager, find
+  DCIM/Camera, select a small batch and choose Copy to.
+  A generic Android and iPhone guide — it says nothing
+  about Bittium, or about a Tough Mobile phone);
+  thegadgetians.com, "How to Transfer Files From Phone
+  to USB Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — connect a USB drive to your Android phone using an
+  OTG adapter or to your iPhone using a Lightning-to-USB
+  adapter, open the file manager, select and copy files,
+  then paste onto the USB drive. A generic Android and
+  iPhone guide — it says nothing about Bittium, or about
+  a Tough Mobile phone);
+  itechguides.com, "Transfer Photos from Phone to Memory
+  Stick: iPhone and Android"
+  (itechguides.com/transfer-photos-from-phone-to-memory-stick-a-comprehensive-guide/
+  — transfer photos from phone to memory stick by
+  matching the drive to the phone's connector: use a
+  USB-C drive with a USB-C iPhone or Android phone, copy
+  a test batch, verify the files on the stick, and delete
+  phone originals only afterward. A generic iPhone and
+  Android guide — it says nothing about Bittium, or about
+  a Tough Mobile phone).
+- OTG is confirmed only on the Tough Mobile 3 — Bittium's
+  data sheet says "USB-C with OTG" — while no source found
+  states OTG for the Tough Mobile 2 or the 2 C, which list
+  only USB-C, so on those two the drive mounting is the
+  test; the Tough Mobile 2 launched on hardened Android 9
+  and Bittium's own page now lists hardened Android 11,
+  the 2 C runs hardened Android 11 in Personal mode, and
+  the Tough Mobile 3 runs Android 15 at launch (Bittium's
+  July 2026 data sheets list Android 16), so all three
+  clear SnapDisk's Android 7.0 minimum; the Tough Mobile
+  2 is sold with or without Google services, so whether a
+  unit has the Play Store depends on the variant, and the
+  Google-free variant has no Google Photos or Google Drive
+  at all; the Tough Mobile 3 was announced September 8,
+  2025 with deliveries scheduled during 2026 and one
+  source listing availability in 2027; the original Tough
+  Mobile runs Android 5.1, updated to Android 6.0 in 2017,
+  below the minimum; the 2 C runs two separate operating
+  systems, Confidential and Personal, and its microSD card
+  is partitioned so each side has exclusive access to its
+  area; on the Tough Mobile 2 a microSD card used in
+  adoptable storage mode is encrypted with the device and
+  cannot be read on another device; the Tough Mobile 2
+  cost €1,550 at launch, the secure build €1,650, and the
+  2 C over €2,000; the Tough Mobile 2 carries a 12 MP
+  autofocus rear camera and a 5 MP front camera, and the
+  Tough Mobile 3 a 50 MP rear camera; all three take
+  microSD — the Tough Mobile 2 and the 2 C up to 256 GB;
+  Bittium has no phone-to-USB backup tool of its own —
+  its own software, Bittium Secure Suite, is device
+  management and encrypted communications; no source found
+  names the stock file manager on a Bittium device.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-125, 93rd how-to):
+  docs/bittium-photos-to-usb.html.
+  Fallback for WL-126: Casio — no Casio article exists
+  in docs/ yet and no searches.md row (rugged G'zOne
+  phones: Commando, Type-L).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
