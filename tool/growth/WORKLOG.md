@@ -1,9 +1,20 @@
 # SnapDisk — Work Log
 
-## WL-118 — Back up Spectralink photos to USB article, 86th how-to (DRAFT — article PR open)
+## WL-118 — Back up Spectralink photos to USB article, 86th how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: DRAFT — article PR #204 open
-  (head 11f859b), supervisor merges after readback.
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #204 MERGED (merge d670e4d, 2026-11-19T11:28:29Z, CI run
+  44514908246 success on rebased head 55a14f0); post-merge main runs
+  Android PR 44515141216 success + pages 44515140560 success. Live
+  fetch: spectralink-photos-to-usb.html 200 (correct title, fresh crawl
+  11:30 UTC), feed.xml 86 items incl. Spectralink. Query 85 re-scored by
+  supervisor from a fresh live re-search: Tom's Hardware camera thread,
+  Techwalla camera guide, pixoneye generic guide, Android Central forum,
+  softhandtech generic guide, Dr.Fone generic guide — not one result
+  mentions Spectralink (the brand); verdict stands. Rebase note: PR #204
+  was CONFLICTING after WL-117 row PR #203 merged; supervisor rebased
+  wl-118-spectralink onto c847121, resolved the WORKLOG.md conflict
+  (WL-118 row on top, WL-117 DONE row intact), force-pushed with lease.
   New docs/spectralink-photos-to-usb.html ("Back up
   Spectralink photos to a USB drive (no computer)"),
   following the WL-54–WL-117 article template exactly
