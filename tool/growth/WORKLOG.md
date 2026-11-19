@@ -4,7 +4,7 @@
 
 - Owner: SEO/GEO lane lead. State: DRAFT — article PR #198 open
   (head f751b0b), supervisor merges after readback. CI run
-  pending at row time (see verdict below).
+  44509521535 success on the article commit (build pass).
   New docs/ecom-smart-ex-photos-to-usb.html ("Back up
   Ecom Smart-Ex photos to a USB drive (no computer)"),
   following the WL-54–WL-114 article template exactly
