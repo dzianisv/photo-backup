@@ -1,10 +1,8 @@
 # SnapDisk — Work Log
 
-## WL-112 — Back up Trimble photos to USB article, 80th how-to (ARTICLE PR OPEN, MERGE PENDING)
+## WL-112 — Back up Trimble photos to USB article, 80th how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: article PR open, merge
-  pending supervisor readback — merge SHA and post-merge
-  main runs to be added to this row after the merge.
+- Owner: SEO/GEO lane lead. State: DONE.
   New docs/trimble-photos-to-usb.html ("Back up
   Trimble photos to a USB drive (no computer)"),
   following the WL-54–WL-111 article template exactly
@@ -15,8 +13,13 @@
   meta description 138 chars, JSON-LD validated by parse;
   sitemap and feed XML parse. Feed now counts 80 items; blog
   JSON-LD counts 80 BlogPosting entries. Article PR #191
-  (CI run 44497175977 success, build pass 1m4s); merge
-  pending supervisor readback.
+  (merge ab1ce34, CI run 44497175977 success); post-merge
+  main runs Android PR 44497910146 success + pages
+  44497920729 success. Live fetch: trimble-photos-to-usb.html
+  200 (correct title, fresh crawl 09:37 UTC), feed.xml 80
+  items incl. Trimble. Worklog PR #192 (merge e6c4698, CI
+  run 44497432257 success; post-merge main run Android PR
+  44497920516 success).
   searches.md Query 79 row present ("back up Trimble
   photos to USB drive without computer" — HOW-TO GAP).
   Facts verified from code on fresh main: SAF tree picker
