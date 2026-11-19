@@ -1,5 +1,106 @@
 # SnapDisk — Work Log
 
+## WL-121 — Back up MobileDemand photos to USB article, 89th how-to (DRAFT)
+
+- Owner: SEO/GEO lane lead. State: DRAFT — article PR open,
+  supervisor merges after readback.
+  New docs/mobiledemand-photos-to-usb.html ("Back up
+  MobileDemand photos to a USB drive (no computer)"),
+  following the WL-54–WL-120 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 42 chars,
+  meta description 148 chars, JSON-LD validated by parse;
+  sitemap and feed XML parse. Feed now counts 89 items; blog
+  JSON-LD counts 89 BlogPosting entries.
+  searches.md Query 88 row present ("back up MobileDemand
+  photos to USB drive without computer" — HOW-TO GAP).
+  Facts verified from code on fresh main (16a4698): SAF tree
+  picker (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (backup/PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (backup/ProPrefs.FREE_BACKUP_BYTES_LIMIT = 5 GiB); Pro
+  $9.99 one-time = auto-backup on connect + unlimited size
+  (strings.xml pro_price); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB
+  skipped with reason (util/FilesystemInfo.FAT32_MAX_FILE_BYTES);
+  raw byte-stream copy (backup/BackupEngine.copyWithResume —
+  no decode/re-encode, .part resume, size verification after
+  copy, retry once) with size verification after copy.
+  ApplicationId unchanged (dev.dzianisv.snapdisk,
+  app/build.gradle.kts, minSdk 24 = Android 7.0); app tree
+  untouched vs main (only docs/ + tool/growth/searches.md
+  changed).
+  Search evidence (Nov 19, 2026 live web search): Query 88
+  is a real gap — no top result is a MobileDemand-specific
+  guide to backing up photos to a USB drive without a
+  computer at all; not one top result even mentions
+  MobileDemand.
+  pixoneye.com, "How to Transfer Photos from Your Phone
+  to an USB Stick" (generic Android/iPhone guide — Files
+  by Google, DCIM/Camera, Copy to; says nothing about
+  MobileDemand, or about a rugged tablet);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive" (generic Android
+  guide — OTG adaptor + file manager, or PC, or Google
+  Drive/AirDroid; says nothing about MobileDemand, or about
+  a tablet at all);
+  forums.androidcentral.com, "Moving photos to usb" (forum
+  thread — generic OTG adapter + file manager; says
+  nothing about MobileDemand, or about a tablet at all);
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)" (generic OTG +
+  file manager video guide — DCIM/Camera, Move or Copy;
+  says nothing about MobileDemand, or about a tablet at
+  all);
+  softhandtech.com, "Transfer Photos from Phone to Memory
+  Stick: A Comprehensive Guide" (generic Android/iPhone
+  guide — computer, direct OTG, or cloud; says nothing
+  about MobileDemand, or about a rugged tablet);
+  play.google.com, "Photos to USB: OTG Backup" (rival app
+  listing — one-tap gallery copy to a pen drive, free with
+  ads; says nothing about MobileDemand, or about a rugged
+  tablet).
+  MobileDemand specifics verified from live sources this run:
+  Forge X11 (Snapdragon 7s Gen 3, Android 16, 8GB LPDDR5,
+  256GB UFS 3.1, microSD up to 2TB, 10.95-inch 2.5K
+  2560 x 1600, two USB-C — Hi-Speed USB charging long side,
+  USB 5Gbps charging + DP-Out short side — 8 MP front
+  camera, 10,200mAh, IP68, MIL-STD-810H, optional 5G);
+  Forge L5 (Snapdragon 8 Elite Gen 5 up to 4.60 GHz,
+  Android 16, 12GB LPDDR5T, 256GB UFS 4.1, microSD up to
+  2TB, 8.8-inch 3K 3040 x 1904 165 Hz 800 nits, 9,000mAh,
+  up to 23 hours video, MIL-STD-810H); Forge X11 Vision
+  and Forge L5 Vision (same tablets + 3D camera with xPIM
+  dimensioning); xTablet A1180 (Android 9 GMS, Play Store),
+  Flex 10A (Android 9.0 GMS, Play Store), xTablet A680
+  (Android 8.1 GMS, Play Store); xTablet T1180, xTablet
+  T1150 and Flex 10D run Windows, not Android, and cannot
+  run SnapDisk. No source found labels any MobileDemand USB
+  port OTG — the drive mounting is the test on all covered
+  models — and no source found even states the Forge L5's
+  USB ports by type. No source found states a rear camera
+  megapixel count for the Forge X11 or any camera for the
+  Forge L5. No source found states whether the Forge X11 or
+  the Forge L5 ship Google Play, while the older models were
+  GMS certified. "Forge X11" collides with Lenovo's
+  ThinkTab X11 and "Forge L5" with Lenovo's Legion Tab Gen
+  5 — same platform specifications, different brands.
+  MobileDemand has no tablet-to-USB backup tool of its own.
+  Rivals re-verified this run: VaultDrive (free up to 200
+  files or 2 GB, Pro $19.99 once, Android 8+ per its own
+  site, though AppBrain lists Android 12.1+), Photos to USB:
+  OTG Backup (free with ads). Google free storage is 5 GB
+  by default since May 2026, up to 15 GB with a verified
+  phone number; Storage saver compresses photos to 16 MP
+  max, videos to 1080p.
+  Fallback for WL-122: DT Research — no DT Research article
+  exists in docs/ yet and no searches.md row (rugged Android
+  tablets, DT311 / DA323EP Android).
+
+
 ## WL-120 — Back up RuggON photos to USB article, 88th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.

@@ -8012,6 +8012,145 @@ demand is read off competitor install velocity instead (see
   exists in docs/ yet and no searches.md row (rugged Android
   tablets, Forge X11 Android 16, Forge L5).
 
+### 88. "back up MobileDemand photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a MobileDemand-specific
+  guide to backing up photos to a USB drive at all, let
+  alone a MobileDemand-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  pixoneye.com, "How to Transfer Photos from Your Phone
+  to an USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage, open
+  the files from the destination, make an independent
+  backup before deleting anything; on Android, connect
+  the drive with the matching connector or OTG adapter,
+  open Files by Google or the phone's file manager, find
+  DCIM/Camera, select a small batch and choose Copy to.
+  A generic Android and iPhone guide — it says nothing
+  about MobileDemand, or about a rugged tablet);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer Android photos to a USB flash drive by OTG
+  adaptor and file manager, by PC drag-and-drop, by
+  Google Drive, or by AirDroid. A generic Android guide —
+  it says nothing about MobileDemand, or about a tablet at
+  all);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — a forum thread about moving photos to a USB drive:
+  use an OTG adapter to plug in a thumb drive and it
+  should show as external storage in the file manager,
+  then move files from there. A generic Android thread —
+  it says nothing about MobileDemand, or about a tablet at
+  all);
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any
+  modern Android phone to a USB drive is a USB On-The-Go
+  (OTG) connection and the phone's built-in file manager:
+  connect the drive with an OTG adapter, open the file
+  manager, find DCIM/Camera, and Move or Copy to the drive.
+  A generic Android video guide — it says nothing about
+  MobileDemand, or about a tablet at all);
+  softhandtech.com, "Transfer Photos from Phone to Memory
+  Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — transfer photos to a memory stick by computer, by
+  direct OTG transfer, or by cloud services; direct
+  transfer needs OTG support and an OTG adapter.
+  A generic Android and iPhone guide — it says nothing
+  about MobileDemand, or about a rugged tablet);
+  play.google.com, "Photos to USB: OTG Backup"
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — back up every photo and video on your phone to a USB
+  pen drive, with one tap: plug a pen drive into your
+  phone, the app spots it the moment it is in, and copies
+  your gallery onto it. No internet, no cloud, no account.
+  Free, with ads; a one time purchase removes the ads.
+  A rival app listing, not a guide — it says nothing
+  about MobileDemand, or about a rugged tablet).
+  A second search ("MobileDemand Forge X11 rugged tablet
+  Android specs") returned the Forge X11 data sheet
+  (Android 16, Snapdragon 7s Gen 3, 8GB LPDDR5, 256GB UFS
+  3.1, microSD up to 2TB, 10.95-inch 2.5K 2560 x 1600, two
+  USB-C ports, 8 MP front camera, 10,200mAh, IP68,
+  MIL-STD-810H), the Forge X11 product page (Android 16,
+  Android Enterprise), and Lenovo ThinkTab X11 pages (the
+  same platform specifications — 10.95-inch, Snapdragon 7s
+  Gen 3, 10,200mAh, Android 16) — no MobileDemand-specific
+  backup guide. A third search ("MobileDemand Forge L5
+  rugged tablet Android specs") returned the Forge L5
+  product page (Android 16, Snapdragon 8 Elite Gen 5 up to
+  4.60 GHz, 12GB LPDDR5T, 256GB UFS 4.1, microSD up to
+  2TB, 8.8-inch 3K 3040 x 1904 165 Hz, 9,000mAh, up to 23
+  hours video, MIL-STD-810H) and Lenovo Legion Tab Gen 5
+  pages (the same platform specifications) — no
+  MobileDemand-specific backup guide. A fourth search
+  ("MobileDemand rugged tablet Android models Forge xTablet
+  Google Play") returned the Forge Series page (Forge L5,
+  Forge X11, Forge L5 Vision, Forge X11 Vision — all
+  Android 16, Vision models add a 3D camera with xPIM
+  dimensioning), the xTablet T1180/A1180 launch (A1180
+  Android 9 GMS certified for Google Play; T1180 Windows
+  10 Pro), and the Flex 10A launch (Android 9.0 GMS, Play
+  Store; xTablet A680 Android 8.1 GMS) — no
+  MobileDemand-specific backup guide. A fifth search
+  ("MobileDemand Forge X11 USB OTG host support rear camera
+  megapixels") returned no MobileDemand result at all —
+  unrelated Xiaomi, OPPO and Oukitel spec pages — no
+  source found labels any MobileDemand USB port OTG and no
+  source found states a rear camera megapixel count for the
+  Forge X11 or any camera for the Forge L5. A sixth search
+  ("VaultDrive photo backup USB Pro price $19.99 Photos to
+  USB OTG Backup app") re-verified the rivals this run:
+  VaultDrive (free up to 200 files or 2 GB per backup, Pro
+  $19.99 once, Android 8 or later per its own site, though
+  AppBrain lists Android 12.1 or later), Photos to USB:
+  OTG Backup (free with ads, one-time purchase removes the
+  ads). A seventh search ("Google Photos Storage saver
+  compresses photos Google Drive 15 GB free storage")
+  returned that Google Photos' Storage saver compresses
+  photos to a maximum of 16 megapixels and videos to 1080p,
+  and that since May 2026 Google accounts get 5 GB free by
+  default, with the full 15 GB available only after
+  verifying a phone number on the account.
+  MobileDemand specifics: no MobileDemand-specific guide to
+  backing up photos to a USB drive turned up at all — not
+  one top result even mentions MobileDemand; no source found
+  labels any MobileDemand USB port OTG — the Forge X11 data
+  sheet says only "USB-C (Hi-Speed USB)" and "USB-C (USB
+  5Gbps)" — so on all covered models the drive mounting is
+  the test, and no source found even states the Forge L5's
+  USB ports by type; the Forge X11 and the Forge L5 run
+  Android 16, the xTablet A1180 and the Flex 10A run
+  Android 9, and the xTablet A680 runs Android 8.1, so all
+  clear SnapDisk's Android 7.0 minimum; no source found
+  states whether the Forge X11 or the Forge L5 ship Google
+  Play, while the older A1180, Flex 10A and A680 were
+  Google Mobile Services certified with the Play Store; the
+  Forge X11 data sheet states only an 8 MP front camera and
+  no rear camera megapixel count, no source found states any
+  camera for the Forge L5, and the Vision models' 3D camera
+  is for dimensioning, not a stated photo camera; the Forge
+  X11 and the Forge L5 take microSD up to 2TB; the xTablet
+  T1180, the xTablet T1150 and the Flex 10D run Windows,
+  not Android, so they cannot run SnapDisk at all; "Forge
+  X11" collides with Lenovo's ThinkTab X11 and "Forge L5"
+  with Lenovo's Legion Tab Gen 5, different brands sharing
+  platform specifications; MobileDemand has no
+  tablet-to-USB photo backup tool of its own; no source found
+  names the stock file manager on a MobileDemand device.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-121, 89th how-to):
+  docs/mobiledemand-photos-to-usb.html.
+  Fallback for WL-122: DT Research — no DT Research article
+  exists in docs/ yet and no searches.md row (rugged Android
+  tablets, DT311 / DA323EP Android).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
