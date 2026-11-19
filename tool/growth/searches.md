@@ -7722,6 +7722,162 @@ demand is read off competitor install velocity instead (see
   exists in docs/ yet and no searches.md row (enterprise
   Android handhelds, AIM series).
 
+### 86. "back up Advantech photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Advantech-specific
+  guide to backing up photos to a USB drive at all, let
+  alone an Advantech-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any
+  modern Android phone to a USB drive is a USB On-The-Go
+  (OTG) connection and the phone's built-in file manager:
+  connect the drive with an OTG adapter, open the file
+  manager, find DCIM/Camera, and Move or Copy to the drive.
+  A generic Android video guide — it says nothing about
+  Advantech, or about a tablet at all);
+  thecomputerbasics.com, "Transfer Files Without a
+  Computer"
+  (thecomputerbasics.com/how-to-transfer-videos-from-iphone-to-usb-stick-without-computer
+  — phones and tablets can read and write external drives
+  directly; the obstacles are connectors, file systems
+  and power. On Android, connect with a USB-C adapter or
+  an OTG cable, and the drive appears in the Files app.
+  A generic phone-and-tablet guide — it says nothing
+  about Advantech, or about an AIM tablet);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer Android photos to a USB flash drive by OTG
+  adaptor and file manager, by PC drag-and-drop, by
+  Google Drive, or by AirDroid. A generic Android guide —
+  it says nothing about Advantech, or about an AIM
+  tablet);
+  pixoneye.com, "How to Transfer Photos from Your Phone
+  to an USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage, open
+  the files from the destination, make an independent
+  backup before deleting anything; on Android, connect
+  the drive with the matching connector or OTG adapter,
+  open Files by Google or the phone's file manager, find
+  DCIM/Camera, select a small batch and choose Copy to.
+  A generic Android and iPhone guide — it says nothing
+  about Advantech, or about an industrial tablet);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — a forum thread about moving photos to a USB drive:
+  use an OTG adapter to plug in a thumb drive and it
+  should show as external storage in the file manager,
+  then move files from there. A generic Android thread —
+  it says nothing about Advantech, or about an AIM
+  tablet);
+  play.google.com, "Photos to USB: OTG Backup"
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — back up every photo and video on your phone to a USB
+  pen drive, with one tap: plug a pen drive into your
+  phone, the app spots it the moment it is in, and copies
+  your gallery onto it. No internet, no cloud, no account.
+  Free, with ads; a one-time purchase removes the ads.
+  A rival app listing, not a guide — it says nothing
+  about Advantech, or about an AIM tablet).
+  A second search ("Advantech AIM series rugged handheld
+  AIM-35 AIM-65 AIM-75 Android") returned the AIM-65
+  listing (8-inch, Android 6.0), the AIM-35 datasheet
+  (8-inch, Android 6.0), the AIM-75 datasheet (8-inch,
+  Snapdragon 660, Android 10 with GMS, IP65), the AIM-65
+  Windows 10 listing, the AIM-78S listing (10.1-inch,
+  Snapdragon 660, Android 13), the AIM-35 datasheet
+  (micro USB 2.0 host and charging, microSD up to 200
+  GB), the AIM-65/AIM-68 flyer (Android 6.0), and the
+  AIM-38 launch (10-inch, Android 6.0.1) — no
+  Advantech-specific backup guide. A third search
+  ("Advantech AIM-35 rugged smartphone Android version
+  camera OTG USB") returned the AIM-35 datasheets
+  (Android 6.0, 2 MP front, 5 MP rear, micro USB 2.0
+  host and charging, microSD up to 200 GB) — no
+  Advantech-specific backup guide. A fourth search
+  ("Advantech AIM-75 datasheet camera microSD USB Type-C
+  OTG Android 12") returned the AIM-75S datasheet
+  (Android 12 with Android Enterprise Recommended,
+  microSD up to 2 TB, USB Type-C 3.0, 5 MP front, 8 MP
+  rear), the AIM-75S installation guide, the AIM-75
+  datasheet (Android 10 with GMS, microSD up to 2 TB),
+  the AIM-75H datasheet (medical-grade, Android 10 with
+  GMS) and unrelated CAT S75, ZTE Blade A75 and OPPO A78
+  phones — no Advantech-specific backup guide, and the
+  "75" results are different brands' phones. A fifth
+  search ("Advantech AIM-78 tablet Android 13 camera
+  microSD USB Type-C specifications") returned the
+  AIM-78S datasheet (Android 10 and Android 13, 8 MP
+  front, 13 MP rear, microSD up to 2 TB, USB3.1 Type C
+  plus USB 2.0 Type A), the AIM-78H datasheet (medical,
+  Android 10), the AIM-77S manual (Rockchip RK3568,
+  Android 12, microSD up to 1 TB, USB 3.0 Type C, 5 MP
+  front, 8 MP rear), the AIM-78S listing (10.1-inch,
+  Android 13) and the AIM-68S datasheet (Intel N200/N50,
+  Windows 11 only) — no Advantech-specific backup guide.
+  A sixth search ("Advantech DeviceOn iService remote
+  device management photo backup") returned DeviceOn as
+  a device-management platform (monitoring, OTA updates,
+  remote desktop, backup/recovery of the device itself)
+  — not a tablet-to-USB photo copy. A seventh search
+  ("VaultDrive FotoSafe Photo Backup Stick Android USB
+  backup app price") re-verified the rivals this run:
+  VaultDrive (free up to 200 files or 2 GB per backup,
+  Pro $19.99 once, Android 8 or later per its own site),
+  Photo Backup Stick DC (free, genuine Photo Backup
+  Stick drives only), FotoSafe (Android 9 or later with
+  USB host/OTG support, system picker, one free run up
+  to 100 media files then one-time Pro), PhotoSaver
+  (USB-C devices only). Advantech specifics: no
+  Advantech-specific guide to backing up photos to a USB
+  drive turned up at all — not one top result even
+  mentions Advantech; no source found labels any AIM
+  tablet's USB port OTG — the datasheets say only
+  "USB Type-C 3.0" or "USB3.1 Type C" — so on all three
+  covered tablets the drive mounting is the test; the
+  AIM-35's micro USB 2.0 is listed as "(host and
+  charging)" in its datasheet, but the AIM-35 cannot run
+  SnapDisk at all; the AIM-75 runs Android 10 with GMS
+  in its earlier datasheets and Android 12 with Android
+  Enterprise Recommended in its 2024 datasheet, the
+  AIM-77S runs Android 12, and the AIM-78S runs Android
+  10 or Android 13 by variant (one reseller listing
+  lists Android 12 for the AIM-78S-600B20), so all three
+  clear SnapDisk's Android 7.0 minimum; the AIM-35, the
+  AIM-38, the AIM-65 and the AIM-68 run Android 6.0 or
+  6.0.1, below the minimum, so they cannot run SnapDisk
+  at all, and many of those units shipped Windows 10 IoT
+  instead of Android, while the new AIM-68S is Windows
+  11 only; the AIM-75 carries a 5 MP front and 8 MP rear
+  camera with LED flash, the AIM-77S carries a 5 MP
+  front and 8 MP rear camera, and the AIM-78S carries an
+  8 MP front and 13 MP rear camera with LED flash; the
+  AIM-75 and the AIM-78S take microSD up to 2 TB and the
+  AIM-77S up to 1 TB; no source found states the
+  AIM-77S's screen size; the AIM-75 ships Google Mobile
+  Services, so the Play Store is present there, and no
+  source found states whether the AIM-77S or the AIM-78S
+  ship Google Play; the AIM-78S is the only covered
+  tablet with a full-size USB 2.0 Type-A port, but no
+  source found says that port hosts a drive; "AIM-75"
+  and "AIM-78" collide with the CAT S75, the ZTE Blade
+  A75 and the OPPO A78, different brands' phones; no
+  source found names the stock file manager on an AIM
+  tablet.
+  Advantech has no tablet-to-USB photo backup tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-119, 87th how-to):
+  docs/advantech-photos-to-usb.html.
+  Fallback for WL-120: RuggON — no RuggON article exists
+  in docs/ yet and no searches.md row (rugged Android
+  tablets, SOL-PA501 Android 9.0/11 GMS, VIKING II
+  Android 14).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),

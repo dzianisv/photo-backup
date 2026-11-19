@@ -1,5 +1,146 @@
 # SnapDisk — Work Log
 
+## WL-119 — Back up Advantech photos to USB article, 87th how-to (DRAFT)
+
+- Owner: SEO/GEO lane lead. State: DRAFT — article PR open,
+  supervisor merges after readback.
+  New docs/advantech-photos-to-usb.html ("Back up
+  Advantech photos to a USB drive (no computer)"),
+  following the WL-54–WL-118 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 39 chars,
+  meta description 155 chars, JSON-LD validated by parse;
+  sitemap and feed XML parse. Feed now counts 87 items; blog
+  JSON-LD counts 87 BlogPosting entries.
+  searches.md Query 86 row present ("back up Advantech photos
+  to USB drive without computer" — HOW-TO GAP).
+  Facts verified from code on fresh main (824d548): SAF tree
+  picker (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (backup/PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (backup/ProPrefs.FREE_BACKUP_BYTES_LIMIT = 5 GiB); Pro
+  $9.99 one-time = auto-backup on connect + unlimited size
+  (strings.xml pro_price, pro_unlocked); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB
+  skipped with reason (util/FilesystemInfo.FAT32_MAX_FILE_BYTES);
+  raw byte-stream copy (backup/BackupEngine.copyWithResume —
+  no decode/re-encode, .part resume, size verification after
+  copy, retry once) with size verification after copy.
+  ApplicationId unchanged (dev.dzianisv.snapdisk,
+  app/build.gradle.kts, minSdk 24 = Android 7.0); app tree
+  untouched vs main (only docs/ + tool/growth/searches.md
+  changed).
+  Search evidence (Nov 19, 2026 live web search): Query 86
+  is a real gap — no top result is an Advantech-specific
+  guide to backing up photos to a USB drive without a
+  computer at all; not one top result even mentions
+  Advantech.
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)" (generic OTG +
+  file manager video guide — DCIM/Camera, Move or Copy;
+  says nothing about Advantech, or about a tablet at
+  all);
+  thecomputerbasics.com, "Transfer Files Without a
+  Computer" (generic phone-and-tablet guide — connectors,
+  file systems, power; says nothing about Advantech, or
+  about an AIM tablet);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive" (generic Android
+  guide — OTG adaptor + file manager, or PC, or Google
+  Drive/AirDroid; says nothing about Advantech, or about
+  an AIM tablet);
+  pixoneye.com, "How to Transfer Photos from Your Phone
+  to an USB Stick" (generic Android/iPhone guide — Files
+  by Google, DCIM/Camera, Copy to; says nothing about
+  Advantech, or about an industrial tablet);
+  forums.androidcentral.com, "Moving photos to usb" (forum
+  thread — generic OTG adapter + file manager; says
+  nothing about Advantech, or about an AIM tablet);
+  play.google.com, "Photos to USB: OTG Backup" (rival app
+  listing — one-tap gallery copy, free with ads, one-time
+  purchase removes the ads; says nothing about Advantech,
+  or about an AIM tablet). A second search (AIM series,
+  AIM-35/65/75) returned the AIM-65 listing (Android
+  6.0), the AIM-35 datasheet (Android 6.0), the AIM-75
+  datasheet (Snapdragon 660, Android 10 with GMS, IP65),
+  the AIM-78S listing (Android 13), the AIM-35 datasheet
+  (micro USB 2.0 host and charging, microSD up to 200
+  GB), the AIM-65/AIM-68 flyer (Android 6.0) and the
+  AIM-38 launch (Android 6.0.1) — no Advantech-specific
+  backup guide. A third search (AIM-35) returned the
+  AIM-35 datasheets (Android 6.0, 2 MP front, 5 MP rear,
+  micro USB host and charging, microSD up to 200 GB) —
+  no backup guide. A fourth search (AIM-75 datasheet)
+  returned the AIM-75S datasheet (Android 12 with
+  Android Enterprise Recommended, microSD up to 2 TB,
+  USB Type-C 3.0, 5 MP front, 8 MP rear), the AIM-75S
+  installation guide, the AIM-75 datasheet (Android 10
+  with GMS) and the AIM-75H datasheet (medical-grade,
+  Android 10 with GMS), plus unrelated CAT S75, ZTE
+  Blade A75 and OPPO A78 phones — no backup guide, and
+  the "75" results are different brands' phones. A fifth
+  search (AIM-78) returned the AIM-78S datasheet
+  (Android 10 and Android 13, 8 MP front, 13 MP rear,
+  microSD up to 2 TB, USB3.1 Type C plus USB 2.0 Type
+  A), the AIM-78H datasheet (medical, Android 10), the
+  AIM-77S manual (Rockchip RK3568, Android 12, microSD
+  up to 1 TB, USB 3.0 Type C, 5 MP front, 8 MP rear)
+  and the AIM-68S datasheet (Intel N200/N50, Windows 11
+  only) — no backup guide. A sixth search (DeviceOn /
+  iService) returned DeviceOn as a device-management
+  platform (monitoring, OTA updates, remote desktop,
+  backup/recovery of the device itself) — not a
+  tablet-to-USB photo copy. A seventh search (rivals)
+  re-verified this run: VaultDrive (free up to 200 files
+  or 2 GB per backup, Pro $19.99 once, Android 8 or
+  later per its own site), Photo Backup Stick DC (free,
+  genuine Photo Backup Stick drives only), FotoSafe
+  (Android 9 or later with USB host/OTG support, system
+  picker, one free run up to 100 media files then
+  one-time Pro), PhotoSaver (USB-C devices only).
+  Honest limits recorded in the article: no source found
+  labels any AIM tablet's USB port OTG — the datasheets
+  say only "USB Type-C 3.0" or "USB3.1 Type C" — so on
+  all three covered tablets the drive mounting is the
+  test, while no tablet lists OTG support; the AIM-78S
+  also carries a full-size USB 2.0 Type-A port, but no
+  source found says that port hosts a drive; the AIM-75
+  runs Android 10 with GMS in its earlier datasheets and
+  Android 12 with Android Enterprise Recommended in its
+  2024 datasheet, and the AIM-78S runs Android 10 or
+  Android 13 by variant (one reseller listing lists
+  Android 12 for the AIM-78S-600B20); the AIM-35, the
+  AIM-38, the AIM-65 and the AIM-68 run Android 6.0 or
+  6.0.1, below SnapDisk's Android 7.0 minimum, so they
+  cannot run SnapDisk at all, and many of those units
+  shipped Windows 10 IoT instead of Android, while the
+  new AIM-68S is Windows 11 only; no source found states
+  whether the AIM-77S or the AIM-78S ship Google Play,
+  while the AIM-75 ships Google Mobile Services; the
+  AIM-75 carries a 5 MP front and 8 MP rear camera, the
+  AIM-77S carries a 5 MP front and 8 MP rear camera, and
+  the AIM-78S carries an 8 MP front and 13 MP rear
+  camera; the AIM-75 and the AIM-78S take microSD up to
+  2 TB and the AIM-77S up to 1 TB; no source found states
+  the AIM-77S's screen size or the port position on the
+  AIM-77S; no source found states whether any covered
+  tablet can charge while the drive is connected (the
+  AIM-78S lists a separate 19 VDC-in jack, unconfirmed
+  as a mid-backup charging route); "AIM-75" and "AIM-78"
+  collide with the CAT S75, the ZTE Blade A75 and the
+  OPPO A78, different brands' phones; no source found
+  names the stock file manager on an AIM tablet;
+  Advantech has no tablet-to-USB photo backup tool of its
+  own — DeviceOn/iService is remote device management.
+  Fallback for WL-120: RuggON — no RuggON article exists
+  in docs/ yet and no searches.md row (rugged Android
+  tablets, SOL-PA501 Android 9.0/11 GMS, VIKING II
+  Android 14).
+- Verdict: how-to article material, not a listing keyword.
+
 ## WL-118 — Back up Spectralink photos to USB article, 86th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
