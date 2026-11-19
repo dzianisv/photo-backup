@@ -8450,6 +8450,98 @@ demand is read off competitor install velocity instead (see
   exists in docs/ yet and no searches.md row (enterprise
   Android handhelds/tablets, Arrows and Stylistic lines).
 
+### 91. "back up Fujitsu photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Fujitsu-specific
+  guide to backing up photos to a USB drive at all, let
+  alone a Fujitsu-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  pocket-lint.com, "Fujitsu DynaMO 1300U2 Photo disk drive"
+  (pocket-lint.com/cameras/reviews/68151-fujitsu-dynamo-1300us-disk-drive
+  — a 2005 review of Fujitsu's magneto-optical disk drive
+  for photographers, which copies memory cards onto MO
+  disks without a computer. A drive review — it says
+  nothing about a Fujitsu phone, or about backing up a
+  phone's photos at all);
+  desnoulez.fr, "How to Back Up Your Memory Card Photos
+  With Just Your Smartphone?"
+  (desnoulez.fr/en/how-to-back-up-camera-photos-while-traveling-no-laptop-needed/
+  — use a smartphone or tablet as a bridge between a
+  camera's memory card and an external SSD via a USB hub.
+  A generic camera-card guide — it says nothing about
+  Fujitsu, or about a phone's own camera roll);
+  community.hpe.com, "Solved: Re: usb"
+  (community.hpe.com/t5/operating-system-linux/usb/m-p/2980929/highlight/true?nobounce
+  — an HPE forum thread about mounting a digital camera
+  on Red Hat Linux 8.0 and 9.0. An unrelated Linux thread
+  — it says nothing about Fujitsu, or about Android at
+  all);
+  play.google.com, "Photos to USB: OTG Backup"
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — back up every photo and video on your phone to a USB
+  pen drive, with one tap. A rival app listing — it says
+  nothing about Fujitsu, or about an arrows phone);
+  forums.tomshardware.com, "How can I offload pictures
+  from a digital camera to a flash drive?"
+  (forums.tomshardware.com/threads/how-can-i-offload-pictures-from-a-digital-camera-to-a-flash-drive.1273814/
+  — a forum thread about offloading a camera's pictures
+  to a flash drive, whose answers say you need a laptop.
+  A camera forum thread — it says nothing about Fujitsu,
+  or about a phone at all);
+  pixoneye.com, "How to Transfer Photos from Your Phone
+  to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage, open
+  the files from the destination, make an independent
+  backup before deleting anything; on Android, connect
+  the drive with the matching connector or OTG adapter,
+  open Files by Google or the phone's file manager, find
+  DCIM/Camera, select a small batch and choose Copy to.
+  A generic Android and iPhone guide — it says nothing
+  about Fujitsu, or about an arrows phone).
+- OTG is confirmed on four of the five covered models —
+  the spec tables list USB Host and USB OTG 1.3 for the
+  We2, the We2 Plus and the N, and smartprix lists USB
+  on-the-go for the Alpha — while no source found states
+  OTG for the Arrows Tab F-02K, which lists only "USB,
+  Yes, Type-C", so on the tablet the drive mounting is
+  the test; the Alpha runs Android 15, the We2 Plus and
+  the We2 run Android 14, the N runs Android 12 and the
+  F-02K runs Android 7.1, so all five clear SnapDisk's
+  Android 7.0 minimum; the Alpha's storage is disputed
+  (512 GB per most listings, 256 GB per one) and it
+  launched in Japan in summer 2025 with no launch outside
+  Japan in the sources found; the Stylistic line runs
+  Windows 10 or 11 Pro, not Android, and the only Android
+  Stylistic, the M532, runs Android 4.0; the Arrows Fit
+  F-01H runs Android 5.1 and the Arrows M03 runs Android
+  6.0, below the minimum; no source found states whether
+  the F-02K ships Google Play, while the four phones run
+  Google Android per their spec listings and were sold
+  through NTT docomo or Rakuten Mobile; the Alpha carries
+  50 MP + 50 MP rear cameras and a 50 MP front camera,
+  the We2 Plus a 50.1 MP rear camera with an 8 MP aux
+  camera and a 15.9 MP front camera, the We2 a 50.1 MP
+  rear camera with a 1.9 MP aux camera and an 8 MP front
+  camera, the N a 50.3 MP rear camera with an 8 MP aux
+  camera and a 12.3 MP front camera, and the F-02K an
+  8.1 MP rear camera and a 5 MP front camera; all five
+  take microSD — the Alpha up to 2 TB per its listings;
+  Fujitsu has no phone-to-USB backup tool of its own —
+  its own app, Easy Photo Transfer for arrows, moves
+  photos and videos between phones over Wi-Fi Direct, not
+  to a USB drive, and was last updated in July 2018; no
+  source found names the stock file manager on a Fujitsu
+  device.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-124, 92nd how-to):
+  docs/fujitsu-photos-to-usb.html.
+  Fallback for WL-125: Bittium — no Bittium article exists
+  in docs/ yet and no searches.md row (enterprise Android
+  rugged phones, Tough Mobile 2 Android 9, Snapdragon 670,
+  12 MP rear camera, microSD up to 256 GB).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
