@@ -3,15 +3,24 @@
 ## WL-133 — Back up Lava photos to USB article, 101st how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #234 (head 1d3da40, CI run 44567460270 PENDING);
-  merge commit PENDING; post-merge main runs PENDING; live
-  fetch PENDING — supervisor fills after merging the article.
+  Article PR #234 MERGED (head 1d3da40, CI run 44567460270
+  success, merge commit 994d397, merged 2026-11-19T16:38:42Z);
+  post-merge main runs Android PR 44568424509 success +
+  pages 44568424029 success (both queued ~4 min before
+  starting — CI runner delay, not a failure).
+  Live fetch after Pages deploy: lava-photos-to-usb.html
+  200 (correct title/H1/TL;DR, fresh crawl 16:45 UTC — two
+  404s before the pages deploy landed); feed.xml 101 items
+  incl. Lava (live crawl 16:45 UTC).
   Query 100 verified by the lead from live evidence (no top
   result is a Lava-specific phone-to-USB photo-backup guide);
   top results are two YouTube OTG videos, a Dr.Fone guide,
   two generic Android guides (epictechtips, groovypost), and
   the PhotoSaver Play listing — none mentions Lava; real gap
-  stands.
+  stands. Supervisor re-scored Query 100 from a fresh live
+  re-search: same top results except the 6th (thegadgetians
+  generic in place of the PhotoSaver Play listing) — none
+  mentions Lava; real gap stands.
   New docs/lava-photos-to-usb.html ("Back up Lava photos
   to a USB drive (no computer)"), following the
   WL-54–WL-132 article template exactly (navy/cyan, TL;DR
