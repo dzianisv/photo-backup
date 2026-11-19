@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up i.safe MOBILE photos to a USB drive</title>
+<meta name="description" content="Back up IS530.1, IS530.2, IS540.1, IS540.2 and IS655 photos to a USB drive without a computer: plug in, tap Backup — SnapDisk copies oldest-first, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/isafe-mobile-photos-to-usb.html">
+<meta property="og:title" content="Back up i.safe MOBILE photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up IS530.1, IS530.2, IS540.1, IS540.2 and IS655 photos to a USB drive without a computer: plug in, tap Backup — SnapDisk copies oldest-first, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/isafe-mobile-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/isafe-mobile-photos-to-usb.html#article",
+      "headline": "Back up i.safe MOBILE photos to a USB drive (no computer)",
+      "description": "Back up IS530.1, IS530.2, IS540.1, IS540.2 and IS655 photos to a USB drive without a computer: plug in, tap Backup — SnapDisk copies oldest-first, no upload.",
+      "datePublished": "2026-11-19",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/isafe-mobile-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/isafe-mobile-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up IS530.1, IS530.2, IS530.RG, IS530.M1, IS540.1, IS540.2 and IS655 photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On the models that can run SnapDisk and host a drive, yes — but no source found labels any i.safe MOBILE USB port OTG, so the drive mounting is the test before buying an adapter: plug in a drive and look for the mount notification. All seven run Android 10 or later, well above SnapDisk's Android 7.0 minimum, and the EEA versions come with Google Play, so no sideload is needed on those. Two safety rules come from i.safe's own manuals: use the USB interface only outside explosion-hazardous areas — wired USB connections are prohibited inside them — and connect only approved accessories to it. The IS655 is the only covered model with micro-USB, so it needs a micro-USB OTG adapter, while the other six have USB-C. i.safe MOBILE has no phone-to-USB backup tool of its own. The stock route is the built-in file manager: connect the drive with an OTG adapter, open the file manager, pick the photos in DCIM/Camera, and Copy to the drive. On a model that hosts drives and runs SnapDisk, SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later, which every covered i.safe MOBILE model clears by three versions or more."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/isafe-mobile-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up i.safe MOBILE photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/isafe-mobile-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up i.safe MOBILE photos to a USB drive (no computer)</h1>
+  <p class="dek">The IS530.1, the IS530.2, the IS530.RG, the IS530.M1, the IS540.1, the IS540.2 and the IS655 are i.safe MOBILE's intrinsically safe Android smartphones (IS530.1; IS530.2; IS530.RG; IS530.M1; IS540.1; IS540.2; IS655), and i.safe MOBILE has no phone-to-USB backup tool of its own: its manuals point at Google's Android support pages for operating-system questions, not at any i.safe backup app. Five honest caveats up front: no source found labels any i.safe MOBILE USB port OTG — every datasheet and manual says only that the USB interface is for charging and data transfer — so plug in a drive and look for the mount notification, or run a USB OTG Checker app, before buying an adapter; i.safe's own manuals say to use the USB interface only outside explosion-hazardous areas — wired USB connections are prohibited inside them, and only approved accessories may be connected to it — so do the backup outside the hazardous area, with the i.safe PROTECTOR 2.0 cable the device shipped with; the Android version differs by source on two models — the IS540.1 runs Android 12 at launch in one benchmark listing and Android 14 in a reseller listing, and the IS530.2 runs Android 13 in its 2024 datasheet but Android 10, upgradable to 13, in an older reseller sheet — so check Settings &gt; About phone if you are unsure which version your unit runs; the IS655 is the only covered model with micro-USB instead of USB-C, so it needs a micro-USB OTG adapter, and its battery is integrated, not replaceable; and Google Play comes with the EEA versions only — the manuals say the EEA version comes with the Google app and Google Play, and some variants, such as the mining versions, may not have them — so check for the Play Store on your unit, and sideload the APK if it is absent. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 19, 2026 · 5 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On the i.safe MOBILE models that can run SnapDisk and host a drive — no source found labels any i.safe USB port OTG, so the drive mounting is the test on all seven — plug the drive in, then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: OTG is confirmed on none of the seven covered models, so the drive-mounting test comes before buying an adapter on every one of them; the USB port may only be used outside explosion-hazardous areas, with approved accessories only; and the IS655 needs a micro-USB OTG adapter while the other six need a USB-C OTG adapter. A file manager works — the stock route is the built-in file manager with an OTG adapter — but the direct route is manual select-copy-paste with no progress detail, no resume, and no verification; i.safe's own documentation offers no backup tool at all, only a pointer to Google's Android support pages. Four rival apps do exist — Photos to USB: OTG Backup copies the whole gallery to a pen drive in one tap, free with ads, a one-time purchase removing the ads; VaultDrive copies photos, videos, and files straight to a USB drive with no computer, free for up to 200 files or 2 GB per backup, Pro $19.99 once; Photo Backup Stick DC backs up pictures and videos straight to its own OTG drive, free, but it only works with genuine Photo Backup Stick drives; FotoSafe backs up Android photos to a USB drive through the system picker, and needs Android 9 or later with USB host or OTG support — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, works with any drive, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. Note the FotoSafe floor: it needs Android 9, so it cannot run on a device still on Android 7.0 or 8.0 — but every covered i.safe model runs Android 10 or later, so the floor does not bite here. SnapDisk <strong>copies, it never deletes</strong> — deleting from the device afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 19, 2026, no top search result for this query is an i.safe-specific phone-to-USB photo-backup guide at all: not one result even mentions i.safe MOBILE — the top results are iPhone guides and one generic Android guide.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up i.safe MOBILE photos to USB drive without computer" and there is no i.safe-specific phone-to-USB photo-backup guide in the top results at all — not one result even mentions i.safe MOBILE. The results are iPhone guides and one generic Android guide, in different packaging:</p>
+  <ul>
+    <li><strong>drfone.wondershare.com, "Move iPhone Photos to USB or External Drive"</strong> (<a href="https://drfone.wondershare.com/apple-iphone/move-iphone-photos-to-usb.html">Move iPhone Photos to USB or External Drive</a>) — move photos from an iPhone to an external drive with the Files app and a compatible drive, or through a Mac or Windows PC and then to external storage. An iPhone guide — and it says nothing about i.safe MOBILE, or about Android at all.</li>
+    <li><strong>ubackup.com, "Transfer Photos from iPhone to Memory Stick Without Computer"</strong> (<a href="https://www.ubackup.com/phone-backup/transfer-photos-from-iphone-to-memory-stick-without-computer.html">Transfer Photos from iPhone to Memory Stick Without Computer</a>) — connect a USB stick to an iPhone with a Lightning to USB adapter, open Photos, select the photos, tap Export Unmodified Original, and save to the drive. An iPhone guide — and it says nothing about i.safe MOBILE, or about Android at all.</li>
+    <li><strong>cdn.prod.website-files.com, "Transferring photos from your iPhone to a USB drive"</strong> (<a href="https://cdn.prod.website-files.com/66f411127d0552db0793535e/6837b7ada5021b62a1735268_sasibefovoxonogetofasip.pdf">Transferring photos from your iPhone to a USB drive</a>) — three methods for moving iPhone pictures to a flash drive, mostly through a Windows PC or a Mac, plus a Lightning-to-USB adapter route without a computer. An iPhone guide — and it says nothing about i.safe MOBILE, or about Android at all.</li>
+    <li><strong>photocleanse.app, "Transfer Photos from iPhone to an External Hard Drive"</strong> (<a href="https://photocleanse.app/guides/transfer-photos-iphone-external-drive/">Transfer Photos from iPhone to an External Hard Drive</a>) — connect the drive to the iPhone, open Photos, select the photos, tap Share, then Export Unmodified Original, tap the drive below Locations and tap Save; on a Mac, Image Capture imports straight into a folder on the drive. An iPhone guide — and it says nothing about i.safe MOBILE, or about Android at all.</li>
+    <li><strong>FotoSafe, "Back up Android photos to USB"</strong> (<a href="https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/">Back up Android photos to USB</a>) — back up Android photos to a USB drive without a computer: connect the drive, select it as the destination in FotoSafe, review the media and start copying, through the Android system picker. The only Android result — a real no-computer phone-to-USB guide, and a real one-tap app — but a generic Android guide, not an i.safe guide: it says nothing about an i.safe model, its USB port, or its hazardous-area rules.</li>
+    <li><strong>i.safe MOBILE manuals (manuals.plus), IS530.1 / IS530.2 / IS530.M1 / IS540.2 / IS655.RG operating manuals</strong> (<a href="https://manuals.plus/i-safe-mobile/is530-1-smartphone-zone-manual">IS530.1 Smartphone Zone manual</a>) — the manuals describe the USB interface only as a connection for the i.safe PROTECTOR 2.0 Type C USB Cable or for connection to other devices, for charging and data transfer, and say to use the USB interface only outside explosion-hazardous areas, with approved accessories only. Manuals, not guides — and they describe no photo backup at all: no file manager steps, no drive, no app.</li>
+    <li><strong>i.safe MOBILE, "IS530 and IS930 series receive OTA upgrade to Android 14"</strong> (<a href="https://www.isafe-mobile.com/ar/company/news/detail/is530-and-is930-series-receive-ota-upgrade-to-androidtm-14">IS530 and IS930 series receive OTA upgrade to Android 14</a>) — i.safe's own news: the IS530 and IS930 series, on the market since 2019/2020, will be upgraded to Android 14 in 2025, with security patches until 2027; the upgrades start with the IS540.x at the end of 2024, followed by the IS940.x in the first half of 2025, and the IS530 and IS930 series later in 2025. A news post, not a guide — and the source for the Android 14 upgrade path on the IS530.x and IS540.x lines — but note the version spread it implies: the IS540.x shipped on Android 12 and the IS530.x on Android 10, so a unit's version depends on whether it took the upgrade.</li>
+    <li><strong>IS530.2 datasheet, i.safe MOBILE (via industril.pl)</strong> (<a href="https://industril.pl/img/cms/products/isafe_mobile/IS530-2/01_IS530-2_Datasheet.pdf">IS530.2 datasheet</a>) — Android 13, SDM660 Octa-Core, 4 GB RAM, 64 GB internal memory, microSD up to 128 GB, 4.5-inch Gorilla Glass 3 display at 854 x 480 pixels, replaceable 3600 mAh battery, 13 MP AF rear camera and 5 MP front camera, 13-pin ISM interface, 155 x 80 x 25 mm, 325 g. A datasheet, not a guide — and the source for the IS530.2's Android 13 — but an older R. STAHL sheet says Android 10 (upgradable to 13) for the same model, so the version differs by source.</li>
+    <li><strong>IS530.RG datasheet, i.safe MOBILE (via smeltex.eu)</strong> (<a href="https://www.smeltex.eu/media/rugged/i-safe-mobile/downloads/isafe-is530-rg-datasheet-is530-rg.pdf">IS530.RG datasheet</a>) — Android 14, SDM660 Octa-Core, 4 GB RAM, 64 GB internal memory, microSD up to 128 GB, replaceable 3600 mAh battery, 13-pin ISM interface, magnetic charger port. A datasheet, not a guide — and the source for the IS530.RG on Android 14 — but the same model was Android 10, upgradable to 13, in an older R. STAHL sheet, so the version differs by source here too.</li>
+    <li><strong>IS540.1, atexdepot.nl</strong> (<a href="https://www.atexdepot.nl/en/isafe-mobile-is5401-atex-smartphone-zone-1-21.html">i.safe-MOBILE IS540.1 ATEX smartphone Zone 1/21</a>) — Android 14, Qualcomm QCM6490 Octa Core, 8 GB RAM, 128 GB internal memory, microSD to 128 GB, 6-inch full HD display, 48 MP main camera, 16-pin ISM interface, replaceable 4400 mAh battery. A reseller listing, not a guide — and the source for the IS540.1 on Android 14 — but a benchmark listing says Android 12 for the IS540, so the version differs by source.</li>
+    <li><strong>IS540, UL benchmarks</strong> (<a href="https://benchmarks.ul.com/hardware/phone/i.safe+Mobile+IS540+review">i.safe Mobile IS540 Review</a>) — QCM6490, 8 GB memory, 128 GB storage, 48 MP camera, Android 12, 4400 mAh battery, USB Type-C. A benchmark listing, not a guide — and the source for the IS540 on Android 12 at launch — but a reseller lists the IS540.1 on Android 14, so the version differs by source; the Android 14 upgrade i.safe announced for the IS540.x at the end of 2024 explains the spread.</li>
+    <li><strong>IS540.2, PC Press review</strong> (<a href="https://pcpress.rs/i-safe-is540-2-m540a01-telefon-spreman-za-teske-uslove/">i.safe IS540.2 M540A01 review</a>) — the IS540.x won a Red Dot award in 2023, ships with a screwdriver for mounting the 4400 mAh battery, a nano-SIM and eSIM, a microSD card up to 128 GB, a 6-inch 1080 x 2160 display, a 48 MP main camera and a 5 MP front camera, and runs Android 12. A review, not a guide — and a second source for the IS540.2 on Android 12 and the microSD slot up to 128 GB.</li>
+    <li><strong>IS655.RG datasheet, i.safe MOBILE (via wideum.com)</strong> (<a href="https://wideum.com/wp-content/uploads/2022/09/Datasheet-IS655.RG_EN.pdf">IS655.RG datasheet</a>) — Android 10, Helio P22 (MT 6762V), 3 GB RAM, 32 GB internal memory, microSD up to 128 GB, 5.5-inch HD+ display at 720 x 1440 pixels, 4200 mAh battery, micro-USB cable in the box. A datasheet, not a guide — and the source for the IS655 on Android 10 with micro-USB — and the only covered model whose box ships a micro-USB cable instead of USB-C.</li>
+    <li><strong>IS655.RG, R. STAHL</strong> (<a href="https://r-stahl.com/fileadmin/tx_aimeos/Files/n_/gb/SDS_PV_2700268_en_GB/einzeldatenblatt-smartphone-is655-rg-smartphone-set-eea-317576-en-gb-rstahl.pdf">IS655.RG Smartphone Set EEA</a>) — Android 10, Helio P22, 3 GB main memory, 32 GB data memory, microSD up to 128 GB, 13 MP AF camera on the reverse side and 8 MP front camera, IP68, Android Enterprise Recommended, zero-touch capable, MDM compatible. A reseller datasheet, not a guide — and a second source for the IS655 on Android 10, 3 GB / 32 GB, microSD up to 128 GB.</li>
+    <li><strong>IS530.1, UL benchmarks</strong> (<a href="https://benchmarks.ul.com/pt-br-pt/hardware/phone/i.safe+Mobile+IS530.1+review">i.safe Mobile IS530.1 Review</a>) — Snapdragon 660, 4 GB memory, 64 GB storage, 13 MP camera, Android 10, 4.5-inch display at 854 x 480 pixels, 3600 mAh battery, USB Type-C. A benchmark listing, not a guide — and the source for the IS530.1 on Android 10 at launch — but i.safe's own news says the IS530 series receives an OTA upgrade to Android 14 in 2025, so a unit's version depends on whether it took the upgrade.</li>
+    <li><strong>Cloud routes</strong> — Google Photos syncs your gallery to Google's servers, Google Drive backs your data up to Google's cloud with 15 GB free, and Google backup restores your data to a new phone from Google's cloud, not to a drive you hold; Google Photos' "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Neither route gives you a folder of plain photo files on a USB drive. i.safe MOBILE offers no backup tool of its own at all — its manuals point at Google's Android support pages for operating-system questions — so there is no i.safe cloud route to compare either.</li>
+  </ul>
+  <p>None of them is an i.safe-specific phone-to-USB photo-backup guide, and none of them offers an automated i.safe photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 19, 2026 — for the i.safe models that can run SnapDisk at all.</p>
+
+  <h2>What you need</h2>
+  <p>An i.safe MOBILE phone that can run SnapDisk and host a USB drive — in practice, any of the seven covered models — with a USB drive and the right adapter for your model, and enough space on the drive for the photos you want to keep. The seven covered models, with what the sources found actually say:</p>
+  <ul>
+    <li><strong>IS530.1 (2019):</strong> Android 10 at launch, Snapdragon 660 (SDM660 Octa-Core), 4 GB / 64 GB, microSD up to 128 GB, USB Type-C, replaceable 3600 mAh battery, 13 MP AF rear and 5 MP front cameras, 4.5-inch Gorilla Glass 3 display at 854 x 480 pixels, 13-pin ISM interface. OTG: no source found labels its USB port OTG — the manual says only that the USB interface is for charging and data transfer, with the i.safe PROTECTOR 2.0 Type C USB Cable. Android 14 via the OTA upgrade i.safe announced for 2025.</li>
+    <li><strong>IS530.2 (2019):</strong> Zone 2/22 variant of the same M53A01 hardware — Android 13 in its 2024 datasheet, Snapdragon 660, 4 GB / 64 GB, microSD up to 128 GB, USB Type-C, replaceable 3600 mAh battery, 13 MP AF rear and 5 MP front cameras, 4.5-inch display, 13-pin ISM interface. OTG: no source found labels its USB port OTG. Android version differs by source: Android 13 in the 2024 datasheet, Android 10, upgradable to 13, in an older R. STAHL sheet.</li>
+    <li><strong>IS530.RG:</strong> Non-Ex rugged variant of the same M53A01 hardware — Android 14 in its March 2026 datasheet, Snapdragon 660, 4 GB / 64 GB, microSD up to 128 GB, USB Type-C, replaceable 3600 mAh battery, 13 MP AF rear and 5 MP front cameras, 13-pin ISM interface, magnetic charger port. OTG: no source found labels its USB port OTG. Android version differs by source: Android 14 in the 2026 datasheet, Android 10, upgradable to 13, in an older R. STAHL sheet.</li>
+    <li><strong>IS530.M1 (mining):</strong> Mining variant of the same M53A01 hardware — Android 10 at launch, Snapdragon 660, 4 GB / 64 GB, microSD up to 128 GB, USB Type-C, replaceable 3600 mAh battery, 13 MP AF rear and 5 MP front cameras, 13-pin ISM interface. OTG: no source found labels its USB port OTG — the manual says only that the USB interface is for the i.safe PROTECTOR 2.0 Type C USB Cable or for connection to other devices. The mining variants may ship without Google Play — check for the Play Store on your unit.</li>
+    <li><strong>IS540.1:</strong> Android 14 in a reseller listing, Qualcomm QCM6490 Octa Core, 8 GB / 128 GB, microSD to 128 GB, USB Type-C, replaceable 4400 mAh battery, 48 MP main camera and 5 MP front camera, 6-inch full HD display, 16-pin ISM interface. OTG: no source found labels its USB port OTG — the manual says only that the USB interface is for charging and data transfer, with approved accessories only. Android version differs by source: Android 14 in the reseller listing, Android 12 in a benchmark listing and a review — the IS540.x shipped on Android 12 and i.safe announced the Android 14 upgrade for the end of 2024. microSD capacity differs by source too: up to 128 GB in the manuals and one reseller listing, up to 256 GB in another reseller listing — so this article states no microSD capacity for this model.</li>
+    <li><strong>IS540.2:</strong> Zone 2/22 variant of the same M540A01 hardware — Android 12 in a review, Qualcomm QCM6490, 8 GB / 128 GB, microSD up to 128 GB, USB Type-C, replaceable 4400 mAh battery, 48 MP main camera and 5 MP front camera, 6-inch display, 16-pin ISM interface. OTG: no source found labels its USB port OTG. Android 14 via the upgrade i.safe announced for the IS540.x at the end of 2024.</li>
+    <li><strong>IS655.RG / IS655.2:</strong> Android 10, MediaTek Helio P22, 3 GB / 32 GB, microSD up to 128 GB, micro-USB, 4200 mAh battery, 13 MP AF rear and 8 MP front cameras, 5.5-inch HD+ display at 720 x 1440 pixels. OTG: no source found labels its USB port OTG — the manual says only that the USB interface is for the micro-USB cable or for connection to other devices. It is the only covered model with micro-USB, so it needs a micro-USB OTG adapter, and its battery is integrated, not replaceable.</li>
+  </ul>
+  <p>Five i.safe specifics: first, the adapter differs by model — the IS655 needs a micro-USB OTG adapter, the other six need a USB-C OTG adapter for a USB-A drive (or a USB-C dual drive, which plugs straight in). Second, every covered model clears the Android 7.0 minimum by three versions or more — the lowest launch version in the line is Android 10 — but the IS540.1's Android version and microSD capacity, and the IS530.2's and IS530.RG's Android versions, differ by source, so check Settings &gt; About phone if you are unsure which version your unit runs. Third, the EEA versions come with Google Play — the manuals say the EEA version comes with the Google app and Google Play — but some variants, such as the mining versions, may not, so check for the Play Store on your unit and sideload the v0.1.2 APK from the GitHub release page if it is absent. Fourth, the USB port may only be used outside explosion-hazardous areas: i.safe's manuals say wired USB connections are prohibited inside them and only approved accessories may be connected — so do the backup outside the hazardous area, with the i.safe PROTECTOR 2.0 cable the device shipped with, not a random adapter. Fifth, the IS530.x and IS540.x models have replaceable batteries, and the drive occupies the phone's only USB port while it copies — so a long backup cannot charge at the same time, and the practical answer on those six is a charged spare battery, not a cable; the IS655's battery is integrated, so charge it fully before starting. i.safe camera photos live in DCIM/Camera, as on any Android device. The microSD slot is an option on every covered model — up to 128 GB on the IS530.x, the IS540.2 and the IS655 — but a card stays in the device and opening it anywhere else needs a card reader, while a USB drive plugs into any computer as it is. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit. No source found names the stock file manager on an i.safe device — the manuals point at Google's Android support pages for operating-system questions — so Method 2 uses the built-in file manager, whatever it is called on your unit; on near-stock Android that is Files by Google.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Check your model can run SnapDisk.</strong> Every covered i.safe model runs Android 10 or later — the lowest launch version in the line is Android 10 — so SnapDisk installs on all seven. If you are unsure which version your unit runs, check Settings &gt; About phone. If your unit has no Play Store — some variants, such as the mining versions, may not — install the v0.1.2 APK from the GitHub release page instead.</li>
+    <li><strong>Step outside the hazardous area first.</strong> i.safe's manuals say the USB interface may only be used outside explosion-hazardous areas, and wired USB connections are prohibited inside them. Do the backup outside the hazardous area, with the i.safe PROTECTOR 2.0 cable the device shipped with.</li>
+    <li><strong>Plug in the USB drive.</strong> On the IS655 use a micro-USB OTG adapter; on the other six use a USB-C OTG adapter for a USB-A drive. A USB-C dual drive plugs straight into the six USB-C models with no adapter. It mounts on plug-in on most Android devices with USB host support — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage for the drive. On all seven models the drive mounting is the test: no source found labels any i.safe USB port OTG, so if the drive mounts, the phone hosts drives and the backup works; if it never appears, the phone may not support USB storage at all. Start with a charged battery, or a charged spare in your pocket on the six models with replaceable batteries: the drive occupies the phone's only USB port while it copies.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — i.safe camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the device normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the device to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: the built-in file manager (the stock route, no app needed)</h2>
+  <p>The built-in file manager can copy your photos to the USB drive — on near-stock Android that is Files by Google, and i.safe's manuals point at Google's Android support pages for operating-system questions, so the stock route is the Android one: 1. Step outside the hazardous area — the USB interface may only be used outside it. 2. Plug in the USB drive — on the IS655 with a micro-USB OTG adapter, on the other six with a USB-C OTG adapter. A notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage for the drive. 3. Open the file manager and confirm the USB drive shows up under storage devices. 4. Go back to Internal storage, DCIM, Camera, where your camera photos live. 5. Select the photos (long-press the first, tap the rest, or select all). 6. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until the file manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: Google Photos, Google Drive, or a microSD card — not phone-to-USB plain files</h2>
+  <p>i.safe MOBILE offers no backup tool of its own at all — its manuals point at Google's Android support pages for operating-system questions — so the stock options are Google's, and none of them writes your photos as plain files to a USB drive automatically. <strong>1. Google Photos</strong> is Google's own photo backup app: it automatically backs up photos to your Google account. It is a real backup — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead; and its "Storage saver" setting compresses photos. <strong>2. Google Drive</strong> is the cloud backup Android names by default — "on Android devices the default built-in service is Google Drive. With Google Drive you have 15Gb free" — it backs your data up to Google's cloud. It is a real backup — but it is a cloud backup, not a USB copy, and Google accounts only offer 15 GB of free storage. <strong>3. Google backup</strong> is what Android itself names: personal settings back up to Google's servers with a Google account, and are restored to a new phone when you sign in with that account. It is a real backup — but it backs up settings, not a folder of photo files on a drive you hold. <strong>4. A microSD card</strong> is the local option on every covered model — up to 128 GB on the IS530.x, the IS540.2 and the IS655. It is a real local copy — but the card stays in the device, and opening the card anywhere else needs a card reader, and no source found states a microSD capacity for the IS540.1. <strong>5. MDM</strong> is what i.safe's enterprise story is built on — the IS530.x and IS655 are Android Enterprise Recommended, zero-touch capable and MDM compatible — but MDM manages the device, it does not back up photos. None of them is a one-tap way to copy your camera roll to a drive as plain files. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 19, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the phone into the computer with a USB cable, tap the USB notification and choose File transfer — and drag the DCIM folder onto the USB drive. This works fine, and it is the only route above that needs a second device in between. Do it outside the hazardous area too — the USB interface may only be used outside it. If the phone and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 19, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the device is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>The adapter differs by model, not by brand.</strong> The IS655 has micro-USB, so it needs a micro-USB OTG adapter; the other six covered models have USB-C, so a USB-A drive needs a USB-C OTG adapter. A plain USB-C charging cable is not a host connection: it connects the phone to a computer, which is the opposite direction.</li>
+    <li><strong>OTG is confirmed on none of the seven.</strong> No source found labels any i.safe MOBILE USB port OTG — every datasheet and manual says only that the USB interface is for charging and data transfer. On all seven, plug in a drive and look for the mount notification — or run a USB OTG Checker app — before buying an adapter.</li>
+    <li><strong>The USB port is for use outside hazardous areas only.</strong> i.safe's manuals say wired USB connections are prohibited inside explosion-hazardous areas, and only approved accessories may be connected to the USB interface. Do the backup outside the hazardous area, with the i.safe PROTECTOR 2.0 cable the device shipped with — not a random adapter, and never with the USB cover open inside a hazardous area.</li>
+    <li><strong>Three spec details differ by source.</strong> The IS540.1 runs Android 12 in a benchmark listing and a review, and Android 14 in a reseller listing — the IS540.x shipped on Android 12 and i.safe announced the Android 14 upgrade for the end of 2024. The IS530.2 runs Android 13 in its 2024 datasheet and Android 10, upgradable to 13, in an older reseller sheet. The IS530.RG runs Android 14 in its March 2026 datasheet and Android 10, upgradable to 13, in an older reseller sheet. Every reading clears the minimum either way. The IS540.1's microSD capacity is up to 128 GB in the manuals and one reseller listing, and up to 256 GB in another reseller listing — so this article states no capacity for that model.</li>
+    <li><strong>No source found states a microSD capacity for the IS540.1.</strong> The IS540.1 takes a microSD card, but its capacity is disputed between sources — up to 128 GB in the manuals, up to 256 GB in one reseller listing — so this article states none for that model.</li>
+    <li><strong>No source found states where the port sits on any of the seven models.</strong> No source found states the port position on the IS530.1, the IS530.2, the IS530.RG, the IS530.M1, the IS540.1, the IS540.2 or the IS655, so check your unit before buying a drive or a cable that assumes a port position.</li>
+    <li><strong>No source found names the stock file manager on an i.safe device.</strong> The manuals point at Google's Android support pages for operating-system questions, so Method 2 uses the built-in file manager, whatever it is called on your unit — on near-stock Android that is Files by Google.</li>
+    <li><strong>Google Play comes with the EEA versions only.</strong> The manuals say the EEA version comes with the Google app and Google Play; some variants, such as the mining versions, may not have them. If your unit has no Play Store, install SnapDisk by sideloading the v0.1.2 APK from the GitHub release page.</li>
+    <li><strong>No IS530.3 turned up.</strong> The IS530 line in the sources found is the IS530.1, the IS530.2, the IS530.RG and the IS530.M1 — no ".3" variant surfaced, so none is covered here.</li>
+    <li><strong>One rival needs Android 9.</strong> FotoSafe needs Android 9 or later with USB host or OTG support — but every covered i.safe model runs Android 10 or later, so the floor does not bite here.</li>
+    <li><strong>Anything below Android 7.0 cannot run SnapDisk at all.</strong> No covered i.safe model runs below Android 10 — but check Settings &gt; About phone if you are unsure: below Android 7.0, SnapDisk cannot install, and the computer copy in Method 4 is the route.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter you don't need — or the wrong one.</strong> A USB-C dual drive plugs straight into the six USB-C models with no adapter at all. The IS655 needs a micro-USB OTG adapter — a USB-C adapter does not fit a micro-USB port.</li>
+    <li><strong>Assuming OTG because the phone has USB-C.</strong> The IS530.x and IS540.x models all have USB-C, and no source found labels any of their ports OTG. Plug in a drive and look for the mount notification before buying an adapter — USB-C is a connector shape, not a promise the phone hosts drives.</li>
+    <li><strong>Opening the USB port inside a hazardous area.</strong> i.safe's manuals say wired USB connections are prohibited inside explosion-hazardous areas and the USB interface may only be used outside them. Do the backup outside the hazardous area — the backup can wait until the shift is over.</li>
+    <li><strong>Using a random adapter instead of the approved cable.</strong> The manuals say to connect only approved accessories to the USB interface, with the i.safe PROTECTOR 2.0 cable the device shipped with. A generic OTG adapter is not an approved accessory on paper — test the drive mounting with it outside the hazardous area, and do not rely on it inside one.</li>
+    <li><strong>Assuming your IS540.1 is on Android 14 because the line goes that high.</strong> The IS540.x shipped on Android 12 and i.safe announced the Android 14 upgrade for the end of 2024 — check Settings &gt; About phone on your unit instead of trusting a version printed for another model.</li>
+    <li><strong>Assuming your IS655 charges while the drive is connected.</strong> The drive occupies the phone's only USB port while it copies, and the IS655's battery is integrated, not replaceable — so charge it fully before a long backup instead of counting on charging mid-backup. The other six have replaceable batteries — carry a charged spare.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google Drive and Google Photos back your phone up to Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup. And Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Mistaking MDM for a photo backup.</strong> Android Enterprise Recommended, zero-touch and MDM compatibility are device-management features — they manage the device, they do not copy your camera roll to a drive. If the drive and the phone are all you have and you want files you can open anywhere, a phone-to-USB copy is the route, not MDM.</li>
+    <li><strong>Mistaking a spec sheet or a manual for a phone-to-USB guide.</strong> The datasheets and manuals are real documents — but they only list an Android version, a processor, a camera, or a USB port type. None of them describes copying your camera roll straight to a USB drive from the phone. The FotoSafe guide is the closest thing to a phone-to-USB guide in the search results, and it is generic Android, not an i.safe guide.</li>
+    <li><strong>Mistaking a drive-locked app for a general backup.</strong> Photo Backup Stick DC is a real one-tap backup app — but it only works with genuine Photo Backup Stick OTG drives. If the drive you already own is any other brand, that app cannot use it: SnapDisk, Photos to USB, and FotoSafe work with any drive.</li>
+    <li><strong>Mistaking a microSD card copy for a USB backup.</strong> Copying DCIM to a microSD card is a real local copy — every covered i.safe model takes one — but the card stays in the device, and opening it anywhere else needs a card reader; a USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 19, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On an i.safe phone the cloud routes are Google Photos and Google Drive — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> A file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="samsung-galaxy-xcover-photos-to-usb.html">Back up Galaxy XCover photos to a USB drive (no computer)</a> — the rugged-phone guide for Samsung's XCover line.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
