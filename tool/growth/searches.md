@@ -7878,6 +7878,140 @@ demand is read off competitor install velocity instead (see
   tablets, SOL-PA501 Android 9.0/11 GMS, VIKING II
   Android 14).
 
+### 87. "back up RuggON photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a RuggON-specific
+  guide to backing up photos to a USB drive at all, let
+  alone a RuggON-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer Android photos to a USB flash drive by OTG
+  adaptor and file manager, by PC drag-and-drop, by
+  Google Drive, or by AirDroid. A generic Android guide —
+  it says nothing about RuggON, or about a tablet at
+  all);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — a forum thread about moving photos to a USB drive:
+  use an OTG adapter to plug in a thumb drive and it
+  should show as external storage in the file manager,
+  then move files from there. A generic Android thread —
+  it says nothing about RuggON, or about a tablet at
+  all);
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any
+  modern Android phone to a USB drive is a USB On-The-Go
+  (OTG) connection and the phone's built-in file manager:
+  connect the drive with an OTG adapter, open the file
+  manager, find DCIM/Camera, and Move or Copy to the drive.
+  A generic Android video guide — it says nothing about
+  RuggON, or about a tablet at all);
+  pixoneye.com, "How to Transfer Photos from Your Phone
+  to an USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage, open
+  the files from the destination, make an independent
+  backup before deleting anything; on Android, connect
+  the drive with the matching connector or OTG adapter,
+  open Files by Google or the phone's file manager, find
+  DCIM/Camera, select a small batch and choose Copy to.
+  A generic Android and iPhone guide — it says nothing
+  about RuggON, or about a rugged tablet);
+  cellularnews.com, "How to Move Pictures to a Flash Drive
+  From a Google Phone"
+  (cellularnews.com/device-reviews-and-comparisons/smartphones/how-to-move-pictures-to-a-flash-drive-from-google-phone/
+  — connect a USB storage device using an OTG adapter and
+  copy or move the photos using the Files app; you need a
+  USB OTG adapter, a flash drive formatted in FAT32, and
+  the Files by Google or built-in Files app. A Google
+  phone guide — it says nothing about RuggON, or about a
+  rugged tablet);
+  epictechtips.com, "How to Transfer Pictures from Android
+  Phone to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive into your Android device, tap the
+  USB charging notification and select "Transfer photos",
+  then use the file manager to Move photos to the drive.
+  A generic Android guide — it says nothing about RuggON,
+  or about a tablet at all).
+  A second search ("RuggON SOL-PA501 Android tablet specs
+  OTG USB") returned the SOL-PA501 datasheet (10.1-inch,
+  Snapdragon 660, Android 9.0 with GMS, IP65, USB 3.1
+  Type-C x 1, USB 2.0 Type-A x 2, microSD slot, 32GB eMMC),
+  the SOL PA501 review (Android 9 Pie, two USB 2.0 Type A
+  ports, USB 3.1 Type-C, micro-SD, RuggOTA), the
+  MyGadgetStreet review (Android 12, 13MP rear with LED
+  flash, 8MP front, 32/64GB eMMC, 3/4GB RAM, USB-C 3.1,
+  USB-A 2.0, DashON pre-installed), the Metromatics spec
+  sheet (Android 9.0 GMS, microSD SDXC/SDHC, 4500mAh
+  hot-swappable), and the PA-501 datasheet (Android 4.2,
+  TI dual-core, micro USB) — no RuggON-specific backup
+  guide. A third search ("RuggON VIKING II rugged Android
+  tablet specs") returned the VIKING II review (Android 14
+  in-vehicle computer, 7-inch, USB Type-A 2.0 and microSD
+  on the left side, USB 3.1 Type-C on the back, 9-36 VDC
+  vehicle power), the VIKING II spec sheet (Snapdragon
+  6490, 8GB RAM, 128GB UFS, Android 14 GMS, 7-inch 1024 x
+  600, IP65 except bottom side I/O), the January 14, 2025
+  launch announcement (Android 14, GMS, 5G, SATCOM), and
+  unrelated Ulefone RugKing Pad 2 Pro listings (Android 16,
+  a different brand) — no RuggON-specific backup guide.
+  A fourth search ("RuggON rugged Android tablets list SOL
+  VIKING") returned the PA-301 (Android 4.0), the SOL 7
+  success story (Intel Core Ultra, Windows — not Android),
+  the VIKING II review, the PM-521 (Android 4.4 by
+  request), the SOL-PA501 datasheet, and the original
+  VIKING MT7030 review (Android 9.0 GMS, Snapdragon 660,
+  7-inch 1024x600, announced March 2020) — no
+  RuggON-specific backup guide. A fifth search ("VaultDrive
+  photo backup USB Pro price $19.99 Photos to USB OTG
+  Backup app") re-verified the rivals this run: VaultDrive
+  (free up to 200 files or 2 GB per backup, Pro $19.99
+  once, Android 8 or later per its own site), Photos to USB:
+  OTG Backup (free with ads, one-time purchase removes the
+  ads). A sixth search ("Google Photos Storage saver
+  compresses photos Google Drive 15 GB free storage")
+  returned that Google Photos' Storage saver compresses
+  photos to a maximum of 16 megapixels and videos to 1080p,
+  and that since May 2026 Google accounts get 5 GB free by
+  default, with the full 15 GB available only after
+  verifying a phone number on the account.
+  RuggON specifics: no RuggON-specific guide to backing up
+  photos to a USB drive turned up at all — not one top
+  result even mentions RuggON; no source found labels any
+  RuggON USB port OTG — the datasheets say only
+  "USB 3.1 Type-C" or "USB 2.0 Type-A" — so on all three
+  covered models the drive mounting is the test; the
+  SOL-PA501 runs Android 9.0 with GMS at launch in its 2019
+  datasheets and Android 12 in a later review, the original
+  VIKING runs Android 9.0 GMS, and the VIKING II runs
+  Android 14 GMS, so all three clear SnapDisk's Android 7.0
+  minimum; the SOL-PA501 carries a 13 MP rear camera with
+  LED flash and an 8 MP front camera, and no source found
+  states a camera for the VIKING II or the original VIKING;
+  the SOL-PA501 and the VIKING II take microSD, but no source
+  found states a microSD capacity for either; all three
+  covered models ship Google Mobile Services, so the Play
+  Store is present on all of them; the PA-501, the PA-301
+  and the PM-521 run Android 4.0 to 4.4, below the minimum,
+  so they cannot run SnapDisk at all, and the SOL 7 runs
+  Windows, not Android; "RuggON" collides with RugGear and
+  Ulefone's RugKing Pad, different brands; RuggON has no
+  tablet-to-USB photo backup tool of its own; DashON is
+  device management, not a photo copy; no source found names
+  the stock file manager on a RuggON device.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-120, 88th how-to):
+  docs/ruggon-photos-to-usb.html.
+  Fallback for WL-121: MobileDemand — no MobileDemand article
+  exists in docs/ yet and no searches.md row (rugged Android
+  tablets, Forge X11 Android 16, Forge L5).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
