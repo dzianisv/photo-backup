@@ -8732,6 +8732,98 @@ demand is read off competitor install velocity instead (see
   phones: 50 Saphir, Android 6.0, IP68, USB OTG listed,
   13 MP rear camera, microSD up to 128 GB).
 
+### 94. "back up Archos photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Archos-specific
+  guide to backing up photos to a USB drive at all, let
+  alone an Archos-specific automated whole-library backup
+  with progress, Pause/Stop, and resume — and the rugged
+  phone most people mean by "Archos" cannot run a current
+  backup app at all.
+- Current top results (scored Nov 19, 2026, live web search):
+  manualsdir.com, "ARCHOS AV 700 User Manual"
+  (manualsdir.com/manuals/36352/archos-av-700.html?page=30
+  — the manual for the ARCHOS AV 700 media player: its USB
+  host port, with the USB host adapter cable, connects USB
+  Mass Storage Class devices to the AV 700 and transfers
+  files from that device to the AV 700 — plug a camera
+  straight into the AV 700's USB host port and copy photos
+  with the ARCHOS browser, or use a USB card reader, or
+  copy photos to a computer first. A media-player manual —
+  the direction is INTO the device, and it says nothing
+  about an Archos phone);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — connect a USB-C OTG adapter from the phone to the flash
+  drive and copy files with the file manager, use a PC as a
+  middleman in File Transfer mode, download wirelessly
+  through Google Drive or AirDroid, or bulk-export with
+  Dr.Fone software. A generic Android guide — it says
+  nothing about Archos);
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI
+  — the best and most direct method for moving photos and
+  videos from any modern Android phone to a USB drive is a
+  USB On-The-Go connection and the phone's built-in file
+  manager; it needs Android 7.0 or newer. A generic video
+  guide — it says nothing about Archos);
+  docslib.org, "ARCHOS 70 Internet Tablet"
+  (docslib.org/download/10415364/archos-70-internet-tablet
+  — the ARCHOS 70 internet tablet doc: directly transfer
+  your media to your Archos with the USB host, for example
+  from an external hard drive disk or a digital camera,
+  thus bypassing your computer. A tablet doc — the
+  direction is INTO the tablet, and it says nothing about
+  an Archos phone);
+  connect.gmb.org.uk, "How to Transfer Pictures from
+  Android to Flash Drive: A Simple Guide"
+  (connect.gmb.org.uk/how-to-transfer-pictures-from-android-to-flash-drive/
+  — a generic thumb-drive guide: transfer pictures to a
+  thumb drive for backup and archiving, free up phone
+  storage, and keep photos accessible without internet;
+  USB-C drives plug straight into newer Android phones,
+  older Android devices use micro-USB drives, and USB-A
+  drives need an adapter. A generic phone guide — it says
+  nothing about Archos).
+- Three Archos phones clear SnapDisk's Android 7.0 minimum
+  — the Saphir 50X, the 50 Graphite and the 55 Graphite
+  all run Android 7.0 — and all three list USB OTG, so the
+  one-tap route exists on those three; the 50 Saphir runs
+  Android 6.0, below the minimum, and no Android 7.0 update
+  was ever announced, so it cannot run SnapDisk at all, and
+  neither can VaultDrive, which needs Android 8 or later per
+  its own site (AppBrain lists 12.1 or later); OTG is
+  confirmed on all four covered phones — Notebookcheck
+  confirms the 50 Saphir's micro-USB 2.0 port hosts drives —
+  but the Graphites' connector is disputed (microUSB 2.0 per
+  eIMEI24, Type-C per MobileGizmo and the launch coverage);
+  the 101 Saphir tablet's OTG is disputed (gadgets360 No,
+  gadgetsnow Yes); newer does not mean OTG — the Oxygen 63
+  (Android 9.0) lists only Charging and Mass storage, and the
+  Access 50S (Android 8.1 Go) lists USB OTG No; the 50 Saphir
+  carries a 13 MP rear camera and a 5 MP front camera, the
+  Saphir 50X a 13 MP rear camera and a 5 MP front camera, and
+  the 50 Graphite and the 55 Graphite a 13 MP + 2 MP dual rear
+  camera and a 5 MP front camera; all five covered models take
+  microSD up to 128 GB per most sources (one source says 64 GB
+  for the 50X); Archos has no phone-to-USB backup tool of its
+  own; no source found names the stock file manager on an
+  Archos phone; the 50 Saphir's price is €199 at launch and
+  €230 for Notebookcheck's test model, and its IP68 depth is
+  1 m for 30 minutes per Notebookcheck and Android Headlines
+  and 1.5 m per accio; the 50X's processor is 1.3 GHz per
+  eIMEI24 and 1.5 GHz per MobileGizmo; the 55 Graphite's screen
+  is 720x1280 per gadgets360 and Full HD 1920x1080 per the
+  launch coverage; the 50 Graphite's battery is 2400 mAh per
+  the launch coverage and 3000 mAh per gadgets360.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-127, 95th how-to):
+  docs/archos-photos-to-usb.html.
+  Fallback for WL-128: Sigma Mobile — no Sigma Mobile
+  article exists in docs/ yet and no searches.md row.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
