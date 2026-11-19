@@ -6457,10 +6457,155 @@ demand is read off competitor install velocity instead (see
   docs/opticon-photos-to-usb.html.
   NOTE: queries 59–70 (WL-91–WL-102) backfilled Nov 18, 2026
   (WL-106) from fresh live re-searches — rows 59–70 scored above.
-  Fallback for WL-105: Janam — no Janam article exists in
-  docs/ yet (XT3 Android 9 or 11 rugged touch computer, 13MP
-  camera, IP67, AER certified; XT2/XT2+ run Android 6, below
-  the minimum).
+### 73. "back up Janam photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Janam-specific
+  guide at all, let alone a Janam-specific automated
+  whole-library backup with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 18, 2026, live web search):
+  Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a rival app, not a guide: back
+  up every photo and video on your phone to a USB pen drive
+  with one tap, no internet, no cloud, no account; free with
+  ads, a one-time purchase removes the ads — and it says
+  nothing about a Janam handheld); therealgadgets.com,
+  "Holiday Photo Backup: Simple Ways To Keep Your Shots Safe"
+  (therealgadgets.com/holiday-photo-backup-dont-lose-your-shots/
+  — keep two copies in different places; copy each evening to
+  a laptop or portable SSD, or let the phone upload to cloud
+  storage overnight; many phones can copy photos to a USB-C
+  flash drive through a file manager app. A holiday travel
+  guide, not a phone guide — and it says nothing about a
+  Janam handheld); Dr.Fone, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — connect a USB-C OTG adapter from the phone to the flash
+  drive and copy files with the file manager, no computer or
+  internet; or drag and drop through a PC, or go wireless
+  through Google Drive or AirDroid. Generic Android, and a
+  manual guide — and it says nothing about a Janam handheld);
+  pixoneye.com, "How to Transfer Photos from Your Phone to a
+  USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a compatible USB drive with a
+  file manager on Android, or export through Photos and Files
+  on iPhone; use a computer when direct connection is
+  unreliable. Generic Android and iPhone, and a manual guide
+  — and it warns that a connector fitting physically does not
+  prove the phone can read or write the drive, which is
+  exactly the Janam question); YouTube, "How to Connect USB
+  Drive to Android Phone to Move Photos & Videos (Best
+  Method)" (youtube.com/watch?v=PYcbV25CczI — OTG adapter +
+  the phone's built-in file manager, no computer or internet.
+  Generic Android, and a manual guide — and it says nothing
+  about a Janam handheld). Google Photos is cloud, not
+  USB. Janam specifics: no Janam-specific file advice
+  pointing at a USB drive turned up at all; OTG/host support
+  is confirmed in the spec listings on only one of the two
+  Android models that can run SnapDisk (the XT3 lists
+  "USB 3.0 OTG" in its interface with a USB Type-C port); no
+  source found confirms OTG or host support on the HT1, so
+  the drive mounting is the test; the XT3 runs Android 9 or
+  11 and the HT1 runs Android 9 — every Android model that
+  can run SnapDisk clears SnapDisk's Android 7.0 minimum —
+  while the XT2 runs Android 5.x, the XT2+ runs Android 6,
+  and the XT1 runs Android 4.2.2, so none of them can run
+  SnapDisk at all, and the XT2 also shipped in a Windows 10
+  IoT Mobile Enterprise version; the XT3's front camera
+  differs by source (Janam's current datasheet 5 MP, the
+  2019 datasheet 8 MP; rear camera 13 MP in both). Janam
+  has no phone-to-USB backup tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-105, 74th how-to):
+  docs/janam-photos-to-usb.html.
+
+### 74. "back up Gigaset photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Gigaset-specific
+  guide at all, let alone a Gigaset-specific automated
+  whole-library backup with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 18, 2026, live web search):
+  pixoneye.com, "How to Transfer Photos from Your Phone to a
+  USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a compatible USB drive with a
+  file manager on Android, or export through Photos and Files
+  on iPhone; use a computer when direct connection is
+  unreliable. Generic Android and iPhone, and a manual guide
+  — and it warns that a connector fitting physically does not
+  prove the phone can read or write the drive, which is
+  exactly the Gigaset question); curiousbluenoser.substack.com,
+  "saving Photos for necessary updates"
+  (curiousbluenoser.substack.com/p/saving-photos-for-necessary-updates
+  — a picture-keeper flash drive plugs into the phone's
+  charging port and its free app copies all photos and videos
+  onto the stick. A drive-locked backup-stick guide, not a
+  phone guide — and it says nothing about a Gigaset phone,
+  and it only works with that maker's own drive); YouTube,
+  "How to Connect USB Drive to Android Phone to Move Photos &
+  Videos (Best Method)" (youtube.com/watch?v=PYcbV25CczI —
+  OTG adapter + the phone's built-in file manager, no
+  computer or internet. Generic Android, and a manual guide
+  — and it says nothing about a Gigaset phone);
+  thegadgetians.com, "How to Transfer Files From Phone to USB
+  Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — connect a USB drive to an Android phone with an OTG
+  adapter, open the file manager, select and copy files,
+  then paste onto the USB drive. Generic Android and iPhone,
+  and a manual guide — and it says nothing about a Gigaset
+  phone); alibaba.com, "How To Quickly Backup Your Phone
+  Photos Without Using Cloud Storage"
+  (alibaba.com/product-insights/how-to-quickly-backup-your-phone-photos-without-using-cloud-storage.html
+  — transfer via a USB cable and a computer, or plug a
+  portable SSD or flash drive into the phone with OTG support
+  and copy with the file manager. Generic Android and iPhone,
+  and a manual guide — and it says nothing about a Gigaset
+  phone); Google Photos Community, "How do I back up photos
+  to a plug in drive"
+  (support.google.com/photos/thread/443333707/how-do-i-back-up-photos-to-a-plug-in-drive
+  — download photos from Google Photos cloud storage to the
+  Android phone, then move them to USB with the Files by
+  Google manager. A cloud-download-then-copy thread, not a
+  phone-to-USB guide — and it says nothing about a Gigaset
+  phone). Google Photos is cloud, not USB. Gigaset
+  specifics: no Gigaset-specific file advice pointing at a
+  USB drive turned up at all; OTG/host support is confirmed
+  in the spec listings on only seven of the fifteen Android
+  models that can run SnapDisk (the GS5, the GS290, the GX6
+  Pro, the GX4, the GX4 Pro, the GX30 and the GX50 all list
+  OTG, the first five with a USB Type-C port confirmed); no
+  source found confirms OTG or host support on the other
+  eight (the GS4, the GS3, the GS190, the GS185, the GS180,
+  the GS110, the GX6 and the GX290), so the drive mounting
+  is the test; the GS5 runs Android 11, the GS4 and the GS3
+  run Android 10, the GS290 runs Android 10, the GS190 runs
+  Android 9, the GS185 and the GS180 run Android 8.1, the
+  GS110 runs Android 9.0 Go Edition, the GX6 and the GX6 Pro
+  run Android 12, the GX4 runs Android 12, the GX4 Pro runs
+  Android 13, and the GX290 runs Android 10 — every model
+  listed clears SnapDisk's Android 7.0 minimum except the
+  GS160, which runs Android 6.0 and cannot run SnapDisk at
+  all; no source found states the Android version on the GX30
+  or the GX50, and no source found states the connector type
+  on the GS3, the GS190, the GS185 or the GS180 at all; the
+  GS290 is Android 10 in most sources and 9.0 in one retailer
+  listing, the GX290 is Android 10 in its manual text and 9.0
+  in its spec table, and the GS185 and the GS180 are Android
+  8.1 in the Notebookcheck reviews and 8.0 in one spec
+  aggregator — all clear the minimum either way; the GS190
+  has a sharper dispute (one aggregator lists Android 5.1
+  with a different chipset, against Gigaset's own press
+  release saying Android 9 with the Helio A22); the GS195
+  turned up by name only. Gigaset has no phone-to-USB
+  backup tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-107, 75th how-to):
+  docs/gigaset-photos-to-usb.html.
+  Fallback for WL-108: M3 Mobile — no M3 Mobile article
+  exists in docs/ yet and no searches.md row (UL20 rugged
+  enterprise handheld: Android 8.1/9.0/10 GMS, 16 MP camera,
+  IP67, 5-inch FHD; UL20X/UL20F/UL20W variants).
 
 ## Winners and what changed
 
