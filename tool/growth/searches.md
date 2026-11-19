@@ -10239,6 +10239,144 @@ demand is read off competitor install velocity instead (see
   in docs/ yet and no searches.md row (Elephone, the Chinese
   phone brand; P and U series).
 
+### 107. "back up Elephone photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Elephone-specific guide
+  to backing up photos to a USB drive at all, let alone an
+  Elephone-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and seven covered Elephone
+  phones run Android 6.0 or older, so SnapDisk does not
+  install on them at all.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  ubackup.com, "Transfer Photos from iPhone to Memory Stick
+  Without Computer"
+  (ubackup.com/phone-backup/transfer-photos-from-iphone-to-memory-stick-without-computer.html
+  — transfer iPhone photos to a memory stick without a
+  computer using a Lightning to USB adapter, then export
+  unmodified originals from the Photos app. An iPhone guide —
+  it says nothing about Elephone);
+  dblabsapps.com, "Save iPhone Photos to USB Drive (Any Type)"
+  (dblabsapps.com/blog/iphone-photos-to-usb-drive/ — transfer
+  iPhone photos directly to a USB flash drive or external hard
+  drive with no computer and no cloud; iPhone 15 and later plug
+  a USB-C drive straight in, older iPhones need a Lightning to
+  USB adapter. An iPhone guide — it says nothing about
+  Elephone);
+  youtube.com, "How To Move Photos From iPhone To USB Flash
+  Drive (No Computer)"
+  (youtube.com/watch?v=vHzpHTZ9szk — move iPhone photos
+  straight onto a USB flash drive with no computer in between,
+  using the Photos app and the Files app. An iPhone video guide
+  — it says nothing about Elephone);
+  sandisk.com, "How to Back Up Your iPhone to USB Flash Drive"
+  (sandisk.com/solutions/backups/how-to-transfer-photos-from-iphone-to-usb
+  — back up iPhone pictures to a USB drive with the SanDisk
+  app, on USB-C iPhones or Lightning iPhones with a dual-port
+  drive. An iPhone guide — it says nothing about Elephone);
+  umatechnology.org, "How To Move Photos From iPhone To USB
+  Flash Drive (No Computer) - Full Guide"
+  (umatechnology.org/how-to-move-photos-from-iphone-to-usb-flash-drive-no-computer-full-guide/
+  — move iPhone photos to a USB flash drive without a computer
+  using a Lightning to USB adapter and the Files app. An iPhone
+  guide — it says nothing about Elephone).
+  The first Android result sits sixth — drfone.wondershare.com,
+  "4 Practical Ways to Transfer Photos from Android to USB Flash
+  Drive", a generic Android guide that says nothing about
+  Elephone.
+- The one-tap route exists on four phones only — the U Pro, P11,
+  P11 3D and U2 clear Android 7.0 and list USB OTG; two more
+  clear Android 7.0 but their OTG is half-stated — the U
+  (techreviewer says the USB-C socket has OTG support, wemobiles
+  lists OTG support as Not Available) and the P8 3D
+  (phonecorridor lists micro-USB v2.0 with USB OTG, naijatechguide
+  lists only MicroUSB 2.0) — and two more clear Android 7.0 but
+  no source states OTG for them at all — the P8 and P8 Max
+  (phonesdata lists only USB Yes for both, gizmochina lists only
+  micro USB v2.0 with charging and mass storage for the P8 Max,
+  and the OTG Yes listings on findpare and phonesdata belong to
+  the 2014 P8) — so on those four SnapDisk installs but the
+  one-tap route is unproven until a drive mounts; seven run below
+  Android 7.0 and cannot run SnapDisk at all — the P3000S and
+  P6000 on 4.4, the P7000 on 4.4 or 5.0, the P8000 on 5.0 or 5.1,
+  and the P9000, P9000 Lite and P20 on 6.0. Eight take USB
+  Type-C, so a USB-C drive plugs straight into those eight; the
+  other seven take micro-USB. Fourteen take a microSD card, so
+  the card-reader route works on fourteen of them; no source
+  states a card slot for the P20 at all.
+- Conflicts between sources, all named in the article: the
+  P3000S's chipset is two numbers — MT6592 per XDA, MT6752 per
+  findpare — and its RAM is two numbers — 2 GB per XDA and
+  findpare, 3 GB per advertentiex; the P6000's Android is two
+  numbers — 4.4.4 per androidauthority and gizchina, 5.0 per
+  phonesdata, the promised over-the-air update; the P7000's
+  Android is two numbers — 4.4 KitKat upgradable to 5.0 per
+  ibtimes, 5.0 out of the box per phonearena; the P8000's Android
+  is two numbers — 5.0 per ibtimes, 5.1 per androidheadlines and
+  UL benchmarks — and its battery is two numbers — 4165 mAh per
+  ibtimes and androidheadlines, 4200 mAh per phonearena; the
+  P9000's Android is two numbers — 6.0 per most sources, 6.0 and
+  7.0 per devicesfaq — and its microSD ceiling is two numbers —
+  up to 256 GB per gizchina and techadvisor, up to 128 GB per
+  techbloat — and its rear camera is two numbers — a 21 MP camera
+  promised in the pre-launch announcement per gizchina, a 13 MP
+  Sony IMX258 in the shipped phone per gizchina's review; the
+  P9000 Lite's storage is two numbers — 32 GB in the shipped
+  phone, 16 GB in the pre-launch announcement per gizchina — and
+  its OTG failed in a hands-on test — an XDA reviewer could not
+  read OTG devices on the Lite with USB-C adapters; the P8's RAM
+  is two numbers — 6 GB per most sources, 4 GB per loginby, with
+  phonesdata listing both a 4 GB and a 6 GB model; the P8 3D's own
+  page contradicts itself — phonecorridor's key specs say Android
+  7.0, a 13 MP + 0.3 MP rear camera with a 16 MP front camera, a
+  4050 mAh battery, a 5.5-inch display and up to 128 GB, while
+  the full-spec table on the same page says Android 4.4.2 KitKat,
+  a 13 MP rear camera with a 5 MP front camera, a 2800 mAh
+  battery, a 5.75-inch display and up to 64 GB — the table is
+  copied from the 2014 P8, so the key specs are used and the
+  table is not; the P8 Max's battery is two numbers — 5000 mAh in
+  naijatechguide's text, 5060 mAh in its specs table; the P11's
+  Android is two numbers — 8.0 per most sources, 8.1 per
+  unite4buy — and its storage is two numbers — 128 GB per
+  naijatechgist and smartprix, 64 GB per unite4buy — and its
+  microSD ceiling is two numbers — up to 256 GB per naijatechgist
+  and philnews, up to 512 GB per smartprix — and its RAM is two
+  numbers — 4 GB per most sources, 3 GB in naijatechgist's
+  key-features list; the P11 3D's storage is two numbers — 64 GB
+  per phonecorridor, 128 GB per findpare — and its USB port is two
+  states — USB Type-C per phonecorridor, no USB Type-C per
+  findpare — and its rear camera is two numbers — 16 MP + 2 MP
+  per findpare, 13 MP + 2 MP in droidafrica's text against 16 MP +
+  2 MP in its own table; the U's Android is two numbers — 7.1 per
+  gizmochina, smartprix and philnews, 8.0 per wemobiles — and its
+  microSD ceiling is two numbers — up to 128 GB per gizmochina
+  and smartprix, up to 1 TB per phonearena; the U2's chipset is
+  two numbers — Helio P70 per smartprix, Helio P60 per wovow —
+  and its battery is two numbers — 3250 mAh per smartprix and
+  whatmobile, 4000 mAh per wovow — and its rear camera is two
+  numbers — 16 MP + 5 MP + 2 MP per smartprix, 12 MP + 5 MP + 5 MP
+  per wovow. A second, older phone also called Elephone P8 exists
+  — a 2014 phone on Android 4.1 with a MediaTek MT6592, whose OTG
+  Yes listings on findpare and phonesdata do not apply to the 2017
+  P8.
+- VaultDrive needs Android 8 or later per its own site, so
+  four of the fifteen can run it — the P11, P11 3D, U Pro and
+  U2 — and AppBrain lists 12.1 or later, which no covered
+  Elephone phone clears, since the newest covered model runs
+  Android 9. FotoSafe needs Android 9 or later, so two of the
+  fifteen clear it — the P11 3D and U2. Elephone has no
+  phone-to-USB backup tool of its own — no Elephone-specific
+  backup advice turned up in any source beyond a computer copy,
+  Google Drive, or Google Photos; the devicesfaq backup FAQ names
+  the computer copy as the most economical method, and names the
+  file manager on an Elephone phone as Files, or Files by Google.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-140, 108th how-to):
+  docs/elephone-photos-to-usb.html.
+  Fallback for WL-141: Hisense — no Hisense article exists
+  in docs/ yet and no searches.md row (Hisense, the Chinese
+  phone brand; C and A series).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
