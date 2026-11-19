@@ -1,10 +1,22 @@
 # SnapDisk — Work Log
 
-## WL-115 — Back up Ecom Smart-Ex photos to USB article, 83rd how-to (DRAFT — article PR open)
+## WL-115 — Back up Ecom Smart-Ex photos to USB article, 83rd how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: DRAFT — article PR #198 open
-  (head f751b0b), supervisor merges after readback. CI run
-  44509521535 success on the article commit (build pass).
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #198 MERGED (merge 395c631, 2026-11-19T10:57:03Z, CI run
+  44510065373 success on rebased head 234d16f); post-merge main runs
+  Android PR 44510352490 success + pages 44510351709 success. Live
+  fetch: ecom-smart-ex-photos-to-usb.html 200 (correct title, fresh
+  crawl 10:58 UTC), feed.xml 83 items incl. Ecom. Query 82 re-scored
+  by supervisor from a fresh live re-search: same 5 results as the
+  lead (YouTube, Android Central forum, pixoneye, alibaba, drfone) —
+  all generic, none mentions Ecom Smart-Ex; verdict stands. Rebase
+  note: PR #198 was CONFLICTING after WL-114 row PR #197 merged;
+  supervisor rebased wl-115-ecom onto 162fc83, resolved the
+  WORKLOG.md conflict (WL-115 row on top, WL-114 DONE row intact —
+  including removing a stale duplicate WL-114 DRAFT header left by
+  the rebase), force-pushed with lease; new head 234d16f, CI
+  44510065373 success.
   New docs/ecom-smart-ex-photos-to-usb.html ("Back up
   Ecom Smart-Ex photos to a USB drive (no computer)"),
   following the WL-54–WL-114 article template exactly
