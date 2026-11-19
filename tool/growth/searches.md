@@ -9493,6 +9493,120 @@ demand is read off competitor install velocity instead (see
   in docs/ yet and no searches.md row (Micromax, the Indian
   budget Android phone brand; Canvas series).
 
+### 101. "back up Micromax photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Micromax-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Micromax-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and one covered Micromax
+  phone lists OTG No, so the phone route does not exist on it
+  at all.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  youtube.com, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any modern
+  Android phone to a USB drive is a USB On-The-Go (OTG)
+  connection and the phone's built-in file manager; it needs
+  Android 7.0 or newer, a USB flash drive, and an OTG
+  adapter or a dual USB-C/USB-A drive; copy DCIM/Camera in
+  the file manager. A generic Android video guide — it says
+  nothing about Micromax);
+  play.google.com, "Photos to USB: OTG Backup"
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — back up every photo and video on your phone to a USB pen
+  drive with one tap; a USB-C drive goes straight in, an
+  older one needs an OTG adapter; no internet, no cloud, no
+  account. A real phone-to-USB app — but a generic Android
+  listing, not a Micromax guide; it works with a USB-C drive
+  straight in only on the four IN phones, since the five
+  Canvas models take micro-USB);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — a forum thread asking whether the adapter that came with
+  the phone moves photos onto a USB drive; the answer is to
+  use an OTG adapter and move files in the file manager. A
+  generic Android forum thread — it says nothing about
+  Micromax);
+  softhandtech.com, "Easy Guide: Transferring Pictures from
+  Your Phone to a Flash Drive"
+  (softhandtech.com/how-do-you-transfer-pictures-from-your-phone-to-a-flash-drive/
+  — connect the phone to a computer with a USB cable and copy
+  pictures to the flash drive, or use a phone-compatible flash
+  drive directly; check the phone supports USB OTG first. A
+  generic Android guide — it says nothing about Micromax);
+  thegadgetians.com, "How to Transfer Files From Phone to USB
+  Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — connect a USB drive to an Android phone with an OTG
+  adapter, open the file manager, select and copy files, then
+  paste onto the USB drive; not all Android phones support
+  OTG. A generic Android guide — it says nothing about
+  Micromax);
+  softhandtech.com, "Transfer Photos from Phone to Memory
+  Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — transfer photos to a memory stick with a computer as a
+  middleman, directly with OTG if the phone supports it, or
+  through cloud services. A generic Android guide — it says
+  nothing about Micromax).
+- Six of the nine covered Micromax phones clear SnapDisk's
+  Android 7.0 minimum and list USB OTG — the Canvas 1
+  (Android 7.0), the Canvas Infinity (Android 7.0 or 7.1),
+  the IN 1 (Android 10), the IN 1b (Android 10 Go edition),
+  the IN Note 1 (Android 10) and the IN 2b (Android 11) —
+  so the one-tap route exists on those six; all nine clear
+  Android 7.0, the oldest four running 7.0 exactly. One
+  phone lists OTG No — the Canvas 2 (2017), per gadgets360
+  and hardreset99 — so there is no phone route on it at all.
+  One phone's OTG is disputed — the Canvas 2 2018, where
+  bmobile's listing says Micro USB 2.0 with O-T-G function
+  support while findpare says USB OTG No. One phone's OTG
+  is unconfirmed — the Canvas 2 Plus (2018), where gadgets360
+  leaves the OTG line blank and smartprix lists only USB
+  charging. All nine take a microSD card, so the card-reader
+  route works on every one of them.
+- The Canvas 1's microSD ceiling is two numbers — up to
+  32 GB per gadgets360, indianexpress and gadgetsnow, up to
+  64 GB per gadgetguide4u and phoneradar. The Canvas
+  Infinity's Android version is three numbers — Android 7.0
+  at launch per gadgets360's launch report, Android 7.1.2 per
+  smartprix, Android 7.1 upgradeable to 8.0 per mobilegizmo
+  — and its battery is two numbers — 2900 mAh per gadgets360,
+  2980 mAh per smartprix, phonesdata and phonemore. The
+  Canvas 2 2018's Android version is two numbers — Android
+  7.0 per smartprix, Android 7.1 per bmobile. The IN Note 1's
+  microSD ceiling is two numbers — up to 256 GB in a dedicated
+  slot per mysmartprice, cashify and hindustantimes, up to
+  1 TB per techtoreview's summary — and the same techtoreview
+  page lists its card slot as No in one table and its OS as
+  Android 10 with FunTouch 10.5, which is Vivo's interface,
+  not Micromax's, so that page is not used as a source. The
+  IN Note 1's front camera is two numbers — 16 MP per
+  phonebunch, 5 MP per ubergizmo. Phonepik lists a second
+  Canvas 1 (released 15 June 2023, Android 14), a second
+  Canvas Infinity (released 15 June 2023, 6.67-inch display,
+  8 MP ultrawide) and a second IN 2b (Android 14, June 2023
+  launch) — none of the three listings is used as a source.
+  VaultDrive needs Android 8 or later per its own site, so
+  the five Canvas models on Android 7.0 or 7.1 cannot run it,
+  and AppBrain lists 12.1 or later, which no covered Micromax
+  phone clears, since the newest covered models run Android
+  11. Micromax has no phone-to-USB backup tool of its own —
+  no Micromax-specific backup advice turned up in any source
+  beyond a computer copy, Google Drive, or Google Photos; no
+  source found names the stock file manager on a Micromax
+  phone; Micromax Informatics was founded on 29 March 2000
+  in Gurgaon, Haryana, by Rahul Sharma and Rohit Patel per
+  Wikipedia, while other sources name four founders.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-134, 102nd how-to):
+  docs/micromax-photos-to-usb.html.
+  Fallback for WL-135: Karbonn — no Karbonn article exists
+  in docs/ yet and no searches.md row (Karbonn, the Indian
+  budget Android phone brand; Titanium series).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
