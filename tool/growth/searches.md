@@ -9968,6 +9968,146 @@ demand is read off competitor install velocity instead (see
   docs/ yet and no searches.md row (Gionee, the Chinese phone
   brand big in India; F, S and M series).
 
+### 105. "back up Gionee photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Gionee-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Gionee-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and eight covered Gionee
+  phones run Android 6.0 or older, so SnapDisk does not
+  install on them at all.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash
+  drive by connecting them directly with an OTG adaptor,
+  using a PC as a middleman via USB File Transfer mode, or
+  downloading them wirelessly through Google Drive or
+  AirDroid; for direct transfers without a computer, connect
+  a USB-C OTG adaptor from the phone to the flash drive and
+  copy files using the USB Drive option in the Android
+  notification tray. A generic Android guide — it says
+  nothing about Gionee);
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any modern
+  Android phone to a USB drive is a USB On-The-Go (OTG)
+  connection and the phone's built-in file manager; it needs
+  Android 7.0 or newer, a USB flash drive, and an OTG adapter
+  or a dual USB-C/USB-A drive; copy DCIM/Camera in the file
+  manager. A generic Android video guide — it says nothing
+  about Gionee);
+  epictechtips.com, "How to Transfer Pictures from Android
+  Phone to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive into your Android device, tap the
+  USB charging notification and select "Transfer photos", or
+  use a PC as an intermediary; before you begin, confirm that
+  your Android phone supports USB OTG. A generic Android
+  guide — it says nothing about Gionee);
+  softhandtech.com, "Transfer Photos from Phone to Memory
+  Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — transfer photos to a memory stick using a computer, by
+  direct transfer with OTG support if the device supports it,
+  or through cloud services; for direct transfer, confirm the
+  smartphone is OTG compatible, get an OTG adapter, and
+  connect the memory stick directly to the smartphone. A
+  generic phone guide — it says nothing about Gionee);
+  youtube.com, "How to Transfer Photos, Videos and any Files
+  from Android Phone to USB Pendrive (USB Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — move photos, videos and
+  other files from an Android phone to a USB flash drive by
+  connecting the drive via a USB OTG adapter and using the
+  phone's built-in file manager; first verify OTG
+  compatibility, then plug the OTG adapter in, open the file
+  manager, and copy or move the files to the drive. A generic
+  Android video guide — it says nothing about Gionee).
+- The one-tap route exists on five phones only — the F205
+  Pro, F6, S10, S11 and M7 all clear Android 7.0 and list
+  USB OTG; one more clears Android 7.0 but its OTG is
+  half-stated — the F205 (gadgets360 lists USB OTG,
+  gadgetsnow and smartprix leave the line blank) — so on it
+  SnapDisk installs but the one-tap route is unproven until
+  a drive mounts; eight run below Android 7.0 and cannot run
+  SnapDisk at all — the F103 Pro, S6 Pro, S8 and M6 on 6.0,
+  the F103 on 5.0, the S6 and M5 on 5.1, and the M2 on 4.2.
+  The S6 and S6 Pro take USB Type-C, so a USB-C drive plugs
+  straight into those two; the other twelve take micro-USB.
+  Thirteen take a microSD card, so the card-reader route
+  works on thirteen of them; the S8's slot is disputed —
+  gadgets360 lists expandable storage No, smartprix,
+  phonearena, lowyat and naijatechguide say it takes one.
+- The F205's microSD ceiling is two numbers — up to 128 GB
+  per gadgetsnow, up to 256 GB per gadgets360 and
+  phonearena — and its Android is two numbers — 7.1 per
+  gadgets360, 7.1.1 per gadgetsnow. The F103's Android is two
+  numbers — 5.0 per smartprix and gadgets360, 5.1 per
+  phonebunch — and it comes in 1 GB, 2 GB and 3 GB RAM
+  variants. The F103 Pro's OTG is half-stated — gizbot's
+  launch report says it supports USB OTG, gadgetsnow leaves
+  the line blank — though the dispute changes nothing, since
+  the F103 Pro runs Android 6.0. The S6's OTG is half-stated
+  — phonemore lists USB OTG On-The-Go, phonebunch leaves the
+  OTG line blank — though the dispute changes nothing, since
+  the S6 runs Android 5.1.1. The S6 Pro's OTG is disputed —
+  gadgets360, smartprix and gadgetstouse list USB OTG Yes,
+  but a gadgets360 user comment says "there no OTG" — and
+  its front camera is two numbers — 5 MP per smartprix's
+  article body, 8 MP per smartprix's description — though the
+  disputes change nothing, since the S6 Pro runs Android 6.0.
+  The S8's OTG is disputed — gadgets360 lists USB OTG No,
+  phonebunch lists OTG Supported and smartprix lists USB
+  on-the-go — and its microSD slot is disputed too —
+  gadgets360 lists expandable storage No, smartprix,
+  phonearena, lowyat and naijatechguide say it takes one —
+  though the disputes change nothing for the backup, since
+  the S8 runs Android 6.0. The S10's RAM is two numbers —
+  6 GB per smartprix and androidheadlines, 4 GB per
+  phonesdata and the early TENAA listing — and its microSD
+  ceiling is two numbers — up to 256 GB per smartprix,
+  kenyaprice and phonesdata, up to 128 GB per
+  androidheadlines. The S11's battery is two numbers —
+  3600 mAh per gadgetsnow, cashify and 91mobiles, 3410 mAh
+  per smartprix and umatechnology — and its cameras are two
+  numbers each way — 16 MP + 8 MP rear per gadgetsnow and
+  cashify, 16 MP + 5 MP rear per umatechnology's retail S11
+  listing; 16 MP + 5 MP front per gadgetsnow, 16 MP + 8 MP
+  front per umatechnology — because several listing sites
+  attach the bigger S11S's specs to the S11. The M5's storage
+  is two listings — 32 GB per gadgets360 and gsmarena, 16 GB
+  per phonebunch, with mobilegizmo listing both a 16 GB and a
+  32 GB option — and its microSD ceiling is three numbers —
+  up to 128 GB per gadgets360, up to 256 GB per
+  gsmarena.com.bd, up to 64 GB per phonebunch and
+  mobilegizmo. The M6's OTG is disputed — gadgets360 lists
+  USB OTG No, ubergizmo lists USB OTG — and its microSD
+  ceiling is two numbers — up to 128 GB per gadgets360, up to
+  256 GB per ubergizmo — and its storage is two listings —
+  64 GB per gadgets360, a 128 GB option per ubergizmo —
+  though the disputes change nothing, since the M6 runs
+  Android 6.0. The M7's Android is two numbers — 7.1.1 per
+  gadgets360, 7.1 per smartprix — either way it clears 7.0.
+  VaultDrive needs Android 8 or later per its own site, so
+  only the F205 Pro can run it — and AppBrain lists 12.1 or
+  later, which no covered Gionee phone clears, since the
+  newest covered model runs Android 8.1. FotoSafe needs
+  Android 9 or later, so no covered Gionee phone clears it
+  either. Gionee has no phone-to-USB backup tool of its own —
+  no Gionee-specific backup advice turned up in any source
+  beyond a computer copy, Google Drive, or Google Photos; no
+  source found names the stock file manager on a Gionee
+  phone.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-138, 106th how-to):
+  docs/gionee-photos-to-usb.html.
+  Fallback for WL-139: Coolpad — no Coolpad article exists in
+  docs/ yet and no searches.md row (Coolpad, the Chinese phone
+  brand; Note and Mega series).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
