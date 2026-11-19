@@ -1,5 +1,92 @@
 # SnapDisk — Work Log
 
+## WL-111 — Back up Juniper Systems photos to USB article, 79th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/juniper-systems-photos-to-usb.html ("Back up
+  Juniper Systems photos to a USB drive (no computer)"),
+  following the WL-54–WL-110 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 45 chars,
+  meta description 158 chars, JSON-LD validated by parse;
+  sitemap and feed XML parse. Feed now counts 79 items; blog
+  JSON-LD counts 79 BlogPosting entries. Article PR #189
+  (merge d16aaa6, CI run 44488291558 success); post-merge
+  main runs Android PR 44488715077 success + pages
+  44488714497 success. Live fetch: juniper-systems-photos-
+  to-usb.html 200 (correct title, fresh crawl 08:36 UTC),
+  feed.xml 79 items incl. Juniper, sitemap 200.
+  searches.md Query 78 row present ("back up Juniper
+  Systems photos to USB drive without computer" — HOW-TO
+  GAP).
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (backup/PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (backup/ProPrefs.FREE_BACKUP_BYTES_LIMIT = 5 GiB); Pro
+  $9.99 one-time = auto-backup on connect + unlimited size
+  (strings.xml pro_price, pro_unlocked); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB
+  skipped with reason (util/FilesystemInfo.FAT32_MAX_FILE_BYTES);
+  raw byte-stream copy (backup/BackupEngine.copyWithResume —
+  no decode/re-encode) with size verification after copy.
+  ApplicationId unchanged (dev.dzianisv.snapdisk,
+  app/build.gradle.kts); app tree untouched vs main.
+  Search evidence (Nov 19, 2026 live web search): Query 78
+  is a real gap — no Juniper-specific phone-to-USB guide
+  in the top results at all; not one result even mentions
+  Juniper Systems. thecomputerbasics.com, "Transfer Files
+  Without a Computer" (generic Android + iPhone manual
+  guide, says nothing about a Juniper device);
+  techwalla.com, "How to Move Pictures from Camera to Flash
+  Drive With No Computer" (2008, written for digital
+  cameras, not phones, says nothing about a Juniper
+  device); Photos to USB: OTG Backup (Google Play — real
+  one-tap phone-to-USB app, generic Android listing, not a
+  Juniper guide); pixoneye.com, "How to Transfer Photos
+  from Your Phone to a USB Stick" (generic Android and
+  iPhone, manual guide, says nothing about a Juniper
+  device); thegadgetians.com, "How to Transfer Files From
+  Phone to USB Without Computer" (generic Android and
+  iPhone, manual guide, says nothing about a Juniper
+  device); petapixel.com, "No Laptop? No Problem: How to
+  Back Up Photos in the Field With Your Smartphone" (real
+  field backup with a hub + card reader + SSD, manual copy,
+  says nothing about a Juniper device).
+  Mesa 3, Archer 4 and Archer 3 covered (Juniper's own
+  datasheets + reseller listings, Nov 19): Mesa 3 Android —
+  Android 9.0 at launch (Juniper 2020 datasheet, UL
+  benchmarks) vs Android 11 GMS in the current reseller
+  spec, Snapdragon 660/Kryo 260, 6 GB/64 GB,
+  USB-C "USB 3.1 OTG no battery charging", 16 MP
+  rear + 2 MP front, microSDXC slot (capacity unstated);
+  Archer 4 — Android 14, upgradable through Android 18,
+  USB Type-C OTG (5 Gbps, power delivery, DisplayPort),
+  QCM4490, 8 GB/128 GB, microSDXC up to 512 GB, 48 MP rear
+  + 16 MP front; Archer 3 — Android 7.1 AOSP, full-size USB
+  host port (Full A) + USB client (Micro B), 5 MP camera
+  (optional), 12,000 mAh, no Google Mobile Services / no
+  Play Store (Juniper owner's manual — sideload only), no
+  preloaded file manager.
+  Honest limits recorded in the article: Archer 3 has no
+  Play Store (APK sideload only, per Juniper's own owner's
+  manual) and its 5 MP camera is optional; Mesa 3's OTG
+  port does not charge the battery; Mesa 3 Android version
+  differs by source (9.0 at launch vs 11 in current
+  reseller spec); no source names the stock file manager
+  or states a microSD capacity for the Mesa 3 or Archer 3;
+  Mesa 4 / Mesa 3 Windows / Mesa 2 / Archer 2 / original
+  Archer run Windows and cannot run SnapDisk; CP3 turned
+  up in a third-party listing only, not covered.
+  Article published Nov 19, 2026 (WL-111, 79th how-to):
+  docs/juniper-systems-photos-to-usb.html.
+  Fallback for WL-112: Trimble — no Trimble article exists
+  in docs/ yet and no searches.md row (TDC600/TDC650
+  rugged Android GNSS handhelds/tablets).
+
 ## WL-110 — Back up Winmate photos to USB article, 78th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
