@@ -1,5 +1,58 @@
 # SnapDisk — Work Log
 
+## WL-125 — Back up Bittium photos to USB article, 93rd how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #218 OPEN (head 3f223bd, CI run 44532670988
+  success, mergeable MERGEABLE); supervisor merges after
+  readback — no merge receipt yet. Query 92 verified by the
+  lead from live evidence (no top result mentions Bittium);
+  lead-verified by readback (feed 93 items incl. Bittium,
+  sitemap incl. URL, title correct, Query 92 row present,
+  only docs/ + tool/growth changed).
+  New docs/bittium-photos-to-usb.html ("Back up Bittium photos
+  to a USB drive (no computer)"), following the WL-54–WL-124
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot). Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml updated.
+  Title 37 chars, meta description 133 chars, JSON-LD
+  validated by parse; sitemap and feed XML parse. Feed now
+  counts 93 items; blog JSON-LD counts 93 BlogPosting entries.
+  searches.md Query 92 row present ("back up Bittium photos to
+  USB drive without computer" — HOW-TO GAP): top results are
+  four generic Android guides and one YouTube OTG guide,
+  none mentions Bittium. Bittium specifics verified live:
+  Tough Mobile 2 Android 9 at launch (Bittium's own page now
+  lists hardened Android 11), Snapdragon 670, 12 MP AF rear
+  + 5 MP front, 4 GB RAM, 64 GB storage, microSD up to
+  256 GB, 5.2-inch FHD sunlight-readable display, USB-C,
+  3,000 mAh, IP67, MIL-STD-810G, €1,550; Tough Mobile 2 C
+  same hardware, dual-boot Confidential + Personal, microSD
+  partitioned per side, over €2,000; Tough Mobile 3 Android
+  15 at launch (July 2026 data sheets list Android 16),
+  Dragonwing Q-6690 FP4, 12 GB/256 GB + microSD, USB-C 3.1
+  with OTG + Desktop Mode + DisplayPort, 50 MP rear, 5G,
+  4,500 mAh, announced Sep 8, 2025, deliveries scheduled
+  2026 (one source lists 2027); original Tough Mobile
+  Android 5.1, updated to 6.0 in 2017, below the minimum.
+  OTG confirmed only on the Tough Mobile 3 (Bittium data
+  sheet: "USB-C with OTG"); no source found states OTG for
+  the Tough Mobile 2 or the 2 C. Tough Mobile 2 sold with or
+  without Google services, so Play Store presence depends
+  on the variant; the Google-free variant has no Google
+  Photos or Drive at all; fleet device-management policy
+  may block sideloading. Bittium's own software is Secure
+  Suite (device management + encrypted communications),
+  not a photo backup; no source found names the stock file
+  manager on a Bittium device. VaultDrive floor note:
+  Android 8+ per its own site, which the Tough Mobile 2
+  and 3 both clear; AppBrain lists Android 12.1+, which
+  only the Tough Mobile 3 clears.
+  Fallback for WL-126: Casio — no Casio article exists in
+  docs/ yet and no searches.md row (rugged G'zOne phones:
+  Commando, Type-L).
+
 ## WL-124 — Back up Fujitsu photos to USB article, 92nd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
