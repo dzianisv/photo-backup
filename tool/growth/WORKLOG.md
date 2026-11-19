@@ -3,9 +3,8 @@
 ## WL-141 — Back up Hisense photos to USB article, 109th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #251 OPEN (head da5ec42, CI run 44631828631
-  success; merge receipt pending — the supervisor fills it
-  before merging).
+  Article PR #251 MERGED (head da5ec42, CI run 44631828631
+  success; merge commit 11c1689, merged 2026-11-19T22:53:42Z).
   Query 108 verified by the lead from live evidence (no top
   result is a Hisense-specific phone-to-USB photo-backup
   guide); top results are five generic Android guides (a
