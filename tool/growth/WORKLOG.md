@@ -1,5 +1,115 @@
 # SnapDisk — Work Log
 
+## WL-116 — Back up Bartec photos to USB article, 84th how-to (DRAFT — article PR open)
+
+- Owner: SEO/GEO lane lead. State: DRAFT — article PR #200 open
+  (head e700d43), supervisor merges after readback. CI run
+  44511075328 in progress on the article commit at row write
+  (build pass to be confirmed by supervisor readback).
+  New docs/bartec-photos-to-usb.html ("Back up
+  Bartec photos to a USB drive (no computer)"),
+  following the WL-54–WL-115 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 43 chars,
+  meta description 143 chars, JSON-LD validated by parse;
+  sitemap and feed XML parse. Feed now counts 84 items; blog
+  JSON-LD counts 84 BlogPosting entries.
+  searches.md Query 83 row present ("back up Bartec photos
+  to USB drive without computer" — HOW-TO GAP).
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (backup/PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (backup/ProPrefs.FREE_BACKUP_BYTES_LIMIT = 5 GiB); Pro
+  $9.99 one-time = auto-backup on connect + unlimited size
+  (strings.xml pro_price, pro_unlocked); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB
+  skipped with reason (util/FilesystemInfo.FAT32_MAX_FILE_BYTES);
+  raw byte-stream copy (backup/BackupEngine.copyWithResume —
+  no decode/re-encode, .part resume, size verification after
+  copy, retry once) with size verification after copy.
+  ApplicationId unchanged (dev.dzianisv.snapdisk,
+  app/build.gradle.kts, minSdk 24 = Android 7.0); app tree
+  untouched vs main (only docs/ + tool/growth/searches.md
+  changed).
+  Search evidence (Nov 19, 2026 live web search): Query 83
+  is a real gap — no top result is a Bartec-specific guide
+  to backing up photos to a USB drive without a computer at
+  all; not one top result even mentions Bartec.
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)" (generic Android
+  OTG + file manager video — says nothing about Bartec, or
+  about a magnetic USB connector);
+  fotosafe.weidisoft.net, "Back up Android photos to a USB
+  | FotoSafe" (generic Android guide from a rival app —
+  Android 9 or later with USB host/OTG support; says
+  nothing about Bartec, or about a magnetic USB connector);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive" (generic Android
+  guide — OTG adaptor + file manager, or PC, or Google
+  Drive/AirDroid; says nothing about Bartec, or about a
+  magnetic USB connector);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forum thread — generic OTG adapter + file manager; says
+  nothing about Bartec, or about a magnetic USB connector);
+  pixoneye.com, "How to Transfer Photos from Your Phone to
+  an USB Stick" (generic Android/iPhone guide — Files by
+  Google, DCIM/Camera, Copy to; says nothing about Bartec,
+  or about a magnetic USB connector);
+  play.google.com, "Photo Backup Stick DC" (app listing —
+  only works with genuine Photo Backup Stick OTG drives;
+  says nothing about Bartec);
+  play.google.com, "Photos to USB: OTG Backup" (app listing
+  — generic one-tap gallery copy, free with ads; says
+  nothing about Bartec). A second search (Bartec PIXAVI /
+  Agile X / Agile S models) returned only the PIXAVI user
+  guide, a buyer's guide, and the Impact X brochure — no
+  Bartec-specific backup guide. A third search (PIXAVI
+  Phone datasheets) returned Android 9 in the 2022
+  datasheet vs Android 11 in the 2023 datasheet, and the
+  PIXAVI Cam on Android 11 — no Bartec-specific backup
+  guide. A fourth search ("Bartec Agile X Agile S") returned
+  the correction that the Agile X is a Zone 1 tablet PC and
+  the Agile S NI is a Windows 11 tablet PC — neither is an
+  Android phone. A fifth search (SP9EX1 USB-C OTG microSD
+  Google Play) returned the SP9EX1 datasheet and listings
+  (Android 15, USB-C port, Google Mobile Services) plus OTG
+  explainer pages — no Bartec-specific backup guide, and no
+  result labels the SP9EX1 USB-C port OTG.
+  Bartec specifics: the PIXAVI line has no standard USB
+  port at all — only a magnetic USB connector — and no source
+  found says that connector hosts a USB drive, so on the
+  three PIXAVI models (Phone, Thermal, Cam) the whole method
+  is unconfirmed until a drive mounts through Bartec's own
+  USB Safe Box cable G7-S0Z0-0006; no source found labels the
+  SP9EX1's USB-C port OTG — its datasheets list only a
+  "USB-C Port" under External I/O — so on the two SP9EX1
+  models the drive mounting is the test; the PIXAVI Phone
+  runs Android 9 in its 2022 datasheet but Android 11 in its
+  2023 datasheet, and the Impact X runs Android 4.2.2 at
+  launch, Android 5.1.1 after the 2016 update, and Android
+  7.1.2 in one reseller listing for the updated version; the
+  PIXAVI line takes microSD (Phone and Thermal 1x microSD
+  alongside a nano-SIM, Cam 1x microSD) while no source found
+  states microSD support for the SP9EX1; the PIXAVI Cam is
+  end-of-life (one reseller marks it "EOL — No longer
+  available for purchase"); the Agile X and Agile S are
+  Windows tablets, not Android phones, so they cannot run
+  SnapDisk at all; Bartec's user guide says the USB port may
+  be used for charging only in a non-hazardous area and to
+  use only Bartec approved chargers and cables; no source
+  found states whether the PIXAVI line ships Google Play,
+  while the SP9EX1 ships with full Android 15 and Google
+  Mobile Services; no source found names the stock file
+  manager on a Bartec device. Bartec has no phone-to-USB
+  photo backup tool of its own. Fallback for WL-117: Bullitt
+  — no Bullitt article exists in docs/ yet and no
+  searches.md row (rugged-phone maker behind the CAT
+  S-series and Land Rover Explore phones).
+
 ## WL-115 — Back up Ecom Smart-Ex photos to USB article, 83rd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
