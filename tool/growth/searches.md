@@ -9607,6 +9607,112 @@ demand is read off competitor install velocity instead (see
   in docs/ yet and no searches.md row (Karbonn, the Indian
   budget Android phone brand; Titanium series).
 
+### 102. "back up Karbonn photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Karbonn-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Karbonn-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and ten covered Karbonn
+  phones run Android 4.1 to 4.4.2, so the phone route does not
+  exist on them at all.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash drive
+  directly with an OTG adaptor, using a PC as a middleman via
+  USB File Transfer mode, or wirelessly through Google Drive
+  or AirDroid; for direct transfers without a computer,
+  connect a USB-C OTG adaptor and copy files using the USB
+  Drive option in the notification tray. A generic Android
+  guide — it says nothing about Karbonn);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — a forum thread asking whether the adapter that came with
+  the phone moves photos onto a USB drive; the answer is to
+  use an OTG adapter and move files in the file manager. A
+  generic Android forum thread — it says nothing about
+  Karbonn);
+  youtube.com, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any modern
+  Android phone to a USB drive is a USB On-The-Go (OTG)
+  connection and the phone's built-in file manager; it needs
+  Android 7.0 or newer, a USB flash drive, and an OTG adapter
+  or a dual USB-C/USB-A drive; copy DCIM/Camera in the file
+  manager. A generic Android video guide — it says nothing
+  about Karbonn);
+  askfilo.com, "how to transfer pictures from an android
+  phone to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — to transfer photos directly from an Android device to a
+  USB flash drive, you will typically need a USB OTG adapter
+  if your flash drive does not have a native USB-C connector;
+  look for the DCIM folder, then the Camera folder. A generic
+  Android guide — it says nothing about Karbonn);
+  connect.gmb.org.uk, "How to Transfer Pictures from Android
+  to Flash Drive A Simple Guide"
+  (connect.gmb.org.uk/how-to-transfer-pictures-from-android-to-flash-drive/
+  — transfer pictures from Android to a flash drive with a
+  USB OTG cable, or a USB-C flash drive on a modern device;
+  older devices may require an OTG adapter. A generic Android
+  guide — it says nothing about Karbonn);
+  epictechtips.com, "How to Transfer Pictures from Android
+  Phone to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive into your Android device, tap the
+  USB charging notification and select Transfer photos, or
+  use a PC as an intermediary; confirm that your phone
+  supports USB OTG first. A generic Android guide — it says
+  nothing about Karbonn).
+- Four of the fourteen covered Karbonn phones clear SnapDisk's
+  Android 7.0 minimum and list USB OTG — the Titanium Jumbo
+  (Android 7.0), the Titanium Jumbo 2 (Android 7.0), the
+  Titanium Frames S7 (Android 7.0) and the Titanium S9 Plus
+  (Android 9.0) — so the one-tap route exists on those four;
+  all fourteen take micro-USB, so a USB-C drive plugs straight
+  into none of them. Ten phones run Android 4.1 to 4.4.2 and
+  cannot run SnapDisk at all — the S5 (4.1), the S5 Plus, S5i,
+  S7, S9 and Titanium X (4.2), the Hexa, Octane Plus and Mach
+  One (4.4), and the Mach Two (4.4.2) — so there is no phone
+  route on any of them. Thirteen of the fourteen take a
+  microSD card, so the card-reader route works on every one
+  except the Hexa, which has no card slot.
+- The S9's OTG is disputed — phonebunch lists USB On-the-go
+  and OTG Supported, gadgets360 says USB OTG No — though the
+  dispute changes nothing, since the S9 runs Android 4.2. The
+  S9 Plus launch is two dates — 20 January 2020 per one
+  gadgetsnow comparison, 22 October 2020 per another. The
+  Mach One's internal storage is two numbers — 8 GB per
+  gadgets360, 16 GB per the Economic Times review. The Mach
+  Two's microSD ceiling is two numbers — up to 32 GB per
+  gadgets360, the Times of India and phonebunch, while the
+  Mobile Indian's review says its slot even held a 64 GB card.
+  The Jumbo 2's launch is two dates — 1 February 2018 per
+  gadgets360's comparison tables, announced 16 February 2018
+  per androidos.in and the Financial Express. Phonepik lists
+  a second Titanium Jumbo (released 15 June 2023, Android 14,
+  6.67-inch display) and a second Titanium S9 Plus (released
+  15 June 2023, Android 14) — neither listing is used as a
+  source. VaultDrive needs Android 8 or later per its own
+  site, so three of the four cannot run it, and AppBrain
+  lists 12.1 or later, which no covered Karbonn phone clears,
+  since the newest covered model runs Android 9.0. FotoSafe
+  needs Android 9 or later, so only the S9 Plus clears it.
+  Karbonn has no phone-to-USB backup tool of its own — no
+  Karbonn-specific backup advice turned up in any source
+  beyond a computer copy, Google Drive, or Google Photos; no
+  source found names the stock file manager on a Karbonn
+  phone.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-135, 103rd how-to):
+  docs/karbonn-photos-to-usb.html.
+  Fallback for WL-136: Intex — no Intex article exists in
+  docs/ yet and no searches.md row (Intex, the Indian budget
+  Android phone brand; Aqua series).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
