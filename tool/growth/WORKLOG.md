@@ -1,9 +1,17 @@
 # SnapDisk — Work Log
 
-## WL-119 — Back up Advantech photos to USB article, 87th how-to (DRAFT)
+## WL-119 — Back up Advantech photos to USB article, 87th how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: DRAFT — article PR open,
-  supervisor merges after readback.
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #206 MERGED (merge f2d06b2, 2026-11-19T11:40:25Z, CI run
+  44516607607 success on head 8931f39); post-merge main runs
+  Android PR 44516920882 success + pages 44516920461 success. Live
+  fetch: advantech-photos-to-usb.html 200 (correct title, fresh crawl
+  11:42 UTC), feed.xml 87 items incl. Advantech. Query 86 verified by
+  the lead from live evidence (no top result mentions Advantech);
+  supervisor re-verified pre-merge by readback (feed 87 items incl.
+  Advantech, sitemap incl. URL, title correct, Query 86 row present,
+  only docs/ + tool/growth changed). No rebase needed (mergeable CLEAN).
   New docs/advantech-photos-to-usb.html ("Back up
   Advantech photos to a USB drive (no computer)"),
   following the WL-54–WL-118 article template exactly
