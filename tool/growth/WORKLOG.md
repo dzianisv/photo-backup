@@ -1,5 +1,60 @@
 # SnapDisk — Work Log
 
+## WL-100 — Back up CipherLab photos to USB article, 69th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Merged PR #168, main 7bcec60, Android PR CI run 44428804509
+  success. Live verified by readback: article 200 with correct
+  title, blog index 200 incl. CipherLab, feed.xml 69 items incl.
+  CipherLab, sitemap 200 incl. the new URL.
+  New docs/cipherlab-photos-to-usb.html ("Back up CipherLab photos
+  to a USB drive (no computer)"), following the WL-54–WL-99 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 39 chars, meta
+  description 152 chars, JSON-LD validated by parse; sitemap and
+  feed XML parse. Feed now counts 69 items.
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search): Query 68 ("back
+  up CipherLab photos to USB drive without computer") is a real gap —
+  no CipherLab-specific phone-to-USB guide in the top results at all;
+  not one result even mentions CipherLab. Generic Android
+  file-manager guides (Dr.Fone, Pixoneye, AskFilo, EpicTechTips),
+  a YouTube OTG video, and the FotoSafe rival app page cover only
+  the manual route, not a CipherLab guide.
+  CipherLab models covered (spec/manual/retailer sources, Nov 18):
+  RS36 — USB 3.1 Gen 1 Type-C with OTG, Android 12 or 14 (manual:
+  Android 12 GMS, upgradable to 14); RS38 — USB-C with OTG,
+  Android 13 GMS (upgradable to Android 18); RK25 — USB 2.0 OTG,
+  Android 7 or 9; RK26 — Android 12 with Android 14 upgrade path.
+  All four clear SnapDisk's Android 7.0 minimum except pre-7.0
+  units (a supplier listing shows the RS50 on Android 6 — computer
+  copy is the route there).
+  Honest limits recorded in the article: OTG/host support is
+  confirmed in the spec listings only on the RS36, the RS38, and
+  the RK25 — no source found confirms OTG or host support on the
+  RK26 at all, so the drive mounting is the test on that model;
+  the RS36's Android version differs by source (12 or 14), either
+  way above the minimum; no other RS/RK model turned up in the
+  sources found, so the article covers only the RS36, the RS38,
+  the RK26, and the RK25.
+  Article published Nov 18, 2026 (WL-100, 69th how-to):
+  docs/cipherlab-photos-to-usb.html.
+  Fallback for WL-101: Unitech — no Unitech article exists in
+  docs/ yet (PA768 / EA630 enterprise Android handhelds).
+
 ## WL-99 — Back up Chainway photos to USB article, 68th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
