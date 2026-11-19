@@ -1,5 +1,128 @@
 # SnapDisk — Work Log
 
+## WL-108 — Back up M3 Mobile photos to USB article, 76th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/m3mobile-photos-to-usb.html ("Back up M3 Mobile
+  photos to a USB drive (no computer)"), following the
+  WL-54–WL-107 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 39 chars,
+  meta description 127 chars, JSON-LD validated by parse;
+  sitemap and feed XML parse. Feed now counts 76 items; blog
+  JSON-LD counts 76 BlogPosting entries. Article PR #183
+  (unmerged — supervisor merges after readback
+  verification). CI run 44472641344 green (build pass,
+  1m20s).
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked); no INTERNET permission in
+  AndroidManifest.xml; FAT32 files >=4 GiB skipped with
+  reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  ApplicationId unchanged (dev.dzianisv.snapdisk,
+  app/build.gradle.kts); app tree untouched vs main.
+  Search evidence (Nov 18, 2026 live web search): Query 75
+  ("back up M3 Mobile photos to USB drive without computer")
+  is a real gap — no M3 Mobile-specific phone-to-USB guide
+  in the top results at all; not one result even mentions
+  M3 Mobile. mtech.co.ke, "SanDisk Ultra Dual Drive m3.0
+  32GB - Micro-USB OTG Flash Drive"
+  (mtech.co.ke/catalogue/sandisk-ultra-dual-drive-m3-0-32gb-micro-usb-and-usb-3-0-flash-drive-sddd3-032g-g46/
+  — a two-ended flash drive: micro-USB plug for Android
+  phones with OTG and a USB 3.0 plug for computers, with the
+  SanDisk Memory Zone app for copying photos to the drive. A
+  product page, not a guide — and "m3.0" is the drive's model
+  name, not M3 Mobile; it says nothing about an M3 Mobile
+  handheld, and the micro-USB end does not fit the UL20's
+  USB-C client port or its USB-A host port); YouTube, "How
+  to Connect USB Drive to Android Phone to Move Photos &
+  Videos (Best Method)" (youtube.com/watch?v=PYcbV25CczI —
+  OTG adapter + the phone's built-in file manager, no
+  computer or internet. Generic Android, and a manual guide
+  — and it says nothing about an M3 Mobile handheld);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer directly with an OTG adapter, through a PC as a
+  middleman in File Transfer mode, wirelessly through Google
+  Drive or AirDroid, or in bulk with Wondershare Dr.Fone on
+  Windows or Mac. Generic Android, and a manual guide — and
+  it says nothing about an M3 Mobile handheld, and its
+  bulk-export route needs a computer); askfilo.com, "how to
+  transfer pictures from an android phone to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — plug a USB drive in with an OTG adapter, open the file
+  manager, find DCIM/Camera, and copy; or use a PC or Mac as
+  a middleman. Generic Android, and a manual guide — and it
+  says nothing about an M3 Mobile handheld); YouTube, "How
+  to Transfer Photos, Videos and any Files from Android
+  Phone to USB Pendrive (USB Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — check OTG
+  compatibility, connect the drive with an OTG adapter, open
+  the file manager, and copy or move files to the drive.
+  Generic Android, and a manual guide — and it says nothing
+  about an M3 Mobile handheld); groovypost.com, "How to
+  Transfer Photos from Android to a USB Drive"
+  (groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — plug the drive into a PC, connect the phone to the PC,
+  and drag and drop DCIM onto the drive; or use a USB-C dual
+  drive plugged straight into the phone. Generic Android, and
+  a manual guide — and it says nothing about an M3 Mobile
+  handheld, and its first method needs a PC in between).
+  M3 Mobile models covered (spec/datasheet/listing sources,
+  Nov 18): UL20 — Android 8.1 in its original spec sheet
+  v1.3 (Android 10 in a Barcotec retailer listing), 2.2 GHz
+  Snapdragon 626 octa-core, 4 GB RAM/32 GB flash, 5.0-inch
+  FHD 1920x1080, 16 MP rear camera with LED flash, 6,700 mAh
+  hot-swap battery, microSD to 128 GB, USB-C via snap-on or
+  cradle, no host port listed; UL20X — Android 9.0 GMS in a
+  Boston University listing (datasheet gives the series as
+  Android 8.1/9.0/10 GMS), 2.2 GHz, 4 GB RAM/64 GB ROM,
+  USB 2.0 Host (A type) + USB 2.0 Client (C type); UL20W —
+  the lighter variant (2 GB RAM, 16 GB ROM, 2.0 GHz
+  processor), USB host (A type) listed; UL20F — 4 GB RAM/
+  64 GB ROM, 2.2 GHz, USB host (A type) listed, -30 °C
+  operation with heated LCD and scanner window and freezer
+  battery. All four: 5-inch FHD display, 16 MP rear camera,
+  IP67 sealing, 2.0 m drop test, 6,700 mAh battery. Every
+  model listed clears SnapDisk's Android 7.0 minimum; no
+  UL20 model in the sources found runs below it.
+  Honest limits recorded in the article: USB host is
+  confirmed in the datasheet only for the UL20X, the UL20W
+  and the UL20F — the base UL20's own spec sheet names no
+  host port, so the drive mounting is the test there; no
+  source found assigns one Android version to one variant
+  (datasheet gives 8.1/9.0/10 GMS for the series); no source
+  found uses the word OTG for the UL20 at all — the article
+  says host, not OTG, throughout; no source found states
+  where the USB-A host port sits on the device; no source
+  found names the stock file manager on the UL20; two Android
+  versions differ by source (UL20 8.1 vs 10, UL20X 9.0 GMS
+  vs the series range — all clear the minimum either way);
+  the "M3 Platform" MDM results are a different company
+  (M3 Solutions Technologies, Canada), not M3 Mobile; no
+  other M3 Mobile handheld model turned up in the sources
+  found.
+  Article published Nov 18, 2026 (WL-108, 76th how-to):
+  docs/m3mobile-photos-to-usb.html.
+  Fallback for WL-109: Handheld (Nautiz) — no Handheld or
+  Nautiz article exists in docs/ yet and no searches.md row
+  (Nautiz X-series rugged enterprise Android handhelds).
+  No WL-109 fallback was named anywhere in the worklog, so
+  the next brand was picked by the lane lead: Handheld was
+  chosen because it is the next uncovered rugged-enterprise
+  handheld maker in the same lane as M3 Mobile, Janam,
+  Datalogic, Zebra and Honeywell.
+
 ## WL-107 — Back up Gigaset photos to USB article, 75th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
