@@ -1,5 +1,136 @@
 # SnapDisk — Work Log
 
+## WL-99 — Back up Chainway photos to USB article, 68th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Merged PR #166, main 48d1c26, Android PR CI run 44426452926
+  success. Live verified by readback: article 200 with correct
+  title, feed.xml 68 items incl. Chainway, sitemap 200 incl. the
+  new URL, blog home 200.
+  New docs/chainway-photos-to-usb.html ("Back up Chainway photos
+  to a USB drive (no computer)"), following the WL-54–WL-98 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 38 chars, meta
+  description 150 chars, JSON-LD validated by parse; sitemap and
+  feed XML parse. Feed now counts 68 items.
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search): Query 67 ("back
+  up Chainway photos to USB drive without computer") is a real gap —
+  no Chainway-specific phone-to-USB guide in the top results at all;
+  not one result even mentions Chainway.
+  Android Central forum, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408
+  — use an OTG adapter to plug in a USB drive and it should be
+  visible as external storage in the file manager, then move files
+  to it from there. Generic Android, and a forum thread — and a
+  manual file-manager guide, not a Chainway guide); YouTube, "How
+  to Connect USB Drive to Android Phone to Move Photos & Videos
+  (Best Method)" (youtube.com/watch?v=PYcbV25CczI — connect a USB
+  drive with an OTG connection and move photos with the phone's
+  built-in file manager. Generic Android, and a manual
+  file-manager guide — and it is a video, not a Chainway guide);
+  Pixoneye, "How to Transfer Photos from Your Phone to a USB
+  Stick" (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — connect a USB drive with an OTG adapter, open Files by Google,
+  find DCIM/Camera, select a small batch, and Copy to the drive.
+  Generic Android, and a manual file-manager guide — and it warns
+  that a connector fitting physically does not prove the phone can
+  read or write the drive, and that not every phone supports USB
+  host at all); AskFilo, "how to transfer pictures from an android
+  phone to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — connect a USB drive with an OTG adapter, open the file
+  manager, find DCIM/Camera, and Copy to the drive — or use a PC
+  as a middleman. Generic Android, and a manual file-manager guide
+  — and its computer route is the only one that works if the
+  device does not host drives at all); Dr.Fone, "4 Practical Ways
+  to Transfer Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — connect a USB drive with an OTG adapter and copy with the file
+  manager, use a PC as a middleman via USB File Transfer mode, or
+  go wireless through Google Drive or AirDroid. Generic Android,
+  and a manual guide — and its bulk-export route is Dr.Fone's own
+  Windows and Mac software, which needs a computer in between);
+  connect.gmb.org.uk, "How to Transfer Pictures from Android to
+  Flash Drive A Simple Guide"
+  (connect.gmb.org.uk/how-to-transfer-pictures-from-android-to-flash-drive/
+  — connect the flash drive with a USB OTG cable or straight into
+  a USB-C port, then copy pictures with the file manager — or use
+  a computer as a middleman. Generic Android, and a manual guide —
+  and it notes that older devices may need an OTG adapter at all);
+  C66 datasheet
+  (osiris.co.za/web/content/17830?unique=8b4a9be39e9136b9739bcf957c16f6f7ae1bd69a&download=true
+  — the C66: Android 11 / 13, 5.5-inch display, 13 MP camera,
+  with interfaces listed as "USB Type-C, USB 3.1, OTG". A
+  datasheet, not a guide — and the confirmation that the C66
+  lists OTG in its interfaces and runs Android 11 or 13, so it
+  clears SnapDisk's Android 7.0 minimum); Chainway C66 UHF
+  product page (chainway.net/Products/Info/75 — the C66: Android
+  13 / 11, Qualcomm octa-core processor, 5.5-inch display, 13 MP
+  camera, with interfaces listed as "USB Type-C, USB 3.1, OTG".
+  A product page, not a guide — and the confirmation, from
+  Chainway's own site, that the C66 lists OTG and runs Android 11
+  or 13); C66 user manual
+  (manuals.plus/chainway/c66-android-mobile-computer-barcode-scanner-manual.pdf
+  — the C66: Android 7.1 / Android 9.0 in this manual edition,
+  with a section "6.7 OTG Function" that describes a cradle OTG
+  connection: install the device onto the cradle and select OTG
+  mode on the pop-up menu to switch on OTG. A manual, not a guide
+  — and the confirmation that the only Chainway OTG instructions
+  found describe the cradle, not a direct adapter — and that
+  older C66 units run Android 7.1 or 9.0, which still clears
+  SnapDisk's Android 7.0 minimum); C72 user manual
+  (manuals.plus/m/de811c9f0650bc024acc8c88aff45e8c737fe7cf8a33d1bd54d9bb6b38ac33a5
+  — the C72: Android 6.0, 5.2-inch display, 13 MP camera, with
+  interfaces listed as "USB2.0, Type-C, OTG". A manual, not a
+  guide — and the confirmation that the original C72 runs Android
+  6.0, below SnapDisk's Android 7.0 minimum, so it cannot run
+  SnapDisk at all — while still listing OTG in its interfaces);
+  C72 datasheet (fqingenieria.com/img/chainway/C72-EN.pdf — the
+  C72: Android 8.1 and Android 11.0 variants, 5.2-inch display,
+  13 MP camera, with interfaces listed as "USB 2.0 Type-C, OTG".
+  A datasheet, not a guide — and the confirmation that current
+  C72 units run Android 8.1 or 11 with OTG, so they clear
+  SnapDisk's Android 7.0 minimum, unlike the original Android 6.0
+  unit); C61 spec page
+  (raptool.com/devices/chainway-c61-mobile-computer-android-11-13/
+  — the C61: Android 11 / 13, Qualcomm octa-core processor,
+  keypad, 6,700 mAh battery, with interfaces listed as "USB
+  Type-C, USB 3.1, OTG". A spec page, not a guide — and the
+  confirmation that the C61 lists OTG and runs Android 11 or 13,
+  so it clears SnapDisk's Android 7.0 minimum).
+  Honest limits recorded in the article: USB OTG is confirmed in
+  the spec listings on all three models — the C66, the C72, and
+  the C61 all list "OTG" in their interfaces — but the C66
+  manual's OTG section describes a cradle connection, so if a
+  direct OTG adapter doesn't mount the drive, the cradle is the
+  documented route; the original C72 cannot run SnapDisk at all —
+  it runs Android 6.0, below SnapDisk's Android 7.0 minimum —
+  while current C72 units run Android 8.1 or 11, the C66 runs
+  Android 11 or 13 (older units Android 7.1 or 9.0), and the C61
+  runs Android 11 or 13, so every current model clears the
+  minimum; no other C-series model turned up in the sources
+  found, so the article covers only the C66, the C72, and the
+  C61.
+  Article published Nov 18, 2026 (WL-99, 68th how-to):
+  docs/chainway-photos-to-usb.html.
+  Fallback for WL-100: CipherLab — no CipherLab article exists in
+  docs/ yet (RS/RK-series enterprise Android handhelds).
+
+
 ## WL-98 — Back up Getac photos to USB article, 67th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
