@@ -1,5 +1,103 @@
 # SnapDisk — Work Log
 
+## WL-112 — Back up Trimble photos to USB article, 80th how-to (ARTICLE PR OPEN, MERGE PENDING)
+
+- Owner: SEO/GEO lane lead. State: article PR open, merge
+  pending supervisor readback — merge SHA and post-merge
+  main runs to be added to this row after the merge.
+  New docs/trimble-photos-to-usb.html ("Back up
+  Trimble photos to a USB drive (no computer)"),
+  following the WL-54–WL-111 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 37 chars,
+  meta description 138 chars, JSON-LD validated by parse;
+  sitemap and feed XML parse. Feed now counts 80 items; blog
+  JSON-LD counts 80 BlogPosting entries. Article PR #191
+  (CI run 44497175977 success, build pass 1m4s); merge
+  pending supervisor readback.
+  searches.md Query 79 row present ("back up Trimble
+  photos to USB drive without computer" — HOW-TO GAP).
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (backup/PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (backup/ProPrefs.FREE_BACKUP_BYTES_LIMIT = 5 GiB); Pro
+  $9.99 one-time = auto-backup on connect + unlimited size
+  (strings.xml pro_price, pro_unlocked); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB
+  skipped with reason (util/FilesystemInfo.FAT32_MAX_FILE_BYTES);
+  raw byte-stream copy (backup/BackupEngine.copyWithResume —
+  no decode/re-encode, .part resume, size verification after
+  copy, retry once) with size verification after copy.
+  ApplicationId unchanged (dev.dzianisv.snapdisk,
+  app/build.gradle.kts, minSdk 24 = Android 7.0); app tree
+  untouched vs main (only docs/ + tool/growth/searches.md
+  changed).
+  Search evidence (Nov 19, 2026 live web search): Query 79
+  is a real gap for photos — no top result is a
+  Trimble-specific guide to backing up photos to a USB drive
+  without a computer at all; the Trimble-specific results
+  are about moving survey job files, not photos.
+  Cansel, "Export and Transfer Files — TSC3 Trimble Access"
+  (TSC3, Windows Mobile, USB thumb drive from inside Trimble
+  Access/Files, or a cable to a PC with Windows Mobile Device
+  Center — job files, not photos); Trimble Access help,
+  "File transfer" (Trimble's own doc: "Using a USB drive to
+  transfer files" and "Using a USB cable to transfer files
+  (Android controllers only)" — job data between a controller
+  and an office, not a camera roll); Trimble help,
+  "Connecting to a USB flash memory stick" (a GNSS receiver
+  downloading logged data to a stick via a field data cable
+  — a receiver, not a handheld, not photos); Waypoint
+  Technology, "TSC5: Transferring Data Between Collector
+  and a USB Drive" (real handheld-to-USB workflow, no
+  computer — but the TSC5, and it copies survey jobs, not
+  photos); Trimble help, "Copy Field Data to a USB Flash
+  Drive" (machine-control design data for GCS/AccuGrade
+  machines, from Trimble Business Center on a computer —
+  not photos); Trimble, "USB Switcher App" (Windows Embedded
+  Handheld only — GeoExplorer 6000, Geo 7X, Juno 3 — needs
+  a PC); Juno T41 manual (Windows Embedded Handheld 6.5,
+  USB cable to a computer — not photos, not Android).
+  TDC600 and TDC650 covered (Trimble's own datasheets +
+  reseller listings + Trimble FAQs, Nov 19): TDC600 —
+  Android 8.0 at launch (2019 datasheet) vs Android 10
+  (2021 FAQ, 2023 datasheet), Snapdragon 626, 4 GB/64 GB,
+  13 MP rear + 5 MP front, USB 3.0 (Type-C), microSDHC up
+  to 256 GB, GMS-certified; TDC650 — Android 10 (Google
+  certified), GMS-certified, Snapdragon 626, 4 GB/64 GB,
+  13 MP rear + 5 MP front, USB 3.0 (Type C), microSDXC up
+  to 256 GB, 8000 mAh, Android security updates until
+  December 2024 (datasheet footnote).
+  Honest limits recorded in the article: neither datasheet
+  labels the USB-C port OTG — both say only USB 3.0
+  (Type-C) — so the drive mounting is the test (mount
+  notification or a USB OTG Checker app) before buying an
+  adapter; the TDC600's Android version differs by source
+  (8.0 launch vs 10 later); the TDC650's security updates
+  ran until December 2024; no source names the stock file
+  manager on a Trimble handheld (Trimble Mobile Manager,
+  pre-installed on the TDC650, manages the device, it is
+  not a file manager); no source states the port position
+  in text on either model; the TSC7 and the T7 run Windows
+  10, the TSC3 runs Windows Mobile, and the Juno T41 and
+  the Geo 7X run Windows Embedded Handheld, so none of them
+  can run SnapDisk; the TCU5 runs Android 7.1.1 but has no
+  camera, so there are no photos to back up on it; the TSC5
+  (Android 10) and the TDC6, TSC710 and TSC510 (Android 14)
+  also run Android but no source found labels their USB
+  ports OTG either, so they are not covered here; FotoSafe
+  needs Android 9, so it cannot run on a TDC600 still on
+  its launch Android 8.0.
+  Article published Nov 19, 2026 (WL-112, 80th how-to):
+  docs/trimble-photos-to-usb.html.
+  Fallback for WL-113: Samsung Galaxy XCover — no
+  XCover-specific article exists in docs/ yet and no
+  searches.md row (rugged Galaxy XCover phones).
+
 ## WL-111 — Back up Juniper Systems photos to USB article, 79th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
