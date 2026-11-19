@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Chainway photos to a USB drive</title>
+<meta name="description" content="Back up Chainway C66 photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/chainway-photos-to-usb.html">
+<meta property="og:title" content="Back up Chainway photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up Chainway C66 photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/chainway-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/chainway-photos-to-usb.html#article",
+      "headline": "Back up Chainway photos to a USB drive (no computer)",
+      "description": "Back up Chainway C66 photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-18",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/chainway-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/chainway-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up Chainway C-series photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On the current C-series models, yes — and OTG is confirmed in the spec listings on all three: the C66, the C72, and the C61 all list \"OTG\" in their interfaces, so a USB-C flash drive plugs straight into any of them and a regular USB-A drive needs only a USB-C OTG adapter. One wrinkle: the C66 manual's OTG section describes a cradle connection — install the device on the cradle and select OTG mode on the pop-up menu — so if a direct OTG adapter doesn't mount the drive, the cradle is the documented route. The original C72 cannot run SnapDisk at all: it runs Android 6.0, below SnapDisk's Android 7.0 minimum, so the computer copy in Method 4 is the route on that unit. Chainway has no phone-to-USB backup tool of its own. The stock route is a file manager: connect the drive, open the file manager, pick the photos in DCIM/Camera, and Copy to the drive. On a model that hosts drives and runs SnapDisk, SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/chainway-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up Chainway photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/chainway-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up Chainway photos to a USB drive (no computer)</h1>
+  <p class="dek">The C series is Chainway's line of enterprise Android handhelds (C66, C72, C61), and Chainway has no phone-to-USB backup tool of its own: the only Chainway-specific USB advice found is the C66 manual's cradle OTG function, with no photo-transfer route at all. Three honest caveats up front: USB OTG is confirmed in the spec listings on all three models — the C66, the C72, and the C61 all list "OTG" in their interfaces — but the C66 manual's OTG section describes a cradle connection, so if a direct OTG adapter doesn't mount the drive, the cradle is the documented route; the original C72 cannot run SnapDisk at all — it runs Android 6.0, below SnapDisk's Android 7.0 minimum — while current C72 units run Android 8.1 or 11, the C66 runs Android 11 or 13 (older units Android 7.1 or 9.0), and the C61 runs Android 11 or 13, so every current model clears the minimum; and no other C-series model turned up in the sources found, so this article covers only the C66, the C72, and the C61. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 18, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On the C-series models that can run SnapDisk — the C66 runs Android 11 or 13 (older units Android 7.1 or 9.0), the current C72 runs Android 8.1 or 11, and the C61 runs Android 11 or 13, and all three list OTG in their spec interfaces — plug the drive in, then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: the C66 manual's OTG section describes a cradle connection — install the device on the cradle and select OTG mode on the pop-up menu — so if a direct OTG adapter doesn't mount the drive, the cradle is the documented route; and the original C72 cannot run SnapDisk at all, since it runs Android 6.0, below the Android 7.0 minimum, so Method 4 is the route on that unit. A file manager works — the generic guides' route is an OTG connection with the built-in file manager — but the direct route is manual select-copy-paste with no progress detail, no resume, and no verification; Chainway's own file advice works too, but there is none pointing at a USB drive — the C66 manual only offers the cradle OTG function, with no photo-transfer route. Four rival apps do exist — Photos to USB: OTG Backup copies the whole gallery to a pen drive in one tap, free with ads, a one-time purchase removing the ads; VaultDrive copies photos, videos, and files straight to a USB drive with no computer, free for up to 200 files or 2 GB per backup, Pro $19.99 once; Photo Backup Stick DC backs up pictures and videos straight to its own OTG drive, free, but it only works with genuine Photo Backup Stick drives; FotoSafe backs up Android photos to a USB drive through the system picker, and needs Android 9 or later with USB host or OTG support — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, works with any drive, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the handheld afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 18, 2026, no top search result for this query is a Chainway-specific phone-to-USB guide at all: not one of the top results even mentions Chainway — they are generic Android guides and a forum thread.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up Chainway photos to USB drive without computer" and there is no Chainway-specific phone-to-USB guide in the top results at all — not one result even mentions Chainway. The results are generic Android guides and a forum thread, in different packaging:</p>
+  <ul>
+    <li><strong>Android Central forum, "Moving photos to usb"</strong> (<a href="https://forums.androidcentral.com/threads/moving-photos-to-usb.973408/">Moving photos to usb</a>) — use an OTG adapter to plug in a USB drive and it should be visible as external storage in the file manager, then move files to it from there. Generic Android, and a forum thread — and a manual file-manager guide, not a Chainway guide.</li>
+    <li><strong>YouTube, "How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)"</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)</a>) — connect a USB drive with an OTG connection and move photos with the phone's built-in file manager. Generic Android, and a manual file-manager guide — and it is a video, not a Chainway guide.</li>
+    <li><strong>Pixoneye, "How to Transfer Photos from Your Phone to a USB Stick"</strong> (<a href="https://pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/">How to Transfer Photos from Your Phone to a USB Stick</a>) — connect a USB drive with an OTG adapter, open Files by Google, find DCIM/Camera, select a small batch, and Copy to the drive. Generic Android, and a manual file-manager guide — and it warns that a connector fitting physically does not prove the phone can read or write the drive, and that not every phone supports USB host at all.</li>
+    <li><strong>AskFilo, "how to transfer pictures from an android phone to a flashdrive"</strong> (<a href="https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432">how to transfer pictures from an android phone to a flashdrive</a>) — connect a USB drive with an OTG adapter, open the file manager, find DCIM/Camera, and Copy to the drive — or use a PC as a middleman. Generic Android, and a manual file-manager guide — and its computer route is the only one that works if the device does not host drives at all.</li>
+    <li><strong>Dr.Fone, "4 Practical Ways to Transfer Photos from Android to USB Flash Drive"</strong> (<a href="http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html">4 Practical Ways to Transfer Photos from Android to USB Flash Drive</a>) — connect a USB drive with an OTG adapter and copy with the file manager, use a PC as a middleman via USB File Transfer mode, or go wireless through Google Drive or AirDroid. Generic Android, and a manual guide — and its bulk-export route is Dr.Fone's own Windows and Mac software, which needs a computer in between.</li>
+    <li><strong>connect.gmb.org.uk, "How to Transfer Pictures from Android to Flash Drive A Simple Guide"</strong> (<a href="https://connect.gmb.org.uk/how-to-transfer-pictures-from-android-to-flash-drive/">How to Transfer Pictures from Android to Flash Drive A Simple Guide</a>) — connect the flash drive with a USB OTG cable or straight into a USB-C port, then copy pictures with the file manager — or use a computer as a middleman. Generic Android, and a manual guide — and it notes that older devices may need an OTG adapter at all.</li>
+    <li><strong>C66 datasheet</strong> (<a href="https://www.osiris.co.za/web/content/17830?unique=8b4a9be39e9136b9739bcf957c16f6f7ae1bd69a&amp;download=true">C66 Datasheet</a>) — the C66: Android 11 / 13, 5.5-inch display, 13 MP camera, with interfaces listed as "USB Type-C, USB 3.1, OTG". A datasheet, not a guide — and the confirmation that the C66 lists OTG in its interfaces and runs Android 11 or 13, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>Chainway C66 UHF product page</strong> (<a href="https://www.chainway.net/Products/Info/75">C66 UHF RFID Reader</a>) — the C66: Android 13 / 11, Qualcomm octa-core processor, 5.5-inch display, 13 MP camera, with interfaces listed as "USB Type-C, USB 3.1, OTG". A product page, not a guide — and the confirmation, from Chainway's own site, that the C66 lists OTG and runs Android 11 or 13.</li>
+    <li><strong>C66 user manual</strong> (<a href="https://manuals.plus/chainway/c66-android-mobile-computer-barcode-scanner-manual.pdf">CHAINWAY C66 Android Mobile Computer Barcode Scanner User Manual</a>) — the C66: Android 7.1 / Android 9.0 in this manual edition, with a section "6.7 OTG Function" that describes a cradle OTG connection: install the device onto the cradle and select OTG mode on the pop-up menu to switch on OTG. A manual, not a guide — and the confirmation that the only Chainway OTG instructions found describe the cradle, not a direct adapter — and that older C66 units run Android 7.1 or 9.0, which still clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>C72 user manual</strong> (<a href="https://manuals.plus/m/de811c9f0650bc024acc8c88aff45e8c737fe7cf8a33d1bd54d9bb6b38ac33a5">C72 User Manual</a>) — the C72: Android 6.0, 5.2-inch display, 13 MP camera, with interfaces listed as "USB2.0, Type-C, OTG". A manual, not a guide — and the confirmation that the original C72 runs Android 6.0, below SnapDisk's Android 7.0 minimum, so it cannot run SnapDisk at all — while still listing OTG in its interfaces.</li>
+    <li><strong>C72 datasheet</strong> (<a href="https://www.fqingenieria.com/img/chainway/C72-EN.pdf">C72</a>) — the C72: Android 8.1 and Android 11.0 variants, 5.2-inch display, 13 MP camera, with interfaces listed as "USB 2.0 Type-C, OTG". A datasheet, not a guide — and the confirmation that current C72 units run Android 8.1 or 11 with OTG, so they clear SnapDisk's Android 7.0 minimum, unlike the original Android 6.0 unit.</li>
+    <li><strong>C61 spec page</strong> (<a href="https://www.raptool.com/devices/chainway-c61-mobile-computer-android-11-13/">Chainway C61 Mobile Computer</a>) — the C61: Android 11 / 13, Qualcomm octa-core processor, keypad, 6,700 mAh battery, with interfaces listed as "USB Type-C, USB 3.1, OTG". A spec page, not a guide — and the confirmation that the C61 lists OTG and runs Android 11 or 13, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>Cloud routes</strong> — Google Photos syncs your gallery to Google's servers, Google Drive backs your data up to Google's cloud with 15 GB free, and Google backup restores your data to a new phone from Google's cloud, not to a drive you hold; Google Photos' "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Neither route gives you a folder of plain photo files on a USB drive.</li>
+  </ul>
+  <p>None of them is a Chainway-specific phone-to-USB guide at all, and none of them offers an automated Chainway photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 18, 2026 — for the C-series models that can run SnapDisk at all.</p>
+
+  <h2>What you need</h2>
+  <p>A Chainway handheld that can run SnapDisk and host a USB drive — in practice, the C66, which runs Android 11 or 13, the current C72, which runs Android 8.1 or 11, and the C61, which runs Android 11 or 13 — all three with a USB-C port listing OTG in their spec interfaces — so a USB-C flash drive plugs straight into any of them, and a regular USB-A drive needs a USB-C OTG adapter, and enough space on the drive for the photos you want to keep. Three Chainway specifics: first, the original C72 cannot run SnapDisk at all — it runs Android 6.0, below the Android 7.0 minimum — while the C66 runs Android 11 or 13 (older units Android 7.1 or 9.0) and the C61 runs Android 11 or 13, so every current C-series model clears the minimum, and the blocker on this line is the Android version on old C72 units, not the host support. Second, USB OTG is confirmed in the spec listings on all three models — the C66, the C72, and the C61 all list "OTG" in their interfaces — but the C66 manual's OTG section describes a cradle connection, so if a direct OTG adapter doesn't mount the drive, install the device on the cradle and select OTG mode on the pop-up menu; if the drive appears in Settings &gt; Storage, the device hosts drives and the rest of this method works; if it never appears, the device does not host drives and Method 4 is the route. Third, Chainway has no phone-to-USB backup tool of its own — the only Chainway-specific USB advice found is the C66 manual's cradle OTG function; the stock photo backup is Google Photos; the stock file manager is Files by Google; Chainway camera photos live in DCIM/Camera, as on any Android handheld. The C66 takes a microSD card up to 128 GB, and the C72 takes one too (up to 128 GB on current units, 32 GB on the original), so a card is an option, and it still stays in the device and opening it anywhere else needs a card reader, while a USB drive plugs into any computer as it is. SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Check your model can run SnapDisk.</strong> The C66 runs Android 11 or 13 (older units Android 7.1 or 9.0), the current C72 runs Android 8.1 or 11, and the C61 runs Android 11 or 13 — every current model clears the Android 7.0 minimum, so SnapDisk installs on all of them. The exception is the original C72, which runs Android 6.0 and cannot run SnapDisk at all, so Method 4 is the route on that unit. All three models list OTG in their spec interfaces, so the question is only whether the drive mounts — check Settings &gt; About phone if you are unsure which Android version your unit runs.</li>
+    <li><strong>Plug in the USB drive.</strong> A USB-C flash drive plugs straight into the USB-C port on any of the three models, and a regular USB-A drive needs a USB-C OTG adapter. It mounts on plug-in on most Android devices with USB host support — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage for the drive. One Chainway wrinkle: the C66 manual's OTG section describes a cradle connection — install the device onto the cradle and select OTG mode on the pop-up menu to switch on OTG — so if a direct OTG adapter doesn't mount the drive on the C66, the cradle is the documented route.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — Chainway camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the device normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the device to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: a file manager (the stock route, no app needed)</h2>
+  <p>A file manager can copy your photos to the USB drive — the generic guides' route is an OTG connection with the built-in file manager, and it is the manual route for external storage: 1. Plug in the USB drive — a USB-C drive plugs straight into the USB-C port on any of the three models, and a regular USB-A drive needs a USB-C OTG adapter. A notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage for the drive. On the C66, if a direct OTG adapter doesn't mount the drive, the manual's route is the cradle: install the device onto the cradle and select OTG mode on the pop-up menu. 2. Open the file manager (Files by Google on Chainway handhelds) and confirm the USB drive shows up under storage devices. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until the file manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option. One note: the file-manager route works on the original C72 too — it needs no app install, so the Android 7.0 minimum does not apply to it — but that unit still needs to host the drive, so the drive mounting is the test there as well.</p>
+
+  <h2>Method 3: Chainway's own tools (Google Photos, Google Drive, or a microSD card — not phone-to-USB)</h2>
+  <p>If you want Chainway's own route, know what each tool actually does — there is no Chainway backup page pointing at a USB drive at all, and none of the stock tools writes your photos as plain files to a USB drive automatically. <strong>1. Google Photos</strong> is Google's own photo backup app, and it is the stock photo backup on Chainway handhelds: it automatically backs up photos to your Google account. It is a real backup — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. <strong>2. Google Drive</strong> is the cloud backup Android names by default — "on Android devices the default built-in service is Google Drive. With Google Drive you have 15Gb free" — it backs your data up to Google's cloud. It is a real backup — but it is a cloud backup, not a USB copy, and Google accounts only offer 15 GB of free storage. <strong>3. Google backup</strong> is what Android itself names: personal settings back up to Google's servers with a Google account, and are restored to a new phone when you sign in with that account. It is a real backup — but it backs up settings, not a folder of photo files on a drive you hold. <strong>4. A microSD card</strong> is the local option on the C66 and the C72. It is a real local copy — but the card stays in the device, and opening the card anywhere else needs a card reader. <strong>5. A computer copy</strong> is the other way to move files off the device — connect the handheld to a computer with a USB cable and copy DCIM from the device to the computer. It is a real backup — but it needs a PC in between, and the backup lands on the PC, not on a USB drive as plain files straight from the device. None of them is a one-tap way to copy your camera roll to a drive. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the handheld into the computer with a USB cable, tap the USB notification and choose File transfer — and drag the DCIM folder onto the USB drive. This works fine, and it is the only route above that needs a second device in between. It is also the only route that works at all on the original C72, which cannot run SnapDisk, and the only route that works if no C-series model you own mounts a drive. If the device and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the device is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>OTG is confirmed in the spec listings, but the C66 manual's OTG route is the cradle.</strong> The C66, the C72, and the C61 all list "OTG" in their spec interfaces — but the C66 manual's section "6.7 OTG Function" describes a cradle connection: install the device onto the cradle and select OTG mode on the pop-up menu. If a direct OTG adapter doesn't mount the drive on the C66, the cradle is the documented route — and if the drive never appears in Settings &gt; Storage, the device does not host drives and Method 4 is the route.</li>
+    <li><strong>The original C72 cannot run SnapDisk at all.</strong> The original C72 runs Android 6.0, below SnapDisk's Android 7.0 minimum — so on that unit the computer copy in Method 4 is the route, not this article's one-tap method. Current C72 units run Android 8.1 or 11, the C66 runs Android 11 or 13 (older units Android 7.1 or 9.0), and the C61 runs Android 11 or 13 — so every current C-series model clears the minimum, and SnapDisk installs on all of them. The blocker on this line is the Android version on old C72 units, not the host support.</li>
+    <li><strong>The C66's Android version differs by source.</strong> The current datasheet and Chainway's own product page list Android 11 / 13, while the older user manual lists Android 7.1 / 9.0 — either way it clears SnapDisk's Android 7.0 minimum, so the version is not the question on this model; whether the drive mounts is.</li>
+    <li><strong>The C72's Android version differs by unit, not just by source.</strong> The original C72 runs Android 6.0 and cannot run SnapDisk, while current C72 units run Android 8.1 or 11 — so check Settings &gt; About phone on your unit before installing: below Android 7.0, SnapDisk cannot install, and the computer copy in Method 4 is the route.</li>
+    <li><strong>No other C-series model turned up in the sources found.</strong> This article covers only the C66, the C72 (including the C72 UHF), and the C61 — if your handheld is a different C-series model, check Settings &gt; About phone for its Android version and Settings &gt; Storage for drive mounting, the same two tests used here.</li>
+    <li><strong>Anything below Android 7.0 cannot run SnapDisk at all.</strong> The original C72 runs Android 6.0, so it cannot install SnapDisk — and older Chainway handhelds exist, so check Settings &gt; About phone if you are unsure: below Android 7.0, SnapDisk cannot install, and the computer copy in Method 4 is the route.</li>
+    <li><strong>The adapter differs by drive, not by model.</strong> All three models have a USB-C port, so a USB-C flash drive plugs straight into any of them and a regular USB-A drive needs a USB-C OTG adapter. A plain USB-C charging cable is not an OTG adapter: it connects the device to a computer, which is the opposite direction.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter you don't need — or the wrong one.</strong> A USB-C flash drive plugs straight into any of the three models — so no adapter is needed on any of them for a USB-C drive — while a regular USB-A drive needs a USB-C OTG adapter. A plain USB-C charging cable is not an OTG adapter: it connects the device to a computer, which is the opposite direction.</li>
+    <li><strong>Assuming a direct OTG adapter is the only OTG route on the C66.</strong> The C66 lists OTG in its spec interfaces — but the manual's OTG section describes a cradle connection, not a direct adapter. If the drive doesn't mount on a direct adapter, try the cradle: install the device onto the cradle and select OTG mode on the pop-up menu.</li>
+    <li><strong>Installing SnapDisk on an original C72.</strong> The original C72 runs Android 6.0, below SnapDisk's Android 7.0 minimum — check Settings &gt; About phone first: on an Android 6.0 unit the computer copy in Method 4 is the route, not this article's one-tap method.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google Drive and Google Photos back your device up to Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> A computer copy with a USB cable moves files to a computer — but it is a copy to a computer, and the backup lands on the PC. If the device and the drive are all you have, a phone-to-USB copy is the route, not a desktop copy.</li>
+    <li><strong>Mistaking a spec table or a product page for a phone-to-USB guide.</strong> The Chainway datasheets and the C66 product page are real Chainway pages — but the datasheets only list an Android version, a chipset, or a USB connector type, and the product page only describes the hardware. Neither of them describes copying your camera roll straight to a USB drive from the device.</li>
+    <li><strong>Mistaking a manual for a phone-to-USB guide.</strong> The C66 and C72 user manuals are real Chainway documents — but the C66 manual's only USB-drive-adjacent section is the cradle OTG function, and neither manual describes copying your camera roll straight to a USB drive from the device.</li>
+    <li><strong>Mistaking OTG support on one model for OTG support on the other.</strong> The C66, the C72, and the C61 all list OTG in their spec interfaces — but the C66 manual's OTG section describes a cradle connection, so test with a drive on your model, and use Method 2 or 4 on it if the drive never mounts.</li>
+    <li><strong>Mistaking a drive-locked app for a general backup.</strong> Photo Backup Stick DC is a real one-tap backup app — but it only works with genuine Photo Backup Stick OTG drives. If the drive you already own is any other brand, that app cannot use it: SnapDisk, Photos to USB, and FotoSafe work with any drive.</li>
+    <li><strong>Mistaking a camera-card bridge for a handheld backup.</strong> Using a phone as a bridge between a camera's memory card and an SSD is a real field backup — but it backs up the camera's card, not the handheld's own gallery. If your photos are on the C66 itself, the drive plugs straight into the handheld, and Method 1 or 2 is the route.</li>
+    <li><strong>Mistaking a microSD card copy for a USB backup.</strong> Copying DCIM to a microSD card is a real local copy — the C66 and the C72 both take a card — but the card stays in the device, and opening it anywhere else needs a card reader; a USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the device and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 18, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On a Chainway handheld the cloud routes are Google Photos and Google Drive — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the device — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the device. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the device.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the device. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="getac-photos-to-usb.html">Back up Getac photos to a USB drive (no computer)</a> — Getac ZX-series is the closest parallel: another enterprise rugged line whose own backup advice is a computer copy, not a phone-to-USB copy.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
