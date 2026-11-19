@@ -1,5 +1,120 @@
 # SnapDisk — Work Log
 
+## WL-138 — Back up Gionee photos to USB article, 106th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #245 MERGED (head 364a88c, CI run 44601958717
+  success, merge commit 68ca879, merged 2026-11-19T19:49:10Z).
+  Query 105 verified by the lead from live evidence (no top
+  result is a Gionee-specific phone-to-USB photo-backup
+  guide); top results are a Dr.Fone guide, two YouTube OTG
+  videos and two generic Android guides (epictechtips,
+  softhandtech) — none mentions Gionee; real gap stands.
+  New docs/gionee-photos-to-usb.html ("Back up Gionee photos
+  to a USB drive (no computer)"), following the
+  WL-54–WL-137 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: the one-tap route exists on
+  five covered Gionee phones — the F205 Pro, F6, S10, S11
+  and M7 — the F205 clears Android 7.0 but its OTG is
+  half-stated, so on it the drive mounting is the test; the
+  eight 2014–2016 models below Android 7.0 cannot install
+  SnapDisk at all, so on those the computer copy is the
+  route).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 36 chars, meta
+  description 127 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 106 items; blog JSON-LD
+  counts 106 BlogPosting entries. searches.md Query 105 row
+  present ("back up Gionee photos to USB drive without
+  computer" — HOW-TO GAP): top results are a Dr.Fone guide,
+  two YouTube videos and two generic Android guides, none is
+  a guide for a Gionee phone.
+  Gionee specifics verified live: the one-tap route exists on
+  five phones only — the F205 Pro, F6, S10, S11 and M7 all
+  clear Android 7.0 and list USB OTG; one more clears Android
+  7.0 with OTG half-stated — the F205, where gadgets360 lists
+  USB OTG and gadgetsnow and smartprix leave the line blank —
+  so on it SnapDisk installs but the one-tap route is unproven
+  until a drive mounts; eight run below Android 7.0 and cannot
+  run SnapDisk at all — the F103 Pro, S6 Pro, S8 and M6 on
+  6.0, the F103 on 5.0, the S6 and M5 on 5.1, and the M2 on
+  4.2; the S6 and S6 Pro take USB Type-C, so a USB-C drive
+  plugs straight into those two, while the other twelve take
+  micro-USB; thirteen take a microSD card, so the card-reader
+  route works on thirteen of them — the S8's slot is disputed.
+  Conflicts named in the article: the F205's microSD ceiling
+  is two numbers (up to 128 GB per gadgetsnow, up to 256 GB
+  per gadgets360 and phonearena) and its Android is two
+  numbers (7.1 per gadgets360, 7.1.1 per gadgetsnow); the
+  F103's Android is two numbers (5.0 per smartprix and
+  gadgets360, 5.1 per phonebunch) and it comes in 1 GB, 2 GB
+  and 3 GB RAM variants; the F103 Pro's OTG is half-stated
+  (gizbot's launch report says it supports USB OTG, gadgetsnow
+  leaves the line blank); the S6's OTG is half-stated
+  (phonemore lists USB OTG On-The-Go, phonebunch leaves the
+  OTG line blank); the S6 Pro's OTG is disputed (gadgets360,
+  smartprix and gadgetstouse list USB OTG Yes, a gadgets360
+  user comment says "there no OTG") and its front camera is
+  two numbers (5 MP per smartprix's article body, 8 MP per
+  smartprix's description); the S8's OTG is disputed
+  (gadgets360 lists USB OTG No, phonebunch lists OTG
+  Supported, smartprix lists USB on-the-go) and its microSD
+  slot is disputed (gadgets360 lists expandable storage No,
+  smartprix, phonearena, lowyat and naijatechguide say it
+  takes one) and its connector is disputed too (phonebunch
+  and smartprix list microUSB, lowyat's MWC report says USB
+  Type-C); the S10's RAM is two numbers (6 GB per smartprix
+  and androidheadlines, 4 GB per phonesdata and the early
+  TENAA listing) and its microSD ceiling is two numbers (up
+  to 256 GB per smartprix, kenyaprice and phonesdata, up to
+  128 GB per androidheadlines); the S11's battery is two
+  numbers (3600 mAh per gadgetsnow, cashify and 91mobiles,
+  3410 mAh per smartprix and umatechnology) and its cameras
+  are two numbers each way (16 MP + 8 MP rear per gadgetsnow
+  and cashify, 16 MP + 5 MP rear per umatechnology's retail
+  S11 listing; 16 MP + 5 MP front per gadgetsnow, 16 MP + 8
+  MP front per umatechnology) because several listing sites
+  attach the bigger S11S's specs to the S11; the M5's storage
+  is two listings (32 GB per gadgets360 and gsmarena, 16 GB
+  per phonebunch, with mobilegizmo listing both a 16 GB and
+  a 32 GB option) and its microSD ceiling is three numbers
+  (up to 128 GB per gadgets360, up to 256 GB per
+  gsmarena.com.bd, up to 64 GB per phonebunch and
+  mobilegizmo); the M6's OTG is disputed (gadgets360 lists
+  USB OTG No, ubergizmo lists USB OTG) and its microSD
+  ceiling is two numbers (up to 128 GB per gadgets360, up to
+  256 GB per ubergizmo) and its storage is two listings
+  (64 GB per gadgets360, a 128 GB option per ubergizmo); the
+  M7's Android is two numbers (7.1.1 per gadgets360, 7.1 per
+  smartprix); one spec site lists a second F205 Pro and a
+  second S6 entirely (phonepik's pages say both were released
+  15 June 2023 on Android 14 with a 6.67-inch display, against
+  the February 2019 F205 Pro launch on Android 8.1 and the
+  November 2015 S6 launch on Android 5.1.1 that every other
+  source lists) — neither 2023 listing is used as a source.
+  VaultDrive needs Android 8 or later per its own site, so
+  only the F205 Pro can run it — and AppBrain lists 12.1 or
+  later, which no covered Gionee phone clears, since the
+  newest covered model runs Android 8.1. FotoSafe needs
+  Android 9 or later, so no covered Gionee phone clears it
+  either. Gionee has no phone-to-USB backup tool of its own —
+  no Gionee-specific backup advice turned up in any source
+  beyond a computer copy, Google Drive, or Google Photos; no
+  source found names the stock file manager on a Gionee
+  phone.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-138, 106th how-to):
+  docs/gionee-photos-to-usb.html.
+  Fallback for WL-139: Coolpad — no Coolpad article exists in
+  docs/ yet and no searches.md row (Coolpad, the Chinese phone
+  brand; Note and Mega series).
+  Live-fetch verification: article URL 200 with correct title
+  "Back up Gionee photos to a USB drive", feed.xml 106 items
+  live (verified Nov 19, 2026 after the Pages deploy caught
+  up with the merge).
+
 ## WL-137 — Back up Xolo photos to USB article, 105th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
