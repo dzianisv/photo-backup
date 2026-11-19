@@ -1,10 +1,19 @@
 # SnapDisk — Work Log
 
-## WL-114 — Back up i.safe MOBILE photos to USB article, 82nd how-to (DRAFT — article PR open)
+## WL-114 — Back up i.safe MOBILE photos to USB article, 82nd how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: DRAFT — article PR #196 open
-  (head b09caf1), supervisor merges after readback. CI run
-  44507947333 success on the article commit (build pass).
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #196 MERGED (merge 2fe0988, 2026-11-19T10:46:00Z, CI run
+  44508351375 success on rebased head fe64fbe); post-merge main runs
+  Android PR 44508689924 success + pages 44508689276 success. Live
+  fetch: isafe-mobile-photos-to-usb.html 200 (correct title, fresh
+  crawl 10:46 UTC), feed.xml 82 items incl. i.safe. Query 81
+  re-scored by supervisor from a fresh live re-search: iPhone guides
+  (ubackup, drfone, website-files PDF, photocleanse) + one generic
+  Android guide (FotoSafe) — not one result mentions i.safe MOBILE;
+  verdict stands. Rebase note: PR #196 briefly CONFLICTING after
+  WL-113 row PR #195 merged; lead rebased onto cb8c1d4 and resolved
+  the WORKLOG.md conflict (WL-114 row on top, WL-113 DONE row intact).
   New docs/isafe-mobile-photos-to-usb.html ("Back up
   i.safe MOBILE photos to a USB drive (no computer)"),
   following the WL-54–WL-113 article template exactly
