@@ -6931,6 +6931,95 @@ demand is read off competitor install velocity instead (see
   Fallback for WL-112: not assigned in the WL-111 brief —
   supervisor to name the next brand.
 
+### 79. "back up Trimble photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Trimble-specific
+  guide to backing up photos to a USB drive at all, let
+  alone a Trimble-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  Cansel, "Export and Transfer Files — TSC3 Trimble Access"
+  (saleh-ionic-test.s3.ca-central-1.amazonaws.com/cansel/landing/1642700678_TSC3_Transfer_Files.pdf
+  — transfer options for the TSC3: a USB thumb drive from
+  inside Trimble Access/Files, or a cable to a PC with
+  Windows Mobile Device Center. A real Trimble USB transfer
+  doc — but it is for the TSC3, which runs Windows Mobile,
+  it moves Trimble Access job files, not photos, and the
+  cable route needs a PC); Trimble Access help,
+  "File transfer"
+  (help.fieldsystems.trimble.com/trimble-access/2021.10/en/File-transfer.htm
+  — Trimble Access supports transferring files between a
+  controller and an office computer, including "Using a USB
+  drive to transfer files" and "Using a USB cable to
+  transfer files (Android controllers only)". Trimble's own
+  doc — but it moves job data between a controller and an
+  office, not a camera roll to a drive); Trimble help,
+  "Connecting to a USB flash memory stick"
+  (help.fieldsystems.trimble.com/r10/connect-usb-thumb-drive.htm
+  — a GNSS receiver downloads logged data directly to a USB
+  flash memory stick using the supplied USB field data
+  cable. A real receiver-to-USB download — but it is a
+  receiver downloading logged GNSS files, not a handheld
+  backing up photos); Waypoint Technology, "TSC5:
+  Transferring Data Between Collector and a USB Drive"
+  (Freshdesk attachment, signed link — the first time you
+  insert a USB drive into a TSC5 with Trimble Access open,
+  pick the USB drive as the destination folder and Trimble
+  Access creates a Trimble Data folder on the drive and
+  copies the job there. A real handheld-to-USB workflow, no
+  computer — but it is the TSC5, not the TDC600 or the
+  TDC650, and it copies survey jobs, not photos); Trimble
+  help, "Copy Field Data to a USB Flash Drive"
+  (help.fieldsystems.trimble.com/tbc/10063.htm — copy job
+  site and job site design data from a project onto a USB
+  flash drive so it can be used on a machine in the field.
+  A real Trimble USB copy — but it is machine-control
+  design data for GCS/AccuGrade machines, not photos, and
+  it runs from Trimble Business Center on a computer);
+  Trimble, "USB Switcher App"
+  (trl.trimble.com/docushare/dsweb/Get/Document-872042/SprtNote_USBSwitcherApp_260220.pdf
+  — the app exposes the SD card of a Trimble Windows
+  Embedded Handheld device as a lettered drive in Windows
+  instead of using Windows Mobile Device Center. A real
+  Trimble USB tool — but it only works on the GeoExplorer
+  6000, Geo 7X and Juno 3, and it needs a PC at the other
+  end); Juno T41 manual, manua.ls
+  (manua.ls/trimble/juno-t41-c/manual?p=18 — the Juno T41 C
+  runs Windows Embedded Handheld 6.5, and transfers data to
+  a computer with a USB cable. A real Trimble USB transfer
+  — but it is a Windows device, it needs a computer, and it
+  moves files to the computer, not photos to a stick).
+  Google Photos is cloud, not USB. Trimble specifics: no
+  Trimble-specific guide to backing up photos to a USB
+  drive turned up at all; the Trimble-specific results move
+  survey job files, not photos; neither datasheet labels
+  the USB-C port OTG — the TDC600 and the TDC650 both say
+  only USB 3.0 (Type-C) — so the drive mounting is the
+  test; the TDC600 runs Android 8.0 at launch (Android 10
+  in Trimble's 2021 FAQ and 2023 datasheet) and the TDC650
+  runs Android 10, Google certified, and both are Google
+  Mobile Services certified, so the Play Store is present
+  and no sideload is needed; the TDC650's Android security
+  updates ran until December 2024; the TDC600 takes a
+  microSDHC card up to 256 GB and the TDC650 takes a
+  microSDXC card up to 256 GB; the TSC7 and the T7 run
+  Windows 10, the TSC3 runs Windows Mobile, and the Juno
+  T41 and the Geo 7X run Windows Embedded Handheld, so none
+  of them can run SnapDisk; the TCU5 runs Android 7.1.1 but
+  has no camera; the TSC5 runs Android 10 and the TDC6,
+  the TSC710 and the TSC510 run Android 14, but no source
+  found labels their USB ports OTG either; no source found
+  names the stock file manager on a Trimble handheld —
+  Trimble Mobile Manager is pre-installed on the TDC650
+  and manages the device, it is not a file manager.
+  Trimble has no phone-to-USB photo backup tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-112, 80th how-to):
+  docs/trimble-photos-to-usb.html.
+  Fallback for WL-113: Samsung Galaxy XCover — no
+  XCover-specific article exists in docs/ yet and no
+  searches.md row (rugged Galaxy XCover phones).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
