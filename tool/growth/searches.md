@@ -6846,6 +6846,91 @@ demand is read off competitor install velocity instead (see
   exists in docs/ yet and no searches.md row (Mesa/Archer
   rugged Android handhelds/tablets).
 
+### 78. "back up Juniper Systems photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Juniper-specific
+  guide at all, let alone a Juniper-specific automated
+  whole-library backup with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  thecomputerbasics.com, "Transfer Files Without a Computer"
+  (thecomputerbasics.com/how-to-transfer-videos-from-iphone-to-usb-stick-without-computer/
+  — phones and tablets can read and write external drives
+  directly; the obstacles are connectors, file systems and
+  power. On Android, connect with a USB-C adapter or an OTG
+  cable and copy in the Files app. Generic Android and iPhone,
+  and a manual guide — and it says nothing about a Juniper
+  device); techwalla.com, "How to Move Pictures from Camera
+  to Flash Drive With No Computer"
+  (techwalla.com/articles/how-to-move-pictures-from-camera-to-flash-drive-with-no-computer
+  — a combination memory-card reader and USB flash drive: pull
+  the memory card out of the camera, put it in the reader.
+  From 2008, written for digital cameras, not phones — and it
+  says nothing about a Juniper device); Photos to USB: OTG
+  Backup, Google Play
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — back up every photo and video on your phone to a USB pen
+  drive, with one tap. A real one-tap phone-to-USB app — but a
+  generic Android listing, not a Juniper guide, and it does
+  not promise oldest-first order, detailed progress with
+  Pause and Stop, or size verification of every file);
+  pixoneye.com, "How to Transfer Photos from Your Phone to a
+  USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage with a
+  supported file manager on Android or Photos and Files on
+  iPhone, make a trial copy first, use Copy rather than Move.
+  Generic Android and iPhone, and a manual guide — and it
+  says nothing about a Juniper device);
+  thegadgetians.com, "How to Transfer Files From Phone to USB
+  Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — connect a USB drive to your Android with an OTG adapter,
+  open your file manager, select and copy files, then paste
+  onto the USB drive. Generic Android and iPhone, and a manual
+  guide — and it says nothing about a Juniper device);
+  petapixel.com, "No Laptop? No Problem: How to Back Up
+  Photos in the Field With Your Smartphone"
+  (petapixel.com/2025/05/11/no-laptop-no-problem-how-to-back-up-photos-in-the-field-with-your-smartphone/
+  — copy full-resolution RAW or JPEG files from a memory card
+  to a solid-state drive using a USB hub connected to your
+  phone. A real field backup with no laptop — but it needs a
+  hub, a card reader and an SSD in between, and the copy
+  itself is still a manual file-manager copy).
+  Google Photos is cloud, not USB. Juniper specifics: no
+  Juniper-specific file advice pointing at a USB drive
+  turned up at all; OTG or host is confirmed in the spec
+  tables on all three models that can run SnapDisk — the
+  Mesa 3 (Android) lists USB-C, USB 3.1 OTG and runs Android
+  9.0 at launch (Android 11 in the current reseller spec),
+  the Archer 4 lists USB Type-C OTG and runs Android 14,
+  upgradable through Android 18, and the Archer 3 has a
+  full-size USB host port and runs Android 7.1 AOSP,
+  exactly SnapDisk's Android 7.0 minimum; only the Archer 3
+  takes a standard USB-A drive with no adapter — the Mesa 3
+  and the Archer 4 need a USB-C OTG adapter, and the Mesa 3's
+  OTG port does not charge the battery ("USB-C, USB 3.1 OTG
+  no battery charging"); the Archer 3 has no Google Play
+  Store at all (no Google Mobile Services), so SnapDisk
+  installs there by sideloading the APK, and its 5 MP camera
+  is optional; the Mesa 4 runs Windows 11, the Mesa 3
+  Windows and the Mesa 2 run Windows 10, the Archer 2 runs
+  Windows Embedded Handheld, and the original Archer runs
+  Windows Mobile 6.1, so none of them can run SnapDisk; the
+  CP3 turned up in a third-party device listing only and is
+  not a Mesa or Archer model; no source found states a
+  microSD capacity for the Mesa 3 or the Archer 3 (the
+  Archer 4 takes a microSDXC card up to 512 GB), or names
+  the stock file manager on a Juniper device — the Archer 3
+  owner's manual lists the preloaded apps and no file
+  manager is among them; Juniper Geotagging tags photos
+  instead of backing them up. Juniper has no phone-to-USB
+  backup tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-111, 79th how-to):
+  docs/juniper-systems-photos-to-usb.html.
+  Fallback for WL-112: not assigned in the WL-111 brief —
+  supervisor to name the next brand.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
