@@ -3,8 +3,12 @@
 ## WL-136 — Back up Intex photos to USB article, 104th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #241 OPEN (head cdac9a4, CI run 44584618672
-  success, merge PENDING — supervisor fills pre-merge).
+  Article PR #241 MERGED (head cc3ab7c, CI run 44586214600
+  success, merge commit a01145a, merged 2026-11-19T18:20:16Z).
+  Supervisor fix pre-merge: meta description corrected — it
+  said "the other twelve run Android 6.0 or older", wrong for
+  the five 7.0 phones; now "only seven of fourteen clear
+  Android 7.0" (136 chars).
   Query 103 verified by the lead from live evidence (no top
   result is an Intex-specific phone-to-USB photo-backup
   guide); top results are a YouTube OTG video, the Photos to
@@ -24,7 +28,7 @@
   route).
   Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
   llms-full.txt, feed.xml updated. Title 35 chars, meta
-  description 137 chars, JSON-LD validated by parse; sitemap
+  description 136 chars, JSON-LD validated by parse; sitemap
   and feed XML parse. Feed now counts 104 items; blog JSON-LD
   counts 104 BlogPosting entries. searches.md Query 103 row
   present ("back up Intex photos to USB drive without
