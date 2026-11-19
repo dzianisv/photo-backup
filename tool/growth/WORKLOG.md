@@ -1,5 +1,100 @@
 # SnapDisk — Work Log
 
+## WL-141 — Back up Hisense photos to USB article, 109th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #251 MERGED (head da5ec42, CI run 44631828631
+  success; merge commit 11c1689, merged 2026-11-19T22:53:42Z).
+  Query 108 verified by the lead from live evidence (no top
+  result is a Hisense-specific phone-to-USB photo-backup
+  guide); top results are five generic Android guides (a
+  YouTube OTG video, Dr.Fone, an Android Central forum thread,
+  thecomputerbasics.com, epictechtips.com) — none mentions
+  Hisense; real gap stands.
+  New docs/hisense-photos-to-usb.html ("Back up Hisense photos
+  to a USB drive (no computer)"), following the
+  WL-54–WL-140 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: the one-tap route exists on
+  two covered Hisense phones only — the A2 Pro and A6; six
+  more clear Android 7.0 but their OTG is half-stated or
+  unstated, so on those the drive mounting is the test; the
+  two 2016–2017 models below Android 7.0 cannot install
+  SnapDisk at all, so on those the computer copy is the route).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 37 chars, meta
+  description 156 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 109 items; blog JSON-LD
+  counts 109 BlogPosting entries. searches.md Query 108 row
+  present ("back up Hisense photos to USB drive without
+  computer" — HOW-TO GAP): top results are five generic
+  Android guides, none is a guide for a Hisense phone.
+  Hisense specifics verified live: the one-tap route exists on
+  two phones only — the A2 Pro and A6 clear Android 7.0 and
+  list USB OTG; one more clears Android 7.0 but its OTG is
+  half-stated — the C30 Rock (mobilexfiles' secret-code page
+  lists OTG in the hardware-test menu, but no spec listing
+  states OTG for it) — and five more clear Android 7.0 but no
+  source states OTG for them at all — the C30 Lite, A5, A5 Pro
+  CC, A6L and A7 — so on those six SnapDisk installs but the
+  one-tap route is unproven until a drive mounts; two run below
+  Android 7.0 and cannot run SnapDisk at all — the C20 on 5.0,
+  5.1 per versus.com, and the A2 on 6.0. Six take USB Type-C,
+  so a USB-C drive plugs straight into those six; three take
+  micro-USB; no source found states the C20's connector at
+  all. Five take a microSD card, so the card-reader route works
+  on five; no source states a card slot for the other five at
+  all.
+  Conflicts between sources, all named in the article: the
+  C20's Android is two numbers — 5.0 per phonesdata, 5.1 per
+  versus.com; the C30 Lite's release date is two listings —
+  February 2016 per phonesdata, which sits oddly against its
+  Android 7.0, since Android 7.0 shipped in August 2016; the
+  A2 Pro's chipset and RAM are two numbers — Snapdragon 625
+  with 4 GB per notebookcheck, gizmochina and phonesdata,
+  Snapdragon 660 with 6 GB per namu.wiki's Yotaphone page,
+  which reads like the Yota 3+; the A5's chipset is two numbers
+  on the same pages — Snapdragon 660 in one paragraph of
+  projects-raspberry and electronics-lab, Snapdragon 439
+  everywhere else on those pages and per MobileRead, devicesfaq
+  and goodereader — and its storage is two listings — 32 GB in
+  goodereader's review unit, 32 GB or 64 GB per MobileRead; the
+  A6's Android is three numbers — 8.0 per phonesdata, 8.1 per
+  UL benchmarks and phoneinfo, 9.0 per goodereader, whose
+  review describes the A6L's 6.53-inch LCD hardware — and its
+  display is two numbers — a 6.01-inch AMOLED per phonesdata, a
+  6.53-inch IPS per goodereader, which is the A6L's screen —
+  and its battery is two numbers — 3300 mAh per UL benchmarks
+  and chinacoupon, 3800 mAh per goodereader, which is the A6L's
+  battery — and its microSD ceiling is two numbers — up to 128
+  GB per phoneinfo, up to 256 GB per goodereader's A6L piece;
+  the A7's rear camera is two numbers — 16 MP per ereaderx, 13
+  MP per liliputing's A7 CC piece. Four covered models ship
+  with no Google Play at all — the A5, A5 Pro CC, A6L and A7
+  per goodereader — so on those four the GitHub APK sideload is
+  the only install route.
+  VaultDrive needs Android 8 or later per its own site, so
+  five of the ten can run it — the A5, A5 Pro CC, A6, A6L and
+  A7 — and AppBrain lists 12.1 or later, which no covered
+  Hisense phone clears, since the newest covered model runs
+  Android 10. FotoSafe needs Android 9 or later with USB host
+  or OTG support, so four of the ten clear the version floor —
+  the A5, A5 Pro CC, A6L and A7 — but none of the four lists
+  OTG, so FotoSafe is unproven on all four until a drive
+  mounts. Hisense has no phone-to-USB backup tool of its own —
+  no Hisense-specific backup advice turned up in any source
+  beyond a computer copy, Google Drive, or Google Photos; the
+  devicesfaq backup FAQ names the computer copy as the most
+  economical method, and names the file manager on a Hisense
+  phone as Files, or Files by Google.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-141, 109th how-to):
+  docs/hisense-photos-to-usb.html.
+  Fallback for WL-142: not yet assigned by the supervisor —
+  no next brand was named in the WL-141 task, so none is
+  claimed here.
+
 ## WL-140 — Back up Elephone photos to USB article, 108th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
