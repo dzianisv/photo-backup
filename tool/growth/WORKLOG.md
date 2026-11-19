@@ -1,5 +1,116 @@
 # SnapDisk — Work Log
 
+## WL-142 — Back up Meizu photos to USB article, 110th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #253 PENDING MERGE (head 7b2e10e, CI run 44640204775
+  pending; merge receipt PENDING — supervisor fills pre-merge).
+  Query 109 verified by the lead from live evidence (no top
+  result is a Meizu-specific phone-to-USB photo-backup
+  guide); top results are six generic Android guides (Dr.Fone,
+  a YouTube OTG video, a Play app listing, thegadgetians.com,
+  softhandtech.com, a Substack picture-keeper guide) — none
+  mentions Meizu; real gap stands.
+  New docs/meizu-photos-to-usb.html ("Back up Meizu photos
+  to a USB drive (no computer)"), following the
+  WL-54–WL-141 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: the one-tap route exists on
+  eight covered Meizu phones only — the M6s, E3, 15, 15 Plus,
+  16X, 16s, 16Xs and Note 9; five more clear Android 7.0 but
+  their OTG is disputed between sources, so on those the drive
+  mounting is the test; two more clear Android 7.0 but list
+  OTG No, so on those there is no phone route at all; the six
+  2016 models below Android 7.0 cannot install SnapDisk at
+  all, so on those the computer copy is the route).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 35 chars, meta
+  description 145 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 110 items; blog JSON-LD
+  counts 110 BlogPosting entries. searches.md Query 109 row
+  present ("back up Meizu photos to USB drive without
+  computer" — HOW-TO GAP): top results are six generic
+  Android guides, none is a guide for a Meizu phone.
+  Meizu specifics verified live: the one-tap route exists on
+  eight phones only — the M6s, E3, 15, 15 Plus, 16X, 16s,
+  16Xs and Note 9 clear Android 7.0 and list USB OTG; five
+  more clear Android 7.0 but their OTG is disputed between
+  sources — the Pro 7 Plus, M6 Note, 15 Lite, 16th and 17 —
+  so on those five SnapDisk installs but the one-tap route is
+  unproven until a drive mounts; two more clear Android 7.0
+  but list OTG No — the Pro 7 and M6 — so on those two there
+  is no phone route at all; six run below Android 7.0 and
+  cannot run SnapDisk at all — the MX6, Pro 6, Pro 6 Plus,
+  M5 Note and M5 on 6.0, and the M3 Note on 5.1. Twelve take
+  USB Type-C, so a USB-C drive plugs straight into those
+  twelve; three take micro-USB. Five take a microSD card, so
+  the card-reader route works on five of them, with the Pro
+  7's card disputed and the 16s's unstated; eight take no card
+  at all.
+  Conflicts between sources, all named in the article: the
+  Pro 7 Plus's OTG is disputed — gadgets360 lists USB OTG No,
+  mobiledokan lists USB OTG Yes, niora lists USB type-c OTG
+  and unite4buy mentions OTG; the M6 Note's Android is two
+  numbers — 7.0 per kimovil and alza, 7.1.2 per Wikipedia,
+  whatmobile, techwikies, mobiledokan and eIMEI24 — and its
+  OTG is disputed — kimovil lists Yes and mobiledokan lists
+  Yes, techwikies lists No — and its microSD ceiling is two
+  numbers — up to 128 GB per Wikipedia and alza, up to 256 GB
+  per mobiledokan, whatmobile and eIMEI24; the M6s's Android
+  is two numbers — 7.0 per Wikipedia, phoneinfo, phonesdata
+  and eIMEI24, 7.1.2 per gadgets360 and yugatech — and its
+  microSD ceiling is two numbers — up to 128 GB per Wikipedia,
+  phoneinfo and gadgets360, up to 256 GB per phonesdata,
+  eIMEI24, whatech and yugatech; the M6's microSD ceiling is
+  two numbers — up to 256 GB per whatmobile and ubergizmo, up
+  to 128 GB per gadgets360's launch article; the E3's Android
+  is two numbers — 7.1.1 per ubergizmo, 7.1.2 per GSMArena,
+  gadgets360 and eIMEI24 — and its microSD ceiling is two
+  numbers — up to 128 GB per gadgets360, up to 256 GB per
+  eIMEI24; the 15 Lite's OTG is disputed — mobiledokan lists
+  USB OTG Yes and mobilegizmo lists USB OTG Support Yes,
+  phonebunch lists USB OTG Not Supported and whatmobile lists
+  No — and its microSD ceiling is three numbers — up to 256 GB
+  per phonebunch and whatmobile, up to 128 GB per mobiledokan,
+  up to 512 GB per Wikipedia; the 16th's Android is two
+  numbers — 8.0 per smartprix, gadgets360 and ubergizmo, 8.1
+  per GSMArena — and its OTG is disputed — ubergizmo lists USB
+  OTG, smartprix lists only USB Charging; the 16X's Android is
+  two numbers — 8.1 per ubergizmo, smartprix and phonecorridor,
+  8.0 per GSMArena — and its RAM is two numbers — 6 GB per
+  phonesdata and ubergizmo, 4 GB per smartprix's 64 GB listing
+  — and its battery is two numbers — 3100 mAh per GSMArena and
+  mobilemall, 3210 mAh per smartprix; the 17's OTG is disputed
+  — phonebunch lists USB OTG Supported and whatmobile lists
+  Yes, assuredzone lists OTG No and smartprix lists only USB
+  Charging; the Pro 7's microSD slot is disputed — gadgets360
+  lists expandable storage Yes, whatmobile lists no card slot.
+  Kimovil lists the M6 Note without Google Mobile services, so
+  on a Chinese-variant M6 Note the GitHub APK sideload is the
+  install route.
+  VaultDrive needs Android 8 or later per its own site, so
+  six of the fifteen can run it — the 16th, 16X, 16s, 16Xs,
+  Note 9 and 17 — and AppBrain lists 12.1 or later, which no
+  covered Meizu phone clears, since the newest covered model
+  runs Android 10. FotoSafe needs Android 9 or later with USB
+  host or OTG support, so four of the fifteen clear the version
+  floor — the 16s, 16Xs, Note 9 and 17 — and the OTG condition
+  is proven on three of the four and disputed on the 17, so
+  FotoSafe is proven on three and unproven on one until a drive
+  mounts. Meizu has no phone-to-USB backup tool of its own —
+  no Meizu-specific backup advice turned up in any source
+  beyond a computer copy, Google Drive, or Google Photos; the
+  devicesfaq backup FAQ names the computer copy as the most
+  economical method, and names the file manager on a Meizu
+  phone as Files, or Files by Google.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-142, 110th how-to):
+  docs/meizu-photos-to-usb.html.
+  Fallback for WL-143: not yet assigned by the supervisor —
+  no next brand was named in the WL-142 task, so none is
+  claimed here.
+
 ## WL-141 — Back up Hisense photos to USB article, 109th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
