@@ -7130,6 +7130,97 @@ demand is read off competitor install velocity instead (see
   exists in docs/ yet and no searches.md row (rugged
   intrinsically safe Android phones, IS530.x line).
 
+### 81. "back up i.safe MOBILE photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an i.safe-specific
+  guide to backing up photos to a USB drive at all, let
+  alone an i.safe-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  drfone.wondershare.com, "Move iPhone Photos to USB or
+  External Drive"
+  (drfone.wondershare.com/apple-iphone/move-iphone-photos-to-usb.html
+  — move photos from an iPhone to an external drive with
+  the Files app and a compatible drive, or through a Mac or
+  Windows PC and then to external storage. An iPhone guide
+  — it says nothing about i.safe MOBILE, or about Android
+  at all); ubackup.com, "Transfer Photos from iPhone to
+  Memory Stick Without Computer"
+  (ubackup.com/phone-backup/transfer-photos-from-iphone-to-memory-stick-without-computer.html
+  — connect a USB stick to an iPhone with a Lightning to
+  USB adapter, open Photos, select the photos, tap Export
+  Unmodified Original, and save to the drive. An iPhone
+  guide — it says nothing about i.safe MOBILE, or about
+  Android at all);
+  cdn.prod.website-files.com, "Transferring photos from
+  your iPhone to a USB drive"
+  (cdn.prod.website-files.com/66f411127d0552db0793535e/6837b7ada5021b62a1735268_sasibefovoxonogetofasip.pdf
+  — three methods for moving iPhone pictures to a flash
+  drive, mostly through a Windows PC or a Mac, plus a
+  Lightning-to-USB adapter route without a computer. An
+  iPhone guide — it says nothing about i.safe MOBILE, or
+  about Android at all); photocleanse.app, "Transfer Photos
+  from iPhone to an External Hard Drive"
+  (photocleanse.app/guides/transfer-photos-iphone-external-drive/
+  — connect the drive to the iPhone, open Photos, select
+  the photos, tap Share, then Export Unmodified Original,
+  tap the drive below Locations and tap Save; on a Mac,
+  Image Capture imports straight into a folder on the
+  drive. An iPhone guide — it says nothing about i.safe
+  MOBILE, or about Android at all); FotoSafe, "Back up
+  Android photos to USB"
+  (fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/
+  — back up Android photos to a USB drive without a
+  computer: connect the drive, select it as the
+  destination in FotoSafe, review the media and start
+  copying, through the Android system picker. The only
+  Android result — a real no-computer phone-to-USB guide,
+  and a real one-tap app — but a generic Android guide,
+  not an i.safe guide: it says nothing about an i.safe
+  model, its USB port, or its hazardous-area rules).
+  Google Photos is cloud, not USB. i.safe specifics: no
+  i.safe-specific guide to backing up photos to a USB drive
+  turned up at all — not one top result even mentions
+  i.safe MOBILE; no source found labels any i.safe MOBILE
+  USB port OTG — every datasheet and manual says only that
+  the USB interface is for charging and data transfer — so
+  the drive mounting is the test on all seven covered
+  models; i.safe's own manuals say to use the USB interface
+  only outside explosion-hazardous areas — wired USB
+  connections are prohibited inside them, and only approved
+  accessories may be connected to it; the IS540.1 runs
+  Android 12 at launch in one benchmark listing and Android
+  14 in a reseller listing, the IS530.2 runs Android 13 in
+  its 2024 datasheet but Android 10, upgradable to 13, in an
+  older reseller sheet, and the IS530.RG runs Android 14 in
+  its March 2026 datasheet but Android 10, upgradable to 13,
+  in an older reseller sheet; the IS530.1 runs Android 10 at
+  launch with an OTA upgrade to Android 14 announced for
+  2025, the IS540.2 runs Android 12 with the Android 14
+  upgrade announced for the end of 2024, and the IS655 runs
+  Android 10, so all seven clear SnapDisk's Android 7.0
+  minimum; the IS655 is the only covered model with
+  micro-USB, so it needs a micro-USB OTG adapter while the
+  other six need a USB-C OTG adapter, and its battery is
+  integrated, not replaceable, while the IS530.x and IS540.x
+  have replaceable batteries; the IS540.1's microSD capacity
+  is up to 128 GB in the manuals and one reseller listing
+  and up to 256 GB in another reseller listing, so the
+  article states no capacity for that model; Google Play
+  comes with the EEA versions only, and some variants, such
+  as the mining versions, may not have it; no IS530.3
+  variant turned up in the sources found; no source found
+  names the stock file manager on an i.safe device — the
+  manuals point at Google's Android support pages.
+  i.safe MOBILE has no phone-to-USB photo backup tool of
+  its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-114, 82nd how-to):
+  docs/isafe-mobile-photos-to-usb.html.
+  Fallback for WL-115: Ecom Smart-Ex — no Ecom article
+  exists in docs/ yet and no searches.md row (Pepperl+Fuchs
+  intrinsically safe Android phones, Smart-Ex 02/03 line).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
