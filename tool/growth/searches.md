@@ -6767,6 +6767,85 @@ demand is read off competitor install velocity instead (see
   docs/ yet and no searches.md row (M-series rugged
   enterprise Android handhelds/tablets).
 
+### 77. "back up Winmate photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Winmate-specific
+  guide at all, let alone a Winmate-specific automated
+  whole-library backup with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 18, 2026, live web search):
+  pixoneye.com, "How to Transfer Photos from Your Phone to a
+  USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage with a
+  supported file manager on Android or Photos and Files on
+  iPhone, make a trial copy first, use Copy rather than Move.
+  Generic Android and iPhone, and a manual guide — and it
+  says nothing about a Winmate device);
+  YouTube, "How to Connect USB Drive to Android Phone to Move
+  Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG adapter + the
+  phone's built-in file manager, no computer or internet.
+  Generic Android, and a manual guide — and it says nothing
+  about a Winmate device); drfone.wondershare.com, "4
+  Practical Ways to Transfer Photos from Android to USB Flash
+  Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer directly with an OTG adapter, through a PC as a
+  middleman in File Transfer mode, wirelessly through Google
+  Drive or AirDroid, or in bulk with Wondershare Dr.Fone on
+  Windows or Mac. Generic Android, and a manual guide — and it
+  says nothing about a Winmate device, and its bulk-export
+  route needs a computer); alibaba.com, "How To Quickly
+  Backup Your Phone Photos Without Using Cloud Storage"
+  (alibaba.com/product-insights/how-to-quickly-backup-your-phone-photos-without-using-cloud-storage.html
+  — transfer via a USB cable and a computer, or use a portable
+  SSD or flash drive with OTG support, or a NAS device.
+  Generic Android and iPhone, and a manual guide — and it
+  says nothing about a Winmate device, and its fastest method
+  needs a computer); softhandtech.com, "Transfer Photos from
+  Phone to Memory Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — transfer with a computer as a middleman, directly with OTG
+  support, or through cloud services. Generic Android and
+  iPhone, and a manual guide — and it says nothing about a
+  Winmate device, and its first method needs a computer).
+  Google Photos is cloud, not USB. Winmate specifics: no
+  Winmate-specific file advice pointing at a USB drive
+  turned up at all; OTG is confirmed in the spec tables on
+  five of the six models that can run SnapDisk — the
+  M700DQ8-EX lists USB 3.0 Type C OTG and runs Android 9.0,
+  the M700DQ9 lists USB 3.0 Type C OTG and runs Android 15.0
+  in its spec table (Android 13 in its page body, Android 11
+  in a summary line on the same page), the M700DM9 lists USB
+  Type C OTG and runs Android 11.0, the M900MGN lists USB 2.0
+  Type C OTG plus a USB 3.0 Type A port and runs Android
+  13.0, and the P400M9 lists USB Type C OTG and runs Android
+  11.0; the G900G7 has a USB 3.0 Type-A port and runs Android
+  13, but neither Winmate nor the reseller listing labels its
+  Type-C port OTG, so the Type-A port is the confirmed host
+  route on that model; only the M900MGN and the G900G7 take a
+  standard USB-A drive with no adapter — the other four need a
+  USB-C OTG adapter; the M700DQ8-EX is discontinued, replaced
+  by the M700DQ9; the P400M9's screen is 4.0 inches in its
+  spec table and 4.3 inches in its FAQ, and its battery is
+  2,700 mAh in the spec table and "typically around
+  3000-4000mAh" in the FAQ; no source found states a camera
+  spec for the M700DQ9, the M700DM9 or the G900G7, or a
+  microSD capacity for any of the six models, or names the
+  stock file manager on a Winmate device; the M700DM8 turned
+  up by name only, no source found states the G500G7's Android
+  version or labels either of its USB-C ports OTG, the G900AD
+  runs Windows and cannot run SnapDisk, and the FM10MG-V is a
+  vehicle-mount terminal, not a handheld or tablet in scope;
+  SOTI MobiControl is device management, not a photo backup.
+  Winmate has no phone-to-USB backup tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-110, 78th how-to):
+  docs/winmate-photos-to-usb.html.
+  Fallback for WL-111: Juniper Systems — no Juniper article
+  exists in docs/ yet and no searches.md row (Mesa/Archer
+  rugged Android handhelds/tablets).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
