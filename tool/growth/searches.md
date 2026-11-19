@@ -7459,10 +7459,141 @@ demand is read off competitor install velocity instead (see
 - Verdict: how-to article material, not a listing keyword.
   Article published Nov 19, 2026 (WL-116, 84th how-to):
   docs/bartec-photos-to-usb.html.
-  Fallback for WL-117: Bullitt — no Bullitt article
-  exists in docs/ yet and no searches.md row (rugged-phone
-  maker behind the CAT S-series and Land Rover Explore
-  phones).
+  Fallback for WL-117 was Bullitt — REPLACED: Bullitt is a
+  duplicate, because Bullitt Group's phones are already
+  covered by three existing articles — CAT S-series (WL-72,
+  docs/cat-photos-to-usb.html), Motorola Defy (WL-44,
+  docs/motorola-photos-to-usb.html), and Land Rover Explore
+  (WL-89, docs/land-rover-explore-photos-to-usb.html).
+  WL-117 is iData instead (Query 84 below).
+
+### 84. "back up iData photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an iData-specific
+  guide to backing up photos to a USB drive at all, let
+  alone an iData-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  pixoneye.com, "How to Transfer Photos from Your Phone
+  to an USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage, open
+  the files from the destination, make an independent
+  backup before deleting anything; on Android, connect
+  the drive with the matching connector or OTG adapter,
+  open Files by Google or the phone's file manager, find
+  DCIM/Camera, select a small batch and choose Copy to.
+  A generic Android and iPhone guide — it says nothing
+  about iData, or about a handheld data terminal);
+  forums.macrumors.com, "Have only iPhone how to backup
+  my photos/videos to another harddrive or similar?"
+  (forums.macrumors.com/threads/have-only-iphone-how-to-backup-my-photos-videos-to-another-harddrive-or-similar.2269533/
+  — a forum thread asking about backing up iPhone photos
+  and videos to an external drive with no computer:
+  Lightning to USB adapter, iCloud, Files app. An iPhone
+  thread — it says nothing about iData, or about Android
+  at all);
+  manuals.plus, "JDTDC USB Lightning Flash Drive For
+  iPhone, iPad, iPod and Computers User Manual"
+  (manuals.plus/m/a0fc6e5bed662f1968c4c82de5685e76930f9633ddfc3efe66cf19f38bfd402b_optim.pdf
+  — the manual for a Lightning flash drive for iPhone and
+  iPad: one-click backup of all photos and videos in the
+  Camera roll to the flash drive, with its own app. An
+  iPhone accessory manual — it says nothing about iData,
+  or about Android at all);
+  photocleanse.app, "Transfer Photos from iPhone to an
+  External Hard Drive"
+  (photocleanse.app/guides/transfer-photos-iphone-external-drive/
+  — transfer iPhone photos to an external hard drive
+  without a computer: connect the drive, open Photos,
+  select, Share, Export Unmodified Original, tap the
+  drive under Locations, Save. An iPhone guide — it says
+  nothing about iData, or about Android at all);
+  forums.macrumors.com, "Best way to transfer photos
+  directly to portable hard drive?"
+  (forums.macrumors.com/threads/best-way-to-transfer-photos-directly-to-portable-hard-drive.1934981/
+  — a forum thread about dumping iPhone photos straight
+  to a portable hard drive on holiday with no laptop:
+  wireless drives, iCloud, SanDisk Connect. An iPhone
+  thread — it says nothing about iData, or about Android
+  at all).
+  A second search ("iData K8 K3S 95S rugged Android
+  handheld data terminal specifications Android version
+  OTG") returned the iData K8 datasheet (Android 11,
+  "OTG interface: Supporting"), the K8 Pro user guide
+  (Android 14, "OTG Interface: Support") and the K3S
+  manual (Android 12 GMS, "OTG Interface: Support") —
+  no iData-specific backup guide, and no iData 95S at
+  all. A third search ("iData 95S handheld Android
+  version OTG specifications") returned Newland's MT95
+  (a different brand's handheld), an X95 tablet, the
+  Doogee S95 Pro and the K3S manual — no iData 95S
+  exists in the sources found. A fourth search ("iData
+  T1 T2 K1 mobile terminal Android version
+  specifications camera") returned the T1 Pro datasheet
+  (Android 14 GMS, "OTG Interface: Support"), the K1
+  datasheet (Android 8.1, 13 MP optional camera) and
+  the T1 manual (Android 9.0 Chinese / 10.0 GMS, "OTG
+  interface: Supporting") — no iData-specific backup
+  guide. A fifth search ("iData T1 OTG interface
+  support datasheet" + "iData K1 OTG interface Android
+  8.1 handheld datasheet") returned OTG Support
+  confirmations for the T1, T1 Pro, K1, K1S (Android
+  9.0 / 11.0 GMS), K3S, K8 Pro and K8 Pro Cold
+  (Android 14, -40C to 70C) and the T3 (Android 11) —
+  no iData-specific backup guide. A sixth search
+  ("iData 50 iData 95 older model Android handheld
+  terminal") returned the iData 95 history (first
+  iData 95 born early 2013, first mass-produced Android
+  PDA, 500,000+ units sold, latest version Android
+  10.0), the iData 50 datasheet (Android 6.0) and the
+  95W (Android 6.0, Google Play Store compatible) and
+  55HC (Android 6.0) listings — no iData-specific
+  backup guide. iData specifics: no iData-specific
+  guide to backing up photos to a USB drive turned up
+  at all — not one top result even mentions iData, and
+  the search engine reads "iData" as an iPhone
+  question, returning four iPhone results out of five;
+  nine of the ten covered models list "OTG Interface:
+  Support" in their datasheets (K1, K1S, K3S, K8, K8
+  Pro, K8 Pro Cold, T1, T1 Pro, T3) while no source
+  found labels the iData 95's USB port OTG, so on the
+  95 the drive mounting is the test; there is no iData
+  95S — the searches for it return Newland's MT95, a
+  different brand's handheld already covered in its own
+  guide; the K1S runs Android 9.0 (GMS) or Android
+  11.0 (GMS) in iData's own datasheet, the T1 runs
+  Android 9.0 in its Chinese version and Android 10.0
+  in its GMS version, and the iData 50 runs Android
+  6.0 in its datasheet but Android 9.0 in one Octopus
+  variant listing; the K1 runs Android 8.1, the K3S
+  Android 12 with GMS, the K8 Android 11, the K8 Pro
+  and K8 Pro Cold Android 14, the T1 Pro Android 14
+  with GMS, the T3 Android 11, and the iData 95
+  Android 10.0 in its latest version, so all ten clear
+  SnapDisk's Android 7.0 minimum; the K1's 13 MP
+  camera is optional, the T1 and T1 Pro carry 13 MP
+  rear and 5 MP front cameras, and no source found
+  states a camera spec for the other seven; no source
+  found states microSD support or a microSD capacity
+  for any covered iData model; the iData 50, the iData
+  55HC and the iData 95W run Android 6.0, below the
+  minimum, so they cannot run SnapDisk at all; the
+  iData 65, 70 and 80 turned up by name only in a
+  MobileNAV configuration guide; the GMS models (K1S,
+  K3S, T1 GMS version, T1 Pro) ship Google Play, the
+  T1 Chinese version has no GMS so sideload the APK
+  there, and no source found states whether the K1,
+  K8, K8 Pro, K8 Pro Cold, T3 or iData 95 ship Google
+  Play; no source found names the stock file manager
+  on an iData terminal.
+  iData has no phone-to-USB photo backup tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-117, 85th how-to):
+  docs/idata-photos-to-usb.html.
+  Fallback for WL-118: Spectralink — no Spectralink
+  article exists in docs/ yet and no searches.md row
+  (Versity 95/96/97 enterprise Android smartphones).
 
 ## Winners and what changed
 

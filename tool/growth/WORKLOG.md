@@ -1,5 +1,127 @@
 # SnapDisk — Work Log
 
+## WL-117 — Back up iData photos to USB article, 85th how-to (DRAFT — article PR open)
+
+- Owner: SEO/GEO lane lead. State: DRAFT — article PR #202 open
+  (head 005a195), supervisor merges after readback.
+  New docs/idata-photos-to-usb.html ("Back up
+  iData photos to a USB drive (no computer)"),
+  following the WL-54–WL-116 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 44 chars,
+  meta description 150 chars, JSON-LD validated by parse;
+  sitemap and feed XML parse. Feed now counts 85 items; blog
+  JSON-LD counts 85 BlogPosting entries.
+  searches.md Query 84 row present ("back up iData photos
+  to USB drive without computer" — HOW-TO GAP).
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (backup/PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (backup/ProPrefs.FREE_BACKUP_BYTES_LIMIT = 5 GiB); Pro
+  $9.99 one-time = auto-backup on connect + unlimited size
+  (strings.xml pro_price, pro_unlocked); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB
+  skipped with reason (util/FilesystemInfo.FAT32_MAX_FILE_BYTES);
+  raw byte-stream copy (backup/BackupEngine.copyWithResume —
+  no decode/re-encode, .part resume, size verification after
+  copy, retry once) with size verification after copy.
+  ApplicationId unchanged (dev.dzianisv.snapdisk,
+  app/build.gradle.kts, minSdk 24 = Android 7.0); app tree
+  untouched vs main (only docs/ + tool/growth/searches.md
+  changed).
+  Search evidence (Nov 19, 2026 live web search): Query 84
+  is a real gap — no top result is an iData-specific guide
+  to backing up photos to a USB drive without a computer at
+  all; not one top result even mentions iData, and the
+  search engine reads "iData" as an iPhone question.
+  pixoneye.com, "How to Transfer Photos from Your Phone to
+  an USB Stick" (generic Android/iPhone guide — Files by
+  Google, DCIM/Camera, Copy to; says nothing about iData,
+  or about a handheld data terminal);
+  forums.macrumors.com, "Have only iPhone how to backup my
+  photos/videos to another harddrive or similar?" (iPhone
+  thread — Lightning adapter, iCloud, Files app; says
+  nothing about iData, or about Android at all);
+  manuals.plus, "JDTDC USB Lightning Flash Drive For iPhone,
+  iPad, iPod and Computers User Manual" (iPhone accessory
+  manual — one-click Camera roll backup with its own app;
+  says nothing about iData, or about Android at all);
+  photocleanse.app, "Transfer Photos from iPhone to an
+  External Hard Drive" (iPhone guide — Export Unmodified
+  Original to the drive; says nothing about iData, or
+  about Android at all);
+  forums.macrumors.com, "Best way to transfer photos
+  directly to portable hard drive?" (iPhone thread —
+  wireless drives, iCloud, SanDisk Connect; says nothing
+  about iData, or about Android at all). A second search
+  (iData K8 K3S 95S models) returned the K8 datasheet
+  (Android 11, OTG Supporting), the K8 Pro user guide
+  (Android 14, OTG Support) and the K3S manual (Android
+  12 GMS, OTG Support) — no iData-specific backup guide,
+  and no iData 95S at all. A third search (iData 95S)
+  returned Newland's MT95 (a different brand's handheld),
+  an X95 tablet, the Doogee S95 Pro and the K3S manual —
+  no iData 95S exists in the sources found. A fourth
+  search (iData T1 T2 K1) returned the T1 Pro datasheet
+  (Android 14 GMS, OTG Support), the K1 datasheet
+  (Android 8.1, 13 MP optional camera) and the T1 manual
+  (Android 9.0 Chinese / 10.0 GMS, OTG Supporting) — no
+  iData-specific backup guide. A fifth search (T1 / K1
+  OTG) returned OTG Support confirmations for the T1,
+  T1 Pro, K1, K1S (Android 9.0 / 11.0 GMS), K3S, K8 Pro
+  and K8 Pro Cold (Android 14, -40C to 70C) and the T3
+  (Android 11) — no iData-specific backup guide. A sixth
+  search (iData 50 / 95 older models) returned the iData
+  95 history (first iData 95 born early 2013, first
+  mass-produced Android PDA, 500,000+ units sold, latest
+  version Android 10.0), the iData 50 datasheet (Android
+  6.0) and the 95W (Android 6.0) and 55HC (Android 6.0)
+  listings — no iData-specific backup guide.
+  Honest limits recorded in the article: there is no
+  iData 95S — the searches for it return Newland's MT95,
+  a different brand's handheld already covered in its own
+  guide; no source found labels the iData 95's USB port
+  OTG, so on the 95 the drive mounting is the test, while
+  the other nine list "OTG Interface: Support"; the K1S
+  runs Android 9.0 (GMS) or Android 11.0 (GMS) in iData's
+  own datasheet, the T1 runs Android 9.0 in its Chinese
+  version and Android 10.0 in its GMS version, and the
+  iData 50 runs Android 6.0 in its datasheet but Android
+  9.0 in one Octopus variant listing; the K1's 13 MP
+  camera is optional, so a K1 without the camera option
+  takes no photos at all; no source found states microSD
+  support or a microSD capacity for any covered iData
+  model, or a camera spec for the K1S, K3S, K8, K8 Pro,
+  K8 Pro Cold, T3 or iData 95; the GMS models (K1S, K3S,
+  T1 GMS version, T1 Pro) ship Google Play, the T1
+  Chinese version has no GMS so sideload the APK there,
+  and no source found states whether the K1, K8, K8 Pro,
+  K8 Pro Cold, T3 or iData 95 ship Google Play; the
+  iData 50, the iData 55HC and the iData 95W run Android
+  6.0, below the minimum, so they cannot run SnapDisk at
+  all; the iData 65, 70 and 80 turned up by name only;
+  no source found names the stock file manager on an
+  iData terminal; iData has no phone-to-USB photo backup
+  tool of its own.
+  Bullitt-duplicate note: the WL-117 fallback was Bullitt,
+  REPLACED — Bullitt is a duplicate, because Bullitt
+  Group's phones are already covered by three existing
+  articles — CAT S-series (WL-72,
+  docs/cat-photos-to-usb.html), Motorola Defy (WL-44,
+  docs/motorola-photos-to-usb.html), and Land Rover
+  Explore (WL-89, docs/land-rover-explore-photos-to-usb.html).
+  WL-117 is iData instead (Query 84 above).
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-117, 85th how-to):
+  docs/idata-photos-to-usb.html.
+  Fallback for WL-118: Spectralink — no Spectralink article
+  exists in docs/ yet and no searches.md row (Versity
+  95/96/97 enterprise Android smartphones).
+
 ## WL-116 — Back up Bartec photos to USB article, 84th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
