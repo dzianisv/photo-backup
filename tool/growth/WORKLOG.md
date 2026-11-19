@@ -1,9 +1,17 @@
 # SnapDisk — Work Log
 
-## WL-120 — Back up RuggON photos to USB article, 88th how-to (DRAFT)
+## WL-120 — Back up RuggON photos to USB article, 88th how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: DRAFT — article PR open,
-  supervisor merges after readback.
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #208 MERGED (merge f31bf1e, 2026-11-19T11:52:23Z, CI run
+  44518321030 success on head 281fcef); post-merge main runs
+  Android PR 44518677014 success + pages 44518676140 success. Live
+  fetch: ruggon-photos-to-usb.html 200 (correct title, fresh crawl
+  11:54 UTC), feed.xml 88 items incl. RuggON. Query 87 verified by
+  the lead from live evidence (no top result mentions RuggON);
+  supervisor re-verified pre-merge by readback (feed 88 items incl.
+  RuggON, sitemap incl. URL, title correct, Query 87 row present,
+  only docs/ + tool/growth changed). No rebase needed (mergeable CLEAN).
   New docs/ruggon-photos-to-usb.html ("Back up
   RuggON photos to a USB drive (no computer)"),
   following the WL-54–WL-119 article template exactly
