@@ -1,5 +1,66 @@
 # SnapDisk — Work Log
 
+## WL-102 — Back up Newland photos to USB article, 71st how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Merged PR #172, main 96efc9c, Android PR CI run 44434255522
+  success. Live verified by readback: article 200 with correct
+  title, blog index 200 incl. Newland, feed.xml 71 items incl.
+  Newland, sitemap 200 incl. the new URL.
+  New docs/newland-photos-to-usb.html ("Back up Newland photos
+  to a USB drive (no computer)"), following the WL-54–WL-101 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 37 chars, meta
+  description 156 chars, JSON-LD validated by parse; sitemap and
+  feed XML parse. Feed now counts 71 items.
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search): Query 70 ("back
+  up Newland photos to USB drive without computer") is a real gap —
+  no Newland-specific phone-to-USB guide in the top results at all;
+  not one result even mentions Newland. Generic Android OTG guides
+  (Dr.Fone, Pixoneye, Alibaba), a YouTube OTG video, the Android
+  Central forum, and the rival "Photos to USB: OTG Backup" Play
+  listing cover only the manual route, not a Newland guide.
+  Newland models covered (spec/manual/retailer sources, Nov 18):
+  OTG confirmed on three — MT90 Orca (Android 7.0 per distributor
+  spec; UL benchmarks says 5.1, flagged as a discrepancy — check
+  Settings first), MT90 Orca II (Android 8.1, "Micro USB, OTG,
+  Pogo pins"), MT95 Kambur Pro (Android 11, "USB-C, OTG").
+  OTG unconfirmed — drive mounting is the test — on eleven: MT90
+  Orca III (8.1), MT90 Orca Pro (10), MT65 Beluga IV (8.1), MT65
+  Beluga V (11), MT67 Sei (11, one listing says 13), MT67 Sei II
+  (15), N7 Cachalot Pro (10), N7 Cachalot Pro II (13, Android 15
+  upgrade released), MT93 Megattera Pro (13, Android 15 upgrade
+  released), MT95 Kambur Pro II (13), MT95 Kambur Pro III (15).
+  Below the Android 7.0 minimum: MT65 Beluga II (Android 5.1) —
+  computer copy is the route there. NQuire kiosks noted as
+  wall-mounted terminals, not photo devices (750 Stingray / 1500
+  Mobula list host+OTG on Android 7.1; 1000 Manta III / 750
+  Stingray II run Android 13 with USB-A ports, OTG unconfirmed).
+  Honest limits recorded in the article: OTG/host support is
+  confirmed in the spec listings on only three of the fifteen
+  handhelds — on the other eleven the drive mounting is the test;
+  the MT90 Orca's Android version is disputed between sources
+  (7.0 vs 5.1); the MT65 Beluga II cannot run SnapDisk at all —
+  it runs Android 5.1, below SnapDisk's Android 7.0 minimum.
+  Article published Nov 18, 2026 (WL-102, 71st how-to):
+  docs/newland-photos-to-usb.html.
+  Fallback for WL-103: Point Mobile — no Point Mobile article exists
+  in docs/ yet (PM-series enterprise Android handhelds).
+
 ## WL-101 — Back up Unitech photos to USB article, 70th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
