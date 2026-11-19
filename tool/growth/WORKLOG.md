@@ -1,5 +1,67 @@
 # SnapDisk — Work Log
 
+## WL-132 — Back up itel photos to USB article, 100th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #232 MERGED (head 7c2cbec, CI run 44562403561
+  success, merge commit 629c2b0, merged 2026-11-19T16:12:53Z);
+  post-merge main runs Android PR 44563538609 success +
+  pages 44563536239 success.
+  Query 99 verified by the lead from live evidence (no top
+  result is an itel-specific phone-to-USB photo-backup
+  guide); top results are a Dr.Fone guide, a YouTube OTG
+  video, two generic Android guides, and the Photos to
+  USB Play listing — none mentions itel; real gap stands.
+  Supervisor re-scored Query 99 from a fresh live re-search:
+  same 5 results as the lead (Dr.Fone guide, YouTube OTG
+  video, thecomputerbasics generic, thegadgetians generic,
+  Photos to USB Play listing) — none mentions itel; real
+  gap stands.
+  Live fetch after Pages deploy: itel-photos-to-usb.html
+  200 (correct title/H1/TL;DR, via live browser read 16:14
+  UTC — first browser.open attempt 404 from Pages deploy
+  lag); feed.xml 100 items incl. itel (live crawl 16:14 UTC).
+  New docs/itel-photos-to-usb.html ("Back up itel photos
+  to a USB drive (no computer)"), following the
+  WL-54–WL-131 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: the A48 can run that
+  screen but can't host a drive; the A46 can run it but
+  its OTG is unconfirmed; thirteen of the sixteen OTG
+  phones list USB OTG without dispute and three more
+  list it with one source dissenting).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 34 chars, meta
+  description 142 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 100 items; blog JSON-LD
+  counts 100 BlogPosting entries. searches.md Query 99 row
+  present ("back up itel photos to USB drive without
+  computer" — HOW-TO GAP): top results are a Dr.Fone
+  guide, a YouTube video, two generic Android guides, and
+  the Photos to USB Play listing, none is a guide for an
+  itel phone.
+  itel specifics verified live: 16 phones clear SnapDisk's
+  Android 7.0 minimum and list OTG — A44, A44 Pro, A44 Air,
+  A44 Power, A50, A60, A70, A80, S23, S24, S25, S25 Ultra,
+  P40, P55, P55 5G, P65 — so the one-tap route exists on
+  those; the A46 clears 7.0 with OTG unconfirmed, so
+  SnapDisk installs but drive mounting is the test; the
+  A48 lists OTG No per whatmobile, so no phone route exists
+  on it; no covered itel phone is below Android 7.0.
+  Conflicts named in the article: A50 is two phones sharing
+  a name (2024 T603/Android 14 vs older SC9832E/Android
+  11-12 listings) and its OTG is Yes per phonepik/pricehunt
+  vs No per gadgets360; A80 is USB-C + OTG Yes per three
+  sources vs microUSB + OTG No per whatmobile; P40 OTG Yes
+  vs No across gadgets360 tables; A60 Android 11 vs 12 Go;
+  A70/S23/P40/A50 microSD ceilings disputed; S25 Ultra
+  microSD slot disputed (dedicated vs none); P55 5G chipset
+  Dimensity 6080 vs T606; P65 mobilo prose describes a
+  different phone from its own spec table.
+  Fallback for WL-133: Lava — no Lava article exists in
+  docs/ yet and no searches.md row.
+
 ## WL-131 — Back up Wiko photos to USB article, 99th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
