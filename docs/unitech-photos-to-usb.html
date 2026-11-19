@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Unitech photos to a USB drive</title>
+<meta name="description" content="Back up Unitech PA768 and EA630 photos to a USB drive without a computer: plug in, tap Backup — SnapDisk copies them oldest-first, original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/unitech-photos-to-usb.html">
+<meta property="og:title" content="Back up Unitech photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up Unitech PA768 and EA630 photos to a USB drive without a computer: plug in, tap Backup — SnapDisk copies them oldest-first, original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/unitech-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/unitech-photos-to-usb.html#article",
+      "headline": "Back up Unitech photos to a USB drive (no computer)",
+      "description": "Back up Unitech PA768 and EA630 photos to a USB drive without a computer: plug in, tap Backup — SnapDisk copies them oldest-first, original files, no upload.",
+      "datePublished": "2026-11-18",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/unitech-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/unitech-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up Unitech PA/EA-series photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On the models that can run SnapDisk and host a drive, yes. The PA768 runs Android 12 with a free upgrade to Android 14 (Unitech's current page lists Android 14, upgradable to Android 16) and lists \"USB 3.1 Type-C, support fast charging\" with \"OTG Yes, over USB Type-C\" in its spec table; the EA630 runs Android 9 or 10 and lists \"USB 3.1 (type-C) support USB OTG\"; the EA630 Plus runs Android 11 with a free upgrade to Android 12 and lists the same USB-C with OTG interface; the EA520 runs Android 11 (upgradeable to Android 13) and lists \"USB 2.0 (Type-C)\" with \"OTG Yes, over USB Type-C\"; the EA520 Plus runs Android 12 and lists \"OTG Yes, over USB Type-C\"; the EA660 runs Android 13 (upgradable to Android 15) and lists \"USB 3.1 (type-C) support USB OTG\"; the EA530 runs Android 15 (upgradable to Android 17) and lists \"OTG Yes, over USB Type-C\"; and the PA760 runs Android 9 or 10 and lists \"USB 2.0 w/ Pogo Pin USB OTG Type C Connector for PC/USB drive\" — so a drive plugs into any of them with the matching OTG adapter. One wrinkle: no source found confirms OTG or host support on the PA768e UHF, which runs Android 14 — plug a drive in and check Settings > Storage on that model before relying on it. And any Unitech unit below Android 7.0 cannot run SnapDisk at all — the PA720 runs Android 6.0 (earlier units Android 5.1) — so the computer copy in Method 4 is the route on those units. Unitech has no phone-to-USB backup tool of its own. The stock route is a file manager: connect the drive, open the file manager, pick the photos in DCIM/Camera, and Copy to the drive. On a model that hosts drives and runs SnapDisk, SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/unitech-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up Unitech photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/unitech-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up Unitech photos to a USB drive (no computer)</h1>
+  <p class="dek">The PA and EA series are Unitech's lines of enterprise Android handhelds (PA768, PA768e UHF, PA760, EA630, EA630 Plus, EA520, EA520 Plus, EA660, EA530), and Unitech has no phone-to-USB backup tool of its own: the only Unitech-specific file advice found is the PA768 user manual's USB connection to a host computer, with no photo-transfer route at all. Three honest caveats up front: USB OTG is confirmed in the spec listings on eight of the nine models — the PA768, the PA760, the EA630, the EA630 Plus, the EA520, the EA520 Plus, the EA660, and the EA530 all list OTG in their interfaces — but no source found confirms OTG or host support on the PA768e UHF at all, so plug a drive in and check Settings &gt; Storage on that model before relying on it; every model listed clears SnapDisk's Android 7.0 minimum — the PA768 runs Android 12 with a free upgrade to Android 14, the PA768e UHF runs Android 14, the PA760 runs Android 9 or 10, the EA630 runs Android 9 or 10, the EA630 Plus runs Android 11 with a free upgrade to Android 12, the EA520 runs Android 11 (upgradeable to Android 13), the EA520 Plus runs Android 12, the EA660 runs Android 13 (upgradable to Android 15), and the EA530 runs Android 15 (upgradable to Android 17), so the minimum is not the blocker on any of them — while older Unitech handhelds below Android 7.0 cannot run SnapDisk at all; and no other PA/EA model turned up in the sources found, so this article covers only the nine models listed. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 18, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On the PA/EA models that can run SnapDisk — the PA768 runs Android 12 with a free upgrade to Android 14, the PA768e UHF runs Android 14, the PA760 runs Android 9 or 10, the EA630 runs Android 9 or 10, the EA630 Plus runs Android 11 with a free upgrade to Android 12, the EA520 runs Android 11 (upgradeable to Android 13), the EA520 Plus runs Android 12, the EA660 runs Android 13 (upgradable to Android 15), and the EA530 runs Android 15 (upgradable to Android 17), and eight of the nine list OTG in their spec interfaces — plug the drive in, then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: no source found confirms OTG or host support on the PA768e UHF — its product page names Android 14, 4G, and Wi-Fi 6E but never says it hosts drives — so the drive mounting is the test on that model; and any Unitech unit below Android 7.0 cannot run SnapDisk at all — the PA720 runs Android 6.0, with earlier units on Android 5.1 — so Method 4 is the route on those units. A file manager works — the generic guides' route is an OTG connection with the built-in file manager — but the direct route is manual select-copy-paste with no progress detail, no resume, and no verification; Unitech's own file advice works too, but there is none pointing at a USB drive — the PA768 user manual only offers a USB connection to a host computer, with no photo-transfer route. Four rival apps do exist — Photos to USB: OTG Backup copies the whole gallery to a pen drive in one tap, free with ads, a one-time purchase removing the ads; VaultDrive copies photos, videos, and files straight to a USB drive with no computer, free for up to 200 files or 2 GB per backup, Pro $19.99 once; Photo Backup Stick DC backs up pictures and videos straight to its own OTG drive, free, but it only works with genuine Photo Backup Stick drives; FotoSafe backs up Android photos to a USB drive through the system picker, and needs Android 9 or later with USB host or OTG support — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, works with any drive, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the handheld afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 18, 2026, no top search result for this query is a Unitech-specific phone-to-USB guide at all: not one of the top results even mentions Unitech — they are generic Android guides and a forum thread.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up Unitech photos to USB drive without computer" and there is no Unitech-specific phone-to-USB guide in the top results at all — not one result even mentions Unitech. The results are generic Android guides and a forum thread, in different packaging:</p>
+  <ul>
+    <li><strong>Dr.Fone, "4 Practical Ways to Transfer Photos from Android to USB Flash Drive"</strong> (<a href="http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html">4 Practical Ways to Transfer Photos from Android to USB Flash Drive</a>) — connect a USB drive with an OTG adapter and copy with the file manager, use a PC as a middleman via USB File Transfer mode, or go wireless through Google Drive or AirDroid. Generic Android, and a manual guide — and its bulk-export route is Dr.Fone's own Windows and Mac software, which needs a computer in between.</li>
+    <li><strong>YouTube, "How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)"</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)</a>) — connect a USB drive with an OTG connection and move photos with the phone's built-in file manager. Generic Android, and a manual file-manager guide — and it is a video, not a Unitech guide.</li>
+    <li><strong>Pixoneye, "How to Transfer Photos from Your Phone to a USB Stick"</strong> (<a href="https://pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/">How to Transfer Photos from Your Phone to a USB Stick</a>) — connect a USB drive with an OTG adapter, open Files by Google, find DCIM/Camera, select a small batch, and Copy to the drive. Generic Android, and a manual file-manager guide — and it warns that a connector fitting physically does not prove the phone can read or write the drive, and that not every phone supports USB host at all.</li>
+    <li><strong>connect.gmb.org.uk, "How to Transfer Pictures from Android to Flash Drive A Simple Guide"</strong> (<a href="https://connect.gmb.org.uk/how-to-transfer-pictures-from-android-to-flash-drive/">How to Transfer Pictures from Android to Flash Drive A Simple Guide</a>) — connect a USB drive with an OTG adapter and copy photos with the file manager, or use a computer as a middleman. Generic Android, and a manual guide — and it says nothing about a Unitech handheld.</li>
+    <li><strong>Android Central forum, "Moving photos to usb"</strong> (<a href="https://forums.androidcentral.com/threads/moving-photos-to-usb.973408/">Moving photos to usb</a>) — use an OTG adapter to plug in a USB drive and it should be visible as external storage in the file manager, then move files to it from there. Generic Android, and a forum thread — and a manual file-manager guide, not a Unitech guide.</li>
+    <li><strong>PA768 datasheet, Rev.L</strong> (<a href="https://manuals.plus/m/6d5dd0e6c3b62bba82d26110417cab432e23b311e98c78bd0c0f76794a223630.pdf">PA768 datasheet</a>) — the PA768: Android 12 with GMS &amp; AER certified, with interfaces listed as "USB 3.1 type C, support fast charging, OTG" and a microSD slot up to 256 GB. A spec sheet, not a guide — and the confirmation that the PA768 lists OTG in its interfaces and runs Android 12, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>PA768 product page</strong> (<a href="https://www.ute.com/en/products/detail/PA768">PA768 (6th Gen)</a>) — the PA768: Android 14 (upgradable to Android 16), with "USB 3.1 Type-C, support fast charging" and "OTG Yes, over USB Type-C" in its spec table. Unitech's own page, not a guide — and the confirmation, from Unitech itself, that the current PA768 lists OTG and runs Android 14.</li>
+    <li><strong>PA768e UHF product page</strong> (<a href="https://www.ute.com/eu/products/detail/PA768e_UHF">PA768e UHF</a>) — the PA768e UHF: Android 14 with GMS certified, 4G with eSIM, Wi-Fi 6E, built-in UHF RFID (Impinj E310). A product page, not a guide — and the confirmation that it runs Android 14, and that no source in it confirms OTG or host support on this model at all.</li>
+    <li><strong>EA630 product page</strong> (<a href="https://www.ute.com/en/products/detail/EA630">Unitech EA630 Rugged Smartphone</a>) — the EA630: Android 10 with GMS &amp; AER certified, with interfaces listed as "USB 3.1 (type-C) support USB OTG" and "OTG Yes, over USB Type-C". Unitech's own page, not a guide — and the confirmation that the EA630 lists OTG and runs Android 10, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>EA630 datasheet</strong> (<a href="https://admin.thebarcodewarehouse.co.uk/Documents/Unitech/EA630-Datasheet.pdf">EA630 datasheet</a>) — the EA630: Android 9.0 with GMS certification, with interfaces listed as "USB 3.1 (type-C) support USB OTG" and a microSD slot up to 256 GB. A spec sheet, not a guide — and the confirmation that the EA630 lists OTG and runs Android 9.</li>
+    <li><strong>EA630 Plus datasheet</strong> (<a href="https://www.mbcestore.com/pdf/unitech/ea630-plus.pdf">EA630 Plus datasheet</a>) — the EA630 Plus: Android 12 with GMS certified, with interfaces listed as "USB 3.1 (type-C) support USB OTG" and "Support Ethernet/USB-Host via cradle". A spec sheet, not a guide — and the confirmation that the EA630 Plus lists OTG and runs Android 12, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>EA630 Plus Android 12 upgrade</strong> (<a href="https://www.ute.com/en/news/articles/4/EA630Plus_Android12">Upgrade EA630 Plus to Android 12 for Free</a>) — Unitech offers a free upgrade of the EA630 Plus from Android 11 to Android 12. A news page, not a guide — and the confirmation, from Unitech itself, that the EA630 Plus runs Android 11 with a free Android 12 upgrade path.</li>
+    <li><strong>EA520 datasheet, Rev.L</strong> (<a href="https://manuals.plus/m/dcf1ce1fe5845adff4effd86cb7ec769600e7dd31bc5f160f0456b34a0e7905f">EA520 datasheet</a>) — the EA520: Android 11 (upgradeable to Android 13) with GMS certified, with interfaces listed as "USB 2.0 (Type-C)" and "OTG Yes, over USB Type-C". A spec sheet, not a guide — and the confirmation that the EA520 lists OTG and runs Android 11, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>EA520 Plus product page</strong> (<a href="https://www.ute.com/apac/products/detail/EA520Plus">EA520 Plus 5G Rugged Touch Computer</a>) — the EA520 Plus: Android 12 with GMS certified, with "USB 3.1 Type-C, support fast charging" and "OTG Yes, over USB Type-C" in its spec table. Unitech's own page, not a guide — and the confirmation that the EA520 Plus lists OTG and runs Android 12, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>EA660 datasheet, Rev.M</strong> (<a href="https://manuals.plus/m/340add66cd5e5937ab76cbfc34289739604701fd2f23bd5c91707ad02ff5a569">EA660 datasheet</a>) — the EA660: Android 13 (upgradable to Android 17) with GMS &amp; AER certified, with interfaces listed as "USB 3.1 (type-C) support USB OTG" and "OTG Yes, over USB Type-C". A spec sheet, not a guide — and the confirmation that the EA660 lists OTG and runs Android 13, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>EA530 product page</strong> (<a href="https://www.ute.com/en/products/detail/EA530">EA530 Enterprise Mobile Computer</a>) — the EA530: Android 15 (upgradable to Android 17) with GMS &amp; AER certified, with interfaces listed as "USB 2.0 (type-C)" and "OTG Yes, over USB Type-C". Unitech's own page, not a guide — and the confirmation that the EA530 lists OTG and runs Android 15, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>PA760 datasheet, Rev.A(7)</strong> (<a href="https://manuals.plus/m/f9b7247a2cec072a062dded2cc507f0aaca4d27b56ef6809aa0a9dd46be480fb">PA760 datasheet</a>) — the PA760: Android 9 or 10 with GMS, with interfaces listed as "USB 2.0 w/ Pogo Pin USB OTG Type C Connector for PC/USB drive". A spec sheet, not a guide — and the confirmation that the PA760 lists OTG and runs Android 9 or 10, so it clears SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>PA720 brochure</strong> (<a href="https://moviltronix.s3.amazonaws.com/pdf/PA720_Brochurev2.pdf">PA720 brochure</a>) — the PA720: Android 5.1, 4.7-inch display, 1D/2D imager. A brochure, not a guide — and the confirmation that older Unitech handhelds run below Android 7.0: a later brochure lists the PA720 on Android 6.0, still below SnapDisk's Android 7.0 minimum.</li>
+    <li><strong>Cloud routes</strong> — Google Photos syncs your gallery to Google's servers, Google Drive backs your data up to Google's cloud with 15 GB free, and Google backup restores your data to a new phone from Google's cloud, not to a drive you hold; Google Photos' "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Neither route gives you a folder of plain photo files on a USB drive.</li>
+  </ul>
+  <p>None of them is a Unitech-specific phone-to-USB guide at all, and none of them offers an automated Unitech photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 18, 2026 — for the PA/EA models that can run SnapDisk at all.</p>
+
+  <h2>What you need</h2>
+  <p>A Unitech handheld that can run SnapDisk and host a USB drive — in practice, the PA768, which runs Android 12 with a free upgrade to Android 14, the PA768e UHF, which runs Android 14, the PA760, which runs Android 9 or 10, the EA630, which runs Android 9 or 10, the EA630 Plus, which runs Android 11 with a free upgrade to Android 12, the EA520, which runs Android 11 (upgradeable to Android 13), the EA520 Plus, which runs Android 12, the EA660, which runs Android 13 (upgradable to Android 15), and the EA530, which runs Android 15 (upgradable to Android 17) — all nine with a USB-C port listing OTG in their spec interfaces except the PA768e UHF, where no source found confirms OTG — so a USB-C flash drive plugs straight into any of them, a regular USB-A drive needs a USB-C OTG adapter, and enough space on the drive for the photos you want to keep. Three Unitech specifics: first, every model listed clears SnapDisk's Android 7.0 minimum — the PA768 runs Android 12 with a free upgrade to Android 14, the PA768e UHF runs Android 14, the PA760 runs Android 9 or 10, the EA630 runs Android 9 or 10, the EA630 Plus runs Android 11 with a free upgrade to Android 12, the EA520 runs Android 11 (upgradeable to Android 13), the EA520 Plus runs Android 12, the EA660 runs Android 13 (upgradable to Android 15), and the EA530 runs Android 15 (upgradable to Android 17), so the minimum is not the blocker on any of them — while older Unitech handhelds below Android 7.0 cannot run SnapDisk at all, so check Settings &gt; About phone if you are unsure which Android version your unit runs. Second, USB OTG is confirmed in the spec listings on eight of the nine models — the PA768, the PA760, the EA630, the EA630 Plus, the EA520, the EA520 Plus, the EA660, and the EA530 all list OTG in their interfaces — but no source found confirms OTG or host support on the PA768e UHF at all, so plug a drive in and check Settings &gt; Storage on that model before relying on it; if the drive appears, the device hosts drives and the rest of this method works; if it never appears, the device does not host drives and Method 4 is the route. Third, Unitech has no phone-to-USB backup tool of its own — the only Unitech-specific file advice found is the PA768 user manual's USB connection to a host computer; the stock photo backup is Google Photos; the stock file manager is Files by Google; Unitech camera photos live in DCIM/Camera, as on any Android handheld. The PA768 takes a microSD card up to 256 GB and the EA630 takes one up to 256 GB too, so a card is an option, and it still stays in the device and opening it anywhere else needs a card reader, while a USB drive plugs into any computer as it is. SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Check your model can run SnapDisk.</strong> The PA768 runs Android 12 with a free upgrade to Android 14, the PA768e UHF runs Android 14, the PA760 runs Android 9 or 10, the EA630 runs Android 9 or 10, the EA630 Plus runs Android 11 with a free upgrade to Android 12, the EA520 runs Android 11 (upgradeable to Android 13), the EA520 Plus runs Android 12, the EA660 runs Android 13 (upgradable to Android 15), and the EA530 runs Android 15 (upgradable to Android 17) — every model listed clears the Android 7.0 minimum, so SnapDisk installs on all of them. The exception is older Unitech handhelds below Android 7.0 — the PA720 runs Android 6.0, with earlier units on Android 5.1 — which cannot run SnapDisk at all, so Method 4 is the route on those units. Check Settings &gt; About phone if you are unsure which Android version your unit runs.</li>
+    <li><strong>Plug in the USB drive.</strong> A USB-C flash drive plugs straight into the USB-C port on any of the nine models, and a regular USB-A drive needs a USB-C OTG adapter. It mounts on plug-in on most Android devices with USB host support — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage for the drive. One Unitech wrinkle: no source found confirms OTG or host support on the PA768e UHF at all, so on that model the drive mounting is the test — if the drive never appears in Settings &gt; Storage, the device does not host drives and Method 4 is the route.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — Unitech camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the device normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the device to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: a file manager (the stock route, no app needed)</h2>
+  <p>A file manager can copy your photos to the USB drive — the generic guides' route is an OTG connection with the built-in file manager, and it is the manual route for external storage: 1. Plug in the USB drive — a USB-C drive plugs straight into the USB-C port on any of the nine models, a regular USB-A drive needs a USB-C OTG adapter. A notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage for the drive. On the PA768e UHF, if the drive never appears, the device does not host drives and Method 4 is the route. 2. Open the file manager (Files by Google on Unitech handhelds) and confirm the USB drive shows up under storage devices. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until the file manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option. One note: the file-manager route works on older Unitech handhelds below Android 7.0 too — it needs no app install, so the Android 7.0 minimum does not apply to it — but those units still need to host the drive, so the drive mounting is the test there as well.</p>
+
+  <h2>Method 3: Unitech's own tools (Google Photos, Google Drive, or a microSD card — not phone-to-USB)</h2>
+  <p>If you want Unitech's own route, know what each tool actually does — there is no Unitech backup page pointing at a USB drive at all, and none of the stock tools writes your photos as plain files to a USB drive automatically. <strong>1. Google Photos</strong> is Google's own photo backup app, and it is the stock photo backup on Unitech handhelds: it automatically backs up photos to your Google account. It is a real backup — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. <strong>2. Google Drive</strong> is the cloud backup Android names by default — "on Android devices the default built-in service is Google Drive. With Google Drive you have 15Gb free" — it backs your data up to Google's cloud. It is a real backup — but it is a cloud backup, not a USB copy, and Google accounts only offer 15 GB of free storage. <strong>3. Google backup</strong> is what Android itself names: personal settings back up to Google's servers with a Google account, and are restored to a new phone when you sign in with that account. It is a real backup — but it backs up settings, not a folder of photo files on a drive you hold. <strong>4. A microSD card</strong> is the local option on the PA768 and the EA630, both of which take a card up to 256 GB. It is a real local copy — but the card stays in the device, and opening the card anywhere else needs a card reader. <strong>5. A computer copy</strong> is the other way to move files off the device — connect the handheld to a computer with a USB cable and copy DCIM from the device to the computer. It is a real backup — but it needs a PC in between, and the backup lands on the PC, not on a USB drive as plain files straight from the device. None of them is a one-tap way to copy your camera roll to a drive. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the handheld into the computer with a USB cable, tap the USB notification and choose File transfer — and drag the DCIM folder onto the USB drive. This works fine, and it is the only route above that needs a second device in between. It is also the only route that works at all on older Unitech handhelds below Android 7.0, which cannot run SnapDisk, and the only route that works if no PA/EA model you own mounts a drive. If the device and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the device is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>OTG is confirmed on eight of the nine models, but unconfirmed on the PA768e UHF.</strong> The PA768, the PA760, the EA630, the EA630 Plus, the EA520, the EA520 Plus, the EA660, and the EA530 all list OTG in their spec interfaces — but no source found confirms OTG or host support on the PA768e UHF at all: its product page names Android 14, 4G with eSIM, and Wi-Fi 6E, and says nothing about hosting drives. If the drive never appears in Settings &gt; Storage on the PA768e UHF, the device does not host drives and Method 4 is the route.</li>
+    <li><strong>Older Unitech handhelds below Android 7.0 cannot run SnapDisk at all.</strong> The PA720 runs Android 6.0, with earlier units on Android 5.1, below SnapDisk's Android 7.0 minimum — so on those units the computer copy in Method 4 is the route, not this article's one-tap method. The PA768 runs Android 12 with a free upgrade to Android 14, the PA768e UHF runs Android 14, the PA760 runs Android 9 or 10, the EA630 runs Android 9 or 10, the EA630 Plus runs Android 11 with a free upgrade to Android 12, the EA520 runs Android 11 (upgradeable to Android 13), the EA520 Plus runs Android 12, the EA660 runs Android 13 (upgradable to Android 15), and the EA530 runs Android 15 (upgradable to Android 17) — so every current PA/EA model clears the minimum, and SnapDisk installs on all of them. The blocker on this line is the Android version on old units, not the host support.</li>
+    <li><strong>The PA768's Android version differs by source.</strong> The original datasheet and user manual list Android 12, while Unitech's current product page lists Android 14 (upgradable to Android 16) and Unitech offers a free Android 14 upgrade for existing units — either way it clears SnapDisk's Android 7.0 minimum, so the version is not the question on this model; whether the drive mounts is.</li>
+    <li><strong>The EA630's Android version differs by source.</strong> The 2020 datasheet lists Android 9, while Unitech's current product page lists Android 10 — either way it clears SnapDisk's Android 7.0 minimum, so the version is not the question on this model; whether the drive mounts is.</li>
+    <li><strong>The EA630 Plus's Android version differs by unit, not just by source.</strong> Unitech's news page says the EA630 Plus upgrades from Android 11 to Android 12 for free, while the datasheet lists Android 12 — so check Settings &gt; About phone on your unit before installing: Android 11 and Android 12 both clear the minimum, and below Android 7.0, SnapDisk cannot install, and the computer copy in Method 4 is the route.</li>
+    <li><strong>No other PA/EA model turned up in the sources found.</strong> This article covers only the PA768, the PA768e UHF, the PA760, the EA630, the EA630 Plus, the EA520, the EA520 Plus, the EA660, and the EA530 — if your handheld is a different PA/EA model, check Settings &gt; About phone for its Android version and Settings &gt; Storage for drive mounting, the same two tests used here.</li>
+    <li><strong>Anything below Android 7.0 cannot run SnapDisk at all.</strong> Older Unitech handhelds exist on Android 6 or earlier, so check Settings &gt; About phone if you are unsure: below Android 7.0, SnapDisk cannot install, and the computer copy in Method 4 is the route.</li>
+    <li><strong>The adapter differs by drive and by model, not by brand.</strong> All nine models have a USB-C port, so a USB-C flash drive plugs straight into any of them and a regular USB-A drive needs a USB-C OTG adapter. A plain USB-C charging cable is not an OTG adapter: it connects the device to a computer, which is the opposite direction.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter you don't need — or the wrong one.</strong> A USB-C flash drive plugs straight into any of the nine models — so no adapter is needed on any of them for a USB-C drive — while a regular USB-A drive needs a USB-C OTG adapter. A plain USB-C charging cable is not an OTG adapter: it connects the device to a computer, which is the opposite direction.</li>
+    <li><strong>Assuming the PA768e UHF hosts drives because the PA768 does.</strong> The PA768, the PA760, the EA630, the EA630 Plus, the EA520, the EA520 Plus, the EA660, and the EA530 all list OTG in their spec interfaces — but no source found confirms OTG or host support on the PA768e UHF at all. Test with a drive on your model, and use Method 2 or 4 on it if the drive never mounts.</li>
+    <li><strong>Installing SnapDisk on a Unitech unit below Android 7.0.</strong> Older Unitech handhelds run Android 6 or earlier — the PA720 runs Android 6.0, with earlier units on Android 5.1 — check Settings &gt; About phone first: on an Android 6 unit the computer copy in Method 4 is the route, not this article's one-tap method.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google Drive and Google Photos back your device up to Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> A computer copy with a USB cable moves files to a computer — but it is a copy to a computer, and the backup lands on the PC. If the device and the drive are all you have, a phone-to-USB copy is the route, not a desktop copy.</li>
+    <li><strong>Mistaking a spec table or a product page for a phone-to-USB guide.</strong> The Unitech spec sheets and product pages are real Unitech pages — but the spec sheets only list an Android version, a chipset, or a USB connector type, and the product pages only describe the hardware. Neither of them describes copying your camera roll straight to a USB drive from the device.</li>
+    <li><strong>Mistaking a manual for a phone-to-USB guide.</strong> The PA768 user manual is a real Unitech document — but its only file advice is a USB connection to a host computer, and it never describes copying your camera roll straight to a USB drive from the device.</li>
+    <li><strong>Mistaking OTG support on one model for OTG support on the other.</strong> The PA768, the PA760, the EA630, the EA630 Plus, the EA520, the EA520 Plus, the EA660, and the EA530 all list OTG in their spec interfaces — but no source found confirms it on the PA768e UHF, so test with a drive on your model, and use Method 2 or 4 on it if the drive never mounts.</li>
+    <li><strong>Mistaking a drive-locked app for a general backup.</strong> Photo Backup Stick DC is a real one-tap backup app — but it only works with genuine Photo Backup Stick OTG drives. If the drive you already own is any other brand, that app cannot use it: SnapDisk, Photos to USB, and FotoSafe work with any drive.</li>
+    <li><strong>Mistaking a microSD card copy for a USB backup.</strong> Copying DCIM to a microSD card is a real local copy — the PA768 and the EA630 both take a card up to 256 GB — but the card stays in the device, and opening it anywhere else needs a card reader; a USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the device and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 18, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On a Unitech handheld the cloud routes are Google Photos and Google Drive — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the device — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the device. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the device.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the device. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="cipherlab-photos-to-usb.html">Back up CipherLab photos to a USB drive (no computer)</a> — CipherLab RS/RK is the closest parallel: another enterprise rugged line with one model whose OTG support is unconfirmed, and the same Android 7.0 floor.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
