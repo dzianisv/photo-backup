@@ -1,5 +1,104 @@
 # SnapDisk — Work Log
 
+## WL-137 — Back up Xolo photos to USB article, 105th how-to (PENDING)
+
+- Owner: SEO/GEO lane lead. State: PENDING.
+  Article PR #243 OPEN (head 27e33e9, CI run 44590401852
+  success, merge commit PENDING, merged PENDING).
+  Query 104 verified by the lead from live evidence (no top
+  result is a Xolo-specific phone-to-USB photo-backup
+  guide); top results are a Dr.Fone guide and four generic
+  Android guides (askfilo, groovypost, YouTube OTG video,
+  epictechtips) — none mentions Xolo; real gap stands.
+  New docs/xolo-photos-to-usb.html ("Back up Xolo photos
+  to a USB drive (no computer)"), following the
+  WL-54–WL-136 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: no covered Xolo phone
+  clearly clears Android 7.0 and lists USB OTG — so on the
+  four phones that might host a drive, the drive mounting
+  is the test; the eight 2013–2017 models below Android 7.0
+  cannot install SnapDisk at all, so on those the computer
+  copy is the route).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 34 chars, meta
+  description 134 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 105 items; blog JSON-LD
+  counts 105 BlogPosting entries. searches.md Query 104 row
+  present ("back up Xolo photos to USB drive without
+  computer" — HOW-TO GAP): top results are a Dr.Fone guide
+  and four generic Android guides, none is a guide for a
+  Xolo phone.
+  Xolo specifics verified live: no covered Xolo phone
+  clearly clears SnapDisk's Android 7.0 minimum and lists
+  USB OTG — so the one-tap route is unproven on all
+  fourteen; three clear Android 7.0 but their OTG is
+  disputed — the Era 5X, Era 3X and Era 2V — so on those
+  three SnapDisk installs but the one-tap route is unproven
+  until a drive mounts; one more clears Android 7.0 with
+  OTG unstated — the ZX — so the same test applies; two more
+  clear Android 7.0 but list OTG No — the Era 4X and Era 3
+  — so on those two there is no phone route at all; eight
+  run below Android 7.0 and cannot run SnapDisk at all —
+  the Era 2X, Era 1X Pro, Era 1X and Era 2 (6.0), the Era 4G
+  and Era X (5.1), and the Q1010 and Q3000 (4.2 or 4.4.2) —
+  so there is no phone route on any of them; all fourteen
+  take micro-USB, so a USB-C drive plugs straight into none
+  of them; all fourteen take a microSD card, so the
+  card-reader route works on every one of them.
+  Conflicts named in the article: the Era 5X's microSD
+  ceiling is two numbers (up to 128 GB per gadgets360, up to
+  256 GB per smartprix and giznext); the Era 3X's microSD
+  ceiling is two numbers (up to 32 GB per gadgets360 and
+  smartprix, up to 64 GB per gadgetsnow's review); the Era
+  3's RAM is two numbers (1 GB per gadgets360's spec page
+  and smartprix, 2 GB per gadgets360's launch report and
+  digit) and its microSD ceiling is two numbers (up to 32 GB
+  per gadgets360 and smartprix, up to 64 GB per 91mobiles);
+  the Era 2V's microSD ceiling is two numbers (up to 32 GB
+  per gadgets360 and giznext, up to 64 GB per 91mobiles);
+  the Era 4X's Android is two numbers (8.1 Oreo (Go edition)
+  per gadgets360 and 91mobiles, 8.0 (Go Edition) per
+  smartprix's summary line); the ZX's Android is two numbers
+  (8.1 Oreo per gadgets360, smartprix, themobileindian and
+  umatechnology, 9.0 Pie per Hindustan Times' comparison
+  table) and its battery is two numbers (3260 mAh per
+  gadgets360 and gadgetsnow, 3000 mAh per smartprix); the
+  Era 2X's battery is two states (non-removable per
+  gadgets360, removable per smartprix, ubergizmo and
+  deepspecs), its OTG is disputed (phonebunch lists OTG
+  Supported, gadgets360's comparison table lists USB OTG No)
+  and its storage is two listings (16 GB per gadgets360, a
+  16 GB or 32 GB option per ubergizmo); the Era 1X Pro's rear
+  camera is two numbers (5 MP per smartprix, 8 MP per
+  91mobiles, ubergizmo, pcquest and gadgetstouse); the
+  Q1010's Android is two numbers (4.2 per gadgets360,
+  smartprix and Hindustan Times, 4.4 KitKat per
+  umatechnology) and its OTG is disputed (gadgets360 lists
+  USB OTG No, phonebunch and Hindustan Times list OTG Yes,
+  and the launch report says an OTG cable came in the box);
+  the Q3000's OTG is half-stated (gizbot, geeky-gadgets and
+  umatechnology list USB OTG, phonebunch leaves the OTG line
+  blank) and its Android is 4.2 at launch with a 4.4.2 update
+  (gizbot), but even 4.4.2 is below SnapDisk's 7.0 minimum;
+  two phones were promised Marshmallow (the Era 4G got the
+  Android 6.0 update per the Indian Express, the Era X lists
+  a planned upgrade to 6.0), but even 6.0 is below the 7.0
+  minimum. VaultDrive needs Android 8 or later per its own
+  site, so three of the fourteen can run it — the ZX, Era 5X
+  and Era 4X — and AppBrain lists 12.1 or later, which no
+  covered Xolo phone clears, since the newest covered models
+  run Android 8.1. FotoSafe needs Android 9 or later, so no
+  covered Xolo phone clears it either. Xolo has no
+  phone-to-USB backup tool of its own — no Xolo-specific
+  backup advice turned up in any source beyond a computer
+  copy, Google Drive, or Google Photos; no source found
+  names the stock file manager on a Xolo phone.
+  Fallback for WL-138: Gionee — no Gionee article exists in
+  docs/ yet and no searches.md row (Gionee, the Chinese phone
+  brand big in India; F, S and M series).
+
 ## WL-136 — Back up Intex photos to USB article, 104th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
