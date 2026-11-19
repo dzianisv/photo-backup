@@ -1,5 +1,54 @@
 # SnapDisk — Work Log
 
+## WL-130 — Back up Bullitt photos to USB article, 98th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #228 MERGED (head 8930f86, CI run 44551342519
+  success, merge commit 52e371e, merged 2026-11-19T15:10:51Z);
+  post-merge main runs Android PR 44551877651 success +
+  pages 44551875405 success. Query 97 verified by the lead
+  from live evidence (no top result is a Bullitt-specific
+  phone-to-USB photo-backup guide); supervisor re-scored Query
+  97 from a fresh live re-search: same 5 results as the lead
+  (generic transfer guide, iPhone guide, Photos to USB app
+  listing, USB-C drive guide, generic memory-stick guide) —
+  none mentions Bullitt; real gap stands. Lead-verified by
+  readback (feed 98 items incl. Bullitt, sitemap incl. URL,
+  title correct, Query 97 row present, only docs/ + tool/growth
+  changed). Live fetch after Pages deploy: bullitt-photos-to-usb.html
+  200, 58,033 bytes, correct title.
+  New docs/bullitt-photos-to-usb.html ("Back up Bullitt photos
+  to a USB drive (no computer)"), following the WL-54–WL-129
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot, with an honest caption: the S40, S50 and
+  S60 can't run that screen at all; on the S41, S61, S62 Pro,
+  S53 and S75 the drive mounting is the test).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 37 chars, meta
+  description 142 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 98 items; blog JSON-LD
+  counts 98 BlogPosting entries. searches.md Query 97 row
+  present ("back up Bullitt photos to USB drive without
+  computer" — HOW-TO GAP): top results are a generic transfer
+  guide, an iPhone guide, a Photos to USB app listing, a USB-C
+  drive guide, and a generic memory-stick guide, none is a
+  guide for a Bullitt phone.
+  Bullitt specifics verified live: five CAT phones clear
+  SnapDisk's Android 7.0 minimum and list USB OTG — the S41
+  (7.0 exactly), S61 (8.0, upgradable to 9.0), S62 Pro (10,
+  upgradable to 11), S53 (11) and S75 (12) — so the one-tap
+  route exists on those five; the S40 (5.1), S50 (4.4; S50c
+  5.0) and S60 (6.0) cannot run SnapDisk at all; OTG is listed
+  on all eight, so the file-manager route exists everywhere;
+  Bullitt Group (founded 1 June 2009) shut down 26 Jan 2024,
+  so no Bullitt phone gets updates. Honest limits: S61 Android
+  8.0 vs 8.1, S61/S62 Pro microSD slots disputed (shared vs
+  dedicated), S60/S41 microSD ceilings disputed, S50 OTG
+  two-sided.
+  Fallback for WL-131: Wiko — no Wiko article exists in
+  docs/ yet and no searches.md row.
+
 ## WL-129 — Back up Plum photos to USB article, 97th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
