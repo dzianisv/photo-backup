@@ -2,21 +2,25 @@
 
 ## WL-132 — Back up itel photos to USB article, 100th how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: DONE (article + CI
-  green; merge + live fetch pending supervisor).
-  Article PR #232 (head 7c2cbec, CI run 44562403561
-  success); merge commit PENDING — supervisor merges
-  after readback; post-merge main runs + live fetch to
-  be filled once merged and Pages deploys.
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #232 MERGED (head 7c2cbec, CI run 44562403561
+  success, merge commit 629c2b0, merged 2026-11-19T16:12:53Z);
+  post-merge main runs Android PR 44563538609 success +
+  pages 44563536239 success.
   Query 99 verified by the lead from live evidence (no top
   result is an itel-specific phone-to-USB photo-backup
   guide); top results are a Dr.Fone guide, a YouTube OTG
   video, two generic Android guides, and the Photos to
   USB Play listing — none mentions itel; real gap stands.
-  Live fetch after Pages deploy: PENDING (article PR
-  unmerged; fetch https://dzianisv.github.io/photo-backup/itel-photos-to-usb.html
-  expect 200 + correct title, and feed.xml 100 items
-  incl. itel).
+  Supervisor re-scored Query 99 from a fresh live re-search:
+  same 5 results as the lead (Dr.Fone guide, YouTube OTG
+  video, thecomputerbasics generic, thegadgetians generic,
+  Photos to USB Play listing) — none mentions itel; real
+  gap stands.
+  Live fetch after Pages deploy: itel-photos-to-usb.html
+  200 (correct title/H1/TL;DR, via live browser read 16:14
+  UTC — first browser.open attempt 404 from Pages deploy
+  lag); feed.xml 100 items incl. itel (live crawl 16:14 UTC).
   New docs/itel-photos-to-usb.html ("Back up itel photos
   to a USB drive (no computer)"), following the
   WL-54–WL-131 article template exactly (navy/cyan, TL;DR
