@@ -8635,6 +8635,103 @@ demand is read off competitor install velocity instead (see
   in docs/ yet and no searches.md row (rugged G'zOne
   phones: Commando, Type-L).
 
+### 93. "back up Casio photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Casio-specific
+  guide to backing up photos to a USB drive at all, let
+  alone a Casio-specific automated whole-library backup
+  with progress, Pause/Stop, and resume — and no Casio
+  phone can run a current backup app at all.
+- Current top results (scored Nov 19, 2026, live web search):
+  manualsdump.com, "Casio EX-P700"
+  (manualsdump.com/en/manuals/casio-ex-p700/199540/198
+  — the manual for a Casio Exilim camera: Mass Storage
+  (USB DIRECT-PRINT) treats the computer as an external
+  storage device for normal transfer of images from the
+  camera to a computer, and PTP (PictBridge) simplifies
+  transfer to a connected device. A camera manual — it
+  says nothing about a Casio phone);
+  techwalla.com, "How to Move Pictures from Camera to
+  Flash Drive With No Computer"
+  (techwalla.com/articles/how-to-move-pictures-from-camera-to-flash-drive-with-no-computer
+  — remove the memory card from your camera, place it in
+  a combination memory card reader and USB flash drive,
+  and let the reader transfer the pictures onto the
+  drive. A camera guide — it says nothing about a Casio
+  phone);
+  forums.tomshardware.com, "How can I offload pictures
+  from a digital camera to a flash drive?"
+  (forums.tomshardware.com/threads/how-can-i-offload-pictures-from-a-digital-camera-to-a-flash-drive.1273814/
+  — take out the memory card, connect the card and the
+  flash drive to the same computer with a card reader,
+  and transfer the pictures. A camera forum thread — it
+  says nothing about a Casio phone);
+  justanswer.com, "How to Transfer Photos from Casio
+  Exilim Camera to PC"
+  (justanswer.com/video-camera-repair/59yd6-cannot-download-photos-casio-exilim-camera-model.html
+  — a Casio Exilim EX-Z55 that will not download photos
+  to a computer, with troubleshooting for the USB
+  connection and the suggestion of an inexpensive USB
+  memory card reader instead. A camera-to-PC thread — it
+  says nothing about a Casio phone);
+  support.casio.com, "XJ-S36_XJ-S46"
+  (support.casio.com/pdf/007/XJ-S41_S46_USB_Guide_E.pdf
+  — the USB function guide for a Casio data projector:
+  connecting a USB memory device or a USB card reader
+  to the projector to project presentation images. A
+  projector manual — it says nothing about a Casio
+  phone, or about photos);
+  manualshelf.com, "Casio QV-R40 Part 7 : User's Guide :
+  Page 28"
+  (manualshelf.com/manual/casio/qv-r40-part-7/user-s-guide-english/page-28.html
+  — the manual for a Casio QV-R40 camera: view images
+  on a computer over a USB connection, or transfer
+  images from the camera to a computer using a memory
+  card. A camera manual — it says nothing about a Casio
+  phone);
+  connect.gmb.org.uk, "Untitled"
+  (connect.gmb.org.uk/wp-json/wp/v2/posts/8277
+  — a generic thumb-drive guide: transfer pictures to a
+  thumb drive for backup and archiving, free up phone
+  storage, and keep photos accessible without internet;
+  USB-C drives plug straight into newer Android phones,
+  older Android devices use micro-USB drives, and USB-A
+  drives need an adapter. A generic phone guide — it
+  says nothing about Casio, or about a G'zOne phone).
+- No Casio Android phone can run SnapDisk — every G'zOne
+  runs Android 2.2 to 4.1, below SnapDisk's Android 7.0
+  minimum — so there is no one-tap route on a Casio
+  phone at all; no source found states OTG or USB host
+  for any Casio phone — the manuals list only
+  "Connecting to a PC via USB" — so on every model the
+  drive mounting is the test; the TYPE-L was the final
+  NEC Casio handset — NEC announced its withdrawal from
+  smartphones on July 31, 2013, and the mobile phone
+  business had fully ceased by 2014; the Commando runs
+  Android 2.2.1, upgradable to 2.3.3, the Commando 4G LTE
+  and the TYPE-L run Android 4.0.4, and the CA-201L runs
+  Android 4.0 (one source lists Android 4.1 for the US
+  variant); the Commando carries a 5 MP autofocus rear
+  camera, the Commando 4G LTE an 8 MP rear camera and a
+  1.3 MP front camera, the TYPE-L an 8.08 MP rear camera
+  and a 1.36 MP front camera; all four take microSD up to
+  32 GB; Casio has no phone-to-USB backup tool of its own
+  — its own software, G'zGEAR, is an outdoor sensor
+  suite; no source found names the stock file manager on
+  a Casio phone; WhatsApp no longer installs on the
+  CA-201L, which needs Android 6 or later; the TYPE-L's
+  battery is 1,800 mAh per most sources and 1,850 mAh per
+  one; the Commando 4G LTE's immersion rating is 1 m for
+  30 minutes per the Verizon announcement and 1.5 m per
+  one launch report.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-126, 94th how-to):
+  docs/casio-photos-to-usb.html.
+  Fallback for WL-127: Archos — no Archos article exists
+  in docs/ yet and no searches.md row (rugged Saphir
+  phones: 50 Saphir, Android 6.0, IP68, USB OTG listed,
+  13 MP rear camera, microSD up to 128 GB).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
