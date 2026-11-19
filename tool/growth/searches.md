@@ -5877,6 +5877,451 @@ demand is read off competitor install velocity instead (see
   and the article says so. The Galaxy query above is the
   closest real gap found, per the WL-40 brief's fallback.
 
+### 59. "back up Evolveo photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Evolveo-specific
+  guide at all, let alone an Evolveo-specific automated
+  whole-library backup with progress, Pause/Stop, and
+  resume — the top results are generic manual guides,
+  PC tools, or a rival app page.
+- Current top results (scored Nov 18, 2026, live web search):
+  YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); Pixoneye guide
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a USB drive with a file manager,
+  one small batch at a time; notes ThePhotoStick Omni;
+  generic Android and iPhone, not written for Evolveo);
+  SoftHandTech guide
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-
+  memory-stick/ — OTG adapter + file manager, or a computer,
+  or cloud storage; generic, not written for Evolveo);
+  TheGadgetians guide
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-
+  without-computer/ — OTG adapter + file manager, mentions
+  ThePhotoStick Omni; generic Android and iPhone, not written
+  for Evolveo); Substack piece
+  (curiousbluenoser.substack.com/p/saving-photos-for-
+  necessary-updates — a picture-keeper flash drive piece:
+  plug the maker's drive in, open its app, tap Start;
+  generic, and tied to one maker's drive and app — not an
+  Evolveo guide); Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a real phone-to-USB app, one-tap
+  whole-gallery copy, only new photos next time, warns about
+  the FAT32 4 GB limit, free with ads, one-time purchase
+  removes ads — generic Android, not an Evolveo guide, and it
+  does not promise oldest-first order, detailed progress with
+  Pause and Stop, or size verification of every file).
+  Google Photos is cloud, not USB.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-91, 60th how-to):
+  docs/evolveo-photos-to-usb.html.
+### 60. "back up Panasonic Toughbook photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Toughbook-specific
+  phone-to-USB guide at all, let alone a Toughbook-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Toughbook-specific results are a
+  PC/cloud backup FAQ and a Windows safe-mode guide, and
+  the rest are generic manual guides or a rival app page.
+- Current top results (scored Nov 18, 2026, live web search):
+  PetaPixel field-backup piece
+  (petapixel.com/2025/05/11/no-laptop-no-problem-how-to-back-
+  up-photos-in-the-field-with-your-smartphone/ — use a phone
+  as a bridge between a camera memory card and an SSD through
+  a USB hub; camera cards, not a Toughbook phone guide);
+  devicesfaq Toughbook P-01K FAQ
+  (devicesfaq.com/en/frequently-asked-questions/panasonic-
+  toughbook-p-01k — back the phone up by USB cable to a
+  computer, or to Google Drive / Google Photos cloud; a PC
+  or a cloud, never a USB drive); Photos to USB: OTG Backup
+  (Play listing, com.arzdrz.photos_to_usb — a real
+  phone-to-USB app, one-tap whole-gallery copy, only new
+  photos next time, warns about the FAT32 4 GB limit, free
+  with ads, one-time purchase removes ads — generic Android,
+  not a Toughbook guide, and it does not promise oldest-first
+  order, detailed progress with Pause and Stop, or size
+  verification of every file); TheGadgetians guide
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-
+  without-computer/ — OTG adapter + file manager, mentions
+  ThePhotoStick Omni; generic Android and iPhone, not written
+  for Toughbook); Pixoneye guide
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a USB drive with a file manager,
+  one small batch at a time; notes ThePhotoStick Omni;
+  generic Android and iPhone, not written for Toughbook);
+  devicesfaq Toughbook P-01K hard-reset FAQ
+  (devicesfaq.com/en/hard-reset/panasonic-toughbook-p-01k/faq
+  — back up by cable to a computer, an SD card, or the cloud;
+  a PC, a card, or a cloud, never a USB drive);
+  umatechnology.org safe-mode guide
+  (umatechnology.org/how-to-boot-panasonic-toughbook-in-safe-
+  mode/ — copy files to an external drive with File Explorer
+  on the Toughbook itself; a Windows-device route, not a
+  phone-to-USB guide). Google Photos is cloud, not USB.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-92, 61st how-to):
+  docs/panasonic-toughbook-photos-to-usb.html.
+### 61. "back up Zebra photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Zebra-handheld
+  phone-to-USB guide at all, let alone a Zebra-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Zebra-specific results are a printer
+  exercise and a connect-the-handheld-to-a-PC guide, and
+  the rest are generic manual guides.
+- Current top results (scored Nov 18, 2026, live web search):
+  Zebra docs printer exercise
+  (docs.zebra.com/us/en/printers/industrial/zt400-series-
+  industrial-printer-user-guide/c-zt4x1-usb/c-zt4x1-usb-host/
+  t-zt4x0-ug-exercise-3-copy-files-to-from-a-usb-flash-drive.
+  html — copy files to and from a USB flash drive on a ZT400
+  printer; a printer, not a phone); thecomputerbasics guide
+  (thecomputerbasics.com/how-to-transfer-videos-from-iphone-
+  to-usb-stick-without-computer/ — phone or tablet to a USB
+  drive via adapter, exFAT, powered hub for spinning drives;
+  generic, not written for Zebra); Cleverence TC21-to-PC
+  guide (cleverence.com/articles/technical-manuals/how-to-
+  connect-zebra-tc21-to-pc/ — USB MTP file transfer to a
+  computer, Zebra drivers, ADB; Zebra-specific, but it needs
+  a PC, and it moves files to the computer, not to a drive);
+  YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); Techwalla camera guide
+  (techwalla.com/articles/how-to-move-pictures-from-camera-to-
+  flash-drive-with-no-computer — memory card reader + USB
+  flash drive for a digital camera; a camera guide, not a
+  phone guide); Substack piece
+  (curiousbluenoser.substack.com/p/saving-photos-for-
+  necessary-updates — a picture-keeper flash drive piece:
+  plug the maker's drive in, open its app, tap Start;
+  generic, and tied to one maker's drive and app — not a
+  Zebra guide). Google Photos is cloud, not USB.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-93, 62nd how-to):
+  docs/zebra-photos-to-usb.html.
+### 62. "back up Honeywell photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Honeywell-handheld
+  phone-to-USB guide at all, let alone a Honeywell-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the Honeywell-specific results are a DVR
+  manual, an old pocket-drive review, handheld user guides
+  that sync to a PC, and a connect-the-handheld-to-a-PC
+  guide, and the rest is a camera guide.
+- Current top results (scored Nov 18, 2026, live web search):
+  manualsdir HRDE4X4 DVR manual
+  (manualsdir.com/manuals/89728/honeywell-hrde4x4.html?page=44
+  — archive still images or video from a DVR onto a USB stick
+  through the front-panel port; a DVR, not a phone);
+  TechPlayboy SecuraDrive review
+  (archive.techplayboy.com/reviews/honeywell-securadrive-80gb-
+  usb-18-inch-pocket-drive.html — a Honeywell-branded 80 GB
+  USB pocket hard drive, Windows-only software; a product,
+  not a guide); manualspro CT60 user guide
+  (manualspro.net/572965-honeywell-ct60-handheld-computer-user-
+  guide — sync data to a computer over USB, Transfer files or
+  Transfer photos (PTP); Honeywell-specific, but it needs a
+  PC); manuals.plus EDA51 user guide
+  (manuals.plus/honeywell/eda51-scanpal-handheld-computer-
+  manual — the same PC sync route, Transfer files or Transfer
+  photos (PTP); Honeywell-specific, but it needs a PC);
+  Techwalla camera guide
+  (techwalla.com/articles/how-to-move-pictures-from-camera-to-
+  flash-drive-with-no-computer — memory card reader + USB
+  flash drive for a digital camera; a camera guide, not a
+  phone guide); Cleverence CT60-to-PC guide
+  (cleverence.com/articles/technical-manuals/how-to-connect-
+  honeywell-dolphin-ct60-to-pc/ — USB MTP/PTP/ADB to a
+  computer, drag-and-drop in File Explorer; Honeywell-
+  specific, but it needs a PC, and it moves files to the
+  computer, not to a drive). Google Photos is cloud, not USB.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-94, 63rd how-to):
+  docs/honeywell-photos-to-usb.html.
+### 63. "back up Datalogic photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Datalogic-specific
+  guide at all, let alone a Datalogic-specific automated
+  whole-library backup with progress, Pause/Stop, and
+  resume — the top results are generic manual guides,
+  PC tools, a forum thread, or rival app pages.
+- Current top results (scored Nov 18, 2026, live web search):
+  YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); Photo Backup Stick DC (Play listing,
+  com.photo.backup.stick — a rival app, not a guide: backs up
+  pictures and videos straight to its own OTG drive, free, no
+  account — but it only works with genuine Photo Backup Stick
+  OTG drives, and it says nothing about a Datalogic handheld);
+  Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-
+  drop, Google Drive, or AirDroid; generic Android, most ways
+  need a computer or a cloud account); Photos to USB: OTG
+  Backup (Play listing, com.arzdrz.photos_to_usb — a real
+  phone-to-USB app, one-tap whole-gallery copy, only new
+  photos next time, warns about the FAT32 4 GB limit, free
+  with ads, one-time purchase removes ads — generic Android,
+  not a Datalogic guide, and it does not promise oldest-first
+  order, detailed progress with Pause and Stop, or size
+  verification of every file); Pixoneye guide
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a USB drive with a file manager,
+  one small batch at a time; notes ThePhotoStick Omni;
+  generic Android and iPhone, not written for Datalogic);
+  Android Central forum thread
+  (forums.androidcentral.com/threads/moving-photos-to-usb.
+  973408/ — OTG adapter + file manager; generic, not written
+  for Datalogic). Google Photos is cloud, not USB.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-95, 64th how-to):
+  docs/datalogic-photos-to-usb.html.
+### 64. "back up Bluebird photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Bluebird-specific
+  guide at all, let alone a Bluebird-specific automated
+  whole-library backup with progress, Pause/Stop, and
+  resume — the search returned only four results, all
+  generic guides, and no Play app listing at all.
+- Current top results (scored Nov 18, 2026, live web search):
+  Pixoneye guide
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a USB drive with a file manager,
+  one small batch at a time; notes ThePhotoStick Omni;
+  generic Android and iPhone, not written for Bluebird);
+  TheGadgetians guide
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-
+  without-computer/ — OTG adapter + file manager, mentions
+  ThePhotoStick Omni; generic Android and iPhone, not written
+  for Bluebird); organizertone seniors guide
+  (organizertone.com/en/easy-guide-to-backing-up-phone-photos-
+  to-an-external-drive-for-seniors-1058835/ — plug a USB-C
+  drive in, copy DCIM with the file manager; generic iPhone
+  and Android, not written for Bluebird); maletphoto iPhone
+  guide (maletphoto.com/photos-from-iphone-to-flash/ — OTG /
+  Lightning adapter, dual-connector drives, or a computer;
+  iPhone, not written for Bluebird). Google Photos is cloud,
+  not USB.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-96, 65th how-to):
+  docs/bluebird-photos-to-usb.html.
+### 65. "back up Urovo photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Urovo-specific
+  guide at all, let alone a Urovo-specific automated
+  whole-library backup with progress, Pause/Stop, and
+  resume — the top results are generic manual guides,
+  PC tools, a forum thread, or a rival app guide.
+- Current top results (scored Nov 18, 2026, live web search):
+  Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-
+  drop, Google Drive, or AirDroid; generic Android, most ways
+  need a computer or a cloud account); YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); Pixoneye guide
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a USB drive with a file manager,
+  one small batch at a time; notes ThePhotoStick Omni;
+  generic Android and iPhone, not written for Urovo);
+  FotoSafe guide
+  (fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-
+  usb/ — a rival phone-to-USB app guide: connect the drive,
+  pick it as the destination in FotoSafe, copy; Android 9 or
+  later with USB host/OTG support — generic Android, not a
+  Urovo guide, and it does not promise oldest-first order,
+  detailed progress with Pause and Stop, or size verification
+  of every file); EpicTechTips guide
+  (epictechtips.com/transfer-pictures-from-android-phone-to-
+  usb-flash-drive/ — plug the drive in, file manager, Move;
+  or a PC or cloud; generic Android, not written for Urovo);
+  Android Central forum thread
+  (forums.androidcentral.com/threads/moving-photos-to-usb.
+  973408/ — OTG adapter + file manager; generic, not written
+  for Urovo). Google Photos is cloud, not USB.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-97, 66th how-to):
+  docs/urovo-photos-to-usb.html.
+### 66. "back up Getac photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Getac-specific
+  guide at all, let alone a Getac-specific automated
+  whole-library backup with progress, Pause/Stop, and
+  resume — the top results are generic manual guides,
+  PC tools, or a rival app guide.
+- Current top results (scored Nov 18, 2026, live web search):
+  YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); FotoSafe guide
+  (fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-
+  usb/ — a rival phone-to-USB app guide: connect the drive,
+  pick it as the destination in FotoSafe, copy; Android 9 or
+  later with USB host/OTG support — generic Android, not a
+  Getac guide, and it does not promise oldest-first order,
+  detailed progress with Pause and Stop, or size verification
+  of every file); Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-
+  drop, Google Drive, or AirDroid; generic Android, most ways
+  need a computer or a cloud account); askfilo guide
+  (askfilo.com/user-question-answers-smart-solutions/how-to-
+  transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — OTG adapter + file manager, or a PC as a middleman;
+  generic Android, not written for Getac); Pixoneye guide
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a USB drive with a file manager,
+  one small batch at a time; notes ThePhotoStick Omni;
+  generic Android and iPhone, not written for Getac);
+  EpicTechTips guide
+  (epictechtips.com/transfer-pictures-from-android-phone-to-
+  usb-flash-drive/ — plug the drive in, file manager, Move;
+  or a PC or cloud; generic Android, not written for Getac).
+  Google Photos is cloud, not USB.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-98, 67th how-to):
+  docs/getac-photos-to-usb.html.
+### 67. "back up Chainway photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Chainway-specific
+  guide at all, let alone a Chainway-specific automated
+  whole-library backup with progress, Pause/Stop, and
+  resume — the top results are generic manual guides,
+  PC tools, or a forum thread, and no Play app listing
+  at all.
+- Current top results (scored Nov 18, 2026, live web search):
+  Android Central forum thread
+  (forums.androidcentral.com/threads/moving-photos-to-usb.
+  973408/ — OTG adapter + file manager; generic, not written
+  for Chainway); YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); Pixoneye guide
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a USB drive with a file manager,
+  one small batch at a time; notes ThePhotoStick Omni;
+  generic Android and iPhone, not written for Chainway);
+  askfilo guide
+  (askfilo.com/user-question-answers-smart-solutions/how-to-
+  transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — OTG adapter + file manager, or a PC as a middleman;
+  generic Android, not written for Chainway);
+  connect.gmb.org.uk guide
+  (connect.gmb.org.uk/how-to-transfer-pictures-from-android-
+  to-flash-drive/ — USB OTG cable, wireless, or a computer;
+  generic Android, not written for Chainway); Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-
+  drop, Google Drive, or AirDroid; generic Android, most ways
+  need a computer or a cloud account). Google Photos is cloud,
+  not USB.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-99, 68th how-to):
+  docs/chainway-photos-to-usb.html.
+### 68. "back up CipherLab photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result other than our own
+  article is a CipherLab-specific guide, and no top result
+  offers an automated whole-library CipherLab backup with
+  progress, Pause/Stop, and resume.
+- Current top results (scored Nov 18, 2026, live web search):
+  SnapDisk's own CipherLab article, ranked #1
+  (dzianisv.github.io/photo-backup/cipherlab-photos-to-usb.
+  html — crawled 3 hours ago; this is a CHANGE from the
+  Nov 18 worklog evidence (WL-100), which found no
+  CipherLab-specific guide in the top results at all: the
+  article published that day is now indexed and ranks first
+  for its own query, so the gap it was written for is now
+  filled by our article); Pixoneye guide
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a USB drive with a file manager,
+  one small batch at a time; notes ThePhotoStick Omni;
+  generic Android and iPhone, not written for CipherLab);
+  Android Central forum thread
+  (forums.androidcentral.com/threads/moving-photos-to-usb.
+  973408/ — OTG adapter + file manager; generic, not written
+  for CipherLab); YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); TheGadgetians guide
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-
+  without-computer/ — OTG adapter + file manager, mentions
+  ThePhotoStick Omni; generic Android and iPhone, not written
+  for CipherLab); Techwalla camera guide
+  (techwalla.com/articles/how-to-move-pictures-from-camera-to-
+  flash-drive-with-no-computer — memory card reader + USB
+  flash drive for a digital camera; a camera guide, not a
+  phone guide). Google Photos is cloud, not USB.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-100, 69th how-to):
+  docs/cipherlab-photos-to-usb.html.
+### 69. "back up Unitech photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Unitech-specific
+  guide at all, let alone a Unitech-specific automated
+  whole-library backup with progress, Pause/Stop, and
+  resume — the search returned only five results, all
+  generic guides or a forum thread, and no Play app
+  listing at all.
+- Current top results (scored Nov 18, 2026, live web search):
+  Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-
+  drop, Google Drive, or AirDroid; generic Android, most ways
+  need a computer or a cloud account); YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); Pixoneye guide
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a USB drive with a file manager,
+  one small batch at a time; notes ThePhotoStick Omni;
+  generic Android and iPhone, not written for Unitech);
+  connect.gmb.org.uk guide
+  (connect.gmb.org.uk/how-to-transfer-pictures-from-android-
+  to-flash-drive/ — USB OTG cable, wireless, or a computer;
+  generic Android, not written for Unitech); Android Central
+  forum thread
+  (forums.androidcentral.com/threads/moving-photos-to-usb.
+  973408/ — OTG adapter + file manager; generic, not written
+  for Unitech). Google Photos is cloud, not USB.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-101, 70th how-to):
+  docs/unitech-photos-to-usb.html.
+### 70. "back up Newland photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Newland-specific
+  guide at all, let alone a Newland-specific automated
+  whole-library backup with progress, Pause/Stop, and
+  resume — the top results are generic manual guides,
+  PC tools, a forum thread, a camera-card guide, or a
+  rival app page.
+- Current top results (scored Nov 18, 2026, live web search):
+  Dr.Fone guide
+  (drfone.wondershare.com/android-transfer/how-to-transfer-
+  photos-from-android-to-usb.html — OTG copy, PC drag-and-
+  drop, Google Drive, or AirDroid; generic Android, most ways
+  need a computer or a cloud account); YouTube video
+  (youtube.com/watch?v=PYcbV25CczI — generic OTG + file
+  manager walkthrough); Android Central forum thread
+  (forums.androidcentral.com/threads/moving-photos-to-usb.
+  973408/ — OTG adapter + file manager; generic, not written
+  for Newland); Pixoneye guide
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a USB drive with a file manager,
+  one small batch at a time; notes ThePhotoStick Omni;
+  generic Android and iPhone, not written for Newland);
+  Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a real phone-to-USB app, one-tap
+  whole-gallery copy, only new photos next time, warns about
+  the FAT32 4 GB limit, free with ads, one-time purchase
+  removes ads — generic Android, not a Newland guide, and it
+  does not promise oldest-first order, detailed progress with
+  Pause and Stop, or size verification of every file);
+  brightideaphotography guide
+  (brightideaphotography.com/computer-free-backup/ — copy a
+  camera's memory card to an SSD with a phone or iPad and a
+  powered USB-C hub; camera cards, not a Newland phone guide).
+  Google Photos is cloud, not USB.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-102, 71st how-to):
+  docs/newland-photos-to-usb.html.
 ### 71. "back up Point Mobile photos to USB drive without computer" — HOW-TO GAP
 - Volume: unknown (Play publishes no volume).
 - Difficulty: Low. No top result is a Point Mobile-specific
@@ -5937,8 +6382,8 @@ demand is read off competitor install velocity instead (see
 - Verdict: how-to article material, not a listing keyword.
   Article published Nov 18, 2026 (WL-103, 72nd how-to):
   docs/point-mobile-photos-to-usb.html.
-  NOTE: queries 59–70 (WL-91–WL-102) have no searches.md rows —
-  their evidence lives only in WORKLOG.md. Backfill owed.
+  NOTE: queries 59–70 (WL-91–WL-102) backfilled Nov 18, 2026
+  (WL-106) from fresh live re-searches — rows 59–70 scored above.
   Fallback for WL-104: Opticon — no Opticon article exists in
   docs/ yet (H-31/H-33 Android 9 rugged mobile computers).
 
@@ -6010,8 +6455,8 @@ demand is read off competitor install velocity instead (see
 - Verdict: how-to article material, not a listing keyword.
   Article published Nov 18, 2026 (WL-104, 73rd how-to):
   docs/opticon-photos-to-usb.html.
-  NOTE: queries 59–70 (WL-91–WL-102) have no searches.md rows —
-  their evidence lives only in WORKLOG.md. Backfill owed.
+  NOTE: queries 59–70 (WL-91–WL-102) backfilled Nov 18, 2026
+  (WL-106) from fresh live re-searches — rows 59–70 scored above.
   Fallback for WL-105: Janam — no Janam article exists in
   docs/ yet (XT3 Android 9 or 11 rugged touch computer, 13MP
   camera, IP67, AER certified; XT2/XT2+ run Android 6, below
