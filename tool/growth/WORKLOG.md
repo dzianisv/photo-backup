@@ -1,5 +1,57 @@
 # SnapDisk — Work Log
 
+## WL-131 — Back up Wiko photos to USB article, 99th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #230 MERGED (head 8fd4804, CI run 44556366421
+  success, merge commit 5c659de, merged 2026-11-19T15:37:07Z);
+  post-merge main runs Android PR 44556833440 success +
+  pages 44556833534 success. Query 98 verified by the lead
+  from live evidence (no top result is a Wiko-specific
+  phone-to-USB photo-backup guide); supervisor re-scored Query
+  98 from a fresh live re-search: same 6 results as the lead
+  (YouTube OTG video, Dr.Fone guide, Android Central forum
+  thread, two generic Android guides, Photos to USB Play
+  listing) — none mentions Wiko; real gap stands.
+  Lead-verified by readback (feed 99 items incl. Wiko, sitemap
+  incl. URL, title correct, Query 98 row present, only docs/ +
+  tool/growth changed). Live fetch after Pages deploy: wiko-photos-to-usb.html
+  200, 66,756 bytes, correct title.
+  New docs/wiko-photos-to-usb.html ("Back up Wiko photos to a
+  USB drive (no computer)"), following the WL-54–WL-130 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: the Highway 4G can't run that
+  screen at all; the Y60 and Y61 can run it but can't host a
+  drive; on the six OTG-unconfirmed models the drive mounting
+  is the test).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 34 chars, meta
+  description 146 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 99 items; blog JSON-LD
+  counts 99 BlogPosting entries. searches.md Query 98 row
+  present ("back up Wiko photos to USB drive without computer"
+  — HOW-TO GAP): top results are a YouTube OTG video, a
+  Dr.Fone guide, an Android Central forum thread, two generic
+  Android guides, and the Photos to USB Play listing, none is
+  a guide for a Wiko phone.
+  Wiko specifics verified live (mostly Wiko's own datasheets):
+  13 phones clear SnapDisk's Android 7.0 minimum and list OTG
+  — View, View Prime, View 2, View 3, View 3 Lite, View 4,
+  View 4 Lite, View 5, View 5 Plus, Power U20, Power U30, Y80
+  and Y81 — so the one-tap route exists on those; 6 more clear
+  7.0 with OTG unconfirmed (View XL, Lenny 4, Y50, Y52, Y62,
+  Y82), so SnapDisk installs but drive mounting is the test;
+  the Y60 and Y61 list OTG No in Wiko's own datasheets, so no
+  phone route exists on either; the Highway 4G runs Android
+  4.4.2 and can't run SnapDisk at all. Conflicts named in the
+  article: View 4 is Android 10 per five sources vs 9 per
+  versus; View 5 microSD is 256 GB vs 512 GB on the same site;
+  Y60 microSD is 128 GB (official datasheet) vs 32 GB
+  (droidafrica).
+  Fallback for WL-132: itel — no itel article exists in
+  docs/ yet and no searches.md row.
+
 ## WL-130 — Back up Bullitt photos to USB article, 98th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
