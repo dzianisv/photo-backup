@@ -2,11 +2,15 @@
 
 ## WL-123 — Back up Elo photos to USB article, 91st how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: DONE pending article-PR merge.
-  Article PR #214 OPEN (head a5afd5d, CI run 44525302357
-  success); merge receipt to be added on follow-up after the
-  supervisor merges PR #214 — this row PR merges after the
-  article PR. Recovery dispatch: the previous WL-123 lead
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #214 MERGED (merge 5ea3d61, 2026-11-19T12:42:38Z, CI run
+  44525302357 success on head a5afd5d); post-merge main runs Android PR
+  44526416911 success + pages 44526416640 success. Live fetch:
+  elo-photos-to-usb.html loads (correct title, browser read 12:43 UTC),
+  feed.xml 91 items incl. Elo. Query 90 re-scored by supervisor from a
+  fresh live re-search: same 6 results as the lead (drfone, YouTube OTG,
+  pixoneye, Android Central forum, photocleanse, ubackup) — none mentions
+  Elo; real gap stands. Recovery dispatch: the previous WL-123 lead
   (run b640b1ac) was interrupted after rebasing only — no
   branch, PR, or worktree survived; this run started fresh
   from main 2244a7b. Query 90 verified by the lead from live
