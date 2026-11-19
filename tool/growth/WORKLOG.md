@@ -3,8 +3,9 @@
 ## WL-139 — Back up Coolpad photos to USB article, 107th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #247 OPEN (head f92cdec, CI run 44611278919
-  success, merge receipt PENDING — supervisor fills pre-merge).
+  Article PR #247 MERGED (head f92cdec, CI run 44611278919
+  success; re-run 44612366821 success after the force-push reset;
+  merge commit c87fb1f, merged 2026-11-19T20:49:31Z).
   Query 106 verified by the lead from live evidence (no top
   result is a Coolpad-specific phone-to-USB photo-backup
   guide); top results are a YouTube OTG video, an Android
