@@ -1,5 +1,66 @@
 # SnapDisk — Work Log
 
+## WL-133 — Back up Lava photos to USB article, 101st how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #234 (head 1d3da40, CI run 44567460270 PENDING);
+  merge commit PENDING; post-merge main runs PENDING; live
+  fetch PENDING — supervisor fills after merging the article.
+  Query 100 verified by the lead from live evidence (no top
+  result is a Lava-specific phone-to-USB photo-backup guide);
+  top results are two YouTube OTG videos, a Dr.Fone guide,
+  two generic Android guides (epictechtips, groovypost), and
+  the PhotoSaver Play listing — none mentions Lava; real gap
+  stands.
+  New docs/lava-photos-to-usb.html ("Back up Lava photos
+  to a USB drive (no computer)"), following the
+  WL-54–WL-132 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: all fourteen covered Lava
+  phones can run that screen and host a drive; three of
+  them — the Agni 3 5G, the Blaze Curve 5G and the Blaze X
+  5G — take no microSD card, so the drive is the only local
+  copy).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 34 chars, meta
+  description 153 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 101 items; blog JSON-LD
+  counts 101 BlogPosting entries. searches.md Query 100 row
+  present ("back up Lava photos to USB drive without
+  computer" — HOW-TO GAP): top results are two YouTube
+  videos, a Dr.Fone guide, two generic Android guides, and
+  a Play app listing, none is a guide for a Lava phone.
+  Lava specifics verified live: 14 phones clear SnapDisk's
+  Android 7.0 minimum and list OTG without a dissenting
+  source — Agni 2 5G, Agni 3 5G, Blaze 2 5G, Blaze 3 5G,
+  Blaze Curve 5G, Blaze X 5G, Storm 5G, Storm Play 5G, Yuva
+  2, Yuva 2 Pro, Yuva 2 5G, Yuva 3, Yuva 3 Pro and Yuva 4 —
+  so the one-tap route exists on all fourteen; every covered
+  model takes USB-C, so no micro-USB adapter in this guide;
+  three take no microSD card — the Agni 3 5G, the Blaze Curve
+  5G and the Blaze X 5G — so on those three the drive is the
+  only local copy and the card-reader route does not exist.
+  Conflicts named in the article: the Agni 2 5G's microSD
+  slot is a hybrid slot per smartprix and a 256 GB dedicated
+  slot per Flipkart against no slot at all per mobiledokan and
+  mysmartprice; the Agni 3 5G's slot is no slot per smartprix,
+  GSMArena, notebookcheck and techspecs against a dedicated
+  or hybrid slot per phonepik; the Blaze X 5G's slot is no
+  slot per smartprix and mysmartprice against a microSDXC slot
+  per gsmfind; the Yuva 2's second camera is an 8 MP
+  ultrawide per phonepik against a VGA sensor per smartprix;
+  the Yuva 3 Pro's second camera is a 0.3 MP auxiliary lens
+  per beebom against an 8 MP ultrawide per phonepik; no source
+  found states a microSD ceiling for the Blaze 2 5G, Yuva 3
+  or Yuva 3 Pro, or a front camera for the Blaze 3 5G or
+  Blaze Curve 5G. VaultDrive needs Android 8 or later per its
+  own site, so every covered Lava phone clears it — and
+  AppBrain lists 12.1 or later, which twelve of the fourteen
+  clear, the Yuva 2 and Yuva 2 Pro running Android 12.
+  Fallback for WL-134: Micromax — no Micromax article exists
+  in docs/ yet and no searches.md row.
+
 ## WL-132 — Back up itel photos to USB article, 100th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
