@@ -1,10 +1,16 @@
 # SnapDisk — Work Log
 
-## WL-113 — Back up Samsung Galaxy XCover photos to USB article, 81st how-to (DRAFT — article PR open)
+## WL-113 — Back up Samsung Galaxy XCover photos to USB article, 81st how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: DRAFT — article PR #194 open
-  (head ca6fbb4), supervisor merges after readback. CI run
-  44506212968 green (build pass, 1m0s).
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #194 MERGED (merge c576416, 2026-11-19T10:36:09Z, CI run
+  44506677921 success on head 970f2a9); post-merge main runs Android PR
+  44507196254 success + pages 44507195886 success. Live fetch:
+  samsung-galaxy-xcover-photos-to-usb.html 200 (correct title, fresh
+  crawl 10:37 UTC), feed.xml 81 items incl. XCover. Query 80 re-scored
+  by supervisor from a fresh live re-search: same 6 results as the
+  lead found, no XCover-specific phone-to-USB photo-backup guide —
+  verdict stands.
   New docs/samsung-galaxy-xcover-photos-to-usb.html ("Back up
   Galaxy XCover photos to a USB drive (no computer)"),
   following the WL-54–WL-112 article template exactly
