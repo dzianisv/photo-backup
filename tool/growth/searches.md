@@ -9384,6 +9384,115 @@ demand is read off competitor install velocity instead (see
   docs/ yet and no searches.md row (Lava, the Indian budget
   Android phone brand; Agni, Blaze and Yuva series).
 
+### 100. "back up Lava photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Lava-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Lava-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and three covered Lava
+  phones take no microSD card, so the drive is the only
+  local copy on those.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  youtube.com, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any modern
+  Android phone to a USB drive is a USB On-The-Go (OTG)
+  connection and the phone's built-in file manager; it needs
+  Android 7.0 or newer, a USB flash drive, and an OTG
+  adapter or a dual USB-C/USB-A drive; copy DCIM/Camera in
+  the file manager. A generic Android video guide — it says
+  nothing about Lava);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive-Dr.Fone"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash
+  drive with an OTG adaptor and the file manager, through a
+  PC in File Transfer mode, through Google Drive, or through
+  AirDroid; Dr.Fone's own software bulk-exports to a
+  computer. A generic Android guide — it says nothing about
+  Lava);
+  epictechtips.com, "How to Transfer Pictures from Android
+  Phone to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive into your Android device, tap the
+  USB charging notification and select "Transfer photos", or
+  use a PC as an intermediary; confirm the phone supports
+  USB OTG first, and pick a drive that matches the phone's
+  port type. A generic Android guide — it says nothing about
+  Lava);
+  youtube.com, "How to Transfer Photos, Videos and any Files
+  from Android Phone to USB Pendrive (USB Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — move photos, videos
+  and other files from an Android phone to a USB flash drive
+  with a USB OTG adapter and the phone's built-in file
+  manager; verify OTG compatibility first, and format the
+  drive FAT32 or exFAT. A generic Android video guide — it
+  says nothing about Lava);
+  groovypost.com, "How to Transfer Photos from Android to a
+  USB Drive"
+  (groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — back up Android photos to a USB flash drive with a PC as
+  a middleman in File Transfer mode, or with a dual USB-C/USB-A
+  drive straight into the phone; copy DCIM/Camera in the file
+  manager, or use Google Drive. A generic Android guide — it
+  says nothing about Lava);
+  play.google.com, "PhotoSaver Phone-to-Drive"
+  (play.google.com/store/apps/details?id=com.clevx.photosaver&hl=en_IN
+  — save photos and videos to any USB-C drive with one click,
+  share files between iOS, Android and computers over a USB
+  drive, no computer needed; works with Android devices that
+  have a USB-C connection. A real phone-to-USB app — but a
+  generic Android listing, not a Lava guide; it works on all
+  fourteen covered Lava phones, since every one takes USB-C).
+- Fourteen Lava phones clear SnapDisk's Android 7.0 minimum
+  and list USB OTG — the Agni 2 5G (Android 13), the Agni 3
+  5G (Android 14), the Blaze 2 5G (Android 13), the Blaze 3
+  5G (Android 14), the Blaze Curve 5G (Android 13), the
+  Blaze X 5G (Android 14), the Storm 5G (Android 13), the
+  Storm Play 5G (Android 15), the Yuva 2 (Android 12), the
+  Yuva 2 Pro (Android 12), the Yuva 2 5G (Android 14), the
+  Yuva 3 (Android 13), the Yuva 3 Pro (Android 13) and the
+  Yuva 4 (Android 14) — so the one-tap route exists on all
+  fourteen; no covered Lava phone is below Android 7.0 at
+  all, and all fourteen list OTG without a dissenting source.
+  Three of the fourteen take no microSD card — the Agni 3
+  5G, the Blaze Curve 5G and the Blaze X 5G — so on those
+  three the USB drive is the only local copy; the Agni 2
+  5G's card slot is disputed (hybrid slot per smartprix and
+  a 256 GB dedicated slot per Flipkart, no slot per
+  mobiledokan and mysmartprice).
+- The Agni 3 5G's microSD slot is two things — no slot at
+  all per smartprix, GSMArena, notebookcheck and techspecs,
+  a dedicated or hybrid slot per phonepik. The Blaze X 5G's
+  microSD slot is two things — no slot per smartprix and
+  mysmartprice, a microSDXC slot per gsmfind. The Yuva 2's
+  second camera is two things — an 8 MP ultrawide per
+  phonepik, a VGA sensor per smartprix — and the Yuva 3
+  Pro's second camera is two things too — a 0.3 MP auxiliary
+  lens per beebom, an 8 MP ultrawide per phonepik. The Yuva
+  2 Pro takes microSD up to 256 GB per 91mobiles, gadgetsnow
+  and smartprix, with bajajfinserv listing the ceiling as not
+  available. No source found states a microSD ceiling for the
+  Blaze 2 5G, the Yuva 3 or the Yuva 3 Pro at all. VaultDrive
+  needs Android 8 or later per its own site, so every covered
+  Lava phone clears it, and AppBrain lists 12.1 or later,
+  which twelve of the fourteen clear — the Yuva 2 and Yuva 2
+  Pro run Android 12, below 12.1. Lava has no phone-to-USB
+  backup tool of its own — no Lava-specific backup advice
+  turned up in any source beyond a computer copy, Google
+  Drive, or Google Photos; no source found names the stock
+  file manager on a Lava phone; Lava International Limited
+  was founded on 27 March 2009 in Noida, Uttar Pradesh, and
+  marked 17 years in March 2026.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-133, 101st how-to):
+  docs/lava-photos-to-usb.html.
+  Fallback for WL-134: Micromax — no Micromax article exists
+  in docs/ yet and no searches.md row (Micromax, the Indian
+  budget Android phone brand; Canvas series).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
