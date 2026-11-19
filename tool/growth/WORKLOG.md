@@ -1,5 +1,51 @@
 # SnapDisk — Work Log
 
+## WL-124 — Back up Fujitsu photos to USB article, 92nd how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #216 (head f23dc7b, CI run 44528920202 success,
+  mergeable MERGEABLE; merge pending supervisor readback).
+  Query 91 verified by the lead from live evidence (no top
+  result mentions a Fujitsu phone); lead-verified by readback
+  (feed 92 items incl. Fujitsu, sitemap incl. URL, title
+  correct, Query 91 row present, only docs/ + tool/growth
+  changed).
+  New docs/fujitsu-photos-to-usb.html ("Back up Fujitsu photos
+  to a USB drive (no computer)"), following the WL-54–WL-123
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot). Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml updated.
+  Title 37 chars, meta description 127 chars, JSON-LD
+  validated by parse; sitemap and feed XML parse. Feed now
+  counts 92 items; blog JSON-LD counts 92 BlogPosting entries.
+  searches.md Query 91 row present ("back up Fujitsu photos to
+  USB drive without computer" — HOW-TO GAP): top results are a
+  2005 Fujitsu disk-drive review, a generic camera-card guide,
+  an unrelated HPE Linux thread, a rival app listing, a camera
+  forum thread and a generic phone-to-USB guide, none mentions
+  a Fujitsu phone. Fujitsu specifics verified live: Arrows
+  Alpha Android 15, USB on-the-go, 50 MP + 50 MP rear, 50 MP
+  front (storage disputed 512 vs 256 GB, Japan-only summer
+  2025); We2 Plus Android 14, USB Host + OTG 1.3, 50.1 MP rear
+  + 8 MP aux, 15.9 MP front; We2 Android 14, USB Host + OTG
+  1.3, 50.1 MP rear + 1.9 MP aux, 8 MP front; N Android 12,
+  USB Host + OTG 1.3, 50.3 MP rear + 8 MP aux, 12.3 MP front;
+  Tab F-02K Android 7.1, USB Type-C, OTG unconfirmed; all five
+  take microSD; Stylistic runs Windows (M532 Android 4.0);
+  Fit F-01H Android 5.1 and M03 Android 6.0 below the minimum;
+  Fujitsu's own app is Easy Photo Transfer for arrows,
+  phone-to-phone over Wi-Fi Direct, last updated July 2018;
+  no source found names the stock file manager on a Fujitsu
+  device. VaultDrive floor note: Android 8+ per its own site,
+  which the F-02K (Android 7.1) does not clear; AppBrain lists
+  Android 12.1+, which only the Alpha and the We2/We2 Plus
+  clear.
+  Fallback for WL-125: Bittium — no Bittium article exists in
+  docs/ yet and no searches.md row (enterprise Android rugged
+  phones, Tough Mobile 2 Android 9, Snapdragon 670, 12 MP rear
+  camera, microSD up to 256 GB).
+
 ## WL-123 — Back up Elo photos to USB article, 91st how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
