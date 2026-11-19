@@ -7595,6 +7595,133 @@ demand is read off competitor install velocity instead (see
   article exists in docs/ yet and no searches.md row
   (Versity 95/96/97 enterprise Android smartphones).
 
+### 85. "back up Spectralink photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Spectralink-specific
+  guide to backing up photos to a USB drive at all, let
+  alone a Spectralink-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  forums.tomshardware.com, "How can I offload pictures from
+  a digital camera to a flash drive?"
+  (forums.tomshardware.com/threads/how-can-i-offload-pictures-from-a-digital-camera-to-a-flash-drive.1273814/
+  — a forum thread about offloading pictures from a digital
+  camera to a flash drive: the answers say you would need a
+  laptop, or take the memory card out and use a card reader
+  with a computer. A camera thread — it says nothing about
+  Spectralink, or about a phone at all);
+  techwalla.com, "How to Move Pictures from Camera to Flash
+  Drive With No Computer"
+  (techwalla.com/articles/how-to-move-pictures-from-camera-to-flash-drive-with-no-computer
+  — move pictures from a camera to a flash drive with no
+  computer: a combination memory card reader and USB flash
+  drive, take the card out of the camera, put it in the
+  reader, let it transfer. A camera guide — it says nothing
+  about Spectralink, or about a phone at all);
+  pixoneye.com, "How to Transfer Photos from Your Phone
+  to an USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage, open
+  the files from the destination, make an independent
+  backup before deleting anything; on Android, connect
+  the drive with the matching connector or OTG adapter,
+  open Files by Google or the phone's file manager, find
+  DCIM/Camera, select a small batch and choose Copy to.
+  A generic Android and iPhone guide — it says nothing
+  about Spectralink, or about an enterprise smartphone);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — a forum thread about moving photos to a USB drive:
+  use an OTG adapter to plug in a thumb drive and it
+  should show as external storage in the file manager,
+  then move files from there. A generic Android thread —
+  it says nothing about Spectralink, or about a Versity
+  phone);
+  softhandtech.com, "Transfer Photos from Phone to Memory
+  Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — transfer photos from a phone to a memory stick: by
+  computer, by direct OTG transfer if the device supports
+  it, or by cloud services. A generic Android and iPhone
+  guide — it says nothing about Spectralink, or about a
+  Versity phone);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer Android photos to a USB flash drive by OTG
+  adaptor and file manager, by PC drag-and-drop, by
+  Google Drive, or by AirDroid. A generic Android guide —
+  it says nothing about Spectralink, or about a Versity
+  phone).
+  A second search ("Spectralink Versity 95 96 97 smartphone
+  Android OTG USB") returned the Versity 95/96/97 user
+  guide (Android 13), the Versity 96 listing (LTE, Google
+  Mobile Services), the 92/95/96 user guide (95xx and 92xx
+  Wi-Fi only, 96xx LTE + Wi-Fi, 9x40 sleek / 9x53 scanner)
+  and Spectralink's Android 13 upgrade document for the
+  95/96 — no Spectralink-specific backup guide. A third
+  search ("Spectralink Versity 97 datasheet Android 13
+  camera microSD USB-C") returned the Versity 97 launch
+  (16 MP camera with HDR, Google Android Enterprise
+  Recommended, Wi-Fi 6/6E) and unrelated Symphony V97 and
+  Vivo Y97 phones — no Spectralink-specific backup guide,
+  and the "V97"/"Y97" results are different brands' phones.
+  A fourth search ("Spectralink Versity 92 95 Android
+  version OTG USB host") returned the Versity 92 datasheet
+  (Android 10.0 at release, 8 MP camera, USB 3.1 Type-C),
+  the 95/96 upgrade-to-Android-13 document (factory
+  default wipes the device, no return to 8.1/10) and the
+  UC Today review (all Versity phones Android 8.1 or
+  later, USB Type-C charging) — no Spectralink-specific
+  backup guide. A fifth search ("Spectralink Versity 95
+  96 datasheet 13MP camera microSD USB Type-C
+  specifications") returned the 95 datasheet (13 MP rear,
+  8 MP front, USB 3.1 Type-C) and the 96 datasheet
+  (Android 10, 13 MP rear, 8 MP front, USB 3.1 Type-C,
+  LTE EMEA/APAC only) — no Spectralink-specific backup
+  guide. A sixth search ("Spectralink DECT handset 7520
+  7532 7640 7720 not Android smartphone") returned the
+  DECT 7000 series (7502, 7202, 7212, 7522, 7532, 7622,
+  7642, 7722, 7742, Butterfly) — DECT handsets, not
+  Android smartphones. A seventh search ("Spectralink
+  8440 8450 8452 8453 Wi-Fi phone Android camera")
+  returned the 84-series listings (Camera: No, Memory
+  Card Support: No) — Wi-Fi phones, not Android
+  smartphones. Spectralink specifics: no
+  Spectralink-specific guide to backing up photos to a
+  USB drive turned up at all — not one top result even
+  mentions Spectralink; no source found labels any
+  Versity USB port OTG — the datasheets say only
+  "USB3.1 Type-C Connector" — so on all four series the
+  drive mounting is the test; the 92 runs Android 10.0
+  at release, the 95 and 96 launched on Android 8.1 and
+  are upgradeable to Android 13 (which requires a
+  factory default that wipes the device), and the 97
+  runs Android 13, so all four clear SnapDisk's Android
+  7.0 minimum; no upgrade to Android 13 is stated for
+  the 92; the 92 carries an 8 MP rear and 2 MP front
+  camera, the 95 and 96 carry 13 MP rear and 8 MP front
+  cameras, and the 97 carries a 16 MP rear camera with
+  HDR; no source found states a front-camera spec for
+  the 97, the 97's model numbers, or microSD support or
+  a microSD capacity for any covered Versity model; the
+  96 ships Google Mobile Services and the 97 is Google
+  Android Enterprise Recommended, so the Play Store is
+  present there, and no source found states whether the
+  92 or the 95 ship Google Play; the DECT 7000 series
+  and the 84-series Wi-Fi phones are not Android
+  smartphones and cannot run SnapDisk at all; the
+  Versity 90 Series turned up by name only in the
+  95/96/97 user guide; no source found names the stock
+  file manager on a Versity phone.
+  Spectralink has no phone-to-USB photo backup tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-118, 86th how-to):
+  docs/spectralink-photos-to-usb.html.
+  Fallback for WL-119: Advantech — no Advantech article
+  exists in docs/ yet and no searches.md row (enterprise
+  Android handhelds, AIM series).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),

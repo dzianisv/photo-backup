@@ -1,5 +1,118 @@
 # SnapDisk — Work Log
 
+## WL-118 — Back up Spectralink photos to USB article, 86th how-to (DRAFT — article PR open)
+
+- Owner: SEO/GEO lane lead. State: DRAFT — article PR #204 open
+  (head 11f859b), supervisor merges after readback.
+  New docs/spectralink-photos-to-usb.html ("Back up
+  Spectralink photos to a USB drive (no computer)"),
+  following the WL-54–WL-117 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 41 chars,
+  meta description 150 chars, JSON-LD validated by parse;
+  sitemap and feed XML parse. Feed now counts 86 items; blog
+  JSON-LD counts 86 BlogPosting entries.
+  searches.md Query 85 row present ("back up Spectralink photos
+  to USB drive without computer" — HOW-TO GAP).
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (backup/PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (backup/ProPrefs.FREE_BACKUP_BYTES_LIMIT = 5 GiB); Pro
+  $9.99 one-time = auto-backup on connect + unlimited size
+  (strings.xml pro_price, pro_unlocked); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB
+  skipped with reason (util/FilesystemInfo.FAT32_MAX_FILE_BYTES);
+  raw byte-stream copy (backup/BackupEngine.copyWithResume —
+  no decode/re-encode, .part resume, size verification after
+  copy, retry once) with size verification after copy.
+  ApplicationId unchanged (dev.dzianisv.snapdisk,
+  app/build.gradle.kts, minSdk 24 = Android 7.0); app tree
+  untouched vs main (only docs/ + tool/growth/searches.md
+  changed).
+  Search evidence (Nov 19, 2026 live web search): Query 85
+  is a real gap — no top result is a Spectralink-specific guide
+  to backing up photos to a USB drive without a computer at
+  all; not one top result even mentions Spectralink.
+  forums.tomshardware.com, "How can I offload pictures from
+  a digital camera to a flash drive?" (camera thread — the
+  answers say you need a laptop, or a card reader with a
+  computer; says nothing about Spectralink, or about a phone
+  at all);
+  techwalla.com, "How to Move Pictures from Camera to Flash
+  Drive With No Computer" (camera card-reader guide — take
+  the card out, put it in the reader; says nothing about
+  Spectralink, or about a phone at all);
+  pixoneye.com, "How to Transfer Photos from Your Phone to
+  an USB Stick" (generic Android/iPhone guide — Files by
+  Google, DCIM/Camera, Copy to; says nothing about
+  Spectralink, or about an enterprise smartphone);
+  forums.androidcentral.com, "Moving photos to usb" (forum
+  thread — generic OTG adapter + file manager; says nothing
+  about Spectralink, or about a Versity phone);
+  softhandtech.com, "Transfer Photos from Phone to Memory
+  Stick: A Comprehensive Guide" (generic Android/iPhone
+  guide — computer, direct OTG, or cloud; says nothing
+  about Spectralink, or about a Versity phone);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive" (generic Android
+  guide — OTG adaptor + file manager, or PC, or Google
+  Drive/AirDroid; says nothing about Spectralink, or about
+  a Versity phone). A second search (Versity 95/96/97
+  models, OTG) returned the 95/96/97 user guide (Android
+  13), the 96 listing (LTE, Google Mobile Services) and
+  the 95/96 Android 13 upgrade document — no
+  Spectralink-specific backup guide. A third search
+  (Versity 97 datasheet) returned the 97 launch (16 MP
+  camera with HDR, Google Android Enterprise Recommended,
+  Wi-Fi 6/6E) and unrelated Symphony V97 and Vivo Y97
+  phones — no backup guide, and the "V97"/"Y97" results
+  are different brands' phones. A fourth search (Versity
+  92/95 Android version, OTG) returned the 92 datasheet
+  (Android 10.0 at release, 8 MP camera, USB 3.1 Type-C),
+  the 95/96 upgrade document (factory default wipes the
+  device, no return to 8.1/10) and the UC Today review
+  (all Versity phones Android 8.1 or later) — no
+  Spectralink-specific backup guide. A fifth search (95/96
+  datasheets) returned the 95 datasheet (13 MP rear, 8 MP
+  front, USB 3.1 Type-C) and the 96 datasheet (Android 10,
+  LTE EMEA/APAC only) — no backup guide. A sixth search
+  (DECT handsets) returned the DECT 7000 series (7502,
+  7202, 7212, 7522, 7532, 7622, 7642, 7722, 7742,
+  Butterfly) — DECT handsets, not Android smartphones.
+  A seventh search (84-series) returned the 8440/8450/
+  8452/8453 listings (Camera: No, Memory Card Support:
+  No) — Wi-Fi phones, not Android smartphones.
+  Honest limits recorded in the article: no source found
+  labels any Versity USB port OTG — the datasheets say
+  only "USB3.1 Type-C Connector" — so on all four series
+  the drive mounting is the test, while no series lists
+  OTG support; the 95 and 96 launched on Android 8.1,
+  later datasheets list Android 10, and the upgrade to
+  Android 13 requires a factory default that wipes the
+  device, so back up before upgrading; no upgrade to
+  Android 13 is stated for the 92; no source found states
+  microSD support or a microSD capacity for any covered
+  Versity model, a front-camera spec for the 97, or the
+  97's model numbers; the 96 ships Google Mobile Services
+  and the 97 is Google Android Enterprise Recommended,
+  and no source found states whether the 92 or the 95
+  ship Google Play; the DECT 7000 series and the
+  84-series Wi-Fi phones are not Android smartphones and
+  cannot run SnapDisk at all; the Versity 90 Series
+  turned up by name only; no source found names the
+  stock file manager on a Versity phone; Spectralink has
+  no phone-to-USB photo backup tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-118, 86th how-to):
+  docs/spectralink-photos-to-usb.html.
+  Fallback for WL-119: Advantech — no Advantech article
+  exists in docs/ yet and no searches.md row (enterprise
+  Android handhelds, AIM series).
+
 ## WL-117 — Back up iData photos to USB article, 85th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
