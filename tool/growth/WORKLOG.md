@@ -1,10 +1,10 @@
 # SnapDisk — Work Log
 
-## WL-137 — Back up Xolo photos to USB article, 105th how-to (PENDING)
+## WL-137 — Back up Xolo photos to USB article, 105th how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: PENDING.
-  Article PR #243 OPEN (head 27e33e9, CI run 44590401852
-  success, merge commit PENDING, merged PENDING).
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #243 MERGED (head 27e33e9, CI run 44590401852
+  success, merge commit ba3ca50, merged 2026-11-19T18:44:46Z).
   Query 104 verified by the lead from live evidence (no top
   result is a Xolo-specific phone-to-USB photo-backup
   guide); top results are a Dr.Fone guide and four generic
