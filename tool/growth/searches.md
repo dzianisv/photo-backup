@@ -7328,6 +7328,142 @@ demand is read off competitor install velocity instead (see
   (intrinsically safe mobile devices, PIXAVI / Agile X
   line).
 
+### 83. "back up Bartec photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Bartec-specific
+  guide to backing up photos to a USB drive at all, let
+  alone a Bartec-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any
+  modern Android phone to a USB drive is a USB On-The-Go
+  (OTG) connection and the phone's built-in file manager
+  app; fast, secure, no computer or internet connection;
+  needs Android 7.0 or newer, a USB flash drive, and an
+  OTG adapter or a dual USB-C/USB-A drive. A generic
+  Android video — it says nothing about Bartec, or about
+  a magnetic USB connector);
+  fotosafe.weidisoft.net, "Back up Android photos to a USB
+  | FotoSafe"
+  (fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/
+  — back up Android photos to a USB drive without a
+  computer: you need a compatible Android device, USB
+  storage recognised by Android and, where needed, a
+  data-capable OTG adapter; Android 9 or later with USB
+  host/OTG support. A generic Android guide from a rival
+  app — it says nothing about Bartec, or about a magnetic
+  USB connector);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash
+  drive directly with an OTG adaptor and the file
+  manager, or through a PC in File Transfer mode, or
+  wirelessly through Google Drive or AirDroid. A generic
+  Android guide — it says nothing about Bartec, or about
+  a magnetic USB connector);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — a forum thread: use the OTG adapter to plug in any
+  supported external device and it should be visible as
+  external storage in the file manager, then move files
+  from there. A generic Android thread — it says nothing
+  about Bartec, or about a magnetic USB connector);
+  pixoneye.com, "How to Transfer Photos from Your Phone
+  to an USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage, open
+  the files from the destination, make an independent
+  backup before deleting anything; on Android, connect
+  the drive with the matching connector or OTG adapter,
+  open Files by Google or the phone's file manager, find
+  DCIM/Camera, select a small batch and choose Copy to.
+  A generic Android and iPhone guide — it says nothing
+  about Bartec, or about a magnetic USB connector);
+  play.google.com, "Photo Backup Stick DC"
+  (play.google.com/store/apps/details?id=com.photo.backup.stick
+  — the official backup app for the Photo Backup Stick
+  direct connect USB OTG flash drives: back up pictures
+  and videos directly to your Photo Backup Stick, no
+  computer or Wi-Fi, free — but it only works with
+  genuine Photo Backup Stick OTG drives. An app listing,
+  not a guide — it says nothing about Bartec);
+  play.google.com, "Photos to USB: OTG Backup"
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — back up every photo and video on your phone to a USB
+  pen drive, with one tap; plug a pen drive in, the app
+  spots it and copies your gallery onto it; no internet,
+  no cloud, no account; free, with ads, a one-time
+  purchase removing the ads. An app listing, not a
+  guide — it says nothing about Bartec).
+  A second search ("Bartec PIXAVI Phone Agile X Agile S
+  intrinsically safe smartphone Android OTG USB") returned
+  only the PIXAVI user guide (magnetic USB connector,
+  charge only in a non-hazardous area, USB Safe Box cable),
+  an intrinsically-safe-phone buyer's guide, and the
+  Impact X brochure (Android 4.2.2) — no Bartec-specific
+  backup guide, and no result even mentions Bartec as a
+  backup subject. A third search ("Bartec PIXAVI Phone
+  specifications Android version datasheet") returned the
+  PIXAVI Phone datasheets (Android 9 in 2022, Android 11
+  in 2023), the PIXAVI Cam datasheet (Android 11), the
+  PIXAVI quick start guide, and the Impact X on Android
+  7.1.2 in one reseller listing — no Bartec-specific
+  backup guide. A fourth search ("Bartec Agile X Agile S
+  smartphone") returned the correction that the Agile X
+  is a Zone 1 tablet PC and the Agile S NI is a Windows 11
+  tablet PC with an Intel Core i5-7300U — neither is an
+  Android phone. A fifth search ("Bartec SP9EX1 smartphone
+  USB-C OTG microSD Google Play") returned the SP9EX1
+  datasheet and listings (Android 15, USB-C port, Google
+  Mobile Services) plus OTG explainer pages — no
+  Bartec-specific backup guide, and no result labels the
+  SP9EX1 USB-C port OTG. Bartec specifics: no
+  Bartec-specific guide to backing up photos to a USB
+  drive turned up at all — not one top result even
+  mentions Bartec; no source found labels any Bartec USB
+  port OTG — the SP9EX1 datasheets list only a "USB-C
+  Port" under External I/O — so the drive mounting is the
+  test on the two SP9EX1 models; the PIXAVI line has no
+  standard USB port at all, only a magnetic USB connector,
+  and no source found says that connector hosts a USB
+  drive, so on the three PIXAVI models the whole method is
+  unconfirmed until a drive mounts through Bartec's own
+  USB Safe Box cable G7-S0Z0-0006; the PIXAVI Phone runs
+  Android 9 in its 2022 datasheet but Android 11 in its
+  2023 datasheet, and the Impact X runs Android 4.2.2 at
+  launch, Android 5.1.1 after the 2016 update, and Android
+  7.1.2 in one reseller listing for the updated version;
+  the PIXAVI Phone, PIXAVI Thermal and PIXAVI Cam run
+  Android 9 or 11, and the SP9EX1 Smartphone and SP9EX1
+  Smartphone Cam run Android 15, upgradeable to Android
+  16, so all five clear SnapDisk's Android 7.0 minimum;
+  the PIXAVI line takes microSD (Phone and Thermal 1x
+  microSD alongside a nano-SIM, Cam 1x microSD) while no
+  source found states microSD support for the SP9EX1; the
+  PIXAVI Cam is end-of-life (one reseller marks it "EOL —
+  No longer available for purchase"); the Agile X and
+  Agile S are Windows tablets, not Android phones, so they
+  cannot run SnapDisk at all; Bartec's user guide says the
+  USB port may be used for charging only in a
+  non-hazardous area and to use only Bartec approved
+  chargers and cables; no source found states whether the
+  PIXAVI line ships Google Play, while the SP9EX1 ships
+  with full Android 15 and Google Mobile Services; no
+  source found names the stock file manager on a Bartec
+  device.
+  Bartec has no phone-to-USB photo backup tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-116, 84th how-to):
+  docs/bartec-photos-to-usb.html.
+  Fallback for WL-117: Bullitt — no Bullitt article
+  exists in docs/ yet and no searches.md row (rugged-phone
+  maker behind the CAT S-series and Land Rover Explore
+  phones).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
