@@ -1,5 +1,82 @@
 # SnapDisk — Work Log
 
+## WL-134 — Back up Micromax photos to USB article, 102nd how-to (READY FOR MERGE)
+
+- Owner: SEO/GEO lane lead. State: READY FOR MERGE —
+  supervisor merges after readback.
+  Article PR #237 OPEN (head 78fff53, CI run 44574148081
+  success, merge state CLEAN, mergeable).
+  Query 101 verified by the lead from live evidence (no top
+  result is a Micromax-specific phone-to-USB photo-backup
+  guide); top results are a YouTube OTG video, the Photos to
+  USB Play listing, an Android Central forum thread, and
+  three generic Android guides (two softhandtech, thegadgetians)
+  — none mentions Micromax; real gap stands.
+  New docs/micromax-photos-to-usb.html ("Back up Micromax
+  photos to a USB drive (no computer)"), following the
+  WL-54–WL-133 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: six of the nine covered
+  Micromax phones can run that screen and host a drive; the
+  Canvas 2 (2017) lists no OTG, the Canvas 2 2018's OTG is
+  disputed, and the Canvas 2 Plus (2018)'s OTG is
+  unconfirmed — so on those three the drive mounting is the
+  test).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 38 chars, meta
+  description 154 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 102 items; blog JSON-LD
+  counts 102 BlogPosting entries. searches.md Query 101 row
+  present ("back up Micromax photos to USB drive without
+  computer" — HOW-TO GAP): top results are a YouTube video,
+  a Play app listing, a forum thread, and three generic
+  Android guides, none is a guide for a Micromax phone.
+  Micromax specifics verified live: six phones clear
+  SnapDisk's Android 7.0 minimum and list OTG — Canvas 1
+  (7.0), Canvas Infinity (7.0 or 7.1), IN 1 (10), IN 1b
+  (10 Go edition), IN Note 1 (10) and IN 2b (11) — so the
+  one-tap route exists on those six; the Canvas 2 (2017)
+  lists OTG No per gadgets360 and hardreset99, so no phone
+  route exists on it at all; the Canvas 2 2018's OTG is
+  disputed (bmobile says OTG support, findpare says No) and
+  the Canvas 2 Plus (2018)'s OTG is unconfirmed (gadgets360
+  blank, smartprix lists only USB charging); all nine take a
+  microSD card, so the card-reader route works on every one.
+  Conflicts named in the article: the Canvas 1's microSD
+  ceiling is up to 32 GB per gadgets360, indianexpress and
+  gadgetsnow against up to 64 GB per gadgetguide4u and
+  phoneradar; the Canvas Infinity's Android is 7.0 at launch
+  per gadgets360, 7.1.2 per smartprix, 7.1 upgradeable to 8.0
+  per mobilegizmo, and its battery is 2900 mAh per gadgets360
+  against 2980 mAh per smartprix, phonesdata and phonemore;
+  the Canvas 2 2018's Android is 7.0 per smartprix against
+  7.1 per bmobile; the IN Note 1's microSD ceiling is up to
+  256 GB per mysmartprice, cashify and hindustantimes against
+  up to 1 TB per techtoreview's summary, and the same page
+  lists its card slot as No in one table and its OS as
+  Android 10 with FunTouch 10.5 (Vivo's interface, not
+  Micromax's); the IN Note 1's front camera is 16 MP per
+  phonebunch against 5 MP per ubergizmo; phonepik lists a
+  second Canvas 1 (June 2023, Android 14), a second Canvas
+  Infinity (June 2023, 6.67-inch display, 8 MP ultrawide)
+  and a second IN 2b (Android 14, June 2023 launch) — none
+  of the three listings is used as a source. VaultDrive needs
+  Android 8 or later per its own site, so the five Canvas
+  models on Android 7.0 or 7.1 cannot run it — and AppBrain
+  lists 12.1 or later, which no covered Micromax phone
+  clears, since the newest covered models run Android 11.
+  Micromax has no phone-to-USB backup tool of its own — no
+  Micromax-specific backup advice turned up in any source
+  beyond a computer copy, Google Drive, or Google Photos; no
+  source found names the stock file manager on a Micromax
+  phone; Micromax Informatics was founded on 29 March 2000
+  in Gurgaon, Haryana, by Rahul Sharma and Rohit Patel per
+  Wikipedia, while other sources name four founders.
+  Fallback for WL-135: Karbonn — no Karbonn article exists
+  in docs/ yet and no searches.md row (Karbonn, the Indian
+  budget Android phone brand; Titanium series).
+
 ## WL-133 — Back up Lava photos to USB article, 101st how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
