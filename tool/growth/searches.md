@@ -5942,6 +5942,81 @@ demand is read off competitor install velocity instead (see
   Fallback for WL-104: Opticon — no Opticon article exists in
   docs/ yet (H-31/H-33 Android 9 rugged mobile computers).
 
+### 72. "back up Opticon photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Opticon-specific
+  guide at all, let alone an Opticon-specific automated
+  whole-library backup with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 18, 2026, live web search):
+  Tom's Hardware forum, "How can I offload pictures from a
+  digital camera to a flash drive?"
+  (forums.tomshardware.com/threads/how-can-i-offload-pictures-from-a-digital-camera-to-a-flash-drive.1273814/
+  — take the memory card out of a digital camera and connect
+  it and the flash drive to the same computer with a card
+  reader. A digital-camera thread, not a phone guide — and it
+  needs a computer in between, and it says nothing about an
+  Opticon handheld); Techwalla, "How to Move Pictures from
+  Camera to Flash Drive With No Computer"
+  (techwalla.com/articles/how-to-move-pictures-from-camera-to-flash-drive-with-no-computer
+  — a combination memory card reader and USB flash drive: take
+  the card out of the camera, put it in the reader, transfer
+  the pictures onto the drive. A digital-camera guide, not a
+  phone guide — and it says nothing about an Opticon
+  handheld); YouTube, "How to Connect USB Drive to Android
+  Phone to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG adapter + the
+  phone's built-in file manager, no computer or internet.
+  Generic Android, and a manual guide — and it says nothing
+  about an Opticon handheld); desnoulez.fr, "How to back up
+  camera photos or SD Card without a laptop"
+  (desnoulez.fr/en/how-to-back-up-camera-photos-while-traveling-no-laptop-needed/
+  — use a smartphone as a bridge between a camera memory card
+  and an external SSD through a USB hub, copy with the Files
+  app. A camera-card guide, not a phone-to-USB guide — and it
+  says nothing about an Opticon handheld); Photo Backup Stick
+  DC (Play listing, com.photo.backup.stick — a rival app, not
+  a guide: backs up pictures and videos straight to its own
+  OTG drive, free, no account — but it only works with
+  genuine Photo Backup Stick OTG drives, and it says nothing
+  about an Opticon handheld); pixoneye.com, "How to Transfer
+  Photos from Your Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a compatible USB drive with a
+  file manager on Android, or export through Photos and Files
+  on iPhone; use a computer when direct connection is
+  unreliable. Generic Android and iPhone, and a manual guide
+  — and it warns that a connector fitting physically does not
+  prove the phone can read or write the drive, which is
+  exactly the Opticon question). Google Photos is cloud, not
+  USB. Opticon specifics: no Opticon-specific file advice
+  pointing at a USB drive turned up at all; OTG/host support
+  is confirmed in the spec listings on only one of the three
+  Android models that can run SnapDisk (the H-35 lists
+  "USB3.1, Type-C, OTG"); no source found confirms OTG or
+  host support on the H-31 or the H-33, so the drive mounting
+  is the test; the H-31/H-33 port differs by source
+  (datasheet box contents list a USB C cable, manua.ls lists
+  one Micro-USB 2.0 port); no source found states the
+  connector type on the H-28 or the H-29 at all; the H-35
+  runs Android 11 and the H-31 and the H-33 run Android 9 —
+  every Android model that can run SnapDisk clears SnapDisk's
+  Android 7.0 minimum — while the H-28 and the H-29 run
+  Android 6.0.1, the H-27 runs Android 4.2.2, and the H-32
+  runs Windows Embedded Compact 7, the H-21 runs Windows
+  Mobile 6.5, the H-19A runs Windows Mobile 6.0
+  Professional, and the H-25 runs Windows CE 6.0
+  Professional, so none of them can run SnapDisk at all.
+  Opticon has no phone-to-USB backup tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-104, 73rd how-to):
+  docs/opticon-photos-to-usb.html.
+  NOTE: queries 59–70 (WL-91–WL-102) have no searches.md rows —
+  their evidence lives only in WORKLOG.md. Backfill owed.
+  Fallback for WL-105: Janam — no Janam article exists in
+  docs/ yet (XT3 Android 9 or 11 rugged touch computer, 13MP
+  camera, IP67, AER certified; XT2/XT2+ run Android 6, below
+  the minimum).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
