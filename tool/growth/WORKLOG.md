@@ -1,5 +1,134 @@
 # SnapDisk — Work Log
 
+## WL-107 — Back up Gigaset photos to USB article, 75th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/gigaset-photos-to-usb.html ("Back up Gigaset photos
+  to a USB drive (no computer)"), following the WL-54–WL-105
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot). Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml updated.
+  Title 37 chars, meta description 124 chars, JSON-LD
+  validated by parse; sitemap and feed XML parse. Feed now
+  counts 75 items; blog JSON-LD counts 75 BlogPosting
+  entries. Article PR #181 (unmerged — supervisor merges
+  after readback verification).
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search): Query 74
+  ("back up Gigaset photos to USB drive without computer") is
+  a real gap — no Gigaset-specific phone-to-USB guide in the
+  top results at all; not one result even mentions Gigaset.
+  pixoneye.com, "How to Transfer Photos from Your Phone to a
+  USB Stick" (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a compatible USB drive with a
+  file manager on Android, or export through Photos and Files
+  on iPhone; use a computer when direct connection is
+  unreliable. Generic Android and iPhone, and a manual guide
+  — and it warns that a connector fitting physically does not
+  prove the phone can read or write the drive, which is
+  exactly the Gigaset question); curiousbluenoser.substack.com,
+  "saving Photos for necessary updates"
+  (curiousbluenoser.substack.com/p/saving-photos-for-necessary-updates
+  — a picture-keeper flash drive plugs into the phone's
+  charging port and its free app copies all photos and videos
+  onto the stick. A drive-locked backup-stick guide, not a
+  phone guide — and it says nothing about a Gigaset phone);
+  YouTube, "How to Connect USB Drive to Android Phone to Move
+  Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG adapter + the
+  phone's built-in file manager, no computer or internet.
+  Generic Android, and a manual guide — and it says nothing
+  about a Gigaset phone); thegadgetians.com, "How to Transfer
+  Files From Phone to USB Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — OTG adapter + file manager, select and copy, paste onto
+  the USB drive. Generic Android and iPhone, and a manual
+  guide — and it says nothing about a Gigaset phone);
+  alibaba.com, "How To Quickly Backup Your Phone Photos
+  Without Using Cloud Storage"
+  (alibaba.com/product-insights/how-to-quickly-backup-your-phone-photos-without-using-cloud-storage.html
+  — USB cable + computer, or a portable SSD/flash drive with
+  OTG support + file manager. Generic Android and iPhone, and
+  a manual guide — and it says nothing about a Gigaset
+  phone); Google Photos Community, "How do I back up photos
+  to a plug in drive"
+  (support.google.com/photos/thread/443333707/how-do-i-back-up-photos-to-a-plug-in-drive
+  — download photos from Google Photos cloud storage to the
+  Android phone, then move them to USB with Files by Google.
+  A cloud-download-then-copy thread, not a phone-to-USB
+  guide — and it says nothing about a Gigaset phone).
+  Query 73 (Janam) row also added to searches.md, scored from
+  a fresh live re-search this run: same five results as WL-105
+  (Photos to USB: OTG Backup Play listing; therealgadgets.com
+  holiday guide; Dr.Fone; pixoneye.com; YouTube PYcbV25CczI)
+  — still no Janam-specific guide, not one result mentions
+  Janam.
+  Gigaset models covered (spec/manual/review sources, Nov
+  18): GS5 — Android 11 (upgrade to 12), USB-C, OTG
+  confirmed, 48 MP rear + 16 MP front, microSD up to 512 GB;
+  GS4 — Android 10, USB-C, 16 MP triple rear, OTG
+  unconfirmed; GS3 — Android 10, 13 MP rear + 8 MP front,
+  OTG unconfirmed, connector type unstated in any source
+  found; GS290 — Android 10 (one retailer listing says 9.0),
+  USB-C, OTG confirmed in Gigaset's own spec text, 16+2 MP
+  dual rear + 16 MP front; GS190 — Android 9 per Gigaset's
+  own press release (one aggregator lists 5.1 with a different
+  chipset — conflicting; check About phone), OTG
+  unconfirmed, connector type unstated; GS185 — Android 8.1
+  (one aggregator lists 8.0), 13 MP front and back, OTG
+  unconfirmed, connector type unstated; GS180 — Android 8.1
+  (one aggregator lists 8.0), OTG unconfirmed, connector type
+  unstated; GS110 — Android 9.0 Go Edition, USB-C, OTG
+  unconfirmed; GS160 — Android 6.0, below the minimum;
+  GX6 — Android 12, 50 MP, USB-C, OTG unconfirmed; GX6 Pro —
+  Android 12, USB 3.0 Type-C, "USB On-The-Go support: Yes",
+  8 GB/128 GB, microSD to 1 TB; GX4 — Android 12 (updates to
+  13/14 promised), USB-C, OTG listed, IP68, MIL-STD-810H;
+  GX4 Pro — Android 13 (retailer listing), USB 2.0 Type-C,
+  OTG listed on gigaset.com, 48+8 MP rear + 16 MP front;
+  GX290 — Android 10 in manual text, 9.0 in its spec table,
+  USB-C, OTG unconfirmed; GX30 — OTG listed on gigaset.com,
+  USB-C 2.0, Android version unstated in any source found;
+  GX50 — OTG listed on gigaset.com, USB-C 2.0, Android
+  version unstated in any source found; GS195 — named only
+  (Gigaset press release names it as the GS190's sibling),
+  no Android version or OTG source found. Below the Android
+  7.0 minimum: GS160 (6.0) — computer copy is the route
+  there. OTG confirmed on 7 of the 15 Android models that
+  can run SnapDisk (GS5, GS290, GX6 Pro, GX4, GX4 Pro, GX30,
+  GX50); unconfirmed on the other 8 — the drive mounting is
+  the test.
+  Honest limits recorded in the article: OTG/host support is
+  confirmed in the spec listings on only seven of the fifteen
+  Android models that can run SnapDisk; no source found
+  states the connector type on the GS3, the GS190, the GS185
+  or the GS180 at all; no source found states the Android
+  version on the GX30 or the GX50 at all; three Android
+  versions differ by source (GS290 10 vs 9.0, GX290 10 vs 9.0,
+  GS185/GS180 8.1 vs 8.0 — all clear the minimum either way)
+  plus the sharper GS190 dispute (5.1 vs 9); only the GS160
+  cannot run SnapDisk at all; the GS195 turned up by name
+  only; no other Gigaset smartphone model turned up in the
+  sources found.
+  Article published Nov 18, 2026 (WL-107, 75th how-to):
+  docs/gigaset-photos-to-usb.html.
+  Fallback for WL-108: M3 Mobile — no M3 Mobile article
+  exists in docs/ yet and no searches.md row (UL20 rugged
+  enterprise handheld: Android 8.1/9.0/10 GMS, 16 MP camera,
+  IP67, 5-inch FHD; UL20X/UL20F/UL20W variants).
+
 ## WL-105 — Back up Janam photos to USB article, 74th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
