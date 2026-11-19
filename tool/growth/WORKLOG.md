@@ -1,5 +1,94 @@
 # SnapDisk — Work Log
 
+## WL-105 — Back up Janam photos to USB article, 74th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/janam-photos-to-usb.html ("Back up Janam photos
+  to a USB drive (no computer)"), following the WL-54–WL-104
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot). Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml updated.
+  Title 35 chars, meta description 122 chars, JSON-LD
+  validated by parse; sitemap and feed XML parse. Feed now
+  counts 74 items. Article PR #178 (unmerged — supervisor
+  merges after readback verification).
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search): Query 73
+  ("back up Janam photos to USB drive without computer") is
+  a real gap — no Janam-specific phone-to-USB guide in the
+  top results at all; not one result even mentions Janam.
+  Photos to USB: OTG Backup (Play listing,
+  com.arzdrz.photos_to_usb — a rival app, not a guide: one-tap
+  whole-gallery copy to a pen drive, free with ads, one-time
+  purchase removes the ads); therealgadgets.com, "Holiday
+  Photo Backup: Simple Ways To Keep Your Shots Safe"
+  (therealgadgets.com/holiday-photo-backup-dont-lose-your-shots/
+  — a holiday travel guide: laptop + portable SSD or cloud
+  upload overnight; a USB-C flash drive through a file manager
+  app is mentioned in passing); Dr.Fone, "4 Practical Ways to
+  Transfer Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — OTG adapter + file manager, no computer or internet; or
+  drag-and-drop through a PC, or Google Drive / AirDroid.
+  Generic Android, and a manual guide); pixoneye.com, "How to
+  Transfer Photos from Your Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to a compatible USB drive with a
+  file manager on Android, or export through Photos and Files
+  on iPhone; use a computer when direct connection is
+  unreliable. Generic Android and iPhone, and a manual guide
+  — and it warns that a connector fitting physically does not
+  prove the phone can read or write the drive, which is
+  exactly the Janam question); YouTube, "How to Connect USB
+  Drive to Android Phone to Move Photos & Videos (Best
+  Method)" (youtube.com/watch?v=PYcbV25CczI — OTG adapter +
+  the phone's built-in file manager, no computer or internet.
+  Generic Android, and a manual guide).
+  Janam models covered (spec/manual/review sources, Nov
+  18): XT3 — Android 9 or 11, GMS, AER, "USB 3.0 OTG", USB
+  Type-C port, 13 MP rear + 5 MP front camera, IP67, microSD
+  up to 32 GB SDHC / 512 GB SDXC; HT1 — Android 9, GMS, AER,
+  13 MP rear + 5 MP front, IP67, 8-inch rugged tablet, OTG
+  unconfirmed; XT2 — Android 5.x (also a Windows 10 IoT Mobile
+  Enterprise version), 8 MP rear + 2 MP front, IP67; XT2+ —
+  Android 6, Android-only; XT1 — Android 4.2.2, 5 MP rear +
+  1.2 MP front. Below the Android 7.0 minimum: XT2 (5.x),
+  XT2+ (6), XT1 (4.2.2) — computer copy is the route there;
+  the Windows 10 IoT XT2 runs Windows, not Android.
+  Correction to the WL-104 fallback line: it said "XT2/XT2+
+  run Android 6" — verified independently, the XT2 runs
+  Android 5.x and only the XT2+ runs Android 6 (Rugged PC
+  Review: the XT3 "jumps from the XT2+'s Android version 6
+  all the way to Android 9"; XT2 datasheet: Android 5.x
+  Lollipop). Both are below the minimum either way.
+  Honest limits recorded in the article: OTG/host support is
+  confirmed in the spec listings on only one of the two
+  Android models that can run SnapDisk — the XT3 — on the
+  HT1 the drive mounting is the test; no source found states
+  the connector type on the HT1 at all; the XT3's front camera
+  differs by source (Janam's current datasheet 5 MP, the 2019
+  datasheet 8 MP; rear camera 13 MP in both); no other Janam
+  rugged handheld or tablet model turned up in the sources
+  found.
+  Article published Nov 18, 2026 (WL-105, 74th how-to):
+  docs/janam-photos-to-usb.html.
+  NOTE: searches.md backfill of queries 59–70 (WL-91–WL-102)
+  still owed — not done in this run. An honest backfill needs
+  12 fresh live re-searches: rows must not be paraphrases of
+  worklog summaries presented as scored live evidence. Left
+  for a dedicated run.
 ## WL-104 — Back up Opticon photos to USB article, 73rd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
