@@ -1,5 +1,80 @@
 # SnapDisk — Work Log
 
+## WL-135 — Back up Karbonn photos to USB article, 103rd how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #239 open (head 5f452e2, CI run 44578925835
+  success), merge pending — supervisor merges after readback.
+  Query 102 verified by the lead from live evidence (no top
+  result is a Karbonn-specific phone-to-USB photo-backup
+  guide); top results are a Dr.Fone guide, an Android Central
+  forum thread, a YouTube OTG video, and three generic Android
+  guides (askfilo, connect.gmb.org.uk, epictechtips) — none
+  mentions Karbonn; real gap stands.
+  New docs/karbonn-photos-to-usb.html ("Back up Karbonn
+  photos to a USB drive (no computer)"), following the
+  WL-54–WL-134 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: four of the fourteen covered
+  Karbonn phones can run that screen and host a drive — the
+  Titanium Jumbo, Jumbo 2, Frames S7 and S9 Plus; the ten
+  2013–2015 Titanium models run Android 4 and cannot install
+  SnapDisk at all, so on those the computer copy is the
+  route).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 37 chars, meta
+  description 141 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 103 items; blog JSON-LD
+  counts 103 BlogPosting entries. searches.md Query 102 row
+  present ("back up Karbonn photos to USB drive without
+  computer" — HOW-TO GAP): top results are a Dr.Fone guide,
+  a forum thread, a YouTube video, and three generic Android
+  guides, none is a guide for a Karbonn phone.
+  Karbonn specifics verified live: four phones clear
+  SnapDisk's Android 7.0 minimum and list OTG — Titanium
+  Jumbo (7.0), Jumbo 2 (7.0), Frames S7 (7.0) and S9 Plus
+  (9.0) — so the one-tap route exists on those four; ten
+  phones run Android 4.1 to 4.4.2 and cannot run SnapDisk at
+  all — S5 (4.1), S5 Plus, S5i, S7, S9, Titanium X (4.2),
+  Hexa, Octane Plus, Mach One (4.4), Mach Two (4.4.2) — so
+  there is no phone route on any of them; all fourteen take
+  micro-USB, so a USB-C drive plugs straight into none of
+  them; thirteen of the fourteen take a microSD card, so the
+  card-reader route works on every one except the Hexa, which
+  has no card slot.
+  Conflicts named in the article: the S9's OTG is disputed
+  (phonebunch lists USB On-the-go / OTG Supported, gadgets360
+  says USB OTG No — moot, since the S9 runs Android 4.2); the
+  S9 Plus launch is two dates (20 January 2020 per one
+  gadgetsnow comparison, 22 October 2020 per another); the
+  Mach One's internal storage is two numbers (8 GB per
+  gadgets360, 16 GB per the Economic Times review); the Mach
+  Two's microSD ceiling is two numbers (up to 32 GB per
+  gadgets360, the Times of India and phonebunch, while the
+  Mobile Indian's review says its slot even held a 64 GB
+  card); the Jumbo 2's launch is two dates (1 February 2018
+  per gadgets360's comparison tables, announced 16 February
+  2018 per androidos.in and the Financial Express); the Mach
+  Two's Android is 4.4.2 with a Lollipop upgrade promised
+  (pkgsm lists it as upgradable to 5.0), but even 5.0 is below
+  the 7.0 minimum; phonepik lists a second Titanium Jumbo and
+  a second Titanium S9 Plus (both released 15 June 2023 on
+  Android 14 with a 6.67-inch display) — neither listing is
+  used as a source. VaultDrive needs Android 8 or later per
+  its own site, so three of the four cannot run it — and
+  AppBrain lists 12.1 or later, which no covered Karbonn
+  phone clears, since the newest covered model runs Android
+  9.0; FotoSafe needs Android 9 or later, so only the S9 Plus
+  clears it. Karbonn has no phone-to-USB backup tool of its
+  own — no Karbonn-specific backup advice turned up in any
+  source beyond a computer copy, Google Drive, or Google
+  Photos; no source found names the stock file manager on a
+  Karbonn phone.
+  Fallback for WL-136: Intex — no Intex article exists in
+  docs/ yet and no searches.md row (Intex, the Indian budget
+  Android phone brand; Aqua series).
+
 ## WL-134 — Back up Micromax photos to USB article, 102nd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
