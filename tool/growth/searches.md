@@ -9127,6 +9127,136 @@ demand is read off competitor install velocity instead (see
   Android phone brand; founded 3 February 2011 in
   Marseille, a fully owned subsidiary of Tinno Mobile).
 
+### 98. "back up Wiko photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Wiko-specific
+  guide to backing up photos to a USB drive at all, let
+  alone a Wiko-specific automated whole-library backup
+  with progress, Pause/Stop, and resume — and two
+  covered Wiko phones cannot host a drive at all.
+- Current top results (scored Nov 19, 2026, live web search):
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI
+  — the best and most direct method for moving photos
+  and videos from any modern Android phone to a USB drive
+  is a USB On-The-Go (OTG) connection and the phone's
+  built-in file manager; it needs Android 7.0 or newer,
+  a USB flash drive, and an OTG adapter or a dual
+  USB-C/USB-A drive; copy DCIM/Camera in the file
+  manager. A generic Android video guide — it says
+  nothing about Wiko);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive-Dr.Fone"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash
+  drive with an OTG adaptor and the file manager, through
+  a PC in File Transfer mode, through Google Drive, or
+  through AirDroid; Dr.Fone's own software bulk-exports
+  to a computer. A generic Android guide — it says
+  nothing about Wiko);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — a forum thread: use the OTG adapter to plug in any
+  supported external device, and it should show as
+  external storage in the file manager, then move files
+  from there. A forum thread — it says nothing about
+  Wiko);
+  epictechtips.com, "How to Transfer Pictures from
+  Android Phone to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive into the Android device, tap the
+  USB notification and select "Transfer photos", then
+  copy in the file manager; confirm the phone supports
+  USB OTG first, match the drive to the phone's port,
+  and use a PC or cloud storage as the fallback. A
+  generic Android guide — it says nothing about Wiko);
+  softhandtech.com, "Transfer Photos from Phone to
+  Memory Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — transfer photos to a memory stick through a
+  computer, directly with OTG support on Android, or
+  through cloud services; confirm OTG compatibility in
+  the device specifications first. A generic phone guide
+  — it says nothing about Wiko);
+  play.google.com, "Photos to USB: OTG Backup"
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — back up every photo and video on your phone to a USB
+  pen drive with one tap; plug a pen drive in, the app
+  spots it and copies the gallery; free with ads, a
+  one-time purchase removes them; FAT32 drives cannot hold
+  a single file over 4 GB. A real phone-to-USB app — but a
+  generic Android listing, not a Wiko guide).
+- Thirteen Wiko phones clear SnapDisk's Android 7.0
+  minimum and list USB OTG — the View (Android 7.1),
+  the View Prime (Android 7.1), the View 2 (Android
+  8.0), the View 3 (Android 9.0), the View 3 Lite
+  (Android 9.0), the View 4 (Android 10), the View 4
+  Lite (Android 10), the View 5 (Android 10), the View
+  5 Plus (Android 10), the Power U20 (Android 11), the
+  Power U30 (Android 11), the Y80 (Android 9.0) and
+  the Y81 (Android 10 Go) — so the one-tap route exists
+  on those thirteen; six more clear Android 7.0 but no
+  source found states OTG for them — the View XL
+  (Android 7.1), the Lenny 4 (Android 7.0 exactly), the
+  Y50 (Android 8.0), the Y52 (Android 11 Go), the Y62
+  (Android 11) and the Y82 (Android 11) — so on those
+  six SnapDisk installs but the drive mounting is the
+  test; the Y60 (Android 9.0 Go) and the Y61 (Android
+  10 Go) list OTG No in Wiko's own datasheets, so
+  neither can host a drive at all, and the Highway 4G
+  runs Android 4.4.2, below the minimum, so it cannot
+  run SnapDisk at all; the View carries a 13 MP rear
+  camera (52 MP in Super Pixel mode) and a 16 MP front
+  camera, the View 4 a 13 MP + 5 MP ultrawide + 2 MP
+  bokeh triple rear camera and an 8 MP front camera,
+  the View 4 Lite a 13 MP + 2 MP + 5 MP triple rear
+  camera, the View 5 and the View 5 Plus a 48 MP +
+  8 MP + 5 MP + 2 MP quad rear camera, the Power U20 a
+  13 MP rear camera and a 5 MP front camera, the Power
+  U30 an 8 MP front camera, the Y81 a 13 MP rear camera
+  and a 5 MP front camera, the Y61 an 8 MP rear camera,
+  the Y62 an 8 MP rear camera and a 5 MP front camera,
+  the Y52 a 5 MP main camera, and the Y50 a 5 MP rear
+  camera and a 5 MP front camera; the View 5 takes
+  microSD up to 256 GB per the droidafrica spec table
+  and up to 512 GB per the same site's overview, the
+  View 4, View 4 Lite, Power U20, Power U30 and Y61
+  microSD up to 256 GB, the View, Y60 and Y81 microSD
+  up to 128 GB per most sources, the View 2 and the Y52
+  microSD up to 64 GB, and the Lenny 4 microSD up to
+  32 GB; the Y60's microSD ceiling is disputed too —
+  up to 128 GB per Wiko's own datasheet, up to 32 GB
+  per droidafrica; the Power U20's microSD slot uses
+  the shared SIM slot per the ohsem review, while the
+  Power U30's is a dedicated slot per droidafrica; the
+  View 4's Android is two numbers — 10 per philnews,
+  mobilespecs, phoneinfo, toppreise and the PC Press
+  review, 9 per versus; the Y52's datasheet shows a
+  USB 2.0 port with no OTG line at all, so its OTG is
+  unconfirmed rather than No; VaultDrive needs Android
+  8 or later per its own site, so the View, View XL,
+  View Prime and Lenny 4 cannot run it either, and
+  AppBrain lists 12.1 or later, which no Wiko phone
+  clears; Wiko has no phone-to-USB backup tool of its
+  own — no Wiko-specific backup advice turned up in any
+  source beyond a computer copy, Google Drive, or
+  Google Photos; no source found names the stock file
+  manager on a Wiko phone; Wiko was founded 3 February
+  2011 in Marseille by Laurent Dahan and is a fully
+  owned subsidiary of Tinno Mobile, with its head
+  office, design and marketing teams based in
+  Marseille; the early Wiko lines (Highway, Rainbow,
+  Lenny, Jimmy, Goa, Birdy, Bloom, Sunset) date from
+  2013–2015, before Android 7.0 existed, so none of
+  them can run SnapDisk either.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-131, 99th how-to):
+  docs/wiko-photos-to-usb.html.
+  Fallback for WL-132: itel — no itel article exists in
+  docs/ yet and no searches.md row (itel, the Transsion
+  budget Android phone brand; A, S and P series).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
