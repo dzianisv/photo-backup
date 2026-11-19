@@ -1,5 +1,54 @@
 # SnapDisk — Work Log
 
+## WL-129 — Back up Plum photos to USB article, 97th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #226 MERGED (head 26f08b7, CI run 44545839769
+  success, merge commit 21c2f9e, merged 2026-11-19T14:42:19Z);
+  post-merge main runs Android PR 44546651823 success +
+  pages 44546651117 success. Query 96 verified by the lead
+  from live evidence (no top result is a Plum-specific
+  phone-to-USB photo-backup guide); supervisor re-scored Query
+  96 from a fresh live re-search: same 5 results as the lead
+  (softhandtech generic memory-stick guide, alibaba generic
+  local-backup guide, MacRumors iPhone forum thread, coolmuster
+  iPhone-to-flash-drive guide, Substack picture-keeper guide)
+  — none mentions Plum; real gap stands. Lead-verified by
+  readback (feed 97 items incl. Plum, sitemap incl. URL, title
+  correct, Query 96 row present, only docs/ + tool/growth
+  changed). Live fetch after Pages deploy: plum-photos-to-usb.html
+  200, 49,657 bytes, correct title.
+  New docs/plum-photos-to-usb.html ("Back up Plum photos to a
+  USB drive (no computer)"), following the WL-54–WL-128 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: the original Gator and the Gator
+  Plus can't run that screen at all; the Gator 4 only if it is
+  really on Android 7.0; on the Gator 5 the drive mounting is
+  the test).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 34 chars, meta
+  description 153 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 97 items; blog JSON-LD
+  counts 97 BlogPosting entries. searches.md Query 96 row
+  present ("back up Plum photos to USB drive without computer"
+  — HOW-TO GAP): top results are a generic memory-stick guide,
+  a generic local-backup guide, an iPhone forum thread, a
+  Substack picture-keeper guide, and an iPhone-to-flash-drive
+  guide, none is a guide for a Plum phone.
+  Plum specifics verified live: two Plum phones clear SnapDisk's
+  Android 7.0 minimum and list USB OTG — the Gator 6 (Android
+  10 Go) and the Gator 7 (Android 11) — so the one-tap route
+  exists on those two; the Gator 5 (Android 8.1) clears the
+  minimum but no source states OTG for it, so on the Gator 5
+  the drive mounting is the test; the Gator 4's Android version
+  is disputed — Android 6.0 per the official manual, Android
+  7.0 per the spec sites — and its OTG is unconfirmed, so check
+  Settings > About phone first; the original Gator and the
+  Gator Plus run Android 4.2.2 and cannot run SnapDisk at all.
+  Fallback for WL-130: Bullitt — no Bullitt article exists in
+  docs/ yet and no searches.md row.
+
 ## WL-128 — Back up Sigma Mobile photos to USB article, 96th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
