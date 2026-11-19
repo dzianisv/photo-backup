@@ -7020,6 +7020,116 @@ demand is read off competitor install velocity instead (see
   XCover-specific article exists in docs/ yet and no
   searches.md row (rugged Galaxy XCover phones).
 
+### 80. "back up Samsung Galaxy XCover photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an XCover-specific
+  guide to backing up photos to a USB drive at all, let
+  alone an XCover-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  sekin.in, "How To Transfer Files From Android Phone To
+  USB Drive" (sekin.in/how-to-transfer-files-from-android-phone-to-usb-drive-full-guide/
+  — transfer photos, videos and documents directly from an
+  Android phone to a USB flash drive with a USB-OTG adapter
+  and Files by Google or, on Samsung Galaxy phones, My
+  Files; direct USB transfer works on Android 7.0 and later
+  when the phone supports USB storage. Generic Android with
+  a Samsung section, and a manual guide — it says nothing
+  about an XCover model); Samsung Members community, "How
+  to take pictures off phone and put on memory stick"
+  (stg-r1.community.samsung.com/t5/galaxy-s/how-to-take-pictures-off-phone-and-put-on-memory-stick/m-p/15256917
+  — Samsung's own community answer: connect the phone and
+  the USB stick with an OTG adapter, open My Files, pick the
+  files, tap Move or Copy, choose USB Storage, tap Move here
+  or Copy here, then unmount. A real Samsung phone-to-USB
+  route — but a generic Galaxy answer, not an XCover guide,
+  and a manual copy); hard-reset.org, "Solutions for
+  SAMSUNG GALAXY XCOVER6 PRO"
+  (hard-reset.org/tag/samsung-galaxy-xcover6-pro/feed/ —
+  "SAMSUNG GALAXY XCOVER6 PRO can be connected to USB flash
+  drive for backup destination, because it has USB On the Go
+  (OTG) features. We can use file manager to copy files from
+  internal storage to USB flash drive." The only
+  XCover-specific result — it confirms OTG on the XCover6
+  Pro and names a USB flash drive as a backup destination —
+  but it is a hard-reset archive FAQ, not a photo-backup
+  guide: no steps for the camera roll, no app, no progress
+  or verification); itechguides.com, "How to Back Up Your
+  Samsung Phone to an External Hard Drive"
+  (itechguides.com/ultimate-guide-how-to-back-up-your-samsung-phone-to-an-external-hard-drive/
+  — connect a FAT- or exFAT-formatted drive through a USB-C
+  OTG adapter, then use Smart Switch for supported device
+  data or My Files for photos, videos and documents; a direct
+  backup is possible without a computer, but Smart Switch
+  creates a structured backup intended mainly for transfer to
+  another Galaxy device, while My Files creates an ordinary,
+  readable copy. Generic Samsung, and a real no-computer
+  route — but it says nothing about an XCover model, and the
+  Smart Switch half is not a folder of plain photo files);
+  YouTube, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best method for
+  moving photos and videos from any modern Android phone to
+  a USB drive is a USB On-The-Go connection and the phone's
+  built-in file manager; on Samsung that is My Files, photos
+  live in DCIM/Camera, and it recommends Move. Generic
+  Android video, and a manual guide — it says nothing about
+  an XCover model, and it recommends Move, which deletes the
+  originals as it goes); Samsung, "Backing up my Samsung
+  Device using an SD Card or USB"
+  (samsung.com/au/support/mobile-devices/backing-up-via-sd-card-or-usb/
+  — Samsung's own support page: launch Smart Switch, tap the
+  External Storage icon, connect the external storage with an
+  OTG or Type-C adapter or the SD card slot, tap USB Storage,
+  select the data, and let the phone back it up. Samsung's own
+  no-computer USB backup — but a generic Galaxy guide, not an
+  XCover guide, and a Smart Switch structured backup, not a
+  folder of plain photo files).
+  Google Photos is cloud, not USB. XCover specifics: no
+  XCover-specific guide to backing up photos to a USB drive
+  turned up at all; the one XCover-specific result is a
+  hard-reset archive page that confirms OTG on the XCover6
+  Pro; OTG is confirmed on the XCover6 Pro (Three lists "OTG
+  compatible, Yes"), the XCover5 (Three lists "OTG
+  compatible, Yes") and the XCover7 Pro (neoteo lists USB
+  Host 2.0 and USB OTG, Smartprix lists USB on-the-go,
+  Kimovil lists OTG, PhoneDB lists USB Host and USB OTG 1.3),
+  while the XCover7, the XCover Pro, the XCover4s, the
+  XCover4 and the FieldPro have no source that labels their
+  USB port OTG; PhoneBunch says "Not Supported" for OTG on
+  the XCover7 Pro, the XCover5 and the XCover6 Pro, while
+  Three, neoteo, Smartprix, Kimovil and PhoneDB list OTG on
+  them — PhoneBunch's OTG column is not trusted, because it
+  also denies OTG on the XCover6 Pro, which three other
+  sources confirm; the XCover7 Pro runs Android 15, the
+  XCover6 Pro runs Android 12 at launch (upgradable to
+  Android 16), the XCover7 runs Android 14, the XCover5 runs
+  Android 11, the XCover Pro runs Android 10, the XCover4s
+  runs Android 9.0, the XCover4 launched on Android 7.0,
+  exactly SnapDisk's minimum, and the FieldPro runs Android
+  8.0, so all eight clear the minimum; the XCover6 Pro's USB
+  version differs by source (USB 3.2 in GSMArena and neoteo,
+  USB Type-C 2.0 in a reseller listing) and the XCover Pro's
+  microSD capacity differs by source (up to 512 GB in one
+  comparison, up to 1 TB in a manual listing); the XCover4 is
+  the only covered model with micro-USB, so it needs a
+  micro-USB OTG adapter while the other seven need a USB-C
+  OTG adapter; every covered XCover has a removable battery,
+  so a long backup runs on a charged spare, not on charging
+  mid-backup; the original XCover, the XCover2 and the
+  XCover3 run below Android 7.0 and cannot run SnapDisk;
+  Samsung's stock file manager is My Files, and Samsung says
+  files cannot be transferred directly to the USB drive from
+  apps such as Gallery.
+  Samsung has no XCover-specific phone-to-USB photo backup
+  tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-113, 81st how-to):
+  docs/samsung-galaxy-xcover-photos-to-usb.html.
+  Fallback for WL-114: i.safe MOBILE — no i.safe article
+  exists in docs/ yet and no searches.md row (rugged
+  intrinsically safe Android phones, IS530.x line).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
