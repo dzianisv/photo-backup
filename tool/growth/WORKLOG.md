@@ -1,5 +1,133 @@
 # SnapDisk — Work Log
 
+## WL-109 — Back up Handheld photos to USB article, 77th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  New docs/handheld-photos-to-usb.html ("Back up Handheld
+  photos to a USB drive (no computer)"), following the
+  WL-54–WL-108 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 38 chars,
+  meta description 128 chars, JSON-LD validated by parse;
+  sitemap and feed XML parse. Feed now counts 77 items; blog
+  JSON-LD counts 77 BlogPosting entries. Article PR #185
+  (unmerged — supervisor merges after readback
+  verification). CI run 44474294626 green (build pass,
+  1m10s).
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked); no INTERNET permission in
+  AndroidManifest.xml; FAT32 files >=4 GiB skipped with
+  reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  ApplicationId unchanged (dev.dzianisv.snapdisk,
+  app/build.gradle.kts); app tree untouched vs main.
+  Search evidence (Nov 18, 2026 live web search): Query 76
+  ("back up Handheld photos to USB drive without computer")
+  is a real gap — no Handheld-specific phone-to-USB guide
+  in the top results at all; not one result even mentions
+  Handheld. pixoneye.com, "How to Transfer Photos from Your
+  Phone to a USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage with a
+  supported file manager on Android or Photos and Files on
+  iPhone, make a trial copy first, use Copy rather than Move.
+  Generic Android and iPhone, and a manual guide — and it
+  says nothing about a Handheld handheld);
+  thegadgetians.com, "How to Transfer Files From Phone to USB
+  Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — connect a USB drive to an Android phone with an OTG
+  adapter or to an iPhone with a Lightning-to-USB adapter,
+  open the file manager, select and copy files, then paste
+  onto the USB drive. Generic Android and iPhone, and a manual
+  guide — and it says nothing about a Handheld handheld);
+  YouTube, "How to Connect USB Drive to Android Phone to Move
+  Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG adapter + the
+  phone's built-in file manager, no computer or internet.
+  Generic Android, and a manual guide — and it says nothing
+  about a Handheld handheld); jesave.com, "How to Transfer
+  Photos from a Phone to a USB Flash Drive"
+  (jesave.com/how-to-transfer-photos-from-a-phone-to-a-usb-flash-drive.html
+  — plug a USB-C flash drive straight into a USB-C phone, or
+  use a dual USB-C + USB-A drive, or a USB adapter for a
+  USB-A drive; or use a computer as a middleman. Generic
+  Android and iPhone, and a manual guide — and it says nothing
+  about a Handheld handheld, and its computer method needs a
+  PC in between); dzianisv.github.io, "Back up CipherLab
+  photos to a USB drive"
+  (dzianisv.github.io/photo-backup/cipherlab-photos-to-usb.html
+  — our own earlier SnapDisk article, for CipherLab's RS/RK
+  handhelds, not Handheld's Nautiz line — and it says nothing
+  about a Handheld handheld, which is why it ranks here: the
+  query is so thin that a sibling article for another rugged
+  brand is the closest brand-specific result).
+  Handheld Nautiz models covered (datasheet/guide/review
+  sources, Nov 18): refreshed X2 — Android 9.0 GMS in its
+  v1.8 datasheet (Helio P22, 4 GB/64 GB, 4.7-inch, Ports
+  "Micro USB 2.0, OTG", microSDXC to 256 GB); X6 — Android
+  8.0 Oreo GMS in its v1.0 datasheet (Android 8.1 in Rugged
+  PC Review's lineup note), Snapdragon 626, 4 GB/32 GB,
+  Ports "Type-C, Qualcomm quick charge 3.0, OTG", microSDXC
+  to 128 GB; X9 — Android 7.0 Nougat GMS in its v1.0
+  datasheet (Android 11 in a later Handheld press release),
+  1.3 GHz quad-core Cortex-A53, 2 GB/16 GB, 5-inch 1280x720,
+  13 MP rear camera with autofocus and flash + 2 MP front,
+  Connections "Micro USB 2.0, High Speed / OTG", 4,800 mAh,
+  microSDHC to 32 GB, IP67; X41 — Android 9.0 GMS (Helio
+  P22, 4 GB/64 GB, 4-inch, Ports "Type-C, OTG", 4,400 mAh
+  field-replaceable battery, microSDXC to 128 GB, IP65,
+  MIL-STD-810G); X81 — Android 12 GMS, 4.8-inch
+  sunlight-readable display with full numeric keypad, 13 MP
+  rear autofocus camera with LED flash + 5 MP front, IP67,
+  5G, -30 to 60 °C, USB A host port on the bottom panel per
+  its Quick Start Guide. All five clear SnapDisk's Android
+  7.0 minimum; only the X81 takes a standard USB-A drive
+  with no adapter — the X2 and the X9 need a micro-USB OTG
+  adapter and the X6 and the X41 need a USB-C OTG adapter.
+  Cannot run SnapDisk: original X2 (Android 6.0, no OTG
+  listed in its v1.2 datasheet), X4 (Android 4.2 or Windows
+  Embedded Handheld 6.5; USB host only for the Ethernet
+  cradle), X8 (Android 4.2.2 or Windows Embedded Handheld
+  6.5.3; USB A Host listed in its manual, but the OS
+  excludes it).
+  Honest limits recorded in the article: OTG or host is
+  confirmed only for the five covered models — the original
+  X2's datasheet lists no OTG and the X4's USB host exists
+  only for the Ethernet cradle; three older models cannot
+  run SnapDisk at all (original X2 Android 6.0, X4 Android
+  4.2/Windows, X8 Android 4.2.2/Windows); three Android
+  versions differ by source (X2 6.0 vs 9.0 GMS across its
+  two datasheet generations, X6 8.0 vs 8.1, X9 7.0 vs 11 —
+  all covered models clear the minimum either way); no
+  source found names the stock file manager on a Nautiz
+  handheld; no source found states a camera spec for the
+  X41, the X6 or the refreshed X2; no source found states a
+  microSD capacity for the X81; no source found states the
+  port position on the X2, the X6 or the X9 (X41 USB-C is
+  on the left side, X81 USB A host is on the bottom panel);
+  the Nautiz X1 turned up by name only — no Android version
+  or OTG support sourced; the MaxGo suite is device
+  management, not a photo backup; no other Nautiz model
+  turned up in the sources found.
+  Article published Nov 18, 2026 (WL-109, 77th how-to):
+  docs/handheld-photos-to-usb.html.
+  Fallback for WL-110: Winmate — no Winmate article exists
+  in docs/ yet and no searches.md row (M-series rugged
+  enterprise Android handhelds/tablets).
+  The Getac ZX-series fallback was considered and rejected:
+  getac-photos-to-usb.html already covers the ZX70, ZX80
+  and ZX10, so it is not an uncovered brand.
+
 ## WL-108 — Back up M3 Mobile photos to USB article, 76th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
