@@ -9713,6 +9713,120 @@ demand is read off competitor install velocity instead (see
   docs/ yet and no searches.md row (Intex, the Indian budget
   Android phone brand; Aqua series).
 
+### 103. "back up Intex photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Intex-specific guide
+  to backing up photos to a USB drive at all, let alone an
+  Intex-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and seven covered Intex
+  phones run Android 6.0 or older, so the phone route does not
+  exist on them at all.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  youtube.com, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any modern
+  Android phone to a USB drive is a USB On-The-Go (OTG)
+  connection and the phone's built-in file manager; it needs
+  Android 7.0 or newer, a USB flash drive, and an OTG adapter
+  or a dual USB-C/USB-A drive; copy DCIM/Camera in the file
+  manager. A generic Android video guide — it says nothing
+  about Intex);
+  play.google.com, "Photos to USB: OTG Backup"
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — back up every photo and video on your phone to a USB pen
+  drive with one tap; a USB-C drive goes straight in, an older
+  one needs an OTG adapter; no internet, no cloud, no account.
+  A real phone-to-USB app — but a generic Android listing, not
+  an Intex guide);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — a forum thread asking whether the adapter that came with
+  the phone moves photos onto a USB drive; the answer is to
+  use an OTG adapter and move files in the file manager. A
+  generic Android forum thread — it says nothing about
+  Intex);
+  softhandtech.com, "Easy Guide: Transferring Pictures from
+  Your Phone to a Flash Drive"
+  (softhandtech.com/how-do-you-transfer-pictures-from-your-phone-to-a-flash-drive/
+  — to transfer pictures from your phone to a flash drive, you
+  can connect your phone to a computer using a USB cable, or
+  use a USB flash drive that is compatible with your phone to
+  directly transfer the pictures without using a computer; you
+  will first need a USB OTG adapter, and not all phones support
+  USB OTG, so check if your device is compatible first. A
+  generic Android guide — it says nothing about Intex);
+  alibaba.com, "How To Quickly Backup Your Phone Photos Without
+  Using Cloud Storage"
+  (alibaba.com/product-insights/how-to-quickly-backup-your-phone-photos-without-using-cloud-storage.html
+  — back up phone photos locally with a USB cable and a
+  computer, a portable SSD or flash drive with OTG support, or
+  a NAS device; for Android, plug the drive in with an OTG
+  adapter, open the file manager and copy the photo gallery
+  folder. A generic Android guide — it says nothing about
+  Intex);
+  techwalla.com, "How to Move Pictures from Camera to Flash
+  Drive With No Computer"
+  (techwalla.com/articles/how-to-move-pictures-from-camera-to-flash-drive-with-no-computer
+  — select a combination memory card reader and USB flash
+  drive, remove the memory card from your camera and place it
+  in the reader, and let the reader transfer the pictures onto
+  the drive. A camera guide, not a phone guide — it says
+  nothing about Intex).
+- Two of the fourteen covered Intex phones clear SnapDisk's
+  Android 7.0 minimum and list USB OTG — the Aqua Lions 3
+  (Android 7.0) and the Aqua Style III (Android 7.0) — so the
+  one-tap route exists on those two; two more clear Android
+  7.0 but no source found states OTG for them — the Aqua S3
+  and Aqua S1 — so on those two SnapDisk installs but the
+  one-tap route is unproven until a drive mounts; three more
+  clear Android 7.0 but list OTG No — the Aqua Lions 2, Aqua
+  A4 and Aqua Lions T1 — so on those three there is no phone
+  route at all. Seven phones run Android 6.0 or older and
+  cannot run SnapDisk at all — the S7 and S2 (6.0), the GenX
+  (5.1), the 4G+ (5.0), and the Y2, Star II and Power HD
+  (4.4.2 or 4.4) — so there is no phone route on any of them.
+  All fourteen take micro-USB, so a USB-C drive plugs straight
+  into none of them. All fourteen take a microSD card, so the
+  card-reader route works on every one of them.
+- The Lions 2's microSD ceiling is two numbers — up to 64 GB
+  per gadgets360 and the Indian Express, up to 32 GB per
+  smartprix and cashify. The A4's battery is two states —
+  non-removable per gadgets360, removable per smartprix. The
+  Lions T1 is two listings — gadgets360 lists a 1 GB RAM, 8 GB
+  model and a separate 2 GB RAM, 16 GB model. The GenX's OTG
+  is disputed — gadgets360, mobilegizmo, gadgetstouse and
+  bmobile list OTG Yes, findpare says USB OTG No — though the
+  dispute changes nothing, since the GenX runs Android 5.1.
+  The Power HD's OTG is half-stated — gadgetsnow,
+  umatechnology and gadgetstouse list OTG Yes, phonebunch
+  leaves the OTG line blank — and its Android is 4.4.2 with a
+  Lollipop upgrade promised (phonebunch lists it as planned
+  upgrade to 5.0), but even 5.0 is below SnapDisk's 7.0
+  minimum. The Star II is two variants — the original with
+  1 GB RAM, 8 GB storage and a 2 MP front camera, and the
+  upgraded variant with 2 GB RAM, 16 GB storage and a 5 MP
+  front camera — and its battery is two numbers — 2100 mAh per
+  gadgets360, 2000 mAh per smartprix. The Style III's internal
+  storage is two numbers — 16 GB per gadgets360, shopclues,
+  digit and the Indian Express, 8 GB per one umatechnology
+  page. VaultDrive needs Android 8 or later per its own site,
+  so none of the fourteen can run it, and AppBrain lists 12.1
+  or later, which no covered Intex phone clears, since the
+  newest covered models run Android 7.0. FotoSafe needs
+  Android 9 or later, so no covered Intex phone clears it
+  either. Intex has no phone-to-USB backup tool of its own —
+  no Intex-specific backup advice turned up in any source
+  beyond a computer copy, Google Drive, or Google Photos; no
+  source found names the stock file manager on an Intex phone.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-136, 104th how-to):
+  docs/intex-photos-to-usb.html.
+  Fallback for WL-137: Xolo — no Xolo article exists in
+  docs/ yet and no searches.md row (Xolo, the Indian budget
+  Android phone brand; Era and Q series).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
