@@ -9827,6 +9827,147 @@ demand is read off competitor install velocity instead (see
   docs/ yet and no searches.md row (Xolo, the Indian budget
   Android phone brand; Era and Q series).
 
+### 104. "back up Xolo photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Xolo-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Xolo-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and eight covered Xolo
+  phones run Android 6.0 or older, so the phone route does
+  not exist on them at all.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash
+  drive by connecting them directly with an OTG adaptor,
+  using a PC as a middleman via USB File Transfer mode, or
+  downloading them wirelessly through Google Drive or
+  AirDroid; for direct transfers without a computer, connect
+  a USB-C OTG adaptor from the phone to the flash drive and
+  copy files using the USB Drive option in the Android
+  notification tray. A generic Android guide — it says
+  nothing about Xolo);
+  askfilo.com, "how to transfer pictures from an android
+  phone to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — to transfer photos directly from your Android device to
+  a USB flash drive, you will typically need a USB OTG
+  adapter if your flash drive does not have a native USB-C
+  connector that fits your phone; open the File Manager app,
+  look for the DCIM folder and then the Camera folder. A
+  generic Android guide — it says nothing about Xolo);
+  groovypost.com, "How to Transfer Photos from Android to a
+  USB Drive"
+  (groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — plug the USB flash drive into a PC, connect the Android
+  phone to the PC, choose the USB option to transfer files,
+  find the DCIM folder, open the Camera folder, select the
+  photos and drag and drop them onto the USB drive; or use a
+  USB 3.1 to USB-C flash drive and plug the USB-C side
+  straight into the phone. A generic Android guide, mostly
+  through a PC — it says nothing about Xolo);
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any modern
+  Android phone to a USB drive is a USB On-The-Go (OTG)
+  connection and the phone's built-in file manager; it needs
+  Android 7.0 or newer, a USB flash drive, and an OTG adapter
+  or a dual USB-C/USB-A drive; copy DCIM/Camera in the file
+  manager. A generic Android video guide — it says nothing
+  about Xolo);
+  epictechtips.com, "How to Transfer Pictures from Android
+  Phone to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — plug the flash drive into your Android device, tap the
+  USB charging notification and select "Transfer photos", or
+  use a PC as an intermediary; before you begin, confirm that
+  your Android phone supports USB OTG. A generic Android
+  guide — it says nothing about Xolo).
+- No covered Xolo phone clearly clears SnapDisk's
+  Android 7.0 minimum and lists USB OTG — so the one-tap
+  route is unproven on all fourteen; three clear Android
+  7.0 but their OTG is disputed — the Era 5X (mobilegizmo
+  lists USB OTG Support Yes, gadgets360's comparison table
+  lists USB OTG No), the Era 3X (smartprix's review says its
+  micro USB port is OTG supported and Hindustan Times lists
+  USB OTG Yes, gadgets360's comparison table lists USB OTG
+  No) and the Era 2V (smartprix lists USB on-the-go,
+  gadgets360's comparison tables list USB OTG No) — so on
+  those three SnapDisk installs but the one-tap route is
+  unproven until a drive mounts; one more clears Android
+  7.0 with OTG unstated — the ZX (Hindustan Times leaves the
+  OTG line blank, smartprix lists only USB charging); two
+  more clear Android 7.0 but list OTG No — the Era 4X
+  (gadgets360's comparison tables) and the Era 3 (findpare)
+  — so on those two there is no phone route at all. Eight
+  phones run Android 6.0 or older and cannot run SnapDisk at
+  all — the Era 2X, Era 1X Pro, Era 1X and Era 2 (6.0), the
+  Era 4G and Era X (5.1), the Q1010 (4.2) and the Q3000 (4.2,
+  updated to 4.4.2) — so there is no phone route on any of
+  them. All fourteen take micro-USB, so a USB-C drive plugs
+  straight into none of them. All fourteen take a microSD
+  card, so the card-reader route works on every one of them.
+- The Era 5X's microSD ceiling is two numbers — up to 128 GB
+  per gadgets360, up to 256 GB per smartprix and giznext.
+  The Era 3X's microSD ceiling is two numbers — up to 32 GB
+  per gadgets360 and smartprix, up to 64 GB per gadgetsnow's
+  review. The Era 3's RAM is two numbers — 1 GB per
+  gadgets360's spec page and smartprix, 2 GB per gadgets360's
+  launch report and digit — and its microSD ceiling is two
+  numbers — up to 32 GB per gadgets360 and smartprix, up to
+  64 GB per 91mobiles. The Era 2V's microSD ceiling is two
+  numbers — up to 32 GB per gadgets360 and giznext, up to
+  64 GB per 91mobiles. The Era 4X's Android is two numbers —
+  Android 8.1 Oreo (Go edition) per gadgets360 and
+  91mobiles, Android 8.0 (Go Edition) per smartprix's summary
+  line. The ZX's Android is two numbers — Android 8.1 Oreo
+  per gadgets360, smartprix, themobileindian and
+  umatechnology, Android 9.0 Pie per Hindustan Times'
+  comparison table — and its battery is two numbers — 3260
+  mAh per gadgets360 and gadgetsnow, 3000 mAh per smartprix.
+  The Era 2X's battery is two states — non-removable per
+  gadgets360, removable per smartprix, ubergizmo and
+  deepspecs — its OTG is disputed — phonebunch lists OTG
+  Supported, gadgets360's comparison table lists USB OTG
+  No — and its storage is two listings — 16 GB per
+  gadgets360, a 16 GB or 32 GB option per ubergizmo — though
+  the disputes change nothing, since the Era 2X runs Android
+  6.0. The Era 1X Pro's rear camera is two numbers — 5 MP
+  per smartprix, 8 MP per 91mobiles, ubergizmo, pcquest and
+  gadgetstouse. The Q1010's Android is two numbers — 4.2 per
+  gadgets360, smartprix and Hindustan Times, 4.4 KitKat per
+  umatechnology — and its OTG is disputed — gadgets360 lists
+  USB OTG No, phonebunch and Hindustan Times list OTG Yes,
+  and the launch report says an OTG cable came in the box —
+  though the dispute changes nothing, since the Q1010 runs
+  Android 4.2. The Q3000's OTG is half-stated — gizbot,
+  geeky-gadgets and umatechnology list USB OTG, phonebunch
+  leaves the OTG line blank — and its Android is 4.2 at launch
+  with a 4.4.2 update (gizbot), but even 4.4.2 is below
+  SnapDisk's 7.0 minimum. Two phones were promised
+  Marshmallow — the Era 4G got the Android 6.0 update per the
+  Indian Express and the Era X lists a planned upgrade to
+  6.0 — but even 6.0 is below SnapDisk's 7.0 minimum.
+  VaultDrive needs Android 8 or later per its own site, so
+  three of the fourteen can run it — the ZX, Era 5X and Era
+  4X — and AppBrain lists 12.1 or later, which no covered
+  Xolo phone clears, since the newest covered models run
+  Android 8.1. FotoSafe needs Android 9 or later, so no
+  covered Xolo phone clears it either. Xolo has no
+  phone-to-USB backup tool of its own — no Xolo-specific
+  backup advice turned up in any source beyond a computer
+  copy, Google Drive, or Google Photos; no source found
+  names the stock file manager on a Xolo phone.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-137, 105th how-to):
+  docs/xolo-photos-to-usb.html.
+  Fallback for WL-138: Gionee — no Gionee article exists in
+  docs/ yet and no searches.md row (Gionee, the Chinese phone
+  brand big in India; F, S and M series).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
