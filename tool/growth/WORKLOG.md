@@ -1,5 +1,124 @@
 # SnapDisk — Work Log
 
+## WL-114 — Back up i.safe MOBILE photos to USB article, 82nd how-to (DRAFT — article PR open)
+
+- Owner: SEO/GEO lane lead. State: DRAFT — article PR #196 open
+  (head b09caf1), supervisor merges after readback. CI run
+  44507947333 success on the article commit (build pass).
+  New docs/isafe-mobile-photos-to-usb.html ("Back up
+  i.safe MOBILE photos to a USB drive (no computer)"),
+  following the WL-54–WL-113 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 43 chars,
+  meta description 157 chars, JSON-LD validated by parse;
+  sitemap and feed XML parse. Feed now counts 82 items; blog
+  JSON-LD counts 82 BlogPosting entries.
+  searches.md Query 81 row present ("back up i.safe MOBILE
+  photos to USB drive without computer" — HOW-TO GAP).
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (backup/PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (backup/ProPrefs.FREE_BACKUP_BYTES_LIMIT = 5 GiB); Pro
+  $9.99 one-time = auto-backup on connect + unlimited size
+  (strings.xml pro_price, pro_unlocked); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB
+  skipped with reason (util/FilesystemInfo.FAT32_MAX_FILE_BYTES);
+  raw byte-stream copy (backup/BackupEngine.copyWithResume —
+  no decode/re-encode, .part resume, size verification after
+  copy, retry once) with size verification after copy.
+  ApplicationId unchanged (dev.dzianisv.snapdisk,
+  app/build.gradle.kts, minSdk 24 = Android 7.0); app tree
+  untouched vs main (only docs/ + tool/growth/searches.md
+  changed).
+  Search evidence (Nov 19, 2026 live web search): Query 81
+  is a real gap — no top result is an i.safe-specific guide
+  to backing up photos to a USB drive without a computer at
+  all; not one top result even mentions i.safe MOBILE.
+  drfone.wondershare.com, "Move iPhone Photos to USB or
+  External Drive" (iPhone guide — Files app + compatible
+  drive, or through a Mac/PC; says nothing about i.safe
+  MOBILE or Android); ubackup.com, "Transfer Photos from
+  iPhone to Memory Stick Without Computer" (iPhone guide —
+  Lightning to USB adapter, Photos, Export Unmodified
+  Original; says nothing about i.safe MOBILE or Android);
+  cdn.prod.website-files.com, "Transferring photos from your
+  iPhone to a USB drive" (iPhone guide — mostly through a
+  Windows PC or Mac; says nothing about i.safe MOBILE or
+  Android); photocleanse.app, "Transfer Photos from iPhone
+  to an External Hard Drive" (iPhone guide — Photos, Export
+  Unmodified Original to the drive; says nothing about
+  i.safe MOBILE or Android); FotoSafe, "Back up Android
+  photos to USB" (the only Android result — a real
+  no-computer phone-to-USB guide and a real one-tap app,
+  but generic Android, not an i.safe guide: it says nothing
+  about an i.safe model, its USB port, or its hazardous-area
+  rules). A second search ("i.safe MOBILE IS530 OTG USB
+  host flash drive") returned only i.safe operating manuals
+  — no guide, no OTG confirmation anywhere.
+  IS530.1, IS530.2, IS530.RG, IS530.M1, IS540.1, IS540.2 and
+  IS655 covered (i.safe datasheets + operating manuals +
+  reseller listings + benchmark listings, Nov 19): IS530.1 —
+  Android 10 at launch (OTA to Android 14 announced for
+  2025), Snapdragon 660, 4 GB/64 GB, microSD up to 128 GB,
+  USB Type-C, replaceable 3600 mAh, 13 MP AF rear + 5 MP
+  front, 4.5-inch Gorilla Glass 3 at 854 x 480, 13-pin ISM
+  interface; IS530.2 — Zone 2/22 variant of the same M53A01
+  hardware, Android 13 in its 2024 datasheet, same specs;
+  IS530.RG — non-Ex rugged variant, Android 14 in its March
+  2026 datasheet, same specs, magnetic charger port; IS530.M1
+  — mining variant, Android 10 at launch, same specs;
+  IS540.1 — Android 14 in a reseller listing, Qualcomm
+  QCM6490, 8 GB/128 GB, microSD to 128 GB, USB Type-C,
+  replaceable 4400 mAh, 48 MP main + 5 MP front, 6-inch full
+  HD, 16-pin ISM interface; IS540.2 — Zone 2/22 variant,
+  Android 12 in a review, same specs; IS655.RG / IS655.2 —
+  Android 10, MediaTek Helio P22, 3 GB/32 GB, microSD up to
+  128 GB, micro-USB, 4200 mAh integrated battery, 13 MP AF
+  rear + 8 MP front, 5.5-inch HD+ at 720 x 1440.
+  Honest limits recorded in the article: no source found
+  labels any i.safe MOBILE USB port OTG — every datasheet
+  and manual says only that the USB interface is for
+  charging and data transfer — so the drive mounting is the
+  test on all seven models before buying an adapter; i.safe's
+  own manuals say to use the USB interface only outside
+  explosion-hazardous areas — wired USB connections are
+  prohibited inside them, and only approved accessories may
+  be connected — so the backup happens outside the hazardous
+  area, with the i.safe PROTECTOR 2.0 cable; the Android
+  version differs by source on three models (IS540.1: Android
+  12 in a benchmark listing and a review, Android 14 in a
+  reseller listing; IS530.2: Android 13 in its 2024 datasheet,
+  Android 10 upgradable to 13 in an older reseller sheet;
+  IS530.RG: Android 14 in its March 2026 datasheet, Android
+  10 upgradable to 13 in an older reseller sheet), so the
+  article states no single version for those three; the
+  IS540.1's microSD capacity differs by source (up to 128 GB
+  in the manuals and one reseller listing, up to 256 GB in
+  another), so the article states no capacity for that model;
+  the IS655 is the only covered model with micro-USB, so it
+  needs a micro-USB OTG adapter, and its battery is
+  integrated, not replaceable; Google Play comes with the EEA
+  versions only — some variants, such as the mining versions,
+  may not have it, so sideload the APK if it is absent; no
+  source found names the stock file manager on an i.safe
+  device — the manuals point at Google's Android support
+  pages — so Method 2 uses the built-in file manager,
+  whatever it is called on the unit; no source found states
+  the port position on any of the seven models; no IS530.3
+  variant turned up in the sources found; FotoSafe needs
+  Android 9, so it cannot run on a device still on Android
+  7.0 or 8.0 — but every covered i.safe model runs Android
+  10 or later, so the floor does not bite here.
+  Article published Nov 19, 2026 (WL-114, 82nd how-to):
+  docs/isafe-mobile-photos-to-usb.html.
+  Fallback for WL-115: Ecom Smart-Ex — no Ecom article
+  exists in docs/ yet and no searches.md row (Pepperl+Fuchs
+  intrinsically safe Android phones, Smart-Ex 02/03 line).
+
 ## WL-113 — Back up Samsung Galaxy XCover photos to USB article, 81st how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
