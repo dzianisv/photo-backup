@@ -3,8 +3,8 @@
 ## WL-140 — Back up Elephone photos to USB article, 108th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #249 PENDING (head bb2f1ea, CI run 44621107985
-  success; merge commit PENDING, merged PENDING).
+  Article PR #249 MERGED (head bb2f1ea, CI run 44621107985
+  success; merge commit 86a6249, merged 2026-11-19T21:47:08Z).
   Query 107 verified by the lead from live evidence (no top
   result is an Elephone-specific phone-to-USB photo-backup
   guide); top results are five iPhone guides (ubackup, dblabs,
