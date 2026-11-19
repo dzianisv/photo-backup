@@ -1,9 +1,22 @@
 # SnapDisk — Work Log
 
-## WL-122 — Back up DT Research photos to USB article, 90th how-to (DRAFT)
+## WL-122 — Back up DT Research photos to USB article, 90th how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: DRAFT — article PR open,
-  supervisor merges after readback.
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #212 MERGED (merge d739b35, 2026-11-19T12:19:38Z, CI run
+  44522381275 success on head fc8f892); post-merge main runs
+  Android PR 44522843607 success + pages 44522843761 success. Live
+  fetch: dt-research-photos-to-usb.html 200 (correct title, fresh crawl
+  12:21 UTC), feed.xml 90 items incl. DT Research. Query 89 verified by
+  the lead from live evidence (no top result mentions DT Research);
+  supervisor re-verified pre-merge by readback (feed 90 items incl.
+  DT Research, sitemap incl. URL, title correct, Query 89 row present,
+  only docs/ + tool/growth changed). No rebase needed (mergeable CLEAN).
+  Correction: the WL-121 fallback named the DT311 as an Android tablet —
+  wrong; live evidence shows the DT311 runs Windows 10 IoT Enterprise,
+  as do the DT301/DT313/DT312RP/DT323RP/DT323PA/DT362DN/DT382DN. The
+  article covers the actual Android line (DA323EP, DA381ND, DA361ND,
+  DT361ND, DT381ND Android 13; DA573LF Android 14).
   New docs/dt-research-photos-to-usb.html ("Back up
   DT Research photos to a USB drive (no computer)"),
   following the WL-54–WL-121 article template exactly
