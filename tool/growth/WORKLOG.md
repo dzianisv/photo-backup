@@ -3,8 +3,8 @@
 ## WL-135 — Back up Karbonn photos to USB article, 103rd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #239 open (head 5f452e2, CI run 44578925835
-  success), merge pending — supervisor merges after readback.
+  Article PR #239 MERGED (head 5f452e2, CI run 44578925835
+  success, merge commit 0694b88, merged 2026-11-19T17:42:50Z).
   Query 102 verified by the lead from live evidence (no top
   result is a Karbonn-specific phone-to-USB photo-backup
   guide); top results are a Dr.Fone guide, an Android Central
