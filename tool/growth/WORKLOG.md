@@ -1,5 +1,124 @@
 # SnapDisk — Work Log
 
+## WL-103 — Back up Point Mobile photos to USB article, 72nd how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Adopted, validated, and shipped an orphaned article: the
+  hourly-supervisor run's WL-103 agent wrote the complete
+  article (worktree ~/workspace/photo-backup/repo-wl103,
+  branch wl-103-pointmobile) but was interrupted by timeout
+  before commit/PR — no commit, no push, no PR existed. The
+  daily growth sweep adopted the worktree, validated it
+  (template, JSON-LD parse, sitemap/feed XML parse, code
+  facts on fresh main, independent live re-search of query
+  71), and shipped it unchanged.
+  Merged PR #174, main d703ace, Android PR CI run 44440489409
+  success. Live verified by readback: article 200 with correct
+  title, blog index 200 incl. Point Mobile, feed.xml 72 items
+  incl. Point Mobile, sitemap 200 incl. the new URL.
+  New docs/point-mobile-photos-to-usb.html ("Back up Point Mobile
+  photos to a USB drive (no computer)"), following the
+  WL-54–WL-102 article template exactly (navy/cyan, TL;DR first,
+  no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 42 chars, meta
+  description 135 chars, JSON-LD validated by parse; sitemap and
+  feed XML parse. Feed now counts 72 items.
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search, re-checked
+  independently by the sweep): Query 71 ("back up Point Mobile
+  photos to USB drive without computer") is a real gap — no
+  Point Mobile-specific phone-to-USB guide in the top results
+  at all; not one result even mentions Point Mobile.
+  Trucoteca, "How to download photos from your mobile phone to
+  a USB? Tutorial"
+  (trucoteca.com/en/how-to-download-photos-from-your-mobile-phone-to-the-device/
+  — connect a USB drive with an OTG adapter and move photos
+  with a file manager, or use a PC with a USB cable and
+  copy-paste. Generic Android, and a manual guide — and its
+  second method needs a computer in between); Digiera Global,
+  "How to Back Up an iPhone to an External Drive Without iCloud"
+  (digieraglobal.com/blogs/news/back-up-iphone-to-external-drive
+  — Finder on a Mac or the Apple Devices app on Windows, or copy
+  photos to an SSD from the iPhone itself. An iPhone guide, not
+  an Android guide — and it says nothing about a Point Mobile
+  handheld); VaultDrive, "Back Up Phone Photos to a USB Drive,
+  No Computer" (coticsy.com/vaultdrive.html — plug a flash drive
+  or SSD into your iPhone or Android phone, choose what to back
+  up and tap Start. A rival app, not a guide — and it is free for
+  up to 200 files or 2 GB per backup, Pro $19.99 once, and it
+  needs Android 8 or later, so a PM45 still on Android 7 cannot
+  use it); CellularNews, "How to Move Pictures to a Flash Drive
+  From a Google Phone"
+  (cellularnews.com/device-reviews-and-comparisons/smartphones/how-to-move-pictures-to-a-flash-drive-from-google-phone/
+  — connect a USB storage device using an OTG adapter and copy
+  or move the photos using the Files app. A Google-phone guide,
+  and a manual file-manager guide — and it warns that not all
+  Android phones support OTG functionality); itechguides,
+  "Transfer Photos from Phone to Memory Stick: iPhone and
+  Android"
+  (itechguides.com/transfer-photos-from-phone-to-memory-stick-a-comprehensive-guide/
+  — match the drive to the phone's connector, copy a test batch,
+  verify, delete originals only afterward. Generic Android and
+  iPhone, and a manual guide — and it warns that file-manager
+  menus and USB-host support vary by manufacturer and model,
+  which is exactly the Point Mobile question); Photos to USB:
+  OTG Backup
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — one tap copies the whole gallery to a pen drive, only new
+  photos next time; no internet, no cloud, no account. A rival
+  app, not a guide — and free with ads, a one-time purchase
+  removing the ads).
+  Point Mobile models covered (spec/manual/retailer sources, Nov
+  18): PM30 — Android 10, "Standard USB2.0 OTG"; PM30hc
+  healthcare variant — Android 10 (upgradeable to Android 14),
+  "Standard USB2.0 OTG"; PM45 — shipped Android 7, upgrade to
+  Android 8 (UL benchmarks lists Android 8.1), "Standard USB2.0
+  OTG"; PM67 — Android 11 (upgradable to Android 13); PM75 —
+  Android 11 (upgradable to Android 14), "USB 2.0 Type C OTG";
+  PM85 — Android 8.1 (upgradable to Android 9); PM86 — Android 11
+  or 13 (upgradable to Android 14); PM90 — Android 9 (a later
+  datasheet lists Android 11, upgradable to Android 14), "High
+  speed USB 3.0 Initiator and Target"; PM95 — Android 13
+  (upgradable to Android 18); PM451 — Android 9 (upgradable to
+  Android 11). Below the Android 7.0 minimum: PM80 (Android 5.0),
+  PM66 (Android 6.0.1), PM60 (Android 4.2) — computer copy is the
+  route there; PM450 runs Windows Embedded, not Android.
+  Honest limits recorded in the article: OTG/host support is
+  confirmed in the spec listings on only five of the ten
+  handhelds — the PM30, the PM30hc, the PM45, the PM75 and the
+  PM90 — on the other five (PM67, PM85, PM86, PM95, PM451) the
+  drive mounting is the test; the PM45's port differs by source
+  (Point Mobile datasheet lists USB-C, UL benchmarks lists
+  microUSB 2.0); no source found states the connector type on
+  the PM95 or the PM451 at all; the PM90's Android version
+  differs by datasheet (9 vs 11); the PM45's Android version
+  differs by source (7→8 upgrade table vs 8.1) — either way both
+  clear the minimum.
+  Article published Nov 18, 2026 (WL-103, 72nd how-to):
+  docs/point-mobile-photos-to-usb.html.
+  NOTE (drift found by this run): searches.md stops at query 58
+  (JCB, WL-90) — queries 59–70 (WL-91–WL-102: Evolveo through
+  Newland) have their search evidence only in this Work Log,
+  never as searches.md rows. Query 71 (Point Mobile) is added
+  to searches.md in this PR; backfilling 59–70 is owed by a
+  future run.
+  Fallback for WL-104: Opticon — no Opticon article exists in
+  docs/ yet (H-31/H-33 Android 9 rugged mobile computers, H-28/
+  H-29; H-32 runs Windows Embedded Compact 7).
+
 ## WL-102 — Back up Newland photos to USB article, 71st how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
