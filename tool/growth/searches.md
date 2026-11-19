@@ -9257,6 +9257,133 @@ demand is read off competitor install velocity instead (see
   docs/ yet and no searches.md row (itel, the Transsion
   budget Android phone brand; A, S and P series).
 
+### 99. "back up itel photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an itel-specific guide
+  to backing up photos to a USB drive at all, let alone an
+  itel-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and one covered itel
+  phone cannot host a drive at all.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive-Dr.Fone"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash
+  drive with an OTG adaptor and the file manager, through a
+  PC in File Transfer mode, through Google Drive, or through
+  AirDroid; Dr.Fone's own software bulk-exports to a
+  computer. A generic Android guide — it says nothing about
+  itel);
+  youtube.com, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any modern
+  Android phone to a USB drive is a USB On-The-Go (OTG)
+  connection and the phone's built-in file manager; it needs
+  Android 7.0 or newer, a USB flash drive, and an OTG
+  adapter or a dual USB-C/USB-A drive; copy DCIM/Camera in
+  the file manager. A generic Android video guide — it says
+  nothing about itel);
+  thecomputerbasics.com, "Transfer Files Without a Computer
+  — The Computer Basics"
+  (thecomputerbasics.com/how-to-transfer-videos-from-iphone-to-usb-stick-without-computer/
+  — phones and tablets can read and write external drives
+  directly; the obstacles are connectors, file systems and
+  power; on Android, connect with a USB-C adapter or an OTG
+  cable, and the drive appears in the Files app; exFAT is
+  the format to use for a drive moved between devices, FAT32
+  cannot hold a file over 4 GB. A generic phone guide — it
+  says nothing about itel);
+  thegadgetians.com, "How to Transfer Files From Phone to
+  USB Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — to transfer files from your phone to USB without a
+  computer, connect a USB drive to your Android with an OTG
+  adapter or to an iPhone with a Lightning-to-USB adapter,
+  open the file manager, select and copy files, then paste
+  onto the USB drive; not all Android phones support OTG,
+  and if your phone is older or very basic that may be why
+  the USB is not detected. A generic phone guide — it says
+  nothing about itel);
+  play.google.com, "Photos to USB: OTG Backup"
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — back up every photo and video on your phone to a USB pen
+  drive with one tap; plug a pen drive in, the app spots it
+  and copies the gallery; free with ads, a one-time purchase
+  removes them; FAT32 drives cannot hold a single file over
+  4 GB. A real phone-to-USB app — but a generic Android
+  listing, not an itel guide).
+- Sixteen itel phones clear SnapDisk's Android 7.0 minimum
+  and list USB OTG — the A44 (Android 7.0 exactly), the A44
+  Pro (Android 7.0), the A44 Air (Android 8.1 Go), the A44
+  Power (Android 8.1 Go), the A50 (Android 14 Go), the A60
+  (Android 11 or 12 Go), the A70 (Android 13 Go), the A80
+  (Android 14 Go), the S23 (Android 12), the S24 (Android
+  13), the S25 (Android 14), the S25 Ultra (Android 14), the
+  P40 (Android 12 Go), the P55 (Android 13), the P55 5G
+  (Android 13) and the P65 (Android 14) — so the one-tap
+  route exists on those sixteen; one more clears Android 7.0
+  but no source found states OTG for it — the A46 (Android
+  9.0) — so on that one SnapDisk installs but the drive
+  mounting is the test; the A48 (Android 10 Go) lists OTG No
+  per whatmobile, so no phone route exists on it; no covered
+  itel phone is below Android 7.0 at all. Three of the
+  sixteen carry a dissenting source — gadgets360 says OTG No
+  for the A50, whatmobile says OTG No for the A80, and two
+  gadgets360 comparison tables say OTG No for the P40.
+- The A50 is two phones sharing a name — the 2024 A50 runs
+  Android 14 Go on a Unisoc T603 with USB-C and 64 or 128 GB
+  of storage, while older listings describe an A50 on a
+  Unisoc SC9832E running Android 11 or 12 Go with 32 GB and
+  a microUSB port. The A80's connector is two things — USB
+  Type-C with OTG Yes per phonepik, fivestar and gadgets360,
+  microUSB 2.0 with OTG No per whatmobile. The A60's Android
+  is two numbers — 12 Go per beebom, 11 Go per mobileinto —
+  and its release is two dates — May 2023 per mobileinto,
+  January 2022 per bestmobile. The A70 takes microSD up to 2
+  TB per mobiledokan and 91mobiles and up to 1 TB per
+  phonesstorekenya; the S23 microSD up to 1 TB per
+  mysmartprice, up to 512 GB per cellularkenya and up to 256
+  GB per phonesstorekenya; the P40 microSD up to 512 GB per
+  gadgets360 and 91mobiles and up to 128 GB per
+  naijatechguide; the A50 microSD up to 512 GB per
+  pricehunt, up to 2 TB per mobility, up to 1 TB per
+  jkphones and up to 32 GB per gadgets360. The S23's Android
+  is two numbers too — 12 per most sources, 11 per the
+  phonesstorekenya table — and one source says its chipset
+  is a Unisoc T616 against the T606 every other source
+  lists. The S24's Android is two numbers — 13 per most
+  sources, with one hamariweb line saying Android 12 Go —
+  and no source found states a microSD ceiling for the S24
+  at all. The S25 Ultra's microSD slot is two things — a
+  dedicated slot per mobilo, no card slot at all per
+  smartprix and nanoreview — and its RAM is two numbers — 4
+  GB per mobilo, 8 GB per smartprix. The P55 5G's chipset is
+  two things — a MediaTek Dimensity 6080 per mysmartprice
+  and the user manual, a Unisoc T606 per phonepik. The P65's
+  mobilo page describes two different phones — its prose
+  says a MediaTek Helio A22 with 2 GB of RAM, 32 GB of
+  storage and Android 10 Go, while its spec table says
+  Android 14, 128 GB and USB Type-C with OTG. VaultDrive
+  needs Android 8 or later per its own site, so the A44
+  (Android 7.0 exactly) cannot run it either, and AppBrain
+  lists 12.1 or later, which only five covered itel phones
+  clear — the A50, A80, S25, S25 Ultra and P65, all on
+  Android 14. itel has no phone-to-USB backup tool of its
+  own — no itel-specific backup advice turned up in any
+  source beyond a computer copy, Google Drive, or Google
+  Photos; no source found names the stock file manager on an
+  itel phone; itel was established in 2007 in Hong Kong and
+  belongs to Transsion Holdings, which also owns Tecno and
+  Infinix.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-132, 100th how-to):
+  docs/itel-photos-to-usb.html.
+  Fallback for WL-133: Lava — no Lava article exists in
+  docs/ yet and no searches.md row (Lava, the Indian budget
+  Android phone brand; Agni, Blaze and Yuva series).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
