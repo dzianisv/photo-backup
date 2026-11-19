@@ -4,8 +4,7 @@
 
 - Owner: SEO/GEO lane lead. State: DRAFT — article PR #200 open
   (head e700d43), supervisor merges after readback. CI run
-  44511075328 in progress on the article commit at row write
-  (build pass to be confirmed by supervisor readback).
+  44511075328 success on the article commit (build pass).
   New docs/bartec-photos-to-usb.html ("Back up
   Bartec photos to a USB drive (no computer)"),
   following the WL-54–WL-115 article template exactly
