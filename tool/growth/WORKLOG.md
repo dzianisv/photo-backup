@@ -1,11 +1,10 @@
 # SnapDisk — Work Log
 
-## WL-134 — Back up Micromax photos to USB article, 102nd how-to (READY FOR MERGE)
+## WL-134 — Back up Micromax photos to USB article, 102nd how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: READY FOR MERGE —
-  supervisor merges after readback.
-  Article PR #237 OPEN (head 78fff53, CI run 44574148081
-  success, merge state CLEAN, mergeable).
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #237 MERGED (head 78fff53, CI run 44574148081
+  success, merge commit f5d0415, merged 2026-11-19T17:15:34Z).
   Query 101 verified by the lead from live evidence (no top
   result is a Micromax-specific phone-to-USB photo-backup
   guide); top results are a YouTube OTG video, the Photos to
