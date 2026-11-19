@@ -8929,6 +8929,101 @@ demand is read off competitor install velocity instead (see
   microSD up to 128 GB; Gator 5, Android 8.1, IP68, 3700
   mAh; Gator 4, Android 6.0, IP68, 13 MP rear camera).
 
+### 96. "back up Plum photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Plum-specific
+  guide to backing up photos to a USB drive at all, let
+  alone a Plum-specific automated whole-library backup
+  with progress, Pause/Stop, and resume — and three
+  covered Plum phones cannot run SnapDisk at all.
+- Current top results (scored Nov 19, 2026, live web search):
+  softhandtech.com, "Transfer Photos from Phone to
+  Memory Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — transfer photos to a memory stick with a computer as
+  a middleman, direct transfer with OTG support if the
+  phone supports it, or cloud services; check OTG
+  compatibility in the device specifications first. A
+  generic phone guide — it says nothing about Plum);
+  alibaba.com, "How To Quickly Backup Your Phone Photos
+  Without Using Cloud Storage"
+  (alibaba.com/product-insights/how-to-quickly-backup-your-phone-photos-without-using-cloud-storage.html
+  — transfer via a USB cable and a computer, use a
+  portable SSD or flash drive with OTG support, or use
+  cloud services; a portable SSD or flash drive with OTG
+  lets you transfer directly from the phone without a
+  computer. A generic phone guide — it says nothing
+  about Plum);
+  forums.macrumors.com, "transfer file to usb stick
+  without computer"
+  (forums.macrumors.com/threads/transfer-file-to-usb-stick-without-computer.1853303/
+  — a forum thread about an iPhone 6 Plus: use a
+  Lightning-to-USB adapter or a portable Wi-Fi drive
+  with its own app, or a cloud backup. A forum thread
+  about an iPhone — it says nothing about Plum);
+  curiousbluenoser.substack.com, "saving Photos for
+  necessary updates"
+  (curiousbluenoser.substack.com/p/saving-photos-for-necessary-updates
+  — plug a picture-keeper flash drive into the charging
+  port, open its free app, and tap Start; the drive
+  copies all your photos and videos onto the stick. A
+  generic phone guide about a drive with its own app —
+  it says nothing about Plum);
+  coolmuster.com, "7 Ways to Transfer Photos from
+  iPhone to Flash Drive"
+  (coolmuster.com/idevices/transfer-photos-from-iphone-ipad-to-flash-drive.html
+  — move iPhone photos to a flash drive with a computer,
+  with iCloud, or without a computer using a Type-C OTG
+  adapter and the Files app. An iPhone guide — it says
+  nothing about Plum).
+- Two Plum phones clear SnapDisk's Android 7.0
+  minimum and list USB OTG — the Gator 6 (Android 10
+  Go edition) and the Gator 7 (Android 11) — so the
+  one-tap route exists on those two; the Gator 5
+  (Android 8.1) clears the minimum but no source found
+  states OTG for it — every spec listing says only
+  microUSB 2.0 — so on the Gator 5 the drive mounting
+  is the test; the Gator 4's Android version is
+  disputed — Android 6.0 per the official manual,
+  Android 7.0 per phonesdata, eIMEI24, devicesfaq and
+  mobilexfiles — and its OTG is unconfirmed, so check
+  Settings > About phone first; the original Gator and
+  the Gator Plus run Android 4.2.2, below the minimum,
+  so neither can run SnapDisk at all; the Gator 7
+  carries an 8 MP rear camera and a 5 MP front camera,
+  the Gator 6 an 8 MP rear camera and a 2 MP front
+  camera, the Gator 5 and the Gator 4 a 13 MP rear
+  camera and a 5 MP front camera, and the original
+  Gator and the Gator Plus a 5 MP rear camera and a
+  1.3 MP front camera; the Gator 7 takes microSDXC up
+  to 128 GB, the Gator 5 up to 64 GB, the Gator 4 up to
+  64 GB per the spec sites and up to 32 GB per its
+  manual, the Gator 6 microSDXC with no ceiling stated,
+  and the original Gator and the Gator Plus microSDHC
+  up to 32 GB; the Gator 5's IP68 is disputed —
+  phonesdata lists IP68, the devicesfaq FAQ page says
+  it has no water-resistance certification; VaultDrive
+  needs Android 8 or later per its own site, so the
+  Gator 5, Gator 6 and Gator 7 clear that bar, but
+  AppBrain lists 12.1 or later, which no Gator clears;
+  Plum has no phone-to-USB backup tool of its own —
+  the only Plum-specific backup advice found is the
+  devicesfaq page telling you to connect the phone to a
+  computer with the USB cable and copy the files; no
+  source found names the stock file manager on a Plum
+  phone; no source in this run's searches names a
+  Gator 3; the Gator 7 is IP69 per phonesdata
+  (IP68/IP69K per the Amazon listing) and the Gator 4,
+  Gator 5 and Gator 6 are IP68.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-129, 97th how-to):
+  docs/plum-photos-to-usb.html.
+  Fallback for WL-130: Bullitt — no Bullitt article
+  exists in docs/ yet and no searches.md row (Bullitt
+  Group, the British maker behind CAT phones, the Land
+  Rover Explore and Motorola rugged phones; founded
+  2009, shut down January 2024).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
