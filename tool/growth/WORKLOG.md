@@ -3,8 +3,15 @@
 ## WL-124 — Back up Fujitsu photos to USB article, 92nd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #216 (head f23dc7b, CI run 44528920202 success,
-  mergeable MERGEABLE; merge pending supervisor readback).
+  Article PR #216 MERGED (merge 8f9f90f, 2026-11-19T13:06:02Z, CI run
+  44528920202 success on head f23dc7b); post-merge main runs Android PR
+  44530121992 success + pages 44530120801 success. Live fetch:
+  fujitsu-photos-to-usb.html loads (correct title, browser read 13:07
+  UTC), feed.xml 92 items incl. Fujitsu. Query 91 re-scored by
+  supervisor from a fresh live re-search: same 6 results as the lead
+  (2005 DynaMO review, desnoulez camera-card guide, HPE Linux thread,
+  Photos to USB rival listing, Tom's Hardware camera thread, pixoneye
+  generic guide) — none mentions a Fujitsu phone; real gap stands.
   Query 91 verified by the lead from live evidence (no top
   result mentions a Fujitsu phone); lead-verified by readback
   (feed 92 items incl. Fujitsu, sitemap incl. URL, title
