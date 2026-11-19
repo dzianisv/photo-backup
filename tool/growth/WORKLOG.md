@@ -1,5 +1,66 @@
 # SnapDisk — Work Log
 
+## WL-126 — Back up Casio photos to USB article, 94th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #220 OPEN (head 5ccedac, CI run 44535862939
+  success, mergeable MERGEABLE); supervisor merges after
+  readback — no merge receipt yet. Query 93 verified by the
+  lead from live evidence (no top result mentions a Casio
+  phone); lead-verified by readback (feed 94 items incl.
+  Casio, sitemap incl. URL, title correct, Query 93 row
+  present, only docs/ + tool/growth changed).
+  New docs/casio-photos-to-usb.html ("Back up Casio photos
+  to a USB drive (no computer)"), following the WL-54–WL-125
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot, with an honest caption: no Casio phone
+  can run that screen). Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml updated.
+  Title 35 chars, meta description 137 chars, JSON-LD
+  validated by parse; sitemap and feed XML parse. Feed now
+  counts 94 items; blog JSON-LD counts 94 BlogPosting entries.
+  searches.md Query 93 row present ("back up Casio photos to
+  USB drive without computer" — HOW-TO GAP): top results are
+  Casio camera manuals (EX-P700, QV-R40), a camera-to-flash-
+  drive guide, a camera forum thread, a Casio Exilim-to-PC
+  thread, a Casio data projector USB guide, and a generic
+  thumb-drive guide, none mentions a Casio phone. Casio
+  specifics verified live: no Casio Android phone can run
+  SnapDisk — every G'zOne runs Android 2.2 to 4.1, below
+  SnapDisk's Android 7.0 minimum — so there is no one-tap
+  route on a Casio phone at all, and none can run VaultDrive
+  either (Android 8+ per its own site); no source found
+  states OTG or USB host for any Casio phone — the manuals
+  list only "Connecting to a PC via USB" — so on every model
+  the drive mounting is the test; Commando C771 Android
+  2.2.1, upgradable to 2.3.3, 800 MHz Snapdragon S2, 512 MB
+  RAM, 5 MP autofocus rear camera, microSD up to 32 GB
+  (8 GB included), 1460 mAh, April 2011, about €300;
+  Commando 4G LTE C811 Android 4.0.4, 1.5 GHz dual-core
+  Snapdragon S4, 1 GB RAM, 16 GB storage, microSDHC up to
+  32 GB, 8 MP rear + 1.3 MP front, 1800 mAh, June 27, 2013,
+  $99.99 on contract, Verizon's first 4G LTE rugged Android
+  phone; TYPE-L CAL21 Android 4.0.4, MSM8960 dual-core
+  1.5 GHz, 1 GB RAM, 8 GB storage, microSDHC up to 32 GB,
+  8.08 MP rear + 1.36 MP front, 1800 mAh (one source lists
+  1850 mAh), February 2013, discontinued July 2013 — the
+  final NEC Casio handset (NEC withdrew from smartphones
+  July 31, 2013; the business had fully ceased by 2014);
+  CA-201L Android 4.0 (one source lists Android 4.1 for the
+  US variant), 16 GB storage, NFC instead of FeliCa, LG U+,
+  March 13, 2013; all four take microSD up to 32 GB; Casio
+  has no phone-to-USB backup tool of its own — G'zGEAR is an
+  outdoor sensor suite; no source found names the stock file
+  manager on a Casio phone; WhatsApp no longer installs on
+  the CA-201L (needs Android 6+); the Commando 4G LTE's
+  immersion rating is 1 m for 30 minutes per the Verizon
+  announcement and 1.5 m per one launch report.
+  Fallback for WL-127: Archos — no Archos article exists in
+  docs/ yet and no searches.md row (rugged Saphir phones:
+  50 Saphir, Android 6.0, IP68, USB OTG listed, 13 MP rear
+  camera, microSD up to 128 GB).
+
 ## WL-125 — Back up Bittium photos to USB article, 93rd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
