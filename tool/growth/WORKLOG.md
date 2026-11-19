@@ -1,5 +1,59 @@
 # SnapDisk — Work Log
 
+## WL-101 — Back up Unitech photos to USB article, 70th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Merged PR #170, main 79fa2d9, Android PR CI run 44431665288
+  success. Live verified by readback: article 200 with correct
+  title, blog index 200 incl. Unitech, feed.xml 70 items incl.
+  Unitech, sitemap 200 incl. the new URL.
+  New docs/unitech-photos-to-usb.html ("Back up Unitech photos
+  to a USB drive (no computer)"), following the WL-54–WL-100 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 37 chars, meta
+  description 157 chars, JSON-LD validated by parse; sitemap and
+  feed XML parse. Feed now counts 70 items.
+  Facts verified from code on fresh main: SAF tree picker
+  (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT); Pro $9.99 one-time =
+  auto-backup on connect + unlimited size (strings.xml
+  pro_price, pro_unlocked, limit_reached_detail); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB skipped
+  with reason (FilesystemInfo.FAT32_MAX_FILE_BYTES); raw
+  byte-stream copy (BackupEngine.copyWithResume — no
+  decode/re-encode) with size verification after copy.
+  Search evidence (Nov 18, 2026 live web search): Query 69 ("back
+  up Unitech photos to USB drive without computer") is a real gap —
+  no Unitech-specific phone-to-USB guide in the top results at all;
+  not one result even mentions Unitech. Generic Android
+  file-manager guides (Dr.Fone, Pixoneye, connect.gmb.org.uk),
+  a YouTube OTG video, and the Android Central forum cover only
+  the manual route, not a Unitech guide.
+  Unitech models covered (spec/manual/retailer sources, Nov 18):
+  PA768 — Android 12 (free upgrade to 14), OTG Yes; PA768e UHF —
+  Android 14, OTG unconfirmed; PA760 — Android 9 or 10, OTG Yes;
+  EA630 — Android 9 or 10, OTG Yes; EA630 Plus — Android 11 (free
+  upgrade to 12), OTG Yes; EA520 — Android 11 (upgradable to 13),
+  OTG Yes; EA520 Plus — Android 12, OTG Yes; EA660 — Android 13
+  (upgradable to 15), OTG Yes; EA530 — Android 15 (upgradable to
+  17), OTG Yes. Below the Android 7.0 minimum: PA720 (Android 6.0,
+  earlier units 5.1) — computer copy is the route there.
+  Honest limits recorded in the article: OTG/host support is
+  confirmed in the spec listings on eight of the nine models — no
+  source found confirms OTG or host support on the PA768e UHF at
+  all, so the drive mounting is the test on that model; the PA720
+  cannot run SnapDisk at all — it runs Android 6.0 (earlier units
+  5.1), below SnapDisk's Android 7.0 minimum.
+  Article published Nov 18, 2026 (WL-101, 70th how-to):
+  docs/unitech-photos-to-usb.html.
+  Fallback for WL-102: Newland — no Newland article exists in
+  docs/ yet (enterprise Android handhelds, Zebra already covered).
+
 ## WL-100 — Back up CipherLab photos to USB article, 69th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
