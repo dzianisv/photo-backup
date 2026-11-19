@@ -1,5 +1,121 @@
 # SnapDisk — Work Log
 
+## WL-122 — Back up DT Research photos to USB article, 90th how-to (DRAFT)
+
+- Owner: SEO/GEO lane lead. State: DRAFT — article PR open,
+  supervisor merges after readback.
+  New docs/dt-research-photos-to-usb.html ("Back up
+  DT Research photos to a USB drive (no computer)"),
+  following the WL-54–WL-121 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot). Blog index (JSON-LD + post block), sitemap.xml,
+  llms.txt, llms-full.txt, feed.xml updated. Title 41 chars,
+  meta description 153 chars, JSON-LD validated by parse;
+  sitemap and feed XML parse. Feed now counts 90 items; blog
+  JSON-LD counts 90 BlogPosting entries.
+  searches.md Query 89 row present ("back up DT Research
+  photos to USB drive without computer" — HOW-TO GAP).
+  Facts verified from code on fresh main (3a4e2fc): SAF tree
+  picker (MainActivity.kt OpenDocumentTree +
+  takePersistableUriPermission); oldest-first via MediaStore
+  DATE_TAKEN ascending (backup/PhotoQuery.kt, DATE_TAKEN else
+  DATE_MODIFIED fallback); free 5 GB per run
+  (backup/ProPrefs.FREE_BACKUP_BYTES_LIMIT = 5 GiB); Pro
+  $9.99 one-time = auto-backup on connect + unlimited size
+  (strings.xml pro_price); no INTERNET
+  permission in AndroidManifest.xml; FAT32 files >=4 GiB
+  skipped with reason (util/FilesystemInfo.FAT32_MAX_FILE_BYTES);
+  raw byte-stream copy (backup/BackupEngine.copyWithResume —
+  no decode/re-encode, .part resume, size verification after
+  copy, retry once) with size verification after copy.
+  ApplicationId unchanged (dev.dzianisv.snapdisk,
+  app/build.gradle.kts, minSdk 24 = Android 7.0); app tree
+  untouched vs main (only docs/ + tool/growth/searches.md
+  changed).
+  Search evidence (Nov 19, 2026 live web search): Query 89
+  is a real gap — no top result is a DT Research-specific
+  guide to backing up photos to a USB drive without a
+  computer at all; not one top result even mentions
+  DT Research.
+  pixoneye.com, "How to Transfer Photos from Your Phone
+  to an USB Stick" (generic Android/iPhone guide — Files
+  by Google, DCIM/Camera, Copy to; says nothing about
+  DT Research, or about a rugged tablet);
+  thecomputerbasics.com, "Transfer Files Without a
+  Computer" (generic Android/iPhone guide — USB-C adapter
+  or OTG cable, drive appears in Files, copy and paste;
+  says nothing about DT Research, or about a rugged
+  tablet);
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)" (generic OTG +
+  file manager video guide — DCIM/Camera, Move or Copy;
+  says nothing about DT Research, or about a tablet at
+  all);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive" (generic Android
+  guide — OTG adaptor + file manager, or PC, or Google
+  Drive/AirDroid; says nothing about DT Research, or about
+  a tablet at all);
+  connect.gmb.org.uk, "Transferring pictures to a thumb
+  drive" (generic Android guide — USB-C, micro-USB and
+  USB-A drive types; says nothing about DT Research, or
+  about a rugged tablet);
+  forums.androidcentral.com, "Moving photos to usb" (forum
+  thread — generic OTG adapter + file manager; says
+  nothing about DT Research, or about a tablet at all).
+  DT Research specifics verified from live sources this run:
+  DA323EP (Android 13, GMS-certified, 13.3-inch TFT, Qualcomm
+  8-core, USB 3.0 port, back camera optional with no
+  megapixel count stated, hot-swappable batteries, IP65,
+  MIL-STD-810H, optional 4G LTE, announced April 2026 for
+  availability Q2 2026); DA381ND (Android 13, Qualcomm 8-core
+  1.9–2.7 GHz, 12GB RAM, 256GB flash, 8-inch 1400x720 1000
+  nits, 5 MP front and 13 MP back camera, 1 x latest
+  USB/charging, optional 24-pin Fischer MiniMax connector,
+  hot-swappable battery, IP65, MIL-STD-810H); DA361ND
+  (Android 13, Qualcomm 8-core 1.9–2.7 GHz, 12GB RAM, 256GB
+  flash, 6-inch 850 nits, 1 x latest USB/charging, USB 3.0
+  port for peripherals including data storage, optional
+  Fischer MiniMax connector, hot-swappable battery, IP65,
+  MIL-STD-810H; no camera stated); DT361ND / DT381ND
+  (Android 13 military tactical tablets, Qualcomm 6490,
+  customer-specified connectors including USB, night vision
+  displays, IP65, MIL-STD-810H, MIL-STD-461G; no camera
+  stated); DA573LF (17.3-inch medical-cart computer, Android
+  14, Qualcomm octa-core; no USB port, camera, or Google Play
+  statement found). No source found labels any DT Research
+  Android USB port OTG — the drive mounting is the test on
+  all covered models — and no source found even states the
+  DT361ND, the DT381ND or the DA573LF's USB ports by type.
+  No source found states a camera megapixel count for the
+  DA323EP or any camera for the DA361ND, the DT361ND or the
+  DT381ND. No source found states whether the DA361ND, the
+  DA381ND, the DT361ND, the DT381ND or the DA573LF ship
+  Google Play, while only the DA323EP is GMS certified. No
+  source found states microSD support for any covered model.
+  CORRECTION: the WL-121 fallback named the DT311 as a DT
+  Research Android tablet — wrong. Live evidence this run
+  shows the DT311 runs Microsoft Windows 10 IoT Enterprise,
+  as do the DT301, the DT313, the DT312RP (Windows 11), the
+  DT323RP, the DT323PA, the DT362DN and the DT382DN — none
+  of them can run SnapDisk. The DT361DM and the DT361SC ship
+  Windows 10 IoT Enterprise or Android 10/12 by
+  configuration, and the DT573 and the DT556 offer Android 13
+  as one configuration among three, so neither is covered as
+  an Android tablet. DT Research has no tablet-to-USB backup
+  tool of its own. Rivals re-verified this run: VaultDrive
+  (free up to 200 files or 2 GB, Pro $19.99 once, Android 8+
+  per its own site, though AppBrain lists Android 12.1+),
+  Photos to USB: OTG Backup (free with ads). Google free
+  storage is 5 GB by default since May 2026, up to 15 GB
+  with a verified phone number; Storage saver compresses
+  photos to 16 MP max, videos to 1080p.
+  Fallback for WL-123: Elo — no Elo article exists in docs/
+  yet and no searches.md row (enterprise Android handhelds,
+  M50 Android 10 GMS, 8 MP rear camera; M51 successor).
+
+
 ## WL-121 — Back up MobileDemand photos to USB article, 89th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
