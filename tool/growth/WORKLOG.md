@@ -4,7 +4,7 @@
 
 - Owner: SEO/GEO lane lead. State: DONE.
   Article PR #253 PENDING MERGE (head 7b2e10e, CI run 44640204775
-  pending; merge receipt PENDING — supervisor fills pre-merge).
+  success; merge receipt PENDING — supervisor fills pre-merge).
   Query 109 verified by the lead from live evidence (no top
   result is a Meizu-specific phone-to-USB photo-backup
   guide); top results are six generic Android guides (Dr.Fone,
