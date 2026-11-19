@@ -1,5 +1,72 @@
 # SnapDisk — Work Log
 
+## WL-127 — Back up Archos photos to USB article, 95th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #222 OPEN (head 5f5a097, CI run 44539130458
+  success, mergeable MERGEABLE, merge state CLEAN);
+  supervisor merges after readback — no merge receipt yet.
+  Query 94 verified by the lead from live evidence (no top
+  result is an Archos-specific phone-to-USB photo-backup
+  guide); lead-verified by readback (feed 95 items incl.
+  Archos, sitemap incl. URL, title correct, Query 94 row
+  present, only docs/ + tool/growth changed).
+  New docs/archos-photos-to-usb.html ("Back up Archos photos
+  to a USB drive (no computer)"), following the WL-54–WL-126
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot, with an honest caption: the 50 Saphir
+  can't run that screen, the Saphir 50X, 50 Graphite and
+  55 Graphite can). Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml updated.
+  Title 36 chars, meta description 157 chars, JSON-LD
+  validated by parse; sitemap and feed XML parse. Feed now
+  counts 95 items; blog JSON-LD counts 95 BlogPosting entries.
+  searches.md Query 94 row present ("back up Archos photos to
+  USB drive without computer" — HOW-TO GAP): top results are
+  an ARCHOS AV 700 media-player manual, two generic
+  Android-to-USB guides, an ARCHOS 70 tablet doc, and a generic
+  thumb-drive guide, none is a guide for an Archos phone.
+  Archos specifics verified live: three Archos phones clear
+  SnapDisk's Android 7.0 minimum — the Saphir 50X, the 50
+  Graphite and the 55 Graphite all run Android 7.0 — and all
+  three list USB OTG, so the one-tap route exists on those
+  three; the 50 Saphir runs Android 6.0, below the minimum,
+  and no Android 7.0 update was ever announced, so it cannot
+  run SnapDisk at all, and none of the four can run VaultDrive
+  either (Android 8+ per its own site; AppBrain lists 12.1+);
+  OTG is confirmed on all four covered phones — Notebookcheck
+  confirms the 50 Saphir's micro-USB 2.0 port hosts drives —
+  but the Graphites' connector is disputed (microUSB 2.0 per
+  eIMEI24, Type-C per MobileGizmo and the launch coverage);
+  the 101 Saphir tablet's OTG is disputed (gadgets360 No,
+  gadgetsnow Yes); newer does not mean OTG — the Oxygen 63
+  (Android 9.0) lists only Charging and Mass storage, and the
+  Access 50S (Android 8.1 Go) lists USB OTG No; 50 Saphir
+  Android 6.0, 1.5 GHz quad-core MT6737, 2 GB RAM, 16 GB
+  storage, microSD up to 128 GB, 13 MP rear + 5 MP front,
+  5000 mAh, IP68, announced August 31, 2016, released
+  February 2017, €199 at launch (€230 for Notebookcheck's test
+  model); Saphir 50X Android 7.0, MT6737VWT (1.3 GHz per
+  eIMEI24, 1.5 GHz per MobileGizmo), 2 GB RAM, 16 GB storage,
+  microSD up to 128 GB (one source says 64 GB), 13 MP rear +
+  5 MP front, 4000 mAh, OTG cable in the box, announced April
+  2018; 50 Graphite Android 7.0, 1.5 GHz MT6737, 1 GB RAM,
+  16 GB storage, microSD up to 128 GB, 13 MP + 2 MP dual rear
+  + 5 MP front, 2400 mAh (gadgets360 lists 3000 mAh),
+  announced February 2017, released June 2017, €130;
+  55 Graphite Android 7.0, 1.5 GHz MT6737, 2 GB RAM, 16 GB
+  storage, microSD up to 128 GB, 13 MP + 2 MP dual rear +
+  5 MP front, 3000 mAh, 5.5-inch display 720x1280 per
+  gadgets360 and Full HD 1920x1080 per the launch coverage;
+  101 Saphir tablet Android 7.0, MT8163, 1 GB RAM, 16 GB
+  storage, microSD up to 128 GB, 6000 mAh, launched February
+  2017, no camera stated in any source found; Archos has no
+  phone-to-USB backup tool of its own; no source found names
+  the stock file manager on an Archos phone.
+  Fallback for WL-128: Sigma Mobile — no Sigma Mobile article
+  exists in docs/ yet and no searches.md row.
+
 ## WL-126 — Back up Casio photos to USB article, 94th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
