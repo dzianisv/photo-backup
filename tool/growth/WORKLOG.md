@@ -1,5 +1,134 @@
 # SnapDisk — Work Log
 
+## WL-140 — Back up Elephone photos to USB article, 108th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #249 PENDING (head bb2f1ea, CI run 44621107985
+  success; merge commit PENDING, merged PENDING).
+  Query 107 verified by the lead from live evidence (no top
+  result is an Elephone-specific phone-to-USB photo-backup
+  guide); top results are five iPhone guides (ubackup, dblabs,
+  a YouTube iPhone video, SanDisk, umatechnology) — none mentions
+  Elephone; the first Android result sits sixth (Dr.Fone generic
+  guide); real gap stands.
+  New docs/elephone-photos-to-usb.html ("Back up Elephone photos
+  to a USB drive (no computer)"), following the
+  WL-54–WL-139 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: the one-tap route exists on
+  four covered Elephone phones only — the U Pro, P11, P11 3D
+  and U2; four more clear Android 7.0 but their OTG is
+  half-stated or unstated, so on those the drive mounting is
+  the test; the seven 2015–2016 models below Android 7.0
+  cannot install SnapDisk at all, so on those the computer
+  copy is the route).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 38 chars, meta
+  description 159 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 108 items; blog JSON-LD
+  counts 108 BlogPosting entries. searches.md Query 107 row
+  present ("back up Elephone photos to USB drive without
+  computer" — HOW-TO GAP): top results are five iPhone guides,
+  none is a guide for an Elephone phone.
+  Elephone specifics verified live: the one-tap route exists on
+  four phones only — the U Pro, P11, P11 3D and U2 clear Android
+  7.0 and list USB OTG; four more clear Android 7.0 but their OTG
+  is half-stated or unstated — the U (techreviewer says the USB-C
+  socket has OTG support, wemobiles lists OTG support as Not
+  Available) and the P8 3D (phonecorridor lists USB OTG,
+  naijatechguide lists only MicroUSB 2.0), and the P8 and P8 Max
+  (no source states OTG for either; the OTG Yes listings belong
+  to the 2014 P8) — so on those four SnapDisk installs but the
+  one-tap route is unproven until a drive mounts; seven run below
+  Android 7.0 and cannot run SnapDisk at all — the P3000S and
+  P6000 on 4.4, the P7000 on 4.4 or 5.0, the P8000 on 5.0 or 5.1,
+  and the P9000, P9000 Lite and P20 on 6.0. Eight take USB
+  Type-C, so a USB-C drive plugs straight into those eight; the
+  other seven take micro-USB. Fourteen take a microSD card, so
+  the card-reader route works on fourteen; no source states a card
+  slot for the P20 at all.
+  Conflicts between sources, all named in the article: the
+  P3000S's chipset is two numbers — MT6592 per XDA, MT6752 per
+  findpare — and its RAM is two numbers — 2 GB per XDA and
+  findpare, 3 GB per advertentiex; the P6000's Android is two
+  numbers — 4.4.4 per androidauthority and gizchina, 5.0 per
+  phonesdata, the promised over-the-air update; the P7000's
+  Android is two numbers — 4.4 KitKat upgradable to 5.0 per
+  ibtimes, 5.0 out of the box per phonearena; the P8000's Android
+  is two numbers — 5.0 per ibtimes, 5.1 per androidheadlines and
+  UL benchmarks — and its battery is two numbers — 4165 mAh per
+  ibtimes and androidheadlines, 4200 mAh per phonearena; the
+  P9000's Android is two numbers — 6.0 per most sources, 6.0 and
+  7.0 per devicesfaq — and its microSD ceiling is two numbers —
+  up to 256 GB per gizchina and techadvisor, up to 128 GB per
+  techbloat — and its rear camera is two numbers — a 21 MP camera
+  promised in the pre-launch announcement per gizchina, a 13 MP
+  Sony IMX258 in the shipped phone per gizchina's review; the
+  P9000 Lite's storage is two numbers — 32 GB in the shipped
+  phone, 16 GB in the pre-launch announcement per gizchina — and
+  its OTG failed in a hands-on test — an XDA reviewer could not
+  read OTG devices on the Lite with USB-C adapters; the P20's
+  Android is 6.0 only as a promise per gizchina's announcement
+  piece, and no source found states a microSD slot for it at all;
+  the P8's RAM is two numbers — 6 GB per most sources, 4 GB per
+  loginby, with phonesdata listing both a 4 GB and a 6 GB model —
+  and no source states OTG for the 2017 P8 at all; the P8 3D's own
+  page contradicts itself — phonecorridor's key specs say Android
+  7.0, a 13 MP + 0.3 MP rear camera with a 16 MP front camera, a
+  4050 mAh battery, a 5.5-inch display and up to 128 GB, while the
+  full-spec table on the same page says Android 4.4.2 KitKat, a
+  13 MP rear camera with a 5 MP front camera, a 2800 mAh battery,
+  a 5.75-inch display and up to 64 GB — the table is copied from
+  the 2014 P8, so the key specs are used here and the table is
+  not; the P8 Max's battery is two numbers — 5000 mAh in
+  naijatechguide's text, 5060 mAh in its specs table; the P11's
+  Android is two numbers — 8.0 per most sources, 8.1 per
+  unite4buy — and its storage is two numbers — 128 GB per
+  naijatechgist and smartprix, 64 GB per unite4buy — and its
+  microSD ceiling is two numbers — up to 256 GB per naijatechgist
+  and philnews, up to 512 GB per smartprix — and its RAM is two
+  numbers — 4 GB per most sources, 3 GB in naijatechgist's
+  key-features list; the P11 3D's storage is two numbers — 64 GB
+  per phonecorridor, 128 GB per findpare — and its USB port is two
+  states — USB Type-C per phonecorridor, no USB Type-C per
+  findpare — and its rear camera is two numbers — 16 MP + 2 MP
+  per findpare, 13 MP + 2 MP in droidafrica's text against 16 MP +
+  2 MP in its own table; the U's Android is two numbers — 7.1 per
+  gizmochina, smartprix and philnews, 8.0 per wemobiles — and its
+  OTG is half-stated — techreviewer says the USB-C socket has OTG
+  support, wemobiles lists OTG support as Not Available — and its
+  microSD ceiling is two numbers — up to 128 GB per gizmochina
+  and smartprix, up to 1 TB per phonearena; the U Pro's microSD
+  ceiling is one number with no second source — up to 1 TB per
+  phonearena, while UL benchmarks lists microSD support with no
+  ceiling; the U2's chipset is two numbers — Helio P70 per
+  smartprix, Helio P60 per wovow — and its battery is two numbers
+  — 3250 mAh per smartprix and whatmobile, 4000 mAh per wovow —
+  and its rear camera is two numbers — 16 MP + 5 MP + 2 MP per
+  smartprix, 12 MP + 5 MP + 5 MP per wovow. A second, older phone
+  also called Elephone P8 exists — a 2014 phone on Android 4.1
+  with a MediaTek MT6592 — whose OTG Yes listings on findpare and
+  phonesdata do not apply to the 2017 P8, so neither listing is
+  used as a source here.
+  VaultDrive needs Android 8 or later per its own site, so
+  four of the fifteen can run it — the P11, P11 3D, U Pro and
+  U2 — and AppBrain lists 12.1 or later, which no covered
+  Elephone phone clears, since the newest covered model runs
+  Android 9. FotoSafe needs Android 9 or later, so two of the
+  fifteen clear it — the P11 3D and U2. Elephone has no
+  phone-to-USB backup tool of its own — no Elephone-specific
+  backup advice turned up in any source beyond a computer copy,
+  Google Drive, or Google Photos; the devicesfaq backup FAQ names
+  the computer copy as the most economical method, and names the
+  file manager on an Elephone phone as Files, or Files by Google.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-140, 108th how-to):
+  docs/elephone-photos-to-usb.html.
+  Fallback for WL-141: Hisense — no Hisense article exists
+  in docs/ yet and no searches.md row (Hisense, the Chinese
+  phone brand; C and A series).
+
 ## WL-139 — Back up Coolpad photos to USB article, 107th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
