@@ -1,10 +1,26 @@
 # SnapDisk — Work Log
 
-## WL-116 — Back up Bartec photos to USB article, 84th how-to (DRAFT — article PR open)
+## WL-116 — Back up Bartec photos to USB article, 84th how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: DRAFT — article PR #200 open
-  (head e700d43), supervisor merges after readback. CI run
-  44511075328 success on the article commit (build pass).
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #200 MERGED (merge ee73866, 2026-11-19T11:07:28Z, CI run
+  44511671861 success on rebased head de0577c); post-merge main runs
+  Android PR 44511941243 success + pages 44511940229 success. Live
+  fetch: bartec-photos-to-usb.html 200 (correct title, fresh crawl
+  11:08 UTC), feed.xml 84 items incl. Bartec. Query 83 re-scored by
+  supervisor from a fresh live re-search: same 7 results as the lead
+  (YouTube, FotoSafe, Dr.Fone, Android Central forum, Pixoneye, Photo
+  Backup Stick DC, Photos to USB) — all generic, none mentions
+  Bartec; verdict stands. Rebase note: PR #200 was CONFLICTING
+  after WL-115 row PR #199 merged; supervisor rebased wl-116-bartec
+  onto d827661, resolved the WORKLOG.md conflict (WL-116 row on top,
+  WL-115 DONE row intact — including removing a stale duplicate
+  WL-115 DRAFT header left by the rebase), force-pushed with lease.
+  Fallback correction: the row's Bullitt fallback is REJECTED as a
+  duplicate — Bullitt Group's phones are already covered by WL-72
+  (CAT S-series), WL-44 (Motorola Defy) and WL-89 (Land Rover
+  Explore); WL-117 is iData instead (no iData article/row; rugged
+  Android data terminals).
   New docs/bartec-photos-to-usb.html ("Back up
   Bartec photos to a USB drive (no computer)"),
   following the WL-54–WL-115 article template exactly
@@ -105,9 +121,11 @@
   Mobile Services; no source found names the stock file
   manager on a Bartec device. Bartec has no phone-to-USB
   photo backup tool of its own. Fallback for WL-117: Bullitt
-  — no Bullitt article exists in docs/ yet and no
-  searches.md row (rugged-phone maker behind the CAT
-  S-series and Land Rover Explore phones).
+  — REJECTED by supervisor as a duplicate (Bullitt Group's phones
+  are already covered by WL-72 CAT, WL-44 Motorola Defy and WL-89
+  Land Rover Explore); WL-117 is iData instead (no iData article
+  in docs/ yet and no searches.md row; rugged Android data
+  terminals, K-series).
 
 ## WL-115 — Back up Ecom Smart-Ex photos to USB article, 83rd how-to (DONE)
 
