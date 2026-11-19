@@ -1,5 +1,50 @@
 # SnapDisk — Work Log
 
+## WL-123 — Back up Elo photos to USB article, 91st how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #214 MERGED (merge 5ea3d61, 2026-11-19T12:42:38Z, CI run
+  44525302357 success on head a5afd5d); post-merge main runs Android PR
+  44526416911 success + pages 44526416640 success. Live fetch:
+  elo-photos-to-usb.html loads (correct title, browser read 12:43 UTC),
+  feed.xml 91 items incl. Elo. Query 90 re-scored by supervisor from a
+  fresh live re-search: same 6 results as the lead (drfone, YouTube OTG,
+  pixoneye, Android Central forum, photocleanse, ubackup) — none mentions
+  Elo; real gap stands. Recovery dispatch: the previous WL-123 lead
+  (run b640b1ac) was interrupted after rebasing only — no
+  branch, PR, or worktree survived; this run started fresh
+  from main 2244a7b. Query 90 verified by the lead from live
+  evidence (no top result mentions Elo); lead-verified by
+  readback (feed 91 items incl. Elo, sitemap incl. URL, title
+  correct, Query 90 row present, only docs/ + tool/growth
+  changed).
+  New docs/elo-photos-to-usb.html ("Back up Elo photos to a
+  USB drive (no computer)"), following the WL-54–WL-122
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot). Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt, feed.xml updated.
+  Title 33 chars, meta description 128 chars, JSON-LD
+  validated by parse; sitemap and feed XML parse. Feed now
+  counts 91 items; blog JSON-LD counts 91 BlogPosting entries.
+  searches.md Query 90 row present ("back up Elo photos to USB
+  drive without computer" — HOW-TO GAP): top results are four
+  generic Android guides and two iPhone guides, none mentions
+  Elo. Elo specifics verified live: M50 Android 10 GMS, 8 MP
+  rear camera, USB-C for display/charging/data, microSD up to
+  256 GB; M51 Android 14 GMS, 13 MP rear + 8 MP front, USB-C,
+  microSD up to 1 TB; no source found labels either USB-C port
+  OTG; China-model M50 is AOSP (sideload APK); M50C difference
+  unstated in sources found; "M51" collides with Samsung
+  Galaxy M51; M50 end-of-life, succeeded by M51; EloView is
+  device management, not a photo backup; no source found names
+  the stock file manager on an Elo device. VaultDrive floor
+  note: AppBrain lists Android 12.1+, which the M50
+  (Android 10) does not clear.
+  Fallback for WL-124: Fujitsu — no Fujitsu article exists in
+  docs/ yet and no searches.md row (enterprise Android
+  handhelds/tablets, Arrows and Stylistic lines).
+
 ## WL-122 — Back up DT Research photos to USB article, 90th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
