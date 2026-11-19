@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up M3 Mobile photos to a USB drive</title>
+<meta name="description" content="Back up M3 Mobile UL20 photos to a USB drive without a computer: plug in, tap Backup — SnapDisk copies oldest-first, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/m3mobile-photos-to-usb.html">
+<meta property="og:title" content="Back up M3 Mobile photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up M3 Mobile UL20 photos to a USB drive without a computer: plug in, tap Backup — SnapDisk copies oldest-first, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/m3mobile-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/m3mobile-photos-to-usb.html#article",
+      "headline": "Back up M3 Mobile photos to a USB drive (no computer)",
+      "description": "Back up M3 Mobile UL20 photos to a USB drive without a computer: plug in, tap Backup — SnapDisk copies oldest-first, no upload.",
+      "datePublished": "2026-11-18",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/m3mobile-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/m3mobile-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up M3 Mobile UL20, UL20X, UL20W and UL20F photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On the models that can run SnapDisk and host a drive, yes. The UL20X, the UL20W and the UL20F list a USB 2.0 Host (A type) port in M3 Mobile's 2021 datasheet, alongside a USB 2.0 Client (C type) port, so a standard USB-A flash drive plugs straight into the host port with no adapter; all three run Android 8.1, 9.0 GMS or 10 GMS, which clears SnapDisk's Android 7.0 minimum. The base UL20's own spec sheet names only a USB-C port via snap-on or cradle and no host port, so plug a drive in and check Settings > Storage on that model before relying on it. No source found assigns one Android version to one variant, and no source found uses the word OTG for the UL20 at all, so check Settings > About phone if you are unsure which version your unit runs. M3 Mobile has no phone-to-USB backup tool of its own. The stock route is a file manager: connect the drive, open the file manager, pick the photos in DCIM/Camera, and Copy to the drive. On a model that hosts drives and runs SnapDisk, SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/m3mobile-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up M3 Mobile photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/m3mobile-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up M3 Mobile photos to a USB drive (no computer)</h1>
+  <p class="dek">The UL20, UL20X, UL20W and UL20F are M3 Mobile's UL20 series of rugged enterprise Android handhelds (UL20; UL20X; UL20W; UL20F), and M3 Mobile has no phone-to-USB backup tool of its own: no M3 Mobile-specific file advice pointing at a USB drive turned up at all. Three honest caveats up front: USB host is confirmed in the 2021 datasheet only for the UL20X, the UL20W and the UL20F — the datasheet lists a USB 2.0 Host (A type) port alongside a USB 2.0 Client (C type) port — while the base UL20's own spec sheet names only a USB-C port via snap-on or cradle and no host port, so plug a drive in and check Settings &gt; Storage on the base UL20 before relying on it; no source found assigns one Android version to one variant — the datasheet gives Android 8.1, 9.0 GMS and 10 GMS for the series, the original UL20 spec sheet says Android 8.1, a retailer lists the UL20 on Android 10, and a university listing puts the UL20X on Android 9.0 GMS — so check Settings &gt; About phone if you are unsure which version your unit runs; and no source found uses the word OTG for the UL20 at all, so this article says host, not OTG, throughout. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 18, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On the M3 Mobile models that can run SnapDisk and host a drive — the UL20X, the UL20W and the UL20F list a USB 2.0 Host (A type) port in M3 Mobile's 2021 datasheet, so a standard USB-A flash drive plugs straight into the host port with no adapter, and all three run Android 8.1, 9.0 GMS or 10 GMS, which clears SnapDisk's Android 7.0 minimum — plug the drive in, then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: the base UL20's own spec sheet names only a USB-C port via snap-on or cradle and no host port, so the drive mounting is the test on that model; and no source found assigns one Android version to one variant, so check Settings &gt; About phone if you are unsure. A file manager works — the generic guides' route is an OTG connection with the built-in file manager — but the direct route is manual select-copy-paste with no progress detail, no resume, and no verification; M3 Mobile's own file advice works too, but there is none pointing at a USB drive — no M3 Mobile-specific file advice turned up at all. Four rival apps do exist — Photos to USB: OTG Backup copies the whole gallery to a pen drive in one tap, free with ads, a one-time purchase removing the ads; VaultDrive copies photos, videos, and files straight to a USB drive with no computer, free for up to 200 files or 2 GB per backup, Pro $19.99 once; Photo Backup Stick DC backs up pictures and videos straight to its own OTG drive, free, but it only works with genuine Photo Backup Stick drives; FotoSafe backs up Android photos to a USB drive through the system picker, and needs Android 9 or later with USB host or OTG support — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, works with any drive, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 18, 2026, no top search result for this query is an M3 Mobile-specific phone-to-USB guide at all: not one of the top results even mentions M3 Mobile — they are generic Android OTG guides and a flash-drive product page.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up M3 Mobile photos to USB drive without computer" and there is no M3 Mobile-specific phone-to-USB guide in the top results at all — not one result even mentions M3 Mobile. The results are generic Android OTG guides and a flash-drive product page, in different packaging:</p>
+  <ul>
+    <li><strong>mtech.co.ke, "SanDisk Ultra Dual Drive m3.0 32GB - Micro-USB OTG Flash Drive"</strong> (<a href="https://mtech.co.ke/catalogue/sandisk-ultra-dual-drive-m3-0-32gb-micro-usb-and-usb-3-0-flash-drive-sddd3-032g-g46/">SanDisk Ultra Dual Drive m3.0 32GB</a>) — a two-ended flash drive: a micro-USB plug for Android phones with OTG and a USB 3.0 plug for computers, with the SanDisk Memory Zone app for copying photos to the drive. A product page, not a guide — and "m3.0" is the drive's model name, not M3 Mobile; it says nothing about an M3 Mobile handheld, and the micro-USB end does not fit the UL20's USB-C client port or its USB-A host port.</li>
+    <li><strong>YouTube, "How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)"</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos</a>) — connect a USB drive with an OTG adapter and move photos with the phone's built-in file manager, no computer or internet needed. Generic Android, and a manual guide — and it says nothing about an M3 Mobile handheld.</li>
+    <li><strong>drfone.wondershare.com, "4 Practical Ways to Transfer Photos from Android to USB Flash Drive"</strong> (<a href="http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html">4 Practical Ways to Transfer Photos from Android to USB Flash Drive</a>) — transfer directly with an OTG adapter, through a PC as a middleman in File Transfer mode, wirelessly through Google Drive or AirDroid, or in bulk with Wondershare Dr.Fone on Windows or Mac. Generic Android, and a manual guide — and it says nothing about an M3 Mobile handheld, and its bulk-export route needs a computer.</li>
+    <li><strong>askfilo.com, "how to transfer pictures from an android phone to a flashdrive"</strong> (<a href="https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432">how to transfer pictures from an android phone to a flashdrive</a>) — plug a USB drive in with an OTG adapter, open the file manager, find DCIM/Camera, and copy; or use a PC or Mac as a middleman. Generic Android, and a manual guide — and it says nothing about an M3 Mobile handheld.</li>
+    <li><strong>YouTube, "How to Transfer Photos, Videos and any Files from Android Phone to USB Pendrive (USB Drive Tutorial)"</strong> (<a href="https://www.youtube.com/watch?v=ch1evyu5PPM">How to Transfer Photos, Videos and any Files from Android Phone to USB Pendrive</a>) — check OTG compatibility, connect the drive with an OTG adapter, open the file manager, and copy or move files to the drive. Generic Android, and a manual guide — and it says nothing about an M3 Mobile handheld.</li>
+    <li><strong>groovypost.com, "How to Transfer Photos from Android to a USB Drive"</strong> (<a href="https://www.groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/">How to Transfer Photos from Android to a USB Drive</a>) — plug the drive into a PC, connect the phone to the PC, and drag and drop DCIM onto the drive; or use a USB-C dual drive plugged straight into the phone. Generic Android, and a manual guide — and it says nothing about an M3 Mobile handheld, and its first method needs a PC in between.</li>
+    <li><strong>UL20 spec sheet v1.3, M3 Mobile via Digicode</strong> (<a href="https://files.digicode.hu/m3-mobile-ul20-adatgyujto-en.pdf">M3 UL20 Full Touch Ultra Rugged Computer</a>) — the UL20: Android 8.1, a 2.2 GHz Qualcomm Snapdragon 626 octa-core processor, 4 GB RAM and 32 GB flash, a 5.0-inch FHD (1920 x 1080) display, a 16 MP rear camera with LED flash, a 6,700 mAh hot-swap battery, a microSD slot up to 128 GB, and "Interface USB: USB C type via Snap on, Cradle". M3 Mobile's own spec sheet, not a guide — and the confirmation that the UL20 runs Android 8.1 with a 16 MP camera and a 5-inch FHD display — but it names no USB host port and no OTG support on the base UL20.</li>
+    <li><strong>UL20X / UL20F / UL20W datasheet, M3 Mobile via Stocovia (rev. 17/02/2021)</strong> (<a href="https://www.stocovia-id.com/img/produits/Fiche-descriptive_UL20_EN.pdf">M3 UL20X | UL20F | UL20W</a>) — the series: Android 8.1 / 9.0 GMS / 10 GMS, a 16.0 MP autofocus rear camera, a 5-inch FHD (1920 x 1080) display, IP67 sealing, a 2.0 m drop test, a 6,700 mAh battery with fast charging and hot swap, and "INTERFACE: USB 2.0 Client (C type), USB 2.0 Host (A type)". M3 Mobile's own datasheet, not a guide — and the confirmation that the UL20X, the UL20W and the UL20F list a USB 2.0 Host (A type) port, run Android 8.1, 9.0 GMS or 10 GMS, and carry a 16 MP camera with IP67 sealing — but it gives the Android versions as a range for the series, not one version per variant, and the UL20W is the lighter variant in its table (2 GB RAM, 16 GB ROM, a 2.0 GHz processor) against 4 GB RAM, 64 GB ROM and a 2.2 GHz processor on the UL20X and the UL20F.</li>
+    <li><strong>UL20, Barcotec</strong> (<a href="https://www.barcotec.at/en/mobile-devices/mobile-computers/keypad/m3-mobile-ul20?pdf=true">M3 Mobile UL20</a>) — the UL20: Android 10, a 5-inch Full HD screen, IP67 protection, drop-proof up to 2 m, 4 GB RAM and 32 (64 GB) memory, a 6,700 mAh hot-swap battery, and a long-range scanner reading up to 21.4 m. A distributor listing, not a guide — and the confirmation that the UL20 is listed on Android 10 with IP67 and a 2 m drop rating — but note the dispute: the original spec sheet says Android 8.1, so the version is Android 8.1 in the original sheet and Android 10 in this listing; both clear SnapDisk's Android 7.0 minimum either way.</li>
+    <li><strong>UL20X, Boston University MET listing</strong> (<a href="https://met-cybersec.bu.edu/blog/index.html?id=18272144856">M3 Mobile UL20X</a>) — the UL20X: Android 9.0 with Google Mobile Services, a 16 MP camera, a 5-inch 1920 x 1080 display, a 2.2 GHz Qualcomm octa-core processor, 4 GB RAM and 32 GB flash, and a 6,700 mAh battery. A university equipment listing, not a guide — and the confirmation that the UL20X is listed on Android 9.0 GMS with a 16 MP camera — but note the dispute: the datasheet gives the series as Android 8.1, 9.0 GMS or 10 GMS without assigning one version to one variant, so this listing is one data point for the UL20X, not a per-variant assignment.</li>
+    <li><strong>Cloud routes</strong> — Google Photos syncs your gallery to Google's servers, Google Drive backs your data up to Google's cloud with 15 GB free, and Google backup restores your data to a new phone from Google's cloud, not to a drive you hold; Google Photos' "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Neither route gives you a folder of plain photo files on a USB drive.</li>
+  </ul>
+  <p>None of them is an M3 Mobile-specific phone-to-USB guide at all, and none of them offers an automated M3 Mobile photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 18, 2026 — for the M3 Mobile models that can run SnapDisk at all.</p>
+
+  <h2>What you need</h2>
+  <p>An M3 Mobile handheld that can run SnapDisk and host a USB drive — in practice, the UL20X, the UL20W or the UL20F, which list a USB 2.0 Host (A type) port in M3 Mobile's 2021 datasheet alongside a USB 2.0 Client (C type) port — with a standard USB-A flash drive plugging straight into the host port and enough space on the drive for the photos you want to keep. Three M3 Mobile specifics: first, every model listed clears the Android 7.0 minimum — the series runs Android 8.1, 9.0 GMS or 10 GMS, the original UL20 spec sheet says Android 8.1, a retailer lists the UL20 on Android 10, and a university listing puts the UL20X on Android 9.0 GMS — but no source found assigns one Android version to one variant, so check Settings &gt; About phone if you are unsure which version your unit runs. Second, USB host is confirmed in the datasheet only for the UL20X, the UL20W and the UL20F — the base UL20's own spec sheet names only a USB-C port via snap-on or cradle and no host port at all — so plug a drive in and check Settings &gt; Storage on the base UL20 before relying on it; if the drive appears, the device hosts drives and the rest of this method works; if it never appears, the device does not host drives and Method 4 is the route. Third, no source found uses the word OTG for the UL20 at all — the datasheet says USB 2.0 Host (A type), which is host mode by another name, but this article says host, not OTG, because no source found labels it OTG. M3 Mobile has no phone-to-USB backup tool of its own — no M3 Mobile-specific file advice pointing at a USB drive turned up at all; the stock photo backup is Google Photos; M3 Mobile camera photos live in DCIM/Camera, as on any Android phone. Every model takes a microSD card up to 128 GB, so a card is an option, and it still stays in the device and opening it anywhere else needs a card reader, while a USB drive plugs into any computer as it is. SnapDisk installs from the v0.1.2 APK on the GitHub release page today and from Play once the listing is live. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Check your model can run SnapDisk.</strong> The UL20X, the UL20W and the UL20F run Android 8.1, 9.0 GMS or 10 GMS and the base UL20 runs Android 8.1 in its original spec sheet (Android 10 in one retailer listing) — all clear the Android 7.0 minimum, so SnapDisk installs on all four. No UL20 model in the sources found runs below Android 7.0, so there is no model in this series that cannot run SnapDisk on version grounds — but no source found assigns one Android version to one variant, so check Settings &gt; About phone if you are unsure which version your unit runs.</li>
+    <li><strong>Plug in the USB drive.</strong> On the UL20X, the UL20W and the UL20F a standard USB-A flash drive plugs straight into the USB 2.0 Host (A type) port — no adapter is needed at all. The USB-C client port is for charging and sync via snap-on or cradle, not for the drive. On the base UL20 no host port is listed in its spec sheet, so plug a drive in and check Settings &gt; Storage: if the drive appears, the device hosts drives and the rest of this method works; if it never appears, the device does not host drives and Method 4 is the route. It mounts on plug-in on most Android devices with USB host support — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage for the drive.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — M3 Mobile camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the phone normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the phone to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your phone.</p>
+
+  <h2>Method 2: a file manager (the stock route, no app needed)</h2>
+  <p>A file manager can copy your photos to the USB drive — the generic guides' route is an OTG connection with the built-in file manager, and it is the manual route for external storage: 1. Plug in the USB drive — on the UL20X, the UL20W and the UL20F a standard USB-A flash drive plugs straight into the USB 2.0 Host (A type) port, no adapter needed. A notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage for the drive. On the base UL20, if the drive never appears, the device does not host drives and Method 4 is the route. 2. Open the file manager and confirm the USB drive shows up under storage devices. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until the file manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option. One note: no source found names the stock file manager on the UL20 — the steps above use the built-in file manager, whatever it is called on your unit.</p>
+
+  <h2>Method 3: M3 Mobile's own tools (Google Photos, Google Drive, or a microSD card — not phone-to-USB)</h2>
+  <p>If you want M3 Mobile's own route, know what each tool actually does — there is no M3 Mobile backup page pointing at a USB drive at all, and none of the stock tools writes your photos as plain files to a USB drive automatically. <strong>1. Google Photos</strong> is Google's own photo backup app, and it is the stock photo backup on GMS Android handhelds like the UL20: it automatically backs up photos to your Google account. It is a real backup — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead. <strong>2. Google Drive</strong> is the cloud backup Android names by default — "on Android devices the default built-in service is Google Drive. With Google Drive you have 15Gb free" — it backs your data up to Google's cloud. It is a real backup — but it is a cloud backup, not a USB copy, and Google accounts only offer 15 GB of free storage. <strong>3. Google backup</strong> is what Android itself names: personal settings back up to Google's servers with a Google account, and are restored to a new phone when you sign in with that account. It is a real backup — but it backs up settings, not a folder of photo files on a drive you hold. <strong>4. The "M3 Platform" MDM results</strong> are a different company — M3 Solutions Technologies of Canada, a maintenance-and-repair device-management platform — not M3 Mobile of Korea, the UL20's maker. It is a real device-management product — but it is not an M3 Mobile tool, and it does not copy your camera roll to a USB drive. <strong>5. A microSD card</strong> is the local option on every model — the UL20 series takes a card up to 128 GB. It is a real local copy — but the card stays in the device, and opening the card anywhere else needs a card reader. <strong>6. A computer copy</strong> is the other way to move files off the handheld — connect the device to a computer with a USB cable and copy DCIM from the device to the computer. It is a real backup — but it needs a PC in between, and the backup lands on the PC, not on a USB drive as plain files straight from the device. None of them is a one-tap way to copy your camera roll to a drive. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the handheld into the computer with a USB cable, tap the USB notification and choose File transfer — and drag the DCIM folder onto the USB drive. This works fine, and it is the only route above that needs a second device in between. It is also the only route that works at all on the base UL20 if no drive ever mounts on it. If the handheld and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 18, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the handheld is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>USB host is confirmed only for the UL20X, the UL20W and the UL20F.</strong> The 2021 datasheet lists a USB 2.0 Host (A type) port for those three — but the base UL20's own spec sheet names only a USB-C port via snap-on or cradle and no host port. If the drive never appears in Settings &gt; Storage on the base UL20, the device does not host drives and Method 4 is the route.</li>
+    <li><strong>No source found assigns one Android version to one variant.</strong> The datasheet gives Android 8.1, 9.0 GMS and 10 GMS for the series, the original UL20 spec sheet says Android 8.1, a retailer lists the UL20 on Android 10, and a university listing puts the UL20X on Android 9.0 GMS — all of them clear the minimum, so the version only matters against the 7.0 floor, but check Settings &gt; About phone if you are unsure which version your unit runs.</li>
+    <li><strong>No source found uses the word OTG for the UL20 at all.</strong> The datasheet says USB 2.0 Host (A type), which is host mode by another name — but no source found labels it OTG, so this article says host, not OTG, throughout. Do not buy an OTG adapter for the UL20X, the UL20W or the UL20F: a standard USB-A drive plugs straight into the host port.</li>
+    <li><strong>No source found states where the USB-A host port sits on the device.</strong> The datasheet lists the port but not its physical location, and the base spec sheet says the USB-C port is reached via snap-on or cradle — so check your unit before buying a drive or a cable that assumes a port position.</li>
+    <li><strong>No source found names the stock file manager on the UL20.</strong> Method 2 uses the built-in file manager, whatever it is called on your unit — the steps are the same, but the app name in the steps is not verified.</li>
+    <li><strong>Two Android versions differ by source.</strong> The UL20 is Android 8.1 in its original spec sheet and Android 10 in a retailer listing; the UL20X is Android 9.0 GMS in a university listing while the datasheet gives the series as 8.1, 9.0 GMS or 10 GMS without a per-variant assignment — all of them clear the minimum either way, so the version dispute changes nothing about the backup. The UL20W is the lighter variant in the datasheet's table (2 GB RAM, 16 GB ROM, a 2.0 GHz processor) against 4 GB RAM, 64 GB ROM and a 2.2 GHz processor on the UL20X and the UL20F — the table's column order is UL20X, UL20W, UL20F.</li>
+    <li><strong>No other M3 Mobile handheld model turned up in the sources found.</strong> This article covers only the four UL20 models listed — if your device is a different M3 Mobile model, check Settings &gt; About phone for its Android version and Settings &gt; Storage for drive mounting, the same two tests used here.</li>
+    <li><strong>Anything below Android 7.0 cannot run SnapDisk at all.</strong> No UL20 model in the sources found runs below Android 7.0 — but check Settings &gt; About phone if you are unsure: below Android 7.0, SnapDisk cannot install, and the computer copy in Method 4 is the route.</li>
+    <li><strong>The adapter differs by drive and by model, not by brand.</strong> The UL20X, the UL20W and the UL20F have a USB-A host port, so a standard USB-A flash drive plugs straight into them with no adapter; the USB-C client port is for charging and sync via snap-on or cradle, not for the drive. A plain USB-C charging cable is not a host connection: it connects the handheld to a computer, which is the opposite direction.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter you don't need — or the wrong one.</strong> A standard USB-A flash drive plugs straight into the UL20X, the UL20W and the UL20F — so no adapter is needed on them for a USB-A drive. The micro-USB end of a SanDisk Ultra Dual Drive m3.0 does not fit the UL20's USB-C client port or its USB-A host port — and "m3.0" is the drive's model name, not M3 Mobile.</li>
+    <li><strong>Assuming the base UL20 hosts drives because the other three models do.</strong> Three models list a USB host port in their datasheet — but the base UL20's own spec sheet names no host port, so test with a drive on your model, and use Method 4 on it if the drive never mounts.</li>
+    <li><strong>Assuming one Android version belongs to one variant.</strong> The datasheet gives Android 8.1, 9.0 GMS and 10 GMS for the series without assigning one version to one variant — check Settings &gt; About phone on your unit instead of trusting a version printed for another variant.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google Drive and Google Photos back your handheld up to Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup.</li>
+    <li><strong>Mistaking a PC tool for a phone-to-USB copy.</strong> A computer copy with a USB cable moves files to a computer — but it is a copy to a computer, and the backup lands on the PC. If the handheld and the drive are all you have, a phone-to-USB copy is the route, not a desktop copy.</li>
+    <li><strong>Mistaking a spec sheet or a datasheet for a phone-to-USB guide.</strong> The M3 Mobile spec sheet and datasheet are real M3 Mobile documents — but they only list an Android version, a processor, a camera, or a USB port type. Neither of them describes copying your camera roll straight to a USB drive from the handheld.</li>
+    <li><strong>Mistaking the "M3 Platform" MDM for an M3 Mobile tool.</strong> The M3 Platform is a real device-management product — but it belongs to M3 Solutions Technologies of Canada, not M3 Mobile of Korea, and it does not copy your camera roll to a USB drive.</li>
+    <li><strong>Mistaking a drive-locked app for a general backup.</strong> Photo Backup Stick DC is a real one-tap backup app — but it only works with genuine Photo Backup Stick OTG drives. If the drive you already own is any other brand, that app cannot use it: SnapDisk, Photos to USB, and FotoSafe work with any drive.</li>
+    <li><strong>Mistaking a microSD card copy for a USB backup.</strong> Copying DCIM to a microSD card is a real local copy — the UL20 series takes a card up to 128 GB — but the card stays in the device, and opening it anywhere else needs a card reader; a USB drive plugs into any computer as it is.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the handheld and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 18, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On an M3 Mobile handheld the cloud routes are Google Photos and Google Drive — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the handheld — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the handheld. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="gigaset-photos-to-usb.html">Back up Gigaset photos to a USB drive (no computer)</a> — Gigaset GX-series is the closest parallel: another rugged line where host support is confirmed on only some models.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

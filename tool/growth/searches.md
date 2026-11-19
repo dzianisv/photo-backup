@@ -6607,6 +6607,89 @@ demand is read off competitor install velocity instead (see
   enterprise handheld: Android 8.1/9.0/10 GMS, 16 MP camera,
   IP67, 5-inch FHD; UL20X/UL20F/UL20W variants).
 
+### 75. "back up M3 Mobile photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an M3 Mobile-specific
+  guide at all, let alone an M3 Mobile-specific automated
+  whole-library backup with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 18, 2026, live web search):
+  mtech.co.ke, "SanDisk Ultra Dual Drive m3.0 32GB - Micro-USB
+  OTG Flash Drive"
+  (mtech.co.ke/catalogue/sandisk-ultra-dual-drive-m3-0-32gb-micro-usb-and-usb-3-0-flash-drive-sddd3-032g-g46/
+  — a two-ended flash drive: a micro-USB plug for Android
+  phones with OTG and a USB 3.0 plug for computers, with the
+  SanDisk Memory Zone app for copying photos to the drive. A
+  product page, not a guide — and "m3.0" is the drive's model
+  name, not M3 Mobile; it says nothing about an M3 Mobile
+  handheld, and the micro-USB end does not fit the UL20's
+  USB-C client port or its USB-A host port); YouTube, "How to
+  Connect USB Drive to Android Phone to Move Photos & Videos
+  (Best Method)" (youtube.com/watch?v=PYcbV25CczI — OTG
+  adapter + the phone's built-in file manager, no computer
+  or internet. Generic Android, and a manual guide — and it
+  says nothing about an M3 Mobile handheld);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer directly with an OTG adapter, through a PC as a
+  middleman in File Transfer mode, wirelessly through Google
+  Drive or AirDroid, or in bulk with Wondershare Dr.Fone on
+  Windows or Mac. Generic Android, and a manual guide — and
+  it says nothing about an M3 Mobile handheld, and its
+  bulk-export route needs a computer); askfilo.com, "how to
+  transfer pictures from an android phone to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — plug a USB drive in with an OTG adapter, open the file
+  manager, find DCIM/Camera, and copy; or use a PC or Mac as
+  a middleman. Generic Android, and a manual guide — and it
+  says nothing about an M3 Mobile handheld); YouTube, "How
+  to Transfer Photos, Videos and any Files from Android
+  Phone to USB Pendrive (USB Drive Tutorial)"
+  (youtube.com/watch?v=ch1evyu5PPM — check OTG
+  compatibility, connect the drive with an OTG adapter, open
+  the file manager, and copy or move files to the drive.
+  Generic Android, and a manual guide — and it says nothing
+  about an M3 Mobile handheld); groovypost.com, "How to
+  Transfer Photos from Android to a USB Drive"
+  (groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — plug the drive into a PC, connect the phone to the PC,
+  and drag and drop DCIM onto the drive; or use a USB-C dual
+  drive plugged straight into the phone. Generic Android, and
+  a manual guide — and it says nothing about an M3 Mobile
+  handheld, and its first method needs a PC in between).
+  Google Photos is cloud, not USB. M3 Mobile specifics: no
+  M3 Mobile-specific file advice pointing at a USB drive
+  turned up at all; USB host is confirmed in the 2021
+  datasheet only for the UL20X, the UL20W and the UL20F
+  (the datasheet lists a USB 2.0 Host (A type) port
+  alongside a USB 2.0 Client (C type) port, so a standard
+  USB-A flash drive plugs straight in with no adapter);
+  the base UL20's own spec sheet names only a USB-C port
+  via snap-on or cradle and no host port, so the drive
+  mounting is the test on that model; the series runs
+  Android 8.1, 9.0 GMS or 10 GMS — every model listed
+  clears SnapDisk's Android 7.0 minimum and no UL20 model
+  in the sources found runs below it; no source found
+  assigns one Android version to one variant (the original
+  UL20 spec sheet says Android 8.1, a retailer lists the
+  UL20 on Android 10, and a university listing puts the
+  UL20X on Android 9.0 GMS); no source found uses the word
+  OTG for the UL20 at all; the UL20W is the lighter variant
+  in the datasheet's table (2 GB RAM, 16 GB ROM, a 2.0 GHz
+  processor) against 4 GB RAM, 64 GB ROM and a 2.2 GHz
+  processor on the UL20X and the UL20F; no source found
+  states where the USB-A host port sits on the device or
+  names the stock file manager; the "M3 Platform" MDM
+  results are a different company (M3 Solutions
+  Technologies, Canada), not M3 Mobile. M3 Mobile has no
+  phone-to-USB backup tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-108, 76th how-to):
+  docs/m3mobile-photos-to-usb.html.
+  Fallback for WL-109: Handheld (Nautiz) — no Handheld or
+  Nautiz article exists in docs/ yet and no searches.md row
+  (Nautiz X-series rugged enterprise Android handhelds).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
