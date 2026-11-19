@@ -6690,6 +6690,83 @@ demand is read off competitor install velocity instead (see
   Nautiz article exists in docs/ yet and no searches.md row
   (Nautiz X-series rugged enterprise Android handhelds).
 
+### 76. "back up Handheld photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Handheld-specific
+  guide at all, let alone a Handheld-specific automated
+  whole-library backup with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 18, 2026, live web search):
+  pixoneye.com, "How to Transfer Photos from Your Phone to a
+  USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage with a
+  supported file manager on Android or Photos and Files on
+  iPhone, make a trial copy first, use Copy rather than Move.
+  Generic Android and iPhone, and a manual guide — and it
+  says nothing about a Handheld handheld);
+  thegadgetians.com, "How to Transfer Files From Phone to USB
+  Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — connect a USB drive to an Android phone with an OTG
+  adapter or to an iPhone with a Lightning-to-USB adapter,
+  open the file manager, select and copy files, then paste
+  onto the USB drive. Generic Android and iPhone, and a manual
+  guide — and it says nothing about a Handheld handheld);
+  YouTube, "How to Connect USB Drive to Android Phone to Move
+  Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — OTG adapter + the
+  phone's built-in file manager, no computer or internet.
+  Generic Android, and a manual guide — and it says nothing
+  about a Handheld handheld); jesave.com, "How to Transfer
+  Photos from a Phone to a USB Flash Drive"
+  (jesave.com/how-to-transfer-photos-from-a-phone-to-a-usb-flash-drive.html
+  — plug a USB-C flash drive straight into a USB-C phone, or
+  use a dual USB-C + USB-A drive, or a USB adapter for a
+  USB-A drive; or use a computer as a middleman. Generic
+  Android and iPhone, and a manual guide — and it says nothing
+  about a Handheld handheld, and its computer method needs a
+  PC in between); dzianisv.github.io, "Back up CipherLab
+  photos to a USB drive"
+  (dzianisv.github.io/photo-backup/cipherlab-photos-to-usb.html
+  — our own earlier SnapDisk article, for CipherLab's RS/RK
+  handhelds, not Handheld's Nautiz line — and it says nothing
+  about a Handheld handheld, which is why it ranks here: the
+  query is so thin that a sibling article for another rugged
+  brand is the closest brand-specific result).
+  Google Photos is cloud, not USB. Handheld specifics: no
+  Handheld-specific file advice pointing at a USB drive
+  turned up at all; OTG or host is confirmed in the datasheets
+  on all five models that can run SnapDisk — the refreshed X2
+  lists Micro USB 2.0 with OTG and runs Android 9.0 GMS, the
+  X6 lists Type-C with OTG and runs Android 8.0 Oreo GMS, the
+  X9 lists Micro USB 2.0 High Speed / OTG and runs Android
+  7.0 Nougat GMS, the X41 lists Type-C with OTG and runs
+  Android 9.0 GMS, and the X81 has a USB A host port on its
+  bottom panel, per its Quick Start Guide, and runs Android
+  12 GMS; only the X81 takes a standard USB-A drive with no
+  adapter — the X2 and the X9 need a micro-USB OTG adapter
+  and the X6 and the X41 need a USB-C OTG adapter; the
+  original X2 runs Android 6.0, the X4 runs Android 4.2 or
+  Windows Embedded Handheld 6.5, and the X8 runs Android
+  4.2.2 or Windows Embedded Handheld 6.5.3, so none of those
+  three can run SnapDisk; the X2 is Android 6.0 in its
+  original datasheet and Android 9.0 GMS in its refreshed
+  datasheet, the X6 is Android 8.0 in its datasheet and
+  Android 8.1 in Rugged PC Review's lineup note, and the X9
+  is Android 7.0 in its datasheet and Android 11 in a later
+  Handheld press release; no source found names the stock
+  file manager on a Nautiz handheld, states a camera spec for
+  the X41, the X6 or the refreshed X2, or states a microSD
+  capacity for the X81; the MaxGo suite is device management,
+  not a photo backup; the Nautiz X1 turned up by name only.
+  Handheld has no phone-to-USB backup tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 18, 2026 (WL-109, 77th how-to):
+  docs/handheld-photos-to-usb.html.
+  Fallback for WL-110: Winmate — no Winmate article exists in
+  docs/ yet and no searches.md row (M-series rugged
+  enterprise Android handhelds/tablets).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
