@@ -3,8 +3,16 @@
 ## WL-142 — Back up Meizu photos to USB article, 110th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #253 PENDING MERGE (head 7b2e10e, CI run 44640204775
-  success; merge receipt PENDING — supervisor fills pre-merge).
+  Article PR #253 MERGED (head 7b2e10e, CI run 44640204775
+  success; merge commit f0c14ba, merged 2026-11-19T23:52:12Z;
+  post-merge main runs Android PR + pages success on f0c14ba).
+  Live fetch verified by supervisor: meizu-photos-to-usb.html
+  200 (93,693 B, correct title), feed.xml 110 items live incl.
+  Meizu (fresh crawl 23:53 UTC). Query 109 re-scored by
+  supervisor from a fresh live re-search: same 6 results as the
+  lead (Dr.Fone, YouTube OTG video, Photos to USB Play listing,
+  softhandtech, thegadgetians, Substack picture-keeper) — none
+  mentions Meizu; real gap stands.
   Query 109 verified by the lead from live evidence (no top
   result is a Meizu-specific phone-to-USB photo-backup
   guide); top results are six generic Android guides (Dr.Fone,
