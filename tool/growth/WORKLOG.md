@@ -1,5 +1,89 @@
 # SnapDisk — Work Log
 
+## WL-136 — Back up Intex photos to USB article, 104th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #241 MERGED (head cc3ab7c, CI run 44586214600
+  success, merge commit a01145a, merged 2026-11-19T18:20:16Z).
+  Supervisor fix pre-merge: meta description corrected — it
+  said "the other twelve run Android 6.0 or older", wrong for
+  the five 7.0 phones; now "only seven of fourteen clear
+  Android 7.0" (136 chars).
+  Query 103 verified by the lead from live evidence (no top
+  result is an Intex-specific phone-to-USB photo-backup
+  guide); top results are a YouTube OTG video, the Photos to
+  USB Play listing, an Android Central forum thread, and
+  three generic Android guides (softhandtech, alibaba,
+  techwalla) — none mentions Intex; real gap stands.
+  New docs/intex-photos-to-usb.html ("Back up Intex
+  photos to a USB drive (no computer)"), following the
+  WL-54–WL-135 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: two of the fourteen covered
+  Intex phones can run that screen and host a drive — the
+  Aqua Lions 3 and Aqua Style III; the seven 2015–2016 Aqua
+  models run Android 6.0 or older and cannot install
+  SnapDisk at all, so on those the computer copy is the
+  route).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 35 chars, meta
+  description 136 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 104 items; blog JSON-LD
+  counts 104 BlogPosting entries. searches.md Query 103 row
+  present ("back up Intex photos to USB drive without
+  computer" — HOW-TO GAP): top results are a YouTube video,
+  a Play app listing, a forum thread, and three generic
+  Android guides, none is a guide for an Intex phone.
+  Intex specifics verified live: two phones clear
+  SnapDisk's Android 7.0 minimum and list OTG — Aqua Lions 3
+  (7.0) and Aqua Style III (7.0) — so the one-tap route exists
+  on those two; two more clear Android 7.0 but no source
+  states OTG for them — Aqua S3 and Aqua S1 — so on those
+  two SnapDisk installs but the one-tap route is unproven
+  until a drive mounts; three more clear Android 7.0 but list
+  OTG No — Aqua Lions 2, Aqua A4 and Aqua Lions T1 — so on
+  those three there is no phone route at all; seven phones
+  run Android 6.0 or older and cannot run SnapDisk at all —
+  S7 and S2 (6.0), GenX (5.1), 4G+ (5.0), Y2, Star II and
+  Power HD (4.4.2 or 4.4) — so there is no phone route on any
+  of them; all fourteen take micro-USB, so a USB-C drive plugs
+  straight into none of them; all fourteen take a microSD
+  card, so the card-reader route works on every one of them.
+  Conflicts named in the article: the Lions 2's microSD
+  ceiling is two numbers (up to 64 GB per gadgets360 and the
+  Indian Express, up to 32 GB per smartprix and cashify); the
+  A4's battery is two states (non-removable per gadgets360,
+  removable per smartprix); the Lions T1 is two listings
+  (gadgets360 lists a 1 GB RAM, 8 GB model and a separate
+  2 GB RAM, 16 GB model); the GenX's OTG is disputed
+  (gadgets360, mobilegizmo, gadgetstouse and bmobile list OTG
+  Yes, findpare says USB OTG No — moot, since the GenX runs
+  Android 5.1); the Power HD's OTG is half-stated
+  (gadgetsnow, umatechnology and gadgetstouse list OTG Yes,
+  phonebunch leaves the OTG line blank) and its Android is
+  4.4.2 with a Lollipop upgrade promised (phonebunch lists it
+  as planned upgrade to 5.0), but even 5.0 is below the 7.0
+  minimum; the Star II is two variants (original 1 GB RAM,
+  8 GB storage, 2 MP front camera; upgraded 2 GB RAM, 16 GB
+  storage, 5 MP front camera) and its battery is two numbers
+  (2100 mAh per gadgets360, 2000 mAh per smartprix); the
+  Style III's internal storage is two numbers (16 GB per
+  gadgets360, shopclues, digit and the Indian Express, 8 GB
+  per one umatechnology page). VaultDrive needs Android 8 or
+  later per its own site, so none of the fourteen can run it
+  — and AppBrain lists 12.1 or later, which no covered Intex
+  phone clears, since the newest covered models run Android
+  7.0; FotoSafe needs Android 9 or later, so no covered Intex
+  phone clears it either. Intex has no phone-to-USB backup
+  tool of its own — no Intex-specific backup advice turned up
+  in any source beyond a computer copy, Google Drive, or
+  Google Photos; no source found names the stock file manager
+  on an Intex phone.
+  Fallback for WL-137: Xolo — no Xolo article exists in
+  docs/ yet and no searches.md row (Xolo, the Indian budget
+  Android phone brand; Era and Q series).
+
 ## WL-135 — Back up Karbonn photos to USB article, 103rd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
