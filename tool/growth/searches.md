@@ -10485,6 +10485,141 @@ demand is read off competitor install velocity instead (see
   Article published Nov 19, 2026 (WL-141, 109th how-to):
   docs/hisense-photos-to-usb.html.
 
+### 109. "back up Meizu photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Meizu-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Meizu-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and six covered Meizu
+  phones run Android 6.0 or older, so SnapDisk does not
+  install on them at all.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  drfone.wondershare.com, "4 Practical Ways to Transfer Photos
+  from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash drive
+  by connecting them directly with an OTG adaptor, using a PC
+  as a middleman via USB File Transfer mode, or downloading
+  them wirelessly through Google Drive or AirDroid; for direct
+  transfers without a computer, connect a USB-C OTG adaptor
+  from the phone to the flash drive. A generic Android guide —
+  it says nothing about Meizu);
+  youtube.com, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most direct
+  method for moving photos and videos from any modern Android
+  phone to a USB drive is a USB On-The-Go (OTG) connection and
+  the phone's built-in file manager app; it needs Android 7.0
+  or newer and a USB-C or micro-USB OTG adapter. A generic
+  Android video guide — it says nothing about Meizu);
+  play.google.com, "Photos to USB: OTG Backup"
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — back up every photo and video on your phone to a USB pen
+  drive, with one tap; plug a pen drive into your phone (a USB-C
+  drive goes straight in, an older one needs an OTG adapter);
+  no internet, no cloud, no account; free, with ads, a one-time
+  purchase removes the ads. A generic rival app listing — it
+  says nothing about Meizu);
+  thegadgetians.com, "How to Transfer Files From Phone to USB
+  Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — to transfer files from your phone to USB without a computer,
+  connect a USB drive to your Android (using OTG adapter) or
+  iPhone (using Lightning-to-USB adapter); open your phone's
+  file manager or Files app, select and copy files, then paste
+  onto the USB drive; not all Android phones support OTG. A
+  generic guide — it says nothing about Meizu);
+  softhandtech.com, "Transfer Photos from Phone to Memory
+  Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — for Android users, transferring photos directly to a memory
+  stick can be done using On-The-Go (OTG) functionality if your
+  device supports it; check OTG compatibility first, then obtain
+  an OTG adapter and connect the memory stick directly to your
+  smartphone. A generic guide — it says nothing about Meizu);
+  curiousbluenoser.substack.com, "saving Photos for necessary
+  updates"
+  (curiousbluenoser.substack.com/p/saving-photos-for-necessary-updates/
+  — plug a picture-keeper flash drive directly into the charging
+  port at the bottom of your phone, open the drive's free app,
+  and tap Back Up; you do not need a computer. A generic guide
+  for a drive-locked app — it says nothing about Meizu).
+- The one-tap route exists on eight phones only — the M6s,
+  E3, 15, 15 Plus, 16X, 16s, 16Xs and Note 9 clear Android
+  7.0 and list USB OTG; five more clear Android 7.0 but their
+  OTG is disputed between sources — the Pro 7 Plus, M6 Note,
+  15 Lite, 16th and 17 — so on those five SnapDisk installs
+  but the one-tap route is unproven until a drive mounts; two
+  more clear Android 7.0 but list OTG No — the Pro 7 and M6 —
+  so on those two there is no phone route at all; six run below
+  Android 7.0 and cannot run SnapDisk at all — the MX6, Pro 6,
+  Pro 6 Plus, M5 Note and M5 on 6.0, and the M3 Note on 5.1.
+  Twelve take USB Type-C, so a USB-C drive plugs straight into
+  those twelve; three take micro-USB. Five take a microSD card,
+  so the card-reader route works on five of them, with the Pro
+  7's card disputed and the 16s's unstated; eight take no card
+  at all.
+- Conflicts between sources, all named in the article: the
+  Pro 7 Plus's OTG is disputed — gadgets360 lists USB OTG No,
+  mobiledokan lists USB OTG Yes, niora lists USB type-c OTG and
+  unite4buy mentions OTG; the M6 Note's Android is two numbers
+  — 7.0 per kimovil and alza, 7.1.2 per Wikipedia, whatmobile,
+  techwikies, mobiledokan and eIMEI24 — and its OTG is disputed
+  — kimovil lists Yes and mobiledokan lists Yes, techwikies
+  lists No — and its microSD ceiling is two numbers — up to
+  128 GB per Wikipedia and alza, up to 256 GB per mobiledokan,
+  whatmobile and eIMEI24; the M6s's Android is two numbers —
+  7.0 per Wikipedia, phoneinfo, phonesdata and eIMEI24, 7.1.2
+  per gadgets360 and yugatech — and its microSD ceiling is two
+  numbers — up to 128 GB per Wikipedia, phoneinfo and
+  gadgets360, up to 256 GB per phonesdata, eIMEI24, whatech and
+  yugatech; the M6's microSD ceiling is two numbers — up to
+  256 GB per whatmobile and ubergizmo, up to 128 GB per
+  gadgets360's launch article; the E3's Android is two numbers
+  — 7.1.1 per ubergizmo, 7.1.2 per GSMArena, gadgets360 and
+  eIMEI24 — and its microSD ceiling is two numbers — up to
+  128 GB per gadgets360, up to 256 GB per eIMEI24; the 15
+  Lite's OTG is disputed — mobiledokan lists USB OTG Yes and
+  mobilegizmo lists USB OTG Support Yes, phonebunch lists USB
+  OTG Not Supported and whatmobile lists No — and its microSD
+  ceiling is three numbers — up to 256 GB per phonebunch and
+  whatmobile, up to 128 GB per mobiledokan, up to 512 GB per
+  Wikipedia; the 16th's Android is two numbers — 8.0 per
+  smartprix, gadgets360 and ubergizmo, 8.1 per GSMArena — and
+  its OTG is disputed — ubergizmo lists USB OTG, smartprix
+  lists only USB Charging; the 16X's Android is two numbers —
+  8.1 per ubergizmo, smartprix and phonecorridor, 8.0 per
+  GSMArena — and its RAM is two numbers — 6 GB per phonesdata
+  and ubergizmo, 4 GB per smartprix's 64 GB listing — and its
+  battery is two numbers — 3100 mAh per GSMArena and mobilemall,
+  3210 mAh per smartprix; the 17's OTG is disputed — phonebunch
+  lists USB OTG Supported and whatmobile lists Yes, assuredzone
+  lists OTG No and smartprix lists only USB Charging; the Pro
+  7's microSD slot is disputed — gadgets360 lists expandable
+  storage Yes, whatmobile lists no card slot. Kimovil lists the
+  M6 Note without Google Mobile services, so on a
+  Chinese-variant M6 Note the GitHub APK sideload is the install
+  route.
+- VaultDrive needs Android 8 or later per its own site, so
+  six of the fifteen can run it — the 16th, 16X, 16s, 16Xs,
+  Note 9 and 17 — and AppBrain lists 12.1 or later, which no
+  covered Meizu phone clears, since the newest covered model
+  runs Android 10. FotoSafe needs Android 9 or later with USB
+  host or OTG support, so four of the fifteen clear the version
+  floor — the 16s, 16Xs, Note 9 and 17 — and the OTG condition
+  is proven on three of the four and disputed on the 17, so
+  FotoSafe is proven on three and unproven on one until a drive
+  mounts. Meizu has no phone-to-USB backup tool of its own —
+  no Meizu-specific backup advice turned up in any source
+  beyond a computer copy, Google Drive, or Google Photos; the
+  devicesfaq backup FAQ names the computer copy as the most
+  economical method, and names the file manager on a Meizu
+  phone as Files, or Files by Google.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-142, 110th how-to):
+  docs/meizu-photos-to-usb.html.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
