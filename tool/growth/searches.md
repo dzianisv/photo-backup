@@ -9024,6 +9024,109 @@ demand is read off competitor install velocity instead (see
   Rover Explore and Motorola rugged phones; founded
   2009, shut down January 2024).
 
+### 97. "back up Bullitt photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Bullitt-specific
+  guide to backing up photos to a USB drive at all, let
+  alone a Bullitt-specific automated whole-library backup
+  with progress, Pause/Stop, and resume — and three
+  covered Bullitt CAT phones cannot run SnapDisk at all.
+- Current top results (scored Nov 19, 2026, live web search):
+  thecomputerbasics.com, "Transfer Files Without a
+  Computer — The Computer Basics"
+  (thecomputerbasics.com/how-to-transfer-videos-from-iphone-to-usb-stick-without-computer/
+  — phones and tablets can read and write external drives
+  directly; the obstacles are connectors, file systems and
+  power; on Android connect with a USB-C adapter or an OTG
+  cable and copy in the Files app; use exFAT for a drive
+  that moves between devices; FAT32 cannot hold a file
+  above 4 GB. A generic phone/tablet guide — it says
+  nothing about Bullitt);
+  maletphoto.com, "How To Transfer Photos From IPhone
+  To Flash Drive?"
+  (maletphoto.com/photos-from-iphone-to-flash/
+  — flash drives for iPhone photo backup, with or without
+  a computer, using a Lightning-to-USB or USB-C OTG
+  adapter, or a dual-connector drive with its own app;
+  iOS supports only exFAT or FAT32. An iPhone guide — it
+  says nothing about Bullitt);
+  play.google.com, "Photos to USB: OTG Backup"
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — back up every photo and video on your phone to a USB
+  pen drive with one tap; plug a pen drive in, the app
+  spots it and copies the gallery; free with ads, a
+  one-time purchase removes them; FAT32 drives cannot hold
+  a single file over 4 GB. A real phone-to-USB app — but a
+  generic Android listing, not a Bullitt guide);
+  topselect.ca, "Back Up Phone Photos to a USB-C Drive"
+  (topselect.ca/blogs/guides/how-to-backup-photos-from-your-mobile-the-easy-way-with-usb-c-drives
+  — back up photos from a mobile phone using a USB-C
+  drive, no internet required; plug the drive in, open the
+  file manager, copy DCIM; most modern Android devices
+  support USB OTG out of the box. A generic phone guide —
+  it says nothing about Bullitt);
+  itechguides.com, "Transfer Photos from Phone to Memory
+  Stick: iPhone and Android"
+  (itechguides.com/transfer-photos-from-phone-to-memory-stick-a-comprehensive-guide/
+  — transfer photos to a memory stick by matching the
+  drive to the phone's connector; Android phones commonly
+  use a USB-C flash drive or USB-OTG adapter and a file
+  manager; copy a test batch, verify, delete originals
+  only afterward. A generic phone guide — it says nothing
+  about Bullitt).
+- Five Bullitt CAT phones clear SnapDisk's Android 7.0
+  minimum and list USB OTG — the S41 (Android 7.0
+  exactly), the S61 (Android 8.0, upgradable to 9.0), the
+  S62 Pro (Android 10, upgradable to 11), the S53
+  (Android 11) and the S75 (Android 12) — so the one-tap
+  route exists on those five; the S40 (Android 5.1), the
+  S50 (Android 4.4; the S50c variant runs 5.0) and the S60
+  (Android 6.0) are below the minimum, so none of the
+  three can run SnapDisk at all; OTG is listed on all
+  eight covered models, so the file-manager route exists
+  on all eight; the S41 carries a 13 MP rear camera and
+  an 8 MP front camera, the S61 a 16 MP rear camera and
+  an 8 MP front camera, the S62 Pro a 12 MP dual rear
+  camera and an 8 MP front camera, the S60 a 13 MP rear
+  camera plus a FLIR thermal camera and a 5 MP front
+  camera, the S40 an 8 MP rear camera and a 2 MP front
+  camera, and the S50 an 8 MP rear camera and a 0.3 MP
+  front camera; the S41 takes microSDXC up to 256 GB per
+  Notebookcheck and Android Headlines and up to 2 TB per
+  the woot listing, the S61 microSDXC up to 256 GB, the
+  S62 Pro microSD up to 256 GB, the S53 microSDXC up to
+  512 GB in the shared SIM slot, the S60 microSD up to
+  128 GB per gadgets360 and up to 256 GB per phonemore,
+  and the S40 and the S50 microSD up to 64 GB; the S61's
+  Android is two numbers — 8.0 per GSMArena, 8.1 per its
+  manual; the S61's microSD slot is disputed — shared SIM
+  slot per GSMArena, dedicated slot per phonemore — and
+  the S62 Pro's is disputed too — dedicated per the CAT
+  guide, hybrid/shared per smartprix and urbanglobal;
+  VaultDrive needs Android 8 or later per its own site,
+  so the S61, S62 Pro, S53 and S75 clear that bar but the
+  S41 (Android 7.0 exactly) does not, and AppBrain lists
+  12.1 or later, which no Bullitt phone clears; Bullitt
+  has no phone-to-USB backup tool of its own — the
+  per-model backup guides point to a computer copy,
+  Google Drive, or Google Photos, and the S60's own manual
+  describes transferring media to a PC in MTP mode; no
+  source found names the stock file manager on a
+  Bullitt/CAT phone; Bullitt Group was founded 1 June 2009
+  and shut down 26 January 2024 after a failed
+  restructuring, so no Bullitt phone gets updates or
+  support any more; the S75, S62 Pro and S53 already have
+  a dedicated guide (WL-72,
+  docs/cat-photos-to-usb.html) — this guide adds the five
+  older CAT models that guide does not cover.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-130, 98th how-to):
+  docs/bullitt-photos-to-usb.html.
+  Fallback for WL-131: Wiko — no Wiko article exists in
+  docs/ yet and no searches.md row (Wiko, the French
+  Android phone brand; founded 3 February 2011 in
+  Marseille, a fully owned subsidiary of Tinno Mobile).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
