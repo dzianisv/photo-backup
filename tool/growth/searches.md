@@ -7221,6 +7221,113 @@ demand is read off competitor install velocity instead (see
   exists in docs/ yet and no searches.md row (Pepperl+Fuchs
   intrinsically safe Android phones, Smart-Ex 02/03 line).
 
+### 82. "back up Ecom Smart-Ex photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Ecom-specific
+  guide to backing up photos to a USB drive at all, let
+  alone an Ecom-specific automated whole-library backup
+  with progress, Pause/Stop, and resume.
+- Current top results (scored Nov 19, 2026, live web search):
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most
+  direct method for moving photos and videos from any
+  modern Android phone to a USB drive is a USB On-The-Go
+  (OTG) connection and the phone's built-in file manager
+  app; fast, secure, no computer or internet connection;
+  needs Android 7.0 or newer, a USB flash drive, and an
+  OTG adapter or a dual USB-C/USB-A drive. A generic
+  Android video — it says nothing about Ecom Smart-Ex,
+  or about a magnetic USB connector);
+  forums.androidcentral.com, "Moving photos to usb"
+  (forums.androidcentral.com/threads/moving-photos-to-usb.973408/
+  — a forum thread: use the OTG adapter to plug in any
+  supported external device and it should be visible as
+  external storage in the file manager, then move files
+  from there. A generic Android thread — it says nothing
+  about Ecom Smart-Ex, or about a magnetic USB
+  connector); pixoneye.com, "How to Transfer Photos from
+  Your Phone to an USB Stick"
+  (pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — copy local originals to compatible USB storage, open
+  the files from the destination, make an independent
+  backup before deleting anything; on Android, connect
+  the drive with the matching connector or OTG adapter,
+  open Files by Google or the phone's file manager, find
+  DCIM/Camera, select a small batch and choose Copy to.
+  A generic Android and iPhone guide — it says nothing
+  about Ecom Smart-Ex, or about a magnetic USB
+  connector); alibaba.com, "How To Quickly Backup Your
+  Phone Photos Without Using Cloud Storage"
+  (alibaba.com/product-insights/how-to-quickly-backup-your-phone-photos-without-using-cloud-storage.html
+  — back up phone photos locally without the cloud:
+  transfer via USB cable and a computer, or plug a
+  portable SSD or flash drive into the phone with OTG
+  support, open the file manager, navigate to the photo
+  gallery folder, select photos and choose Copy to or
+  Move to, then select the external drive. A generic
+  guide — it says nothing about Ecom Smart-Ex, or about
+  a magnetic USB connector);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash
+  drive directly with an OTG adaptor and the file
+  manager, or through a PC in File Transfer mode, or
+  wirelessly through Google Drive or AirDroid. A generic
+  Android guide — it says nothing about Ecom Smart-Ex,
+  or about a magnetic USB connector).
+  A second search ("Ecom Smart-Ex 02 Smart-Ex 03 Android
+  version OTG USB host") returned only OTG explainer
+  pages (unanswered.io, tethertools.com, beinfora.com,
+  umatechnology.org, beebom.com) and a USB OTG Checker
+  app listing — no Ecom-specific backup guide, and no
+  result even mentions Ecom Smart-Ex as a backup
+  subject. Ecom specifics: no Ecom-specific guide to
+  backing up photos to a USB drive turned up at all —
+  not one top result even mentions Ecom Smart-Ex; no
+  source found labels any Ecom USB port OTG — the
+  Smart-Ex 03 datasheets say only "Charging via USB
+  Type C" — so the drive mounting is the test on the
+  three 03 models; the Smart-Ex 02 line has no standard
+  USB port at all, only a 7-pin waterproof magnetic USB
+  2.0 connector, and no source found says that connector
+  hosts a USB drive, so on the four 02 models the whole
+  method is unconfirmed until a drive mounts through
+  ecom's own cable; the Smart-Ex 03 runs Android 13 in
+  its 2024–2025 datasheets but Android 15 as the latest
+  firmware on ecom's current product pages, the
+  Smart-Ex 02M runs Android 9 as its latest firmware
+  with an upgrade to Android 11 available, and the
+  Smart-Ex 02's processor is the Snapdragon 450 in
+  ecom's datasheet but the Snapdragon 480 5G in a
+  benchmark listing; the Smart-Ex 02 DZ1 and DZ2 run
+  Android 11, the Smart-Ex 03 DZ1 and DZ2 run Android
+  13 at release with upgrades up to Android 15, and the
+  Smart-Ex 03 CLASSIC MODE plans Android 16 with
+  patches until Q4 2032, so all seven clear SnapDisk's
+  Android 7.0 minimum; the Smart-Ex 03 takes no microSD
+  card at all — ecom's datasheets carry the note "no SD
+  Card memory extension" — while the Smart-Ex 02 line
+  takes microSD up to 128 GB; the Smart-Ex 01 runs
+  Android 4.4 at launch (Android 5.1 on its product
+  page), below the minimum, so it cannot run SnapDisk at
+  all; camera-only kiosk variants of the 02 DZ2 and 03
+  DZ2 cannot run apps; one reseller page marks the
+  Smart-Ex 02M discontinued; the Smart-Ex 02 line is
+  archived on ecom's site and the 03 is the current
+  line; no source found names the stock file manager on
+  a Smart-Ex device; no source found states a
+  hazardous-area USB rule for Ecom.
+  Ecom has no phone-to-USB photo backup tool of its own.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-115, 83rd how-to):
+  docs/ecom-smart-ex-photos-to-usb.html.
+  Fallback for WL-116: Bartec — no Bartec article
+  exists in docs/ yet and no searches.md row
+  (intrinsically safe mobile devices, PIXAVI / Agile X
+  line).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
