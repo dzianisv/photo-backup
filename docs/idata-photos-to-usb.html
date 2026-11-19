@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up iData terminal photos to a USB drive</title>
+<meta name="description" content="Back up iData K8, K3S, K1, T1 and T3 terminal photos to a USB drive without a computer: plug in, tap Backup — SnapDisk copies oldest-first, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/idata-photos-to-usb.html">
+<meta property="og:title" content="Back up iData photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up iData K8, K3S, K1, T1 and T3 terminal photos to a USB drive without a computer: plug in, tap Backup — SnapDisk copies oldest-first, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/idata-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/idata-photos-to-usb.html#article",
+      "headline": "Back up iData photos to a USB drive (no computer)",
+      "description": "Back up iData K8, K3S, K1, T1 and T3 terminal photos to a USB drive without a computer: plug in, tap Backup — SnapDisk copies oldest-first, no upload.",
+      "datePublished": "2026-11-19",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/idata-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/idata-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up iData 95, K1, K1S, K3S, K8, K8 Pro, K8 Pro Cold, T1, T1 Pro and T3 photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On the nine models whose datasheets list OTG Interface Support — the K1, K1S, K3S, K8, K8 Pro, K8 Pro Cold, T1, T1 Pro and T3 — yes: plug in a USB drive with a USB-C OTG adapter, tap Backup in SnapDisk, and the whole photo library copies oldest-first to the drive in the background, with progress, Pause and Stop, and resume. On the iData 95 the answer is unconfirmed: no source found labels the 95's USB port OTG, so the drive mounting is the test before buying an adapter. All ten run Android 8.1 or later, above SnapDisk's Android 7.0 minimum. The GMS models — the K1S, K3S, T1 GMS version and T1 Pro — ship Google Mobile Services, so the Play Store is present there; the T1 Chinese version has no GMS, so sideload the APK on it; no source found states whether the K1, K8, K8 Pro, K8 Pro Cold, T3 or iData 95 ship Google Play, so check for the Play Store on your unit and sideload the APK if it is absent. iData has no phone-to-USB backup tool of its own. The stock route is the built-in file manager: connect the drive, open the file manager, pick the photos in DCIM/Camera, and Copy to the drive. On a model that hosts drives and runs SnapDisk, SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later, which every covered iData model clears — the lowest is the K1 on Android 8.1. The iData 50, the iData 55HC and the iData 95W run Android 6.0, below the minimum, so they cannot run SnapDisk at all and are not covered here."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/idata-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up iData photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/idata-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up iData photos to a USB drive (no computer)</h1>
+  <p class="dek">The iData 95, the K1, the K1S, the K3S, the K8, the K8 Pro, the K8 Pro Cold, the T1, the T1 Pro and the T3 are iData's Android handheld data terminals (iData 95; K1; K1S; K3S; K8; K8 Pro; K8 Pro Cold; T1; T1 Pro; T3), and iData has no phone-to-USB backup tool of its own: no source found names one, and iData's own documentation covers scanning engines, device APIs and device management, not photo backup. Five honest caveats up front: there is no iData 95S — the searches for it return Newland's MT95, a different brand's handheld already covered in its own guide, so the iData 95 line here is the iData 95 itself and the 95W; no source found labels the iData 95's USB port OTG, so on that one model the drive mounting is the test before buying an adapter, while the other nine list "OTG Interface: Support" in their datasheets; the Android version differs by source or by variant on three models — the K1S runs Android 9.0 (GMS) or Android 11.0 (GMS) in iData's own datasheet, the T1 runs Android 9.0 in its Chinese version and Android 10.0 in its GMS version, and the iData 50 runs Android 6.0 in its datasheet but Android 9.0 in one Octopus variant listing — so check Settings &gt; About phone if you are unsure which version your unit runs; no source found states microSD support or a microSD capacity for any covered iData model, or a camera spec for the K1S, K3S, K8, K8 Pro, K8 Pro Cold, T3 or iData 95 — only the K1 (13 MP, optional), the T1 and the T1 Pro (13 MP rear, 5 MP front) carry a camera spec in the sources found; and the iData 50, the iData 55HC and the iData 95W run Android 6.0, below SnapDisk's Android 7.0 minimum, so they cannot run SnapDisk at all and are not covered here. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 19, 2026 · 5 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On the nine models whose datasheets list "OTG Interface: Support" — the K1, K1S, K3S, K8, K8 Pro, K8 Pro Cold, T1, T1 Pro and T3 — plug the drive in with a USB-C OTG adapter, then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. On the iData 95 the method is unconfirmed: no source found labels the 95's USB port OTG, so plug in a drive and look for the mount notification before buying an adapter. One correction up front: there is no iData 95S — the searches for it return Newland's MT95, a different brand's handheld already covered in its own guide — so the iData 95 line here is the iData 95 itself (latest version Android 10.0) and the 95W (Android 6.0, out of scope). The honest contrast, up front: OTG is confirmed on nine of the ten covered models, which is the opposite of the usual rugged-phone story — only the 95 is unconfirmed; the K1's camera is optional, so a K1 without the camera option takes no photos at all; the T1 Chinese version has no Google Mobile Services, so the Play Store is absent there and SnapDisk installs by sideloading the APK; and the iData 50, the 55HC and the 95W are out of scope entirely — all three run Android 6.0, below the 7.0 minimum. A file manager works — the stock route is the built-in file manager with a drive attached — but the direct route is manual select-copy-paste with no progress detail, no resume, and no verification; iData's own documentation offers no backup tool at all. Four rival apps do exist — Photos to USB: OTG Backup copies the whole gallery to a pen drive in one tap, free with ads, a one-time purchase removing the ads; VaultDrive copies photos, videos, and files straight to a USB drive with no computer, free for up to 200 files or 2 GB per backup, Pro $19.99 once; Photo Backup Stick DC backs up pictures and videos straight to its own OTG drive, free, but it only works with genuine Photo Backup Stick drives; FotoSafe backs up Android photos to a USB drive through the system picker, and needs Android 9 or later with USB host or OTG support — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, works with any drive, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. Note the FotoSafe floor: it needs Android 9, so it cannot run on the K1, which runs Android 8.1 — but every other covered iData model runs Android 9 or later, so the floor does not bite there. SnapDisk <strong>copies, it never deletes</strong> — deleting from the device afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 19, 2026, no top search result for this query is an iData-specific phone-to-USB photo-backup guide at all: not one result even mentions iData — the top results are a generic Android guide and four iPhone results, because the search engine reads "iData" as an iPhone question.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up iData photos to USB drive without computer" and there is no iData-specific phone-to-USB photo-backup guide in the top results at all — not one result even mentions iData. The results are one generic Android guide and four iPhone results, because the search engine reads "iData" as an iPhone question:</p>
+  <ul>
+    <li><strong>pixoneye.com, "How to Transfer Photos from Your Phone to an USB Stick"</strong> (<a href="https://pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/">How to Transfer Photos from Your Phone to an USB Stick</a>) — copy local originals to compatible USB storage, open the files from the destination, make an independent backup before deleting anything; on Android, connect the drive with the matching connector or OTG adapter, open Files by Google or the phone's file manager, find DCIM/Camera, select a small batch and choose Copy to. A generic Android and iPhone guide — and it says nothing about iData, or about a handheld data terminal.</li>
+    <li><strong>forums.macrumors.com, "Have only iPhone how to backup my photos/videos to another harddrive or similar?"</strong> (<a href="https://forums.macrumors.com/threads/have-only-iphone-how-to-backup-my-photos-videos-to-another-harddrive-or-similar.2269533/">Have only iPhone how to backup my photos/videos to another harddrive or similar?</a>) — a forum thread asking about backing up iPhone photos and videos to an external drive with no computer: Lightning to USB adapter, iCloud, Files app. An iPhone thread — and it says nothing about iData, or about Android at all.</li>
+    <li><strong>manuals.plus, "JDTDC USB Lightning Flash Drive For iPhone, iPad, iPod and Computers User Manual"</strong> (<a href="https://manuals.plus/m/a0fc6e5bed662f1968c4c82de5685e76930f9633ddfc3efe66cf19f38bfd402b_optim.pdf">JDTDC USB Lightning Flash Drive User Manual</a>) — the manual for a Lightning flash drive for iPhone and iPad: one-click backup of all photos and videos in the Camera roll to the flash drive, with its own app. An iPhone accessory manual — and it says nothing about iData, or about Android at all.</li>
+    <li><strong>photocleanse.app, "Transfer Photos from iPhone to an External Hard Drive"</strong> (<a href="https://photocleanse.app/guides/transfer-photos-iphone-external-drive/">Transfer Photos from iPhone to an External Hard Drive</a>) — transfer iPhone photos to an external hard drive without a computer: connect the drive, open Photos, select, Share, Export Unmodified Original, tap the drive under Locations, Save. An iPhone guide — and it says nothing about iData, or about Android at all.</li>
+    <li><strong>forums.macrumors.com, "Best way to transfer photos directly to portable hard drive?"</strong> (<a href="https://forums.macrumors.com/threads/best-way-to-transfer-photos-directly-to-portable-hard-drive.1934981/">Best way to transfer photos directly to portable hard drive?</a>) — a forum thread about dumping iPhone photos straight to a portable hard drive on holiday with no laptop: wireless drives, iCloud, SanDisk Connect. An iPhone thread — and it says nothing about iData, or about Android at all.</li>
+    <li><strong>iData K8 datasheet (via s-telekom.ru)</strong> (<a href="https://s-telekom.ru/files/docs/Models/Models17/file_14869_1.pdf">iData K8 Mobile Intelligent Terminal</a>) — Android 11.0, 8-core 2.0 GHz, 32 GB + 3 GB (optional 16 GB + 2 GB / 64 GB + 4 GB / 128 GB + 6 GB), 4-inch IPS HD screen 800x480, detachable 6700 mAh battery, Type-C, 8-pin charging port, "OTG interface: Supporting", IP68. A datasheet, not a guide — and the source for the K8's Android 11 and its OTG support.</li>
+    <li><strong>iData K8 Pro user guide (via manuals.plus)</strong> (<a href="https://manuals.plus/pt/idata/k8-pro-ultra-rugged-android-terminal-manual">iData K8 Pro Ultra Rugged Android Terminal User Guide</a>) — Android 14.0, octa-core 2.45 GHz, 64 GB + 4 GB, 4-inch screen 800x480, 6700 mAh detachable battery with backup-battery support, Wi-Fi 6, Type-C, 8-pin charging interface, "OTG Interface: Support". A user guide, not a backup guide — and the source for the K8 Pro's Android 14 and its OTG support.</li>
+    <li><strong>iData K3S user manual (via manuals.plus)</strong> (<a href="https://manuals.plus/ae/1005006679587951">Idata K3S Android12 GMS Mobile PDA Barcode Scanner User Manual</a>) — Android 12.0 with GMS, octa-core 2.0 GHz, 4 GB RAM + 64 GB ROM, 4-inch display with physical keypad, 5000 mAh detachable battery, Type-C, "OTG Interface: Support", IP65. A user manual, not a backup guide — and the source for the K3S's Android 12 with GMS and its OTG support.</li>
+    <li><strong>iData T1 product manual (via barcode.com.sg)</strong> (<a href="https://barcode.com.sg/wp-content/uploads/2023/01/iData-T1.pdf">EN_iData T1 Product Manual_2022V2.0</a>) — Android 9.0 (Chinese version) / Android 10.0 (GMS), octa-core 2.0 GHz, 64 GB + 4 GB, 5.5-inch screen 1440x720, 13 MP rear camera with PDAF, 5 MP front camera, 5000 mAh non-removable battery, Type-C, "OTG interface: Supporting". A product manual, not a backup guide — and the source for the T1's two Android versions and its OTG support.</li>
+    <li><strong>iData T1 Pro datasheet (via moventa.ro)</strong> (<a href="https://moventa.ro/files/datasheets/T1-Pro-Datasheet.pdf">AI datasheet idata-t1pro 1.1</a>) — Android 14.0 (GMS), octa-core 2.0 GHz, 64 GB + 4 GB, 5.5-inch screen 1440x720, 13 MP rear camera with autofocus/PDAF, 5 MP front camera, Type-C, "OTG Interface: Support". A datasheet, not a backup guide — and the source for the T1 Pro's Android 14 with GMS and its OTG support.</li>
+    <li><strong>iData T3 (via manuals.plus)</strong> (<a href="https://manuals.plus/m/dc58ddcd493fd4d8f8d4eca83629ec08467ba994af2950fdfc282677f787dca9">iData T3 Enterprise-level Smart Terminal</a>) — Android 11.0, Type-C, "OTG Interface: Support". A datasheet, not a backup guide — and the source for the T3's Android 11 and its OTG support.</li>
+    <li><strong>iData K1 datasheet (via allid.co.id)</strong> (<a href="https://allid.co.id/wp-content/uploads/2023/08/iData-K1-datasheet.pdf">iData K1 datasheet</a>) — Android 8.1, octa-core 1.8 GHz, 64 GB ROM + 4 GB RAM, 13 MP autofocus camera (optional) with PDAF and LED flash, 4400 mAh battery, Type-C, "transmission speed USB 3.0 OTG: Support", 2-pin charger port. A datasheet, not a backup guide — and the source for the K1's Android 8.1, its OTG support, and its optional camera.</li>
+    <li><strong>iData K1S datasheet (via idataglobal.com)</strong> (<a href="https://idataglobal.com/uploads/EN_iData_K1S_ProductDatasheet_2025V1.0.pdf">K1S</a>) — Android 9.0 (GMS) / Android 11.0 (GMS), Type-C, "OTG Interface: Support". A datasheet, not a backup guide — and the source for the K1S's two Android versions and its OTG support.</li>
+    <li><strong>iData 95 history (idataglobal.com)</strong> (<a href="https://www.idataglobal.com/industry-application1027/1134.html">In those years, iData 95 moved us</a>) — the first iData 95 was born in early 2013, the first mass-produced Android PDA; the line has sold more than 500,000 units worldwide; the latest upgrade runs Android 10.0, 8-core 2.0 GHz, up to 6 GB RAM and up to 128 GB ROM. A company history page, not a guide — and the source for the iData 95's latest Android 10 — but it says nothing about the 95's USB port or OTG, and no iData 95S appears anywhere in it.</li>
+    <li><strong>iData 50 datasheet (via barcode.com.my)</strong> (<a href="https://barcode.com.my/wp-content/uploads/2018/03/iData-50-datasheet.pdf">iData 50 Datasheet</a>) — Android 6.0, quad-core 1.3 GHz, 16 GB ROM + 2 GB RAM, 4.7-inch screen 1280x720, 3300 mAh battery. A datasheet, not a guide — and the source for the iData 50's Android 6.0, below the minimum — but an Octopus variant listing puts the same model on Android 9.0, so the version differs by source.</li>
+    <li><strong>iData 95W (via cardlansmart.com)</strong> (<a href="https://www.cardlansmart.com/products/idata-95w-google-play-store-google-chrome-android-pda-rugged-industrial-handheld-terminal">Rugged iData 95W Android PDA</a>) — Android 6.0, 1 GB RAM + 8 GB ROM, 3.5-inch screen, 4000 mAh battery, IP65, Google Play Store compatible. A reseller listing, not a guide — and the source for the 95W's Android 6.0, below the minimum.</li>
+    <li><strong>iData 55HC (via cardlansmart.com)</strong> (<a href="https://www.cardlansmart.com/products/idata-55hc-android-60-pda">iData 55HC RFID Barcode Scanner</a>) — Android 6.0, 2 GB RAM + 16 GB ROM, 4.7-inch screen, 3300 mAh battery, IP65. A reseller listing, not a guide — and the source for the 55HC's Android 6.0, below the minimum.</li>
+    <li><strong>MobileNAV iData configuration guide (via mobilenav.com)</strong> (<a href="https://mobilenav.com/wp-content/uploads/2019/09/MobileNAV-iData-Handheld-Rugged-Computers-configuration-for-Android.pdf">Computers (iData 50, iData 95, iData 65, iData 70, iData 80, iData K1) for MobileNAV Android application</a>) — a configuration guide for a navigation app on iData handhelds, naming the iData 50, 95, 65, 70, 80 and K1. An app configuration guide, not a backup guide — and the source for the iData 65, 70 and 80 existing by name only: no source found states their Android version or their USB port, so none of the three is covered here.</li>
+    <li><strong>Cloud routes</strong> — Google Photos syncs your gallery to Google's servers, Google Drive backs your data up to Google's cloud with 15 GB free, and Google backup restores your data to a new phone from Google's cloud, not to a drive you hold; Google Photos' "Storage saver" setting compresses photos, and a cloud backup stops working the day you stop paying for storage. Neither route gives you a folder of plain photo files on a USB drive. iData offers no backup tool of its own at all — no source found names one — so there is no iData cloud route to compare either.</li>
+  </ul>
+  <p>None of them is an iData-specific phone-to-USB photo-backup guide, and none of them offers an automated iData photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 19, 2026 — for the iData models that can run SnapDisk at all.</p>
+
+  <h2>What you need</h2>
+  <p>An iData terminal that can run SnapDisk and host a USB drive — in practice, one of the nine models whose datasheets list OTG support — with a USB drive and a USB-C OTG adapter, and enough space on the drive for the photos you want to keep. The ten covered models, with what the sources found actually say:</p>
+  <ul>
+    <li><strong>iData 95 (latest version):</strong> Android 10.0, 8-core 2.0 GHz, up to 6 GB RAM and up to 128 GB ROM, more than 500,000 units of the 95 series sold worldwide. USB host: unconfirmed — no source found labels the 95's USB port OTG, so plug in a drive and look for the mount notification before buying an adapter. No camera spec found for it in the sources.</li>
+    <li><strong>K1:</strong> Android 8.1, octa-core 1.8 GHz, 64 GB ROM + 4 GB RAM, 13 MP autofocus rear camera (optional) with PDAF and LED flash, 4400 mAh battery, Type-C, USB 3.0 OTG Support, 2-pin charger port, 270 g. The camera is optional — a K1 without the camera option takes no photos at all, so there is nothing to back up on such a unit.</li>
+    <li><strong>K1S:</strong> Android 9.0 (GMS) / Android 11.0 (GMS) — the version differs by source in iData's own datasheet — Type-C, OTG Interface Support. No camera spec found for it in the sources.</li>
+    <li><strong>K3S:</strong> Android 12.0 with GMS, octa-core 2.0 GHz, 4 GB RAM + 64 GB ROM, 4-inch display with physical keypad, 5000 mAh detachable battery, Type-C, OTG Interface Support, IP65. No camera spec found for it in the sources.</li>
+    <li><strong>K8:</strong> Android 11.0, 8-core 2.0 GHz, 32 GB + 3 GB (optional 16 GB + 2 GB / 64 GB + 4 GB / 128 GB + 6 GB), 4-inch IPS HD screen 800x480, detachable 6700 mAh battery, Type-C, 8-pin charging port, OTG Interface Support, IP68, 440 g, 29-key keypad. No camera spec found for it in the sources.</li>
+    <li><strong>K8 Pro:</strong> Android 14.0, octa-core 2.45 GHz, 64 GB + 4 GB, 4-inch screen 800x480, 6700 mAh detachable battery with backup-battery support, Wi-Fi 6, Type-C, 8-pin charging interface, OTG Interface Support. No camera spec found for it in the sources.</li>
+    <li><strong>K8 Pro Cold:</strong> Android 14.0, OTG Interface Support, rated -40°C to 70°C, Type-C, 8-pin charging port. No camera spec found for it in the sources.</li>
+    <li><strong>T1:</strong> Android 9.0 (Chinese version) / Android 10.0 (GMS) — the version differs by variant — octa-core 2.0 GHz, 64 GB + 4 GB, 5.5-inch screen 1440x720, 13 MP rear camera with autofocus/PDAF, 5 MP front camera, 5000 mAh non-removable battery, Type-C, OTG Interface Support.</li>
+    <li><strong>T1 Pro:</strong> Android 14.0 (GMS), octa-core 2.0 GHz, 64 GB + 4 GB, 5.5-inch screen 1440x720, 13 MP rear camera with autofocus/PDAF, 5 MP front camera, Type-C, OTG Interface Support.</li>
+    <li><strong>T3:</strong> Android 11.0, Type-C, OTG Interface Support. No camera spec found for it in the sources.</li>
+  </ul>
+  <p>Five iData specifics: first, the connector is the same on every covered model — USB Type-C — so a USB-A drive needs a USB-C OTG adapter on all ten (or a USB-C dual drive, which plugs straight in). Second, every covered model clears the Android 7.0 minimum — the lowest is the K1 on Android 8.1 — but the Android version differs by source or by variant on three models — the K1S runs Android 9.0 (GMS) or Android 11.0 (GMS), the T1 runs Android 9.0 in its Chinese version and Android 10.0 in its GMS version, and the iData 50 runs Android 6.0 in its datasheet but Android 9.0 in one Octopus variant listing — so check Settings &gt; About phone if you are unsure which version your unit runs. Third, no source found states microSD support or a microSD capacity for any covered iData model, so this article states none — and on a model with no card route stated, the USB drive may be the only local copy that leaves the device. Fourth, the GMS models ship Google Mobile Services — the K1S, the K3S, the T1 GMS version and the T1 Pro — so the Play Store is present there, but the T1 Chinese version has no GMS, so the Play Store is absent there and SnapDisk installs by sideloading the APK; no source found states whether the K1, K8, K8 Pro, K8 Pro Cold, T3 or iData 95 ship Google Play, so check for the Play Store on your unit and sideload the APK if it is absent. Fifth, the drive occupies the phone's only USB-C port while it copies — so a long backup cannot charge at the same time on the T1, T1 Pro, T3 or iData 95, while the K1, K3S, K8, K8 Pro and K8 Pro Cold have a separate charging port (2-pin on the K1, 8-pin on the others) that can charge the device while the drive is on USB-C. iData camera photos live in DCIM/Camera, as on any Android device. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit. No source found names the stock file manager on an iData terminal — so Method 2 uses the built-in file manager, whatever it is called on your unit; on near-stock Android that is Files by Google.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Check your model can run SnapDisk — and host a drive.</strong> Every covered iData model runs Android 8.1 or later, so SnapDisk installs on all ten. The drive is the easy half on nine of them: the K1, K1S, K3S, K8, K8 Pro, K8 Pro Cold, T1, T1 Pro and T3 all list "OTG Interface: Support" in their datasheets. On the iData 95, plug in a drive and look for the mount notification — no source found labels the 95's USB port OTG, so the mounting is the test.</li>
+    <li><strong>Plug in the USB drive.</strong> Use a USB-C OTG adapter for a USB-A drive. A USB-C dual drive plugs straight in with no adapter. It mounts on plug-in on most Android devices with USB host support — look for a "USB storage added" notification. If nothing appears, check Settings &gt; Storage for the drive. Start with a charged battery: the drive occupies the phone's only USB-C port while it copies, so on the T1, T1 Pro, T3 and iData 95 charge it fully before a long backup; on the K1, K3S, K8, K8 Pro and K8 Pro Cold the separate charging port can charge the device while the drive is connected.</li>
+    <li><strong>Open SnapDisk and check the folders.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos — iData camera photos live in DCIM/Camera), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder — the picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li><strong>Tap Backup.</strong> SnapDisk offers a backup in a notification when the drive connects: "External storage is connected. Backup photos?" Tap it and your whole library copies oldest-first — your earliest photos first — in the background, while you use the device normally. The copy mirrors the source folder structure on the drive, so DCIM stays DCIM.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The defaults already point at your camera photos and the drive.</figcaption>
+  </figure>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the device to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: the built-in file manager (the stock route, no app needed)</h2>
+  <p>The built-in file manager can copy your photos to the USB drive — on near-stock Android that is Files by Google, and no source found names the stock file manager on an iData terminal, so the stock route is the Android one: 1. Plug in the USB drive with a USB-C OTG adapter. A notification should appear saying "USB storage added"; tap it to open the drive. If nothing appears, check Settings &gt; Storage for the drive. 2. Open the file manager and confirm the USB drive shows up under storage devices. 3. Go back to Internal storage, DCIM, Camera, where your camera photos live. 4. Select the photos (long-press the first, tap the rest, or select all). 5. Tap Copy, then select the USB drive, and wait for the copy to finish — don't unplug the drive until the file manager says it's done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. For a library that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>Method 3: Google Photos, Google Drive, or a microSD card — not phone-to-USB plain files</h2>
+  <p>iData offers no backup tool of its own at all — no source found names one — so the stock options are Google's, and none of them writes your photos as plain files to a USB drive automatically. <strong>1. Google Photos</strong> is Google's own photo backup app: it automatically backs up photos to your Google account. It is a real backup — but it is a cloud backup, not a USB copy, and photos sync through Google Photos instead; and its "Storage saver" setting compresses photos. <strong>2. Google Drive</strong> is the cloud backup Android names by default — "on Android devices the default built-in service is Google Drive. With Google Drive you have 15Gb free" — it backs your data up to Google's cloud. It is a real backup — but it is a cloud backup, not a USB copy, and Google accounts only offer 15 GB of free storage. <strong>3. Google backup</strong> is what Android itself names: personal settings back up to Google's servers with a Google account, and are restored to a new phone when you sign in with that account. It is a real backup — but it backs up settings, not a folder of photo files on a drive you hold. <strong>4. A microSD card</strong> cannot be stated as a route here at all — no source found states microSD support or a microSD capacity for any covered iData model, so this article states none, and a card route that no source confirms is not a route to plan around. <strong>5. iData's own software</strong> is developer tooling, not a backup tool: the iScan API and Device API are scanning and device-management development kits for building apps on the terminal, and iData's device management is fleet administration — none of them copies your camera roll to a drive. None of them is a one-tap way to copy your camera roll to a drive as plain files. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 19, 2026.</p>
+
+  <h2>Method 4: through a computer (if you have one)</h2>
+  <p>If a PC or Mac is handy, the old route still works: plug the terminal into the computer with a USB cable, tap the USB notification and choose File transfer — and drag the DCIM folder onto the USB drive. This works fine, and it is the only route above that needs a second device in between. It is also the fallback for the iData 95 if its USB port never hosts a drive: the computer reads the terminal as storage, and the drive plugs into the computer. If the terminal and the drive are all you have, Method 1 or 2 is the route — that is the gap this article fills, as of November 19, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <p>A few honest limits, so the automatic copy is not oversold:</p>
+  <ul>
+    <li><strong>Photos and videos only.</strong> SnapDisk copies image and video files. Documents, voice notes, and anything that isn't a photo or video is skipped — Google backup is the tool if you want contacts, messages, and settings in the same backup, not just photos.</li>
+    <li><strong>Only the folder you pick.</strong> By default that's DCIM — your camera photos. Photos in other folders (Downloads, app folders) only copy if you point the From folder at them, or at a parent folder that contains them.</li>
+    <li><strong>Free 5 GB per run.</strong> A library bigger than 5 GB stops at the cap; run it again and it picks up where it stopped. Pro ($9.99, one-time) removes the limit and starts the backup automatically when you plug in a disk.</li>
+    <li><strong>Files over 4 GB on FAT32 are skipped.</strong> Very long videos on a FAT32 drive are listed with their reason instead of failing the backup. Reformat the drive to exFAT if you need them.</li>
+    <li><strong>It never deletes.</strong> SnapDisk only copies. Freeing space on the device is copy, check the copy on the drive, then delete the originals yourself — never the other way round.</li>
+    <li><strong>OTG is confirmed on nine of the ten — and on the iData 95 the drive may not attach at all.</strong> The K1, K1S, K3S, K8, K8 Pro, K8 Pro Cold, T1, T1 Pro and T3 all list "OTG Interface: Support" in their datasheets. No source found labels the iData 95's USB port OTG — so plug in a drive and look for the mount notification — or run a USB OTG Checker app — before buying an adapter. If nothing mounts, use the computer copy in Method 4.</li>
+    <li><strong>The K1's camera is optional.</strong> The K1 datasheet lists its 13 MP autofocus camera as optional — a K1 without the camera option takes no photos at all, so there is nothing to back up on such a unit. Check your unit before planning a backup around its camera roll.</li>
+    <li><strong>Three spec details differ by source or by variant.</strong> The K1S runs Android 9.0 (GMS) or Android 11.0 (GMS) in iData's own datasheet. The T1 runs Android 9.0 in its Chinese version and Android 10.0 in its GMS version. The iData 50 runs Android 6.0 in its datasheet but Android 9.0 in one Octopus variant listing. Every covered reading clears the minimum either way. The K1 on Android 8.1 clears it by one version — so check Settings &gt; About phone on your unit instead of trusting a version printed for another model.</li>
+    <li><strong>MicroSD support is unstated for every covered model.</strong> No source found states microSD support or a microSD capacity for the iData 95, K1, K1S, K3S, K8, K8 Pro, K8 Pro Cold, T1, T1 Pro or T3 — so on any covered iData terminal the USB drive may be the only local copy that leaves the device. This article states no card route at all.</li>
+    <li><strong>No camera spec found for seven of the ten.</strong> No source found states a camera spec for the iData 95, K1S, K3S, K8, K8 Pro, K8 Pro Cold or T3 — only the K1 (13 MP, optional), the T1 and the T1 Pro (13 MP rear, 5 MP front) carry a camera spec in the sources found. The photos on those seven models are whatever their cameras took; this article states no megapixel count for them.</li>
+    <li><strong>There is no iData 95S.</strong> The searches for a 95S return Newland's MT95, a different brand's handheld already covered in its own guide — the iData 95 line is the iData 95 itself (latest version Android 10.0) and the 95W (Android 6.0, out of scope). If a listing offers you an "iData 95S", check the maker before trusting the name.</li>
+    <li><strong>The iData 50, the 55HC and the 95W cannot be counted on.</strong> The iData 50 runs Android 6.0 in its datasheet (Android 9.0 in one Octopus variant listing), the 55HC runs Android 6.0, and the 95W runs Android 6.0 — all below the Android 7.0 minimum, so none of them can run SnapDisk at all. If you still carry one, the computer copy in Method 4 is the route.</li>
+    <li><strong>The iData 65, 70 and 80 turned up by name only.</strong> A MobileNAV configuration guide names the iData 65, 70 and 80 alongside the 50, 95 and K1 — but no source found states their Android version or their USB port, so none of the three is covered here.</li>
+    <li><strong>No source found states whether six covered models ship Google Play.</strong> The K1S, K3S, T1 GMS version and T1 Pro ship Google Mobile Services, so the Play Store is present there — but no source found states the same for the K1, K8, K8 Pro, K8 Pro Cold, T3 or iData 95, so check for the Play Store on your unit and sideload the APK if it is absent. The T1 Chinese version has no GMS at all, so the Play Store is absent there by definition.</li>
+    <li><strong>No source found names the stock file manager on an iData terminal.</strong> No source found names one, so Method 2 uses the built-in file manager, whatever it is called on your unit — on near-stock Android that is Files by Google.</li>
+    <li><strong>No source found states where the port sits on any of the ten models.</strong> No source found states the port position on the iData 95, K1, K1S, K3S, K8, K8 Pro, K8 Pro Cold, T1, T1 Pro or T3, so check your unit before buying a drive or a cable that assumes a port position.</li>
+    <li><strong>No iData terminal turned up beyond the ten covered and the six out of scope.</strong> The iData Android terminal line in the sources found is the iData 95, K1, K1S, K3S, K8, K8 Pro, K8 Pro Cold, T1, T1 Pro and T3, plus the older iData 50, 55HC and 95W and the name-only iData 65, 70 and 80 — no other iData Android terminal surfaced, so none is covered here.</li>
+    <li><strong>One rival needs Android 9.</strong> FotoSafe needs Android 9 or later with USB host or OTG support — the K1 runs Android 8.1, so FotoSafe cannot run on a K1 at all. Every other covered iData model runs Android 9 or later, so the floor does not bite there.</li>
+    <li><strong>Anything below Android 7.0 cannot run SnapDisk at all.</strong> The iData 50 runs Android 6.0 in its datasheet, the 55HC runs Android 6.0, and the 95W runs Android 6.0 — but check Settings &gt; About phone if you are unsure: below Android 7.0, SnapDisk cannot install, and the computer copy in Method 4 is the route.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an "iData 95S".</strong> There is no iData 95S in the sources found — the searches for it return Newland's MT95, a different brand's handheld. If a listing offers you an "iData 95S", check the maker before trusting the name, and do not buy accessories for a model that does not exist.</li>
+    <li><strong>Assuming OTG on the iData 95 because the rest of the line has it.</strong> Nine covered models list "OTG Interface: Support" in their datasheets, and the 95 does not — no source found labels the 95's USB port OTG at all. Plug in a drive and look for the mount notification before buying an adapter — a shared brand name is not a promise the oldest model hosts drives.</li>
+    <li><strong>Assuming your K1 has a camera.</strong> The K1's 13 MP camera is optional in its datasheet — a K1 without the camera option takes no photos at all. Check your unit before planning a backup around its camera roll.</li>
+    <li><strong>Assuming your T1 has Google Play because the line goes that high.</strong> The T1 runs Android 9.0 in its Chinese version, with no GMS, and Android 10.0 in its GMS version — check Settings &gt; About phone and look for the Play Store on your unit instead of trusting a version printed for another variant, and sideload the APK if it is absent.</li>
+    <li><strong>Assuming your K1S is on Android 11 because the datasheet lists it.</strong> The K1S datasheet lists Android 9.0 (GMS) and Android 11.0 (GMS) — check Settings &gt; About phone on your unit instead of trusting a version printed for another variant.</li>
+    <li><strong>Assuming a microSD card is the fallback.</strong> No source found states microSD support or a microSD capacity for any covered iData model — so do not buy a card as the backup plan for an iData terminal until your own unit's manual confirms the slot exists.</li>
+    <li><strong>Assuming your terminal charges while the drive is connected.</strong> The drive occupies the terminal's only USB-C port while it copies, so on the T1, T1 Pro, T3 and iData 95 charge it fully before a long backup instead of counting on charging mid-backup. The K1, K3S, K8, K8 Pro and K8 Pro Cold have a separate charging port — 2-pin on the K1, 8-pin on the others — so those five can charge while the drive is connected.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google Drive and Google Photos back your terminal up to Google's servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup. And Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Mistaking iData's developer tools for a photo backup.</strong> The iScan API and Device API are development kits for building scanning and device-management apps on the terminal — they do not copy your camera roll to a drive. If the drive and the terminal are all you have and you want files you can open anywhere, a phone-to-USB copy is the route, not a scanner SDK.</li>
+    <li><strong>Mistaking a spec sheet or a manual for a phone-to-USB guide.</strong> The datasheets and the user manuals are real documents — but they only list an Android version, a processor, a camera, or an OTG interface line. None of them describes copying your camera roll straight to a USB drive from the terminal. The generic Android guide in the search results is the closest thing to a phone-to-USB guide, and it says nothing about iData.</li>
+    <li><strong>Mistaking a drive-locked app for a general backup.</strong> Photo Backup Stick DC is a real one-tap backup app — but it only works with genuine Photo Backup Stick OTG drives. If the drive you already own is any other brand, that app cannot use it: SnapDisk, Photos to USB, and FotoSafe work with any drive.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> Drag-and-drop through a Windows PC works — but it needs the PC in between. If the terminal and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 19, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying. On an iData terminal the cloud routes are Google Photos and Google Drive — and Google Photos' "Storage saver" setting compresses photos, which is the one place quality actually gets lost.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the terminal — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Moving instead of copying.</strong> A file manager's Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the terminal. Copy first, verify, then delete.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn't a backup — it's a chore you will skip. Automate the copy, check it on the drive, then delete from the terminal.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the terminal. You delete the originals yourself, after you check the copy. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos from Android to a USB drive automatically (no manual copy)</a>, and <a href="bartec-photos-to-usb.html">Back up Bartec photos to a USB drive (no computer)</a> — the rugged-phone guide for Bartec's intrinsically safe line.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
