@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Razer photos to a USB drive (no computer)</title>
+<meta name="description" content="Back up Razer photos to a USB drive without a computer — both Razer phones clear Android 7.0, so SnapDisk runs on each one.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/razer-photos-to-usb.html">
+<meta property="og:title" content="Back up Razer photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up Razer photos to a USB drive without a computer — both Razer phones clear Android 7.0, so SnapDisk runs on each one.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/razer-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/razer-photos-to-usb.html#article",
+      "headline": "Back up Razer photos to a USB drive (no computer)",
+      "description": "Back up Razer photos to a USB drive without a computer — both Razer phones clear Android 7.0, so SnapDisk runs on each one.",
+      "datePublished": "2026-11-20",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/razer-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/razer-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up Razer photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, on both Razer phones: each one clears Android 7.0 and lists USB OTG Yes, so a flash drive plugs straight in and the file-manager copy in Method 2 works on both. The one-tap backup in Method 1 is proven on both too — they both clear Android 7.0 and list OTG Yes. A microSD card fits both phones for certain, so the card-reader route in Method 4 works on both as well."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. A file-manager copy moves the original files as they are — it never recompresses or resizes — so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use SnapDisk on a Razer phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes on both Razer phones: the Razer Phone and the Razer Phone 2 both clear SnapDisk's Android 7.0 minimum — the lowest runs Android 7.1.1 — and both list USB OTG Yes, so the one-tap backup is proven on each one of them. SnapDisk's free version backs up manually up to 5 GB per run and Pro is a one-time $9.99 purchase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later, which both covered Razer phones clear — the lowest runs Android 7.1.1 — so on a Razer phone the APK installs on both, and the one-tap backup is proven on both."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/razer-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up Razer photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/razer-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up Razer photos to a USB drive (no computer)</h1>
+  <p class="dek">Razer made two phones — the Razer Phone, launched in November 2017 as the gaming company&#x27;s first smartphone, with a 120Hz display, a Snapdragon 835 and 8 GB of RAM — and the Razer Phone 2, launched in October 2018 with a Snapdragon 845, wireless charging and an IP67 rating — and the line ended there: both are discontinued, Razer lists the Phone 2 as end of life, and Android 9 is the official software endpoint for both. The covered models are the two phones: the Razer Phone (2017) and the Razer Phone 2 (2018) (Phone; Phone 2). Razer has no phone-to-USB backup tool of its own: no Razer-specific backup advice turned up in any source beyond a computer copy, Google Drive or Google Photos — the closest thing is the per-model backup FAQ, which names the computer copy as the most economical method. Fourteen honest caveats up front: both clear Android 7.0 — the lowest runs Android 7.1.1 — so SnapDisk installs on both, and there is no below-7.0 phone in this article; the one-tap route is proven on both — each one clears the floor and lists USB OTG Yes; the Phone&#x27;s microSD ceiling is three numbers — up to 2 TB per Razer&#x27;s own spec sheet, 9to5Google and the user manual, up to 512 GB per gsmarena.com.bd, and 256 GB per phoneopinions; the Phone 2&#x27;s microSD ceiling is three numbers too — up to 1 TB per Notebookcheck, Android Authority and Tom&#x27;s Hardware, up to 512 GB per Smartprix and TechEngage, and up to 2 TB per Gizguide; the Phone&#x27;s USB version is contested — Notebookcheck and NamuWiki say USB 3.1 Gen1, while gsmarena.com.bd lists Type-C 1.0; the Phone 2&#x27;s USB port is 2.0 per Notebookcheck — slower than the first Phone&#x27;s 3.1 Gen1; VaultDrive needs Android 8 or later per its own site, so the Phone 2 clears the version floor on shipped software while the Phone on 7.1.1 does not — it clears only after the Oreo update — and AppBrain lists 12.1 or later, which neither clears, since Android 9 is the endpoint for both; FotoSafe needs Android 9 or later with USB host or OTG support, so neither clears the version floor on shipped software — but both received official Android 9 Pie updates, the Phone 2 in February 2019 and the Phone in August 2019 — so on an updated unit FotoSafe is proven on both; a microSD card fits both phones for certain — each has a dedicated slot — so the card-reader route is proven on both, unlike RedMagic, where it is proven on none of the fourteen; both take USB Type-C, so a USB-C flash drive plugs straight into either of them and there is no micro-USB adapter question anywhere in this article; the file manager on a Razer phone is Files, or Files by Google, per devicesfaq — so Method 2 names it directly; Razer runs near-stock Android with Nova Launcher out of the box, so there is no Razer skin to learn around; the first Phone&#x27;s microSD slot does not support the exFAT format per NamuWiki — so a card formatted exFAT may not mount in it; and the search results for this query are five results — a Techwalla camera guide, an AppBrain app listing, an unanswered.io guide, a sekin.in guide and a thegadgetians.com guide — not one of them is a Razer-specific phone-to-USB photo-backup guide at all. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 20, 2026 · 6 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> The honest answer first: both covered Razer phones clear Android 7.0 — the lowest runs Android 7.1.1 — so SnapDisk installs on both of them, and the one-tap backup is proven on both outright: each one clears the floor and lists USB OTG Yes. There is no below-7.0 phone in this article and no mounting test to run. A microSD card fits both phones for certain, so the card-reader route is proven on both too — unlike RedMagic, where it is proven on none of the fourteen. The copies are the original files either way: a file-manager copy moves the files as they are, never recompresses them, and the only place quality gets lost is a cloud backup with a &quot;Storage saver&quot; setting. As of November 20, 2026, no top search result for this query is a Razer-specific phone-to-USB photo-backup guide at all: the top results are five generic Android guides.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search &quot;back up Razer photos to USB drive without computer&quot; and there is no Razer-specific phone-to-USB photo-backup guide in the top results at all — not one result is a guide for backing up photos from a Razer phone to a USB drive. The exact query returned five results, all generic Android:</p>
+  <ul>
+    <li><strong>techwalla.com, &quot;How to Move Pictures from Camera to Flash Drive With No Computer&quot;</strong> (<a href="https://www.techwalla.com/articles/how-to-move-pictures-from-camera-to-flash-drive-with-no-computer">How to Move Pictures from Camera to Flash Drive With No Computer</a>) — move pictures from a digital camera to a flash drive without a computer: buy a combination memory card reader and USB flash drive, remove the memory card from the camera, place it in the card reader, and let the reader transfer the pictures onto the flash drive. A camera guide, not a phone guide — it says nothing about Razer, and nothing about a phone at all.</li>
+    <li><strong>appbrain.com, &quot;Photos to USB: OTG Backup&quot;</strong> (<a href="https://www.appbrain.com/app/photos-to-usb-otg-backup/com.arzdrz.photos_to_usb">Photos to USB: OTG Backup</a>) — back up every photo and video on your phone to a USB pen drive, with one tap: plug a pen drive into your phone, a USB-C drive goes straight in and an older one needs an OTG adapter, and one tap copies the gallery onto it; no internet, no cloud, no account; FAT32 drives cannot hold a single file over 4 GB, so very long videos need an exFAT drive; free, with ads, and a one-time purchase removes the ads for good. A rival app listing, not a guide — and it says nothing about Razer. Note it anyway: a real one-tap rival exists, so SnapDisk is not the only one-tap option — what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, and no ads, with a free 5 GB per run.</li>
+    <li><strong>unanswered.io, &quot;How do I transfer photos from an Android phone to a USB flash drive?&quot;</strong> (<a href="https://unanswered.io/guide/transfer-photos-android-phone-to-usb-flash-drive">How do I transfer photos from an Android phone to a USB flash drive?</a>) — connect the flash drive to the phone and use a file manager to copy or move the pictures, without a computer or an internet connection, provided the phone supports the external drive: a USB-C flash drive plugs straight in, a USB-A drive needs an OTG adapter, then open Files, My Files or File Manager, find the DCIM folder, select the pictures and choose Copy — not Move — so the originals remain on the phone until you verify the backup. A generic Android guide — it says nothing about Razer.</li>
+    <li><strong>sekin.in, &quot;Transfer Photos From Android to a USB Flash Drive&quot;</strong> (<a href="https://sekin.in/how-to-transfer-pictures-from-android-to-a-usb-flash-drive/">Transfer Photos From Android to a USB Flash Drive</a>) — copy pictures directly from most compatible Android phones to a USB flash drive without a computer or internet connection: a USB-C flash drive, or a USB-A drive through a USB-OTG data adapter, then Files by Google to select the pictures and choose Copy — not Move — so the originals remain on the phone until you verify the backup. A generic Android guide — it says nothing about Razer.</li>
+    <li><strong>thegadgetians.com, &quot;How to Transfer Files From Phone to USB Without Computer: Ultimate Guide&quot;</strong> (<a href="https://thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/">How to Transfer Files From Phone to USB Without Computer: Ultimate Guide</a>) — transfer files from a phone to a USB drive without a computer: on Android, connect a USB drive with an OTG adapter that fits the phone&#x27;s charging port, open the file manager, select and copy files, then paste them onto the USB drive and safely eject it; on iPhone, use a Lightning-to-USB adapter instead. A generic Android and iPhone guide — it says nothing about Razer.</li>
+    <li><strong>Cloud routes</strong> — Razer offers no backup tool to a USB drive at all — no Razer-specific backup advice turned up in any source beyond a computer copy, Google Drive or Google Photos. The per-model backup FAQ names the computer copy as the most economical method, Google Drive as the default cloud service, and Google Photos for photos alone. The Razer Phone backup guide says the same: enable &quot;Back up to Google Drive&quot; in Settings &gt; System &gt; Advanced &gt; Backup, and manually upload larger files such as videos and documents to Google Drive. None of these writes your photos as plain files to a USB drive automatically.</li>
+    <li><strong>VaultDrive (via coticsy.com)</strong> (<a href="https://coticsy.com/vaultdrive.html">VaultDrive: Back Up Phone Photos to a USB Drive, No Computer</a>) — plug a flash drive or SSD into your iPhone or Android phone, choose what to back up and tap Start; VaultDrive copies your original photos, videos and files straight to the drive. Free to try, Pro is $19.99 once, no account; free for up to 200 files or 2 GB per backup; needs iOS 17 or later, or Android 8 or later. A rival app page, not a guide — and it says nothing about Razer. Note the split: VaultDrive needs Android 8, so the Phone 2 on 8.1 clears the version floor while the Phone on 7.1.1 does not — the Phone clears it only after the Oreo update.</li>
+    <li><strong>VaultDrive (via appbrain.com)</strong> (<a href="https://www.AppBrain.com/app/vaultdrive-usb-photo-backup/com.coticsy.vaultdrive">VaultDrive: USB Photo Backup</a>) — VaultDrive: USB Photo Backup is a photography app developed by Coticsy; 870 installs; app size 28.9 MB; needs Android 12.1+; version 1.0.7, last updated 3 November 2026; launched May 2026. An app listing, not a guide — and the source for the Android 12.1 floor, which neither Razer phone clears, since Android 9 is the endpoint for both.</li>
+    <li><strong>FotoSafe (via fotosafe.weidisoft.net)</strong> (<a href="https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/">Back up Android photos to USB | FotoSafe</a>) — back up Android photos to a USB drive without a computer; you need Android 9 or later with USB host/OTG support, a USB drive with enough free capacity, and a data-capable OTG adapter. A rival app guide, not a Razer guide — and the source for the Android 9 floor, which neither phone clears on shipped software — but both received official Android 9 Pie updates, so on an updated unit FotoSafe is proven on both.</li>
+    <li><strong>Phone (via 9to5google.com)</strong> (<a href="https://9to5google.com/guides/razer-phone/">Razer Phone</a>) — Razer&#x27;s official specs for the Phone: Android 7.1.1 with Oreo coming in Q1 of 2018, a 5.72-inch IGZO LCD with a 120Hz refresh rate, a 12 MP f/1.75 wide-angle and 12 MP f/2.6 telephoto primary camera with dual PDAF, an 8 MP f/2.0 front camera, a Snapdragon 835, 64 GB of UFS storage, expandable storage up to microSD class 10, up to 2 TB, 8 GB of RAM, a 4000 mAh battery, and USB Type-C. A spec page, not a guide — and the source for the Phone&#x27;s Android 7.1.1, its cameras, its 2 TB card ceiling and its USB Type-C.</li>
+    <li><strong>Phone (via notebookcheck.net)</strong> (<a href="https://www.notebookcheck.net/Razer-Phone-2017-Smartphone-Review.293210.0.html">Razer Phone 2017 Smartphone Review</a>) — the Phone runs Android 7.1 Nougat, on a Snapdragon 835 with 8 GB of RAM and 64 GB of UFS 2.1 storage, with a microSD card reader (class 10, 2 TB max.), a USB 3.0 / 3.1 Gen1 port, and a 4000 mAh battery; the microSD card can be formatted as internal or external storage. A review, not a guide — and a second source for the Phone&#x27;s Android 7.1.1 and its 2 TB card ceiling, plus the source for its USB 3.1 Gen1.</li>
+    <li><strong>Phone (via gadgets360.com)</strong> (<a href="https://www.gadgets360.com/razer-phone-4491/amp">Razer Phone</a>) — the Phone runs Android 7.1.1 and is powered by a 4000 mAh non-removable battery; it packs 64 GB of inbuilt storage that can be expanded via microSD card up to 2000 GB; connectivity options include Wi-Fi, GPS, NFC, USB OTG, 3G and 4G. A spec page, not a guide — and the source for the Phone&#x27;s USB OTG Yes, plus a third source for its 2 TB card ceiling.</li>
+    <li><strong>Phone (via gsmarena.com.bd)</strong> (<a href="https://www.gsmarena.com.bd/razer-phone/">Razer Phone Full Specifications</a>) — the Phone runs Android 7.1.1 Nougat, upgradable to Android 8.1, on a Snapdragon 835, with 8 GB of RAM, 64 GB of internal storage, external storage microSD up to 512 GB on a dedicated slot, a USB Type-C 1.0 reversible connector, and a 4000 mAh battery. A spec page, not a guide — and the source that disagrees with Razer&#x27;s own spec sheet on the Phone&#x27;s card ceiling, saying 512 GB where Razer says 2 TB, and on its USB version, saying Type-C 1.0 where Notebookcheck says 3.1 Gen1.</li>
+    <li><strong>Phone (via phoneopinions.com)</strong> (<a href="https://phoneopinions.com/razer-phone-specs-review-price-release-date-pros-cons-2118/">Razer Phone Specs, Review, Price, Release Date, Pros and Cons</a>) — the Phone runs Android 7.1.1 Nougat on a Snapdragon 835, with 8 GB of RAM, 64 GB of inbuilt storage, storage upgrade 256 GB via microSD card, and a USB Type-C port. A spec page, not a guide — and the source that disagrees with Razer&#x27;s own spec sheet on the Phone&#x27;s card ceiling a second way, saying 256 GB.</li>
+    <li><strong>Phone (via themobileindian.com)</strong> (<a href="https://www.themobileindian.com/product-finder/product/razer-phone">Razer Phone</a>) — the Phone runs Android 7.1.1, upgradable to Android 8.1 Oreo, on a Snapdragon 835 with 8 GB of RAM and 64 GB of UFS storage, expandable to 2 TB via a microSD card slot, with a 4000 mAh battery and a USB Type-C port. A spec page, not a guide — and a second source for the Phone&#x27;s Oreo upgrade path and its 2 TB card ceiling.</li>
+    <li><strong>Phone (via en.namu.wiki)</strong> (<a href="https://en.namu.wiki/w/Razer%20Phone">Razer Phone</a>) — the Phone launched with Android 7.1.1 Nougat, uses USB Type-C supporting up to USB 3.1 Gen1, expands with a microSD card, but does not support the exFAT format; the Android 9.0 Pie upgrade was carried out on August 19, 2019. A spec page, not a guide — and a second source for the Phone&#x27;s USB 3.1 Gen1, the source for its no-exFAT card slot, and a second source for its Pie update date.</li>
+    <li><strong>Phone 2 (via notebookcheck.net)</strong> (<a href="https://www.notebookcheck.net/Razer-Phone-2.339801.0.html">Razer Phone 2</a>) — the Phone 2 runs Android 8.1 Oreo, on a Snapdragon 845 with 8 GB of RAM and 64 GB of UFS 2.1 storage, with a microSD card reader up to 1 TB, 1 USB 2.0 port, a 4000 mAh battery, wireless charging, and an IP67 rating. A spec page, not a guide — and the source for the Phone 2&#x27;s Android 8.1, its 1 TB card ceiling and its USB 2.0 port.</li>
+    <li><strong>Phone 2 (via gsmarena.com)</strong> (<a href="https://www.gsmarena.com/razer_phone_2-9363.php">Razer Phone 2</a>) — the Phone 2 runs Android 8.1 Oreo, upgradable to Android 9.0 Pie, on a Snapdragon 845, with 8 GB of RAM, 64 GB of internal storage, a microSDXC dedicated card slot, a USB Type-C port, and a 4000 mAh battery. A spec page, not a guide — and the source for the Phone 2&#x27;s Android 8.1 and its upgrade path to 9.0, plus its dedicated card slot.</li>
+    <li><strong>Phone 2 (via smartprix.com)</strong> (<a href="https://www.smartprix.com/mobiles/razer-phone-2-ppd13pry50z7">Razer Phone 2</a>) — the Phone 2 runs Android 8.1 Oreo on a Snapdragon 845 with 8 GB of RAM and 64 GB of storage; it has a 12 MP + 12 MP dual rear camera and an 8 MP front camera, a 4000 mAh battery with fast charging, a dedicated memory card slot up to 512 GB, and USB on-the-go among its notable features. A spec page, not a guide — and the source for the Phone 2&#x27;s USB on-the-go and its cameras, plus the source that disagrees with Notebookcheck on its card ceiling, saying 512 GB where Notebookcheck says 1 TB.</li>
+    <li><strong>Phone 2 (via gizguide.com)</strong> (<a href="https://www.gizguide.com/2018/10/razer-phone-2-official-specs.html">Razer Phone 2 with RGB backlighting, wireless charging and water resistance launched!</a>) — the Phone 2 runs Android 8.1 Oreo on a Snapdragon 845 with 8 GB of RAM and 64 GB of UFS storage expandable via microSD card slot up to 2 TB, with OTG and NFC among its connectivity and a USB Type-C port. A launch report, not a guide — and the source that disagrees with Notebookcheck and Smartprix on the Phone 2&#x27;s card ceiling a second way, saying 2 TB, plus a second source for its OTG.</li>
+    <li><strong>Phone 2 (via androidauthority.com)</strong> (<a href="https://www.androidauthority.com/razer-phone-2-specs-911204/">Razer Phone 2 specs</a>) — the Phone 2 has a 5.72-inch IGZO LCD at 1440 x 2560 with 120Hz, a Snapdragon 845, 8 GB of RAM, 64 GB or 128 GB of UFS storage, microSD up to 1 TB, a 4000 mAh battery with Qi fast wireless charging, USB Type-C, and Android 8.1 Oreo. A spec page, not a guide — and a second source for the Phone 2&#x27;s 1 TB card ceiling.</li>
+    <li><strong>Phone 2 (via tomshardware.com)</strong> (<a href="https://www.tomshardware.com/news/razer-phone-2-price-specs-details,37914.html">Razer Phone 2 Brings Chroma, Vapor Chamber Cooling</a>) — the Phone 2 has a Snapdragon 845, 8 GB of RAM, 64 GB of UFS storage with up to 1 TB microSD supported, a 5.7-inch IGZO LCD at 1440 x 2560 with 120Hz, a 4000 mAh battery, and Android 8.1. A launch report, not a guide — and a third source for the Phone 2&#x27;s 1 TB card ceiling.</li>
+    <li><strong>Phone 2 (via techengage.com)</strong> (<a href="https://techengage.com/razer-phone-2-ip67-wireless-charging/">Razer Phone 2 unveiled - IP67 with wireless charging</a>) — the Phone 2 runs Android 8.1 Oreo on a Snapdragon 845 with 8 GB of RAM and 64 GB of internal storage, a card slot up to 512 GB on a dedicated slot, and a USB Type-C 1.0 reversible connector. A spec page, not a guide — and a second source for the Phone 2&#x27;s 512 GB card ceiling.</li>
+    <li><strong>Phone vs Phone 2 (via gsmarena.com)</strong> (<a href="https://www.gsmarena.com/compare.php3?idPhone1=8923&amp;idPhone2=9363&amp;idPhone3=9224">Compare Razer Phone vs. Razer Phone 2 vs. Asus ROG Phone ZS600KL</a>) — the Phone runs Android 7.1.1 Nougat, upgradable to Android 9.0 Pie, and the Phone 2 runs Android 8.1 Oreo, upgradable to Android 9.0 Pie; both are discontinued, both have a microSDXC dedicated slot and 64 GB of internal storage with 8 GB of RAM, and both take USB Type-C. A comparison page, not a guide — and the source for both phones&#x27; upgrade paths to Android 9.0 and their discontinued status.</li>
+    <li><strong>Phone Pie update (via nerdschalk.com)</strong> (<a href="https://nerdschalk.com/razer-phone-update/">Razer Phone Pie update news and more</a>) — on August 19, 2019, after a long wait, the Android Pie update became available for the original Razer Phone handsets, at least in the UK and the US; the update installs the new build number P-MR0-RC007-CKH-N.7063. An update tracker, not a guide — and the source for the Phone&#x27;s Pie rollout date.</li>
+    <li><strong>Phone Pie update (via androidcentral.com)</strong> (<a href="https://www.androidcentral.com/razer-phone-finally-receiving-android-9-pie-update">Razer Phone is finally getting its Android 9 Pie update</a>) — Razer&#x27;s first gaming phone has finally started receiving the Android 9 Pie update, with the July Android security patch, Digital Wellbeing support and several bug fixes; Razer had launched the phone in 2017 with Android 7.1 Nougat out of the box. A news report, not a guide — and a second source for the Phone&#x27;s Pie update.</li>
+    <li><strong>Phone 2 Pie update (via notebookcheck.net)</strong> (<a href="https://www.notebookcheck.net/Razer-Phone-2-owners-can-expect-to-receive-Android-Pie-starting-February-27.410435.0.html">Razer Phone 2 owners can expect to receive Android Pie starting February 27</a>) — the Razer Phone 2 is scheduled to start receiving an update to Android 9 Pie from February 27 onwards, for unlocked devices first, with carrier devices later; the same report offers March 14 for carrier devices, and AT&amp;T from April 4. A news report, not a guide — and the source for the Phone 2&#x27;s Pie rollout date.</li>
+    <li><strong>Phone 2 Pie update (via geeky-gadgets.com)</strong> (<a href="https://www.geeky-gadgets.com/razer-phone-2-gets-android-9-0-pie-update-28-02-2019/">Razer Phone 2 gets Android 9.0 Pie update</a>) — Razer has started to roll out the Android 9.0 Pie software update to the Phone 2 as an over-the-air update; the update has been released for the unlocked version of the handset, and it will be available for the AT&amp;T version of the device on the 4th of April. A news report, not a guide — and a second source for the Phone 2&#x27;s Pie rollout.</li>
+    <li><strong>Razer Phone backup advice (via devicesfaq.com)</strong> (<a href="https://www.devicesfaq.com/en/frequently-asked-questions/razer-phone">Frequently asked questions Razer Phone</a>) — to back up a Razer Phone, the most economical method is to connect the phone to a computer using the USB cable and make a copy of the files using the file browser; for a cloud backup the default built-in service on Android is Google Drive; for photos and videos alone, Google Photos uploads them automatically when on Wi-Fi. Downloads live in an app called Files, previously known as Files by Google. A per-model FAQ, not a phone-to-USB guide — and the source that names the file manager on a Razer phone: Files, or Files by Google — and the closest thing to Razer-specific backup advice, which still offers no phone-to-USB route.</li>
+    <li><strong>Razer Phone backup (via manuals.plus)</strong> (<a href="https://manuals.plus/razer/how-to-back-up-data-on-the-razer-phone.pdf">How to back up data on the Razer Phone</a>) — with Android Pie installed, back up the Razer Phone by going to Settings &gt; System &gt; Advanced &gt; Backup and enabling &quot;Back up to Google Drive&quot;, then signing in to a Google account; larger files such as videos and documents can be manually uploaded to Google Drive. A manual, not a phone-to-USB guide — and a second source that Razer&#x27;s own backup advice is the cloud, never a USB drive plugged into the phone.</li>
+    <li><strong>Phone 2 end of life (via umatechnology.org)</strong> (<a href="http://umatechnology.org/razer-phone-2-review-is-this-discontinued-gaming-phone-worth-buying-in-2026/">Razer Phone 2 in 2026: Specs, Used-Buying Advice and Verdict</a>) — the Phone 2 launched with Android 8.1 Oreo and later received an official update to Android 9 Pie; Android 9 is the official software endpoint, Razer lists the phone as end of life, and there is no current Razer phone lineup or official replacement. A buying guide, not a phone-to-USB guide — and the source that the Razer phone line ended with the Phone 2.</li>
+  </ul>
+  <p>None of them is a Razer-specific phone-to-USB photo-backup guide, and none of them offers an automated Razer photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 20, 2026 — with the honest finding that the automated part is proven on both covered Razer phones, and the card-reader route is proven on both too.</p>
+
+  <h2>What you need</h2>
+  <p>Both clear the version test; neither runs below Android 7.0. The OTG test passes on both, with no contest anywhere. What you need for each:</p>
+  <ul>
+    <li><strong>Phone (2017)</strong> — Android 7.1.1 with near-stock Android and Nova Launcher out of the box, Qualcomm Snapdragon 835, 8 GB of RAM, 64 GB of UFS storage, 12 MP f/1.75 wide-angle + 12 MP f/2.6 telephoto rear camera with dual PDAF and an 8 MP f/2.0 front camera, 4000 mAh battery, USB Type-C 3.1 Gen1 per Notebookcheck and NamuWiki — Type-C 1.0 per gsmarena.com.bd. Android 7.1.1 clears SnapDisk&#x27;s 7.0 floor — but it sits below VaultDrive&#x27;s 8.0 floor and FotoSafe&#x27;s 9.0 floor on shipped software. It does not stay there: the Oreo update to 8.1 clears VaultDrive&#x27;s own-site floor, and the official Android 9 Pie update of August 19, 2019 clears FotoSafe&#x27;s floor — so on an updated unit both rivals are proven too. The card ceiling is three numbers — up to 2 TB per Razer&#x27;s own spec sheet, 9to5Google and the user manual, up to 512 GB per gsmarena.com.bd, and 256 GB per phoneopinions — but the slot itself is not contested: every source agrees there is a dedicated microSD slot, so the card-reader route is proven on this phone. This is a definite answer on OTG — and it is Yes: Gadgets360 lists USB OTG. The one-tap backup in Method 1 is proven on this phone.</li>
+    <li><strong>Phone 2 (2018)</strong> — Android 8.1 with near-stock Android and Nova Launcher, Qualcomm Snapdragon 845, 8 GB of RAM, 64 GB of UFS 2.1 storage — Android Authority lists a 128 GB option as well — 12 MP + 12 MP dual rear camera and 8 MP front camera, 4000 mAh battery with wireless charging, IP67 dust and water resistance, USB Type-C 2.0 per Notebookcheck. Android 8.1 clears SnapDisk&#x27;s 7.0 floor and VaultDrive&#x27;s 8.0 floor — but it sits below AppBrain&#x27;s 12.1 floor for VaultDrive and below FotoSafe&#x27;s 9.0 floor on shipped software. It does not stay there either: the official Android 9 Pie update, rolling out from February 27, 2019, clears FotoSafe&#x27;s floor — so on an updated unit FotoSafe is proven here too — while AppBrain&#x27;s 12.1 floor stays out of reach, since Android 9 is the endpoint. The card ceiling is three numbers — up to 1 TB per Notebookcheck, Android Authority and Tom&#x27;s Hardware, up to 512 GB per Smartprix and TechEngage, and up to 2 TB per Gizguide — but the slot itself is not contested: every source agrees there is a dedicated microSDXC slot, so the card-reader route is proven on this phone. This is a definite answer on OTG — and it is Yes: Smartprix lists USB on-the-go, and Gizguide lists OTG among its connectivity. The one-tap backup in Method 1 is proven on this phone.</li>
+  </ul>
+
+  <p><strong>Two Razer specifics.</strong> Both covered Razer phones clear Android 7.0 — the lowest runs Android 7.1.1 — so SnapDisk installs on both, and the one-tap backup is proven on both — each one clears the floor and lists USB OTG Yes, with no contest and no mounting test anywhere in this article. No covered phone runs below Android 7.0, so there is no blocked model at all. The ports do not split by age: both take USB Type-C, so a USB-C flash drive plugs straight into either of them and there is no micro-USB adapter question anywhere. A microSD card fits both phones for certain — each has a dedicated slot, with only the ceiling contested — so the card-reader route is proven on both, unlike RedMagic, where it is proven on none of the fourteen. The updates are the twist of this article: both phones shipped below FotoSafe&#x27;s Android 9 floor and one shipped below VaultDrive&#x27;s Android 8 floor, but both received official Android 9 Pie updates — the Phone 2 in February 2019, the Phone in August 2019 — so on updated units every floor in this article is cleared except AppBrain&#x27;s 12.1 for VaultDrive, which neither can ever reach.</p>
+
+  <h2>Method 1: SnapDisk — proven on both</h2>
+  <p>On both covered phones SnapDisk installs and the drive mounts, so the one-tap backup works as designed. There is no test phone and no blocked phone in this article:</p>
+  <ol>
+    <li><strong>Check your Android version first.</strong> Settings &gt; About phone shows the version. Both covered Razer phones run Android 7.1.1 or newer, so if yours is one of the two, you clear the floor: skip to step 2. If it says 6.0.1 or lower, you are not on a covered model — check the model name before buying a drive expecting the one-tap backup.</li>
+    <li><strong>Install SnapDisk from the GitHub APK.</strong> The Play listing is being prepared, so until then install the v0.1.2 APK from the GitHub release page. It installs on Android 7.0 and later, so it installs on both covered models.</li>
+    <li><strong>Plug in the USB drive.</strong> On both covered phones that is a USB-C flash drive plugged straight in, or a regular USB drive with a USB-C OTG adapter, with the OTG wiring inside it — a plain sync cable is the wrong cable, it connects the phone to a computer, which is the opposite direction.</li>
+    <li><strong>Look for the mount notification.</strong> Tap Backup in the notification and SnapDisk copies the whole camera roll oldest-first in the background, showing progress, speed and ETA, with Pause and Stop. The free version backs up manually up to 5 GB per run; Pro is a one-time $9.99 purchase for auto-backup on connect and unlimited size.</li>
+    <li><strong>Check the copy, then delete from the phone if you need the space.</strong> SnapDisk verifies every file&#x27;s size after copying, but open a few photos on the drive yourself before deleting anything. If a single file is over 4 GB, FAT32 will refuse it, so exFAT is the safer format for the drive.</li>
+  </ol>
+  <p>This is the only method in this article that takes the whole library in one tap, with progress, pause, resume and verification — and it is proven on both of the covered Razer phones, with no mounting test and no version block anywhere: SnapDisk needs Android 7.0, and the lowest covered Razer runs Android 7.1.1.</p>
+
+  <p>The copies are the original files. SnapDisk streams each file byte-for-byte from the device to the drive — the code reads the file and writes the same bytes out, with no decode, no recompression, and no resize — and then checks that the copy on the drive is the same size as the original. Other apps copy originals byte-for-byte too; what SnapDisk adds is the automated whole-library run: oldest-first order, progress with Pause and Stop, resume where it stopped, and skip-if-already-copied on the next run. If a file is corrupt or too big for FAT32, it&#x27;s retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: the file manager and an OTG adapter (works wherever the drive mounts)</h2>
+  <p>This is the stock route, and it works on both covered phones, because each of them lists USB OTG Yes:</p>
+  <ol>
+    <li><strong>Plug in the USB drive with an OTG adapter.</strong> On both covered phones that is a USB-C OTG adapter, or a USB-C flash drive plugged straight in, with the OTG wiring inside the adapter — a plain sync cable is the wrong cable, it connects the phone to a computer, which is the opposite direction. A notification should appear saying the USB storage was added; tap it to open the drive. If nothing appears, check Settings &gt; Storage for the drive — and if the drive never shows up, the phone does not host it, and Method 3 is the route.</li>
+    <li><strong>Open Files and confirm the USB drive shows up under storage devices.</strong> The file manager on a Razer phone is Files, or Files by Google, per devicesfaq, so open Files on your unit.</li>
+    <li><strong>Go to Internal storage, DCIM, Camera, where your camera photos live.</strong> On the two phones where this method works, the photos are the 12 MP shots from the dual rear camera on both, plus whatever image files sit in the folders you pick.</li>
+    <li><strong>Select the photos (long-press the first, tap the rest, or select all).</strong> Tap Copy, then select the USB drive, and wait for the copy to finish — don&#x27;t unplug the drive until the file manager says it&#x27;s done. Eject the drive from the notification or from Settings &gt; Storage before unplugging it. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos.</li>
+  </ol>
+  <p>This works fine for a one-off copy. Its limits are the reason a backup app exists on the two phones where SnapDisk runs: you pick files one by one, there is no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time photos pile up. And it is proven on both — there is no mounting test in this article.</p>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk&#x27;s Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. Both covered Razer phones clear Android 7.0, so SnapDisk installs on both — and the one-tap route is proven on both: each one lists USB OTG Yes. A microSD card fits both phones, so the card-reader route is proven on both too.</figcaption>
+  </figure>
+
+  <h2>Method 3: through a computer (the reliable route)</h2>
+  <p>If a PC or Mac is handy, this is the route to trust: plug the Razer phone into the computer with its USB cable, tap the USB notification and choose File transfer — and drag the DCIM folder onto the USB drive. This works on both covered models, with no Android-version question and no OTG question at all: the computer reads the phone as storage, and the drive plugs into the computer. The per-model backup FAQ names this the most economical method. Its only cost is the second device in between: if the phone and the drive are all you have, Method 2 is the route on both, since the drive mounts on each of them.</p>
+
+  <h2>Method 4: the microSD card reader route (proven on both)</h2>
+  <p>Both covered Razer phones take a microSD card for certain — each has a dedicated slot — so the card-reader route is proven on both of them, and it needs no OTG, no computer connection to the phone, and no app: 1. Power the phone off and remove the microSD card. 2. Put the card in a USB card reader and plug the reader into a computer, or into a USB drive with a built-in card slot. 3. Copy the DCIM folder from the card to the drive. 4. Put the card back and power the phone on. This is the same route the old phone manuals describe — remove the memory card, place it in a card reader, and let the reader transfer the pictures — and it works identically for a phone card. Three warnings: if the card holds photos the phone has not yet written to it, or photos stored on the phone&#x27;s internal storage rather than the card, those photos are not on the card — check where your photos live first, in the camera app&#x27;s storage setting or in Files. And the card ceiling is contested on both — up to 2 TB, 512 GB or 256 GB on the Phone, up to 1 TB, 512 GB or 2 TB on the Phone 2 — so check your card&#x27;s size against your unit before counting on it holding the whole roll. And one warning specific to the first Phone: its microSD slot does not support the exFAT format per NamuWiki, so format the card FAT32 if the phone is to read it — and FAT32 caps single files at 4 GB. Unlike RedMagic, where the route is proven on none of the fourteen, both Razer phones take a card — so for this brand the card-reader route exists as a real fallback on every model.</p>
+
+  <h2>Method 5: Google Photos, or the cloud — not phone-to-USB plain files</h2>
+  <p>Razer offers no backup tool to a USB drive at all — no Razer-specific backup advice turned up in any source beyond a computer copy, Google Drive or Google Photos — so the stock options are the clouds, and none of them writes your photos as plain files to a USB drive automatically. <strong>1. Google Photos</strong> is the backup for photos alone per the per-model backup FAQ: turn backup on in the Photos app and your photos save to your Google Account — but that is a cloud backup, not a USB copy, and the Storage saver setting compresses photos. <strong>2. Google Drive</strong> is the default built-in cloud backup service on Android per the same FAQ, and the Razer Phone backup guide says to enable &quot;Back up to Google Drive&quot; in Settings &gt; System &gt; Advanced &gt; Backup — but that backs up device data to the cloud, not photos as plain files to a drive. None of them is a one-tap way to copy your camera roll to a drive as plain files. All of them work fine for what they are. Their limit, for photos specifically: none of them gives you a folder of plain photo files on a USB drive you can plug into any computer and open. If what you want is a copy of your photos you can open anywhere, Method 1 or 2 is the route — that is the gap this article fills, as of November 20, 2026.</p>
+
+  <h2>What this does not do</h2>
+  <ul>
+    <li><strong>It does not back up your settings or your contacts.</strong> SnapDisk copies photos, videos, and any files you pick — the files themselves, exactly as they are. App settings, call logs, texts, and your accounts stay with your phone and your Razer account. For those, Android&#x27;s built-in backup is the tool — it backs up personal settings to Google&#x27;s servers with a Google account — not SnapDisk.</li>
+    <li><strong>It does not delete photos from your phone after copying.</strong> Deleting is always your choice, after you check the copy on the drive. SnapDisk never deletes originals — it only copies.</li>
+    <li><strong>It does not install on a phone below Android 7.0.</strong> SnapDisk needs Android 7.0, and no covered Razer phone runs below Android 7.1.1 — the lowest is the Phone on 7.1.1 — so this limit does not bite on either of the two. If your phone runs 6.0.1 or lower, it is not one of the covered models.</li>
+    <li><strong>It does not work if your phone does not host a drive.</strong> Both covered models list USB OTG Yes, so if the drive never mounts on your unit, that settles it for your unit — use Method 3 instead.</li>
+    <li><strong>It does not back up photos from apps that hide them.</strong> Some apps keep photos in private folders SnapDisk cannot read. Those stay on the phone — check each app&#x27;s own export or share option.</li>
+    <li><strong>It does not compress your photos.</strong> It copies the original files byte-for-byte, so the copy is the same size as the original. On both, with their 12 MP dual cameras, that is real storage on the drive — bring a drive with room.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Don&#x27;t move files instead of copying them.</strong> The file manager&#x27;s Move deletes the original as it goes. Copy first, check the copy on the drive, and only then delete the originals from the phone if you need the space.</li>
+    <li><strong>Don&#x27;t unplug the drive until the copy is done.</strong> If the copy is still running — SnapDisk shows progress, speed and ETA — unplugging leaves half-copied files. Wait for it to finish, then eject the drive from the notification or from Settings &gt; Storage before unplugging it.</li>
+    <li><strong>Don&#x27;t buy a micro-USB adapter for your phone&#x27;s port.</strong> Both take USB Type-C, so a USB-C flash drive plugs straight into either of them. A micro-USB adapter does not fit any covered Razer phone.</li>
+    <li><strong>Don&#x27;t buy a card bigger than the contested ceiling without checking your unit.</strong> The Phone&#x27;s ceiling is three numbers — 2 TB, 512 GB or 256 GB — and the Phone 2&#x27;s is three numbers too — 1 TB, 512 GB or 2 TB — so check what your unit accepts before buying the biggest card.</li>
+    <li><strong>Don&#x27;t count on VaultDrive&#x27;s AppBrain floor on either phone.</strong> Both top out at Android 9, below AppBrain&#x27;s 12.1 listing for VaultDrive — so under that stricter listing VaultDrive is not proven on either, even though the one-tap SnapDisk route is.</li>
+    <li><strong>Don&#x27;t count on FotoSafe on shipped software.</strong> Neither phone ships on Android 9 — the Phone ships on 7.1.1, the Phone 2 on 8.1 — so FotoSafe is proven only on a unit that took the official Pie update: February 2019 for the Phone 2, August 2019 for the Phone.</li>
+    <li><strong>Don&#x27;t format the first Phone&#x27;s microSD card exFAT.</strong> Its slot does not support the exFAT format per NamuWiki, so a card formatted exFAT may not mount in it — use FAT32, and remember FAT32 caps single files at 4 GB.</li>
+    <li><strong>Don&#x27;t let one folder hold every photo.</strong> SnapDisk copies oldest-first, and the copy is the same size as the original, so a full camera roll on a phone with a 12 MP dual camera — both — fills a small drive fast. Bring a drive with room, or back up in batches and check the copy before deleting anything.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn&#x27;t a backup — it&#x27;s a copy. A backup finds your photos, copies them all, and tells you when it&#x27;s done. On a Razer phone the honest position is simple: two phones, both clear Android 7.0, both list USB OTG Yes, both take a microSD card — the one-tap backup is proven on both, and the card-reader route is proven on both too.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p><a href="asus-photos-to-usb.html">Back up Asus photos to a USB drive (no computer)</a> is the closest parallel — the Asus ROG Phone is the other gaming-phone line in this series, and on Asus the drive mounts straight away on most models — while on Razer the one-tap route is proven on both phones outright, with no mounting test anywhere.</p>
+
+  <footer>
+    <p>SnapDisk is a free Android app for backing up photos to a USB drive — no ads, no account, no cloud. <a href="index.html">See how it works</a>. · SnapDisk backs up your photos as plain files on a USB drive you hold. · This article was researched from live sources on November 20, 2026. Specs change; check your unit&#x27;s port and Android version before buying anything.</p>
+  </footer>
+</body>
+</html>
