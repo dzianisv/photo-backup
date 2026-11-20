@@ -11290,6 +11290,133 @@ demand is read off competitor install velocity instead (see
   Article published Nov 19, 2026 (WL-146, 114th how-to):
   docs/wileyfox-photos-to-usb.html.
 
+### 114. "back up Volla photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Volla-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Volla-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and all seven covered
+  Volla phones clear Android 7.0 and six of the seven list
+  USB OTG Yes, so the one-tap route is proven on six of
+  them, with the original Volla Phone the only unproven
+  one.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  eyefi.com, "What's the best way to move photos from my
+  Android phone to a flash drive?"
+  (eyefi.com/t/what-s-the-best-way-to-move-photos-from-my-android-phone-to-a-flash-drive/1121
+  — your best bet for transferring photos from your Android
+  phone to a flash drive is to use an OTG cable; plug the
+  flash drive into the OTG cable, plug the cable into your
+  phone, open your file manager, navigate to DCIM, select
+  the photos and copy them to the flash drive. A generic
+  Android forum thread — it says nothing about Volla);
+  fonelab.com, "How to Transfer Photos from Android to
+  Flash Drive in 3 Easy Ways"
+  (fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html
+  — transfer photos from an Android phone to a flash drive
+  using an OTG adapter and a USB cable, with FoneLab
+  HyperTrans, or with Samsung Smart Switch; with the OTG
+  adapter, plug the flash drive into the adapter, plug it
+  into your Android phone, open the Files app, locate the
+  photos and tap Move or Copy. A generic Android guide — it
+  says nothing about Volla);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash
+  drive by connecting them directly with an OTG adaptor,
+  using a PC as a middleman via USB File Transfer mode, or
+  downloading them wirelessly through Google Drive or
+  AirDroid; for direct transfers without a computer, connect
+  a USB-C OTG adaptor from the phone to the flash drive and
+  copy files using the USB Drive option in the Android
+  notification tray. A generic Android guide — it says
+  nothing about Volla);
+  softhandtech.com, "Easy Guide: Transferring Pictures from
+  Your Phone to a Flash Drive"
+  (softhandtech.com/how-do-you-transfer-pictures-from-your-phone-to-a-flash-drive/
+  — to transfer pictures from your phone to a flash drive,
+  connect your phone to a computer using a USB cable and
+  copy the pictures onto the flash drive, or use a USB flash
+  drive that is compatible with your phone to directly
+  transfer the pictures without using a computer; you will
+  need a USB OTG adapter, and not all phones support USB OTG
+  functionality, so check if your device is compatible
+  first. A generic Android guide — it says nothing about
+  Volla).
+  A second search added a YouTube OTG video and a Coolmuster
+  guide, both generic Android too — no Volla-specific guide
+  turned up in either search.
+- The one-tap route is proven on six of seven phones — the
+  Phone X, Phone 22, Phone X23, Quintus, Plinius and
+  Plinius Plus all list USB OTG Yes — but on the original
+  Volla Phone no source states OTG at all, so on it the
+  drive mounting is the test; all seven clear Android 7.0
+  — the lowest is the original Phone on Android 9 — so
+  SnapDisk installs on all seven, from the GitHub APK,
+  since Volla OS ships without the Google Play Store, and
+  on a phone running Ubuntu Touch instead of Volla OS there
+  is no SnapDisk route at all. All seven take USB Type-C —
+  so a USB-C flash drive plugs straight into any of them,
+  with no micro-USB adapter question anywhere. Six of the
+  seven take a microSD card — so the card-reader route in
+  Method 4 is proven on six — but the Quintus takes no card
+  at all, so on it there is no card-reader route either.
+  The Quintus card is disputed in one place — one secondary
+  source says its storage is expandable via microSD, but
+  Volla's own page lists no card slot and Volla's help page
+  gives separate "Quintus without SD card" instructions, so
+  it counts as no card. The Phone X's weight is two numbers
+  — 280 g per hide.me, 270 g per the UBports forum; the
+  Quintus battery is two numbers — 4600 mAh nominal and
+  4700 mAh typical per Volla's own page; the X23 launched
+  with 4 GB of RAM and 64 GB of storage and was then
+  upgraded to 6 GB and 128 GB after community feedback, so
+  the storage figure depends on the batch — and one manual
+  site lists the wrong chipset and battery for it entirely,
+  so that manual is not cited anywhere. The Plinius Android
+  version is the base, not necessarily what is on the phone
+  today — the Oniro project lists Halium 14 for it, Volla
+  OS 15 (Android 15) shipped in September 2025 for the 22,
+  X23 and Quintus, and Volla OS 16 (Android 16) followed in
+  July 2026 for the Plinius too — so a Plinius today may
+  already run 15 or 16. The Phone 22 shipped on Volla OS 11
+  (Android 11) and was later updated to Volla OS 12
+  (Android 12) — a reviewer saw the 11-to-12 update arrive
+  during the review — so a 22 today may run 12, 15 or 16.
+  The Phone X shipped alongside the Volla OS 10 (Android
+  10) release in July 2021, per the Volla blog pairing the
+  X pre-sale with that update and the UBports port using
+  Halium 10. No source found names the file manager on a
+  Volla phone, so Method 2 names it only as your file
+  manager app.
+- VaultDrive needs Android 8 or later per its own site, so
+  all seven clear the version floor — the lowest runs
+  Android 9 — but the drive-hosting condition is proven on
+  six of the seven — so VaultDrive is proven on six of the
+  seven — and AppBrain lists 12.1 or later, which three
+  clear — the Quintus and the two Plinius models on Android
+  14 — so under that stricter listing VaultDrive is proven
+  on three of the seven. FotoSafe needs Android 9 or later
+  with USB host or OTG support, so all seven clear the
+  version floor — the lowest runs Android 9 — and the OTG
+  condition is proven on six of the seven — so FotoSafe is
+  proven on six of the seven. Volla has no phone-to-USB
+  backup tool of its own — no Volla-specific backup advice
+  turned up in any source beyond a computer copy or its own
+  cloud; the Volla Cloud backup app was planned for beta in
+  late 2024, and the Quintus manual says customers are
+  responsible for data backups. No GSMArena spec page was
+  returned for any covered Volla model in the searches
+  performed, so no GSMArena USB row could be cited for any
+  of them.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-147, 115th how-to):
+  docs/volla-photos-to-usb.html.
+  Fallback for WL-148: Shiftphone — verified absent, no
+  docs/shiftphone-photos-to-usb.html and no searches.md row.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
