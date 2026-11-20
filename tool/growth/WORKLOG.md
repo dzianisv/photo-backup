@@ -1,3 +1,84 @@
+## WL-157 — Back up Oscall photos to USB article, 125th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Lead committed locally on branch wl-157-oscall (article
+  fc48733, supporting files e9ad33d, worklog this commit, base
+  main f19f215) and did not push; supervisor to push, verify
+  every file by readback, create PR, wait for CI green, and
+  merge. Pre-merge readback on head e9ad33d: feed 125 items
+  incl. Oscall, sitemap 129 URLs incl. Oscall, blog index 125
+  BlogPosting, title 50 chars, meta 134 chars, JSON-LD parses
+  (Article + FAQPage 4 Qs + BreadcrumbList, datePublished
+  2026-11-20), TL;DR present, 1 script tag, 1 H1, 10 H2s,
+  Query 124 row present, only docs/ + tool/growth changed.
+  Query 124 verified by the lead from live evidence (no top
+  result is an Oscall-specific phone-to-USB photo-backup
+  guide); the exact query returned five results (SnapDisk's
+  own generic guides, softhandtech, desnoulez.fr camera-backup
+  guide, Photos to USB app listing) — none is an
+  Oscall-specific phone-to-USB guide; real gap stands.
+  New docs/oscall-photos-to-usb.html ("Back up Oscall photos
+  to a USB drive (no computer)"), following the WL-54–WL-156
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot, with an honest caption).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 50 chars, meta
+  description 134 chars, JSON-LD validated by parse
+  (Article + FAQPage 4 Qs + BreadcrumbList, datePublished
+  2026-11-20); sitemap 129 URLs and feed 125 items; blog
+  JSON-LD counts 125 BlogPosting entries. searches.md Query
+  124 row present ("back up Oscall photos to USB drive
+  without computer" — HOW-TO GAP).
+  Key finding: all thirty covered Oscall phones clear Android
+  7.0, so SnapDisk installs on all thirty; the one-tap route
+  is proven on 22 (OTG Yes), 8 more need the mounting test
+  (C20, C20 Pro, S60 Pro, Tiger 8, Pilot 5, Flat 3C, Flat 3C
+  Mini, Modern 8 — OTG unstated), 0 run below 7.0 as shipped
+  (lowest is Android 11); the C20 Pro carries the article's
+  only USB OTG No listing (FindPare only, found this run,
+  against silence everywhere else), so it stays in the
+  mounting-test group with Methods 3–5 ready. microSD fits
+  all 30 for certain; ceilings stated on 22, contested on 2
+  (C30 256 vs 512 GB, Pilot 3 1 vs 2 TB), unstated on 6. 26
+  USB-C, 3 micro-USB (C20 Pro, C60, S60 Pro), 1 unverified
+  (C20). VaultDrive proven on 30 under its own site's Android
+  8 floor, 21 under AppBrain's 12.1 (20 outright + S70 Pro
+  only on its higher (13) listing); FotoSafe proven on 22.
+  Tablets and the coming-soon Tank 2 excluded. Oscall is
+  Blackview's budget sub-brand, styled OSCAL, launched June
+  2021; first phones C20/C20 Pro; "Only the Brave". S70 Pro
+  is Android 13 per PhoneArena vs 12 per phonesdata and
+  gsm-arena; Pilot 5's launch date is unpublished anywhere
+  found; Flat 1C is DokeOS 3.0 Go per Oscall vs 4.0 Go per
+  manuals.plus; mobilemaya's Modern 8 OTG claim not credited
+  (contradicts itself on the card slot). Oscall's own C80
+  page carries a recall notice (some C80 phones exceed the
+  standard radiation levels).
+  Link verification 57 external hrefs, all fetched live —
+  52/57 live (52x200 first pass, 3x403 bot-blocked but
+  confirmed live via browser.open, 1x000 curl timeout but
+  confirmed live via browser.open); the 1x503 is this
+  article's own canonical URL, not yet published pre-merge —
+  the supervisor's live fetch after merge confirms it.
+  Rival/query links all 200 except AppBrain (403 via curl,
+  live via browser.open: VaultDrive 1.0.7, 870 installs,
+  Android 12.1+, updated 3 Nov 2026; Photos to USB free with
+  ads, one-tap copy).
+  Lead's failed execs: one exec exited 1 mid-chain (a grep
+  with no match in llms-full.txt stopped an && chain; re-run
+  with separate commands, no work lost).
+  Note: llms-full.txt has no full section for the main WL-156
+  UMIDIGI article — only its dek line sits at the end (line
+  1337) with no heading/URL/TL;DR/Search lines. WL-157 added
+  a full Oscall section after Honeywell; the UMIDIGI gap is
+  pre-existing, supervisor to decide whether to backfill.
+  Fallback for WL-158: Leagoo — verified by the lead, no
+  docs/leagoo-photos-to-usb.html and no searches.md row
+  (exact query returns no Leagoo-specific guide in the top
+  results: a LESOGE flash-drive manual, a Dr.Fone guide, an
+  askfilo Q&A and a FoneLab guide, scored Nov 20, 2026).
+
 ## WL-156 — Back up UMIDIGI photos to USB article, 124th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
