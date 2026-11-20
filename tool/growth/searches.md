@@ -12707,6 +12707,127 @@ demand is read off competitor install velocity instead (see
   scored Nov 20, 2026; Maze is a defunct Chinese budget
   brand, 2017–2018, Maze Alpha etc.).
 
+### 128. "back up Maze photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Maze-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Maze-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and three of the
+  four covered Maze phones clear Android 7.0, so
+  the one-tap route is proven on all three outright, with
+  no model needing the mounting test.
+- Current top results (scored Nov 20, 2026, live web
+  search):
+  fotosafe.weidisoft.net, "Back up Android photos to USB"
+  (https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/
+  — back up Android photos to a USB drive without a computer;
+  you need Android 9 or later with USB host/OTG support, a USB
+  drive with enough free capacity, and a data-capable OTG
+  adapter. A rival app guide, not a Maze guide — and the
+  source for the Android 9 floor, which none of the four
+  is proven to clear — the highest shipped version is
+  Android 7.0);
+  forums.macrumors.com, "transfer file to usb stick without
+  computer"
+  (https://forums.macrumors.com/threads/transfer-file-to-usb-stick-without-computer.1853303/
+  — an iPhone 6 Plus owner asking how to move files to a USB
+  stick without a computer or internet. A forum thread about
+  an iPhone, not a Maze guide — and it says nothing about
+  Maze, or about Android at all);
+  coticsy.com, "VaultDrive: Back Up Phone Photos to a USB
+  Drive, No Computer"
+  (https://coticsy.com/vaultdrive.html
+  — plug a flash drive or SSD into your iPhone or Android
+  phone, choose what to back up and tap Start; VaultDrive
+  copies your original photos, videos and files straight to
+  the drive. Free to try, Pro is $19.99 once, no account;
+  free for up to 200 files or 2 GB per backup; needs iOS 17
+  or later, or Android 8 or later. A rival app page, not a
+  Maze guide — and it says nothing about Maze. Note the split:
+  VaultDrive needs Android 8, so none of the four clears the
+  version floor on shipped software — the highest shipped
+  version is Android 7.0 — while AppBrain's 12.1 floor is
+  cleared by none);
+  youtube.com, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (https://www.youtube.com/watch?v=PYcbV25CczI
+  — the best and most direct method for moving photos and
+  videos from any modern Android phone to a USB drive is a USB
+  On-The-Go connection and the phone's built-in file manager
+  app; it needs Android 7.0 or newer, a USB flash drive and an
+  OTG adapter. A generic Android video, not a Maze guide —
+  and it says nothing about Maze);
+  desnoulez.fr, "How to back up camera photos or SD Card
+  without a laptop"
+  (https://www.desnoulez.fr/en/how-to-back-up-camera-photos-while-traveling-no-laptop-needed/
+  — use a smartphone or tablet as a bridge between an SD or
+  CFexpress card and an external SSD via a USB hub, so you can
+  copy RAW or JPEG files to a solid backup drive without a
+  laptop. A camera-card guide, not a phone guide — and it
+  says nothing about Maze).
+  Note: the supervisor's WL-161 fallback note said this query
+  returns SnapDisk's own generic guides; this run's live
+  search (Nov 20, 2026) returned the five results above
+  instead — no Maze-specific guide either way, and no
+  SnapDisk result in this run's top five.
+- The one-tap route is proven on three phones — every one clears
+  Android 7.0 and lists USB OTG Yes: the Alpha (phonesdata),
+  the Alpha X (gizmochina, phonesdata, review-hub) and the
+  Comet (phonesdata). No Maze phone needs the mounting test
+  and none lists USB OTG No, so there is no contested-floor
+  model either — the cleanest split of any brand in this
+  series so far. The Blade runs Android 6.0 as shipped, so
+  SnapDisk does not install on it — but its USB OTG Yes
+  listing (phonesdata) means the file-manager copy in Method 2
+  still works on it. Three take USB Type-C (Alpha, Alpha X,
+  Comet) and one takes micro-USB (Blade, per devicesfaq's
+  "Micro USB charging port") — the port is settled on all
+  four. A microSD card fits all four phones for certain — each
+  has a slot — so the card-reader route is proven on all four,
+  though ceilings are stated on two (256 GB on the Alpha and
+  the Alpha X) and unstated on two (Blade, Comet), and the
+  Blade's slot is settled by liliputing's hybrid
+  dual-SIM-or-microSD note and devicesfaq's "pass media files
+  to memory card" tip (phonesdata leaves the Blade's card slot
+  blank). VaultDrive needs Android 8 or later per its own
+  site, so none of the four clears the version floor — the
+  highest shipped version is Android 7.0 — while AppBrain
+  lists 12.1 or later, which none clear either. FotoSafe needs
+  Android 9 or later with USB host or OTG support, so none is
+  proven. The Comet is contested three ways — battery 4,000
+  mAh per devicesfaq and notebookcheck against 6,000 mAh per
+  gizchina's pre-launch report, storage 64 GB per phonesdata
+  against 32 GB or 64 GB per devicesfaq, launch September 2017
+  per notebookcheck against November 2017 per phonesdata —
+  and the Alpha X launch is contested too — announced and
+  released October 2017 per phonesdata against released
+  5 November 2017 per gizmochina — and its rear camera differs
+  by variant (13 MP on the 64 GB model, 16 MP on the 128 GB
+  model). Maze has no phone-to-USB backup tool of its own —
+  the only Maze backup advice turned up is the per-model
+  backup FAQ on devicesfaq, which names the computer copy as
+  the most economical method and Google Drive as the default
+  cloud service — a computer copy and a cloud copy, not a USB
+  copy — and it is devicesfaq's generic Android boilerplate,
+  identical on every model, not Maze's own advice. Maze Mobile
+  is a Shenzhen-based company established in 2012; the Maze
+  brand was launched in 2017 by the Shenzhen OEM YOP Company,
+  its first phone the Blade at $130 in April 2017, and the
+  brand peaked the same year before apparently going under in
+  2018 — Notebookcheck, May 27, 2018, reports the website was
+  put up for sale, with no official confirmation. This article
+  covers four models from 2017 (smartphone.ma lists five
+  entries, but the Alpha X 64GB and 128GB are two storage
+  variants of one model).
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 20, 2026 (WL-161, 129th how-to):
+  docs/maze-photos-to-usb.html — branch wl-161-maze,
+  article commit 61b31c1 (supervisor to verify and merge;
+  no PR opened by the lead).
+  Fallback for WL-162: no next brand named in this run —
+  the supervisor assigns the next brand; no brand was
+  invented here.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
