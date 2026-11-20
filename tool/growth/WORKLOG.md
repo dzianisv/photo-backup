@@ -1,5 +1,69 @@
 # SnapDisk — Work Log
 
+## WL-148 — Back up Shiftphone photos to USB article, 116th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #265 MERGED (merge commit 3888902, merged
+  2026-11-20T04:34:27Z; PR head e476441, CI run 44675030699
+  build pass, 1m20s, conclusion success; post-merge main runs
+  Android PR 44675321350 + pages 44675320746 success on 3888902).
+  Live fetch verified by the supervisor:
+  shiftphone-photos-to-usb.html 200 (49,608 B, correct
+  title/H1/TL;DR, fresh crawl 04:36 UTC); feed.xml 116 items
+  live incl. Shiftphone.
+  Supervisor re-score from a fresh live re-search: same 5
+  results as the lead (Dr.Fone, VaultDrive page, WITNESS blog,
+  softhandtech, thegadgetians) — all generic, none mentions
+  Shiftphone; real gap stands.
+  Query 115 verified by the lead from live evidence (no top
+  result is a Shiftphone-specific phone-to-USB photo-backup
+  guide); the exact query returned five results, all generic
+  Android (a Dr.Fone guide, a VaultDrive page, a WITNESS blog
+  post, a softhandtech guide and a thegadgetians guide) — none
+  mentions Shiftphone; real gap stands.
+  New docs/shiftphone-photos-to-usb.html ("Back up Shiftphone
+  photos to a USB drive (no computer)"), following the
+  WL-54–WL-147 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: the one-tap route is proven
+  on two of four covered Shiftphone models — the SHIFT5me and
+  the SHIFTphone 8 both list USB OTG Yes — but on the SHIFT6m
+  and the SHIFT6mq no source states OTG at all, so on those
+  two the drive mounting is the test; all four clear Android
+  7.0, so SnapDisk installs on every one of them, from Play
+  on ShiftOS-G once the listing is live, from the GitHub APK
+  on ShiftOS-L and until then).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 40 chars, meta
+  description 153 chars, JSON-LD validated by parse
+  (article + blog index); sitemap and feed XML parse; feed
+  now counts 116 items; blog JSON-LD counts 116 BlogPosting
+  entries. searches.md Query 115 row present ("back up
+  Shiftphone photos to USB drive without computer" — HOW-TO
+  GAP).
+  Key finding: 4 of 4 covered Shiftphone models clear Android
+  7.0 (lowest runs Android 8.0), and the one-tap route is
+  proven on 2 of 4 — the SHIFT5me (ShiftOS / Android 8, OTG
+  Yes) and the SHIFTphone 8 (Android 14, OTG Yes) — but on
+  the SHIFT6m (Android 8.0) and the SHIFT6mq (Android 10) no
+  source states OTG, so the drive mounting is the test there;
+  all four take USB Type-C, so there is no micro-USB adapter
+  question anywhere; all four take a microSD card, so the
+  card-reader route works on all four (ceilings: SHIFT5me up
+  to 256 GB, SHIFT6mq up to 512 GB, SHIFT6m unstated,
+  SHIFTphone 8 two numbers — up to 256 GB per the /e/OS
+  device page, up to 2 TB per Murena); VaultDrive clears its
+  Android 8 floor on 4 of 4 but is proven on 2 of 4, and
+  under AppBrain's 12.1 floor on 1 of 4; FotoSafe clears its
+  Android 9 floor on 2 of 4 and is proven on 1 of 4.
+  Note: the supervisor's pre-checks for this run named HEAD
+  f26ee79, verified by the lead before branching; the
+  worktree was cut from origin/main as instructed. No failed
+  execs.
+  Fallback for WL-149: LeEco — verified by the lead, no
+  docs/leeco-photos-to-usb.html and no searches.md row.
+
 ## WL-147 — Back up Volla photos to USB article, 115th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
