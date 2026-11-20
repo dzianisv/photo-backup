@@ -7,6 +7,10 @@
   2026-11-20T06:36:12Z; PR head 080e08e, CI run 44688668877
   build pass, 1m16s, conclusion success; post-merge main runs
   Android PR 44688971422 + pages 44688970203 success on 0aeb5d6).
+  Row PR #271 MERGED (merge commit 3ca06b9, merged
+  2026-11-20T06:45:10Z; filled head c4e4b6b, CI run 44689723425
+  build pass, 1m9s, conclusion success; post-merge main runs
+  Android PR 44690023044 + pages 44690022231 success on 3ca06b9).
   Live fetch verified by the supervisor:
   nubia-photos-to-usb.html 200 (63,848 B, correct title/TL;DR)
   at the canonical root URL — note: the /docs/ prefix 404s,
