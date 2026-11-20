@@ -12405,6 +12405,90 @@ demand is read off competitor install velocity instead (see
   top results (a LESOGE flash-drive manual, a Dr.Fone guide,
   an askfilo Q&A and a FoneLab guide, scored Nov 20, 2026).
 
+### 125. "back up Leagoo photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Leagoo-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Leagoo-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and thirty of the
+  sixty-three covered Leagoo phones clear Android 7.0, so
+  the one-tap route is proven on sixteen outright, with
+  eight more needing the mounting test.
+- Current top results (scored Nov 20, 2026, live web
+  search):
+  manuals.plus, "LESOGE Android Phone Universal Flash Drive
+  Instruction Manual"
+  (https://manuals.plus/lesoge/android-phone-universal-flash-drive-manual
+  — the instruction manual for a LESOGE universal flash drive
+  for Android phones. A drive manual, not a guide — and it
+  says nothing about Leagoo photos at all);
+  dzianisv.github.io, "Transfer photos to USB automatically
+  — SnapDisk"
+  (https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html
+  — plug a USB drive into your Android phone, tap Backup in
+  SnapDisk, and your whole photo library copies oldest-first
+  to the drive in the background, with progress, Pause and
+  Stop, and resume. A SnapDisk guide, not a Leagoo guide —
+  and the top SnapDisk result for this query, which is
+  generic Android, not Leagoo-specific);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash
+  drive four ways, with a computer, an OTG cable, or
+  Dr.Fone. A generic Android guide — it says nothing about
+  Leagoo);
+  eyefi.com, "What's the best way to move photos from my
+  Android phone to a flash drive?"
+  (https://eyefi.com/t/what-s-the-best-way-to-move-photos-from-my-android-phone-to-a-flash-drive/1121
+  — a forum thread asking how to move photos from an Android
+  phone to a flash drive. A forum thread, not a guide — and
+  it says nothing about Leagoo).
+- The one-tap route is proven on sixteen phones — every
+  one clears Android 7.0 and lists USB OTG Yes. Eight need
+  the mounting test: the KIICAA Mix, M7, M11, M9 Pro, Power
+  2, Power 2 Pro, Z10 and Z20, where OTG is unstated in
+  every source. Five list USB OTG No: the KIICAA Power, Z7,
+  M10, Z15 and Z9, so only Methods 3 to 5 work on those
+  five. One is contested: the T5c, where FindPare lists OTG
+  No against OTG Yes in three other sources. Thirty-three
+  run below Android 7.0 as shipped, so SnapDisk does not
+  install on those at all. Nine take USB Type-C and
+  fifty-three take micro-USB — the Z20's port is unverified.
+  A microSD card fits all sixty-three phones for certain —
+  each has a slot — so the card-reader route is proven on
+  all sixty-three, though ceilings are stated on eight,
+  contested on eight (the KIICAA Mix, KIICAA Power, T5c,
+  M11, M12, M9 Pro, Power 2 and Power 2 Pro) and unstated
+  on forty-seven. VaultDrive needs Android 8 or later per
+  its own site, so eighteen clear the version floor on
+  shipped software — while AppBrain lists 12.1 or later,
+  which none clear. FotoSafe needs Android 9 or later with
+  USB host or OTG support, so three are proven (M12, M13,
+  S11). Leagoo has no phone-to-USB backup tool of its own —
+  no Leagoo-authored backup advice turned up in any source
+  beyond a computer copy, Google Drive or Google Photos —
+  the closest thing is the per-model backup FAQ on
+  devicesfaq, which is generic Android boilerplate identical
+  on every model, not Leagoo's own advice, and the brand's
+  own site is effectively dead. Leagoo is owned by Shenzhen
+  OTEDA Technology Co., Ltd, launched in April 2014; this
+  article covers sixty-three phones from 2014 to 2020 (the
+  S12 and a plain "Power" are not covered — no retail
+  release found / unverified).
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 20, 2026 (WL-158, 126th how-to):
+  docs/leagoo-photos-to-usb.html — branch wl-158-leagoo,
+  article commit 9b26d6f (supervisor to verify and merge;
+  no PR opened by the lead).
+  Fallback for WL-159: Maze — no article file
+  (docs/maze-photos-to-usb.html absent), no searches.md row,
+  and the exact query "back up Maze photos to USB drive
+  without computer" returns no Maze-specific guide in the
+  top results (SnapDisk's own generic guides, scored
+  Nov 20, 2026; Maze is a defunct Chinese budget brand,
+  2017–2018, Maze Alpha etc.).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
