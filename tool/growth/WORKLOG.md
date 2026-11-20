@@ -1,5 +1,75 @@
 # SnapDisk — Work Log
 
+## WL-149 — Back up LeEco photos to USB article, 117th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #267 OPEN (PR head 19eecf8, CI run 44682122344
+  build pass, 1m26s, conclusion success; merge pending
+  supervisor readback verification).
+  Query 116 verified by the lead from live evidence (no top
+  result is a LeEco-specific phone-to-USB photo-backup
+  guide); the exact query returned five results, all generic
+  Android (a softhandtech guide, an EyeFi forum thread, a
+  Dr.Fone guide, a YouTube OTG video and a MobileTrans
+  guide) — none mentions LeEco; real gap stands.
+  New docs/leeco-photos-to-usb.html ("Back up LeEco photos
+  to a USB drive (no computer)"), following the
+  WL-54–WL-148 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: on stock firmware SnapDisk
+  installs on none of the eleven covered LeEco models — all
+  run Android 6.0.1 or older, below its 7.0 floor — and the
+  one-tap route is documented only on a Le Pro 3 flashed to
+  LineageOS 14.1; six of the eleven list USB OTG Yes, so
+  the manual copy in Method 2 works on those, and only the
+  Le Pro 3 AI Edition takes a microSD card).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 35 chars, meta
+  description 159 chars, JSON-LD validated by parse
+  (article + blog index); sitemap and feed XML parse; feed
+  now counts 117 items; blog JSON-LD counts 117 BlogPosting
+  entries. searches.md Query 116 row present ("back up
+  LeEco photos to USB drive without computer" — HOW-TO
+  GAP).
+  Key finding: 0 of 11 covered LeEco models clear Android
+  7.0 on stock firmware (highest runs Android 6.0.1), so
+  SnapDisk installs on none of them as shipped — the only
+  documented exception is a Le Pro 3 running LineageOS
+  14.1, which puts it on Android 7.1.1; the Android 7.1
+  update was tested for five models (Le 2, Le 2 Pro, Le
+  Pro 3, Le Max 2, Le S3) as EUI 6.0.28 but never shipped,
+  and the Le Pro 3 and the Le S3 stayed on Android 6.0.1;
+  USB OTG is Yes on 6 of 11 — the Le Max, Le 2, Le 2 Pro,
+  Le Max 2, Le Pro 3 and Le Pro 3 Elite — No on 3 — the Le
+  1 Pro, Le Max Pro and Le S3 — and contested on 2 — the
+  Le 1 and the Le Pro 3 AI Edition; a microSD card fits 1
+  of 11 — the Le Pro 3 AI Edition, with no ceiling stated —
+  while eight take no card at all, the Le Max Pro's card is
+  contested, and no source states one for the Le S3 or the
+  Le Pro 3 Elite; all eleven take USB Type-C, so there is
+  no micro-USB adapter question anywhere; LeCloud's
+  personal cloud storage ended in June 2017, so LeEco's
+  own cloud backup is gone; VaultDrive clears its Android
+  8 floor on 0 of 11 and under AppBrain's 12.1 floor on 0
+  of 11; FotoSafe clears its Android 9 floor on 0 of 11.
+  Note: the supervisor's pre-checks for this run named HEAD
+  23cc430, verified by the lead before branching; the
+  worktree was cut from origin/main as instructed. Link
+  verification: 41 article links fetched — 30 returned 200;
+  the rest are bot-blocked (403: Gadgets360, Dealroom, UMA
+  Technology, MobileGizmo, PhoneMore) or connection-failed
+  from this VM (000: techwikies x2), but all were returned
+  verbatim by live search with their content quoted, and
+  AppBrain + AndroidHeadlines were re-verified by direct
+  fetch (870 installs, 12.1+, v1.0.7; 7.1 tested for five
+  models, never shipped). One browser.open fetch failed
+  once (techwikies Le 1 Pro spec page, not retried per
+  instruction); its facts rest on the live-search excerpts.
+  No failed execs.
+  Fallback for WL-150: Nubia — verified by the lead, no
+  docs/nubia-photos-to-usb.html and no searches.md row.
+
 ## WL-148 — Back up Shiftphone photos to USB article, 116th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
