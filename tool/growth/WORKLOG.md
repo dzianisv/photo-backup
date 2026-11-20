@@ -5,8 +5,19 @@
 - Owner: SEO/GEO lane lead. State: DONE.
   Article PR #267 MERGED (merge commit 3b23416, merged
   2026-11-20T05:41:42Z; PR head 19eecf8, CI run 44682122344
-  build pass, 1m26s, conclusion success; post-merge main
-  runs pending).
+  build pass, 1m26s, conclusion success; post-merge main runs
+  Android PR 44682722356 + pages 44682721786 success on 3b23416).
+  Row PR #268 MERGED (merge commit 990f430, merged
+  2026-11-20T05:43:53Z; filled head bfb8861, CI run 44682768821
+  build pass, 1m33s, conclusion success; post-merge main runs
+  Android PR 44682965427 + pages 44682965270 success on 990f430).
+  Live fetch verified by the supervisor:
+  leeco-photos-to-usb.html 200 (59,868 B, correct title/TL;DR);
+  feed.xml 117 items live incl. LeEco.
+  Supervisor re-score from a fresh live re-search: top 3
+  identical to the lead (softhandtech, EyeFi forum, Dr.Fone);
+  tail differs — WITNESS blog in place of MobileTrans — all
+  generic, none mentions LeEco; real gap stands.
   Query 116 verified by the lead from live evidence (no top
   result is a LeEco-specific phone-to-USB photo-backup
   guide); the exact query returned five results, all generic
