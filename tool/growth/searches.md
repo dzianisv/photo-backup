@@ -10915,6 +10915,242 @@ demand is read off competitor install velocity instead (see
   Article published Nov 19, 2026 (WL-144, 112th how-to):
   docs/yezz-photos-to-usb.html.
 
+### 112. "back up Zopo photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Zopo-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Zopo-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and the five covered
+  Zopo phones that clear Android 7.0 all list USB OTG No,
+  so there is no phone route on any of them, while the
+  thirty-one below Android 7.0 cannot run SnapDisk at all.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  askfilo.com, "how to transfer pictures from an android phone
+  to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — to transfer photos directly from your Android device to a
+  USB flash drive, you will typically need a USB OTG adapter if
+  your flash drive does not have a native USB-C connector that
+  fits your phone; open your File Manager app, look for the
+  folder named DCIM and then open the Camera folder. A generic
+  Android guide — it says nothing about Zopo);
+  youtube.com, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most direct
+  method for moving photos and videos from any modern Android
+  phone to a USB drive is a USB On-The-Go (OTG) connection and
+  the phone's built-in file manager app; it needs Android 7.0
+  or newer and a USB-C or micro-USB OTG adapter. A generic
+  Android video guide — it says nothing about Zopo);
+  drfone.wondershare.com, "4 Practical Ways to Transfer Photos
+  from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash drive
+  by connecting them directly with an OTG adaptor, using a PC
+  as a middleman via USB File Transfer mode, or downloading
+  them wirelessly through Google Drive or AirDroid; for direct
+  transfers without a computer, connect a USB-C OTG adaptor
+  from the phone to the flash drive and copy files using the
+  USB Drive option in the Android notification tray. A generic
+  Android guide — it says nothing about Zopo);
+  sekin.in, "Transfer Photos From Android to a USB Flash Drive"
+  (sekin.in/how-to-transfer-pictures-from-android-to-a-usb-flash-drive/
+  — you can copy pictures directly from most compatible
+  Android phones and tablets to a USB flash drive without a
+  computer or internet connection; connect a USB-C flash drive,
+  or connect a conventional USB-A drive through a USB-OTG data
+  adapter, then use Files by Google to select the pictures and
+  choose Copy — not Move. A generic guide — it says nothing
+  about Zopo);
+  softhandtech.com, "Transfer Photos from Phone to Memory
+  Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — transferring photos from your phone to a memory stick can
+  be done using a computer, directly with OTG support if your
+  device supports it, or through cloud services; for direct
+  transfer, confirm that your smartphone is OTG compatible,
+  obtain an OTG adapter, and open your phone's file manager
+  app. A generic guide — it says nothing about Zopo).
+- The one-tap route is proven on zero phones — the five
+  that clear Android 7.0 all list USB OTG No — the Speed X,
+  Flash X1, Flash X2, P5000 and Z5000 — so on those five
+  SnapDisk installs but there is no phone route at all;
+  thirty-one run below Android 7.0 and cannot run SnapDisk
+  at all — the ZP100, ZP200, ZP300, ZP500, ZP600, ZP700,
+  ZP800, ZP810, ZP900, ZP920, ZP950, ZP980, ZP990, ZP998,
+  ZP999, ZP1000, ZP720, Touch ZP530, Speed 7, Speed 7 Plus,
+  Speed 7C, Speed 8, Flash X Plus, Flash G5 Plus, Color C5,
+  Color F5, Color M5, Color X5.5, Hero 1, Hero 2 and Color E
+  ZP350. Twelve of the thirty-one list USB OTG Yes — the
+  ZP980, ZP998, ZP999, ZP1000, Touch ZP530, Speed 7, Speed
+  7C, Speed 8, Flash G5 Plus, Color F5, Hero 1 and Color E
+  ZP350 — so the file-manager copy works on those twelve;
+  four have OTG disputed — the ZP990, ZP720, Speed 7 Plus
+  and Color X5.5 — and twelve have OTG unstated — the ZP100,
+  ZP200, ZP300, ZP500, ZP600, ZP700, ZP800, ZP810, ZP900,
+  ZP920, ZP950 and Color C5 — so on those sixteen the drive
+  mounting is the test; three list OTG No — the Flash X
+  Plus, Color M5 and Hero 2. Three take USB Type-C — the
+  Speed 8, P5000 and Z5000 — so a USB-C drive plugs straight
+  into those three; twenty-eight take micro-USB, and the
+  connector is unstated on five — the ZP600, ZP920, Flash G5
+  Plus, Color C5 and ZP999. Thirty-four of the thirty-six
+  take a microSD card, so the card-reader route works on
+  thirty-four of them, with the ceilings disputed on nine;
+  the ZP1000 and the Speed 8 take no card at all.
+- Conflicts between sources, all named in the article: the
+  Zopo founding is two dates — established in 2008 per
+  gadgets360, founded in 2012 per gadgetsnow and alchetron
+  — and ZOPO is two expansions — "Zealous, Optimistic,
+  Persistent and Outstanding" per gadgetsnow, "Zealous Open
+  Perfect Outstanding" per alchetron; the ZP100's Android is
+  two numbers — 4.0 per Smartprix, 4.4 per mobilespecs.net
+  — and its microSD ceiling is two numbers — up to 32 GB per
+  Smartprix, up to 64 GB per mobilespecs.net; the ZP200's
+  Android is two numbers — 2.3 per PRLog, 4.0 per Smartprix's
+  Shining Plus listing — and its chipset is two numbers —
+  MT6575 per PRLog, MT6577 per 91mobiles' Shining Plus
+  listing — and its microSD ceiling is two numbers — up to
+  64 GB per Smartprix, up to 32 GB per PRLog — and Smartprix
+  lists "microUSB v3.0" for the Shining Plus, implausible for
+  a 2012 phone and confirmed by no second source; the
+  ZP500's storage is two numbers — 512 MB per Smartprix,
+  4 GB per mobilespecs.net; the ZP700's rear camera is two
+  numbers — 8 MP per Smartprix, 5 MP per Lowyat — and its
+  battery is two numbers — 2000 mAh per Smartprix, 1750 mAh
+  per Lowyat — and its microSD ceiling is two numbers — up
+  to 64 GB per Smartprix, up to 32 GB per mobilespecs.net —
+  and its Android is two numbers — 4.2.2 per Smartprix, 4.4
+  per findpare's Cuppy listing; the ZP900's microSD ceiling
+  is two numbers — up to 32 GB per Smartprix, up to 64 GB
+  per GizChina; the ZP920's chipset is two numbers — MT6592
+  per mobilespecs.net, MT6752 per Android Headlines; the
+  ZP950's Android is two numbers — 4.1 per mobilexfiles,
+  4.1.2 per Smartprix's ZP950+ listing; the ZP980's Android
+  is two numbers — 4.2 per Smartprix, 4.1 per phonesdata's
+  Ultimate listing — and its front camera is two numbers —
+  5 MP per Smartprix, 3 MP per GizChina — and its battery is
+  two numbers — 2000 mAh per Smartprix, 2300 mAh per UMA
+  Technology; the ZP990's Android is two numbers — 4.2.1 per
+  Smartprix, 4.1 per phonesdata — and its rear camera is two
+  numbers — 13 MP per GadgetsToUse, 8 MP per phonesdata —
+  and its battery is two numbers — 3000 mAh per phonesdata,
+  3100 mAh per Smartprix — and its OTG is disputed — Yes per
+  phonesdata, no OTG in Smartprix's listing; the ZP998's rear
+  camera is two numbers — 14 MP per PhoneArena, 13 MP per
+  91mobiles — and its storage is two numbers — 32 GB per
+  GizmoChina, 16 GB per MakeUseOf — and its microSD ceiling
+  is two numbers — up to 64 GB per GizmoChina, up to 32 GB
+  per PriceTree; the ZP999's chipset is two numbers — MT6595
+  per FindPare, MT6595m per GizmoChina's Pro review — a
+  variant difference, with 2 GB of RAM on the base and 3 GB
+  on the Pro; the ZP1000's Android is three numbers — 4.2.2
+  per Notebookcheck, 4.2 per Smartprix, 4.2 and 4.3 per
+  devicesfaq — and its battery is two numbers — 2000 mAh per
+  Notebookcheck, 2100 mAh per Smartprix; the ZP720's OTG is
+  disputed — Yes per mobilespecs.net, No per FindPare — and
+  its microSD ceiling is two numbers — up to 64 GB per
+  mobilespecs.net's ZP720 page, up to 32 GB per its ZP720
+  Focus page — and its display is two numbers — 5.3 inches
+  per mobilespecs.net, 5.5 inches per GizChina; the Touch
+  ZP530's rear camera is two numbers — 8 MP per GizmoChina,
+  13 MP per mobilespecs.net's Touch ZP530 page — and its
+  microSD ceiling is two numbers — up to 64 GB per
+  GizmoChina, up to 32 GB per mobilespecs.net — and its
+  release is two dates — October 2014 per FindPare, March
+  2015 per Lowyat; the Speed 7's Android is two numbers —
+  5.1 per Gadgets360, 6.0 per phonesdata — and its display is
+  two numbers — 5.0 inches per Gadgets360, 5.5 inches per
+  UMA Technology; the Speed 7 Plus's OTG is disputed — Yes
+  per Gadgets360's launch report, No per TechPhlie — and its
+  battery is two listings — removable per the official Zopo
+  site, non-removable per Gadgets360's spec page — and its
+  release is two dates — October 2015 per Gadgets360, August
+  31, 2015 per Phonerated; the Flash X1's microSD ceiling is
+  two numbers — up to 64 GB per Gadgets360, up to 256 GB per
+  UMA Technology — and its OTG is disputed — No per
+  Gadgets360, Yes per UMA Technology — and its rear camera is
+  two numbers — 8 MP per Gadgets360, 13 MP per UMA
+  Technology — and its display is two numbers — 640x1280 per
+  Gadgets360's launch report, 1280x720 per Smartprix; the
+  Flash X2's spec sheet is two sheets — Android 7.0,
+  MT6737T, 2 GB of RAM, 16 GB of storage, an 8 MP rear
+  camera and a 3380 mAh battery per Gadgets360, against
+  Android 8.0, Helio P25, 4 GB of RAM, 64 GB of storage, a
+  dual 13 MP + 2 MP rear camera and a 3000 mAh battery per
+  UMA Technology, which contradicts the launch reporting;
+  the Flash X Plus's battery is two numbers — 3100 mAh per
+  Gadgets360, 3350 mAh per Notebookcheck — and its release is
+  two dates — March 2017 per Gadgets360, April 10, 2017 per
+  HT Tech; the Flash G5 Plus's front camera is two numbers —
+  5 MP per phonesdata, 5.2 MP per FindPare — and its chipset
+  clock is two numbers — 1.5 GHz per phonesdata, 1.3 GHz per
+  Bmobile; the P5000's chipset is two numbers — Helio MT6755
+  per Gadgets360's spec page, MT6750T per Smartprix and
+  Gadgets360's launch article — and its storage is two
+  numbers — 64 GB per Gadgets360, 32 GB per Gadgets Now —
+  and its second rear camera is two numbers — 5 MP per
+  Android Headlines, 2 MP per MobileXFiles — and its display
+  is two numbers — 5.99 inches per Gadgets360, 5.9 inches per
+  Smartprix; the Z5000's chipset is two numbers — MT6755 per
+  Gadgets360, MT6750T per Smartprix — and its storage is two
+  numbers — 64 GB per Gadgets360, 16 GB per Gadgets Now —
+  and its release is two dates — September 2017 per
+  Gadgets360, December 2017 per Smartprix; the Color F5's RAM
+  is two numbers — 2 GB per Gadgets360, 1 GB on the Global
+  variant per Kimovil — and its release is two dates —
+  October 2016 per Gadgets360, November 2016 per Smartprix;
+  the Color M5's microSD ceiling is two numbers — up to
+  64 GB per Gadgets360, up to 32 GB per Giznext — and its
+  battery is two listings — non-removable per Gadgets360,
+  removable per Smartprix; the Color X5.5's OTG is disputed —
+  No per Gadgets360, Yes per phonesdata — and its RAM is two
+  numbers — 3 GB per Gadgets360, 1 GB per phonesdata — and
+  its release is two dates — April 2017 per Gadgets360,
+  November 2017 per phonesdata — and its battery is two
+  listings — non-removable per Gadgets360, removable per
+  Smartprix; the Hero 1's Android is two numbers — 5.1 per
+  Gadgets360, 5.0.1 per ExpressComputer; the Hero 2's weight
+  and size are two numbers — 150 g and 152.0x77.8x8.5 mm per
+  phonesdata, about 132 g and 153x78x9.0 mm per PhoneRadar;
+  the Color E ZP350's cameras are two numbers — 8 MP rear
+  and 2 MP front per the official Zopo site, 13 MP rear and
+  5 MP front per Indian Express — and its Android is two
+  numbers — 5.1 shipped per the official site, 6.0 per
+  devicesfaq, which lists the later update — and its chipset
+  clock is two numbers — 1.3 GHz per MobileXFiles, 1 GHz per
+  Smartprix; the Color C5's front camera is two numbers by
+  rounding only — 2 MP per Unite4Buy, 1.9 MP per FindPare.
+  No source uses the name "Focus" for the ZP350 — it is sold
+  as the Color E ZP350 — and no source ties the ZP351 code to
+  the Color C5, which must not be confused with the older,
+  different Zopo C5 from 2014, which runs Android 4.4. The
+  ZP600's chipset, RAM, connector, OTG and year are all
+  unstated in the sources found; the ZP800's cameras, OTG and
+  year are unstated; the ZP810's chipset and year are
+  unstated; the ZP300's, ZP700's and ZP810's years are
+  unstated.
+- VaultDrive needs Android 8 or later per its own site, so
+  zero of the thirty-six can run it — the newest covered
+  models run Android 7.0 — and AppBrain lists 12.1 or later,
+  which no covered Zopo phone clears either. FotoSafe needs
+  Android 9 or later with USB host or OTG support, so zero
+  of the thirty-six clear the version floor — the newest
+  covered models run Android 7.0 — so FotoSafe is proven on
+  zero of the thirty-six. Zopo has no phone-to-USB backup
+  tool of its own — no Zopo-specific backup advice turned up
+  in any source beyond a computer copy, Google Drive, or
+  Google Photos; the devicesfaq backup FAQ names the
+  computer copy as the most economical method, and names the
+  file manager on a Zopo phone as Files, or Files by Google.
+  No GSMArena spec page was returned for any covered Zopo
+  model in the searches performed, so no GSMArena USB row
+  could be cited for any of them.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-145, 113th how-to):
+  docs/zopo-photos-to-usb.html.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
