@@ -12318,6 +12318,93 @@ demand is read off competitor install velocity instead (see
   guide, a desnoulez.fr camera-backup guide and a Photos to
   USB app listing, scored Nov 20, 2026).
 
+### 124. "back up Oscall photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Oscall-specific guide
+  to backing up photos to a USB drive at all, let alone an
+  Oscall-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and all thirty covered
+  Oscall phones clear Android 7.0, so the one-tap route is
+  proven on twenty-two outright, with eight more needing the
+  mounting test.
+- Current top results (scored Nov 20, 2026, live web
+  search):
+  dzianisv.github.io, "Transfer photos to USB automatically
+  — SnapDisk"
+  (https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html
+  — plug a USB drive into your Android phone, tap Backup in
+  SnapDisk, and your whole photo library copies oldest-first
+  to the drive in the background, with progress, Pause and
+  Stop, and resume. A SnapDisk guide, not an Oscall guide —
+  and the top result for this query, which is generic
+  Android, not Oscall-specific);
+  dzianisv.github.io, "How to free up space by moving photos
+  to a USB drive — SnapDisk"
+  (https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html
+  — free up space on the phone by moving photos to a USB
+  drive with the file manager. A SnapDisk guide, not an
+  Oscall guide — generic Android, not Oscall-specific);
+  softhandtech.com, "Easy Guide: Transferring Pictures from
+  Your Phone to a Flash Drive"
+  (https://softhandtech.com/how-do-you-transfer-pictures-from-your-phone-to-a-flash-drive/
+  — transfer pictures from your phone to a flash drive with
+  an OTG adapter and a file manager, published 2025-04-03. A
+  generic Android guide — it says nothing about Oscall);
+  desnoulez.fr, "How to back up camera photos while traveling
+  - no laptop needed"
+  (https://www.desnoulez.fr/en/how-to-back-up-camera-photos-while-traveling-no-laptop-needed/
+  — back up a camera's memory card while traveling, using the
+  phone as a bridge, published 2025-04-23 and updated
+  2026-05-04. A camera-backup guide, not a phone-photos guide
+  — the photos start on a camera card, not in the phone's
+  gallery — and it says nothing about Oscall);
+  appbrain.com, "Photos to USB: OTG Backup"
+  (https://www.appbrain.com/app/photos-to-usb-otg-backup/com.arzdrz.photos_to_usb
+  — a free app with ads that copies photos to a USB drive in
+  one tap. An app listing, not a guide — and it says nothing
+  about Oscall).
+- The one-tap route is proven on twenty-two phones — every
+  one clears Android 7.0 and lists USB OTG Yes. Eight need
+  the mounting test: the C20, C20 Pro, S60 Pro, Tiger 8,
+  Pilot 5, Flat 3C, Flat 3C Mini and Modern 8, where OTG is
+  unstated in every source — and on the C20 Pro, FindPare
+  lists USB OTG No, the only No verdict in this article. No
+  covered phone runs below Android 7.0 as shipped — the
+  lowest is Android 11 — so SnapDisk installs on all thirty.
+  Twenty-six take USB Type-C and three take micro-USB — the
+  C20 Pro, the C60 and the S60 Pro — while the C20's port is
+  unverified. A microSD card fits all thirty phones for
+  certain — each has a slot — so the card-reader route is
+  proven on all thirty, though ceilings are stated on
+  twenty-two, contested on two (the C30, 256 vs 512 GB, and
+  the Pilot 3, 1 vs 2 TB) and unstated on six.
+  VaultDrive needs Android 8 or later per its own site, so
+  all thirty clear the version floor on shipped software —
+  while AppBrain lists 12.1 or later, which twenty-one clear
+  (twenty outright, the S70 Pro only on its higher (13)
+  listing). FotoSafe needs Android 9 or later with USB host
+  or OTG support, so twenty-two are proven. Oscall has no
+  phone-to-USB backup tool of its own — no Oscall-authored
+  backup advice turned up in any source beyond a computer
+  copy, Google Drive or Google Photos — the closest thing is
+  the per-model backup FAQ on devicesfaq, which is generic
+  Android boilerplate identical on every model, not Oscall's
+  own advice. Oscall is Blackview's budget sub-brand, styled
+  OSCAL, launched in June 2021; this article covers thirty
+  mainline phones from 2021 to 2026 (tablets and the
+  coming-soon Tank 2 are not covered).
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 20, 2026 (WL-157, 125th how-to):
+  docs/oscall-photos-to-usb.html — branch wl-157-oscall,
+  article commit fc48733 (supervisor to verify and merge;
+  no PR opened by the lead).
+  Fallback for WL-158: Leagoo — no article file
+  (docs/leagoo-photos-to-usb.html absent), no searches.md row,
+  and the exact query "back up Leagoo photos to USB drive
+  without computer" returns no Leagoo-specific guide in the
+  top results (a LESOGE flash-drive manual, a Dr.Fone guide,
+  an askfilo Q&A and a FoneLab guide, scored Nov 20, 2026).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
