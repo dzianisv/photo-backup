@@ -3,9 +3,18 @@
 ## WL-148 — Back up Shiftphone photos to USB article, 116th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #265 PENDING (merge commit PENDING, merged PENDING;
-  PR head e476441, CI run PENDING; post-merge main runs PENDING).
-  Live fetch PENDING (supervisor verifies post-merge).
+  Article PR #265 MERGED (merge commit 3888902, merged
+  2026-11-20T04:34:27Z; PR head e476441, CI run 44675030699
+  build pass, 1m20s, conclusion success; post-merge main runs
+  Android PR 44675321350 + pages 44675320746 success on 3888902).
+  Live fetch verified by the supervisor:
+  shiftphone-photos-to-usb.html 200 (49,608 B, correct
+  title/H1/TL;DR, fresh crawl 04:36 UTC); feed.xml 116 items
+  live incl. Shiftphone.
+  Supervisor re-score from a fresh live re-search: same 5
+  results as the lead (Dr.Fone, VaultDrive page, WITNESS blog,
+  softhandtech, thegadgetians) — all generic, none mentions
+  Shiftphone; real gap stands.
   Query 115 verified by the lead from live evidence (no top
   result is a Shiftphone-specific phone-to-USB photo-backup
   guide); the exact query returned five results, all generic
