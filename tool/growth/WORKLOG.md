@@ -1,3 +1,93 @@
+## WL-167 — Back up photos from a broken-screen phone to USB article, 135th how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #307 MERGED (merge commit c569f35, merged
+  2026-11-20T22:39:23Z; PR head 58997ef, CI run 44830467060
+  build pass, conclusion success; post-merge main runs
+  Android PR + pages success).
+  Pre-merge readback on head 58997ef (verified by the
+  supervisor from the branch source): feed 135 items incl.
+  broken-screen, sitemap 139 URLs incl. broken-screen,
+  blog index 135 BlogPosting (JSON-LD parses, new entry
+  last), title 48 chars, meta 136 chars, JSON-LD parses
+  (Article + FAQPage 4 Qs + BreadcrumbList,
+  datePublished 2026-11-20), TL;DR present, 1 script tag,
+  1 H1, 10 H2s, Query 134 row present, only docs/ +
+  tool/growth changed (7 files, +428/−0).
+  Query 134 scored honestly from live evidence (no
+  "no guide exists" claim): the exact query returns real
+  guides — Android Authority generic broken-phone recovery,
+  the phoneexpertphonerepair.com repair-shop guide (which
+  DOES mention OTG-mouse unlock + copying photos to a USB
+  drive), Dr.Fone guides, and (supervisor's fresh quoted
+  re-search) MDRepairs — all routing through a computer,
+  the cloud, paid recovery software, or a manual file copy.
+  None of them is a whole-library one-tap phone-to-USB
+  backup guide for a broken screen with no computer, and
+  none mentions SnapDisk; the gap stands on that angle.
+  First article in the NEW scenario shape (the brand series
+  ran to 134 articles and is exhausted); the next fallback
+  needs another scenario shape, not a brand — candidates:
+  dead phone, switching phones, SD-card-to-USB,
+  tablet/Chromebook (all unverified, supervisor's pick
+  next run).
+  New docs/broken-screen-photos-to-usb.html ("Back up photos
+  from a broken-screen phone to USB"), following the
+  WL-54–WL-166 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot,
+  with an honest caption). Title 48 chars, meta 136 chars.
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full broken-screen section: heading + URL +
+  dek + TL;DR + Search + Method 3 + What this does not do +
+  What to avoid — verified complete), feed.xml updated;
+  searches.md Query 134 row added.
+  Key finding: a broken screen is three different problems.
+  (1) Cracked screen, dead touch: OTG mouse enters your own
+  PIN/pattern (a mouse never bypasses the lock); one port
+  holds mouse or drive, not both — multi-port OTG hub, or
+  Pro auto-backup on connect, solves it, but Pro only helps
+  if set up before the break. (2) Black screen, phone on:
+  video-out needs DisplayPort Alt Mode — DeX on Galaxy
+  S8+/Note 8+/Z Fold/A90 5G only (Z Flip 5/6 output video,
+  no DeX, per XDA); Pixel 8+ only (Pixel 6/7 hardware
+  capable, Google left output off until Pixel 8); Motorola
+  Ready For/Smart Connect, Huawei Easy Projection; OnePlus
+  contested (12/13/Open per usbctohdmi vs 7+ flagships per
+  salivity); Android 16 native desktop needs QPR3+ on Pixel
+  8/9/10; an on-screen prompt can block video-out;
+  DisplayLink dock is a reported (unverified) workaround.
+  (3) Completely dead: no software route (Android Authority,
+  verbatim); check Google Photos + microSD card first, then
+  screen replacement or professional recovery. SnapDisk
+  behaviour verified from the repo itself: minSdk 24
+  (Android 7.0 floor), notification Backup tap, Pro $9.99
+  auto-backup on connect, free 5 GB/run, FAT32 >4 GB files
+  skipped and listed.
+  Link verification: 23 unique URLs cited, 21x200 via curl,
+  1x404 (the article's own canonical URL, not yet published
+  — expected; confirmed live post-merge by the supervisor),
+  1x000 (AppBrain — verified live via browser.open the same
+  day: 870 installs, 12.1+, v1.0.7, last updated Nov 3,
+  2026; the curl 000 is a fetch artifact); 0 dead links.
+  Caveats carried: 18 honest caveats in the article (three
+  scenarios, OTG mouse, port sharing, video-out lists and
+  the OnePlus contest, dead-phone limits, microSD, SnapDisk
+  floor and Pro timing, FAT32, cloud check, iPhones out of
+  scope, search-result shape).
+  Live fetch verified by the supervisor:
+  broken-screen-photos-to-usb.html 200 (44,731 B, correct
+  title), feed.xml 135 items live incl. broken-screen.
+  Lead's failed execs: two, both informative with no effect
+  — a combined sed failed (exit 1) because the grep for
+  "### Query 133" returned empty (searches.md uses
+  "### 133. ..." format), recovered by reading the file
+  directly; a validation script hit KeyError itemListElement
+  (wrong assumption about the blog JSON-LD shape), re-run
+  with a structure-agnostic walk validated 135 BlogPosting
+  entries.
+
+
 ## WL-166 — Back up BlackBerry photos to USB article, 134th how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
