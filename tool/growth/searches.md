@@ -13013,6 +13013,86 @@ demand is read off competitor install velocity instead (see
   drafted Nov 20, 2026 (WL-163, 131st how-to):
   docs/prestigio-photos-to-usb.html — branch wl-163-prestigio.
 
+### 131. "back up Doro photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Doro-specific guide to backing up
+  photos to a USB drive at all, let alone a Doro-specific automated
+  whole-library backup with progress, Pause/Stop, and resume — and
+  twelve of the eighteen covered Doro phones clear Android 7.0, so the
+  one-tap route is proven on none, with all twelve needing the mounting
+  test.
+- Current top results (scored Nov 20, 2026, live web search):
+  fotosafe.weidisoft.net, "Back up Android photos to USB"
+  (https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/
+  — back up Android photos to a USB drive without a computer; you need
+  Android 9 or later with USB host/OTG support, a USB drive with enough
+  free capacity, and a data-capable OTG adapter. A rival app guide, not a
+  Doro guide — and it says nothing about Doro);
+  eyefi.com, "What's the best way to move photos from my Android phone to
+  a flash drive?"
+  (https://eyefi.com/t/what-s-the-best-way-to-move-photos-from-my-android-phone-to-a-flash-drive/1121
+  — use an OTG cable, open the file manager, find the photos and copy
+  them to the flash drive. A forum thread about Android phones in
+  general, not a Doro guide — and it says nothing about Doro);
+  dzianisv.github.io, "USB photo backup on Android"
+  (https://dzianisv.github.io/photo-backup/usb-photo-backup.html
+  — plug a USB drive into your Android phone and copy your photos to
+  it, by hand in the Files app or one-tap with SnapDisk. Our own
+  generic guide, not a Doro guide — and it says nothing about Doro);
+  dzianisv.github.io, "Transfer photos to USB automatically"
+  (https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html
+  — plug a USB drive into your Android phone, tap Backup in SnapDisk,
+  and your whole photo library copies oldest-first to the drive in the
+  background, with real progress, Pause and Stop, and resume where it
+  stopped. Our own generic guide, not a Doro guide — and it says nothing
+  about Doro).
+  Note: a quoted search surfaced four more generic Android guides —
+  askfilo, fonelab, Dr.Fone and umatechnology — none of them
+  Doro-specific either.
+- One-tap proven 0 / mounting test 12 / below floor 6. Eighteen covered
+  Doro Android smartphones: twelve clear Android 7.0 on shipped
+  software (8035 on 7.1, 8040 on 7.0, 8050 and 8050 Plus on 9, 8080 on
+  9, 8100 and 8100 Plus on 11, 8200 on 12, 8200 Plus on 11, Aurora A10,
+  A20 and A30 on 14); six run below the floor (PhoneEasy 740 on 2.3,
+  Liberto 820 and Liberto 820 Mini on 4.4.2, Liberto 825 on 5.1.1, 8030
+  and 8031 on 5.1). USB OTG is unstated on all eighteen in every
+  consulted source — no Doro phone lists USB OTG Yes — so the one-tap
+  route is proven on none, and all twelve floor-clearing phones need
+  the mounting test. No OTG No, no contested OTG. Ten take USB Type-C
+  (8050, 8050 Plus, 8080, 8100, 8100 Plus, 8200, 8200 Plus, Aurora A10,
+  A20, A30) and two take micro-USB (8035, 8040); the port is unstated
+  on five (PhoneEasy 740, Liberto 820 Mini, Liberto 825, 8030, 8031)
+  and contested on one (Liberto 820: manua.ls says no USB port at all,
+  Doro's own product sheet lists a USB cable in the box). A microSD
+  card fits all eighteen for certain — each has a slot — so the
+  card-reader route is proven on eighteen; ceilings are stated on
+  twelve (32 GB on Liberto 820, Liberto 820 Mini, 8035; 128 GB on 8050,
+  8050 Plus, 8080, 8100, 8100 Plus, 8200 Plus; 1 TB on Aurora A10, A20,
+  A30), contested on one (8200: 128 GB per Clove against up to 512 GB
+  per Doro's own manual) and unstated on five (PhoneEasy 740, Liberto
+  825, 8030, 8031, 8040). VaultDrive needs Android 8 or later per its
+  own site, so ten clear the version floor and none is proven, while
+  AppBrain lists 12.1 or later, which three clear (Aurora A10, A20,
+  A30, all on Android 14). FotoSafe needs Android 9 or later with USB
+  host or OTG support, so the same ten clear the version floor and
+  none is proven. The 8100's Android is two labels — 11 Go Edition
+  per its manual and Three against plain 11 per phonearena and UL
+  benchmarks — but the version is 11 either way; the 8200 Plus's
+  Android 11 rests on a single Amazon-derived source (manuals.plus);
+  one Amazon-derived listing says the 8200 has 128 GB of internal
+  storage, against 64 GB in Doro's own manual and at Clove. Doro is a
+  Swedish company — founded 1974, headquartered in Malmö, first
+  easy-to-use mobile phone 2007; acquired by Xplora 2024–2025. Doro
+  has no phone-to-USB backup tool of its own; its manuals name the
+  computer copy, and Response by Doro is a safety app, not a backup.
+  Not covered: Doro 824, Liberto 822, Liberto 810 (shipped Android
+  versions unstated in consulted sources), Aurora A31 (Android 14
+  from a single Amazon-derived listing), and all feature phones
+  (Leva range, 2880, 6820, 7030/7080 run DorOs, not Android).
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 20, 2026 (WL-164, 132nd how-to):
+  docs/doro-photos-to-usb.html — branch wl-164-doro.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
