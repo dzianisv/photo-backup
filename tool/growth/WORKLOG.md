@@ -3,12 +3,21 @@
 ## WL-147 — Back up Volla photos to USB article, 115th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #263 NOT YET MERGED (merge receipt PENDING —
-  supervisor fills pre-merge; PR head 4c24fb7, CI run
-  44668388638 build pass, 1m9s, conclusion success).
-  Live fetch PENDING (article not live until PR #263 merges;
-  supervisor to verify volla-photos-to-usb.html 200 +
-  correct title and feed.xml 115 items live incl. Volla).
+  Article PR #263 MERGED (merge commit 900064c, merged
+  2026-11-20T03:38:48Z; PR head 4c24fb7, CI run
+  44668388638 build pass, 1m9s, conclusion success;
+  post-merge main runs Android PR 44669137378 + pages
+  44669137395 success on 900064c).
+  Live fetch verified by the supervisor: volla-photos-to-usb.html 200
+  (correct title/H1/TL;DR, fresh crawl 03:40 UTC); feed.xml 115 items
+  incl. Volla verified on main source — the live feed crawl still shows
+  the pre-merge snapshot (03:26 UTC), re-check next run.
+  Supervisor re-score from a fresh live re-search: top results Dr.Fone,
+  YouTube OTG video, Android Central forum, sekin.in, epictechtips,
+  unanswered.io — all generic, none mentions Volla; real gap stands.
+  Supervisor note: the run record shows one exec exit 1 in the lead's
+  run (no detail in the handoff); all receipts independently verified
+  by readback, no effect.
   Query 114 verified by the lead from live evidence (no top
   result is a Volla-specific phone-to-USB photo-backup
   guide); the exact query returned four results, all generic
