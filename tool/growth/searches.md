@@ -12601,6 +12601,112 @@ demand is read off competitor install velocity instead (see
   Nov 20, 2026; Maze is a defunct Chinese budget brand,
   2017–2018, Maze Alpha etc.).
 
+### 127. "back up Neffos photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Neffos-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Neffos-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and eighteen of the
+  twenty-eight covered Neffos phones clear Android 7.0, so
+  the one-tap route is proven on four outright, with
+  eight more needing the mounting test.
+- Current top results (scored Nov 20, 2026, live web
+  search):
+  fotosafe.weidisoft.net, "Back up Android photos to USB"
+  (https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/
+  — back up Android photos to a USB drive without a computer;
+  you need Android 9 or later with USB host/OTG support, a USB
+  drive with enough free capacity, and a data-capable OTG
+  adapter. A rival app guide, not a Neffos guide — and the
+  source for the Android 9 floor, which two of the twenty-eight
+  are proven to clear with OTG Yes — the X20 and the X20 Pro);
+  dzianisv.github.io, "USB photo backup on Android — SnapDisk"
+  (https://dzianisv.github.io/photo-backup/usb-photo-backup.html
+  — plug a USB drive into your Android phone, tap Backup in
+  SnapDisk, and your photos and videos copy oldest-first to the
+  drive in the background, with live progress and Pause / Stop.
+  A SnapDisk guide, not a Neffos guide — and the top SnapDisk
+  result for this query, which is generic Android, not
+  Neffos-specific);
+  dzianisv.github.io, "Transfer photos to USB automatically
+  — SnapDisk"
+  (https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html
+  — plug a USB drive into your Android phone, tap Backup in
+  SnapDisk, and your whole photo library copies oldest-first
+  to the drive in the background, with progress, Pause and
+  Stop, and resume. A SnapDisk guide, not a Neffos guide —
+  the second SnapDisk result for this query, generic Android);
+  askfilo.com, "how to transfer pictures from an android
+  phone to a flashdrive"
+  (https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — to transfer photos directly from your Android device to a
+  USB flash drive, you will typically need a USB OTG adapter
+  if your flash drive does not have a native USB-C connector
+  that fits your phone. A generic Android answer, not a Neffos
+  guide — and it says nothing about Neffos).
+- The one-tap route is proven on four phones — every one clears
+  Android 7.0 and lists USB OTG Yes: the N1, X9, X20 and
+  X20 Pro. Eight need the mounting test: the C5s, C5A, C7s, C9A,
+  C9s, C9 Max, X1 Lite and Y5s, where OTG is unstated in every
+  source. Six carry a USB OTG No listing: the C7, C7A, C7 Lite,
+  C9, C5 Plus and P1 — so on those six only Methods 3 to 5 work.
+  Two are contested-floor: the X1 Max, Android 6.0 per gadgets360,
+  gsmchina, phonesdata and devicesfaq against 7.0 per smartprix
+  and alza, and the A5, Android 5.1 per devicesfaq against 9.0 Go
+  per droidafrica and phoneinfo — check the version on the unit.
+  Six run below Android 7.0 as shipped, so SnapDisk does not
+  install on those at all. Two are feature phones with no Android
+  at all: the N105 and N150. Two take USB Type-C (N1, X9) and
+  thirteen take micro-USB — the port is unstated on the other
+  eleven smartphones. A microSD card fits twenty phones for
+  certain — each has a slot — so the card-reader route is proven
+  on those twenty, though ceilings are stated on thirteen,
+  contested on four (C7 Lite 128 vs 256 GB, C7s 128 vs 64 vs
+  32 GB, N1 128 vs 256 GB, C9 128 vs 256 GB) and unstated on
+  three, and the slot itself is unstated on five smartphones.
+  VaultDrive needs Android 8 or later per its own site, so eleven
+  clear the version floor on shipped software (C7A, C7 Lite, C7s,
+  C9, C9A, X9, C5 Plus, C9s, C9 Max, X20, X20 Pro — plus the A5
+  on its higher 9.0 Go listing) — while AppBrain lists 12.1 or
+  later, which none clear — and only three are proven with OTG
+  Yes (X9, X20, X20 Pro). FotoSafe needs Android 9 or later with
+  USB host or OTG support, so two are proven (X20, X20 Pro).
+  Android is two numbers on five phones, but only the X1 Max and
+  the A5 flip the 7.0 floor. Launch dates are contested on four
+  phones (C5 October 2015 / January 2016; N1 February / March
+  2018; C5 Plus December 2018 / January–February 2019; C7s March
+  2019 / June–August 2019) and the P1 was unveiled in July 2018
+  as a prototype and never sold. devicesfaq's pages for the 2019
+  Neffos models carry wrong specs — the A5 at Android 5.1, the
+  X20 at Android 5.1 with a 5-inch screen, the C9 Max at 4.5
+  inches with 1 GB of RAM — so do not trust devicesfaq for those
+  models. Neffos has no phone-to-USB backup tool of its own — the
+  only Neffos-authored backup advice turned up is in the C9 user
+  manual, which says to switch on Back up to Google Drive, a cloud
+  copy, not a USB copy, and firmware updates live on neffos.com
+  support. Neffos is TP-Link's smartphone brand — the networking
+  company established the Neffos brand in 2015 and shipped its
+  first phones, the C5 series, in early 2016; the name comes from
+  the Greek 'nephos', cloud. This article covers twenty-eight
+  phones from 2016 to 2020 (one exclusion: the Y50 — on the
+  xphone24 TP-Link list but no specs turned up anywhere found).
+  Quirk: droidafrica's C9 Max and C9s card slots read "up to
+  128 TB" — an obvious typo for 128 GB; this article cites
+  smartprix's 128 GB instead.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 20, 2026 (WL-160, 128th how-to):
+  docs/neffos-photos-to-usb.html — branch wl-160-neffos,
+  article commit fd6377c (supervisor to verify and merge;
+  no PR opened by the lead).
+  Fallback for WL-161: Maze — no article file
+  (docs/maze-photos-to-usb.html absent), no dedicated
+  searches.md row (only the WL-160 fallback mention in the
+  Query 126 row), and the exact query "back up Maze photos
+  to USB drive without computer" returns no Maze-specific
+  guide in the top results (SnapDisk's own generic guides,
+  scored Nov 20, 2026; Maze is a defunct Chinese budget
+  brand, 2017–2018, Maze Alpha etc.).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
