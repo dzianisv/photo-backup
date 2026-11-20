@@ -1,3 +1,91 @@
+## WL-160 — Back up Neffos photos to USB article, 128th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #292 MERGED (merge commit 70c2697, merged
+  2026-11-20T16:57:19Z; PR head 2441812, CI run 44778282121
+  build pass, conclusion success; post-merge main runs
+  Android PR + pages success on 70c2697).
+  Pre-merge readback on head 2441812 (verified by the
+  supervisor from the branch source): feed 128 items incl.
+  Neffos, sitemap 132 URLs incl. Neffos, blog index 128
+  BlogPosting, title 50 chars, meta 133 chars, JSON-LD
+  parses (Article + FAQPage 4 Qs + BreadcrumbList,
+  datePublished 2026-11-20), TL;DR present, 1 script tag,
+  1 H1, 10 H2s, Query 127 row present, only docs/ +
+  tool/growth changed.
+  Query 127 verified by the lead from live evidence (no top
+  result is a Neffos-specific phone-to-USB photo-backup
+  guide); the exact query returned four results (a FotoSafe
+  generic guide, SnapDisk's own generic guides, an askfilo
+  generic guide) — none is a Neffos-specific guide; real gap
+  stands.
+  New docs/neffos-photos-to-usb.html ("Back up Neffos photos
+  to a USB drive (no computer)"), following the WL-54–WL-159
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot, with an honest caption).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 50 chars, meta
+  description 133 chars, JSON-LD validated by parse
+  (Article + FAQPage 4 Qs + BreadcrumbList, datePublished
+  2026-11-20); sitemap 132 URLs and feed 128 items; blog
+  JSON-LD counts 128 BlogPosting entries. searches.md Query
+  127 row present ("back up Neffos photos to USB drive
+  without computer" — HOW-TO GAP).
+  Key finding: twenty-eight covered Neffos models (2016–2020),
+  18 clear Android 7.0, so SnapDisk installs on 18; the
+  one-tap route is proven on 4 (N1, X9, X20, X20 Pro — each
+  clears the floor and lists USB OTG Yes), 8 more need the
+  mounting test (C5s, C5A, C7s, C9A, C9s, C9 Max, X1 Lite,
+  Y5s — OTG unstated), 6 list USB OTG No (C7, C7A, C7 Lite,
+  C9, C5 Plus, P1), 2 contested-floor (X1 Max 6.0 vs 7.0, A5
+  5.1 vs 9.0 Go), 6 run below 7.0 as shipped, 2 are feature
+  phones with no Android at all (N105, N150 — no camera/card
+  slot stated, only the computer copy works on those).
+  2 USB-C (N1, X9), 13 micro-USB, port unstated on 11.
+  microSD fits 20 for certain. VaultDrive proven on 11 under
+  its own site's Android 8 floor (+ A5 on its 9.0 listing),
+  0 under AppBrain's 12.1; FotoSafe proven on 2 (X20, X20
+  Pro). Neffos is TP-Link's smartphone brand (established
+  2015, first phones C5 series early 2016; name from Greek
+  'nephos', cloud). Y50 excluded — on the xphone24 TP-Link
+  list but no specs anywhere. devicesfaq is unreliable for
+  2019 Neffos models (A5 at 5.1, X20 at 5.1/5-inch, C9 Max
+  at 4.5-inch/1 GB RAM — all wrong); P1 is a never-sold
+  projector prototype; droidafrica's "up to 128 TB" card slot
+  is a typo for 128 GB. Lead caught its own count slip before
+  commit (A5 briefly listed inside the 18 clear-floor models,
+  would have made 19; corrected, A5 stays contested-floor
+  only).
+  llms-full.txt Neffos section is complete (heading + URL +
+  dek + TL;DR + Search line, lines 1302+) — no UMIDIGI-style
+  missing-section gap. Note: the Neffos section uses a single
+  "Method 3:" prefix while older sections carry "Method 3:
+  Method 3:" — the lead flagged the doubling as a generator
+  artifact; supervisor checked: 19 occurrences across
+  llms-full.txt (IIIF150, RugGear, Sonim, Kyocera, Crosscall,
+  ...), it is the established generator pattern, and the
+  VKworld article HTML itself has 0 occurrences — not a
+  defect, no fix, do not re-raise.
+  Live fetch verified by the supervisor:
+  neffos-photos-to-usb.html 200 (53,508 B, correct title),
+  feed.xml 128 items live incl. Neffos.
+  Lead's recorded failed execs: one exec exit 1 in the run
+  record, no detail — all receipts independently verified,
+  no effect.
+  Supervisor re-score from a fresh live re-search: top
+  results are the FotoSafe generic guide, SnapDisk's own
+  generic guides (usb-photo-backup,
+  transfer-photos-to-usb-automatically), askfilo generic —
+  none mentions Neffos; real gap stands.
+  Fallback for WL-161: Maze — verified by the supervisor,
+  no docs/maze-photos-to-usb.html and no dedicated
+  searches.md row (the 18 "maze" grep hits are fallback notes
+  only), and the exact query returns no Maze-specific guide
+  in the top results (SnapDisk's own generic guides only —
+  scored Nov 20, 2026). Maze is a defunct Chinese budget
+  brand, 2017–2018, Maze Alpha etc.
+
 ## WL-159 — Back up VKworld photos to USB article, 127th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
