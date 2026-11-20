@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up BLU photos to a USB drive (no computer)</title>
+<meta name="description" content="Back up BLU photos to a USB drive without a computer — all sixteen BLU phones clear Android 7.0, so SnapDisk runs on each one.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/blu-photos-to-usb.html">
+<meta property="og:title" content="Back up BLU photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up BLU photos to a USB drive without a computer — all sixteen BLU phones clear Android 7.0, so SnapDisk runs on each one.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/blu-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/blu-photos-to-usb.html#article",
+      "headline": "Back up BLU photos to a USB drive (no computer)",
+      "description": "Back up BLU photos to a USB drive without a computer — all sixteen BLU phones clear Android 7.0, so SnapDisk runs on each one.",
+      "datePublished": "2026-11-20",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/blu-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/blu-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up BLU photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, on eleven of the sixteen covered BLU phones outright: each one clears Android 7.0 and lists USB OTG Yes, so a flash drive plugs straight in and the file-manager copy in Method 2 works on those eleven. The one-tap backup in Method 1 is proven on the same eleven too. The other five — the G9, G91, Vivo XI, Vivo XI+ and Vivo XL4 — need the mounting test, because no source settles OTG on them. A microSD card fits fourteen phones for certain, so the card-reader route in Method 4 works on fourteen as well."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. A file-manager copy moves the original files as they are — it never recompresses or resizes — so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use SnapDisk on a BLU phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes on all sixteen covered BLU phones: every one clears SnapDisk's Android 7.0 minimum — the lowest runs Android 8.1 — and the one-tap backup is proven on eleven of them — the Bold N1, Bold N2, Bold N3, G9 Pro, G90, G90 Pro, G91 Pro, G91 Max, G93, F91 and S91 Pro — each one clears the floor and lists USB OTG Yes. SnapDisk's free version backs up manually up to 5 GB per run and Pro is a one-time $9.99 purchase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later, which all sixteen covered BLU phones clear — the lowest runs Android 8.1 — so on a BLU phone the APK installs on all sixteen, and the one-tap backup is proven on eleven."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/blu-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up BLU photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/blu-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up BLU photos to a USB drive (no computer)</h1>
+  <p class="dek">BLU is the budget Android brand behind the Bold, G, F, S and Vivo lines — its phones sell unlocked for roughly $130 to $270, and the brand lists 84 Android models — and this article covers the sixteen mainline ones from 2018 to 2023: the Bold N1 (2019), Bold N2 (2022), Bold N3 (2023), G9 (2019), G9 Pro (2019), G90 (2020), G90 Pro (2020), G91 (2021), G91 Pro (2021), G91 Max (2022), G93 (2023), F91 (2022), S91 Pro (2022), Vivo XI (2018), Vivo XI+ (2018) and Vivo XL4 (2018) (Bold N1; Bold N2; Bold N3; G9; G9 Pro; G90; G90 Pro; G91; G91 Pro; G91 Max; G93; F91; S91 Pro; Vivo XI; Vivo XI+; Vivo XL4). The G91s and the standard S91 are variants and are not covered here, and neither are BLU&#x27;s C, Advance, Dash and Studio lines. BLU has no phone-to-USB backup tool of its own: no BLU-specific backup advice turned up in any source beyond a computer copy, Google Drive or Google Photos — the closest thing is the per-model backup FAQ, which names the computer copy as the most economical method. Twenty-two honest caveats up front: all sixteen clear Android 7.0 — the lowest runs Android 8.1 — so SnapDisk installs on all sixteen, and there is no below-7.0 phone in this article; the one-tap route is proven on eleven — each one clears the floor and lists USB OTG Yes — and the other five need the mounting test: the G9, G91, Vivo XI, Vivo XI+ and Vivo XL4; the Bold N2&#x27;s microSD card is contested — phonemore says no slot, droidafrica says up to 2 TB, and blucellphones.us says up to 256 GB; the Bold N3&#x27;s microSD card is contested — gsmfind, phonesdata, Smartprix and Assuredzone say no slot, while droidafrica says up to 512 GB; the G9 Pro&#x27;s microSD ceiling is two numbers — up to 128 GB per phonesdata, gsm-arena, droidafrica, phonecorridor and Smartprix, and up to 512 GB per PhoneArena; the G9&#x27;s USB OTG is contested — ubergizmo, Kimovil and phonecorridor say Yes, while gsm-arena and phonemore do not list it; the G91&#x27;s USB OTG is contested — projuktikotha says Yes, while eimei24, gsm-arena, Giznext and phonemore do not list it; the G91&#x27;s chipset is two listings — Helio A25 per phonemore, eimei24 and UL Benchmarks, and Helio A35 per Giznext; the G91 Max&#x27;s USB version is contested — Type-C 1.0 per dextrava, Type-C 2.0 per Smartprix; the Vivo XI&#x27;s microSD ceiling is two numbers — up to 128 GB per BLU&#x27;s own page, gsm-arena and Smartprix, and up to 512 GB per phonemore; the Vivo XI&#x27;s USB OTG is contested — MobileGizmo says Yes, while gsm-arena and phonemore do not list it; the Vivo XI+&#x27;s microSD ceiling is two numbers — up to 128 GB per GSMArena, PhoneArena, phonesdata and gsm-arena, and up to 512 GB per phonemore; the Vivo XI+&#x27;s USB OTG is unstated in every source — no source lists it — so the one-tap route needs the mounting test on this one; the Vivo XL4&#x27;s USB OTG is contested — ubergizmo says Yes, while gsm-arena, phonemore and PhoneArena do not list it; the Bold N1&#x27;s USB version is contested — Type-C 2.0 per GSMArena, Type-C 1.0 per phonesdata and gsm-arena; VaultDrive needs Android 8 or later per its own site, so all sixteen clear the version floor on shipped software — and AppBrain lists 12.1 or later, which two clear — the Bold N3 and the G93, both on Android 13 — so under that stricter listing VaultDrive is proven on two of the sixteen; FotoSafe needs Android 9 or later with USB host or OTG support, so thirteen clear the version floor on shipped software — the Vivo XI and the Vivo XI+ clear only after the planned Android 9 upgrade, and the Vivo XL4 has no Android 9 upgrade on record, so FotoSafe is not proven on it; a microSD card fits fourteen phones for certain — each has a slot — so the card-reader route is proven on fourteen, and contested on the Bold N2 and the Bold N3; fourteen take USB Type-C and two take micro-USB — the Vivo XI and the Vivo XL4 — so on those two a micro-USB OTG adapter is the cable, and a USB-C flash drive does not plug straight in; the file manager on a BLU phone is Files, or Files by Google, per devicesfaq — so Method 2 names it directly; the F91 is BLU&#x27;s first 5G phone, launched in April 2022 with Android 11 — and one pre-release listing calls it Android 12, so check the version on the unit, not the listing; and the search results for this query are four results — a FoneLab guide, a Dr.Fone guide, an askfilo Q&amp;A and a groovypost guide — not one of them is a BLU-specific phone-to-USB photo-backup guide at all. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 20, 2026 · 8 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> The honest answer first: all sixteen covered BLU phones clear Android 7.0 — the lowest runs Android 8.1 — so SnapDisk installs on all of them, and the one-tap backup is proven on eleven outright: each one clears the floor and lists USB OTG Yes. The other five — the G9, G91, Vivo XI, Vivo XI+ and Vivo XL4 — need the mounting test: plug the drive in and see if it shows up, because no source settles OTG on those five. There is no below-7.0 phone in this article and no blocked model. A microSD card fits fourteen phones for certain, so the card-reader route is proven on fourteen too — unlike RedMagic, where it is proven on none of the fourteen. The copies are the original files either way: a file-manager copy moves the files as they are, never recompresses them, and the only place quality gets lost is a cloud backup with a &quot;Storage saver&quot; setting. As of November 20, 2026, no top search result for this query is a BLU-specific phone-to-USB photo-backup guide at all: the top results are four generic Android guides.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search &quot;back up BLU photos to USB drive without computer&quot; and there is no BLU-specific phone-to-USB photo-backup guide in the top results at all — not one result is a guide for backing up photos from a BLU phone to a USB drive. The exact query returned four results, all generic Android:</p>
+  <ul>
+    <li><strong>fonelab.com, &quot;How to Transfer Photos from Android to Flash Drive in 3 Easy Ways&quot;</strong> (<a href="https://www.fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html">How to Transfer Photos from Android to Flash Drive in 3 Easy Ways</a>) — transfer photos from Android to a flash drive with a USB OTG adapter and the Files app, or through a PC with FoneLab HyperTrans, or with Samsung Smart Switch. A generic Android guide — it says nothing about BLU.</li>
+    <li><strong>drfone.wondershare.com, &quot;4 Practical Ways to Transfer Photos from Android to USB Flash Drive&quot;</strong> (<a href="http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html">4 Practical Ways to Transfer Photos from Android to USB Flash Drive</a>) — transfer photos from Android to a USB flash drive by Google Drive, by drag and drop through a PC, by OTG adaptor, or by AirDroid. A generic Android guide — it says nothing about BLU.</li>
+    <li><strong>askfilo.com, &quot;how to transfer pictures from an android phone to a flashdrive&quot;</strong> (<a href="https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432">how to transfer pictures from an android phone to a flashdrive</a>) — transfer pictures from an Android device to a USB flash drive with a USB OTG adapter and a file manager, or through a computer as a middleman: open the file manager, find the DCIM folder, select the pictures and choose Copy. A generic Android Q&amp;A — it says nothing about BLU.</li>
+    <li><strong>groovypost.com, &quot;How to Transfer Photos from Android to a USB Drive&quot;</strong> (<a href="https://www.groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/">How to Transfer Photos from Android to a USB Drive</a>) — transfer photos from Android to a USB drive by drag and drop through a PC, or with a USB-C dual drive plugged straight into the phone. A generic Android guide — it says nothing about BLU.</li>
+    <li><strong>Cloud routes</strong> — BLU offers no backup tool to a USB drive at all — no BLU-specific backup advice turned up in any source beyond a computer copy, Google Drive or Google Photos. The per-model backup FAQ names the computer copy as the most economical method, Google Drive as the default cloud service, and Google Photos for photos alone. The G93 backup guide says the same: the most economical method is to connect the phone to a computer using the USB cable and make a copy of the files using the file browser, and for photos alone Google Photos uploads them automatically when on Wi-Fi. None of these writes your photos as plain files to a USB drive automatically.</li>
+    <li><strong>VaultDrive (via coticsy.com)</strong> (<a href="https://coticsy.com/vaultdrive.html">VaultDrive: Back Up Phone Photos to a USB Drive, No Computer</a>) — plug a flash drive or SSD into your iPhone or Android phone, choose what to back up and tap Start; VaultDrive copies your original photos, videos and files straight to the drive. Free to try, Pro is $19.99 once, no account; free for up to 200 files or 2 GB per backup; needs iOS 17 or later, or Android 8 or later. A rival app page, not a guide — and it says nothing about BLU. Note the split: VaultDrive needs Android 8, so all sixteen clear the version floor on shipped software — the lowest runs Android 8.1 — while AppBrain&#x27;s 12.1 floor is cleared only by the Bold N3 and the G93.</li>
+    <li><strong>VaultDrive (via appbrain.com)</strong> (<a href="https://www.AppBrain.com/app/vaultdrive-usb-photo-backup/com.coticsy.vaultdrive">VaultDrive: USB Photo Backup</a>) — VaultDrive: USB Photo Backup is a photography app developed by Coticsy; 870 installs; app size 28.9 MB; needs Android 12.1+; version 1.0.7, last updated 3 November 2026; launched May 2026. An app listing, not a guide — and the source for the Android 12.1 floor, which only two of the sixteen clear — the Bold N3 and the G93, both on Android 13.</li>
+    <li><strong>FotoSafe (via fotosafe.weidisoft.net)</strong> (<a href="https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/">Back up Android photos to USB | FotoSafe</a>) — back up Android photos to a USB drive without a computer; you need Android 9 or later with USB host/OTG support, a USB drive with enough free capacity, and a data-capable OTG adapter. A rival app guide, not a BLU guide — and the source for the Android 9 floor, which thirteen clear on shipped software — the Vivo XI and the Vivo XI+ clear only after the planned Android 9 upgrade, and the Vivo XL4 has no Android 9 upgrade on record.</li>
+    <li><strong>BLU brand (via android.gs)</strong> (<a href="https://android.gs/brands/blu">BLU Android phones</a>) — all 84 BLU Android models with specs and scores, from the G91 Pro and Bold N3 at the top of the list to the C5L Max and the Studio Mini. A brand list, not a guide — and the source that BLU lists 84 Android models, of which this article covers sixteen.</li>
+    <li><strong>Bold N1 (via m.gsmarena.com)</strong> (<a href="https://m.gsmarena.com/blu_bold_n1-9855.php">BLU Bold N1</a>) — the Bold N1 runs Android 9.0 (Pie), planned upgrade to Android 10, on a Helio P70 with 4 GB of RAM and 128 GB of storage, with a microSDXC dedicated slot and USB Type-C 2.0, OTG. A spec page, not a guide — and the source for the Bold N1&#x27;s Android 9.0, its dedicated card slot and its OTG Yes.</li>
+    <li><strong>Bold N1 (via phonesdata.com)</strong> (<a href="https://phonesdata.com/en/smartphones/blu/bold-n1-5458279/">BLU Bold N1</a>) — the Bold N1 runs Android 9.0 (Pie), planned upgrade to Android 10.0, with a microSD card slot up to 128 GB and USB 2.0, Type-C 1.0 reversible connector, USB On-The-Go. A spec page, not a guide — and the source that disagrees with GSMArena on the Bold N1&#x27;s USB version, saying Type-C 1.0 where GSMArena says 2.0, plus a second source for its 128 GB card ceiling.</li>
+    <li><strong>Bold N2 (via phonemore.com)</strong> (<a href="https://www.phonemore.com/compare/phones/motorola-moto-e22i-64gb-vs-blu-bold-n2/22877006">Moto E22i vs Blu Bold N2</a>) — the Bold N2 runs Android 11 on a Dimensity 810 with 8 GB of RAM and 256 GB of UFS 2.2 storage, with external storage Not supported and USB 2.0 Type-C, USB OTG On-The-Go. A comparison page, not a guide — and the source for the Bold N2&#x27;s Android 11, its OTG Yes and its no-slot listing.</li>
+    <li><strong>Bold N2 (via droidafrica.net)</strong> (<a href="https://droidafrica.net/gadget/blu-bold-n2/">BLU BOLD N2</a>) — the Bold N2 runs Android 11 out of the box on a Dimensity 810 with 8 GB of RAM and 256 GB of internal storage, with a card slot up to 2 TB via microSD card. A spec page, not a guide — and the source that disagrees with phonemore on the Bold N2&#x27;s card slot, saying up to 2 TB where phonemore says no slot.</li>
+    <li><strong>Bold N2 (via blucellphones.us)</strong> (<a href="https://www.blucellphones.us/bold-n2-price/">BLU Bold N2 Review, Price, Specifications</a>) — the Bold N2 has 256 GB of internal storage with expandable storage up to 256 GB using a microSD card, on Android 11. A spec page, not a guide — and the source that disagrees with phonemore and droidafrica on the Bold N2&#x27;s card ceiling a second way, saying 256 GB.</li>
+    <li><strong>Bold N3 (via gsmfind.com)</strong> (<a href="https://gsmfind.com/blu-bold-n3.html">BLU Bold N3 Full Specifications</a>) — the Bold N3 runs Android 13 on a Dimensity 7050 with 8 GB of RAM and 256 GB of UFS 3.1 storage, with no card slot and USB Type-C 2.0, OTG. A spec page, not a guide — and the source for the Bold N3&#x27;s Android 13, its OTG Yes and its no-slot listing.</li>
+    <li><strong>Bold N3 (via droidafrica.net)</strong> (<a href="https://droidafrica.net/gadget/blu-bold-n3/">BLU Bold N3</a>) — the Bold N3 runs Android 13 out of the box with 8 GB of RAM and 256 GB of storage, with expandable storage up to 512 GB via microSD card. A spec page, not a guide — and the source that disagrees with gsmfind, phonesdata, Smartprix and Assuredzone on the Bold N3&#x27;s card slot, saying up to 512 GB where they say no slot.</li>
+    <li><strong>Bold N3 (via phonesdata.com)</strong> (<a href="https://phonesdata.com/en/smartphones/blu/bold-n3-5464850/">BLU Bold N3</a>) — the Bold N3 runs Android 13 with 256 GB of internal memory and 8 GB of RAM, with no memory card slot and USB Type-C 2.0, OTG. A spec page, not a guide — and a second source for the Bold N3&#x27;s no-slot listing and its OTG Yes.</li>
+    <li><strong>G9 (via phonearena.com)</strong> (<a href="https://www.phonearena.com/phones/BLU-G9_id11183">BLU G9 Full Specifications</a>) — the G9 runs Android 9.0 Pie on a Helio P22 with 4 GB of RAM and 64 GB of storage, with storage expansion microSDXC up to 128 GB and USB Type-C. A spec page, not a guide — and the source for the G9&#x27;s Android 9.0 and its 128 GB card ceiling.</li>
+    <li><strong>G9 (via ubergizmo.com)</strong> (<a href="https://www.ubergizmo.com/products/lang/en_us/devices/blu-g6,blu-g9/">BLU G6 vs. BLU G9</a>) — the G9 runs Android 9.0 on a Helio P22 with 4 GB of RAM and 64 GB of storage, with a microUSB connector and USB 2.0 with USB OTG. A comparison page, not a guide — and the source that says the G9&#x27;s OTG is Yes, against gsm-arena and phonemore, which do not list it — plus the source that calls its port micro-USB, where PhoneArena, Kimovil and phonecorridor say USB Type-C.</li>
+    <li><strong>G9 (via phonecorridor.com)</strong> (<a href="https://phonecorridor.com/blu-g9-specs-features-and-price/">BLU G9 Specs, Features and Price</a>) — the G9 runs Android 9.0 Pie on a Helio P22 with 4 GB of RAM and 64 GB of internal storage, expandable via a microSD card slot up to 128 GB, with a USB Type-C port and OTG support Yes. A spec page, not a guide — and a second source for the G9&#x27;s OTG Yes and its 128 GB card ceiling, plus a second source for its USB Type-C port.</li>
+    <li><strong>G9 Pro (via phonesdata.com)</strong> (<a href="https://phonesdata.com/en/smartphones/blu/g9-pro-5458280/">BLU G9 Pro</a>) — the G9 Pro runs Android 9.0 (Pie), planned upgrade to Android 10.0, on a Helio P60 with 4 GB of RAM and 128 GB of storage, with a microSD card slot up to 128 GB and USB 2.0, Type-C 1.0 reversible connector, USB On-The-Go. A spec page, not a guide — and the source for the G9 Pro&#x27;s Android 9.0, its 128 GB card ceiling and its OTG Yes.</li>
+    <li><strong>G9 Pro (via phonearena.com)</strong> (<a href="https://www.phonearena.com/phones/compare/TCL-20L+,BLU-G9,BLU-G9-Pro/phones/11703,11183,11234">TCL 20L+ vs BLU G9 vs BLU G9 Pro</a>) — the G9 Pro runs Android 9.0 Pie on a Helio P60 with 4 GB of RAM and 128 GB of storage, with storage expansion microSDXC up to 512 GB and USB Type-C. A comparison page, not a guide — and the source that disagrees with phonesdata, gsm-arena, droidafrica, phonecorridor and Smartprix on the G9 Pro&#x27;s card ceiling, saying 512 GB where they say 128 GB.</li>
+    <li><strong>G90 (via gsmarena.com.bd)</strong> (<a href="https://www.gsmarena.com.bd/blu-g90/">BLU G90</a>) — the G90 runs Android 10 on a Helio A25 with 4 GB of RAM and 64 GB of internal storage, with external storage microSDXC and USB 2.0, Type-C 1.0 reversible connector, USB On-The-Go. A spec page, not a guide — and the source for the G90&#x27;s Android 10, its card slot and its OTG Yes.</li>
+    <li><strong>G90 (via bhphotovideo.com)</strong> (<a href="https://www.bhphotovideo.com/c/product/1584847-REG/blu_g0310ww_magenta_g90_g0310ww_64gb_dual_sim.html">BLU G90 Dual-SIM 64GB Smartphone</a>) — the G90 runs Android 10 on a Helio A25 with 4 GB of RAM and 64 GB of built-in storage, expandable via a microSD card up to 128 GB, with a USB-C (USB 2.0) port. A retailer listing, not a guide — and the source for the G90&#x27;s 128 GB card ceiling.</li>
+    <li><strong>G90 Pro (via m.gsmarena.com)</strong> (<a href="https://m.gsmarena.com/blu_g90_pro-10403.php">BLU G90 Pro</a>) — the G90 Pro runs Android 10 on a Helio G90T with 4 GB of RAM and 128 GB of storage, with a microSDXC card slot and USB Type-C 2.0, OTG. A spec page, not a guide — and the source for the G90 Pro&#x27;s Android 10, its card slot and its OTG Yes.</li>
+    <li><strong>G91 (via phonemore.com)</strong> (<a href="https://www.phonemore.com/compare/phones/samsung-galaxy-a52-5g-sm-a526bds-128gb6gb-vs-blu-g91/17334420">Galaxy A52 5G vs Blu G91</a>) — the G91 runs Android 10 on a Helio A25 with 4 GB of RAM and 128 GB of eMMC 5.1 storage, with external storage up to 512 GB microSD, microSDXC on a dedicated slot and USB 2.0 Type-C reversible connector. A comparison page, not a guide — and the source for the G91&#x27;s Android 10, its 512 GB card ceiling and its USB Type-C port with no OTG listed.</li>
+    <li><strong>G91 (via projuktikotha.com)</strong> (<a href="https://projuktikotha.com/product/blu-g91/">BLU G91 Price in Bangladesh 2026, Specs &amp; Review</a>) — the G91 runs Android 10 on a Helio A25 with 4 GB of RAM and 128 GB of storage, with USB Type-C 2.0, USB On-The-Go. A spec page, not a guide — and the source that says the G91&#x27;s OTG is Yes, against eimei24, gsm-arena, Giznext and phonemore, which list the Type-C port without OTG.</li>
+    <li><strong>G91 (via eimei24.com)</strong> (<a href="https://www.eimei24.com/specification/BLU/G91/">BLU G91</a>) — the G91 runs Android 10 on an octa-core 1.8 GHz Cortex-A53 processor with 128 GB of built-in memory and 4 GB of RAM, with a microSDXC dedicated slot and USB Type-C 2.0. A spec page, not a guide — and a second source for the G91&#x27;s Android 10 and its dedicated card slot, with no OTG listed.</li>
+    <li><strong>G91 (via giznext.com)</strong> (<a href="https://www.giznext.com/mobiles/blu-g91-gnt">BLU G91 Price in India 2026, Full Specs</a>) — the G91 runs Android 10 with a Helio A35 chipset and an octa-core 1.8 GHz Cortex-A53 CPU, with a microSDXC dedicated slot and USB Type-C 2.0. A spec page, not a guide — and the source that disagrees with phonemore, eimei24 and UL Benchmarks on the G91&#x27;s chipset, saying Helio A35 where they say Helio A25.</li>
+    <li><strong>G91 Pro (via m.gsmarena.com)</strong> (<a href="https://m.gsmarena.com/blu_g91_pro-11073.php">BLU G91 Pro</a>) — the G91 Pro runs Android 11 on a Helio G90 with 6 GB of RAM and 128 GB of storage, with a microSDXC card slot and USB Type-C 2.0, OTG. A spec page, not a guide — and the source for the G91 Pro&#x27;s Android 11, its card slot and its OTG Yes.</li>
+    <li><strong>G91 Pro (via mobilegizmo.net)</strong> (<a href="https://www.mobilegizmo.net/compare/blu_blu-g91-pro/huawei_honor-x50-pro-5g/samsung_samsung-galaxy-s24-5g/asus_asus-rog-phone-8-5g/">Compare BLU G91 Pro</a>) — the G91 Pro runs Android 11 on a Helio G90 with 6 GB of RAM and 128 GB of internal memory, with a microSDXC dedicated slot up to 256 GB and USB Type-C 2.0 with USB OTG support Yes. A comparison page, not a guide — and the source for the G91 Pro&#x27;s 256 GB card ceiling and a second source for its OTG Yes.</li>
+    <li><strong>G91 Max (via dextrava.com)</strong> (<a href="https://dextrava.com/blu-g91-max-full-specifications-and-price/">BLU G91 Max Full Specifications and Price</a>) — the G91 Max runs Android 11 on a Helio G95 with 8 GB of RAM and 128 GB of internal storage, with a microSD limit up to 256 GB and USB 2.0, Type-C 1.0 reversible connector, USB On-The-Go. A spec page, not a guide — and the source for the G91 Max&#x27;s Android 11, its 256 GB card ceiling and its OTG Yes, plus the Type-C 1.0 listing that Smartprix contradicts with Type-C 2.0.</li>
+    <li><strong>G93 (via testing.blu.directory)</strong> (<a href="https://testing.blu.directory/devices/g93/">G93 | Embrace the Moment</a>) — BLU&#x27;s own G93 page: Android 13, a Helio G99 gaming chipset, 128 GB of internal storage, 6 GB of RAM, microSD up to 256 GB, a 50 MP triple main camera and a 5,000 mAh battery with 18W quick charge, with USB Type-C. A maker page, not a guide — and the source for the G93&#x27;s Android 13 and its 256 GB card ceiling, from BLU itself.</li>
+    <li><strong>G93 (via devicesfaq.com)</strong> (<a href="https://www.devicesfaq.com/en/frequently-asked-questions/blu-g93">Frequently asked questions BLU G93</a>) — to back up a BLU G93, the most economical method is to connect the G93 to a computer using the USB cable and make a copy of the files using the file browser; for a cloud backup the default built-in service on Android is Google Drive; for photos and videos alone, Google Photos uploads them automatically when on Wi-Fi. Downloads live in an app called Files, previously known as Files by Google. A per-model FAQ, not a phone-to-USB guide — and the source that names the file manager on a BLU phone: Files, or Files by Google — and the closest thing to BLU-specific backup advice, which still offers no phone-to-USB route — plus a second source for the G93&#x27;s USB Type-C 2.0, OTG port.</li>
+    <li><strong>F91 (via gsmarena.com)</strong> (<a href="https://www.gsmarena.com/compare.php3?idPhone1=10103&amp;idPhone2=11483">Compare LG V60 ThinQ 5G vs. BLU F91</a>) — the F91 runs Android 11 on a Dimensity 810 with 8 GB of RAM and 128 GB of storage, with a microSDXC card slot and USB Type-C 2.0, OTG. A comparison page, not a guide — and the source for the F91&#x27;s Android 11, its card slot and its OTG Yes.</li>
+    <li><strong>F91 (via androidguys.com)</strong> (<a href="https://androidguys.com/news/blu-5g-phone-f91-5g/">BLU debuts its first 5G phone in the $300 F91 5G</a>) — BLU unveils its first ever 5G handset, the F91 5G, with a Dimensity 810 processor, 8 GB of RAM, 128 GB of internal memory and a microSD expansion card slot for up to 256 GB, a 5,000 mAh battery and Android 11. A launch report, not a guide — and the source that the F91 is BLU&#x27;s first 5G phone, that it ships Android 11, and that its card ceiling is 256 GB.</li>
+    <li><strong>S91 Pro (via droidafrica.net)</strong> (<a href="https://droidafrica.net/gadget/blu-s91-pro/">BLU S91 Pro</a>) — the S91 Pro runs Android 12 out of the box on a Helio G37 with 4 GB of RAM and 128 GB of storage, expandable up to 256 GB via an SD-card on a dedicated slot, with a 50 MP main sensor and a 5,000 mAh battery. A spec page, not a guide — and the source for the S91 Pro&#x27;s Android 12, its 256 GB card ceiling on a dedicated slot and its cameras.</li>
+    <li><strong>S91 Pro (via phonesdata.com)</strong> (<a href="https://phonesdata.com/en/smartphones/blu/s91-pro-5462606/">BLU S91 Pro</a>) — the S91 Pro runs Android 12 with USB Type-C 2.0, USB On-The-Go. A spec page, not a guide — and the source for the S91 Pro&#x27;s OTG Yes, which droidafrica&#x27;s own spec table does not list at all.</li>
+    <li><strong>Vivo XI (via bluproducts.com)</strong> (<a href="https://www.bluproducts.com/devices/vivo-xi/">BLU VIVO XI | Without Limits</a>) — BLU&#x27;s own Vivo XI page: Android 8.1 Oreo, a Helio P22 chipset, 32 GB of internal memory with 3 GB of RAM, a microSD slot for an extra 128 GB, a 16 MP + 5 MP dual camera setup and a 3,000 mAh battery. A maker page, not a guide — and the source for the Vivo XI&#x27;s Android 8.1 and its 128 GB card ceiling, from BLU itself.</li>
+    <li><strong>Vivo XI (via mobilegizmo.net)</strong> (<a href="https://www.mobilegizmo.net/compare/blu_vivo-xi/asus_asus-rog-phone-8-5g/samsung_samsung-galaxy-s24-5g/vivo_vivo-v30-5g/">Compare BLU Vivo XI</a>) — the Vivo XI runs Android 8.1 (Oreo), upgradable to Android 9.0 Pie, on a Helio P22 with 3 GB of RAM and 32 GB of internal memory, with a microSD card slot up to 128 GB and microUSB 2.0 with USB OTG support Yes. A comparison page, not a guide — and the source that says the Vivo XI&#x27;s OTG is Yes, against gsm-arena and phonemore, which list the microUSB port without OTG.</li>
+    <li><strong>Vivo XI+ (via m.gsmarena.com)</strong> (<a href="https://m.gsmarena.com/blu_vivo_xi+-9307.php">BLU Vivo XI+</a>) — the Vivo XI+ runs Android 8.1 (Oreo), upgradable to Android 9.0 (Pie), on a Helio P60 with 4 GB or 6 GB of RAM and 64 GB or 128 GB of storage, with a microSDXC card slot and USB Type-C 2.0. A spec page, not a guide — and the source for the Vivo XI+&#x27;s Android 8.1 and its upgrade path to 9.0, plus its USB Type-C 2.0 listing with no OTG anywhere.</li>
+    <li><strong>Vivo XL4 (via ubergizmo.com)</strong> (<a href="https://www.ubergizmo.com/products/lang/en_us/devices/blu-vivo-xl4/">BLU Vivo XL4 Specs &amp; Speed</a>) — the Vivo XL4 runs Android 8.1 on a Helio P22 with 3 GB of RAM and 32 GB of storage, with a microUSB connector and USB 2.0 with USB OTG. A spec page, not a guide — and the source that says the Vivo XL4&#x27;s OTG is Yes, against gsm-arena, phonemore and PhoneArena, which list the microUSB port without OTG.</li>
+    <li><strong>Vivo XL4 (via phonearena.com)</strong> (<a href="https://www.phonearena.com/phones/compare/BLU-VIVO-ONE,BLU-VIVO-XL4/phones/10841,11068">BLU VIVO ONE vs BLU VIVO XL4</a>) — the Vivo XL4 runs Android 8.1 Oreo on a Helio P22 with 3 GB of RAM and 32 GB of storage, with storage expansion microSDXC up to 128 GB and USB microUSB, USB 2.0. A comparison page, not a guide — and the source for the Vivo XL4&#x27;s Android 8.1 and its 128 GB card ceiling, with no OTG listed.</li>
+  </ul>
+  <p>None of them is a BLU-specific phone-to-USB photo-backup guide, and none of them offers an automated BLU photo-library backup: nothing that takes the entire camera roll, copies it oldest-first in the background as plain files you can open anywhere, shows progress, pauses and resumes, and verifies every file. That is the gap this article fills, as of November 20, 2026 — with the honest finding that the automated part is proven on eleven covered BLU phones, and the card-reader route is proven on fourteen.</p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li><strong>A covered BLU phone.</strong> The sixteen covered models are the Bold N1 (Android 9.0, upgradable to 10, Helio P70, 4 GB RAM, 128 GB), Bold N2 (Android 11, Dimensity 810, 8 GB, 256 GB), Bold N3 (Android 13, Dimensity 7050, 8 GB, 256 GB), G9 (Android 9.0, Helio P22, 4 GB, 64 GB), G9 Pro (Android 9.0, upgradable to 10, Helio P60, 4 GB, 128 GB), G90 (Android 10, Helio A25, 4 GB, 64 GB), G90 Pro (Android 10, Helio G90T, 4 GB, 128 GB), G91 (Android 10, Helio A25 — Helio A35 per Giznext, 4 GB, 128 GB), G91 Pro (Android 11, Helio G90, 6 GB, 128 GB), G91 Max (Android 11, Helio G95, 8 GB, 128 GB), G93 (Android 13, Helio G99, 6 GB, 128 GB), F91 (Android 11, Dimensity 810, 8 GB, 128 GB), S91 Pro (Android 12, Helio G37, 4 GB, 128 GB), Vivo XI (Android 8.1, upgradable to 9.0, Helio P22, 3 GB, 32 GB), Vivo XI+ (Android 8.1, upgradable to 9.0, Helio P60, 4 or 6 GB, 64 or 128 GB) and Vivo XL4 (Android 8.1, Helio P22, 3 GB, 32 GB). All sixteen clear Android 7.0, so SnapDisk installs on all of them. The one-tap backup is proven on eleven — each one lists USB OTG Yes — and the other five need the mounting test.</li>
+    <li><strong>A USB flash drive with enough free space.</strong> Check how much your photos take first: <em>Settings &gt; Storage</em> shows it, or the Gallery. A 128 GB drive covers most camera rolls — and if you want every photo backed up, buy a drive bigger than your photo total, not bigger than your phone.</li>
+    <li><strong>The right adapter, if your phone needs one.</strong> Fourteen covered phones take USB Type-C, so a USB-C flash drive plugs straight in. Two take micro-USB — the Vivo XI and the Vivo XL4 — so on those two, a micro-USB OTG adapter is the cable, and a USB-C flash drive does not plug straight in.</li>
+    <li><strong>Optional: a microSD card.</strong> A microSD card fits fourteen phones for certain — each has a slot — so the card-reader route in Method 4 is proven on fourteen. It is contested on the Bold N2 and the Bold N3, so check the slot on the unit before buying a card for one of those two. Card ceilings are contested on three phones — the G9 Pro (128 GB per five sources, 512 GB per PhoneArena), the Vivo XI (128 GB per BLU&#x27;s own page, gsm-arena and Smartprix, 512 GB per phonemore) and the Vivo XI+ (128 GB per GSMArena, PhoneArena, phonesdata and gsm-arena, 512 GB per phonemore) — so buy at or under 128 GB if you want the ceiling every source agrees on. A card is only a backup if the photos end up on it — see Method 4.</li>
+    <li><strong>What not to buy.</strong> A USB-C OTG adapter for a Type-C phone — a USB-C flash drive plugs straight in, and the adapter is the wrong buy. A USB-C flash drive expecting it to plug into the Vivo XI or the Vivo XL4 — those two are micro-USB, and a USB-C drive needs a micro-USB OTG adapter between them. A card bigger than the contested ceiling on the G9 Pro, Vivo XI or Vivo XI+ without checking the phone first — the ceiling is two numbers on each of those three. A card at all for the Bold N2 or the Bold N3 without checking the slot on the unit first — the slot itself is contested on those two. A rival backup app expecting it to work on the shipped software of every covered phone — VaultDrive&#x27;s AppBrain floor is Android 12.1, which only the Bold N3 and the G93 clear, and FotoSafe&#x27;s Android 9 floor is not met on the shipped software of the Vivo XI, the Vivo XI+ or the Vivo XL4.</li>
+    <li><strong>What the drive must not be.</strong> An app for the phone — a backup app and a backup drive are two different things. Your old phone&#x27;s card — a card that came out of another phone carries its photos, not yours. A drive with no space left — check the free space before you start, not halfway through.</li>
+  </ul>
+  <p><strong>Two BLU specifics:</strong> there are sixteen models here, not two or three — and the line splits in two places, not one. First, the one-tap split: eleven phones list USB OTG Yes, so the drive plugs in and mounts, and five — the G9, G91, Vivo XI, Vivo XI+ and Vivo XL4 — need the mounting test, because no source settles OTG on them. Second, the port split by age: fourteen take USB Type-C and two — the Vivo XI and the Vivo XL4, both from 2018 — take micro-USB, so on those two a micro-USB OTG adapter is the cable. And a card-reader route the RedMagic article could not offer: a microSD card fits fourteen BLU phones for certain, so the card-reader route is proven on fourteen here, where on RedMagic it was proven on none of the fourteen. The updates twist is the other way round from the usual story: the three oldest phones in this article, the 2018 Vivos, shipped on Android 8.1 and have a planned Android 9.0 upgrade on two of them — the Vivo XI and the Vivo XI+ — while the Vivo XL4 has no Android 9 upgrade on record, so FotoSafe is not proven on it. The F91&#x27;s twist is in the listings, not the phone: it is BLU&#x27;s first 5G phone, launched in April 2022 with Android 11, and one pre-release listing calls it Android 12, so check the version on the unit, not the listing.</p>
+
+  <h2>Method 1: SnapDisk — proven on eleven</h2>
+  <p>Method 1 is the one-tap version. It uses SnapDisk, the free backup app this site is about — <a href="https://dzianisv.github.io/photo-backup/">SnapDisk</a>. Free version: manual backup, up to 5 GB per run. Pro is a one-time $9.99 purchase and adds auto-backup on connect plus unlimited size. SnapDisk needs Android 7.0 or later, which all sixteen covered BLU phones clear — the lowest runs Android 8.1 — so the app installs on all sixteen, and the one-tap backup is proven on eleven: each one lists USB OTG Yes.</p>
+  <ol>
+    <li><strong>Check the Android version first.</strong> <em>Settings &gt; About phone &gt; Android version</em>. All sixteen covered BLU phones run Android 8.1 or newer — the Vivo XI, Vivo XI+ and Vivo XL4 run 8.1; the Bold N1, G9 and G9 Pro run 9.0; the G90, G90 Pro and G91 run 10; the Bold N2, G91 Pro, G91 Max and F91 run 11; the S91 Pro runs 12; the Bold N3 and G93 run 13. If it says 8.0 or lower, you are not on a covered model — check the model name before buying a drive expecting the one-tap backup.</li>
+    <li><strong>Install SnapDisk.</strong> SnapDisk is not on Google Play yet — the listing is being prepared — so install the v0.1.2 APK from the GitHub release page. On the phone, allow installing from unknown sources when asked. It needs Android 7.0 or later, which all sixteen covered BLU phones clear — the lowest runs Android 8.1 — so on a BLU phone the APK installs on all sixteen, and the one-tap backup is proven on eleven.</li>
+    <li><strong>Plug in the USB drive.</strong> On fourteen covered phones that is a USB-C flash drive plugged straight in — no adapter, no cable. On the two micro-USB models, the Vivo XI and the Vivo XL4, that is a micro-USB OTG adapter between the phone and the drive. A plain sync cable is the wrong cable: it connects a phone to a computer, not a drive to a phone.</li>
+    <li><strong>Look for the mount notification.</strong> On the eleven proven phones — the Bold N1, Bold N2, Bold N3, G9 Pro, G90, G90 Pro, G91 Pro, G91 Max, G93, F91 and S91 Pro — Android notices the drive and offers it as storage, and SnapDisk picks it as the To folder. On the five mounting-test phones — the G9, G91, Vivo XI, Vivo XI+ and Vivo XL4 — if nothing appears, check <em>Settings &gt; Storage</em>: if the drive is listed there, tap it and mount it, then run the backup. If the drive never shows up on one of those five, the phone does not host it, and Method 3 is the route.</li>
+    <li><strong>Check the copy, then delete the originals.</strong> Open the drive in Files and count: the backup is only done when every photo is on the drive and opens. Then delete the originals on the phone if you need the space — and only then.</li>
+  </ol>
+  <p>SnapDisk copies the photos byte-for-byte: the file on the drive is the same file the phone took, with the same pixels. There is no re-encoding step, so nothing is lost in the copy — the only place quality gets lost is a cloud backup with a &quot;Storage saver&quot; setting.</p>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings screen showing the From folder (your photos) and the To folder (the drive), each with a folder picker">
+    <figcaption>SnapDisk&#x27;s Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. All sixteen covered BLU phones clear Android 7.0, so SnapDisk installs on all sixteen — and the one-tap route is proven on eleven: each one lists USB OTG Yes. A microSD card fits fourteen phones, so the card-reader route is proven on fourteen too.</figcaption>
+  </figure>
+
+  <h2>Method 2: the file manager and an OTG adapter</h2>
+  <p>Method 2 is the manual version of the same thing — no app, just the phone&#x27;s file manager and a drive. The file manager on a BLU phone is Files, or Files by Google, per devicesfaq — so this method names it directly. It works on the eleven proven phones, and on the five mounting-test phones if the drive shows up in Settings.</p>
+  <ol>
+    <li><strong>Plug the drive into the phone.</strong> On fourteen covered phones that is a USB-C flash drive plugged straight in. On the Vivo XI and the Vivo XL4, that is a micro-USB OTG adapter between the phone and the drive.</li>
+    <li><strong>Open Files and find the DCIM folder.</strong> Your camera photos live in the DCIM folder — on most phones that is <em>Internal storage &gt; DCIM &gt; Camera</em>. Screenshots live in <em>Pictures &gt; Screenshots</em>, and WhatsApp photos in <em>Android &gt; media &gt; com.whatsapp &gt; WhatsApp &gt; Media &gt; WhatsApp Images</em>.</li>
+    <li><strong>Select the photos and copy them to the drive.</strong> Long-press one photo, select the rest, tap <em>Copy</em>, navigate to the USB drive and tap <em>Paste</em>. Copy, not Move — see &quot;What to avoid&quot; below.</li>
+    <li><strong>Wait, then check.</strong> Copying takes time — thousands of photos can take half an hour or more. Open the drive in Files and count before you delete anything.</li>
+  </ol>
+  <p>This is the same copy Method 1 does, done by hand. It copies the original files as they are — no re-encoding, no quality loss.</p>
+
+  <h2>Method 3: through a computer</h2>
+  <p>Method 3 is the fallback — and the one the per-model backup FAQ calls the most economical method. It works on all sixteen, including the five mounting-test phones if the drive never shows up on the phone. Plug the phone into a computer with the USB cable, open the phone as a drive, and drag the DCIM folder onto a USB drive. Copy, not Move, and check the copy before deleting anything. It works — it just takes the manual step Method 1 does for you.</p>
+
+  <h2>Method 4: the microSD card reader route</h2>
+  <p>Method 4 is the card route, and on BLU it is a real one: a microSD card fits fourteen phones for certain, so this route is proven on fourteen — unlike RedMagic, where it is proven on none of the fourteen. It is contested on the Bold N2 and the Bold N3, so check the slot on the unit before buying a card for one of those two.</p>
+  <ol>
+    <li><strong>Put the card in the phone.</strong> The slot is dedicated on the Bold N1, G91, G91 Pro and S91 Pro. Card ceilings are contested on three phones — the G9 Pro (128 GB per five sources, 512 GB per PhoneArena), the Vivo XI (128 GB per BLU&#x27;s own page, gsm-arena and Smartprix, 512 GB per phonemore) and the Vivo XI+ (128 GB per GSMArena, PhoneArena, phonesdata and gsm-arena, 512 GB per phonemore) — so buy at or under 128 GB if you want the ceiling every source agrees on.</li>
+    <li><strong>Set the camera to save to the card.</strong> Open the Camera app, go to Settings, and set Storage to the SD card. New photos then land on the card, not the internal storage.</li>
+    <li><strong>Move the photos already on the phone.</strong> Open Files, select the DCIM folder, and move it to the card. The photos already on the phone do not move themselves — they live in internal storage until you move them.</li>
+    <li><strong>Take the card out and read it in a card reader.</strong> Plug the reader into the computer, or into the phone with an OTG adapter, and copy the photos to a USB drive.</li>
+  </ol>
+  <p>Two warnings: the photos already on the phone live in internal storage, not on the card — so moving the card alone backs up nothing until you move them — and the card is only a backup if the photos end up on it, so check the card before you delete anything on the phone.</p>
+
+  <h2>Method 5: Google Photos, or the cloud</h2>
+  <p>Method 5 is the cloud route — and the one BLU&#x27;s own per-model FAQ names for photos alone: Google Photos uploads them automatically when on Wi-Fi. It works on all sixteen, it is free up to the Google account&#x27;s 15 GB, and it is the only method here that backs up without a cable. But it is not a USB backup: the photos live on Google&#x27;s servers, not on a drive you hold, and the &quot;Storage saver&quot; setting compresses them — so check that setting before trusting a cloud copy. If you want the originals on a drive you own, Method 1 or Method 2 is the route.</p>
+
+  <h2>What this does not do</h2>
+  <ul>
+    <li>It does not install below Android 7.0. No covered BLU phone runs below Android 8.1 — so on a covered phone, this does not come up — but if the phone in your hand runs Android 6.0 or lower, it is not a covered model.</li>
+    <li>It does not work if the phone does not host a drive. The five mounting-test phones — the G9, G91, Vivo XI, Vivo XI+ and Vivo XL4 — may or may not mount a drive, because no source settles OTG on them. If the drive never shows up on one of those five, Method 3 is the route.</li>
+    <li>It does not delete photos. A backup copies the photos to the drive; deleting the originals is a separate step, and only after you have checked the copy.</li>
+    <li>It does not back up your settings, contacts or messages. It backs up photos and videos — the files in your camera roll.</li>
+    <li>It does not back up photos from apps that hide them. Photos saved inside an app&#x27;s private storage — WhatsApp&#x27;s hidden media, or a locked album — may not be in the DCIM folder, so check the app&#x27;s own export.</li>
+    <li>It does not compress or shrink your photos. The copy is the original file — the same pixels, the same size.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Don&#x27;t move instead of copying.</strong> Move deletes the original as it goes — if the copy fails halfway, the photos are gone. Copy first, check the copy, then delete.</li>
+    <li><strong>Don&#x27;t unplug the drive until the copy is done.</strong> Unplugging mid-copy corrupts the files being written. Wait for the progress to finish, then eject the drive in Settings before pulling it out.</li>
+    <li><strong>Don&#x27;t buy a micro-USB adapter for a Type-C phone.</strong> Fourteen covered phones take USB Type-C — a USB-C flash drive plugs straight in, and the adapter is the wrong buy.</li>
+    <li><strong>Don&#x27;t buy a USB-C drive expecting it to plug into the Vivo XI or the Vivo XL4.</strong> Those two are micro-USB, and a USB-C drive needs a micro-USB OTG adapter between them.</li>
+    <li><strong>Don&#x27;t buy a card bigger than the contested ceiling without checking.</strong> The G9 Pro, Vivo XI and Vivo XI+ each have two card ceilings — 128 GB per most sources, 512 GB per one — so buy at or under 128 GB if you want the ceiling every source agrees on.</li>
+    <li><strong>Don&#x27;t buy a card at all for the Bold N2 or the Bold N3 without checking the slot on the unit first.</strong> The slot itself is contested on those two — phonemore says no slot on the N2 and gsmfind, phonesdata, Smartprix and Assuredzone say no slot on the N3, while droidafrica says up to 2 TB and 512 GB respectively.</li>
+    <li><strong>Don&#x27;t count on VaultDrive&#x27;s AppBrain floor except on the Bold N3 and the G93.</strong> Its own site says Android 8, which all sixteen clear — but AppBrain lists Android 12.1, which only the Bold N3 and the G93, both on Android 13, clear.</li>
+    <li><strong>Don&#x27;t count on FotoSafe on shipped software on the three 2018 Vivos.</strong> It needs Android 9 — the Vivo XI and the Vivo XI+ clear only after the planned Android 9 upgrade, and the Vivo XL4 has no Android 9 upgrade on record.</li>
+    <li><strong>Don&#x27;t trust the F91&#x27;s pre-release Android 12 listing.</strong> It ships Android 11 — check the version on the unit, not the listing.</li>
+    <li><strong>Don&#x27;t let one folder hold every photo.</strong> A backup is only a backup if the copy exists somewhere else — a drive, a card, or the cloud. One copy is not a backup.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if you have to pick the files yourself, it isn&#x27;t a backup — it&#x27;s a copy. A backup finds your photos, copies them all, and tells you when it&#x27;s done. On a BLU phone the honest position is simple: sixteen phones, all clear Android 7.0, eleven list USB OTG Yes, fourteen take a microSD card — the one-tap backup is proven on eleven, and the card-reader route is proven on fourteen.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you do not have a BLU phone, the closest parallel is the <a href="tecno-photos-to-usb.html">Tecno article</a> — another budget brand with per-model OTG variation. The same methods work; only the model list changes.</p>
+
+</article>
+<footer>
+  <p>SnapDisk is a free Android app for backing up photos to a USB drive, no computer needed.</p>
+  <p><a href="https://dzianisv.github.io/photo-backup/">SnapDisk</a> · <a href="blog/">Blog</a> · <a href="https://github.com/dzianisv/photo-backup">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>
