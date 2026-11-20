@@ -11417,6 +11417,131 @@ demand is read off competitor install velocity instead (see
   Fallback for WL-148: Shiftphone — verified absent, no
   docs/shiftphone-photos-to-usb.html and no searches.md row.
 
+### 115. "back up Shiftphone photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Shiftphone-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Shiftphone-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and all four covered
+  Shiftphone models clear Android 7.0 and two of the four
+  list USB OTG Yes, so the one-tap route is proven on two
+  of them, with the SHIFT6m and the SHIFT6mq the only
+  unproven ones.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash
+  drive by connecting them directly with an OTG adaptor,
+  using a PC as a middleman via USB File Transfer mode, or
+  downloading them wirelessly through Google Drive or
+  AirDroid; for direct transfers without a computer, connect
+  a USB-C OTG adaptor from the phone to the flash drive and
+  copy files using the USB Drive option in the Android
+  notification tray. A generic Android guide — it says
+  nothing about Shiftphone);
+  coticsy.com, "VaultDrive: Back Up Phone Photos to a USB
+  Drive, No Computer"
+  (coticsy.com/vaultdrive.html
+  — plug a flash drive or SSD into your iPhone or Android
+  phone, choose what to back up and tap Start; VaultDrive
+  copies your original photos, videos and files straight to
+  the drive. Free to try, Pro is $19.99 once, no account;
+  needs iOS 17 or later, or Android 8 or later. A rival app
+  page, not a guide — it says nothing about Shiftphone);
+  blog.witness.org, "Backing Up Phone Media Without
+  Internet or a Computer"
+  (blog.witness.org/2020/02/backing-up-phone-media-without-internet-or-a-computer/
+  — during an internet shutdown, back up phone media
+  without a computer using an OTG drive or a wireless drive;
+  OTG drives plug directly into many, but not all, Androids.
+  A generic Android guide — it says nothing about
+  Shiftphone);
+  softhandtech.com, "Transfer Photos from Phone to Memory
+  Stick: A Comprehensive Guide"
+  (softhandtech.com/can-you-transfer-photos-from-phone-to-memory-stick/
+  — transfer photos from your phone to a memory stick using
+  a computer, by direct transfer with OTG support on
+  Android, or through cloud services; for direct transfer,
+  confirm the phone is OTG compatible, get an OTG adapter,
+  plug the memory stick into the adapter, connect it to the
+  phone, open the file manager, choose the photos and copy
+  or move them. A generic Android guide — it says nothing
+  about Shiftphone);
+  thegadgetians.com, "How to Transfer Files From Phone to
+  USB Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — transfer files from your phone to USB without a computer
+  by connecting a USB drive to an Android phone with an OTG
+  adapter, then opening the file manager, selecting files
+  and pasting them onto the drive. A generic Android guide —
+  it says nothing about Shiftphone).
+- The one-tap route is proven on two of four phones — the
+  SHIFT5me and the SHIFTphone 8 both list USB OTG Yes — but
+  on the SHIFT6m and the SHIFT6mq no source states OTG at
+  all, so on those two the drive mounting is the test; all
+  four clear Android 7.0 — the lowest runs Android 8.0 — so
+  SnapDisk installs on all four, from Play on ShiftOS-G once
+  the listing is live and from the GitHub APK on ShiftOS-L
+  and until then, and on a phone running Ubuntu Touch
+  instead of ShiftOS there is no SnapDisk route at all,
+  while on /e/OS the GitHub APK installs because /e/OS runs
+  Android apps. All four take USB Type-C — so a USB-C flash
+  drive plugs straight into any of them, with no micro-USB
+  adapter question anywhere. All four take a microSD card —
+  so the card-reader route in Method 4 is proven on all
+  four — with the ceilings split: the SHIFT5me up to 256 GB
+  and the SHIFT6mq up to 512 GB, no ceiling stated for the
+  SHIFT6m, and the SHIFTphone 8's ceiling is two numbers —
+  up to 256 GB per the /e/OS device page, up to 2 TB per
+  Murena. The SHIFTphone 8's second camera is two numbers —
+  a 50 MP ultra-wide-angle camera per SHIFT's own page, 32
+  MP per UL benchmarks; its battery is two numbers — 3850
+  mAh per UL benchmarks, 3820 mAh per Murena, the /e/OS
+  device page and Stuff; its chip is two listings — the
+  QCM6490 per UL benchmarks and the /e/OS device page, the
+  Snapdragon 778G per Murena; the SHIFT6mq's thickness is
+  two numbers — 9.7 mm per UL benchmarks, 8.5 mm per the
+  Ubuntu Touch device page. The SHIFTphone 8's release is
+  two dates — 2024 per the /e/OS device page, end of May /
+  beginning of June 2025 expected per Wikipedia's table,
+  which predates the launch. The SHIFTphone 8's Android
+  version is the base, not necessarily what is on the phone
+  today — UL benchmarks lists Android 14, SHIFT promises
+  Android upgrades through 2036 and gives an Android 15-to-
+  16 upgrade as the example, and the Murena variant runs
+  /e/OS on AOSP 16 — so an 8 today may run 14, 15 or 16.
+  The SHIFT6mq under postmarketOS lists USB-OTG as not
+  working — but that is postmarketOS, not ShiftOS, so it
+  does not settle the ShiftOS question. No source found
+  names the file manager on a Shiftphone, so Method 2 names
+  it only as your file manager app.
+- VaultDrive needs Android 8 or later per its own site, so
+  all four clear the version floor — the lowest runs
+  Android 8.0 exactly — but the drive-hosting condition is
+  proven on two of the four — so VaultDrive is proven on
+  two of the four — and AppBrain lists 12.1 or later, which
+  only the SHIFTphone 8 clears on Android 14 — so under
+  that stricter listing VaultDrive is proven on one of the
+  four. FotoSafe needs Android 9 or later with USB host or
+  OTG support, so the SHIFT5me and the SHIFT6m run Android
+  8.0 and sit below the version floor entirely — the
+  SHIFT6mq clears the version floor on Android 10 but its
+  OTG is unproven — so FotoSafe is proven on one of the
+  four, the SHIFTphone 8 alone. SHIFT has no phone-to-USB
+  backup tool of its own — no Shiftphone-specific backup
+  advice turned up in any source beyond a computer copy or
+  Google Photos on the Google-services version of the OS.
+  No GSMArena spec page was returned for any covered
+  Shiftphone model in the searches performed, so no GSMArena
+  USB row could be cited for any of them.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-148, 116th how-to):
+  docs/shiftphone-photos-to-usb.html.
+  Fallback for WL-149: LeEco — verified absent, no
+  docs/leeco-photos-to-usb.html and no searches.md row.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
