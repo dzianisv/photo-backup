@@ -1,3 +1,95 @@
+## WL-156 — Back up UMIDIGI photos to USB article, 124th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #283 MERGED (merge commit fb2d244, merged
+  2026-11-20T12:47:47Z; PR head a10cf22, CI run 44738474113
+  build pass, conclusion success; post-merge main runs
+  Android PR 44738768105 + pages 44738767282 success on
+  fb2d244).
+  Lead committed locally on branch wl-156-umidigi (article
+  8333314, supporting files a10cf22, base main 11edcef) and
+  did not push; supervisor pushed the branch, verified
+  every file by readback, created PR #283, waited for CI
+  green, and merged. Pre-merge readback on head a10cf22:
+  feed 124 items incl. UMIDIGI, sitemap 128 URLs incl.
+  UMIDIGI, blog index 124 BlogPosting, title 51 chars,
+  meta 135 chars, JSON-LD parses (Article + FAQPage 4 Qs +
+  BreadcrumbList, datePublished 2026-11-20), TL;DR present,
+  1 script tag, 1 H1, 10 H2s, Query 123 row present, only
+  docs/ + tool/growth changed; mergeable MERGEABLE.
+  Query 123 verified by the lead from live evidence (no top
+  result is a UMIDIGI-specific phone-to-USB photo-backup
+  guide); the exact query returned five results (SnapDisk's
+  own generic transfer-photos-to-usb-automatically guide,
+  manualsdir UMIDIGI Touch manual — memory-card-as-U-disk
+  via computer, FoneLab, MobiKin, Dr.Fone) — none is a
+  UMIDIGI-specific phone-to-USB guide; real gap stands.
+  Supervisor re-score from a fresh live re-search: same 5
+  results as the lead — all generic or computer-needed,
+  none mentions UMIDIGI as a guide; real gap stands.
+  New docs/umidigi-photos-to-usb.html ("Back up UMIDIGI
+  photos to a USB drive (no computer)"), following the
+  WL-54–WL-155 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 51 chars, meta
+  description 135 chars, JSON-LD validated by parse
+  (Article + FAQPage 4 Qs + BreadcrumbList, datePublished
+  2026-11-20); sitemap 128 URLs and feed 124 items; blog
+  JSON-LD counts 124 BlogPosting entries. searches.md Query
+  123 row present ("back up UMIDIGI photos to USB drive
+  without computer" — HOW-TO GAP).
+  Key finding: ninety-two of the ninety-five covered UMIDIGI
+  phones clear Android 7.0, so SnapDisk installs on
+  ninety-two; the one-tap route is proven on 84 (OTG Yes),
+  8 more need the mounting test (A15, Note 90 OTG contested;
+  A15 Pro 5G, A15T, A16 Pro (4G), A75s, G100 5G, G100x 5G
+  OTG unstated), 0 list OTG No outright (only No verdict
+  anywhere is one source on the A15, against a Yes), 2 run
+  below 7.0 as shipped (S2 6.0 with a 7.0 update promised
+  but unverified as delivered; Z Pro 6.0 with an immediate
+  7.0 OTA offered); S2 Lite clears only on the 7.0
+  listings. microSD fits all 95 for certain; ceilings
+  contested/unverified on 35 (worst: X 128/256/500 GB, A7S
+  64/128/256 GB, G5 Mecha 256 GB/1 TB). 78 USB-C, 8
+  micro-USB, 7 contested, 2 unverified. VaultDrive proven
+  on 83 under its own site's Android 8 floor, 38 under
+  AppBrain's 12.1 on at least one listing (33 outright + 5
+  only on higher listings); FotoSafe proven on 67. Bison
+  line excluded (own article WL-85); tablets, announced-only
+  Z5 Pro, and a separate 4G Note 100x excluded. UMIDIGI
+  founded Feb 2012 as UMI in Shenzhen, rebranded 2018;
+  "C2" is two phones (2017 Android 7.0/micro-USB vs 2023
+  Android 13/USB-C); A75s/A75x are 2026 models on Android
+  16.
+  Link verification 199 external hrefs, all fetched live —
+  198/199 live (172x200 first pass, 1x200 on re-check, 22x403
+  bot-blocked but confirmed live via browser.open/search,
+  4x000 curl timeouts but confirmed live via browser.open);
+  the 1x404 is this article's own canonical URL, not yet
+  published pre-merge — the supervisor's live fetch after
+  merge confirms it. Rival/query links all 200 except
+  AppBrain (403 via curl, live via browser.open: VaultDrive
+  1.0.7, 870 installs, Android 12.1+, updated 3 Nov 2026).
+  Lead's failed execs: lead reported none, but the run
+  record shows 3 failed execs (2x exit 1, 1x exit 128, no
+  detail in the handoff) — all receipts independently
+  verified, no effect. One script bug caught and fixed
+  in-run by the lead: update_files.py assumed feed.xml ends
+  with </channel>; it ends with </channel>\n</rss> — feed.xml
+  + searches.md were completed by a second script instead of
+  re-running the first (which would have double-inserted).
+  Live fetch verified by the supervisor:
+  umidigi-photos-to-usb.html 200 (92,586 B, correct
+  title/TL;DR, fresh crawl 12:49 UTC); feed.xml 124 items
+  live incl. UMIDIGI.
+  Fallback for WL-157: Oscall — verified by the lead, no
+  docs/oscall-photos-to-usb.html and no searches.md row
+  (exact query returns no Oscall-specific guide in top
+  results). Leagoo also verified absent as a second option.
+
 ## WL-155 — Back up Homtom photos to USB article, 123rd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
