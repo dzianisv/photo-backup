@@ -11859,6 +11859,113 @@ demand is read off competitor install velocity instead (see
   Fallback for WL-152: Razer — verified absent, no
   docs/razer-photos-to-usb.html and no searches.md row.
 
+### 119. "back up Razer photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Razer-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Razer-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and both covered
+  Razer phones clear Android 7.0, so the one-tap route
+  is proven on both outright, with no mounting test
+  and no blocked model anywhere.
+- Current top results (scored Nov 20, 2026, live web
+  search):
+  techwalla.com, "How to Move Pictures from Camera to
+  Flash Drive With No Computer"
+  (https://www.techwalla.com/articles/how-to-move-pictures-from-camera-to-flash-drive-with-no-computer
+  — move pictures from a digital camera to a flash
+  drive without a computer: buy a combination memory
+  card reader and USB flash drive, remove the memory
+  card from the camera, place it in the card reader,
+  and let the reader transfer the pictures onto the
+  flash drive. A camera guide, not a phone guide — it
+  says nothing about Razer, and nothing about a phone
+  at all);
+  appbrain.com, "Photos to USB: OTG Backup"
+  (https://www.appbrain.com/app/photos-to-usb-otg-backup/com.arzdrz.photos_to_usb
+  — back up every photo and video on your phone to a
+  USB pen drive, with one tap: plug a pen drive into
+  your phone, a USB-C drive goes straight in and an
+  older one needs an OTG adapter, and one tap copies
+  the gallery onto it; no internet, no cloud, no
+  account; free, with ads, and a one-time purchase
+  removes the ads for good. A rival app listing, not a
+  guide — it says nothing about Razer);
+  unanswered.io, "How do I transfer photos from an
+  Android phone to a USB flash drive?"
+  (https://unanswered.io/guide/transfer-photos-android-phone-to-usb-flash-drive
+  — connect the flash drive to the phone and use a
+  file manager to copy or move the pictures, without
+  a computer or an internet connection, provided the
+  phone supports the external drive; choose Copy —
+  not Move — so the originals remain on the phone
+  until you verify the backup. A generic Android guide
+  — it says nothing about Razer);
+  sekin.in, "Transfer Photos From Android to a USB Flash
+  Drive"
+  (https://sekin.in/how-to-transfer-pictures-from-android-to-a-usb-flash-drive/
+  — copy pictures directly from most compatible Android
+  phones to a USB flash drive without a computer or
+  internet connection: a USB-C flash drive, or a USB-A
+  drive through a USB-OTG data adapter, then Files by
+  Google to select the pictures and choose Copy — not
+  Move — so the originals remain on the phone until you
+  verify the backup. A generic Android guide — it says
+  nothing about Razer);
+  thegadgetians.com, "How to Transfer Files From Phone
+  to USB Without Computer: Ultimate Guide"
+  (https://thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — transfer files from a phone to a USB drive without
+  a computer: on Android, connect a USB drive with an
+  OTG adapter that fits the phone's charging port, open
+  the file manager, select and copy files, then paste
+  them onto the USB drive and safely eject it. A
+  generic Android and iPhone guide — it says nothing
+  about Razer).
+- The one-tap route is proven on both phones —
+  the Razer Phone and the Razer Phone 2 both clear
+  Android 7.0 — the lowest runs Android 7.1.1 — and list USB
+  OTG Yes — with no mounting test and no blocked model
+  anywhere in this article. A microSD card fits both
+  phones for certain — each has a dedicated slot — so
+  the card-reader route is proven on both, unlike
+  RedMagic, where it is proven on none of the fourteen.
+  The Phone's microSD ceiling is three numbers — up to
+  2 TB per Razer's own spec sheet, 9to5Google and the
+  user manual, up to 512 GB per gsmarena.com.bd, and
+  256 GB per phoneopinions; the Phone 2's is three
+  numbers too — up to 1 TB per Notebookcheck, Android
+  Authority and Tom's Hardware, up to 512 GB per
+  Smartprix and TechEngage, and up to 2 TB per
+  Gizguide. The Phone's USB version is contested —
+  Notebookcheck and NamuWiki say USB 3.1 Gen1, while
+  gsmarena.com.bd lists Type-C 1.0; the Phone 2's USB
+  port is 2.0 per Notebookcheck. VaultDrive needs
+  Android 8 or later per its own site, so the Phone 2
+  clears the version floor on shipped software while
+  the Phone on 7.1.1 does not — it clears only after
+  the Oreo update — and AppBrain lists 12.1 or later,
+  which neither clears, since Android 9 is the
+  endpoint for both. FotoSafe needs Android 9 or later
+  with USB host or OTG support, so neither clears the
+  version floor on shipped software — but both received
+  official Android 9 Pie updates, the Phone 2 in
+  February 2019 and the Phone in August 2019 — so on an
+  updated unit FotoSafe is proven on both. Razer has no
+  phone-to-USB backup tool of its own — no Razer-specific
+  backup advice turned up in any source beyond a
+  computer copy, Google Drive or Google Photos — the
+  closest thing is the per-model backup FAQ, which names
+  the computer copy as the most economical method.
+  Razer made two phones, and the line ended with the
+  Phone 2 — both are discontinued, and Android 9 is the
+  official software endpoint for both.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 20, 2026 (WL-152, 120th how-to):
+  docs/razer-photos-to-usb.html.
+  Fallback for WL-153: BLU — verified absent, no
+  docs/blu-photos-to-usb.html and no searches.md row.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
