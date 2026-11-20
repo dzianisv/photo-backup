@@ -1,5 +1,72 @@
 # SnapDisk — Work Log
 
+## WL-147 — Back up Volla photos to USB article, 115th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #263 NOT YET MERGED (merge receipt PENDING —
+  supervisor fills pre-merge; PR head 4c24fb7, CI run
+  44668388638 build pass, 1m9s, conclusion success).
+  Live fetch PENDING (article not live until PR #263 merges;
+  supervisor to verify volla-photos-to-usb.html 200 +
+  correct title and feed.xml 115 items live incl. Volla).
+  Query 114 verified by the lead from live evidence (no top
+  result is a Volla-specific phone-to-USB photo-backup
+  guide); the exact query returned four results, all generic
+  Android guides (an EyeFi forum thread, a FoneLab guide, a
+  Dr.Fone guide, a softhandtech guide) — none mentions
+  Volla; a second search added a YouTube OTG video and a
+  Coolmuster guide, both generic Android too — real gap
+  stands.
+  New docs/volla-photos-to-usb.html ("Back up Volla
+  photos to a USB drive (no computer)"), following the
+  WL-54–WL-146 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: the one-tap route is proven
+  on six of seven covered Volla phones — Phone X, Phone 22,
+  Phone X23, Quintus, Plinius and Plinius Plus all list USB
+  OTG Yes — but on the original Volla Phone no source states
+  OTG at all, so on it the drive mounting is the test; all
+  seven clear Android 7.0, so SnapDisk installs on every one
+  of them, from the GitHub APK, since Volla OS ships without
+  the Google Play Store).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 35 chars, meta
+  description 149 chars, JSON-LD validated by parse
+  (article + blog index); sitemap and feed XML parse; feed
+  now counts 115 items; blog JSON-LD counts 115 BlogPosting
+  entries. searches.md Query 114 row present ("back up
+  Volla photos to USB drive without computer" — HOW-TO
+  GAP).
+  Key finding: 7 of 7 covered Volla phones clear Android
+  7.0 (lowest is the original Phone on Android 9), and the
+  one-tap route is proven on 6 of 7 — the Phone X (Volla OS
+  10 / Android 10, OTG Yes), Phone 22 (Volla OS 11 /
+  Android 11, OTG Yes), Phone X23 (Volla OS 12 / Android 12,
+  OTG Yes), Quintus (Android 14, OTG Yes), Plinius and
+  Plinius Plus (Android 14 base, OTG Yes) — but on the
+  original Volla Phone (Android 9) no source states OTG
+  (openSUSE HCL lists it as not tested; Notebookcheck lists
+  the port only as USB 2.0), so the drive mounting is the
+  test there; all seven take USB Type-C, so there is no
+  micro-USB adapter question anywhere; six of the seven take
+  a microSD card, so the card-reader route works on six,
+  while the Quintus takes no card at all (Volla's own page
+  lists no slot; Volla's help page gives separate "Quintus
+  without SD card" instructions), so on it there is no
+  card-reader route either; VaultDrive clears its Android 8
+  floor on 7 of 7 but is proven on 6 of 7, and under
+  AppBrain's 12.1 floor on 3 of 7; FotoSafe clears its
+  Android 9 floor on 7 of 7 and is proven on 6 of 7.
+  Note: the supervisor's pre-checks for this run named HEAD
+  6f84146, which was correct for origin/main; the lead's
+  local main checkout was stale at 910499c (WL-112 era), so
+  the worktree was cut from origin/main as instructed and
+  HEAD re-verified as 6f84146 before branching. No failed
+  execs.
+  Fallback for WL-148: Shiftphone — verified by the lead, no
+  docs/shiftphone-photos-to-usb.html and no searches.md row.
+
 ## WL-146 — Back up Wileyfox photos to USB article, 114th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
