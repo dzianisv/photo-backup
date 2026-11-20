@@ -12134,6 +12134,93 @@ demand is read off competitor install velocity instead (see
   docs/homtom-photos-to-usb.html and no searches.md row
   (0 mentions of Homtom in searches.md).
 
+### 122. "back up Homtom photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Homtom-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Homtom-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and twenty-six covered
+  Homtom phones clear Android 7.0, so the one-tap route is
+  proven on twelve outright, with seven more needing the
+  mounting test.
+- Current top results (scored Nov 20, 2026, live web
+  search):
+  fonelab.com, "How to Transfer Photos from Android to
+  Flash Drive in 3 Easy Ways"
+  (https://www.fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html
+  — transfer photos from Android to a flash drive with a
+  USB OTG adapter and the Files app, or through a PC with
+  FoneLab HyperTrans, or with Samsung Smart Switch. A
+  generic Android guide — it says nothing about Homtom);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from Android to a USB flash drive with
+  a USB OTG adapter, through a PC by drag and drop, or
+  wirelessly through Google Drive or AirDroid. A generic
+  Android guide — it says nothing about Homtom);
+  askfilo.com, "how to transfer pictures from an android
+  phone to a flashdrive"
+  (https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — transfer pictures from an Android phone to a flash
+  drive with a USB OTG adapter and a file manager, or
+  through a computer. A generic Android Q&A — it says
+  nothing about Homtom);
+  eyefi.com, "What's the best way to move photos from my
+  Android phone to a flash drive?"
+  (https://eyefi.com/t/what-s-the-best-way-to-move-photos-from-my-android-phone-to-a-flash-drive/1121
+  — move photos from an Android phone to a flash drive with
+  an OTG cable and a file manager, or through the cloud. A
+  generic Android forum thread — it says nothing about
+  Homtom).
+- The one-tap route is proven on twelve phones —
+  the HT26, HT50, HT70, HT80, S8, S99, S99i, C2, H5, H10,
+  Zoji Z9 and Zoji Z33 all clear Android 7.0 and list USB
+  OTG Yes. Seven need the mounting test: the S7, the S9
+  Plus and the C8, where OTG is contested, and the HT16S,
+  the C1 and the Zoji Z11, where OTG is unstated in every
+  source — plus the P30 Pro, where DevicesFAQ implies OTG
+  Yes and Smartprix lists USB Charging only. Seven more
+  clear the floor but list USB OTG No, so the drive will
+  not mount on them at all — the HT37 Pro, S16, S17, C13,
+  H1, H3 and Zoji Z8. Sixteen run below Android 7.0 and
+  cannot run SnapDisk at all — the HT3 Pro, HT6, HT7, HT7
+  Pro, HT8, HT10, HT16, HT16 Pro, HT17, HT17 Pro, HT20,
+  HT20 Pro, HT27, HT37, Zoji Z6 and Zoji Z7 — and fifteen
+  of the sixteen have no Android 7.0 update on record; the
+  sixteenth, the HT37, clears 7.0 only after the reported
+  upgrade, and lists USB OTG No. A microSD card fits all
+  forty-two phones for certain — each has a slot — so the
+  card-reader route is proven on all forty-two, though
+  ceilings are contested on twenty-eight. VaultDrive needs
+  Android 8 or later per its own site, so sixteen clear the
+  version floor on shipped software — the HT16S, S17, S99,
+  S99i, C1, C2, C8, C13, H1, H3, H5, H10, P30 Pro, Zoji Z9,
+  Zoji Z11 and Zoji Z33 — and the HT80 clears only on the
+  10 listings, while AppBrain lists 12.1 or later, which
+  none clears, since the highest shipped version is 10 on
+  the HT80 listings and 9.0 on the P30 Pro. FotoSafe needs
+  Android 9 or later with USB host or OTG support, so none
+  is proven outright — the HT80 clears only on the 10
+  listings with OTG Yes, and the P30 Pro is 9.0 with OTG
+  contested. Homtom has no phone-to-USB backup tool of its
+  own — no Homtom-specific backup advice turned up in any
+  source beyond a computer copy, Google Drive or Google
+  Photos — the closest thing is the per-model backup FAQ,
+  which names the computer copy as the most economical
+  method. Homtom was founded in 2013 in Shenzhen as a
+  Doogee sub-brand for big-battery phones; GSMchoice lists
+  40 Android models, and this article covers forty-two
+  mainline ones (the S9 Plus and the H1 are not in
+  GSMchoice's catalogue).
+- Verdict: how-to article material, not a listing keyword.
+  Article drafted Nov 20, 2026 (WL-155, 123rd how-to):
+  docs/homtom-photos-to-usb.html — PR NOT YET OPENED
+  (lead blocked from git operations by an execution-risk
+  check on the clone; supervisor to open the PRs after
+  go-ahead).
+  Fallback for WL-156: [supervisor to set]
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
