@@ -1,6 +1,11 @@
 ## WL-157 — Back up Oscall photos to USB article, 125th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #285 MERGED (merge commit 6baaa4b, merged
+  2026-11-20T13:55:13Z; PR head c883090, CI run 44748181313
+  build pass, conclusion success; post-merge main runs
+  Android PR 44748567967 + pages 44748566510 success on
+  6baaa4b).
   Lead committed locally on branch wl-157-oscall (article
   fc48733, supporting files e9ad33d, worklog this commit, base
   main f19f215) and did not push; supervisor to push, verify
@@ -68,6 +73,13 @@
   Lead's failed execs: one exec exited 1 mid-chain (a grep
   with no match in llms-full.txt stopped an && chain; re-run
   with separate commands, no work lost).
+  Supervisor re-score from a fresh live re-search: top results
+  are SnapDisk's own generic guides
+  (transfer-photos-to-usb-automatically, backup-photos-to-usb,
+  backup-photos-offline) + softhandtech generic — none mentions
+  Oscall; real gap stands. Live fetch verified by the
+  supervisor: oscall-photos-to-usb.html 200 (53,176 B, correct
+  title), feed.xml 125 items live incl. Oscall.
   Note: llms-full.txt has no full section for the main WL-156
   UMIDIGI article — only its dek line sits at the end (line
   1337) with no heading/URL/TL;DR/Search lines. WL-157 added
