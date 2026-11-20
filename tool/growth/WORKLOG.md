@@ -1,3 +1,73 @@
+## WL-166 — Back up BlackBerry photos to USB article, 134th how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #305 MERGED (merge commit d3a36e7, merged
+  2026-11-20T21:48:04Z; PR head 392d437b, CI run 44823155327
+  build pass, conclusion success; post-merge main runs
+  Android PR 44823503935 + pages 44823503472 success).
+  Pre-merge readback on head 392d437b (verified by the
+  supervisor from the branch source): feed 134 items incl.
+  BlackBerry, sitemap 138 URLs incl. BlackBerry, blog index 134
+  BlogPosting (JSON-LD parses), title 54 chars, meta 134 chars,
+  JSON-LD parses (Article + FAQPage 4 Qs + BreadcrumbList,
+  datePublished 2026-11-20), TL;DR present, 1 script tag, 1 H1,
+  10 H2s, Query 133 row present, only docs/ + tool/growth
+  changed (7 files, +412/−0).
+  Query 133 verified by the lead from live evidence (no top
+  result is a BlackBerry-specific phone-to-USB photo-backup
+  guide); the exact query "back up BlackBerry photos to USB
+  drive without computer" returned 6 results plus 7 more on the
+  quoted search — all computer copies or phone-to-phone moves
+  for BlackBerry OS / BlackBerry 10 phones; none mentions an
+  Android BlackBerry phone; real gap stands.
+  New docs/blackberry-photos-to-usb.html ("Back up BlackBerry
+  photos to a USB drive (no computer)"), following the
+  WL-54–WL-165 article template exactly (navy/cyan, TL;DR first,
+  no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot,
+  with an honest caption). Title 54 chars — 1 over the 48–53
+  target, forced by the 10-char brand name (BQ precedent 46 —
+  no defect). Meta description 134 chars.
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full BlackBerry section: heading + URL + dek +
+  TL;DR + Search + Method 3 + What this does not do + What to
+  avoid), feed.xml updated; searches.md Query 133 row added.
+  Key finding: 10 BlackBerry Android phones; 7 clear Android
+  7.0 (KEYone 7.1.1, Aurora 7.0, Motion 7.1, KEY2 / KEY2 LE /
+  Evolve / Evolve X 8.1); one-tap proven on 6 (Motion OTG
+  contested: Gadgets360/MobileGizmo Yes vs Notebookcheck review
+  saying the port serves solely for charging/data — mounting
+  test needed); 3 below floor (Priv 5.1.1, DTEK50/60 6.0.1) —
+  SnapDisk won't install; DTEK50/60 list OTG Yes so Method 2
+  works, Priv OTG contested. Ports: 7 USB Type-C, 3 micro-USB
+  (Priv, DTEK50, Aurora). microSD on all 10, card-reader route
+  proven on all 10; ceilings contested on 3 (Priv, Motion,
+  Evolve X). VaultDrive proven on 4 (Android 8 floor, all 4
+  clear); FotoSafe proven on 0 (Android 9 floor). DTEK50/60 are
+  rebranded Alcatel Idol 4/4S; TCL made 6 of the 10 and stopped
+  in Aug 2020; OnwardMobility never shipped. BlackBerry has no
+  phone-to-USB tool; Content Transfer is a phone-to-phone move.
+  Link verification: 44 URLs cited, 31x200 via curl, 12 non-200
+  verified live via browser.open, 1 dropped (PhoneArena 000,
+  replaced by the Wikipedia DTEK page for the DTEK50/60 2 TB
+  ceilings); 0x404, 0 dead.
+  Caveats carried: 15 honest caveats in the article (floor /
+  one-tap split, Priv OTG, Aurora OTG omission, ports, cards,
+  slot types, VaultDrive, FotoSafe, Motion Android labels, DTEK
+  rebrands, regional phones, TCL end / OnwardMobility, search
+  results, Aurora ceiling sourcing, KEYone variants).
+  Live fetch verified by the supervisor:
+  blackberry-photos-to-usb.html 200, feed.xml 134 items live
+  incl. BlackBerry.
+  Lead note: `gh pr view` / `gh pr checks` failed for the lead
+  with a token-scope error (token lacks `read:org`); PR readback
+  was done via the REST API instead. The supervisor's
+  `gh pr checks` worked (build pass) — no defect.
+  Fallback for WL-167: the brand well is now effectively
+  exhausted after BlackBerry (per the WL-165 row) — the next
+  fallback needs a new topic shape, not another brand guess.
+
+
 ## WL-165 — Back up HMD photos to USB article, 133rd how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
