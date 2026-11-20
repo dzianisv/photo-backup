@@ -1,10 +1,10 @@
 ## WL-154 — Back up Vernee photos to USB article, 122nd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #279 OPEN, pending supervisor merge (PR head
-  0eb78f4, CI run 44723275441 build pass, conclusion
-  success; merge commit, merged time and post-merge main
-  runs to be recorded by the supervisor on merge).
+  Article PR #279 MERGED (merge commit 0e8964cc, merged
+  2026-11-20T11:01:45Z; PR head 0eb78f4, CI run 44723275441
+  build pass, conclusion success; post-merge main runs
+  to be recorded by the supervisor on merge).
   Query 121 verified by the lead from live evidence (no top
   result is a Vernee-specific phone-to-USB photo-backup
   guide); the exact query returned five results, all generic
