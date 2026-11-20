@@ -3,9 +3,10 @@
 ## WL-149 — Back up LeEco photos to USB article, 117th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #267 OPEN (PR head 19eecf8, CI run 44682122344
-  build pass, 1m26s, conclusion success; merge pending
-  supervisor readback verification).
+  Article PR #267 MERGED (merge commit 3b23416, merged
+  2026-11-20T05:41:42Z; PR head 19eecf8, CI run 44682122344
+  build pass, 1m26s, conclusion success; post-merge main
+  runs pending).
   Query 116 verified by the lead from live evidence (no top
   result is a LeEco-specific phone-to-USB photo-backup
   guide); the exact query returned five results, all generic
