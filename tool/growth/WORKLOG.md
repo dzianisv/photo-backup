@@ -1,3 +1,82 @@
+## WL-168 — Back up photos to USB when switching to a new phone article, 136th how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #309 MERGED (merge commit f445195, merged
+  2026-11-20T23:39:10Z; PR head 5795dbf, CI run 44838168186
+  build pass, conclusion success; post-merge main runs
+  Android PR 44838361848 + pages 44838361556 success).
+  Pre-merge readback on head 5795dbf (verified by the
+  supervisor from the branch source): feed 136 items incl.
+  switching-phones, sitemap 140 URLs incl. switching-phones,
+  blog index 136 BlogPosting (JSON-LD parses), title 51 chars,
+  meta 139 chars, JSON-LD parses (Article + FAQPage 4 Qs +
+  BreadcrumbList, datePublished 2026-11-20), TL;DR present,
+  1 script tag, 1 H1, 10 H2s, Query 135 row present, only
+  docs/ + tool/growth changed (7 files, +390/−0).
+  Query 135 scored honestly from live evidence (no
+  "no guide exists" claim): the exact query returns a real
+  switching-specific guide — coticsy.com "How to Back Up Your
+  Photos Before Switching to a New Phone" — it covers the
+  switch generally and USB copy as one manual step (exFAT,
+  Files app, manual select/copy), and it is the best guide in
+  the results; SnapDisk's own generic guides
+  (transfer-photos-to-usb-automatically, usb-photo-backup),
+  FotoSafe's generic guide, and a YouTube manual-OTG video
+  also surface. None of them is a whole-library one-tap
+  phone-to-USB backup guide framed for the phone-switch
+  moment, and none mentions SnapDisk; the gap stands on that
+  angle. Supervisor's fresh quoted re-search returned brand
+  articles instead (LG/Asus/Datalogic) — none switching-
+  specific either; search results vary by moment, conclusion
+  holds either way.
+  Second article in the NEW scenario shape (brand series
+  exhausted at 134); next fallback needs another scenario
+  shape — candidates: SD-card-to-USB, tablet/Chromebook
+  (both unverified, supervisor's pick next run). Dead phone
+  was NOT picked — already answered inside WL-167 scenario 3
+  (no software route).
+  New docs/switching-phones-photos-to-usb.html ("Back up
+  photos to USB when switching to a new phone"), following
+  the WL-54–WL-167 article template exactly (navy/cyan,
+  TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot,
+  with an honest caption). Title 51 chars, meta 139 chars.
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full switching-phones section: heading + URL +
+  dek + TL;DR + Search + Method 3 + What this does not do +
+  What to avoid — verified complete), feed.xml updated;
+  searches.md Query 135 row added.
+  Key finding: back up first, transfer second, wipe last.
+  The switch moment is four directions (Android→Android,
+  Android→iPhone, iPhone→Android, iPhone→iPhone); the
+  transfer is not a backup — it can be interrupted, skip
+  items, or depend on photos that live only in the cloud.
+  Cloud-only originals trap in both directions: iCloud
+  Photos with Optimize iPhone Storage keeps space-saving
+  versions on the phone; Google Photos Storage saver
+  compresses photos >16 MP to 16 MP and videos >1080p to
+  1080p (per Google support). An exact file copy preserves
+  capture dates/locations embedded in the originals. Three
+  wipe checks before the old phone goes: photo count roughly
+  matches, older photos and long videos open at full quality,
+  drive copy opens. SnapDisk behaviour verified from the repo
+  itself: minSdk 24 (Android 7.0 floor), notification Backup
+  tap, Pro $9.99 auto-backup on connect, free 5 GB/run with
+  resume (skip-if-exists + .part resume + size verification),
+  FAT32 >=4 GB files skipped and listed.
+  Link verification: supervisor re-checked the article's
+  hrefs — 17 distinct (8 absolute + 9 relative/template);
+  all 7 absolute live URLs 200 via curl (coticsy, FotoSafe,
+  YouTube, Google Photos support, both SnapDisk generic
+  guides, GitHub repo), own canonical 404 pre-merge
+  (expected; confirmed live post-merge by the supervisor).
+  Lead's "16 distinct hrefs" vs supervisor's 17 is a counting
+  difference (the ./ link), not a defect. No failed execs
+  from the lead; no GitHub API fallback needed.
+  Live fetch verified by the supervisor:
+  switching-phones-photos-to-usb.html 200 (37,225 B, correct
+  title), feed.xml 136 items live incl. switching-phones.
+
 ## WL-167 — Back up photos from a broken-screen phone to USB article, 135th how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
