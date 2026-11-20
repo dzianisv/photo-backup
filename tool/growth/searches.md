@@ -11542,6 +11542,126 @@ demand is read off competitor install velocity instead (see
   Fallback for WL-149: LeEco — verified absent, no
   docs/leeco-photos-to-usb.html and no searches.md row.
 
+### 116. "back up LeEco photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a LeEco-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  LeEco-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and no covered LeEco
+  model clears Android 7.0 on stock firmware, so the
+  one-tap route is proven on none of the eleven, with the
+  Le Pro 3 on LineageOS 14.1 the only documented exception.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  softhandtech.com, "Easy Guide: Transferring Pictures from
+  Your Phone to a Flash Drive"
+  (softhandtech.com/how-do-you-transfer-pictures-from-your-phone-to-a-flash-drive/
+  — transfer pictures from your phone to a flash drive by
+  connecting the phone to a computer with a USB cable, or
+  by using a USB flash drive compatible with the phone to
+  transfer pictures directly without a computer; to connect
+  the phone to the flash drive you need a USB OTG adapter,
+  and not all phones support USB OTG, so check if your
+  device is compatible first. A generic Android guide — it
+  says nothing about LeEco);
+  eyefi.com, "What's the best way to move photos from my
+  Android to a USB drive?"
+  (eyefi.com/t/whats-the-best-way-to-move-photos-from-my-android-to-a-usb-drive/1113/2
+  — a forum thread: check for an OTG cable, plug the USB
+  drive in, open a file manager app, navigate to the DCIM
+  folder, select the photos, copy them, and paste them
+  onto the USB drive; cloud storage is offered as an
+  alternative. A generic Android thread — it says nothing
+  about LeEco);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash
+  drive by connecting them directly with an OTG adaptor,
+  using a PC as a middleman via USB File Transfer mode, or
+  downloading them wirelessly through Google Drive or
+  AirDroid; for direct transfers without a computer, connect
+  a USB-C OTG adaptor from the phone to the flash drive and
+  copy files using the USB Drive option in the Android
+  notification tray. A generic Android guide — it says
+  nothing about LeEco);
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI
+  — move photos and videos from any modern Android phone
+  to a USB drive with a USB On-The-Go connection and the
+  phone's built-in file manager app; the phone needs
+  Android 7.0 or newer, a USB flash drive, and an OTG
+  adapter that fits the phone's charging port. A generic
+  Android video — it says nothing about LeEco);
+  mobiletrans.wondershare.com, "Back Up a Phone to USB
+  Without Cloud Storage"
+  (mobiletrans.wondershare.com/android-backup/how-to-back-up-a-phone-to-an-external-usb-drive-without-cloud-storage.html
+  — back up a phone to an external USB drive without cloud
+  storage by connecting the phone through a USB-OTG adapter
+  or by copying phone files to a computer first, then
+  moving them to the drive; if the phone lacks OTG support
+  or the drive is not detected, use a computer-first
+  transfer. A generic Android guide — it says nothing about
+  LeEco).
+- The one-tap route is proven on none of eleven phones on
+  stock firmware — all eleven covered LeEco models run
+  Android 6.0.1 or older, below SnapDisk's 7.0 floor — and
+  the only documented exception is a Le Pro 3 running
+  LineageOS 14.1, which puts it on Android 7.1.1. The
+  Android 7.1 update was tested for five models (Le 2, Le 2
+  Pro, Le Pro 3, Le Max 2, Le S3) as EUI 6.0.28 but never
+  shipped, and the Le Pro 3 and the Le S3 stayed on Android
+  6.0.1. USB OTG is Yes on six of the eleven — the Le Max,
+  Le 2, Le 2 Pro, Le Max 2, Le Pro 3 and Le Pro 3 Elite —
+  No on three — the Le 1 Pro, Le Max Pro and Le S3 — and
+  contested on two — the Le 1 and the Le Pro 3 AI Edition.
+  The Le Max 2's OTG is Yes per Gadgets360 and Smartprix,
+  while GSMArena's USB row lists only USB Type-C 2.0 with
+  no OTG; the Le 1's OTG is No per Gadgets360 and FindPare,
+  Yes per UMA Technology; the Le Pro 3 AI Edition's OTG is
+  No per techwikies, while Trak.in lists On-The-Go under
+  its USB connectivity. A microSD card fits one of the
+  eleven — the Le Pro 3 AI Edition, with no ceiling stated
+  — while eight take no card at all, the Le Max Pro's card
+  is contested, and no source states one for the Le S3 or
+  the Le Pro 3 Elite. The Le Max Pro's card is two sources
+  apart — Gadgets360 says no expandable storage,
+  MobileGizmo lists a microSD slot up to 64 GB on the
+  second SIM slot — and its storage is two numbers — 32 GB
+  per Gadgets360, 64 GB per MobileGizmo. The Le Max's
+  battery is two numbers — 3400 mAh or 3500 mAh per the
+  launch report. The Le 2's chip is two listings — the Helio
+  X20 per some sources, the Snapdragon 652 per others; the
+  Le 2 Pro's chip is two listings — the Helio X20 per
+  Gadgets360, the Helio X25 per phonesdata. All eleven take
+  USB Type-C, so a USB-C flash drive plugs straight into
+  any of them, with no micro-USB adapter question anywhere.
+  EUI ships a File Manager app — the Le S3 user manual
+  lists it in its contents.
+- VaultDrive needs Android 8 or later per its own site, so
+  none of the eleven clear the version floor — and AppBrain
+  lists 12.1 or later, which none of them clears either —
+  so VaultDrive is proven on none of the eleven. FotoSafe
+  needs Android 9 or later with USB host or OTG support, so
+  none of the eleven clear the version floor either — so
+  FotoSafe is proven on none of the eleven. LeEco has no
+  phone-to-USB backup tool of its own — no LeEco-specific
+  backup advice turned up in any source beyond a computer
+  copy, its own cloud — LeCloud's personal cloud storage
+  ended in June 2017 — or Google Photos on the models that
+  shipped with Google services; the China-market Le 1 ships
+  without Google Mobile services. No GSMArena spec page was
+  returned for the Le 1, Le 1 Pro, Le Max, Le Max Pro, Le
+  Pro 3, Le Pro 3 AI Edition or Le Pro 3 Elite in the
+  searches performed — GSMArena USB rows were cited only
+  for the Le 2 and the Le Max 2, via comparison pages.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-149, 117th how-to):
+  docs/leeco-photos-to-usb.html.
+  Fallback for WL-150: Nubia — verified absent, no
+  docs/nubia-photos-to-usb.html and no searches.md row.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
