@@ -3,9 +3,12 @@
 ## WL-145 — Back up Zopo photos to USB article, 113th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
-  Article PR #259 OPEN (head 1bbe181, CI run 44658975990 build
-  pass, 1m2s; merge pending supervisor readback — not merged
-  by the lead). Query 112 verified by the lead from live
+  Article PR #259 MERGED (merge b9fc7b3, merged
+  2026-11-20T02:16:26Z; PR head CI run 44658975990 build pass,
+  1m2s; post-merge main runs Android PR 44659596521 + pages
+  44659596019 success on b9fc7b3). Live fetch verified by
+  the supervisor: zopo-photos-to-usb.html 200 (correct title/H1/TL;DR),
+  feed.xml 113 items live incl. Zopo. Query 112 verified by the lead from live
   evidence (no top result is a Zopo-specific phone-to-USB
   photo-backup guide); top results are five generic Android
   guides (askfilo, a YouTube OTG video, Dr.Fone, sekin.in,
