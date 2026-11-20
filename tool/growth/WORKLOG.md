@@ -1,12 +1,13 @@
 # SnapDisk — Work Log
 
-## WL-143 — Back up Alcatel photos to USB article, 111th how-to (PENDING)
+## WL-143 — Back up Alcatel photos to USB article, 111th how-to (DONE)
 
-- Owner: SEO/GEO lane lead. State: PENDING — article PR open,
-  merge receipt and live-fetch verification PENDING (supervisor
-  fills those pre-merge).
-  Article PR #255 OPEN (head 187200c, CI run 44649144541
-  success). Merge receipt: PENDING. Live fetch: PENDING.
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #255 MERGED (merge 57306ab, 2026-11-20T00:58:21Z,
+  CI run 44649144541 success on head 187200c; post-merge main
+  runs Android PR + pages success on 57306ab). Live fetch:
+  alcatel-photos-to-usb.html 200 (correct title/H1/TL;DR, fresh
+  crawl 01:00 UTC), feed.xml 111 items live incl. Alcatel.
   Query 110 verified by the lead from live evidence (no top
   result is an Alcatel-specific phone-to-USB photo-backup
   guide); top results are six results (a YouTube OTG video,
