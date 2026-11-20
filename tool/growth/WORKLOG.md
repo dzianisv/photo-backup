@@ -1,3 +1,87 @@
+## WL-159 — Back up VKworld photos to USB article, 127th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #290 MERGED (merge commit b2acd8b, merged
+  2026-11-20T16:22:57Z; PR head 309bcbd, CI run 44772017548
+  build pass, conclusion success; post-merge main runs
+  Android PR 44772822049 + pages 44772821193 success on
+  b2acd8b).
+  Pre-merge readback on head 309bcbd (verified by the
+  supervisor from the main source after merge — merge
+  commit content identical to head): feed 127 items incl.
+  VKworld, sitemap 131 URLs incl. VKworld, blog index 127
+  BlogPosting, title 51 chars, meta 133 chars, JSON-LD
+  parses (Article + FAQPage 4 Qs + BreadcrumbList,
+  datePublished 2026-11-20), TL;DR present, 1 script tag,
+  1 H1, 10 H2s, Query 126 row present, only docs/ +
+  tool/growth changed.
+  Query 126 verified by the lead from live evidence (no top
+  result is a VKworld-specific phone-to-USB photo-backup
+  guide); the exact query returned seven results (a
+  devicesfaq VK6050 FAQ, SnapDisk's own generic guides, a
+  PetaPixel field-backup guide, a Techwalla camera guide, a
+  YouTube OTG video, a WITNESS blog) — none is a VKworld-
+  specific guide; real gap stands.
+  New docs/vkworld-photos-to-usb.html ("Back up VKworld photos
+  to a USB drive (no computer)"), following the WL-54–WL-158
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot, with an honest caption).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 51 chars, meta
+  description 133 chars, JSON-LD validated by parse
+  (Article + FAQPage 4 Qs + BreadcrumbList, datePublished
+  2026-11-20); sitemap 131 URLs and feed 127 items; blog
+  JSON-LD counts 127 BlogPosting entries. searches.md Query
+  126 row present ("back up VKworld photos to USB drive
+  without computer" — HOW-TO GAP).
+  Key finding: thirty-six covered VKworld phones (2014–2018),
+  9 clear Android 7.0, so SnapDisk installs on 9; the
+  one-tap route is proven on 5 (S8, Mix Plus, Mix 2, Mix3,
+  K1 — each clears the floor and lists USB OTG Yes), 4 more
+  need the mounting test (S3, Mix, VK7000, VK4000 — OTG
+  unstated), 1 contested-floor (T2 Plus — Android 5.0 per
+  phonesdata/FindPare against 7.0 per devicesfaq, techyne,
+  majordroid, unite4buy), 23 run below 7.0 as shipped, 3 are
+  feature phones with no Android at all (New Stone V3, Stone
+  V3 Plus, Stone V3S — only the card-reader route works on
+  those). 2 USB-C (Mix3, VK7000), 6 micro-USB, port unstated
+  on 25. microSD fits 20 for certain; ceilings stated on 13,
+  contested on 2 (Mix Plus 128 vs 32 GB, Mix 128 vs 64 GB),
+  unstated on 5, slot unstated on 16. VaultDrive proven on 3
+  under its own site's Android 8 floor (K1, VK4000, VK7000
+  on its higher listing), 0 under AppBrain's 12.1; FotoSafe
+  proven on 0. VKworld is a Chinese budget brand selling
+  low-cost Android phones in Europe since 2014; acquired
+  rival maker Cagabi in 2017 and rebranded the Cagabi One
+  Plus as the VKworld F2. VK Mobile trap: the VK600, VK2020,
+  VK2000, VK900 and plain VK800 are a different, defunct
+  Korean brand — not VKworld. 5 models excluded for no specs
+  (VK2015, VKI6, Diamond Z2, Stone V3 Max, VK6735X).
+  llms-full.txt VKworld section is complete (heading + URL +
+  dek + TL;DR + Search line, lines 1286–1300) — no
+  UMIDIGI-style missing-section gap.
+  Live fetch verified by the supervisor:
+  vkworld-photos-to-usb.html 200 (57,886 B, correct title),
+  feed.xml 127 items live incl. VKworld.
+  Lead's final report was not delivered to this run; all
+  receipts above were independently verified by readback,
+  no effect.
+  Supervisor re-score from a fresh live re-search: top
+  results are the devicesfaq VK6050 FAQ, SnapDisk's own
+  generic guides (transfer-photos-to-usb-automatically,
+  backup-photos-offline), PetaPixel field-backup, Techwalla
+  camera guide, YouTube OTG video, WITNESS blog — none
+  mentions VKworld; real gap stands. (The new VKworld
+  article itself does not yet surface in this search —
+  merged minutes before the re-score.)
+  Fallback for WL-160: Neffos — verified by the supervisor,
+  no docs/neffos-photos-to-usb.html and no searches.md row
+  (0 mentions), and the exact query returns no Neffos-
+  specific guide in the top results (FotoSafe generic guide,
+  SnapDisk's own generic guides, askfilo generic — scored
+  Nov 20, 2026).
+
 ## WL-158 — Back up Leagoo photos to USB article, 126th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
