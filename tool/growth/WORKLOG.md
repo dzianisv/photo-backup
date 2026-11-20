@@ -1,3 +1,112 @@
+## WL-155 — Back up Homtom photos to USB article, 123rd how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #281 MERGED (merge commit 0bd3382, merged
+  2026-11-20T11:38:41Z; PR head 7f960bd, CI run 44729078707
+  build pass, conclusion success; post-merge main runs
+  Android PR 44729277074 + pages 44729276398 success on
+  0bd3382).
+  Supervisor applied the lead's drafts via the GitHub API:
+  the lead's git steps were blocked by a system
+  execution-risk notice on the `git clone` exec result
+  (prohibits git/package-manager commands inside cloned
+  content without a go-ahead) — no git commands were run
+  in the clone, and the supervisor verified every draft
+  file and applied it through the contents API instead
+  (branch wl-155-homtom, 7 files, head 7f960bd; branch
+  readback: only docs/ + tool/growth changed, feed 123
+  items and blog 123 BlogPosting on the branch before
+  merge).
+  Query 122 verified by the lead from live evidence (no top
+  result is a Homtom-specific phone-to-USB photo-backup
+  guide); the exact query returned four results, all generic
+  Android (FoneLab guide, Dr.Fone guide, askfilo Q&A,
+  EyeFi forum thread) — none mentions Homtom; real gap
+  stands.
+  New docs/homtom-photos-to-usb.html ("Back up Homtom photos
+  to a USB drive (no computer)"), following the
+  WL-54–WL-154 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 50 chars, meta
+  description 128 chars, JSON-LD validated by parse
+  (Article + FAQPage 4 Qs + BreadcrumbList, datePublished
+  2026-11-20); sitemap 127 URLs and feed 123 items; blog
+  JSON-LD counts 123 BlogPosting entries. searches.md Query
+  122 row present ("back up Homtom photos to USB drive
+  without computer" — HOW-TO GAP).
+  Key finding: twenty-six of the forty-two covered Homtom
+  phones clear Android 7.0, so SnapDisk installs on
+  twenty-six; the one-tap route is proven on 12 (HT26,
+  HT50, HT70, HT80, S8, S99, S99i, C2, H5, H10, Zoji Z9,
+  Zoji Z33), 7 more need the mounting test (S7, S9 Plus,
+  C8, P30 Pro contested OTG; HT16S, C1, Zoji Z11 unstated
+  OTG), 7 clear the floor but list OTG No (HT37 Pro, S16,
+  S17, C13, H1, H3, Zoji Z8), and 16 run below 7.0
+  (HT3 Pro, HT6, HT7, HT7 Pro, HT8, HT10, HT16, HT16 Pro,
+  HT17, HT17 Pro, HT20, HT20 Pro, HT27, HT37, Zoji Z6,
+  Zoji Z7) — fifteen with no 7.0 update on record; the
+  HT37 clears 7.0 only after the reported upgrade and
+  lists OTG No. Six below-floor phones list OTG Yes
+  (HT6, HT10, HT17, HT17 Pro, HT20, HT20 Pro) but no 7.0
+  update is on record for any of them. microSD fits all 42
+  for certain; ceilings contested on 28, uncontested on 14
+  (worst: S99 four numbers 32/128/256/500 GB; C8 four
+  numbers 32/64/128/256 GB, NaijaKnowHow
+  self-contradicting). VaultDrive proven on 16 under its
+  own site's Android 8 floor, plus HT80 only on the 10
+  listings; on 0 under AppBrain's 12.1 (highest shipped
+  version is 10 on the HT80 listings, 9.0 on the P30 Pro);
+  FotoSafe proven on 0 outright (HT80 clears only on the
+  10 listings with OTG Yes; P30 Pro is 9.0 with OTG
+  contested). 6 USB-C (HT70, HT80, H10, P30 Pro, Zoji Z9,
+  Zoji Z11), 30 micro-USB; H5 Type-C is a single-source
+  claim, C1 and Zoji Z33 ports contested, HT8/H1/H3 ports
+  unverified. Homtom founded 2013 in Shenzhen, a Doogee
+  sub-brand for big-battery phones; GSMchoice lists 40
+  models; this article covers forty-two mainline ones
+  (S9 Plus and H1 not in GSMchoice's catalogue; HT3 and
+  HT30 Pro in devicesfaq only, not covered).
+  Link verification 142 unique URLs, all fetched live —
+  113x200, 1x202, 21x403, 3x000, 3x404, 1x503; every
+  non-200 was verified live via browser search snippets or
+  browser.open the same day (bot-blocking / timeouts, not
+  missing content). The 3x000 are Smartprix comparison
+  pages (timeouts; 12 more Smartprix URLs 403 — the site
+  blocks curl). The 3x404 are hazelphone versus-data pages
+  (HT17 Pro, HT16 Pro, HT27) — the HT17 Pro page was
+  verified live via browser.open the same day (200,
+  MicroUSB 2.0 shown); the curl 404 is a fetch artifact,
+  and the other two were returned live in search snippets
+  the same day. The 503 is this article's own canonical
+  URL, not yet published — the supervisor's live fetch
+  after merge will confirm it. The 202 is versus.com.
+  Lead's failed execs: the git-clone execution-risk notice
+  (blocking — worked around by the supervisor via the
+  GitHub API, no git run in the clone); no other failed
+  execs on the research/draft path. Supervisor-side execs:
+  the 7-file fetch exec backgrounded after 10 s and
+  completed normally; the llms-full.txt contents API
+  returned 0 bytes (file is 1,130,215 bytes, over the
+  1 MB API limit) — fetched via the raw URL instead.
+  Live fetch verified by the supervisor:
+  homtom-photos-to-usb.html 200 (correct title/TL;DR,
+  fresh crawl 11:42 UTC); feed.xml 123 items live incl.
+  Homtom.
+  Supervisor re-score from a fresh live re-search: same 4
+  results as the lead (FoneLab, Dr.Fone, askfilo, EyeFi)
+  — all generic, none mentions Homtom; real gap stands.
+  Fallback for WL-156: UMIDIGI (full brand) — verified by
+  the supervisor, no docs/umidigi-photos-to-usb.html and
+  no searches.md row for "back up UMIDIGI photos to USB
+  drive without computer" (only the Bison-line article
+  WL-85 exists; every other brand tried — Doogee,
+  Oukitel, Blackview, Umidigi Bison, Neffos, Kodak,
+  Polaroid, Leagoo, Allview and 40+ more — already has an
+  article).
+
 ## WL-154 — Back up Vernee photos to USB article, 122nd how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
