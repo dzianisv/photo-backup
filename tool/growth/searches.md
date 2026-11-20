@@ -11151,6 +11151,145 @@ demand is read off competitor install velocity instead (see
   Article published Nov 19, 2026 (WL-145, 113th how-to):
   docs/zopo-photos-to-usb.html.
 
+### 113. "back up Wileyfox photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Wileyfox-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Wileyfox-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and the three covered
+  Wileyfox phones that clear Android 7.0 list USB OTG No on
+  two of them and no source states OTG for the third, so
+  there is no proven phone route on any of them, while the
+  five below Android 7.0 cannot run SnapDisk at all.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  askfilo.com, "how to transfer pictures from an android phone
+  to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — to transfer photos directly from your Android device to a
+  USB flash drive, you will typically need a USB OTG adapter if
+  your flash drive does not have a native USB-C connector that
+  fits your phone; open your File Manager app, look for the
+  folder named DCIM and then open the Camera folder. A generic
+  Android guide — it says nothing about Wileyfox);
+  youtube.com, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most direct
+  method for moving photos and videos from any modern Android
+  phone to a USB drive is a USB On-The-Go (OTG) connection and
+  the phone's built-in file manager app; it needs Android 7.0
+  or newer and a USB-C or micro-USB OTG adapter. A generic
+  Android video guide — it says nothing about Wileyfox);
+  drfone.wondershare.com, "4 Practical Ways to Transfer Photos
+  from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash drive
+  by connecting them directly with an OTG adaptor, using a PC
+  as a middleman via USB File Transfer mode, or downloading
+  them wirelessly through Google Drive or AirDroid; for direct
+  transfers without a computer, connect a USB-C OTG adaptor
+  from the phone to the flash drive and copy files using the
+  USB Drive option in the Android notification tray. A generic
+  Android guide — it says nothing about Wileyfox);
+  fotosafe.weidisoft.net, "Back up Android photos to USB |
+  FotoSafe"
+  (fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/
+  — back up Android photos to a USB drive without a computer;
+  you need Android 9 or later with USB host/OTG support, a USB
+  drive with enough free capacity, and a data-capable OTG
+  adapter. A rival app guide, not a Wileyfox guide — it says
+  nothing about Wileyfox);
+  groovypost.com, "How to Transfer Photos from Android to a
+  USB Drive"
+  (groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — you might want to create a local backup of photos from
+  Android using a USB flash drive; connect your Android phone
+  to your PC, choose the USB option to transfer files, find
+  the DCIM folder and drag the photos onto the USB drive; or
+  use a USB 3.1 to USB-C flash drive to transfer photos
+  without a PC. A generic guide — it says nothing about
+  Wileyfox).
+- The one-tap route is proven on zero phones — the three
+  that clear Android 7.0 are the Swift 2, Swift 2 Plus and
+  Swift 2 X, updated from 6.0.1 to 7.1.1 and then to 8.1 —
+  but two of the three list USB OTG No and no source states
+  OTG for the third, so on those three SnapDisk installs but
+  there is no proven phone route on any of them; five phones
+  run below Android 7.0 and cannot run SnapDisk at all — the
+  Swift, Storm, Spark, Spark+ and Spark X — so on those five
+  there is no SnapDisk route and no rival-app route either,
+  only the computer copy and the card-reader route on all
+  five, with the file-manager copy proven on none of them.
+  Three of the five below 7.0 list USB OTG No — the Swift,
+  Spark and Spark+ — so on those three there is no phone
+  route at all either; two more below 7.0 have OTG disputed
+  between sources — the Storm and the Spark X — so on those
+  two the drive mounting is the test. Three take USB Type-C
+  — the Swift 2, Swift 2 Plus and Swift 2 X — so a USB-C
+  flash drive plugs straight into those three, while five
+  take micro-USB and need a micro-USB OTG adapter. All eight
+  take a microSD card — so the card-reader route in Method 4
+  is proven on all eight — with the ceilings disputed on
+  three of them — the Swift, the Spark and the Spark+. The
+  Swift's microSD ceiling is two numbers — up to 32 GB per
+  PhoneMore, up to 2 TB per Wikipedia; the Storm's battery is
+  two listings — non-removable per Wikipedia, removable per
+  devicesfaq — and its weight is two numbers — 157 g per
+  Wikipedia, 155 g per officiallineageos — and its OTG is
+  disputed — No per FindPare, listed among the connectivity
+  options per officiallineageos; the Spark's microSD ceiling
+  is two numbers — up to 32 GB per Android Central and
+  Wikipedia, up to 128 GB per Digital Trends; the Spark+'s
+  microSD ceiling is three numbers — up to 32 GB per
+  Wikipedia, Android Central and Notebookcheck, up to 64 GB
+  per rec-ip.ru, up to 128 GB per rec-ip.ru's spec table —
+  and Notebookcheck's own 64 GB card worked in the phone;
+  the Spark X's OTG is disputed — No per FindPare, works
+  without issues per Notebookcheck's review; the Swift 2's
+  weight is two numbers — 155 g per the official spec sheet,
+  158 g per UL benchmarks; the Swift 2 X's battery is three
+  numbers — 3010 mAh per devicesfaq, UL benchmarks, TechNuovo
+  and University Herald, 3050 mAh per the official spec sheet
+  and Wikipedia, 3100 mAh per productindetail — and its
+  weight is two numbers — 152.8 g per Wikipedia, 155 g per
+  productindetail — and its release is two dates — announced
+  November 2016 per Wikipedia, January 2017 per Kimovil. The
+  promised Nougat update is two stories — Wileyfox promised
+  7.1.1 for the whole lineup by the end of April 2017, with
+  the Storm due in May and the Spark range in June, but
+  devicesfaq lists only CyanogenMod 13 (Android 6.0.1) for
+  the Swift, Storm, Spark, Spark+ and Spark X, and TechRadar
+  in June 2018 said the Spark range was still awaiting news on
+  a support timeline and the Swift and Storm were "watch this
+  space" — so on those five the update is unproven and they
+  stay below 7.0. No source states OTG for the Swift 2 X:
+  FindPare's Swift 2 X page never surfaced in the searches
+  performed, Kimovil lists only Charging, Mass Storage and
+  USB Type C, and the official spec sheet lists the Type-C
+  port as Mass Storage, MTP, PTP and Debugging only.
+- VaultDrive needs Android 8 or later per its own site, so
+  three of the eight clear the version floor — the Swift 2,
+  Swift 2 Plus and Swift 2 X on 8.1 — but the drive-hosting
+  condition is proven on none of the three — the Swift 2 and
+  Swift 2 Plus list OTG No and no source states OTG for the
+  Swift 2 X — so VaultDrive is proven on zero of the eight —
+  and AppBrain lists 12.1 or later, which no covered Wileyfox
+  phone clears either. FotoSafe needs Android 9 or later with
+  USB host or OTG support, so zero of the eight clear the
+  version floor — the newest covered models run Android 8.1 —
+  so FotoSafe is proven on zero of the eight. Wileyfox has no
+  phone-to-USB backup tool of its own — no Wileyfox-specific
+  backup advice turned up in any source beyond a computer
+  copy, Google Drive, or Google Photos; the devicesfaq backup
+  FAQ names the computer copy as the most economical method,
+  and names the file manager on a Wileyfox phone as Files, or
+  Files by Google. No GSMArena spec page was returned for any
+  covered Wileyfox model in the searches performed, so no
+  GSMArena USB row could be cited for any of them.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-146, 114th how-to):
+  docs/wileyfox-photos-to-usb.html.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
