@@ -12489,6 +12489,118 @@ demand is read off competitor install velocity instead (see
   Nov 20, 2026; Maze is a defunct Chinese budget brand,
   2017–2018, Maze Alpha etc.).
 
+### 126. "back up VKworld photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a VKworld-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  VKworld-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and nine of the
+  thirty-six covered VKworld phones clear Android 7.0, so
+  the one-tap route is proven on five outright, with
+  four more needing the mounting test.
+- Current top results (scored Nov 20, 2026, live web
+  search):
+  devicesfaq.com, "Frequently asked questions VKworld VK6050"
+  (https://www.devicesfaq.com/en/frequently-asked-questions/vkworld-vk6050
+  — to back up a VKworld phone the most economical method is to
+  connect the phone to a computer using the USB cable and make a
+  copy of the files using the file browser; Google Drive is the
+  default cloud service, and Google Photos is for photos alone. A
+  per-model FAQ, not a phone-to-USB guide — and the source that
+  names VKworld's backup advice, which still offers no phone-to-USB
+  route. The same template appears on every VKworld model page —
+  it is devicesfaq's generic Android boilerplate, not VKworld's
+  own advice);
+  dzianisv.github.io, "Transfer photos to USB automatically
+  — SnapDisk"
+  (https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html
+  — plug a USB drive into your Android phone, tap Backup in
+  SnapDisk, and your whole photo library copies oldest-first
+  to the drive in the background, with progress, Pause and
+  Stop, and resume. A SnapDisk guide, not a VKworld guide —
+  and the top SnapDisk result for this query, which is
+  generic Android, not VKworld-specific);
+  petapixel.com, "No laptop, no problem: how to back up
+  photos in the field with your smartphone"
+  (https://petapixel.com/2025/05/11/no-laptop-no-problem-how-to-back-up-photos-in-the-field-with-your-smartphone/
+  — back up photos in the field with a smartphone and no
+  laptop. A field-backup guide, not a VKworld guide — and it
+  says nothing about VKworld);
+  techwalla.com, "How to move pictures from camera to flash
+  drive with no computer"
+  (https://www.techwalla.com/articles/how-to-move-pictures-from-camera-to-flash-drive-with-no-computer
+  — move pictures from a camera to a flash drive with no
+  computer. A camera guide, not a phone guide — and it says
+  nothing about VKworld);
+  youtube.com, OTG video
+  (https://www.youtube.com/watch?v=PYcbV25CczI
+  — a video showing a phone backing up to a USB drive over
+  OTG. A video, not a guide — and it says nothing about
+  VKworld);
+  blog.witness.org, "Backing up phone media without internet
+  or a computer"
+  (https://blog.witness.org/2020/02/backing-up-phone-media-without-internet-or-a-computer/
+  — back up phone media with no internet and no computer. A
+  blog, not a VKworld guide — and it says nothing about
+  VKworld);
+  dzianisv.github.io, "Back up photos offline — SnapDisk"
+  (https://dzianisv.github.io/photo-backup/backup-photos-offline.html
+  — back up photos to a USB drive with no internet and no
+  account. A SnapDisk guide, not a VKworld guide — the second
+  SnapDisk result for this query, generic Android).
+- The one-tap route is proven on five phones — every one clears
+  Android 7.0 and lists USB OTG Yes: the S8, Mix Plus, Mix 2,
+  Mix3 and K1. Four need the mounting test: the S3, Mix, VK7000
+  and VK4000, where OTG is unstated in every source. One is
+  contested-floor: the T2 Plus, Android 5.0 per phonesdata and
+  FindPare against 7.0 per devicesfaq, techyne, majordroid and
+  unite4buy — check the version on the unit. Twenty-three run
+  below Android 7.0 as shipped, so SnapDisk does not install on
+  those at all. Three are feature phones with no Android at all:
+  the New Stone V3, Stone V3 Plus and Stone V3S. Two take USB
+  Type-C (Mix3, VK7000) and six take micro-USB — the port is
+  unstated on the other twenty-five. A microSD card fits twenty
+  phones for certain — each has a slot — so the card-reader route
+  is proven on those twenty, though ceilings are stated on
+  thirteen, contested on two (Mix Plus 128 vs 32 GB, Mix 128 vs
+  64 GB) and unstated on five, and the slot itself is unstated
+  on sixteen. VaultDrive needs Android 8 or later per its own
+  site, so three clear the version floor on shipped software
+  (K1, VK4000, VK7000 on its higher 8.0 listing) — while AppBrain
+  lists 12.1 or later, which none clear — and only one is proven
+  (K1, with OTG Yes). FotoSafe needs Android 9 or later with USB
+  host or OTG support, so none is proven. Android is two numbers
+  on nine phones, but only the T2 Plus flips the 7.0 floor.
+  Launch dates are unstated on seven phones and contested on two
+  (K1 announced June 2018 / released September 2018; T2 Plus
+  February 2016 belongs to the older T2). VKworld has no
+  phone-to-USB backup tool of its own — no VKworld-authored
+  backup advice turned up in any source beyond a computer copy,
+  Google Drive or Google Photos — the closest thing is the
+  per-model backup FAQ on devicesfaq, which is generic Android
+  boilerplate identical on every model, not VKworld's own advice,
+  and no live brand site was verified from this run. VKworld is
+  a Chinese phone maker selling low-cost Android phones in Europe
+  since 2014, which acquired rival maker Cagabi in 2017 and
+  rebranded the Cagabi One Plus as the VKworld F2; this article
+  covers thirty-six phones from 2014 to 2018 (ten exclusions:
+  VK2015, VKI6, Diamond Z2, Stone V3 Max, VK6735X — no specs;
+  VK600, VK2020, VK2000, VK900, plain VK800 — no VKworld
+  evidence; VK Mobile is a different, defunct Korean brand).
+  Quirk: gizmochina's VK7000 spec page lives at the mix-2 slug.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 20, 2026 (WL-159, 127th how-to):
+  docs/vkworld-photos-to-usb.html — branch wl-159-vkworld,
+  article commit 9a543aa (supervisor to verify and merge;
+  no PR opened by the lead).
+  Fallback for WL-160: Maze — no article file
+  (docs/maze-photos-to-usb.html absent), no searches.md row,
+  and the exact query "back up Maze photos to USB drive
+  without computer" returns no Maze-specific guide in the
+  top results (SnapDisk's own generic guides, scored
+  Nov 20, 2026; Maze is a defunct Chinese budget brand,
+  2017–2018, Maze Alpha etc.).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
