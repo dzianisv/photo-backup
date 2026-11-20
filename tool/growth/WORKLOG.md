@@ -1,5 +1,113 @@
 # SnapDisk — Work Log
 
+## WL-144 — Back up Yezz photos to USB article, 112th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #257 MERGED (merge commit f2240ce, merged
+  2026-11-20T01:50:29Z; PR head CI run 44656170547 build pass;
+  post-merge main runs Android PR 44656522531 + pages
+  44656522173 success on f2240ce). Live fetch verified by
+  the sweep: yezz-photos-to-usb.html 200 (correct title),
+  feed.xml 112 items live incl. Yezz.
+  Query 111 verified by the lead from live evidence (no top
+  result is a Yezz-specific phone-to-USB photo-backup
+  guide); top results are five generic Android guides
+  (Dr.Fone, askfilo, a YouTube OTG video, epictechtips,
+  sekin.in) — none mentions Yezz; real gap stands.
+  New docs/yezz-photos-to-usb.html ("Back up Yezz photos
+  to a USB drive (no computer)"), following the
+  WL-54–WL-143 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: the one-tap route is proven
+  on zero covered Yezz phones — no covered Yezz phone lists
+  USB OTG at all, so on all nineteen that clear Android 7.0
+  the drive mounting is the test; one more — the Art 3 Lite
+  — clears Android 7.0 but lists OTG No, so on it there is
+  no phone route at all; the fourteen below Android 7.0
+  cannot install SnapDisk at all, so on those the computer
+  copy or the card-reader route is the backup).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 34 chars, meta
+  description 143 chars, JSON-LD validated by parse
+  (sweep re-check); sitemap and feed XML parse; feed now
+  counts 112 items; blog JSON-LD counts 112 BlogPosting
+  entries. searches.md Query 111 row present ("back up
+  Yezz photos to USB drive without computer" — HOW-TO GAP):
+  top results are five generic Android guides, none is a
+  guide for a Yezz phone. Sweep re-check of the dek's
+  "twenty-two honest caveats" count: 22 segments, stands.
+  Yezz specifics verified live: the one-tap route is proven
+  on zero of thirty-three covered phones — nineteen clear
+  Android 7.0 but no source states OTG for eighteen of them
+  and the Art 3 Lite lists OTG No; fourteen run below
+  Android 7.0 and cannot run SnapDisk at all — the Andy 3G
+  (2.3), 4EI (4.0), 4EI2 (4.4), 5EI3 2015 (4.4/5.0), 6Q
+  (4.0), 4.7T (4.4), 5E LTE (5.1), 4.5EL LTE (5.1), C5E LTE
+  (5.1), 5.5M LTE VR (5.0), 5M VR (5.1), 5E3 (6.0), 5EI3
+  2016 (6.0) and 4E4 (6.0). Four take USB Type-C, so a USB-C
+  drive plugs straight into those four — the Art 2 Pro, Art
+  3 Lite, Art 3S and Max 3 Ultra; fifteen take micro-USB.
+  All nineteen take a microSD card, so the card-reader route
+  works on all nineteen; below 7.0 only the 5E3 and the 5M
+  VR are verified to take a card.
+  Conflicts between sources, all named in the article: the
+  Liv 1s's connector is two numbers — microUSB per eIMEI24,
+  Type-C per the manuals.plus user manual; the Andy 5EI3
+  (2015)'s Android is two numbers — 4.4 per phonearena, 5.0
+  per devicesfaq — and its RAM is two numbers — 0.5 GB per
+  phonearena, 1 GB per devicesfaq; the Max 1's battery is two
+  numbers — removable per eIMEI24, non-removable per
+  mobilegizmo's compare; the Max 1 Plus's rear camera is two
+  listings — dual 8 MP + 0.3 MP per phonesdata and eIMEI24,
+  no rear camera at all per specspro — and its microSD ceiling
+  is two numbers — up to 64 GB per phonesdata, microSDXC with
+  no ceiling per eIMEI24; the Art 1 Pro's release is two dates
+  — November 2020 per GSMArena and eIMEI24, August 2020 per
+  phonesdata; the Art 3 Lite's second camera is two numbers —
+  0.3 MP per phonesdata, 2 MP per deviceempire; the Art 3S's
+  release is two dates — January 2023 per devicesfaq and
+  mobileprice247, September 2022 per phonesdata — and its
+  camera is 16 MP per phonesdata and philnews, not the
+  "160 MP" one source prints; the Max 2's battery is two
+  numbers — 2500 mAh per philnews, 2600 mAh in
+  gadgetsfocus's body text, against its own spec table's
+  2500 mAh; the Max 2 Plus's battery chemistry is two
+  listings — Li-Polymer per pkgsm, Li-Ion removable per
+  eIMEI24 and phonesdata; the Max 3's third camera is two
+  numbers — 2 MP per phonesdata, 0.3 MP per gadgetsfocus —
+  and its microSD ceiling is two listings — microSDXC per
+  phonesdata, up to 128 GB per gadgetsfocus; the Max 3 Plus's
+  battery chemistry is two listings — Li-Poly per
+  mobileprice247, Li-Ion per phonesdata; the Art 3S's microSD
+  ceiling is two listings — microSDXC per phonesdata, 32 GB
+  to 2 TB per phoneswiz. Yezz is a Miami-based handset brand
+  — DDM Brands' Yezz line, co-founded by Luis Sosa, built for
+  Latin America first and sold in the US and Europe, with
+  Android phones under Andy, Windows phones under Billy and
+  Firefox OS phones under Foxy; Google once asked Yezz to
+  build modules for Project Ara.
+  VaultDrive needs Android 8 or later per its own site, so
+  all nineteen can run it — and AppBrain lists 12.1 or later,
+  which no covered Yezz phone clears, since the newest covered
+  models run Android 12. FotoSafe needs Android 9 or later
+  with USB host or OTG support, so eighteen of the nineteen
+  clear the version floor — all but the Andy 5E5 on 8.0 — but
+  the OTG condition is proven on none of the nineteen, so
+  FotoSafe is proven on zero of the nineteen until a drive
+  mounts. Yezz has no phone-to-USB backup tool of its own —
+  no Yezz-specific backup advice turned up in any source
+  beyond a computer copy, Google Drive, or Google Photos; the
+  devicesfaq backup FAQ names the computer copy as the most
+  economical method, and names the file manager on a Yezz
+  phone as Files, or Files by Google.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-144, 112th how-to):
+  docs/yezz-photos-to-usb.html.
+  Fallback for WL-145: Wileyfox — verified by grep, no
+  docs/wileyfox-photos-to-usb.html and no searches.md row
+  (Wileyfox, the UK brand; Swift / Storm / Spark series).
+
 ## WL-143 — Back up Alcatel photos to USB article, 111th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
