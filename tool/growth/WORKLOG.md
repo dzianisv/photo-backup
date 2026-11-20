@@ -1,5 +1,64 @@
 # SnapDisk — Work Log
 
+## WL-150 — Back up Nubia photos to USB article, 118th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #270 MERGED (merge commit 0aeb5d6, merged
+  2026-11-20T06:36:12Z; PR head 080e08e, CI run 44688668877
+  build pass, 1m16s, conclusion success; post-merge main runs
+  Android PR 44688971422 + pages 44688970203 success on 0aeb5d6).
+  Live fetch verified by the supervisor:
+  nubia-photos-to-usb.html 200 (63,848 B, correct title/TL;DR)
+  at the canonical root URL — note: the /docs/ prefix 404s,
+  Pages serves docs/ as the site root, and the feed link is the
+  canonical URL; feed.xml 118 items live incl. Nubia.
+  Supervisor re-score from a fresh live re-search: same 5
+  results as the lead (groovypost, unanswered.io, sekin.in,
+  EyeFi forum, YouTube OTG video) — all generic, none mentions
+  Nubia; real gap stands.
+  Query 117 verified by the lead from live evidence (no top
+  result is a Nubia-specific phone-to-USB photo-backup
+  guide); the exact query returned five results, all generic
+  Android (a groovypost guide, an unanswered.io guide, a
+  sekin.in guide, an EyeFi forum thread and a YouTube OTG
+  video) — none mentions Nubia; real gap stands.
+  New docs/nubia-photos-to-usb.html ("Back up Nubia photos
+  to a USB drive (no computer)"), following the
+  WL-54–WL-149 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 35 chars, meta
+  description 150 chars, JSON-LD validated by parse
+  (article + blog index); sitemap and feed XML parse; feed
+  now counts 118 items; blog JSON-LD counts 118 BlogPosting
+  entries. searches.md Query 117 row present ("back up
+  Nubia photos to USB drive without computer" — HOW-TO
+  GAP).
+  Key finding: 7 of 11 covered Nubia flagships clear Android
+  7.0 (Z17 7.1.1, Z18 8.1, Z20 9.0, Z30 Pro 11, Z40 Pro 12,
+  Z50 13, Z60 Ultra 14); the one-tap route is proven on 5
+  (Z18, Z20, Z30 Pro, Z40 Pro, Z60 Ultra — clear floor +
+  OTG Yes), needs a mounting test on 2 (Z17, Z50 — OTG
+  contested in sources), blocked on 4 (Z5, Z7, Z9, Z11 —
+  Android 6.0.1 or older). OTG Yes on 8 of 11, contested
+  on 2, unstated on 1 (Z5 — GSMArena USB row lists only
+  microUSB 2.0). microSD proven on 1 only (Z11, ceiling
+  contested 200/256/512 GB). VaultDrive proven on 6 under
+  its Android 8 floor, 2 under AppBrain's 12.1 (Z50, Z60
+  Ultra — Z40 Pro on 12 is the near miss); FotoSafe proven
+  on 4.
+  Note: link verification 49 unique external links, all
+  fetched live — 26x200, 1x202 (versus.com), 16x403
+  bot-blocked, 5x000 connection-failed from this VM (all
+  returned verbatim by live search with content quoted),
+  1x404 which is the article's own canonical URL, not live
+  pre-merge (expected). No failed execs.
+  Fallback for WL-151: RedMagic — verified by the lead, no
+  docs/redmagic-photos-to-usb.html and no searches.md row.
+
+
 ## WL-149 — Back up LeEco photos to USB article, 117th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
