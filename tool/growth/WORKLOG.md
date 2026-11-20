@@ -1,3 +1,85 @@
+## WL-158 — Back up Leagoo photos to USB article, 126th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #288 MERGED (merge commit cc04223, merged
+  2026-11-20T15:31:46Z; PR head a06d5bc, CI run 44763666964
+  build pass, conclusion success; post-merge main runs
+  Android PR 44764177379 + pages 44764176516 success on
+  cc04223).
+  Lead stopped on timeout after the article commit and did not
+  push; supervisor committed the supporting files, pushed,
+  verified every file by readback, created PR #288, waited for
+  CI green, and merged. Article commit 9b26d6f, supporting
+  files a06d5bc, base main 3d3a5d7. Pre-merge readback on head
+  a06d5bc: feed 126 items incl. Leagoo, sitemap 130 URLs incl.
+  Leagoo, blog index 126 BlogPosting, title 50 chars, meta
+  134 chars, JSON-LD parses (Article + FAQPage 4 Qs +
+  BreadcrumbList, datePublished 2026-11-20), TL;DR present,
+  1 script tag, 1 H1, 10 H2s, Query 125 row present, only
+  docs/ + tool/growth changed.
+  Query 125 verified by the lead from live evidence (no top
+  result is a Leagoo-specific phone-to-USB photo-backup
+  guide); the exact query returned four results (a LESOGE
+  flash-drive manual, SnapDisk's own generic guide, a Dr.Fone
+  guide, an EyeFi forum thread) — none is a Leagoo-specific
+  guide; real gap stands.
+  New docs/leagoo-photos-to-usb.html ("Back up Leagoo photos
+  to a USB drive (no computer)"), following the WL-54–WL-157
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot, with an honest caption).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 50 chars, meta
+  description 134 chars, JSON-LD validated by parse
+  (Article + FAQPage 4 Qs + BreadcrumbList, datePublished
+  2026-11-20); sitemap 130 URLs and feed 126 items; blog
+  JSON-LD counts 126 BlogPosting entries. searches.md Query
+  125 row present ("back up Leagoo photos to USB drive
+  without computer" — HOW-TO GAP).
+  Key finding: sixty-three covered Leagoo phones (2014–2020),
+  30 clear Android 7.0, so SnapDisk installs on 30; the
+  one-tap route is proven on 16 (OTG Yes), 8 more need the
+  mounting test (KIICAA Mix, M7, M11, M9 Pro, Power 2,
+  Power 2 Pro, Z10, Z20 — OTG unstated), 5 list OTG No
+  (KIICAA Power, Z7, M10, Z15, Z9), 1 contested (T5c —
+  FindPare OTG No against OTG Yes in three other sources),
+  33 run below 7.0 as shipped. 9 USB-C, 53 micro-USB, Z20
+  port unverified. microSD fits all 63 for certain;
+  ceilings stated on 8, contested on 8, unstated on 47.
+  VaultDrive proven on 18 under its own site's Android 8
+  floor, 0 under AppBrain's 12.1; FotoSafe proven on 3
+  (M12, M13, S11). S12 and plain Power excluded (no retail
+  release / unverified). Leagoo is a Chinese budget brand
+  owned by Shenzhen OTEDA Technology Co., Ltd, launched
+  April 2014; brand site leagoo.com effectively dead
+  (114-byte redirect stub); no Leagoo-authored backup
+  advice beyond a computer copy (devicesfaq per-model FAQ
+  is generic Android boilerplate).
+  Supervisor re-score from a fresh live re-search: top
+  results are the LESOGE flash-drive manual, SnapDisk's own
+  generic transfer-photos-to-usb-automatically guide, the
+  Dr.Fone generic guide, and the EyeFi forum thread — none
+  mentions Leagoo; real gap stands.
+  llms-full.txt Leagoo section is complete (heading + URL +
+  dek + TL;DR + Search line, lines 1270–1278) — no
+  UMIDIGI-style missing-section gap.
+  Live fetch verified by the supervisor:
+  leagoo-photos-to-usb.html 200 (66,325 B, correct title),
+  feed.xml 126 items live incl. Leagoo.
+  Lead's full final report was not readable by the
+  supervisor (only the handoff preview: article committed,
+  supporting files uncommitted, stopped on timeout); all
+  receipts above were independently verified by readback,
+  no effect.
+  Fallback for WL-159: VKworld — verified by the
+  supervisor, no docs/vkworld-photos-to-usb.html and no
+  searches.md row (0 mentions), and the exact query
+  returns no VKworld-specific guide in the top results (a
+  devicesfaq VK700 FAQ naming the computer copy, SnapDisk's
+  own generic guides, PetaPixel field-backup, Techwalla
+  camera guide, YouTube OTG video, WITNESS blog — scored
+  Nov 20, 2026).
+
 ## WL-157 — Back up Oscall photos to USB article, 125th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
