@@ -13093,6 +13093,76 @@ demand is read off competitor install velocity instead (see
   drafted Nov 20, 2026 (WL-164, 132nd how-to):
   docs/doro-photos-to-usb.html — branch wl-164-doro.
 
+### 132. "back up HMD photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an HMD-specific guide to backing up
+  photos to a USB drive at all, let alone an HMD-specific automated
+  whole-library backup with progress, Pause/Stop, and resume — and all
+  twenty covered HMD phones clear Android 7.0, so the one-tap route is
+  proven on nineteen, with only the Key needing the mounting test.
+- Current top results (scored Nov 20, 2026, live web search):
+  asktimgrey.com, "Media Card Direct to Hard Drive"
+  (https://asktimgrey.com/2022/02/media-card-direct-to-hard-drive/
+  — how to download photos from a memory card, from a digital camera,
+  to an external hard drive without a computer, using a smartphone or
+  tablet as the intermediary. A guide about camera memory cards, not a
+  phone guide — and it says nothing about HMD);
+  dzianisv.github.io, "Back up Handheld photos to a USB drive"
+  (https://dzianisv.github.io/photo-backup/handheld-photos-to-usb.html
+  — plug the drive in, tap Backup in SnapDisk, and your whole photo
+  library copies oldest-first to the drive in the background. Our own
+  Handheld article, not an HMD guide — and it says nothing about HMD);
+  dzianisv.github.io, "Transfer photos to USB automatically"
+  (https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html
+  — plug a USB drive into your Android phone, tap Backup in SnapDisk,
+  and your whole photo library copies oldest-first to the drive in the
+  background, with real progress, Pause and Stop, and resume where it
+  stopped. Our own generic guide, not an HMD guide — and it says nothing
+  about HMD);
+  dzianisv.github.io, "USB photo backup on Android"
+  (https://dzianisv.github.io/photo-backup/usb-photo-backup.html
+  — plug a USB drive into your Android phone and copy your photos to
+  it, by hand in the Files app or one-tap with SnapDisk. Our own
+  generic guide, not an HMD guide — and it says nothing about HMD).
+  Note: a quoted search surfaced four more generic Android guides —
+  Dr.Fone, PixonEye, CyberGuy and YouTube — none of them
+  HMD-specific either.
+- One-tap proven 19 / mounting test 1 / below floor 0. Twenty covered
+  HMD devices (nineteen phones plus the T21 tablet): all twenty clear
+  Android 7.0 on shipped software, the lowest shipped version being
+  Android 13 (XR21, Aura, T21). USB OTG Yes on nineteen; contested on
+  one (Key: phonebunch Not Supported against phonepik Yes). All twenty
+  take USB Type-C. A microSD card fits nineteen for certain (XR21 has
+  no slot); ceilings are stated on seventeen, clean on fourteen
+  (256 GB on Pulse, Pulse+, Pulse Pro, Crest, Vibe, Vibe 2, Vibe 2
+  Pro, Fusion, Fusion X1, Fuse, Luma, Key, T21; 512 GB on Crest Max)
+  and contested on three (Aura: 256 GB against up to 1 TB; Arc:
+  128 GB against up to 1 TB; Vibe 5G: 256 GB against 512 GB against
+  1 TB), and unstated on two (Skyline, Aura 2). VaultDrive needs
+  Android 8 or later per its own site, so all twenty clear the version
+  floor and nineteen are proven, while AppBrain lists 12.1 or later,
+  which all twenty clear. FotoSafe needs Android 9 or later with USB
+  host or OTG support, so all twenty clear the version floor and
+  nineteen are proven. The XR21's Android is two numbers — 13 per
+  HMD's own datasheet against 12 per the GSMArena-derived listings;
+  the Pulse's card is two ceilings — 256 GB per HMD's datasheet and
+  Wikipedia against up to 1 TB per PhoneMore; the Crest Max's and the
+  Aura 2's OTG are omissions in GSMArena's USB field against Yes in
+  other sources; the Vibe 2's card slot is two types — a hybrid slot
+  against a dedicated slot. HMD Global is a Finnish company — Human
+  Mobile Devices, founded 2016, the maker of Nokia phones under
+  licence; its first HMD-branded smartphones were the Pulse family,
+  April 24, 2024. HMD has no phone-to-USB backup tool of its own; its
+  user guides point to the Google backup, Settings > System > Backup.
+  Not covered: Ivalo XE (Android version unstated; government and
+  first-responder only), Crest 2 and 2 Pro, Arc 2, Key 2, Luma 2,
+  Bold, Orka (leaks and upcoming), Hyper, Atlas and Ridge Pro
+  (rumored), all feature phones (Series 30+), and Nokia-branded
+  phones, which have their own article.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 20, 2026 (WL-165, 133rd how-to):
+  docs/hmd-photos-to-usb.html — branch wl-165-hmd.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
