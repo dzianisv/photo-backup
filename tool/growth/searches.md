@@ -11662,6 +11662,105 @@ demand is read off competitor install velocity instead (see
   Fallback for WL-150: Nubia — verified absent, no
   docs/nubia-photos-to-usb.html and no searches.md row.
 
+### 117. "back up Nubia photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Nubia-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Nubia-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and seven of the
+  eleven covered Nubia flagships clear Android 7.0, so the
+  one-tap route is proven on five of them outright, with
+  the Z17 and the Z50 waiting on a mounting test.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  groovypost.com, "How to Transfer Photos from Android to
+  a USB Drive"
+  (https://www.groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — transfer photos from an Android phone to a USB drive
+  by connecting the phone to a computer with a USB cable,
+  or by using a USB-C to USB 3.1 dual drive to transfer
+  directly without a computer; plug the USB-C side into
+  the phone, tap Explore on the drive notification, pick
+  Images, select the photos, Copy, choose the USB drive,
+  and Paste. A generic Android guide — it says nothing
+  about Nubia);
+  unanswered.io, "How do I transfer photos from an Android
+  phone to a USB flash drive?"
+  (https://unanswered.io/guide/transfer-photos-android-phone-to-usb-flash-drive
+  — check what USB connection the phone needs first: most
+  direct transfers use a USB-C flash drive or a USB-A drive
+  through an OTG adapter, and not every Android phone
+  supports external USB storage; connect the drive, open a
+  file manager, find the DCIM folder, select the pictures,
+  choose Copy or Move, open the USB drive and paste. A
+  generic Android guide — it says nothing about Nubia);
+  sekin.in, "Transfer Photos From Android to a USB Flash
+  Drive"
+  (https://sekin.in/how-to-transfer-pictures-from-android-to-a-usb-flash-drive/
+  — copy pictures directly from most compatible Android
+  phones to a USB flash drive without a computer or
+  internet connection: a USB-C flash drive, or a USB-A
+  drive through a USB-OTG data adapter, then Files by
+  Google to select the pictures and choose Copy — not
+  Move — so the originals remain on the phone until you
+  verify the backup. A generic Android guide — it says
+  nothing about Nubia);
+  eyefi.com, "What's the best way to move photos from my
+  Android to a USB drive?"
+  (https://eyefi.com/t/whats-the-best-way-to-move-photos-from-my-android-to-a-usb-drive/1113/2
+  — a forum thread: check for an OTG cable, plug the USB
+  drive in, open a file manager app, navigate to the DCIM
+  folder, select the photos, copy them, and paste them
+  onto the USB drive; cloud storage is offered as an
+  alternative. A generic Android thread — it says nothing
+  about Nubia);
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (https://www.youtube.com/watch?v=PYcbV25CczI
+  — move photos and videos from any modern Android phone
+  to a USB drive with a USB On-The-Go connection and the
+  phone's built-in file manager app; the phone needs
+  Android 7.0 or newer, a USB flash drive, and an OTG
+  adapter that fits the phone's charging port. A generic
+  Android video — it says nothing about Nubia).
+- The one-tap route is proven on five of eleven phones —
+  the Z18, Z20, Z30 Pro, Z40 Pro and Z60 Ultra clear
+  Android 7.0 and list USB OTG Yes — and needs a mounting
+  test on two more — the Z17 and the Z50 clear the floor
+  but their OTG is contested — while the four oldest —
+  the Z5, Z7, Z9 and Z11 — run Android 6.0.1 or older and
+  cannot install SnapDisk at all. USB OTG is Yes on eight
+  of the eleven — the Z7, Z9, Z11, Z18, Z20, Z30 Pro, Z40
+  Pro and Z60 Ultra — contested on two — the Z17 and the
+  Z50 — and unstated on one — the Z5, whose USB row lists
+  only microUSB 2.0. A microSD card fits one of the eleven
+  for certain — the Z11, with a ceiling that is three
+  numbers — 200 GB, 256 GB or 512 GB — while seven take
+  no card at all, and the card is contested on three —
+  the Z7, Z9 and Z17. The Z17's OTG is No per Gadgets360,
+  Yes per phonesdata, Smartprix and MobileGizmo; the
+  Z50's OTG is Yes per GSMArena, Kimovil and Smartprix,
+  Not Supported per phonebunch. VaultDrive needs Android
+  8 or later per its own site, so six of the eleven clear
+  the version floor — and AppBrain lists 12.1 or later,
+  which two clear — the Z50 on Android 13 and the Z60
+  Ultra on Android 14 — so under that stricter listing
+  VaultDrive is proven on two of the eleven. FotoSafe
+  needs Android 9 or later with USB host or OTG support,
+  so five of the eleven clear the version floor — but the
+  Z50's OTG is contested — so FotoSafe is proven on four
+  of the eleven. Nubia has no phone-to-USB backup tool of
+  its own — no Nubia-specific backup advice turned up in
+  any source beyond a computer copy or Google Photos on
+  the models that shipped with Google services. The mini
+  variants — the Z11 mini, Z11 mini S, Z17 mini and Z18
+  mini — are not covered in this article.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-150, 118th how-to):
+  docs/nubia-photos-to-usb.html.
+  Fallback for WL-151: RedMagic — verified absent, no
+  docs/redmagic-photos-to-usb.html and no searches.md row.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
