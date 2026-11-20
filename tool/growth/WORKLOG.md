@@ -1,3 +1,80 @@
+## WL-152 — Back up Razer photos to USB article, 120th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #275 MERGED (merge commit 9119db1, merged
+  2026-11-20T08:36:12Z; PR head fdfc530, CI run 44703469225
+  build pass, conclusion success; post-merge main runs
+  Android PR 44703872049 + pages 44703871463 success on 9119db1).
+  Live fetch verified by the supervisor:
+  razer-photos-to-usb.html 200 (49,740 B, correct title);
+  feed.xml 120 items live incl. Razer.
+  Supervisor re-score from a fresh live re-search: same 5
+  results as the lead (Techwalla camera guide, AppBrain Photos
+  to USB listing, unanswered.io guide, sekin.in guide,
+  thegadgetians guide) — all generic, none mentions Razer;
+  real gap stands.
+  Query 119 verified by the lead from live evidence (no top
+  result is a Razer-specific phone-to-USB photo-backup
+  guide); the exact query returned five results, all generic
+  Android (a Techwalla camera guide, an AppBrain app listing,
+  an unanswered.io guide, a sekin.in guide and a
+  thegadgetians.com guide) — none mentions Razer; real gap
+  stands.
+  New docs/razer-photos-to-usb.html ("Back up Razer photos
+  to a USB drive (no computer)"), following the
+  WL-54–WL-151 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 49 chars, meta
+  description 123 chars, JSON-LD validated by parse
+  (article + blog index); sitemap and feed XML parse; feed
+  now counts 120 items; blog JSON-LD counts 120 BlogPosting
+  entries. searches.md Query 119 row present ("back up
+  Razer photos to USB drive without computer" — HOW-TO
+  GAP).
+  Key finding: both Razer phones clear Android 7.0 (Phone
+  7.1.1, Phone 2 ships 8.1, updatable to 9.0 — Android 9 is
+  the official software endpoint for both) and the one-tap
+  route is proven on both — each one clears the floor and
+  lists USB OTG Yes; no below-7.0 phone in this article, no
+  mounting test. A microSD card fits both for certain (each
+  has a dedicated slot), so the card-reader route is proven
+  on both — unlike RedMagic, where it is proven on none of
+  the fourteen. Ceilings contested on both: Phone up to 2 TB
+  per Razer's own spec sheet, 9to5Google and the user manual,
+  512 GB per gsmarena.com.bd, 256 GB per phoneopinions;
+  Phone 2 up to 1 TB per Notebookcheck, Android Authority
+  and Tom's Hardware, 512 GB per Smartprix and TechEngage,
+  2 TB per Gizguide. Phone USB contested (3.1 Gen1 per
+  Notebookcheck/NamuWiki, Type-C 1.0 per gsmarena.com.bd);
+  Phone 2 USB 2.0 per Notebookcheck. VaultDrive proven on
+  the Phone 2 under its Android 8 floor on shipped software
+  (the Phone clears only after the Oreo update), on neither
+  under AppBrain's 12.1 floor; FotoSafe proven on both only
+  on updated Android 9 units (Phone 2 Feb 2019, Phone Aug
+  2019).
+  Note: the lead's report quoted the meta as 157 chars
+  ("Razer Phone 2 ships with Android 9, but only one of two
+  clears Android 7.0") and the title as 38 chars — the file
+  on head fdfc530 has meta 123 chars ("both Razer phones
+  clear Android 7.0, so SnapDisk runs on each one") and
+  title 49 chars, both correct and consistent with the body
+  (both clear 7.0; the Phone 2 ships 8.1, not 9); the quoted
+  text was stale, no file fix needed. The lead's "1x
+  razer-photos-to-usb.html in llms-full.txt" is likewise a
+  count, not a file defect: llms-full.txt carries the article
+  text, not the URL slug (RedMagic on main: 0 slug hits);
+  Razer content is present in llms-full.txt. Link
+  verification 41 unique external links, all fetched live —
+  39x200, 2x403 bot-blocked (gsmarena.com.bd,
+  phoneopinions), 0x404, 0x000. No failed execs.
+  Fallback for WL-153: BLU — verified by the lead, no
+  docs/blu-photos-to-usb.html and no searches.md row (the
+  supervisor's own grep finds only Bluetooth /
+  curiousbluenoser matches).
+
 # SnapDisk — Work Log
 
 ## WL-151 — Back up RedMagic photos to USB article, 119th how-to (DONE)
