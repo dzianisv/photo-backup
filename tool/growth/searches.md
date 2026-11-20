@@ -13163,6 +13163,112 @@ demand is read off competitor install velocity instead (see
   drafted Nov 20, 2026 (WL-165, 133rd how-to):
   docs/hmd-photos-to-usb.html — branch wl-165-hmd.
 
+### 133. "back up BlackBerry photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a BlackBerry-specific guide to backing up
+  photos to a USB drive at all, let alone a BlackBerry-specific automated
+  whole-library backup with progress, Pause/Stop, and resume — and seven of
+  the ten covered BlackBerry phones clear Android 7.0, so the one-tap route
+  is proven on six, with only the Motion needing the mounting test.
+- Current top results (scored Nov 20, 2026, live web search):
+  justanswer.com, "How do I transfer photos from my blackberry to my
+  laptop?"
+  (https://www.justanswer.com/computer/3cj4m-transfer-photos-blackberry-laptop.html
+  — how to transfer photos from a BlackBerry 8900 Curve to a laptop: move
+  the photos to the memory card one by one, or install the BlackBerry
+  Desktop software and save the images to the computer. A computer copy
+  for a 2008 BlackBerry OS phone, not a phone-to-USB copy — and it says
+  nothing about Android BlackBerry phones);
+  cellphone.manualsonline.com, "Research In Motion - Blackberry 10.3
+  Manual"
+  (http://cellphone.manualsonline.com/manuals/mfg/research_in_motion/103.html?p=180
+  — turn on USB mass storage and connect the device to a computer, car
+  stereo or other external device with a USB cable to access the files on
+  the media card; media cards up to 64 GB. A manual page about using the
+  phone as a USB drive for a computer, for BlackBerry 10 — not a
+  phone-to-USB photo-backup guide, and it says nothing about Android
+  BlackBerry phones);
+  libble.eu, "Manual Blackberry Passport SQW100"
+  (https://www.libble.eu/blackberry-passport-sqw100/online-manual-757057/?page=0164
+  — use a USB cable to create a two-way connection between the BlackBerry
+  device and your computer, and the device appears as a mapped drive. A
+  manual page about a USB connection to a computer, for the BlackBerry 10
+  Passport — not a phone-to-USB photo-backup guide, and it says nothing
+  about Android BlackBerry phones);
+  oreilly.com, "Blackberry® For Dummies®, 4th Edition"
+  (https://www.oreilly.com/library/view/blackberry-r-for-dummies-r/9780470607008/ch15.html
+  — the most common way of manipulating media files into and out of your
+  BlackBerry is to attach it to a PC and use Windows Explorer, with the
+  phone as a flash drive for the PC. A book chapter about a PC copy, from
+  2007, for BlackBerry OS phones — not a phone-to-USB photo-backup guide,
+  and it says nothing about Android BlackBerry phones);
+  manualsdump.com, "Turn on or turn off media card support | Blackberry
+  9380 specs"
+  (http://manualsdump.com/en/manuals/blackberry-9380model/222306/308
+  — if the smartphone is connected to a computer with a USB cable but does
+  not appear as a drive, turn on USB mass storage mode; the same page
+  describes backing smartphone data up to the media card. A manual page
+  about a USB connection to a computer, for a BlackBerry OS phone — not a
+  phone-to-USB photo-backup guide, and it says nothing about Android
+  BlackBerry phones);
+  manualshelf.com, "BlackBerry Handheld User's Manual"
+  (https://www.manualshelf.com/manual/blackberry/rdp70uw/user-s-manual-english/page-176.html
+  — connect the smartphone to a computer to transfer and synchronize files
+  with a USB cable, or use Bluetooth, or use the BlackBerry Desktop
+  Software. A manual page about a USB connection to a computer, for a
+  BlackBerry OS phone — not a phone-to-USB photo-backup guide, and it says
+  nothing about Android BlackBerry phones).
+  Note: a quoted search surfaced seven more of the same — Microsoft
+  Answers, JustAnswer, two more manualshelf pages, a BlackBerry Pearl
+  guide, the same BlackBerry 10.3 manual and a Porsche Design manual —
+  all computer copies or phone-to-phone moves for BlackBerry OS or
+  BlackBerry 10 phones, none of them BlackBerry-Android-specific either.
+- One-tap proven 6 / mounting test 1 / below floor 3. Ten covered
+  BlackBerry Android phones: seven clear Android 7.0 on shipped software,
+  the lowest shipped version that clears being Android 7.0 (Aurora).
+  USB OTG Yes on six (KEYone, Aurora, KEY2, KEY2 LE, Evolve, Evolve X);
+  contested on one (Motion: Gadgets360 and MobileGizmo Yes against
+  Notebookcheck's review saying the Type-C port serves solely for charging
+  and transferring data, with GSMArena omitting OTG). Three run below
+  Android 7.0 (Priv 5.1.1, DTEK50 and DTEK60 6.0.1); the DTEK50 and the
+  DTEK60 list USB OTG Yes, so the file-manager copy works on those two,
+  while the Priv's OTG is contested (Gadgets360, Notebookcheck and
+  malaysianwireless Yes against FoneArena No, GSMArena omitting it).
+  Seven take USB Type-C (DTEK60, KEYone, Motion, KEY2, KEY2 LE, Evolve,
+  Evolve X) and three take micro-USB (Priv, DTEK50, Aurora). A microSD
+  card fits all ten for certain; ceilings are stated on all ten, clean on
+  seven (2 TB on DTEK50, DTEK60, KEYone; 256 GB on Aurora, KEY2, KEY2 LE,
+  Evolve) and contested on three (Priv: 256 GB against 2 TB; Motion:
+  256 GB against 2 TB; Evolve X: 256 GB against 2 TB). The slot is a
+  dedicated slot on the Priv and the DTEK60 and a shared SIM slot on the
+  DTEK50, the KEYone, the Motion, the KEY2, the KEY2 LE and the Evolve X,
+  and the slot type is unstated on two (Aurora, Evolve). VaultDrive needs
+  Android 8 or later per its own site, so four clear the version floor and
+  all four are proven, while AppBrain lists 12.1 or later, which none
+  clears. FotoSafe needs Android 9 or later with USB host or OTG support,
+  so none is proven — the highest shipped version is Android 8.1; a 2018
+  report listed the KEY2 as eligible for Android 9, but no consulted
+  source confirms it shipped. The Motion's Android is three labels — 7.1
+  against 7.1.1 against 7.1.2 — but the version is 7.1 either way. The
+  DTEK50 and the DTEK60 are rebranded Alcatel phones — the Idol 4 and the
+  Idol 4S, per Wikipedia — and TCL made six of the ten phones. The Aurora
+  was sold in Indonesia only, by BB Merah Putih, and the Evolve and the
+  Evolve X in India only, by Optiemus. TCL stopped making BlackBerry
+  phones on August 31, 2020, when the licence ended, and OnwardMobility
+  signed a new licence that same month but never released a device before
+  shutting down in 2022 — so the KEY2 LE was the last BlackBerry phone
+  developed. BlackBerry has no phone-to-USB backup tool of its own; the
+  Content Transfer app moves data to a new phone over Google Drive or a
+  media card, and BlackBerry Link and the Desktop Software copy files to a
+  computer. Not covered: BlackBerry Ghost (rumoured, never launched),
+  DTEK70 (a rumour), the OnwardMobility 5G phone (never shipped), the
+  Zinwa Q25 (a third-party Android conversion of the Classic, not a
+  BlackBerry product), and all BlackBerry 10 and BlackBerry OS phones,
+  which run BlackBerry 10 or BlackBerry OS, not Android.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 20, 2026 (WL-166, 134th how-to):
+  docs/blackberry-photos-to-usb.html — branch wl-166-blackberry.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
