@@ -10620,6 +10620,163 @@ demand is read off competitor install velocity instead (see
   Article published Nov 19, 2026 (WL-142, 110th how-to):
   docs/meizu-photos-to-usb.html.
 
+### 110. "back up Alcatel photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is an Alcatel-specific guide
+  to backing up photos to a USB drive at all, let alone an
+  Alcatel-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and six covered Alcatel
+  phones run Android 6.0, so SnapDisk does not install on
+  them at all.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  youtube.com, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most direct
+  method for moving photos and videos from any modern Android
+  phone to a USB drive is a USB On-The-Go (OTG) connection and
+  the phone's built-in file manager app; it needs Android 7.0
+  or newer and a USB-C or micro-USB OTG adapter. A generic
+  Android video guide — it says nothing about Alcatel);
+  drfone.wondershare.com, "4 Practical Ways to Transfer Photos
+  from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash drive
+  by connecting them directly with an OTG adaptor, using a PC
+  as a middleman via USB File Transfer mode, or downloading
+  them wirelessly through Google Drive or AirDroid; for direct
+  transfers without a computer, connect a USB-C OTG adaptor
+  from the phone to the flash drive. A generic Android guide —
+  it says nothing about Alcatel);
+  gadgetsranked.com, "Unlock the Secret: Easily Transfer
+  Pictures from Your Alcatel Phone to an SD Card!"
+  (gadgetsranked.com/how-do-i-move-my-pictures-on-my-alcatel-phone-to-an-sd-card/
+  — how to move pictures from an Alcatel phone to an SD card.
+  An Alcatel-specific guide — but to an SD card, not a USB
+  drive; it names no model and gives no OTG verdict);
+  thegadgetians.com, "How to Transfer Files From Phone to USB
+  Without Computer: Ultimate Guide"
+  (thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — to transfer files from your phone to USB without a computer,
+  connect a USB drive to your Android (using OTG adapter) or
+  iPhone (using Lightning-to-USB adapter); open your phone's
+  file manager or Files app, select and copy files, then paste
+  onto the USB drive; not all Android phones support OTG. A
+  generic guide — it says nothing about Alcatel);
+  play.google.com, "Photos to USB: OTG Backup"
+  (play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — back up every photo and video on your phone to a USB pen
+  drive, with one tap; plug a pen drive into your phone (a USB-C
+  drive goes straight in, an older one needs an OTG adapter);
+  no internet, no cloud, no account; free, with ads, a one-time
+  purchase removes the ads. A generic rival app listing — it
+  says nothing about Alcatel);
+  connect.gmb.org.uk, "How to Transfer Pictures from Android
+  to Flash Drive A Simple Guide"
+  (connect.gmb.org.uk/how-to-transfer-pictures-from-android-to-flash-drive/
+  — a simple guide to transferring pictures from an Android
+  phone to a flash drive. A generic guide — it says nothing
+  about Alcatel).
+- The one-tap route exists on seven phones only — the A7,
+  Idol 5, Idol 5S, 1X, 3 (2018), 5 and 7 clear Android 7.0
+  and list USB OTG; three more clear Android 7.0 but their
+  OTG is disputed between sources — the 5V, 3L (2019) and 3X
+  (2020) — so on those three SnapDisk installs but the one-tap
+  route is unproven until a drive mounts; three more clear
+  Android 7.0 but no source states OTG for them at all — the
+  1S (2019), 1V (2019) and 3 (2019) — so on those three
+  SnapDisk installs but the one-tap route is unproven too; two
+  more clear Android 7.0 but list OTG No — the 1 and 1SE —
+  so on those two there is no phone route at all; six run below
+  Android 7.0 and cannot run SnapDisk at all — the A3, Idol 4,
+  Idol 4S, Pixi 4, Pop 4 and U5 all on 6.0. Three take USB
+  Type-C, so a USB-C drive plugs straight into those three;
+  twelve take micro-USB. All twenty-one take a microSD card,
+  so the card-reader route works on all twenty-one of them,
+  with the ceilings disputed on five.
+- Conflicts between sources, all named in the article: the
+  Idol 5S's Android is two numbers — 7.0 per gadgets360's
+  European listing, 7.1 per ubergizmo, androidheadlines,
+  mobilegizmo, kenyaprice and gadgets360's US listing — and
+  its microSD ceiling is two numbers — up to 256 GB per
+  gadgets360, up to 512 GB per mobileplus and gadgets360's US
+  listing — and its battery is two numbers — 2850 mAh per the
+  European listing, 2620 mAh per the US listing — and its
+  chipset is two numbers — Helio P20 in Europe, Snapdragon 625
+  in the US; the Idol 5's microSD ceiling is two numbers — up
+  to 128 GB per gadgets360, up to 256 GB per androidheadlines
+  and ubergizmo; the A7's RAM is two numbers — 3 GB per
+  gadgets360 and androidheadlines, 4 GB per gadgets360's
+  first-impressions piece — and its microSD ceiling is two
+  numbers — up to 128 GB per gadgets360's A7 page, up to 32 GB
+  in the IFA launch article's A7 paragraph; the Alcatel 1's
+  Android is two numbers — 8.1 Go edition per UL benchmarks,
+  mobilelok and the user manual, 8.0 per smartprix and
+  manua.ls — and its cameras are two numbers — a 5 MP rear
+  camera and a 2 MP front camera per UL benchmarks, an 8 MP
+  rear camera and a 5 MP front camera per smartprix; the 1X's
+  battery is two numbers — 3000 mAh per GSMArena's 2019
+  listing, 2460 mAh per mobilegizmo's listing, which matches
+  the 2018 original; the 3 (2018)'s connector is two numbers
+  — microUSB per GSMArena's spec page, USB Type-C per
+  GSMArena's MWC 2018 hands-on; the 5's Android is two numbers
+  — 8.0 per UL benchmarks, 7.1 per mobilegizmo — and its
+  chipset is two numbers — MT6750 per UL benchmarks, MT6750T
+  per mobilegizmo; the 5V's OTG is disputed — GSMArena's USB
+  row lists only microUSB 2.0, whatmobile's compare lists OTG
+  Yes; the 7's connector is two numbers — USB Type-C per
+  phonearena, phonesdata and mobilegizmo, microUSB per
+  ubergizmo — and its RAM is two numbers — 2 GB per phonearena
+  and phonesdata, 2 GB or 3 GB per gadgetsranked; the 1S
+  (2019)'s OTG is unstated in the sources found, and its
+  refreshes split — the 2020 refresh runs Android 10 and is
+  listed as not supporting OTG by manuals.plus, while the 2021
+  refresh runs Android 11 with OTG Yes per eIMEI24 and No per
+  manuals.plus; the 1V (2019)'s OTG is unstated in the sources
+  found, and its 2020 refresh runs Android 10 Go with OTG Yes
+  per usesinurdu and No per manuals.plus; the 3 (2019)'s
+  Android is two numbers — 8.1 per gadgets360 and eIMEI24, 9.0
+  per phonearena, which lists 9.0 Pie and 8.1 Oreo — and its
+  storage is two listings — 32 GB per gadgets360 and eIMEI24,
+  32 GB or 64 GB per phonearena; the 3L (2019)'s OTG is
+  disputed — mobilegizmo lists USB OTG Support Yes,
+  manuals.plus lists it as not supporting OTG — and its Android
+  is two numbers — 8.1 per mobilegizmo, 9.0 per phonearena,
+  which lists 9.0 Pie and 8.1 Oreo; the 3X (2020)'s OTG is
+  disputed — smartprix lists USB on-the-go, GSMArena's spec
+  listing shows only microUSB 2.0; the Idol 4S's microSD
+  ceiling is two numbers — up to 512 GB per gadgets360,
+  phonemore and phonebunch, up to 200 GB per notebookcheck; the
+  Pop 4's microSD ceiling is three numbers — up to 32 GB per
+  androidadvices and gadgetexplained, up to 32 GB or 128 GB per
+  eIMEI24, up to 256 GB per phonesdata — and its chipset is two
+  numbers — Snapdragon 210 per eIMEI24, Snapdragon 212 per
+  androidadvices. Kimovil lists the 1S and the 1S (2021) with
+  Google Mobile Services, and the 1S and 3L user manuals list
+  Google Play as the app store, so Play is the install route on
+  all covered models once the listing is live, and the GitHub
+  APK sideload stays the route only until then.
+- VaultDrive needs Android 8 or later per its own site, so
+  twelve of the fifteen can run it — the 1, 1X, 3 (2018), 5,
+  5V, 7, 1S, 1V, 3 (2019), 3L, 3X and 1SE — and AppBrain lists
+  12.1 or later, which no covered Alcatel phone clears, since
+  the newest covered model runs Android 11. FotoSafe needs
+  Android 9 or later with USB host or OTG support, so six of
+  the fifteen clear the version floor — the 1S, 1V, 3 (2019),
+  3L, 3X and 1SE — but the OTG condition is proven on none of
+  the six — the 1SE lists OTG No, the 3L and 3X have OTG
+  disputed, and no source states OTG for the 1S, 1V or 3
+  (2019) — so FotoSafe is proven on zero of the fifteen until
+  a drive mounts. Alcatel has no phone-to-USB backup tool of
+  its own — no Alcatel-specific backup advice turned up in any
+  source beyond a computer copy, Google Drive, or Google
+  Photos; the devicesfaq backup FAQ names the computer copy as
+  the most economical method, and names the file manager on an
+  Alcatel phone as Files, or Files by Google.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-143, 111th how-to):
+  docs/alcatel-photos-to-usb.html.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
