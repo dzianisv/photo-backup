@@ -1,5 +1,63 @@
 # SnapDisk — Work Log
 
+## WL-151 — Back up RedMagic photos to USB article, 119th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #273 MERGED (merge commit cbe17b9, merged
+  2026-11-20T07:46:52Z; PR head 9c47142, CI run 44697181491
+  build pass, conclusion success; post-merge main runs
+  Android PR 44697492363 + pages 44697491879 success on cbe17b9).
+  Live fetch verified by the supervisor:
+  redmagic-photos-to-usb.html 200 (58,527 B, correct
+  title/TL;DR); feed.xml 119 items live incl. RedMagic.
+  Supervisor re-score from a fresh live re-search: top 5 —
+  two EyeFi forum threads, YouTube OTG video, WITNESS blog,
+  MobileTrans guide — tail differs from the lead's 5
+  (sekin.in in place of MobileTrans); all generic, none
+  mentions RedMagic; real gap stands.
+  Query 118 verified by the lead from live evidence (no top
+  result is a RedMagic-specific phone-to-USB photo-backup
+  guide); the exact query returned five results, all generic
+  Android (two EyeFi forum threads, a YouTube OTG video, a
+  WITNESS blog post and a sekin.in guide) — none mentions
+  RedMagic; real gap stands.
+  New docs/redmagic-photos-to-usb.html ("Back up RedMagic
+  photos to a USB drive (no computer)"), following the
+  WL-54–WL-150 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 38 chars, meta
+  description 141 chars, JSON-LD validated by parse
+  (article + blog index); sitemap and feed XML parse; feed
+  now counts 119 items; blog JSON-LD counts 119 BlogPosting
+  entries. searches.md Query 118 row present ("back up
+  RedMagic photos to USB drive without computer" — HOW-TO
+  GAP).
+  Key finding: all 14 covered RedMagic models clear Android
+  7.0 (lowest Android 10, 5G/5S) and the one-tap route is
+  proven on all 14 — every one lists USB OTG Yes, no
+  mounting test, no blocked model (first article in the
+  series with no version floor biting anyone). No RedMagic
+  phone takes a microSD card for certain (contested on 5G,
+  5S, 9S Pro; No on the other eleven), so the card-reader
+  route is proven on none. VaultDrive proven on all 14
+  under its Android 8 floor, on six under AppBrain's 12.1
+  floor (7-series on Android 12 is the near miss); FotoSafe
+  proven on all 14.
+  Note: link verification 34 unique external links, all
+  fetched live — 30x200, 4x403 bot-blocked (sekin.in,
+  AppBrain, Gadgets360, alza.cz), 0x404, 0x000. Two GSMArena
+  URLs first returned 429 (rate-limit) and 200 on retry.
+  Lead reported no failed execs; the handoff's recorded
+  results show one exec exit 2 with no detail — all receipts
+  independently verified by the supervisor, no effect.
+  Fallback for WL-152: Razer — verified by the lead, no
+  docs/razer-photos-to-usb.html and no searches.md row (the
+  two Razer mentions in searches.md are this row's own
+  fallback note).
+
 ## WL-150 — Back up Nubia photos to USB article, 118th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
