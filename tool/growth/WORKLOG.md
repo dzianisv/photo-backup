@@ -1,5 +1,145 @@
 # SnapDisk — Work Log
 
+## WL-143 — Back up Alcatel photos to USB article, 111th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #255 MERGED (merge 57306ab, 2026-11-20T00:58:21Z,
+  CI run 44649144541 success on head 187200c; post-merge main
+  runs Android PR + pages success on 57306ab). Live fetch:
+  alcatel-photos-to-usb.html 200 (correct title/H1/TL;DR, fresh
+  crawl 01:00 UTC), feed.xml 111 items live incl. Alcatel.
+  Query 110 verified by the lead from live evidence (no top
+  result is an Alcatel-specific phone-to-USB photo-backup
+  guide); top results are six results (a YouTube OTG video,
+  Dr.Fone, an Alcatel-to-SD-card guide, thegadgetians.com, a
+  Play app listing, a generic flash-drive guide) — none is an
+  Alcatel-specific phone-to-USB photo-backup guide; real gap
+  stands.
+  New docs/alcatel-photos-to-usb.html ("Back up Alcatel photos
+  to a USB drive (no computer)"), following the
+  WL-54–WL-142 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: the one-tap route exists on
+  seven covered Alcatel phones only — the A7, Idol 5, Idol 5S,
+  1X, 3 (2018), 5 and 7; three more clear Android 7.0 but
+  their OTG is disputed between sources, and three more clear
+  Android 7.0 but no source states OTG for them at all, so on
+  those six the drive mounting is the test; two more clear
+  Android 7.0 but list OTG No, so on those there is no phone
+  route at all; the six models below Android 7.0 cannot install
+  SnapDisk at all, so on those the computer copy or the
+  card-reader route is the backup).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 37 chars, meta
+  description 148 chars, JSON-LD validated by parse; sitemap
+  and feed XML parse. Feed now counts 111 items; blog JSON-LD
+  counts 111 BlogPosting entries. searches.md Query 110 row
+  present ("back up Alcatel photos to USB drive without
+  computer" — HOW-TO GAP): top results are six results, none
+  is an Alcatel-specific phone-to-USB photo-backup guide.
+  Alcatel specifics verified live: the one-tap route exists on
+  seven phones only — the A7, Idol 5, Idol 5S, 1X, 3 (2018), 5
+  and 7 clear Android 7.0 and list USB OTG; three more clear
+  Android 7.0 but their OTG is disputed between sources — the
+  5V, 3L (2019) and 3X (2020) — so on those three SnapDisk
+  installs but the one-tap route is unproven until a drive
+  mounts; three more clear Android 7.0 but no source states
+  OTG for them at all — the 1S (2019), 1V (2019) and 3 (2019)
+  — so on those three SnapDisk installs but the one-tap route
+  is unproven too; two more clear Android 7.0 but list OTG
+  No — the 1 and 1SE — so on those two there is no phone route
+  at all; six run below Android 7.0 and cannot run SnapDisk at
+  all — the A3, Idol 4, Idol 4S, Pixi 4, Pop 4 and U5 all on
+  6.0. Three take USB Type-C, so a USB-C drive plugs straight
+  into those three; twelve take micro-USB. All twenty-one take
+  a microSD card, so the card-reader route works on all
+  twenty-one of them, with the ceilings disputed on five.
+  Conflicts between sources, all named in the article: the
+  Idol 5S's Android is two numbers — 7.0 per gadgets360's
+  European listing, 7.1 per ubergizmo, androidheadlines,
+  mobilegizmo, kenyaprice and gadgets360's US listing — and
+  its microSD ceiling is two numbers — up to 256 GB per
+  gadgets360, up to 512 GB per mobileplus and gadgets360's US
+  listing — and its battery is two numbers — 2850 mAh per the
+  European listing, 2620 mAh per the US listing — and its
+  chipset is two numbers — Helio P20 in Europe, Snapdragon 625
+  in the US; the Idol 5's microSD ceiling is two numbers — up
+  to 128 GB per gadgets360, up to 256 GB per androidheadlines
+  and ubergizmo; the A7's RAM is two numbers — 3 GB per
+  gadgets360 and androidheadlines, 4 GB per gadgets360's
+  first-impressions piece — and its microSD ceiling is two
+  numbers — up to 128 GB per gadgets360's A7 page, up to 32 GB
+  in the IFA launch article's A7 paragraph; the Alcatel 1's
+  Android is two numbers — 8.1 Go edition per UL benchmarks,
+  mobilelok and the user manual, 8.0 per smartprix and
+  manua.ls — and its cameras are two numbers — a 5 MP rear
+  camera and a 2 MP front camera per UL benchmarks, an 8 MP
+  rear camera and a 5 MP front camera per smartprix; the 1X's
+  battery is two numbers — 3000 mAh per GSMArena's 2019
+  listing, 2460 mAh per mobilegizmo's listing, which matches
+  the 2018 original; the 3 (2018)'s connector is two numbers
+  — microUSB per GSMArena's spec page, USB Type-C per
+  GSMArena's MWC 2018 hands-on; the 5's Android is two numbers
+  — 8.0 per UL benchmarks, 7.1 per mobilegizmo — and its
+  chipset is two numbers — MT6750 per UL benchmarks, MT6750T
+  per mobilegizmo; the 5V's OTG is disputed — GSMArena's USB
+  row lists only microUSB 2.0, whatmobile's compare lists OTG
+  Yes; the 7's connector is two numbers — USB Type-C per
+  phonearena, phonesdata and mobilegizmo, microUSB per
+  ubergizmo — and its RAM is two numbers — 2 GB per phonearena
+  and phonesdata, 2 GB or 3 GB per gadgetsranked; the 1S
+  (2019)'s OTG is unstated in the sources found, and its
+  refreshes split — the 2020 refresh runs Android 10 and is
+  listed as not supporting OTG by manuals.plus, while the 2021
+  refresh runs Android 11 with OTG Yes per eIMEI24 and No per
+  manuals.plus; the 1V (2019)'s OTG is unstated in the sources
+  found, and its 2020 refresh runs Android 10 Go with OTG Yes
+  per usesinurdu and No per manuals.plus; the 3 (2019)'s
+  Android is two numbers — 8.1 per gadgets360 and eIMEI24, 9.0
+  per phonearena, which lists 9.0 Pie and 8.1 Oreo — and its
+  storage is two listings — 32 GB per gadgets360 and eIMEI24,
+  32 GB or 64 GB per phonearena; the 3L (2019)'s OTG is
+  disputed — mobilegizmo lists USB OTG Support Yes,
+  manuals.plus lists it as not supporting OTG — and its Android
+  is two numbers — 8.1 per mobilegizmo, 9.0 per phonearena,
+  which lists 9.0 Pie and 8.1 Oreo; the 3X (2020)'s OTG is
+  disputed — smartprix lists USB on-the-go, GSMArena's spec
+  listing shows only microUSB 2.0; the Idol 4S's microSD
+  ceiling is two numbers — up to 512 GB per gadgets360,
+  phonemore and phonebunch, up to 200 GB per notebookcheck; the
+  Pop 4's microSD ceiling is three numbers — up to 32 GB per
+  androidadvices and gadgetexplained, up to 32 GB or 128 GB per
+  eIMEI24, up to 256 GB per phonesdata — and its chipset is two
+  numbers — Snapdragon 210 per eIMEI24, Snapdragon 212 per
+  androidadvices. Kimovil lists the 1S and the 1S (2021) with
+  Google Mobile Services, and the 1S and 3L user manuals list
+  Google Play as the app store, so Play is the install route on
+  all covered models once the listing is live, and the GitHub
+  APK sideload stays the route only until then.
+  VaultDrive needs Android 8 or later per its own site, so
+  twelve of the fifteen can run it — the 1, 1X, 3 (2018), 5,
+  5V, 7, 1S, 1V, 3 (2019), 3L, 3X and 1SE — and AppBrain lists
+  12.1 or later, which no covered Alcatel phone clears, since
+  the newest covered model runs Android 11. FotoSafe needs
+  Android 9 or later with USB host or OTG support, so six of
+  the fifteen clear the version floor — the 1S, 1V, 3 (2019),
+  3L, 3X and 1SE — but the OTG condition is proven on none of
+  the six — the 1SE lists OTG No, the 3L and 3X have OTG
+  disputed, and no source states OTG for the 1S, 1V or 3
+  (2019) — so FotoSafe is proven on zero of the fifteen until
+  a drive mounts. Alcatel has no phone-to-USB backup tool of
+  its own — no Alcatel-specific backup advice turned up in any
+  source beyond a computer copy, Google Drive, or Google
+  Photos; the devicesfaq backup FAQ names the computer copy as
+  the most economical method, and names the file manager on an
+  Alcatel phone as Files, or Files by Google.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-143, 111th how-to):
+  docs/alcatel-photos-to-usb.html.
+  Fallback for WL-144: Yezz — verified by grep, no
+  docs/yezz-photos-to-usb.html and no searches.md row.
+
 ## WL-142 — Back up Meizu photos to USB article, 110th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
