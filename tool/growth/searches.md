@@ -11761,6 +11761,104 @@ demand is read off competitor install velocity instead (see
   Fallback for WL-151: RedMagic — verified absent, no
   docs/redmagic-photos-to-usb.html and no searches.md row.
 
+### 118. "back up RedMagic photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a RedMagic-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  RedMagic-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and all fourteen covered
+  RedMagic flagships clear Android 7.0, so the one-tap route
+  is proven on all fourteen outright, with no mounting test
+  and no blocked model anywhere.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  eyefi.com, "What's the best way to move photos from my
+  Android phone to a flash drive?"
+  (https://eyefi.com/t/what-s-the-best-way-to-move-photos-from-my-android-phone-to-a-flash-drive/1121
+  — a forum thread: use an OTG cable to connect the flash
+  drive, open a file manager, navigate to DCIM, select the
+  photos, copy them and paste them onto the drive; cloud
+  storage is offered as an alternative, and apps like Send
+  Anywhere are offered for the computer route. A generic
+  Android thread — it says nothing about RedMagic);
+  eyefi.com, "What's the best way to move photos from my
+  Android to a USB drive?"
+  (https://eyefi.com/t/whats-the-best-way-to-move-photos-from-my-android-to-a-usb-drive/1113/2
+  — a forum thread: check for an OTG cable, plug the USB
+  drive in, open a file manager app, navigate to the DCIM
+  folder, select the photos, copy them, and paste them onto
+  the USB drive; cloud storage is offered as an alternative.
+  A generic Android thread — it says nothing about RedMagic);
+  youtube.com, "How to Connect USB Drive to Android Phone
+  to Move Photos & Videos (Best Method)"
+  (https://www.youtube.com/watch?v=PYcbV25CczI
+  — move photos and videos from any modern Android phone
+  to a USB drive with a USB On-The-Go connection and the
+  phone's built-in file manager app; the phone needs
+  Android 7.0 or newer, a USB flash drive, and an OTG
+  adapter that fits the phone's charging port. A generic
+  Android video — it says nothing about RedMagic);
+  blog.witness.org, "Backing Up Phone Media Without
+  Internet or a Computer"
+  (https://blog.witness.org/2020/02/backing-up-phone-media-without-internet-or-a-computer/
+  — back up phone media during an internet shutdown without
+  a computer: use an OTG drive — plug an OTG thumb drive
+  directly into the phone, or use an OTG-to-USB adapter
+  with a regular USB hard drive — or a wireless drive,
+  which needs no cable at all. A generic Android guide —
+  it says nothing about RedMagic);
+  sekin.in, "Transfer Photos From Android to a USB Flash
+  Drive"
+  (https://sekin.in/how-to-transfer-pictures-from-android-to-a-usb-flash-drive/
+  — copy pictures directly from most compatible Android
+  phones to a USB flash drive without a computer or
+  internet connection: a USB-C flash drive, or a USB-A
+  drive through a USB-OTG data adapter, then Files by
+  Google to select the pictures and choose Copy — not
+  Move — so the originals remain on the phone until you
+  verify the backup. A generic Android guide — it says
+  nothing about RedMagic).
+- The one-tap route is proven on all fourteen phones —
+  the 5G, 5S, 6, 6 Pro, 6S Pro, 7, 7 Pro, 7S Pro, 8 Pro,
+  8S Pro, 9 Pro, 9S Pro, 10 Pro and 10S Pro all clear
+  Android 7.0 — the lowest runs Android 10 — and list USB
+  OTG Yes — with no mounting test and no blocked model
+  anywhere in this article. No microSD card fits any of
+  the fourteen for certain — the card is contested on
+  three — the 5G, the 5S and the 9S Pro — and No on the
+  other eleven — so the card-reader route is proven on
+  none of them. The 5G's card is contested — GSMArena,
+  phonesdata and Notebookcheck say no slot, while
+  ubergizmo lists MicroSDXC; the 5S's card is contested
+  — GSMArena says No, ubergizmo lists MicroSDXC, and
+  Gadgets360 says its storage does not support expansion;
+  the 9S Pro's card is contested — GSMArena says No,
+  while alza.cz lists "No, Yes" on the same page.
+  VaultDrive needs Android 8 or later per its own site,
+  so all fourteen clear the version floor — and AppBrain
+  lists 12.1 or later, which six clear — the 8 Pro, 8S
+  Pro, 9 Pro, 9S Pro, 10 Pro and 10S Pro — so under that
+  stricter listing VaultDrive is proven on six of the
+  fourteen, and the 7-series on Android 12 does not clear
+  12.1. FotoSafe needs Android 9 or later with USB host
+  or OTG support, so all fourteen clear the version floor
+  — and the OTG is Yes on all fourteen — so FotoSafe is
+  proven on all fourteen. RedMagic has no phone-to-USB
+  backup tool of its own — no RedMagic-specific backup
+  advice turned up in any source beyond a computer copy,
+  Google Drive or Google Photos — the closest thing is
+  the per-model backup FAQ, which names the computer copy
+  as the most economical method. The 9S Pro+, the 10 Pro+
+  and the 10 Air are variants and are not covered in this
+  article, and neither are the pre-5G Red Magic phones —
+  the Red Magic, the Red Magic Mars, the Red Magic 3 and
+  the Red Magic 3S.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-151, 119th how-to):
+  docs/redmagic-photos-to-usb.html.
+  Fallback for WL-152: Razer — verified absent, no
+  docs/razer-photos-to-usb.html and no searches.md row.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
