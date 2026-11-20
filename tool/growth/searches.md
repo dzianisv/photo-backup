@@ -12221,6 +12221,103 @@ demand is read off competitor install velocity instead (see
   go-ahead).
   Fallback for WL-156: [supervisor to set]
 
+### 123. "back up UMIDIGI photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a UMIDIGI-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  UMIDIGI-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and ninety-two covered
+  UMIDIGI phones clear Android 7.0, so the one-tap route is
+  proven on eighty-four outright, with eight more needing the
+  mounting test.
+- Current top results (scored Nov 20, 2026, live web
+  search):
+  dzianisv.github.io, "Transfer photos to USB automatically
+  — SnapDisk"
+  (https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html
+  — plug a USB drive into your Android phone, tap Backup in
+  SnapDisk, and your whole photo library copies oldest-first
+  to the drive in the background, with progress, Pause and
+  Stop, and resume. A SnapDisk guide, not a UMIDIGI guide —
+  and the top result for this query, which is generic
+  Android, not UMIDIGI-specific);
+  manualsdir.com, "Appearance and keypad operations, Using
+  memory card as u disk | UMIDIGI Touch User Manual"
+  (https://www.manualsdir.com/manuals/849041/umidigi-touch.html?page=3
+  — to send music, pictures or other files to the phone's
+  memory card from the computer, set the memory card as a
+  U-disk first, then connect the phone to the computer with
+  a USB cable. A manual page, not a guide — and the only
+  UMIDIGI-specific result in the top five, which still needs
+  a computer);
+  fonelab.com, "How to Transfer Photos from Android to
+  Flash Drive in 3 Easy Ways"
+  (https://www.fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html
+  — transfer photos from Android to a flash drive with a
+  USB OTG adapter and the Files app, or through a PC with
+  FoneLab HyperTrans, or with Samsung Smart Switch. A
+  generic Android guide — it says nothing about UMIDIGI);
+  mobikin.com, "5 Ways to Transfer Files from Android to
+  USB Flash Drive"
+  (https://www.mobikin.com/android-backup/transfer-files-from-android-to-usb-flash-drive.html
+  — transfer files from Android to a USB flash drive by drag
+  and drop through a computer, with MobiKin Assistant, with
+  an OTG adapter, with Files by Google, or with AirDroid. A
+  generic Android guide — it says nothing about UMIDIGI);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from Android to a USB flash drive with
+  a USB OTG adapter, through a PC by drag and drop, or
+  wirelessly through Google Drive or AirDroid. A generic
+  Android guide — it says nothing about UMIDIGI).
+- The one-tap route is proven on eighty-four phones — every
+  one clears Android 7.0 and lists USB OTG Yes. Eight need
+  the mounting test: the A15 and the Note 90, where OTG is
+  contested, and the A15 Pro 5G, the A15T, the A16 Pro, the
+  A75s, the G100 5G and the G100x 5G, where OTG is unstated
+  in every source. Two run below Android 7.0 as shipped and
+  cannot run SnapDisk at all — the S2 (6.0, with a 7.0
+  update promised but unverified as delivered) and the Z
+  Pro (6.0, with an immediate 7.0 OTA offered) — and the
+  S2 Lite clears only on the 7.0 listings. No covered phone
+  lists USB OTG No outright. Seventy-eight take USB Type-C
+  and eight take micro-USB — the A3, A3 Pro, A3S, A3X, C
+  Note, C Note 2, C2 and G — while seven have contested
+  ports and two are unverified. A microSD card fits all
+  ninety-five phones for certain — each has a slot — so the
+  card-reader route is proven on all ninety-five, though
+  ceilings are contested or unverified on thirty-five.
+  VaultDrive needs Android 8 or later per its own site, so
+  eighty-three clear the version floor on shipped software —
+  while AppBrain lists 12.1 or later, which thirty-eight
+  clear on at least one listing (thirty-three outright, five
+  more only on their higher listing). FotoSafe needs Android
+  9 or later with USB host or OTG support, so sixty-seven
+  are proven. UMIDIGI has no phone-to-USB backup tool of its
+  own — no UMIDIGI-authored backup advice turned up in any
+  source beyond a computer copy, Google Drive or Google
+  Photos — the closest thing is the per-model backup FAQ on
+  devicesfaq, which is generic Android boilerplate identical
+  on every model, not UMIDIGI's own advice. UMIDIGI was
+  founded in February 2012 as UMI in Shenzhen and rebranded
+  in 2018; this article covers ninety-five mainline phones
+  from 2017 to 2026 (the Bison line has its own article,
+  WL-85; tablets, the announced-only Z5 Pro and a separate
+  4G Note 100x are not covered).
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 20, 2026 (WL-156, 124th how-to):
+  docs/umidigi-photos-to-usb.html — branch wl-156-umidigi,
+  article commit 8333314 (supervisor to verify and merge;
+  no PR opened by the lead).
+  Fallback for WL-157: Oscall — no article file
+  (docs/oscall-photos-to-usb.html absent), no searches.md row,
+  and the exact query "back up Oscall photos to USB drive
+  without computer" returns no Oscall-specific guide in the
+  top results (SnapDisk's own generic guides, a softhandtech
+  guide, a desnoulez.fr camera-backup guide and a Photos to
+  USB app listing, scored Nov 20, 2026).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
