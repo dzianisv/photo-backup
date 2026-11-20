@@ -13385,6 +13385,95 @@ demand is read off competitor install velocity instead (see
   drafted Nov 20, 2026 (WL-167, 135th how-to):
   docs/broken-screen-photos-to-usb.html — branch wl-167-broken-screen.
 
+### 135. "Back up photos to USB when switching to a new phone (no computer)" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return a switching-specific
+  guide — coticsy.com's "How to Back Up Your Photos Before Switching
+  to a New Phone" — but it covers the switch generally and USB copy as
+  one manual step (exFAT, Files app, manual select/copy), and none of
+  the five results is a whole-library one-tap phone-to-USB backup guide
+  framed for the phone-switch moment, and none of them mentions
+  SnapDisk.
+- Current top results (scored Nov 20, 2026, live web search):
+  dzianisv.github.io, "Transfer photos to USB automatically — SnapDisk"
+  (https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html
+  — plug a USB drive into your Android phone, tap Backup in SnapDisk,
+  and your whole photo library copies oldest-first to the drive in the
+  background, with real progress, Pause and Stop, and resume where it
+  stopped. The one-tap route — but a generic transfer guide, saying
+  nothing about the switch moment, the transfer itself, the cloud-only
+  originals trap, or when it is safe to wipe the old phone);
+  coticsy.com, "How to Back Up Your Photos Before Switching to a New
+  Phone"
+  (https://coticsy.com/blog/backup-photos-before-switching-phones
+  — make an independent copy before you switch, and don't wipe the old
+  phone until you've checked the new one. Covers all four directions —
+  iPhone to iPhone with Quick Start and iCloud Backup, Android to
+  Android with the built-in setup copy, Android to iPhone with Move to
+  iOS, and iPhone to Android with Google's switching process — and names
+  the iCloud Photos Optimize iPhone Storage trap, that an exact file
+  copy preserves capture dates and locations already embedded in the
+  originals, and the three wipe checks (count matches, older photos and
+  long videos open at full quality, drive copy opens). A real guide that
+  DOES cover the switch and the USB copy — but the copy it describes is
+  a manual select-and-copy, not a one-tap whole-library backup with
+  progress, Pause and Stop, and it says nothing about SnapDisk; its
+  one-tap version is VaultDrive, a rival app);
+  dzianisv.github.io, "USB photo backup on Android — SnapDisk"
+  (https://dzianisv.github.io/photo-backup/usb-photo-backup.html
+  — plug a USB drive into your phone, tap Backup in the notification,
+  and your photos and videos copy oldest-first in the background, with
+  live progress and Pause / Stop; free 5 GB per run, Pro a one-time
+  $9.99. The generic route — but it says nothing about switching
+  phones, the transfer, or the wipe check);
+  fotosafe.weidisoft.net, "Back up Android photos to USB | FotoSafe"
+  (https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/
+  — back up Android photos to a USB drive without a computer; needs
+  Android 9 or later with USB host/OTG support, a USB drive with enough
+  free capacity, and a data-capable OTG adapter. A rival app guide, not
+  a switching guide — it says nothing about the switch moment, the
+  transfer, or the wipe check — and the source for the Android 9 floor,
+  two versions above SnapDisk's 7.0 floor);
+  youtube.com, "How to Connect USB Drive to Android Phone to Move
+  Photos & Videos (Best Method)"
+  (https://www.youtube.com/watch?v=PYcbV25CczI
+  — the manual OTG route on video: connect the drive through an OTG
+  adapter, open the file manager, select the photos, and move or copy
+  them to the drive. A real video guide — but a manual file-manager
+  move, not a one-tap whole-library backup, and it says nothing about
+  switching phones or about SnapDisk).
+- Four directions, one drive copy. Android to Android: the built-in
+  setup copy over cable or Wi-Fi, plus manufacturer transfer apps, and
+  Google Photos available once you sign in. iPhone to Android: Google's
+  switching process during Android setup, cable transfers the most,
+  some phones need an OTG adapter — but clear the cloud trap first:
+  iCloud Photos with Optimize iPhone Storage keeps space-saving
+  versions on the phone and the originals in iCloud (download them
+  first, or request a copy at privacy.apple.com), and Google Photos
+  with Storage saver compresses photos larger than 16 MP to 16 MP and
+  videos over 1080p to 1080p, per Google's own support page. Android to
+  iPhone: Apple's Move to iOS transfers camera photos and videos,
+  albums, files, contacts, messages and WhatsApp chats and media.
+  iPhone to iPhone: Quick Start side by side, or iCloud Backup restore,
+  with Apple's temporary iCloud storage restored within 21 days. The
+  drive copy is the safety net under all four — and SnapDisk is
+  Android-only, so the iPhone half of a switch is the manual Files-app
+  copy or a rival app, not SnapDisk. SnapDisk needs Android 7.0 or
+  later (minSdk 24 in the repo) and is not on Google Play yet, so
+  install the v0.1.2 APK from GitHub. The free version backs up
+  manually up to 5 GB per run, picking up where it stopped past the
+  cap; Pro is a one-time $9.99 purchase that auto-starts the backup on
+  connect and removes the size limit. Drives formatted FAT32 cannot
+  hold a single file over 4 GB — SnapDisk skips those files and lists
+  them instead of failing the whole backup, per the repo README — so
+  use exFAT if both phones support it, and test the drive with both
+  phones before the switch. This is the second article in the series
+  about a situation instead of a phone brand — the brand series ran to
+  134 articles, and the broken-screen article was the first.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 20, 2026 (WL-168, 136th how-to):
+  docs/switching-phones-photos-to-usb.html — branch wl-168-switching-phones.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),

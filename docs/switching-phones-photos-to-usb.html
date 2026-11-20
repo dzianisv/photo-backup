@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up photos to USB when switching to a new phone</title>
+<meta name="description" content="Back up photos to a USB drive before switching phones — one-tap whole-library copy, no computer, and the check before wiping the old phone.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/switching-phones-photos-to-usb.html">
+<meta property="og:title" content="Back up photos to USB when switching to a new phone">
+<meta property="og:description" content="Back up photos to a USB drive before switching phones — one-tap whole-library copy, no computer, and the check before wiping the old phone.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/switching-phones-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/switching-phones-photos-to-usb.html#article",
+      "headline": "Back up photos to USB when switching to a new phone",
+      "description": "Back up photos to a USB drive before switching phones — one-tap whole-library copy, no computer, and the check before wiping the old phone.",
+      "datePublished": "2026-11-20",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": [
+          "https://github.com/dzianisv"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/switching-phones-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/switching-phones-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Should I back up my photos to a USB drive before switching phones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — before the transfer, not after. A transfer moves data; it is not a backup, and it can be interrupted or skip items, or depend on photos that are not actually on the old phone because they live only in the cloud. Make a checked copy of the whole library on a USB drive first, run the transfer, check the new phone, and only then wipe, sell or trade in the old one. SnapDisk makes the copy with one tap on Android: plug the drive in, tap Backup in the notification, and the library copies oldest-first with progress, Pause and Stop. It is not on Google Play yet, so install the v0.1.2 APK from the GitHub release page; it needs Android 7.0 or later."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get my original photos off the cloud before switching phones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check the two traps first. If you use iCloud Photos with Optimize iPhone Storage on, the phone holds space-saving versions and the originals live in iCloud — download the originals before copying, or request a copy of your photos at privacy.apple.com, per Google's switching guidance quoted in the coticsy guide. If you use Google Photos with Storage saver on, the cloud copies are compressed — photos larger than 16 MP are resized to 16 MP and videos over 1080p are resized to 1080p, per Google's own support page — so a cloud copy is not the original. A USB copy made from the phone's local files holds the originals as they are, which is why the drive copy comes before the transfer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can SnapDisk back up an iPhone before a switch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — SnapDisk is Android only, and it needs Android 7.0 or later (minSdk 24 in the repo). On the Android side of a switch it does the one-tap whole-library copy to the drive. On the iPhone side, the copy is manual: plug the drive in, open the Files app, select the photos and videos, tap Share, and save them to the drive — or use VaultDrive, the rival app, which downloads iCloud originals one at a time over Wi-Fi by default. An exFAT drive works with both phones, so the same drive can carry the copy between platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is it safe to wipe my old phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only after three checks, all from the coticsy guide: the photo count roughly matches between the old and new phones; older photos and long videos open on the new phone at full quality, not just recent ones; and the drive copy opens — try a few photos and a video straight from the drive. Then follow your phone maker's steps for selling or trading in a device, which include signing out of your accounts. After that, the drive copy is your safety net — keep it. SnapDisk only copies, it never deletes, so the wipe step is always yours, and always after the check."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/switching-phones-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up photos to USB when switching to a new phone",
+          "item": "https://dzianisv.github.io/photo-backup/switching-phones-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up photos to USB when switching to a new phone</h1>
+  <p class="dek">A new phone is the moment most people find out whether their photos were really backed up. The transfer usually works — but &quot;usually&quot; is doing a lot of work in that sentence, and if the old phone has already been wiped or handed back for trade-in, there is no second chance. This article is about the step that comes before the transfer: a checked copy of the whole photo library on a USB drive you hold in your hand, made on the old phone, with no computer — and what to check before the old phone goes. Fourteen honest caveats up front: the exact query DOES return a switching-specific guide — coticsy.com&#x27;s &quot;How to Back Up Your Photos Before Switching to a New Phone&quot; — it covers the switch generally and USB copy as one manual step (exFAT, Files app, manual select/copy), and it is the best guide in the results; SnapDisk&#x27;s own generic guides (transfer-photos-to-usb-automatically, usb-photo-backup) and FotoSafe&#x27;s generic guide and a YouTube manual-OTG video also surface; NONE of them is a whole-library one-tap phone-to-USB backup guide framed for the phone-switch moment, and none of them mentions SnapDisk — that angle is the gap this article fills; SnapDisk is Android-only, so the iPhone half of a switch is the manual copy or a rival app, not SnapDisk; a transfer moves data, it is not a backup — it can be interrupted, skip items, or depend on photos that are not actually on the old phone because they live only in the cloud; the cloud-only originals trap is real in both directions — iCloud Photos with Optimize iPhone Storage keeps space-saving versions on the phone and the originals in iCloud, and Google Photos with Storage saver compresses photos larger than 16 MP down to 16 MP and videos over 1080p down to 1080p, per Google&#x27;s own support page — so download the originals first; an exact file copy preserves the capture dates and locations already embedded in the originals, per the coticsy guide; SnapDisk needs Android 7.0 or later — minSdk 24 in the repo — and it is not on Google Play yet, so install the v0.1.2 APK from GitHub; the free version backs up manually up to 5 GB per run — run it again past the cap and it picks up where it stopped, because files already copied are never copied twice — and Pro is a one-time $9.99 purchase that auto-starts the backup on connect and removes the size limit; drives formatted FAT32 cannot hold a single file over 4 GB — SnapDisk skips those files and lists them instead of failing the whole backup, per the repo README — so use exFAT if both phones support it, and test the drive with both phones before the switch; SnapDisk copies, it never deletes — the wipe step is always yours, and always after the check; and the search results for this query are five results — SnapDisk&#x27;s own generic guide, the coticsy switching guide, SnapDisk&#x27;s generic USB guide, FotoSafe&#x27;s generic guide, and a YouTube manual-OTG video — none of them is a whole-library one-tap phone-to-USB backup guide framed for the phone-switch moment. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 20, 2026 · 9 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> Back up first, transfer second, wipe last. Before you switch, plug a USB drive into the old Android phone, tap Backup in SnapDisk&#x27;s notification, and the whole library copies oldest-first to the drive in the background — with real progress, Pause and Stop, and resume where it stopped if you unplug — no computer, no upload, no account. Then run the transfer to the new phone, check that the photo count roughly matches and that older photos and long videos open at full quality, open a few photos straight from the drive, and only then wipe, sell or trade in the old phone. The switching guide that already exists — coticsy.com&#x27;s — does cover the switch and USB copy as one manual step, so this article is not the first guide to switching phones — but none of the results gives you the whole-library one-tap backup to a USB drive framed for the phone-switch moment, which is the gap this article fills, as of November 20, 2026.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search &quot;Back up photos to USB when switching to a new phone (no computer)&quot; and five results come back — and, to be honest, one of them is a real switching guide. What none of them does is the whole-library one-tap backup to a USB drive framed for the phone-switch moment. The exact query returned five results:</p>
+  <ul>
+    <li><strong>SnapDisk&#x27;s own generic guide, &quot;Transfer photos to USB automatically&quot;</strong> (<a href="https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html">Transfer photos to USB automatically — SnapDisk</a>) — plug a USB drive into your Android phone, tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background, with real progress, Pause and Stop, and resume where it stopped. The one-tap route this article builds on — but it is a generic transfer guide, it says nothing about the switch moment, and it says nothing about the transfer itself, the cloud-only originals trap, or when it is safe to wipe the old phone.</li>
+    <li><strong>coticsy.com, &quot;How to Back Up Your Photos Before Switching to a New Phone&quot;</strong> (<a href="https://coticsy.com/blog/backup-photos-before-switching-phones">How to Back Up Your Photos Before Switching to a New Phone | coticsy.com</a>) — the switching-specific guide, and the best result in the list: make an independent copy before you switch, and don&#x27;t wipe the old phone until you&#x27;ve checked the new one. It covers all four directions — iPhone to iPhone with Quick Start and iCloud Backup, Android to Android with the built-in setup copy, Android to iPhone with Move to iOS, and iPhone to Android with Google&#x27;s switching process — and it names the two traps this article carries: iCloud Photos with Optimize iPhone Storage leaves some originals only in iCloud, and an exact file copy preserves the capture dates and locations already embedded in the originals. Its USB step is manual — connect the drive, open the Files app, select the photos and videos, tap Share, and save them to the library on iPhone, or copy the folders into the phone&#x27;s storage on Android — and its one-tap version is VaultDrive, a rival app, not SnapDisk. A real guide that DOES cover the switch and the USB copy — but the copy it describes is a manual select-and-copy, not a one-tap whole-library backup with progress, Pause and Stop, and it says nothing about SnapDisk.</li>
+    <li><strong>SnapDisk&#x27;s own generic guide, &quot;USB photo backup on Android&quot;</strong> (<a href="https://dzianisv.github.io/photo-backup/usb-photo-backup.html">USB photo backup on Android — SnapDisk</a>) — plug a USB drive into your phone, tap Backup in the notification, and your photos and videos copy oldest-first in the background, with live progress and Pause / Stop. The free version covers 5 GB per run; Pro is a one-time $9.99 for auto-backup on connect and unlimited size. The generic route this article builds on — but it says nothing about switching phones, the transfer, or the wipe check.</li>
+    <li><strong>FotoSafe, &quot;Back up Android photos to USB&quot;</strong> (<a href="https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/">Back up Android photos to USB | FotoSafe</a>) — back up Android photos to a USB drive without a computer; you need Android 9 or later with USB host/OTG support, a USB drive with enough free capacity, and a data-capable OTG adapter. A rival app guide, not a switching guide — it says nothing about the switch moment, the transfer, or the wipe check — and the source for the Android 9 floor, which is two versions above SnapDisk&#x27;s 7.0 floor.</li>
+    <li><strong>YouTube, &quot;How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)&quot;</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method) | YouTube</a>) — the manual OTG route on video: connect the drive through an OTG adapter, open the file manager, select the photos, and move or copy them to the drive. A real video guide — but it is a manual file-manager move, not a one-tap whole-library backup, and it says nothing about switching phones or about SnapDisk.</li>
+  </ul>
+
+  <h2>What you need</h2>
+  <ul>
+    <li>The old phone, still working and still holding your photos — this article is about backing up before the switch, not after it. If the old phone is already wiped, there is nothing left to copy.</li>
+    <li>A USB drive with enough free space for the whole library, including videos. If the library is bigger than the drive, copy the year or the album you care about most first — or buy a bigger drive before the switch, not during it.</li>
+    <li>An exFAT drive if both phones support it — exFAT works on iPhone and most current Android phones, per the coticsy guide, so the same drive can carry the copy between platforms and remain as a backup afterwards. A drive formatted FAT32 cannot hold a single file over 4 GB, so a very long video will be skipped and listed, not copied — and reformatting erases the drive, so copy existing files elsewhere first and test the drive with both phones before the switch.</li>
+    <li>For an Android phone: a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter. Most modern Android phones support OTG; if the phone does not see the drive, try a different adapter.</li>
+    <li>For an iPhone: a drive the iPhone can read — the Files app is the route, and SnapDisk cannot run on it.</li>
+    <li>Time to let the copy finish, and time to check it — the backup is only a backup once you have opened a few photos on the drive. Do not start the transfer, and do not wipe anything, until the check is done.</li>
+    <li>What you should not buy: do not buy a drive with no space to grow into — the new phone will keep adding photos to it — and do not buy a cable and call it an adapter — a charging cable connects the phone to a computer, which is the opposite direction.</li>
+  </ul>
+  <p>Four directions, and they shape which method to pick: Android to Android is the built-in transfer after the drive copy; iPhone to Android is Google&#x27;s switching process after the drive copy, with the iCloud originals trap to clear first; Android to iPhone is Move to iOS after the drive copy; and iPhone to iPhone is Quick Start or iCloud Backup after the drive copy. The drive copy is the same in all four — it is the safety net under the transfer, whichever way the transfer runs.</p>
+
+  <h2>Method 1: SnapDisk — back up the old phone first</h2>
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk settings screen">
+    <figcaption>SnapDisk&#x27;s settings screen, showing the backup folder pickers. Screenshot is from SnapDisk on a working Android phone, shown so you can see what the app looks like; your old phone will show the same screens before the switch.</figcaption>
+  </figure>
+  <p>SnapDisk is the one-tap version, and it runs on the old phone, before the transfer — that is the whole point. It needs Android 7.0 or later, which is minSdk 24 in the repo, and it is not on Google Play yet, so install the v0.1.2 APK from the GitHub release page on the old phone before you start.</p>
+  <ol>
+    <li>On the old phone, check the folders first. SnapDisk opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos), To /disk/DCIM on the drive. If your photos live somewhere else, tap the From picker and choose that folder.</li>
+    <li>Plug the USB drive into the old phone. SnapDisk offers a backup in a notification: &quot;External storage is connected. Backup photos?&quot; with Backup and Cancel.</li>
+    <li>Tap Backup in the notification. SnapDisk copies photos and videos oldest-first from the phone to the drive, in the background, with live progress — percent, GB copied / total, speed, time left — and Pause and Stop.</li>
+    <li>Wait for the copy to finish. If you unplug the drive mid-copy, the backup pauses with the full error shown and resumes where it stopped when the drive is back — files already copied are never copied twice, per the repo README.</li>
+    <li>Open a few photos on the drive before doing anything else — older photos and a long video, not just the most recent ones. If they open at full quality, the copy is good.</li>
+    <li>Only then run the transfer to the new phone — Method 3, 4 or 5, whichever direction you are switching.</li>
+  </ol>
+  <p>Free version: backs up manually, up to 5 GB per run — one notification tap — and running it again past the cap picks up where it stopped, because files already copied are never copied twice. Pro is a one-time $9.99 purchase — auto-backup on connect and unlimited size — and it is the hands-free route here: with Pro set up, plugging the drive in starts the backup with no tap at all. Pro is a Google Play purchase, so it follows your Google account to another Android phone — it does not follow you to an iPhone, and SnapDisk does not run on iPhone at all. SnapDisk copies the original files as they are — no recompression, no resizing, no quality loss — and an exact file copy preserves the capture dates and locations already embedded in the originals, per the coticsy guide.</p>
+
+  <h2>Method 2: file manager — the manual copy</h2>
+  <p>Same plug, no app to install. This is the manual version of Method 1, and it is the route the coticsy guide and the YouTube video both describe:</p>
+  <ol>
+    <li>Plug the USB drive into the old phone — directly, if it is a USB-C drive, or through an OTG adapter for a regular USB drive.</li>
+    <li>Check the phone sees the drive. If nothing appears, the drive does not mount and this method does not work on that phone.</li>
+    <li>Open the phone&#x27;s file manager and find the DCIM folder — that is where the camera photos live.</li>
+    <li>Select the photos and videos, copy them to the USB drive, and wait for the copy to finish. On iPhone the route is the Files app: browse to your photos on the drive, select them, tap Share, and save them to the library — or copy the folders into the phone&#x27;s storage on Android.</li>
+    <li>Open a few photos on the drive before doing anything else — older photos and a long video, not just the most recent ones.</li>
+  </ol>
+  <p>The file-manager copy works on any Android phone that hosts USB OTG, with no version floor at all — it is the route when SnapDisk cannot install, because the phone runs below Android 7.0, and it is the only route on an iPhone, where SnapDisk cannot run. What it does not give you is the one-tap backup: no oldest-first order, no progress bar with speed and ETA, no Pause and Stop, and no resume if you unplug mid-copy — and you have to repeat the whole selection next time photos pile up. FotoSafe is the rival guided version of the same idea — it shows a preview of the planned backup and skips files already backed up, but it needs Android 9 or later, and one successful run with up to 100 media files is free before its one-time Pro purchase.</p>
+
+  <h2>Method 3: Android to Android — the built-in transfer</h2>
+  <p>Most Android phones offer to copy apps and data from your old phone during setup, using a cable or Wi-Fi, and some manufacturers have their own transfer apps — and if your photos are backed up in Google Photos, they will be available once you sign in on the new phone. That is the transfer, and it runs after the drive copy, not instead of it:</p>
+  <ol>
+    <li>Make the drive copy first — Method 1 or 2 — and check it opens. This is the step the transfer cannot replace.</li>
+    <li>During setup on the new phone, take the offer to copy from the old phone — a cable transfers the most, and some phones need an OTG adapter for it.</li>
+    <li>Sign in to Google Photos on the new phone and let the library sync — but check the backup quality first, in Method 4, because a Storage saver cloud copy is not the original.</li>
+    <li>Check the new phone before wiping the old one: the photo count roughly matches, older photos and long videos open at full quality — not just recent ones — and the drive copy opens. Then follow your phone maker&#x27;s steps for selling or trading in a device, which include signing out of your accounts.</li>
+  </ol>
+  <p>Why the drive copy still matters when the transfer usually works: a transfer moves data, it is not a backup. It can be interrupted, it can skip items, or it can depend on photos being available that are not actually on the old phone — which is common when they live in iCloud or Google Photos. And the moment you reset the old phone, the transfer becomes the only path your photos took. The drive copy is the second path.</p>
+
+  <h2>Method 4: iPhone to Android — and the cloud-only originals trap</h2>
+  <p>Google&#x27;s switching process copies data from your iPhone during Android setup — photos, videos, contacts, messages, and more. Google recommends using a cable, which transfers the most, and some phones need an OTG adapter; without one, a wireless app is available. That is the transfer — and before it runs, the cloud trap has to be cleared:</p>
+  <ol>
+    <li>Check iCloud Photos first. If Optimize iPhone Storage is on, the phone holds space-saving versions and the originals live in iCloud — the copy on the phone is not the original. Download the originals to the phone before copying, or request a copy of your photos at privacy.apple.com, per Google&#x27;s switching guidance quoted in the coticsy guide — and check those cloud-only items separately from files stored on the iPhone.</li>
+    <li>Check Google Photos the same way. If Storage saver is on, the cloud copies are compressed — photos larger than 16 MP are resized to 16 MP and videos over 1080p are resized to 1080p, per <a href="https://support.google.com/photos/answer/6220791?hl=en-GB&amp;co=GENIE.Platform=Desktop">Google&#x27;s own support page</a> — so a cloud copy is not the original either. The USB copy, made from the phone&#x27;s local files, holds the originals as they are.</li>
+    <li>Make the drive copy from the old iPhone with the Files app — plug the drive in, select the photos and videos, tap Share, and save them — or, on the Android side, back the old Android phone up with Method 1 first if the switch runs the other way. Use exFAT if both phones support it, and test the drive with both phones before the switch.</li>
+    <li>Run Google&#x27;s switching process with a cable, then check the new phone the same way as Method 3 — count, older photos, long videos, drive copy — before wiping the old one.</li>
+  </ol>
+  <p>The trap, in one line: the transfer can only move what is actually on the old phone, and with cloud optimisation on, some of your photos are not on the old phone at all — they are in iCloud or Google Photos, in compressed or space-saving form. That is why the independent drive copy comes first, and why it has to hold the originals, not the previews. On the iPhone side SnapDisk cannot help — it is Android only — so the manual Files-app copy is the route there, or VaultDrive, the rival app, which downloads iCloud originals one at a time over Wi-Fi by default and checks every copy by size. VaultDrive is free for up to 200 files or 2 GB per backup; Pro is a one-time $19.99 purchase.</p>
+
+  <h2>Method 5: the other two directions — Android to iPhone, iPhone to iPhone</h2>
+  <p>The drive copy is the same in both directions — it is the safety net under the transfer, whichever way the transfer runs:</p>
+  <ul>
+    <li><strong>Android to iPhone:</strong> Apple&#x27;s Move to iOS app, installed on the Android phone, transfers your data during iPhone setup — including camera photos and videos, photo albums, files and folders, contacts, messages, and WhatsApp chats and media. Make the drive copy from the old Android phone first — Method 1, one tap — and keep it as a separate backup after the transfer.</li>
+    <li><strong>iPhone to iPhone:</strong> Quick Start sets up the new iPhone directly from the old one, held side by side, or iCloud Backup restores the new iPhone from a backup of the old one. If you are eligible for Apple&#x27;s temporary iCloud storage, open Settings → General → Transfer or Reset iPhone on the old phone and tap Get Started under Prepare for New iPhone — the temporary backup must be restored within 21 days. If you use iCloud Photos, your library syncs to the new phone once you sign in — but with Optimize iPhone Storage on, it may take time for originals to download, so check the drive copy first.</li>
+  </ul>
+  <p>In both directions the check before wiping is the same three items from the coticsy guide: the photo count roughly matches between old and new phones; older photos and long videos open on the new phone at full quality, not just recent ones; and the drive copy opens — try a few photos and a video straight from the drive. Then follow your phone maker&#x27;s steps for selling or trading in a device, which include signing out of your accounts. After that, the drive copy is your safety net — keep it.</p>
+
+  <h2>What this does not do</h2>
+  <ul>
+    <li><strong>Does not transfer photos to the new phone by itself.</strong> SnapDisk copies your library to the drive — getting the photos onto the new phone is the transfer in Methods 3, 4 and 5, or a copy from the drive with the Files app or a file manager. VaultDrive does not restore the library itself either, per the coticsy guide — because the backups are plain files, you copy them onto the new phone with the steps above.</li>
+    <li><strong>Does not run on an iPhone.</strong> SnapDisk is Android only — it needs Android 7.0 or later, minSdk 24 in the repo. On the iPhone side of a switch, the copy is the manual Files-app route in Method 2, or a rival app.</li>
+    <li><strong>Does not download your cloud originals for you.</strong> If your originals live only in iCloud or Google Photos, you have to download them to the phone first — SnapDisk copies what is on the phone, and a cloud-only photo is not on the phone.</li>
+    <li><strong>Does not install below Android 7.0.</strong> SnapDisk needs Android 7.0 or later — minSdk 24 in the repo — so on a phone running older Android, use Method 2 instead: the file-manager copy has no version floor.</li>
+    <li><strong>Does not work if the phone does not host a drive.</strong> The phone has to support USB OTG to see the drive at all. Most Android phones do, but a phone that lists OTG No cannot mount a drive, and then neither the one-tap backup nor the file-manager copy works on it.</li>
+    <li><strong>Does not copy files over 4 GB off a FAT32 drive.</strong> Drives formatted FAT32 cannot hold a single file over 4 GB — SnapDisk skips those files and lists them instead of failing the whole backup, per the repo README. A drive formatted exFAT has no such limit.</li>
+    <li><strong>Does not delete photos.</strong> SnapDisk only copies — it never deletes — so the wipe step is always yours, and always after the check.</li>
+    <li><strong>Does not back up anything but photos and videos.</strong> SnapDisk copies image and video files only — no settings, no contacts, no messages, no app data. The transfer in Methods 3, 4 and 5 is what moves those.</li>
+    <li><strong>Does not back up photos from apps that hide them.</strong> If an app keeps its photos in a private folder SnapDisk cannot read, those photos stay in the app.</li>
+    <li><strong>Does not compress.</strong> SnapDisk copies the original files as they are — no recompression, no resizing, no quality loss.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Wiping, selling or trading in the old phone before the check.</strong> The transfer is not a backup, and once the old phone is wiped there is no second chance. Count, older photos, long videos, drive copy — then wipe.</li>
+    <li><strong>Trusting the transfer alone.</strong> A transfer can be interrupted, skip items, or depend on photos that are not actually on the old phone. The drive copy is the second path, and it is the one you hold in your hand.</li>
+    <li><strong>Trusting a cloud-only copy.</strong> Google Photos&#x27; &quot;Storage saver&quot; setting compresses photos — larger than 16 MP resized to 16 MP, videos over 1080p resized to 1080p, per Google&#x27;s support page — and iCloud Photos with Optimize iPhone Storage keeps space-saving versions on the phone. Either way the cloud copy is not the original. Download the originals first.</li>
+    <li><strong>Reformatting the drive without copying its files off first.</strong> Reformatting erases the drive — copy existing files elsewhere before reformatting, per the coticsy guide — and test the drive with both phones before the switch.</li>
+    <li><strong>Using a FAT32 drive for long videos.</strong> FAT32 cannot hold a single file over 4 GB. Use exFAT if both phones support it — it works on iPhone and most current Android phones — and check support on both devices first.</li>
+    <li><strong>Buying a drive too small for the whole library.</strong> Make sure it is big enough for your entire library, including videos — and with room to keep backing up the new phone to the same drive afterwards.</li>
+    <li><strong>Forgetting edited versions and metadata.</strong> Retrieve cloud-only originals and preserve any edited versions or metadata you need, per the coticsy guide — an exact file copy preserves the capture dates and locations already embedded in the originals, but only if the copy holds the originals.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google Photos backs your phone up to Google&#x27;s servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup. And a cloud backup stops working the day you stop paying for storage.</li>
+    <li><strong>Moving instead of copying.</strong> The file manager&#x27;s Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone. Copy first, verify, then delete.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you&#x27;ve confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk&#x27;s Stop button exists for exactly this.</li>
+    <li><strong>Expecting Pro to follow you to an iPhone.</strong> SnapDisk Pro is a Google Play purchase, so it follows your Google account to another Android phone — it does not follow you to an iPhone, and SnapDisk does not run on iPhone at all.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> back up first, transfer second, wipe last. Make a checked copy on a drive you hold in your hand, then run the transfer, then check the new phone — count, older photos, long videos, drive copy — and only then wipe the old one. A transfer moves data; it is not a backup.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>Closest parallel: <a href="transfer-photos-to-usb-automatically.html">Transfer photos to USB automatically</a> — the generic one-tap route this article builds on, with the same notification tap and the same oldest-first copy, without the switch framing. If your old phone is a Samsung, check <a href="samsung-galaxy-photos-to-usb.html">Back up Samsung Galaxy photos to a USB drive (no computer)</a>; if it is a Pixel, check <a href="google-pixel-photos-to-usb.html">Back up Google Pixel photos to a USB drive (no computer)</a> — both cover the same drive copy on the phone you are switching from. If the old phone&#x27;s screen is broken as well as old, check <a href="broken-screen-photos-to-usb.html">Back up photos from a broken-screen phone to USB</a> — a mouse and one tap, before the switch. If your phone is not switching at all, check <a href="index.html">the full list of phone-to-USB guides</a> — there is one per brand, and the generic route is <a href="usb-photo-backup.html">USB photo backup on Android</a>.</p>
+</article>
+<footer>
+  <p>SnapDisk — back up photos to a USB drive, no computer needed.<br>
+  <a href="./">Home</a> · <a href="blog/">Blog</a> · <a href="https://github.com/dzianisv/photo-backup">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>
