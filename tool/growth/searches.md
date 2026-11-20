@@ -12828,6 +12828,100 @@ demand is read off competitor install velocity instead (see
   the supervisor assigns the next brand; no brand was
   invented here.
 
+### 129. "back up BQ photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a BQ-specific guide to backing up
+  photos to a USB drive at all, let alone a BQ-specific automated
+  whole-library backup with progress, Pause/Stop, and resume — and
+  eleven of the thirty covered BQ phones clear Android 7.0, so the
+  one-tap route is proven on ten outright, with one more needing the
+  mounting test.
+- Current top results (scored Nov 20, 2026, live web search):
+  dzianisv.github.io, "Transfer photos to USB automatically"
+  (https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html
+  — plug a USB drive into your Android phone, tap Backup in SnapDisk,
+  and your whole photo library copies oldest-first to the drive in the
+  background, with real progress, Pause and Stop, and resume where it
+  stopped. Our own generic guide, not a BQ guide — and it says nothing
+  about BQ);
+  petapixel.com, "No Laptop? No Problem: How to Back Up Photos in the
+  Field With Your Smartphone"
+  (https://petapixel.com/2025/05/11/no-laptop-no-problem-how-to-back-up-photos-in-the-field-with-your-smartphone/
+  — copy full-resolution RAW or JPEG files from a memory card to a
+  solid-state drive using a USB hub connected to your phone, no
+  laptop, no cloud. A camera-card guide, not a phone guide — and it
+  says nothing about BQ);
+  dzianisv.github.io, "Back up Blackview photos to a USB drive"
+  (https://dzianisv.github.io/photo-backup/blackview-photos-to-usb.html
+  — the Blackview article in this same series: plug a USB drive into a
+  Blackview, tap Backup in SnapDisk, and the library copies
+  oldest-first. A Blackview guide, not a BQ guide — and it says
+  nothing about BQ);
+  dzianisv.github.io, "USB photo backup on Android"
+  (https://dzianisv.github.io/photo-backup/usb-photo-backup.html
+  — plug a USB drive into your Android phone and copy your photos to
+  it, by hand in the Files app or one-tap with SnapDisk. Our own
+  generic guide, not a BQ guide — and it says nothing about BQ);
+  techwalla.com, "How to Move Pictures from Camera to Flash Drive With
+  No Computer"
+  (https://www.techwalla.com/articles/how-to-move-pictures-from-camera-to-flash-drive-with-no-computer
+  — use a combination memory card reader and USB flash drive to move
+  pictures from a camera to a flash drive. A camera guide, not a phone
+  guide — and it says nothing about BQ).
+  Note: wider search also surfaced a FotoSafe generic guide, a
+  VaultDrive page, a YouTube OTG video and an AppBrain listing — none
+  BQ-specific either.
+- The one-tap route is proven on ten phones — every one clears Android
+  7.0 and lists USB OTG Yes: the X2 Pro (phonesdata, smartprix), the
+  X2 (kimovil, phonesdata, smartprix), the VS Plus (eimei24,
+  notebookcheck), the VS (gizmochina), the U2 Lite (notebookcheck),
+  the U2 (notebookcheck), the V (notebookcheck), the X Pro
+  (phonesdata, notebookcheck), the X (phonesdata, notebookcheck) and
+  the C (notebookcheck). One more clears the floor but needs the
+  mounting test — the V Plus, whose OTG is unstated in every source.
+  No BQ phone lists USB OTG No and none is contested-floor — the
+  second-cleanest split in this series after Maze. Nineteen run below
+  Android 7.0 as shipped, so SnapDisk does not install on those — but
+  fourteen of the nineteen still list USB OTG Yes, so the file-manager
+  copy in Method 2 still works on them. Five take USB Type-C (X2 Pro,
+  X2, X Pro, X, C) and twenty-five take micro-USB — the port is
+  settled on all thirty. A microSD card fits twenty-nine phones for
+  certain — each has a slot — so the card-reader route is proven on
+  twenty-nine, though ceilings are stated on twenty-two, contested on
+  one (X5, 32 GB per eimei24/fonearena against 64 GB per its Cyanogen
+  Edition manual) and unstated on six (X2, VS, V Plus, X5 Plus, E5s,
+  5), and the slot itself is unstated on the 5.7. VaultDrive needs
+  Android 8 or later per its own site, so three clear the version
+  floor on shipped software — the X2 Pro, the X2 and the C — while
+  AppBrain lists 12.1 or later, which none clear. FotoSafe needs
+  Android 9 or later with USB host or OTG support, so none is proven.
+  Android is two numbers on eight phones — the X2 Pro at 8.0 vs 8.1,
+  the U2 Lite at 7.0 vs 7.1.2, the V at 7.1 vs 7.1.2, the U Lite at
+  6.0 vs 6.0.1, the M5 at 5.0.2 vs 5.1.1, the M5.5 at 5.0.2 vs 5.1.1,
+  the M4.5 at 5.0 vs 5.1 vs 5.1.1 and the 5.7 at 4.1 vs 4.2.1 — but
+  none flips the 7.0 floor. BQ has no phone-to-USB backup tool of its
+  own — BQ's own user manuals name the computer copy and the Google
+  backup, and BQ On is BQ's own cloud storage, which you buy. BQ
+  (Mundo Reader) is a Spanish company founded in Madrid in 2009; maker
+  of the first Android One phone in Europe (the Aquaris A4.5) and the
+  world's first Ubuntu phone and tablet (the Aquaris E4.5 and the
+  Aquaris M10); Vingroup acquired 51% in 2018 and BQ filed for
+  bankruptcy in 2021. This article covers thirty models from 2013 to
+  2018 (GSMArena lists twenty BQ phones; the other ten come from wider
+  catalogues; the Ubuntu Editions and the Cyanogen Edition share
+  hardware with their Android siblings and count once; the Russian BQ
+  Mobile is a different brand).
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 20, 2026 (WL-162, 130th how-to):
+  docs/bq-photos-to-usb.html — branch wl-162-bq, NO COMMIT MADE (git
+  operations blocked this run by an execution-risk check; draft and
+  patched supporting files in supervisor scratch for the supervisor to
+  commit and push; no PR opened by the lead).
+  Fallback for WL-163: Prestigio — no article file
+  (docs/prestigio-photos-to-usb.html absent), no dedicated searches.md
+  row (0 mentions in searches.md, sitemap, feed, blog index, llms.txt
+  and llms-full.txt, verified Nov 20, 2026).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
