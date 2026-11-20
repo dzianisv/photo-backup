@@ -13269,6 +13269,122 @@ demand is read off competitor install velocity instead (see
   drafted Nov 20, 2026 (WL-166, 134th how-to):
   docs/blackberry-photos-to-usb.html — branch wl-166-blackberry.
 
+### 134. "back up photos from a broken-screen phone to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a whole-library one-tap phone-to-USB
+  backup guide for a broken screen at all, let alone a whole-library
+  one-tap backup with progress, Pause/Stop, and resume — and the two
+  real guides in the results describe a manual file copy, not a one-tap
+  backup, and neither mentions SnapDisk.
+- Current top results (scored Nov 20, 2026, live web search):
+  androidauthority.com, "How to recover data from a broken Android phone"
+  (https://www.androidauthority.com/extract-data-broken-android-phone-819324/
+  — if the data is on an SD card, eject the card and slot it into a
+  computer; the safest method is a USB-C to HDMI dongle and an external
+  display, with a keyboard and mouse if touch is dead; and it is not
+  possible to recover files from a completely dead Android device —
+  replace the faulty components or seek help from a data recovery
+  professional. A real generic recovery guide, and the source for the
+  dead-phone limit — but it offloads files by hand, it is not a one-tap
+  whole-library backup, and it says nothing about SnapDisk);
+  phoneexpertphonerepair.com, "Recovering Photos from a Broken Phone:
+  Proven Steps"
+  (https://phoneexpertphonerepair.com/recovering-photos-from-a-broken-phone/
+  — check cloud backups first, then a cracked screen with dead touch gets
+  an OTG mouse: plug the adapter into the charging port, plug the mouse
+  in, a cursor appears, enter your own PIN or pattern — and from there
+  copy your photos to a USB drive, upload them to the cloud, or connect
+  the phone to a computer; a phone with one port cannot charge while the
+  mouse occupies it; a black screen with the phone still on needs a USB-C
+  hub with video-out, which only works on supported models and can be
+  blocked by an on-screen prompt. A real repair-shop guide that DOES
+  mention OTG-mouse unlock and copying photos to a USB drive — but the
+  copy it describes is a manual file copy, not a one-tap whole-library
+  backup with progress, Pause and Stop, and it says nothing about
+  SnapDisk);
+  drfone.wondershare.com, "How to Transfer Data from a Phone With a Broken
+  Screen: Android & iPhone"
+  (https://drfone.wondershare.com/broken-phone-recovery/how-to-transfer-data-from-broken-screen-phone.html
+  — sorts broken screens by condition first: a visible screen with dead
+  touch gets an OTG mouse to enter your own passcode, with the warning
+  that a mouse does not bypass the screen lock; a black screen that still
+  powers on needs cloud copies, an external display or repair; a locked or
+  black display cannot be treated as an unlocked storage drive. A real
+  guide — but its routes run through a computer and its own paid recovery
+  software, not a phone-to-USB one-tap backup, and it says nothing about
+  SnapDisk);
+  drfone.wondershare.com, "How to Get Photos Off a Broken Phone (Android &
+  iOS Guide 2026)"
+  (https://drfone.wondershare.com/broken-phone-recovery/how-to-get-photos-off-a-broken-phone.html
+  — six Android solutions: AutoPlay to a computer, Google Drive, Google
+  Photos, its own one-click recovery software, the SD card, and a USB-C
+  dongle with an external display. A real guide — but five of the six
+  routes need a computer or the cloud, and the sixth is a manual copy
+  through a dongle, not a one-tap whole-library backup, and it says
+  nothing about SnapDisk).
+  Note: a second search surfaced three more of the same shape — Dr.Fone,
+  "The Ultimate Guide: Using an Android Phone with a Broken Screen",
+  Recoverit, "Android Broken Screen Data Recovery", and Tech Advisor, "How
+  to Recover Your Phone Data with a Broken Screen" — an OTG mouse for a
+  visible screen with dead touch, a USB-C hub and external display for a
+  black screen but only if the model supports DisplayPort Alt Mode or MHL
+  video output, ADB only if USB debugging was enabled before the damage,
+  Samsung Smart Switch, and the microSD card out through a reader; Recoverit
+  warns not to factory reset, flash firmware, or approve any repair that
+  wipes the phone before trying the safer options. All real guides — and all
+  of them route through a computer, the cloud, or paid recovery software,
+  not a phone-to-USB one-tap backup, and none of them mentions SnapDisk.
+  SnapDisk's own generic guide
+  (https://dzianisv.github.io/photo-backup/usb-photo-backup.html) assumes a
+  working screen and says nothing about a mouse, a hub, or a dead phone.
+- Three scenarios, three routes. Cracked screen with dead touch and a
+  visible display: a USB mouse through an OTG adapter enters your own PIN
+  or pattern — a mouse does not bypass the lock — and one tap on SnapDisk's
+  notification starts the whole-library backup, oldest-first, with progress,
+  Pause and Stop. One port holds either the mouse or the drive, not both,
+  so a multi-port OTG hub, or Pro's auto-backup on connect, is what lets
+  mouse and drive share the port — and Pro only helps if it was set up
+  before the screen broke. Black screen with the phone still powering on:
+  a USB-C hub with HDMI and USB ports shows the screen on a monitor, but
+  only on phones with DisplayPort Alt Mode video-out — Samsung DeX on the
+  Galaxy S8 and later S series, the Note 8 and later, all Z Fold models and
+  the A90 5G only; the Z Flip 5 and 6 output video but run no DeX, per XDA,
+  and the rest of the A series outputs nothing; Pixel video-out starts at
+  the Pixel 8, the Pixel 6 and 7 having USB 3.x ports with display output
+  switched off until the Pixel 8; Motorola Edge phones run Ready For, now
+  Smart Connect; Huawei Mate and P Pro phones run Easy Projection; Sony
+  Xperia 1 and 5, Asus ROG Phones, the LG G8, V50, V60, Velvet and Wing,
+  and the Fairphone 5 are listed as supporting video-out too. OnePlus is
+  contested — the 12, 13 and Open per the usbctohdmi guide, against the 7
+  and newer flagships per the salivity list — so check the exact model
+  before buying a hub. Android 16's native desktop mode needs Android 16
+  QPR3 or later on a Pixel 8, 9 or 10, per Rayneo; an older Pixel mirrors
+  instead. An on-screen prompt can block video-out. A DisplayLink dock is
+  a reported workaround for phones without video-out — Faceofit names it as
+  the only way an older Pixel 7 can output to a monitor — carried as
+  reported, not verified. Completely dead phone: no software route exists —
+  Android Authority says so plainly — so check Google Photos and the
+  microSD card first, then a screen replacement or professional recovery.
+  A microSD card comes out only if the phone takes one — most high-end
+  phones no longer do, per Android Authority — and reading the card still
+  needs a reader and a computer. SnapDisk needs Android 7.0 or later
+  (minSdk 24 in the repo) and is not on Google Play yet, so install the
+  v0.1.2 APK from GitHub. The free version backs up manually up to 5 GB per
+  run; Pro is a one-time $9.99 purchase that auto-starts the backup on
+  connect. Drives formatted FAT32 cannot hold a single file over 4 GB —
+  SnapDisk skips those files and lists them instead of failing the whole
+  backup, per the repo README. Google Photos' "Storage saver" setting
+  compresses photos, so check that setting before trusting a cloud copy.
+  iPhones are not covered — SnapDisk is Android only — and the iPhone OTG
+  route varies by model, per the repair-shop guide. FotoSafe needs Android
+  9 or later with USB host or OTG support; VaultDrive needs Android 8 or
+  later per its own site, Pro $19.99 once, while AppBrain lists 12.1 or
+  later. This is the first article in the series about a situation instead
+  of a phone brand — the brand series ran to 134 articles.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 20, 2026 (WL-167, 135th how-to):
+  docs/broken-screen-photos-to-usb.html — branch wl-167-broken-screen.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
