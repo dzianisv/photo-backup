@@ -1,3 +1,88 @@
+## WL-163 — Back up Prestigio photos to USB article, 131st how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #298 MERGED (merge commit da8e9a3, merged
+  2026-11-20T18:57:31Z; PR head cdd0eb24, CI run 44797135663
+  build pass, conclusion success; post-merge main runs
+  Android PR 44797643188 + pages 44797639810 success).
+  Pre-merge readback on head cdd0eb24 (verified by the
+  supervisor from the branch source): feed 131 items incl.
+  Prestigio, sitemap 135 URLs incl. Prestigio, blog index 131
+  BlogPosting (grep count — same structure as main: the blog
+  JSON-LD carries only Blog + BreadcrumbList and parses; the
+  BlogPosting entries live in the HTML microdata, so the
+  "131 parsed" claim in the lead's report is loose language
+  for the grep count, not a JSON parse — no defect), title 53
+  chars, meta 136 chars, JSON-LD parses (Article + FAQPage
+  4 Qs + BreadcrumbList, datePublished 2026-11-20), TL;DR
+  present, 1 script tag, 1 H1, 10 H2s, Query 130 row present,
+  only docs/ + tool/growth changed (compare API: 7 files).
+  Query 130 verified by the lead from live evidence (no top
+  result is a Prestigio-specific phone-to-USB photo-backup
+  guide); the exact query returned five results (SnapDisk's
+  own generic guides, AppBrain Photos to USB listing,
+  softhandtech guide, Android Central forum thread) — none
+  is a Prestigio-specific guide; real gap stands.
+  New docs/prestigio-photos-to-usb.html ("Back up Prestigio
+  photos to a USB drive (no computer)"), following the
+  WL-54–WL-162 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot,
+  with an honest caption).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 53 chars, meta
+  description 136 chars, JSON-LD validated by parse
+  (Article + FAQPage 4 Qs + BreadcrumbList, datePublished
+  2026-11-20); sitemap 135 URLs and feed 131 items; blog
+  JSON-LD counts 131 BlogPosting entries (grep, same
+  structure as main). searches.md Query 130 row present
+  ("back up Prestigio photos to USB drive without computer"
+  — HOW-TO GAP).
+  Key finding: 40 covered Prestigio models (gsmchoice
+  catalogue); 28 clear Android 7.0, 12 below (all 5.1/6.0);
+  one-tap proven on 9 (Muze E7 LTE, G7 LTE, X5 LTE, C5,
+  C7 LTE, Wize V3, Grace M5 LTE, Grace P7 LTE, X Pro);
+  OTG No on 8, contested on 3 (Muze V3 LTE, Muze H5 LTE,
+  S Max — mobilegizmo Yes vs findpare No), unstated on 8;
+  none of the 12 below-floor lists OTG Yes. Ports settled
+  on 35: all micro-USB 2.0, unstated on 5; no USB Type-C
+  on any model. microSD slot confirmed on 32, unstated on
+  8; ceilings known on 17, contested on 1 (G7 LTE: 32 GB
+  mobilegizmo review vs ≤64 GB Prestigio manual), unstated
+  on 14. VaultDrive proven on 2 (Wize V3, X Pro) under its
+  own-site Android 8 floor (13 clear), 0 under AppBrain's
+  12.1; FotoSafe proven on 0 (highest shipped 8.1). G5
+  LTE's VaultDrive clearance conditional on its contested
+  Android (7.0 hazelphone vs 8.1 devicesfaq/mobilexfiles).
+  Contested figures marked explicitly: G5 LTE Android,
+  V3 LTE release Nov vs Aug 2018, B5 storage 8 vs 16 GB,
+  Muze B7 Android 6.0 vs 7.0, founding year 2002 vs ASBIS
+  1990. Muze B7 ≠ Grace B7 LTE (different device; Grace
+  B7 LTE is Android 7.0, OTG Yes, outside the 40 — noted
+  in "not covered"). Unreliable sources not cited for
+  facts: devicesfaq's J5 FAQ, mobilespecs' G5 LTE page.
+  Link verification 10 URLs (8x200, 2x403 bot-blocks —
+  both AppBrain URLs, curl-only; 0x404, 0x000 on retry).
+  Live fetch verified by the supervisor:
+  prestigio-photos-to-usb.html 200 (42,806 B, correct
+  title), feed.xml 131 items live incl. Prestigio.
+  Supervisor re-score from a fresh live re-search: same 5
+  results as the lead (SnapDisk generic guides, FotoSafe
+  generic guide, softhandtech, AppBrain listing) — none
+  mentions Prestigio; real gap stands. (The new article is
+  not surfacing yet, merged minutes before the re-score.)
+  Lead's failed execs: `gh pr view 298` / `gh pr checks
+  298` failed — gh token lacks `read:org` scope (GraphQL
+  login/name/slug fields); worked around via REST API for
+  the readback and `gh run watch` for CI. No token change
+  made; supervisor notes the scope gap here (no action —
+  REST workaround is sufficient). AppBrain curl retries
+  exit 18, both 403 — bot-blocks, recorded above, not dead
+  links.
+  Fallback for WL-164: Doro — verified by the supervisor,
+  no docs/doro-photos-to-usb.html and no searches.md row
+  (0 mentions anywhere).
+
 ## WL-162 — Back up BQ photos to USB article, 130th how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
