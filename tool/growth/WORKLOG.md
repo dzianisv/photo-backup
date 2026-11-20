@@ -1,3 +1,68 @@
+## WL-153 — Back up BLU photos to USB article, 121st how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #277 MERGED (merge commit 0da7322, merged
+  2026-11-20T09:41:03Z; PR head b5ece3b, CI run 44712447671
+  build pass, conclusion success; post-merge main runs
+  Android PR 44712799242 + pages 44712798720 success on 0da7322).
+  Live fetch verified by the supervisor:
+  blu-photos-to-usb.html 200 (53,201 B, correct title/TL;DR);
+  feed.xml 121 items live incl. BLU.
+  Supervisor re-score from a fresh live re-search: same 4
+  results as the lead (FoneLab guide, Dr.Fone guide,
+  groovypost guide, unanswered.io guide) — all generic, none
+  mentions BLU; real gap stands.
+  Query 120 verified by the lead from live evidence (no top
+  result is a BLU-specific phone-to-USB photo-backup
+  guide); the exact query returned four results, all generic
+  Android (FoneLab, Dr.Fone, groovypost, unanswered.io) —
+  none mentions BLU; real gap stands.
+  New docs/blu-photos-to-usb.html ("Back up BLU photos to a
+  USB drive (no computer)"), following the
+  WL-54–WL-152 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 47 chars, meta
+  description 126 chars, JSON-LD validated by parse
+  (Article + FAQPage 4 Qs + BreadcrumbList, datePublished
+  2026-11-20); sitemap 125 URLs and feed 121 items; blog
+  JSON-LD counts 121 BlogPosting entries. searches.md Query
+  120 row present ("back up BLU photos to USB drive without
+  computer" — HOW-TO GAP).
+  Key finding: all sixteen covered BLU phones (2018–2023)
+  clear Android 7.0 — lowest runs 8.1 — so SnapDisk installs
+  on all sixteen; the one-tap route is proven on 11 (OTG
+  Yes), and 5 need the mounting test (G9, G91, Vivo XI,
+  Vivo XI+, Vivo XL4). microSD fits 14 for certain; slot
+  contested on Bold N2 and Bold N3; ceilings contested on
+  G9 Pro, Vivo XI, Vivo XI+ (128 vs 512 GB). VaultDrive
+  proven on all 16 under its own site's Android 8 floor,
+  on 2 under AppBrain's 12.1 (Bold N3, G93, both Android
+  13); FotoSafe proven on 13 on shipped software (Vivo XI
+  and Vivo XI+ only after the planned 9.0 upgrade; Vivo XL4
+  has no 9.0 upgrade on record). 14 USB-C, 2 micro-USB
+  (Vivo XI, Vivo XL4). F91 is BLU's first 5G phone; one
+  pre-release listing wrongly calls it Android 12.
+  Note: the lead's draft title count was 49 — the file says
+  47; the report quotes the file. CI log carries a
+  setup-java v4 deprecation warning (informational, not a
+  failure). Link verification 56 unique URLs, all fetched
+  live — 35x200, 14x403, 6x000, 1x503; every non-200 was
+  verified live via browser search snippets or browser.open
+  the same day (bot-blocking / rate-limiting, not missing
+  content). Lead's failed execs: git commit exit 128
+  (fresh clone had no identity — fixed with local identity
+  Den <2119348+dzianisv@users.noreply.github.com>, matching
+  all prior WL commits); browser.open gsmarena.com/blu-phones-52.php
+  HTTP 402 upstream rejected — not retried unchanged, used
+  m.gsmarena.com pages and search snippets instead. No
+  failed execs on the supervisor side.
+  Fallback for WL-154: Vernee — verified by the supervisor,
+  no docs/vernee-photos-to-usb.html and no searches.md row
+  (0 mentions of Vernee in searches.md).
+
 ## WL-152 — Back up Razer photos to USB article, 120th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
