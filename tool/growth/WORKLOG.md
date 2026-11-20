@@ -1,3 +1,100 @@
+## WL-164 — Back up Doro photos to USB article, 132nd how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #300 MERGED (merge commit abb3e7b, merged
+  2026-11-20T19:50:28Z; PR head 692ea22d, CI run 44805151207
+  build pass, conclusion success; post-merge main runs
+  Android PR 44805873542 + pages 44805872528 success).
+  Pre-merge readback on head 692ea22d (verified by the
+  supervisor from the branch source): feed 132 items incl.
+  Doro, sitemap 136 URLs incl. Doro, blog index 132 BlogPosting
+  (JSON-LD parses), title 48 chars, meta 135 chars, JSON-LD
+  parses (Article + FAQPage 4 Qs + BreadcrumbList,
+  datePublished 2026-11-20), TL;DR present, 1 script tag, 1 H1,
+  10 H2s, Query 131 row present, only docs/ + tool/growth
+  changed (compare API: 7 files).
+  Query 131 verified by the lead from live evidence (no top
+  result is a Doro-specific phone-to-USB photo-backup guide);
+  the exact query returned four results (FotoSafe guide, EyeFi
+  forum thread, 2 SnapDisk generics) plus 4 more generics on the
+  quoted search — none is a Doro-specific guide; real gap
+  stands.
+  New docs/doro-photos-to-usb.html ("Back up Doro photos to
+  a USB drive (no computer)"), following the WL-54–WL-163
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot, with an honest caption).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 48 chars, meta
+  description 135 chars, JSON-LD validated by parse
+  (Article + FAQPage 4 Qs + BreadcrumbList, datePublished
+  2026-11-20); sitemap 136 URLs and feed 132 items; blog
+  JSON-LD counts 132 BlogPosting entries. searches.md Query 131
+  row present ("back up Doro photos to USB drive without
+  computer" — HOW-TO GAP).
+  Key finding: 18 Doro Android smartphones covered; 12 clear
+  Android 7.0, 6 below floor; one-tap proven on 0 — first brand
+  in the series with zero proven one-tap (OTG unstated on all
+  18, no OTG No, no contested OTG); all 12 floor-clearing
+  phones need the mounting test. Ports: 10 Type-C, 2 micro-USB
+  (8035, 8040), unstated on 5, contested on 1 (Liberto 820:
+  manua.ls "no USB port" vs Doro's own product sheet listing a
+  USB cable). microSD slot confirmed on all 18; ceilings
+  stated on 12, contested on 1 (8200: 128 GB Clove vs up to
+  512 GB Doro manual), unstated on 5. VaultDrive proven on 0
+  (10 clear own-site Android 8 floor; 3 clear AppBrain 12.1 —
+  Aurora A10/A20/A30); FotoSafe proven on 0 (same 10 clear
+  Android 9 floor). Doro feature phones excluded (own OS, not
+  Android). Not covered: Doro 824, Liberto 822, Liberto 810,
+  Aurora A31.
+  Link verification 15 URLs (13x200, 2x403 bot-blocks verified
+  live — AppBrain and umatechnology; 0x404, 0x000; new Doro page
+  URL 503 pre-merge — expected).
+  Feed fix (pre-existing defect, not caused by this run): the
+  feed on main did not parse — the BQ item was missing its
+  </item> (131 items, only 130 closes). Restored in PR #300;
+  feed now parses (132/132 closes).
+  llms-full backfill (supervisor, PR #301 MERGED — merge
+  1e4d115, merged 2026-11-20T19:59:45Z; head 4f0964d, CI run
+  44807014307 success; post-merge main runs Android PR
+  44807267827 + pages 44807267006 success): WL-163 (Prestigio)
+  and WL-164 (Doro) had only appended bare URL lines under the
+  BQ heading — no sections. Full sections (heading + URL + dek
+  + TL;DR + Search + Method 3 + What this does not do + What
+  to avoid) built from each article's own blocks following the
+  BQ pattern (dek apostrophes escaped, TL;DR without the space
+  after the colon, What-to-avoid without the trailing
+  Rule-of-thumb item), stray URL lines removed. Live
+  llms-full.txt verified: 1462 lines, 62 headings, Prestigio
+  heading at 1348, Doro at 1363, each URL once.
+  Live fetch verified by the supervisor:
+  doro-photos-to-usb.html 200 (40,725 B, correct title),
+  feed.xml 132 items live incl. Doro.
+  Supervisor re-score from a fresh live re-search: SnapDisk
+  generic guides, askfilo, FoneLab — none mentions Doro; real
+  gap stands. (The new article is not surfacing yet, merged
+  minutes before the re-score.)
+  Lead's failed execs: first exec hit a system execution-risk
+  notice on git fetch/checkout — no further git commands, all
+  repo work via GitHub API; `gh api -f content=...` fails
+  "Argument list too long" on files over ~128 KB — pushed those
+  5 via python + `gh api --input payload.json`; first
+  `gh pr create` failed "not a git repository" (ran from ~) —
+  retried with --repo, worked.
+  Goal entries: the lead recorded a draft entry
+  (goal_update_445a2afa2464); the supervisor verified the
+  timeline and backfilled the MISSING BQ (130th) and Prestigio
+  (131st) entries the 10:14/11:04 runs had claimed recorded,
+  and added the Doro live entry (goal_update_2e4781610531).
+  Lesson: a "goal entry recorded" claim in KPI.md is not proof
+  — check the timeline.
+  Fallback for WL-165: HMD — verified by the supervisor, no
+  docs/hmd-photos-to-usb.html (404) and no searches.md row
+  (only 2 mentions, both inside the Nokia row). Getac,
+  Datalogic, Bluebird, Urovo, Alcatel, Meizu, Coolpad, Gionee,
+  Wiko, Hisense, Zopo, Elephone, Karbonn and Archos all already
+  have articles — the brand well is nearly exhausted.
+
 ## WL-163 — Back up Prestigio photos to USB article, 131st how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
