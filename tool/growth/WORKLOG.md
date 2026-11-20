@@ -1,3 +1,95 @@
+## WL-161 — Back up Maze photos to USB article, 129th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #294 MERGED (merge commit f1e789e, merged
+  2026-11-20T17:20:05Z; PR head ce0212b, CI run 44781996951
+  build pass, conclusion success; post-merge main runs
+  Android PR + pages success on f1e789e).
+  Pre-merge readback on head ce0212b (verified by the
+  supervisor from the branch source): feed 129 items incl.
+  Maze, sitemap 133 URLs incl. Maze, blog index 129
+  BlogPosting (JSON-LD parses — recursive count), title 48
+  chars, meta 133 chars, JSON-LD parses (Article + FAQPage
+  4 Qs + BreadcrumbList, datePublished 2026-11-20), TL;DR
+  present, 1 script tag, 1 H1, 10 H2s, Query 128 row present,
+  only docs/ + tool/growth changed.
+  Query 128 verified by the lead from live evidence (no top
+  result is a Maze-specific phone-to-USB photo-backup guide);
+  the exact query returned five results (a FotoSafe generic
+  guide, a MacRumors iPhone forum thread, a VaultDrive page,
+  a YouTube OTG video, a desnoulez camera-card guide) — none
+  is a Maze-specific guide; real gap stands.
+  New docs/maze-photos-to-usb.html ("Back up Maze photos to
+  a USB drive (no computer)"), following the WL-54–WL-160
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot, with an honest caption).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 48 chars, meta
+  description 133 chars, JSON-LD validated by parse
+  (Article + FAQPage 4 Qs + BreadcrumbList, datePublished
+  2026-11-20); sitemap 133 URLs and feed 129 items; blog
+  JSON-LD counts 129 BlogPosting entries. searches.md Query
+  128 row present ("back up Maze photos to USB drive without
+  computer" — HOW-TO GAP).
+  Key finding: four covered Maze models, all 2017 (Blade,
+  Alpha, Alpha X, Comet — Alpha X 64 GB/128 GB are two
+  storage variants of one model). Cleanest split in the
+  series so far: 3 of 4 clear Android 7.0 (Alpha, Alpha X,
+  Comet) and the one-tap route is proven on all 3 — each
+  clears the floor and lists USB OTG Yes; 0 need the
+  mounting test, 0 list OTG No, 0 contested-floor. Blade
+  (Android 6.0) is below the floor so SnapDisk does not
+  install — but it lists USB OTG Yes, so the file-manager
+  copy still works on it. Ports settled on all four: Type-C
+  x3, micro-USB x1 (Blade). microSD slot on all 4 — the
+  card-reader route is proven on all four; ceilings stated
+  on 2 (256 GB, Alpha and Alpha X), unstated on 2 (Blade,
+  Comet). VaultDrive, AppBrain 12.1 and FotoSafe proven on
+  0 (highest shipped Android is 7.0). Maze Mobile, Shenzhen
+  company established 2012; brand launched 2017 by YOP
+  Company; first phone Blade $130; peaked 2017, apparently
+  gone under by May 2018 (Notebookcheck, website for sale,
+  no official confirmation). No Maze backup tool; closest
+  advice is devicesfaq's per-model FAQ (computer copy +
+  Google Drive/Photos) — generic Android boilerplate, not
+  Maze's own.
+  BLOG JSON-LD DEFECT FIXED (pre-existing, found by the
+  lead, confirmed by the supervisor): the blog index JSON-LD
+  was invalid at HEAD — a BlogPosting object was missing its
+  closing `}` (json.loads fails: "Expecting property name
+  enclosed in double quotes: line 781 column 9"). The fix
+  (one brace) rides in the supporting commit ce0212b; the
+  branch version parses with 129 BlogPosting entries, and
+  the live blog index after merge parses too (129). LESSON:
+  grep-counting BlogPosting does not catch invalid JSON —
+  readbacks from WL-159/WL-160 counted 127/128 by grep while
+  the JSON was already broken; parse the blog JSON-LD from
+  now on.
+  Live fetch verified by the supervisor:
+  maze-photos-to-usb.html 200 (38,608 B, correct title),
+  feed.xml 129 items live incl. Maze; live blog index
+  JSON-LD parses, 129 BlogPosting.
+  Lead's recorded failed execs: one exec exit 1 in the run
+  record, no detail — all receipts independently verified,
+  no effect.
+  Supervisor re-score from a fresh live re-search: top
+  results are SnapDisk's own generic guides
+  (transfer-photos-to-usb-automatically, usb-photo-backup,
+  free-up-space-move, backup-photos-offline) — none mentions
+  Maze; real gap stands. (Differs from the lead's 5 results
+  — FotoSafe, MacRumors, VaultDrive, YouTube, desnoulez —
+  search results vary by moment; the "no Maze-specific
+  guide" conclusion holds either way, and the article
+  records the lead's live results.)
+  Fallback for WL-162: BQ — verified by the supervisor, no
+  docs/bq-photos-to-usb.html and no searches.md row (0
+  mentions of "back up BQ photos"), and the exact query
+  returns no BQ-specific guide in the top results (SnapDisk's
+  own generic guides, PetaPixel field-backup, SnapDisk's
+  Blackview article, Techwalla camera guide — scored Nov 20,
+  2026). BQ is a Spanish brand (Aquaris line).
+
 ## WL-160 — Back up Neffos photos to USB article, 128th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
