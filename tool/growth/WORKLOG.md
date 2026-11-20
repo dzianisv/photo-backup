@@ -1,3 +1,58 @@
+## WL-165 — Back up HMD photos to USB article, 133rd how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article commit 4d95125f pushed early to branch wl-165-hmd
+  (commit-first + push-early); no PR opened — supervisor creates
+  it after independent readback.
+  Readback on the working tree (verified by the lead): feed 133
+  items incl. HMD (133 closes, XML parses), sitemap 137 URLs
+  incl. HMD (XML parses), blog index 133 BlogPosting (JSON-LD
+  parses, HMD entry last), title 47 chars, meta 134 chars,
+  JSON-LD parses (Article + FAQPage 4 Qs + BreadcrumbList,
+  datePublished 2026-11-20), TL;DR present, 1 script tag, 1 H1,
+  10 H2s, Query 132 row present, only docs/ + tool/growth
+  changed (6 files, 111 insertions).
+  Query 132 verified by the lead from live evidence (no top
+  result is an HMD-specific phone-to-USB photo-backup guide);
+  the exact query returned four results (Ask Tim Grey camera
+  memory-card guide, Handheld article, 2 SnapDisk generics)
+  plus 4 more generics on the quoted search (Dr.Fone, PixonEye,
+  CyberGuy, YouTube) — none is an HMD-specific guide; real gap
+  stands.
+  New docs/hmd-photos-to-usb.html ("Back up HMD photos to
+  a USB drive (no computer)"), following the WL-54–WL-164
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot, with an honest caption). Title 47 chars —
+  1 char under the ~48–53 target; meta description 134 chars.
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full HMD section: heading + URL + dek + TL;DR
+  + Search + Method 3 + What this does not do + What to avoid),
+  feed.xml updated; searches.md Query 132 row added.
+  Findings: 20 HMD devices covered (19 phones + T21 tablet);
+  all 20 clear Android 7.0 (lowest shipped Android 13: XR21,
+  Aura, T21); one-tap proven on 19, mounting test on 1 (Key
+  OTG contested: phonebunch Not Supported vs phonepik Yes);
+  all 20 USB Type-C; microSD slot on 19 (XR21 none), ceilings
+  stated on 17 (14 clean, 3 contested: Aura, Arc, Vibe 5G),
+  unstated on 2 (Skyline, Aura 2); VaultDrive proven on 19
+  under both its own Android 8 floor and AppBrain's 12.1 floor;
+  FotoSafe proven on 19 (Android 9 floor). HMD Global: Finnish,
+  founded 2016, Nokia licensee; first HMD-branded phones the
+  Pulse family, April 24, 2024. HMD offers no phone-to-USB
+  backup tool; its guides point to the Google backup.
+  Link verification: 19 URLs cited, 16x200 via curl, PixonEye
+  520 / AppBrain 000 / CyberGuy 403 via curl but all verified
+  live via browser.open; 0x404, 0 dead. Note: the article cites
+  CyberGuy at the base path (no ?print=print + UTM params from
+  the search result URL).
+  Caveats carried: 17 honest caveats in the article; contested
+  figures marked (XR21 Android 13 vs 12; Pulse/Aura/Arc/Vibe 5G
+  card ceilings; Crest Max/Aura 2 OTG omissions in GSMArena;
+  Vibe 2 slot hybrid vs dedicated). Not covered: Ivalo XE,
+  Crest 2/2 Pro, Arc 2, Key 2, Luma 2, Bold, Orka, Hyper/Atlas/
+  Ridge Pro, feature phones, Nokia-branded phones (own article).
+
 ## WL-164 — Back up Doro photos to USB article, 132nd how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
