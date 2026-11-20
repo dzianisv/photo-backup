@@ -12052,6 +12052,88 @@ demand is read off competitor install velocity instead (see
   Fallback for WL-154: to be named by the supervisor; no
   brand verified in this run.
 
+### 121. "back up Vernee photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Vernee-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Vernee-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and sixteen covered
+  Vernee phones clear Android 7.0, so the one-tap route is
+  proven on twelve outright, with two more working if the
+  unit runs 7.0 and four needing the mounting test.
+- Current top results (scored Nov 20, 2026, live web
+  search):
+  softhandtech.com, "Easy Guide: Transferring Pictures
+  from Your Phone to a Flash Drive"
+  (https://softhandtech.com/how-do-you-transfer-pictures-from-your-phone-to-a-flash-drive/
+  — transfer pictures from a phone to a flash drive with a
+  USB OTG adapter and a file manager, or through a computer.
+  A generic Android guide — it says nothing about Vernee);
+  fonelab.com, "How to Transfer Photos from Android to
+  Flash Drive in 3 Easy Ways"
+  (https://www.fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html
+  — transfer photos from Android to a flash drive with a
+  USB OTG adapter and the Files app, or through a PC with
+  FoneLab HyperTrans, or with Samsung Smart Switch. A
+  generic Android guide — it says nothing about Vernee);
+  groovypost.com, "How to Transfer Photos from Android
+  to a USB Drive"
+  (https://www.groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — transfer photos from Android to a USB drive by drag and
+  drop through a PC, or with a USB-C dual drive plugged
+  straight into the phone. A generic Android guide — it says
+  nothing about Vernee);
+  appbrain.com, "Photos to USB: OTG Backup"
+  (https://www.appbrain.com/app/photos-to-usb-otg-backup/com.arzdrz.photos_to_usb
+  — an app listing for a phone-to-USB backup app that copies
+  the gallery to a pen drive in one tap. An app listing, not
+  a guide — and it says nothing about Vernee);
+  en.windowsnoticias.com, "How to transfer photos from
+  the mobile to a flash drive"
+  (https://en.windowsnoticias.com/how-to-transfer-photos-from-your-phone-to-a-pendrive/
+  — transfer photos from a phone to a flash drive with a
+  USB OTG adapter and a file manager, or through a computer.
+  A generic Android guide — it says nothing about Vernee).
+- The one-tap route is proven on twelve phones —
+  the Mars Pro, Mix 2, Thor E, Thor Plus, Active, X, X1,
+  V2 Pro, M7, M8 Pro, Apollo 2 and T3 Pro all clear
+  Android 7.0 and list USB OTG Yes — and two more work if
+  the unit runs 7.0: the Thor shipped on 6.0 with a 7.0
+  update reported, and the Apollo X is listed at 6.0 by
+  Smartprix and 7.0 by UL Benchmarks. Four need the
+  mounting test: the M5 and the M6, where OTG is contested
+  between Smartprix and FindPare; the M3, whose only OTG
+  verdict is FindPare's No; and the X2, where OTG is
+  unstated in every source. Three run below Android 7.0
+  and cannot run SnapDisk at all — the Apollo, the Apollo
+  Lite and the Mars, all on Android 6.0 with no upgrade on
+  record. A microSD card fits twenty phones for certain —
+  each has a slot — so the card-reader route is proven on
+  twenty, and the slot is contested on the Apollo 2.
+  VaultDrive needs Android 8 or later per its own site, so
+  seven clear the version floor on shipped software — the
+  V2 Pro, M7, M8 Pro, T3 Pro, X2, M3 and Apollo 2 — and
+  AppBrain lists 12.1 or later, which none clears, since
+  the highest shipped version is 9.0. FotoSafe needs
+  Android 9 or later with USB host or OTG support, so none
+  is proven outright — the M7 clears only on the 9.0
+  listings, and the X2 clears the version floor only on
+  its 9.0 listings with OTG unstated. Vernee has no
+  phone-to-USB backup tool of its own — no Vernee-specific
+  backup advice turned up in any source beyond a computer
+  copy, Google Drive or Google Photos — the closest thing
+  is the per-model backup FAQ, which names the computer
+  copy as the most economical method. Vernee was founded
+  in February 2016 and discontinued in February 2020;
+  GSMchoice lists 20 Android models and Wikipedia 19, and
+  this article covers twenty-one mainline ones.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 20, 2026 (WL-154, 122nd how-to):
+  docs/vernee-photos-to-usb.html.
+  Fallback for WL-155: Homtom — verified absent, no
+  docs/homtom-photos-to-usb.html and no searches.md row
+  (0 mentions of Homtom in searches.md).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
