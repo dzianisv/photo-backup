@@ -11966,6 +11966,92 @@ demand is read off competitor install velocity instead (see
   Fallback for WL-153: BLU — verified absent, no
   docs/blu-photos-to-usb.html and no searches.md row.
 
+### 120. "back up BLU photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a BLU-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  BLU-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and all sixteen
+  covered BLU phones clear Android 7.0, so the one-tap
+  route is proven on eleven outright, with five needing
+  the mounting test.
+- Current top results (scored Nov 20, 2026, live web
+  search):
+  fonelab.com, "How to Transfer Photos from Android to
+  Flash Drive in 3 Easy Ways"
+  (https://www.fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html
+  — transfer photos from Android to a flash drive with a
+  USB OTG adapter and the Files app, or through a PC with
+  FoneLab HyperTrans, or with Samsung Smart Switch. A
+  generic Android guide — it says nothing about BLU);
+  drfone.wondershare.com, "4 Practical Ways to Transfer
+  Photos from Android to USB Flash Drive"
+  (http://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from Android to a USB flash drive by
+  Google Drive, by drag and drop through a PC, by OTG
+  adaptor, or by AirDroid. A generic Android guide — it
+  says nothing about BLU);
+  askfilo.com, "how to transfer pictures from an android
+  phone to a flashdrive"
+  (https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — transfer pictures from an Android device to a USB
+  flash drive with a USB OTG adapter and a file manager,
+  or through a computer as a middleman. A generic Android
+  Q&A — it says nothing about BLU);
+  groovypost.com, "How to Transfer Photos from Android
+  to a USB Drive"
+  (https://www.groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — transfer photos from Android to a USB drive by
+  drag and drop through a PC, or with a USB-C dual drive
+  plugged straight into the phone. A generic Android guide
+  — it says nothing about BLU).
+- The one-tap route is proven on eleven phones —
+  the Bold N1, Bold N2, Bold N3, G9 Pro, G90, G90 Pro,
+  G91 Pro, G91 Max, G93, F91 and S91 Pro all clear
+  Android 7.0 and list USB OTG Yes — and five need the
+  mounting test: the G9, G91, Vivo XI, Vivo XI+ and
+  Vivo XL4, where OTG is contested or unstated in every
+  source. All sixteen clear Android 7.0 — the lowest
+  runs Android 8.1 — so SnapDisk installs on all
+  sixteen, and there is no below-7.0 phone in this
+  article. A microSD card fits fourteen phones for
+  certain — each has a slot — so the card-reader route
+  is proven on fourteen, and the slot is contested on
+  the Bold N2 and the Bold N3. The Bold N2's microSD
+  card is contested — phonemore says no slot, droidafrica
+  says up to 2 TB, blucellphones.us says up to 256 GB;
+  the Bold N3's is contested too — gsmfind, phonesdata,
+  Smartprix and Assuredzone say no slot, droidafrica
+  says up to 512 GB. The G9 Pro's microSD ceiling is
+  two numbers — up to 128 GB per phonesdata, gsm-arena,
+  droidafrica, phonecorridor and Smartprix, up to 512 GB
+  per PhoneArena; the Vivo XI's is two numbers too — up
+  to 128 GB per BLU's own page, gsm-arena and Smartprix,
+  up to 512 GB per phonemore — and so is the Vivo XI+'s
+  — up to 128 GB per GSMArena, PhoneArena, phonesdata
+  and gsm-arena, up to 512 GB per phonemore. VaultDrive
+  needs Android 8 or later per its own site, so all
+  sixteen clear the version floor on shipped software —
+  and AppBrain lists 12.1 or later, which two clear —
+  the Bold N3 and the G93, both on Android 13. FotoSafe
+  needs Android 9 or later with USB host or OTG support,
+  so thirteen clear the version floor on shipped
+  software — the Vivo XI and Vivo XI+ clear only after
+  the planned Android 9 upgrade, and the Vivo XL4 has
+  no Android 9 upgrade on record. BLU has no
+  phone-to-USB backup tool of its own — no BLU-specific
+  backup advice turned up in any source beyond a
+  computer copy, Google Drive or Google Photos — the
+  closest thing is the per-model backup FAQ, which names
+  the computer copy as the most economical method.
+  BLU lists 84 Android models per android.gs; this
+  article covers the sixteen mainline ones.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 20, 2026 (WL-153, 121st how-to):
+  docs/blu-photos-to-usb.html.
+  Fallback for WL-154: to be named by the supervisor; no
+  brand verified in this run.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
