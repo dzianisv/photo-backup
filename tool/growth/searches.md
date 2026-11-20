@@ -10777,6 +10777,144 @@ demand is read off competitor install velocity instead (see
   Article published Nov 19, 2026 (WL-143, 111th how-to):
   docs/alcatel-photos-to-usb.html.
 
+### 111. "back up Yezz photos to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a Yezz-specific guide
+  to backing up photos to a USB drive at all, let alone a
+  Yezz-specific automated whole-library backup with
+  progress, Pause/Stop, and resume — and fourteen covered
+  Yezz phones run below Android 7.0, so SnapDisk does not
+  install on them at all.
+- Current top results (scored Nov 19, 2026, live web
+  search):
+  drfone.wondershare.com, "4 Practical Ways to Transfer Photos
+  from Android to USB Flash Drive"
+  (drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — transfer photos from an Android phone to a USB flash drive
+  by connecting them directly with an OTG adaptor, using a PC
+  as a middleman via USB File Transfer mode, or downloading
+  them wirelessly through Google Drive or AirDroid; for direct
+  transfers without a computer, connect a USB-C OTG adaptor
+  from the phone to the flash drive and copy files using the
+  USB Drive option in the Android notification tray. A generic
+  Android guide — it says nothing about Yezz);
+  askfilo.com, "how to transfer pictures from an android phone
+  to a flashdrive"
+  (askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — to transfer photos directly from your Android device to a
+  USB flash drive, you will typically need a USB OTG adapter if
+  your flash drive does not have a native USB-C connector that
+  fits your phone; open your File Manager app, look for the
+  folder named DCIM and then open the Camera folder. A generic
+  Android guide — it says nothing about Yezz);
+  youtube.com, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (youtube.com/watch?v=PYcbV25CczI — the best and most direct
+  method for moving photos and videos from any modern Android
+  phone to a USB drive is a USB On-The-Go (OTG) connection and
+  the phone's built-in file manager app; it needs Android 7.0
+  or newer and a USB-C or micro-USB OTG adapter. A generic
+  Android video guide — it says nothing about Yezz);
+  epictechtips.com, "How to Transfer Pictures from Android
+  Phone to USB Flash Drive"
+  (epictechtips.com/transfer-pictures-from-android-phone-to-usb-flash-drive/
+  — transferring pictures from your Android phone to a USB
+  flash drive is a simple way to free up space and back up
+  your memories; plug the flash drive into your Android
+  device, tap the USB charging notification and select
+  "Transfer photos", or use a PC as an intermediary. A generic
+  guide — it says nothing about Yezz);
+  sekin.in, "Transfer Photos From Android to a USB Flash Drive"
+  (sekin.in/how-to-transfer-pictures-from-android-to-a-usb-flash-drive/
+  — you can copy pictures directly from most compatible
+  Android phones and tablets to a USB flash drive without a
+  computer or internet connection; connect a USB-C flash drive,
+  or connect a conventional USB-A drive through a USB-OTG data
+  adapter, then use Files by Google to select the pictures and
+  choose Copy — not Move. A generic guide — it says nothing
+  about Yezz).
+- The one-tap route is proven on zero phones — no covered
+  Yezz phone lists USB OTG in any source found; eighteen clear
+  Android 7.0 but no source states OTG for any of them — the
+  Andy 5E5, Max 1, Max 1 Plus, LIV1, Liv 1s, GO 1, Art 1, Art
+  1 Pro, Art 2 Pro, Art 3S, Max 2, Max 2 Plus, Max 2 Ultra,
+  Liv 3 LTE, Liv 3S LTE, Max 3, Max 3 Plus and Max 3 Ultra —
+  so on those eighteen SnapDisk installs but the one-tap route
+  is unproven until a drive mounts; one more clears Android
+  7.0 but lists OTG No — the Art 3 Lite — so on that one there
+  is no phone route at all; fourteen run below Android 7.0 and
+  cannot run SnapDisk at all — the Andy 3G, Andy 4EI, Andy
+  4EI2, Andy 5EI3 (2015), Andy 6Q, Andy 4.7T, Andy 5E LTE,
+  Andy 4.5EL LTE, Andy C5E LTE, Andy 5.5M LTE VR, Andy 5M VR,
+  Andy 5E3, Andy 5EI3 (2016) and Andy 4E4. Four take USB
+  Type-C — the Art 2 Pro, Art 3 Lite, Art 3S and Max 3 Ultra —
+  so a USB-C drive plugs straight into those four; fifteen
+  take micro-USB, and the Liv 1s is disputed between the two.
+  All nineteen that clear Android 7.0 take a microSD card, so
+  the card-reader route works on all nineteen of them, with
+  the ceilings disputed on four; below 7.0, only the Andy 5E3
+  and the Andy 5M VR are verified to take a card at all.
+- Conflicts between sources, all named in the article: the
+  Andy 5EI3 (2015)'s Android is two numbers — 4.4 per
+  phonearena, 5.0 per devicesfaq — and its RAM is two numbers
+  — 0.5 GB per phonearena, 1 GB per devicesfaq; the Max 1's
+  battery is two listings — removable per eIMEI24,
+  non-removable per mobilegizmo's compare; the Max 1 Plus's
+  rear camera is two listings — a dual 8 MP + 0.3 MP rear
+  camera per phonesdata and eIMEI24, no rear camera at all per
+  specspro — and its microSD ceiling is two numbers — up to
+  64 GB per phonesdata, microSDXC with no ceiling per eIMEI24;
+  the LIV1's microSD ceiling is two numbers — up to 64 GB per
+  phonesdata, microSDXC with no ceiling per eIMEI24; the Liv
+  1s's connector is two listings — microUSB 2.0 per eIMEI24,
+  Type-C per the manuals.plus user manual; the Art 1 Pro's
+  release is two dates — November 2020 per GSMArena and
+  eIMEI24, August 2020 per phonesdata; the Art 3 Lite's second
+  camera is two numbers — 0.3 MP per phonesdata, 2 MP per
+  deviceempire; the Art 3S's release is two dates — September
+  2022 per phonesdata, January 2023 per devicesfaq and
+  mobileprice247 — and its main camera is two numbers — 16 MP
+  per phonesdata and philnews, 160 MP per devicetechy, a typo
+  — and its microSD ceiling is two listings — microSDXC with
+  no ceiling per phonesdata, 32 GB–2 TB per phoneswiz; the Max
+  2's battery is two numbers — 2500 mAh per philnews and
+  gadgetsfocus's own spec table, 2600 mAh in gadgetsfocus's
+  body text; the Max 2 Plus's battery chemistry is two
+  listings — Li-Polymer per pkgsm, Li-Ion removable per
+  eIMEI24 and phonesdata; the Max 3's third camera is two
+  numbers — 2 MP per phonesdata, 0.3 MP per gadgetsfocus —
+  and its microSD ceiling is two listings — microSDXC with no
+  ceiling per phonesdata, up to 128 GB per gadgetsfocus; the
+  Max 3 Plus's battery chemistry is two listings — Li-Poly per
+  mobileprice247, Li-Ion per phonesdata. Devicesfaq says apps
+  keep updating from Google Play on covered Yezz models — no
+  Kimovil GMS listing was found for Yezz — so Play is the
+  install route on all covered models once the listing is
+  live, and the GitHub APK sideload stays the route only until
+  then.
+- VaultDrive needs Android 8 or later per its own site, so
+  all nineteen can run it — the Andy 5E5, Max 1, Max 1 Plus,
+  LIV1, Liv 1s, GO 1, Art 1, Art 1 Pro, Art 2 Pro, Art 3 Lite,
+  Art 3S, Max 2, Max 2 Plus, Max 2 Ultra, Liv 3 LTE, Liv 3S
+  LTE, Max 3, Max 3 Plus and Max 3 Ultra — and AppBrain lists
+  12.1 or later, which no covered Yezz phone clears, since
+  the newest covered model runs Android 12. FotoSafe needs
+  Android 9 or later with USB host or OTG support, so
+  eighteen of the nineteen clear the version floor — all but
+  the Andy 5E5 on 8.0 — but the OTG condition is proven on
+  none of the eighteen — the Art 3 Lite lists OTG No, and no
+  source states OTG for the other seventeen — so FotoSafe is
+  proven on zero of the nineteen until a drive mounts. Yezz
+  has no phone-to-USB backup tool of its own — no
+  Yezz-specific backup advice turned up in any source beyond
+  a computer copy, Google Drive, or Google Photos; the
+  devicesfaq backup FAQ names the computer copy as the most
+  economical method, and names the file manager on a Yezz
+  phone as Files, or Files by Google.
+- Verdict: how-to article material, not a listing keyword.
+  Article published Nov 19, 2026 (WL-144, 112th how-to):
+  docs/yezz-photos-to-usb.html.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
