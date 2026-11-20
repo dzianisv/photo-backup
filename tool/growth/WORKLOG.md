@@ -1,5 +1,59 @@
 # SnapDisk — Work Log
 
+## WL-146 — Back up Wileyfox photos to USB article, 114th how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #261 MERGED (merge commit 8a071bf, merged
+  2026-11-20T02:41:07Z; PR head CI run 44662095957 build pass,
+  1m6s; post-merge main runs Android PR 44662551531 + pages
+  44662551071 success on 8a071bf). Live fetch verified by
+  the supervisor: wileyfox-photos-to-usb.html 200 (correct
+  title), feed.xml 114 items live incl. Wileyfox.
+  Query 113 verified by the lead from live evidence (no top
+  result is a Wileyfox-specific phone-to-USB photo-backup
+  guide); top results are five generic Android guides
+  (askfilo, a YouTube OTG video, Dr.Fone, FotoSafe guide,
+  groovypost) — none mentions Wileyfox; real gap stands.
+  Supervisor re-score from a fresh live re-search: same top
+  5, plus sekin.in generic as 6th — none mentions Wileyfox.
+  New docs/wileyfox-photos-to-usb.html ("Back up Wileyfox
+  photos to a USB drive (no computer)"), following the
+  WL-54–WL-145 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption: the one-tap route is proven
+  on zero covered Wileyfox phones — Swift 2 and Swift 2 Plus
+  list USB OTG No, Swift 2 X OTG unstated; the five below
+  Android 7.0 cannot install SnapDisk at all, so on those
+  the file-manager copy / computer copy / card-reader route
+  is the backup).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 38 chars, meta
+  description 157 chars, JSON-LD validated by parse
+  (article + blog index); sitemap and feed XML parse; feed
+  now counts 114 items; blog JSON-LD counts 114 BlogPosting
+  entries. searches.md Query 113 row present ("back up
+  Wileyfox photos to USB drive without computer" — HOW-TO
+  GAP).
+  Key finding: 3 of 8 covered Wileyfox phones clear Android
+  7.0 (Swift 2, Swift 2 Plus, Swift 2 X — shipped 6.0.1,
+  updated to 7.1.1, then to 8.1), but the one-tap route is
+  proven on 0 of 8 — Swift 2 and Swift 2 Plus list USB OTG
+  No (FindPare; an XDA owner tested the 2 Plus — adapters
+  don't work), Swift 2 X OTG unstated; the other five
+  (Swift, Storm, Spark, Spark+, Spark X) run below 7.0 and
+  cannot install SnapDisk at all; all 8 take a microSD card,
+  so the card-reader route works on all 8; VaultDrive clears
+  its Android 8 floor on 3 of 8 but is proven on 0; FotoSafe
+  clears its Android 9 floor on 0 of 8.
+  Lead's handoff carried one failed exec (exit 128 git
+  worktree add — branch didn't exist yet, retried with -b,
+  succeeded); all receipts independently verified by
+  readback, no effect.
+  Fallback for WL-147: Volla — verified by the lead, no
+  docs/volla-photos-to-usb.html and no searches.md row
+  (Shiftphone also absent as backup).
+
 ## WL-145 — Back up Zopo photos to USB article, 113th how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
