@@ -1,3 +1,74 @@
+## WL-154 — Back up Vernee photos to USB article, 122nd how-to (DONE)
+
+- Owner: SEO/GEO lane lead. State: DONE.
+  Article PR #279 OPEN, pending supervisor merge (PR head
+  0eb78f4, CI run 44723275441 build pass, conclusion
+  success; merge commit, merged time and post-merge main
+  runs to be recorded by the supervisor on merge).
+  Query 121 verified by the lead from live evidence (no top
+  result is a Vernee-specific phone-to-USB photo-backup
+  guide); the exact query returned five results, all generic
+  Android (softhandtech guide, FoneLab guide, groovypost
+  guide, AppBrain Photos to USB listing, Windows Noticias
+  guide) — none mentions Vernee; real gap stands.
+  New docs/vernee-photos-to-usb.html ("Back up Vernee photos
+  to a USB drive (no computer)"), following the
+  WL-54–WL-153 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt, feed.xml updated. Title 50 chars, meta
+  description 129 chars, JSON-LD validated by parse
+  (Article + FAQPage 4 Qs + BreadcrumbList, datePublished
+  2026-11-20); sitemap 126 URLs and feed 122 items; blog
+  JSON-LD counts 122 BlogPosting entries. searches.md Query
+  121 row present ("back up Vernee photos to USB drive
+  without computer" — HOW-TO GAP).
+  Key finding: sixteen of the twenty-one covered Vernee
+  phones clear Android 7.0, so SnapDisk installs on
+  sixteen; the one-tap route is proven on 12 (OTG Yes),
+  and 2 more work if the unit runs 7.0 (Thor, reported 7.0
+  update; Apollo X, listed 6.0 by Smartprix and 7.0 by UL
+  Benchmarks). Four need the mounting test (M5, M6, M3,
+  X2). Three run below 7.0 and cannot run SnapDisk at all
+  (Apollo, Apollo Lite, Mars, all Android 6.0, no upgrade
+  on record). microSD fits 20 for certain; slot contested
+  on Apollo 2; ceilings contested on six (Apollo, Apollo
+  Lite, Mars, Apollo X, M3, M7). VaultDrive proven on 7
+  under its own site's Android 8 floor (V2 Pro, M7, M8 Pro,
+  T3 Pro, X2, M3, Apollo 2), on 0 under AppBrain's 12.1
+  (highest shipped version is 9.0); FotoSafe proven on 0
+  outright (M7 clears only on the 9.0 listings; X2 clears
+  the version floor only on its 9.0 listings with OTG
+  unstated). 12 USB-C, 9 micro-USB. Vernee founded February
+  2016, discontinued February 2020; GSMchoice lists 20
+  models, Wikipedia 19; this article covers twenty-one
+  mainline ones.
+  Link verification 73 unique URLs, all fetched live —
+  51x200, 18x403, 2x000, 1x301, 1x404; every non-200 was
+  verified live via browser search snippets or browser.open
+  the same day (bot-blocking / timeouts, not missing
+  content). The 301 is umatechnology http→https; the
+  article link was updated to https after the redirect was
+  verified live. The 404 is this article's own canonical
+  URL, not yet published — the supervisor's live fetch
+  after merge will confirm it.
+  Lead's failed execs: one muse.exec exited 1 because
+  grep -n "Back up BLU" docs/llms-full.txt found no match
+  — informative, not a failure (llms-full.txt carries
+  articles as single-paragraph lines, no heading); a
+  throwaway validation script hit KeyError 'itemListElement'
+  (wrong assumption about the blog JSON-LD structure) —
+  re-run with a structure-agnostic walk validated 122
+  BlogPosting entries; the curl link-verification exec
+  backgrounded after 122 s and was re-run as a clean
+  single pass. No supervisor-side execs yet (pending
+  merge).
+  Fallback for WL-155: Homtom — verified by the lead, no
+  docs/homtom-photos-to-usb.html and no searches.md row
+  (0 mentions of Homtom in searches.md).
+
 ## WL-153 — Back up BLU photos to USB article, 121st how-to (DONE)
 
 - Owner: SEO/GEO lane lead. State: DONE.
