@@ -1,3 +1,65 @@
+## WL-181 — Back up photos to USB before lending your phone article, 149th how-to (LEAD DRAFT — supervisor settles)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: LEAD DRAFT.
+  Article on branch wl-181-lending (head 3a51f02, pushed; no PR —
+  the supervisor merges). Article 53,214 B, title 47 chars, meta
+  134 chars, 1 H1, 10 H2s, 1 script tag, TL;DR present, JSON-LD
+  parses (Article + FAQPage 4 Qs + BreadcrumbList, datePublished
+  2026-11-21).
+  New docs/lending-phone-photos-to-usb.html ("Back up photos to USB
+  before lending your phone"), following the WL-54–WL-180 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption). Title 47 chars (below the
+  48–53-char template band; the full "lending your phone to
+  someone" phrasing is carried in the dek, TL;DR, and searches
+  row), meta 134 chars. Blog index (JSON-LD + post block),
+  sitemap.xml, llms.txt, llms-full.txt (full lending section),
+  feed.xml updated; searches.md Query 148 row added.
+  Query 148 scored honestly from live evidence: no "no guide
+  exists" claim. Named competitors: Techsith "How Do I Get All My
+  Pictures Off My Phone?" (generic cable/cloud/drive, manual, the
+  only one with a phone-to-USB step), Alibaba's full-smartphone
+  guide (manual file-manager copy, upgrade/theft framing),
+  MobileTrans "Back Up a Phone to USB Without Cloud Storage"
+  (closest — phone-to-USB, but manual and general), MakeUseOf's
+  old mobile backup guide (cloud + PC cable), RottenWifi's six
+  upload methods (external storage one row in a table), Android
+  Central's use-your-phone-as-a-hard-drive (old, phone-as-drive
+  to a PC). A rival one-tap app listing also surfaced (Photos to
+  USB: OTG Backup, Play) — a listing, not a guide, no lending
+  framing. Gap stands only on the whole-library one-tap
+  phone-to-USB backup framed for the before-lending moment, and
+  only because none of the six mentions SnapDisk. WL-180 repair +
+  WL-175 selling-phone articles named in-article as adjacent
+  ground.
+  Key finding: lending is NOT selling or repair — the phone comes
+  back, so the risks are accidental deletion by the borrower and
+  snooping, not a shop wipe. SnapDisk copies, it never deletes
+  and it never locks — the backup protects the photos, it does not
+  keep the borrower out of them; the lock-down (guest profile,
+  screen pinning, app lock) is a separate phone step, described
+  as what the phone itself can do, never as a SnapDisk feature.
+  The backup must COMPLETE and be verified on the drive BEFORE
+  handing the phone over — a deletion has no undo; keep the drive
+  at home, never hand it to the borrower. Screen-off continuation
+  under battery saver UNVERIFIED (no WakeLock/Doze code), stated
+  plainly in-article.
+  SnapDisk behaviour verified from the repo: minSdk 24, Pro
+  $9.99 auto-backup on connect + unlimited, free 5 GB/run with
+  resume (skip-if-exists + .part resume + size verification),
+  oldest-first DATE_TAKEN, copies never deletes, FAT32 >=4 GB
+  skipped and listed, From-picker OpenDocumentTree SAF,
+  dataSync foreground service 6h budget (WL-34).
+  Link verification this run: all 6 external URLs checked —
+  alibaba 200, mobiletrans 200, rottenwifi 200, androidcentral
+  200, techsith 000 (bot protection) and makeuseof 000 (bot
+  protection), both browser-verified live; 0 SnapDisk mentions in
+  every fetched page. Own canonical 404 pre-merge (expected —
+  live only after merge).
+  Articles 148 → 149 (148 scored queries). Board: 0 open issues,
+  0 open PRs (per WL-180 settle; re-check at merge).
+
 ## WL-180 — Back up photos to USB before your phone repair article, 148th how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
