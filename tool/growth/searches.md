@@ -15758,8 +15758,8 @@ demand is read off competitor install velocity instead (see
   photo-backup guide at all, let alone a CMF-specific
   automated whole-library backup with progress, Pause/Stop,
   and resume — the top results are our own Nothing Phone
-  article, generic manual guides, a PC troubleshooting
-  guide, and spec tables.
+  article, generic manual guides, a guided-app guide
+  (FotoSafe), a PC troubleshooting guide, and spec tables.
 - Current top results (scored Nov 21, 2026, live web search):
   our own Nothing Phone article
   (https://dzianisv.github.io/photo-backup/nothing-phone-photos-to-usb.html
@@ -15783,6 +15783,24 @@ demand is read off competitor install velocity instead (see
   a computer as a middleman. Generic Android, not written
   for CMF; curl 200, 0 SnapDisk mentions in the fetched
   page);
+  FotoSafe guide
+  (fotosafe.weidisoft.net/en/guides/back-up-android-photos-
+  to-usb/ — a guided app backup, and the closest near-miss
+  in the results: connect the drive, select it in FotoSafe,
+  review the media, and start copying, with a preview and
+  automatic skipping of files already backed up. One run up
+  to 100 media files is free, then further runs need the
+  one-time Pro purchase. A real guided backup to a USB
+  drive — but generic Android, not written for CMF; curl
+  200, 0 SnapDisk mentions in the fetched page);
+  GroovyPost, "How to Transfer Photos from Android to a USB
+  Drive"
+  (groovypost.com/howto/transfer-photos-from-android-to-a-
+  usb-drive/ — a generic manual guide: copy to a PC over a
+  USB cable with MTP, or plug a USB-C dual drive straight
+  into the phone and copy photos across in the Files app by
+  hand. Generic Android, not written for CMF; curl 403,
+  browser-verified live via search this run);
   eyefi.com forum thread
   (https://eyefi.com/t/what-s-the-best-way-to-move-photos-from-my-android-phone-to-a-flash-drive/1121
   — a forum answer with the same generic OTG-cable steps,
