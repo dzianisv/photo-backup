@@ -15460,14 +15460,15 @@ demand is read off competitor install velocity instead (see
 
 ### 149. "back up photos to USB before unlocking the bootloader / rooting / flashing a custom ROM" — HOW-TO GAP
 - Volume: unknown (Play publishes no volume).
-- Difficulty: Low. The exact query DOES return real guides — five
+- Difficulty: Low. The exact query DOES return real guides — eight
   of them: UMA Technology's backup-before-flashing checklist,
   PrivacyPortal's bootloader guide, Sod Calculator's custom-ROM
-  guide, Awesome Android Root's unlock guide, and RottenWifi's
-  unlock guide — plus our own factory-reset, repair, and
-  selling-phone articles. All five frame backup as a step inside
-  a flashing or unlock guide, with computer, cloud, or
-  manual-copy routes. None of the five is a whole-library
+  guide, Awesome Android Root's unlock guide, RottenWifi's
+  unlock guide, Coolmuster's before-rooting guide, and MobiKin's
+  before-rooting and before-unlocking guides — plus our own factory-reset, repair, and
+  selling-phone articles. All eight frame backup as a step inside
+  a flashing, unlock, or rooting guide, with computer, cloud, or
+  manual-copy routes. None of the eight is a whole-library
   one-tap phone-to-USB backup framed for the before-unlock
   moment, and none of them mentions SnapDisk.
 - Current top results (scored Nov 21, 2026, live web search):
@@ -15524,6 +15525,15 @@ demand is read off competitor install velocity instead (see
   and it says nothing about SnapDisk; curl 000 (bot
   protection), browser-verified live, no SnapDisk in the
   fetched page text).
+  coolmuster.com, "How to Back Up Android Phone Before Rooting"
+  (https://www.coolmuster.com/android/backup-android-phone-before-rooting.html
+  — the before-rooting guide: three methods — Coolmuster Android Backup Manager (a PC tool, one-click backup to a computer), Google account backup, and AutoPlay to a PC. A real guide, framed for the before-rooting moment — but every route is a computer or cloud copy, it says nothing about a phone-to-USB copy, and it says nothing about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page);
+  mobikin.com, "How to Back Up Android Phone before Rooting"
+  (https://www.mobikin.com/android-backup/backup-android-before-root.html
+  — the before-rooting guide: six means — a PC copy over USB, MobiKin Assistant for Android (PC/Mac), Android Backup & Restore, Google account backup, Google Photos, and SMS Backup+. A real guide, framed for the before-rooting moment — but every route is a computer or cloud copy, it says nothing about a phone-to-USB copy, and it says nothing about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page);
+  mobikin.com, "Best 6 Ways to Back Up Android before Unlocking Bootloader"
+  (https://www.mobikin.com/android-backup/backup-android-before-unlocking-bootloader.html
+  — the before-unlocking guide: MobiKin Backup Manager (PC/Mac) plus brand routes — Smart Switch (Samsung), Rescue and Smart Assistant (Motorola), Huawei Cloud, Mi PC Suite (Xiaomi/Redmi), OPPO Cloud. A real guide, framed for the before-unlock moment — but every route is a computer or cloud backup, it says nothing about a phone-to-USB copy, and it says nothing about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page);
   Our own factory-reset article also surfaced — the same
   one-tap copy, framed for a reset you chose — but its moment
   is the reset, not the unlock: a reset wipes the phone and
