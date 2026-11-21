@@ -1,12 +1,8 @@
 ## WL-182 — Back up photos to USB before rooting your phone article, 150th how-to
 
-- Owner: SEO/GEO lane lead + supervisor settle. State: DONE (article
-  written, indexes updated, pushed; no PR — the supervisor merges).
-  Evidence: article commit ca89fc1 on branch wl-182-rooting, pushed
-  to origin (based on main eec5b63). Article 53,464 B, title 47
-  chars, meta 134 chars, 1 H1, 10 H2s, 1 script tag, TL;DR present,
-  JSON-LD parses (Article + FAQPage 4 Qs + BreadcrumbList,
-  datePublished 2026-11-21).
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Evidence: article PR #337 MERGED (merge e07b990, 2026-11-21T13:44:00Z; PR head af5963c, CI run 44910201048 build pass 49s; post-merge main runs Android PR 44910324224 + pages 44910323540 success). Live: rooting article 200 (53,576 B, correct title), feed.xml 150 items incl. rooting. Article 53,576 B, title 47 chars, meta 134 chars, 1 H1, 10 H2s, 1 script tag, TL;DR present, JSON-LD parses (Article + FAQPage 4 Qs + BreadcrumbList, datePublished 2026-11-21).
+  SCORING FIX BEFORE MERGE: supervisor's fresh re-score surfaced three on-moment guides the lead missed — Coolmuster "How to Back Up Android Phone Before Rooting", MobiKin "How to Back Up Android Phone before Rooting", MobiKin "Best 6 Ways to Back Up Android before Unlocking Bootloader" (all curl 200, 0 SnapDisk mentions) — the dek's "five of them" was inaccurate as written; fix commits (31c1caf article, cca5a9a searches, af5963c worklog) named all eight as closer near-misses, gap stands only on the whole-library one-tap angle. Branch wl-182-rooting deleted (404 verified); branch list main only. Articles 149 → 150 (149 scored queries). Board: 0 open issues, 0 open PRs.
   New docs/rooting-photos-to-usb.html ("Back up photos to USB
   before rooting your phone"), following the WL-54–WL-181 article
   template exactly (navy/cyan, TL;DR first, no JS, text-only,
