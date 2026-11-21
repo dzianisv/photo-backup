@@ -937,6 +937,12 @@
           "headline": "Back up photos to USB before rooting your phone",
           "url": "https://dzianisv.github.io/photo-backup/rooting-photos-to-usb.html",
           "datePublished": "2026-11-21"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Back up photos to USB before a child uses your phone",
+          "url": "https://dzianisv.github.io/photo-backup/child-photos-to-usb.html",
+          "datePublished": "2026-11-21"
         }
       ]
     },
@@ -1870,6 +1876,11 @@
   <p class="meta">November 21, 2026 · 9 min read</p>
 </article>
 
+</article>
+<article class="post">
+  <h2><a href="../child-photos-to-usb.html">Back up photos to USB before a child uses your phone</a></h2>
+  <p class="excerpt">Your child is about to use your phone and it holds the only copy of months of photos — a child taps everything, and a deleted photo has no undo. The honest caveats, up front: the exact query DOES return real guides — five of them — Android Authority&#x27;s back-up-your-Android-phone guide, Android Central&#x27;s transfer-photos-to-PC-or-back-them-up-in-the-cloud guide, Android Police&#x27;s back-up-your-Android-phone-or-tablet guide, TheUnlockr&#x27;s backup-data-on-an-Android-phone guide, and the Times of India&#x27;s backing-up-Android-phone guide — and all five are generic cloud, PC, or manual-copy routes — and none of the five is a whole-library one-tap phone-to-USB backup framed for the before-hand-to-a-child moment, and none of them mentions SnapDisk — that angle is the gap this article fills; this moment is NOT lending and NOT selling or repair — the phone comes back, so the risk is accidental deletion by the child, not snooping by an adult borrower and not a shop wipe; SnapDisk copies, it never deletes and it never locks — the backup protects the photos, it does not keep the child out of them, and the lock-down is a separate phone step; the backup must COMPLETE and be verified on the drive BEFORE you hand the phone over — a deletion has no undo — and keep the drive at home, never hand it to the child; SnapDisk backs up photos and videos ONLY — nothing else on the phone is at risk from a child except in-app purchases, which are a store setting, not a backup matter; cloud-only originals are a trap — Google Photos backup can be off, device folders like WhatsApp and screenshots may never have been switched on, and storage saver uploads are compressed copies, not originals, so check photos.google.com before trusting the cloud; this route is only for a phone that still works and has a dry, undamaged port — never plug anything into a damaged port, and a dead phone is a repair-lab job only; one USB-C port holds the drive OR the charger, not both — charge first, or use a powered hub with pass-through charging, which is standard USB-C behaviour but unverified with SnapDisk; a portable SSD may need a powered hub — the phone alone may not supply enough power for both the hub and the drive; SnapDisk needs Android 7.0 or later — minSdk 24 in the repo — and it is not on Google Play yet, so install the v0.1.2 APK from GitHub; the free version backs up manually up to 5 GB per run — run it again past the cap and it picks up where it stopped, because files already copied are never copied twice — and Pro is a one-time $9.99 purchase that auto-starts the backup on connect and removes the size limit; the screenshot below is from SnapDisk on a phone — it is the same settings screen you will see, because this article is about a phone; the From folder is a picker, not a fixed path — tap it, browse to the phone&#x27;s storage, and choose the folder that holds the photos, which the picker reaches because it is the system folder picker, verified in the repo as OpenDocumentTree; drives formatted FAT32 cannot hold a single file over 4 GB — SnapDisk skips those files and lists them instead of failing the whole backup, per the repo README — so use exFAT; a spinning hard drive may need its own power; SnapDisk&#x27;s copy runs as a foreground service — the mechanism Android gives a copy that must keep running with the screen off — but the repo holds no wake lock and no battery-saver handling, and no before-child run has ever been tested, so screen-off continuation under battery saver is unverified, and this article says so instead of promising it; Android 15 and later give a dataSync foreground service 6 hours in 24 hours — if the copy runs past that, Android pauses it, and opening the app resets the timer; and SnapDisk copies, it never deletes — the phone stays a second copy until you have opened photos on the drive and checked them, and the drive stays at home once the copy is done. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 21, 2026 · 9 min read</p>
 </article>
 
 <a href="../">SnapDisk</a> ·
