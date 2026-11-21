@@ -15618,6 +15618,140 @@ demand is read off competitor install velocity instead (see
   drafted Nov 21, 2026 (WL-182, 150th how-to):
   docs/rooting-photos-to-usb.html — branch wl-182-rooting.
 
+### 150. "back up photos to USB before letting your child use your phone" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return real guides — five
+  of them: Android Authority's back-up-your-Android-phone guide,
+  Android Central's transfer-photos-to-PC-or-back-them-up-in-the-cloud
+  guide, Android Police's back-up-your-Android-phone-or-tablet guide,
+  TheUnlockr's backup-data-on-an-Android-phone guide, and the Times
+  of India's backing-up-Android-phone guide — plus our own
+  lending-phone and selling-phone articles. All five frame backup as
+  a general Android backup, with cloud, PC, or manual-copy routes.
+  None of the five is a whole-library one-tap phone-to-USB backup
+  framed for the before-hand-to-a-child moment, and none of them
+  mentions SnapDisk.
+- Current top results (scored Nov 21, 2026, live web search):
+  androidauthority.com, "How to back up your Android phone"
+  (https://www.androidauthority.com/android-phone-backup-guide-desktop-computer-local-how-to-75652/
+  — the general backup guide: Google One cloud backup, Amazon Photos
+  and OneDrive, and backing up to a computer. A real guide — but its
+  photo route is the cloud or a PC, its moment is a general backup,
+  and it says nothing about SnapDisk; curl 200, 0 SnapDisk mentions
+  in the fetched page);
+  androidcentral.com, "How to transfer Android photos to PC or back
+  them up in the cloud"
+  (https://www.androidcentral.com/how-get-photos-your-android-phone
+  — the transfer guide: Google Photos, Prime Photos, cloud storage
+  services, and USB transfers to a computer. A real guide — but its
+  USB route is a manual copy to a PC, its moment is a general
+  backup, and it says nothing about SnapDisk; curl 200, 0 SnapDisk
+  mentions in the fetched page);
+  androidpolice.com, "How to back up your Android phone or tablet"
+  (https://www.AndroidPolice.com/how-to/back-up-android-phone-or-tablet/
+  — the backup guide: Google Photos, a manual flash-drive copy via
+  the Files app, and copies to a Windows PC and a Mac. A real guide,
+  and the closest of the five on the USB step — but its flash-drive
+  copy is a manual Files-app copy, its moment is an upgrade or a
+  reset, and it says nothing about SnapDisk; curl 200, 0 SnapDisk
+  mentions in the fetched page);
+  theunlockr.com, "How to Backup Data on an Android Phone"
+  (https://theunlockr.com/how-to-backup-data-on-an-android-phone/
+  — the old backup guide: backing up to a computer via USB
+  drag-and-drop, and backing up to the internet with Google. A real
+  guide — but its USB route is a drag-and-drop to a PC, its moment
+  is a general backup, and it says nothing about SnapDisk; curl 200,
+  0 SnapDisk mentions in the fetched page);
+  timesofindia.indiatimes.com, "Backing-Up Android Phone: How to
+  back up your Android phone"
+  (https://timesofindia.indiatimes.com/computing/how-to-back-up-your-android-phone/articleshow/32649529.cms
+  — the old backup guide: the computer backup over a USB cable,
+  Google backup for settings, and manually dragging the DCIM folder
+  to a PC. A real guide — but its photo route is a PC copy, its
+  moment is a general backup, and it says nothing about SnapDisk;
+  curl 200, 0 SnapDisk mentions in the fetched page).
+  Our own lending-phone article also surfaced — the same
+  one-tap copy, framed for a phone lent to an adult — but its moment
+  is the lending, not the child: a borrower is an adult who might
+  snoop, a child is small hands that tap everything — and the
+  lock-down for a child is pinning and the purchase setting, not the
+  guest profile a borrower gets. Our own selling-phone article also
+  surfaced — the same one-tap copy, framed for a phone changing
+  hands for good — but its moment is the sale, not the child: a sold
+  phone never comes back, a phone handed to a child comes back in a
+  few minutes — and the sale ends with a wipe, while the child ends
+  with the phone back in your hand. A Play listing also surfaced —
+  Photos to USB: OTG Backup — a one-tap app listing, not a guide,
+  and it says nothing about the before-child moment.
+  This moment is NOT lending and NOT selling or repair — the phone
+  comes back, so the risk is accidental deletion by the child (taps,
+  deletes, in-app purchases), not snooping by an adult borrower and
+  not a shop wipe. SnapDisk copies, it never deletes and it never
+  locks — the backup protects the photos, it does not keep the child
+  out of them. Lock-down (screen pinning, a kid/guest profile, app
+  lock) is a separate phone step: described as what the phone itself
+  can do, never as a SnapDisk feature. The backup must COMPLETE and
+  be verified on the drive BEFORE handing the phone over — a deletion
+  has no undo — and the drive stays at home, never handed to the
+  child. SnapDisk backs up photos and videos only — nothing else on
+  the phone is at risk from a child except in-app purchases, which
+  are a store setting (Play Store purchase authentication), not a
+  backup matter.
+  Cloud-only originals are a trap (backup off / device folders
+  not switched on / storage-saver compressed copies — check
+  photos.google.com); the drive copy comes first and the cloud
+  check waits for Wi-Fi. One USB-C port holds the drive OR the
+  charger, not both — charge first, or use a powered hub with
+  pass-through charging, which is standard USB-C behaviour but
+  unverified with SnapDisk. The repo facts that carry the
+  article, read from the code this run: the copy runs as a
+  foreground service (dataSync type, BackupService.kt) — the
+  mechanism Android gives a copy that must keep running with
+  the screen off — but the repo holds no wake lock and no
+  battery-saver handling (repo-wide code search finds no
+  WakeLock and no Doze handling) and no before-child run has
+  ever been tested, so screen-off continuation under battery
+  saver is unverified and the article says so instead of
+  promising it. What IS verified: oldest-first on MediaStore
+  DATE_TAKEN (BackupEngine.kt, PhotoQuery.kt); resume covers an
+  interrupted copy — finished files stay on the drive
+  (skip-if-exists with size verification), the file in flight
+  keeps its .part copy (byte-exact .part resume); on Android 15
+  and later a dataSync foreground service gets 6 hours in 24
+  hours, so a very long copy can be paused by Android itself,
+  and opening the app resets the timer (WL-34); the manifest
+  holds no INTERNET permission; SnapDisk copies, it never
+  deletes (delete() in BackupService.kt and BackupEngine.kt
+  touches only .part files). SnapDisk needs Android 7.0 or
+  later (minSdk 24 in the repo) and is not on Google Play yet,
+  so install the v0.1.2 APK from GitHub. The free version backs
+  up manually up to 5 GB per run, picking up where it stopped
+  past the cap — a phone that has never been backed up often
+  holds a library bigger than 5 GB, so it takes several taps,
+  and that is the case Pro is for; Pro is a one-time $9.99
+  purchase that auto-starts the backup on connect and removes
+  the size limit. The screenshot in the article is from SnapDisk
+  on a phone — the same settings screen the reader will see.
+  The From folder is a picker, not a fixed path — tap it, browse
+  to the phone's storage, and choose the folder that holds the
+  photos, which the picker reaches because it is the system
+  folder picker, verified in the repo as OpenDocumentTree.
+  Drives formatted FAT32 cannot hold a single file over 4 GB —
+  SnapDisk skips those files and lists them instead of failing
+  the whole backup, per the repo README — so use exFAT. Title
+  is the 52-char form as briefed in WL-183 — within the
+  48–53-char template band; the full "letting your child use
+  your phone" phrasing is carried in the dek and TL;DR.
+  This is the seventeenth article in the series about a situation
+  instead of a phone brand — the brand series ran to 134
+  articles, and the broken-screen, switching-phones, SD-card,
+  tablet, Chromebook, storage-full, low-battery, factory-reset,
+  selling-phone, traveling, Android-update, water-damage, flight,
+  repair, lending, and rooting articles were the first sixteen.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 21, 2026 (WL-183, 151st how-to):
+  docs/child-photos-to-usb.html — branch wl-183-child.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
