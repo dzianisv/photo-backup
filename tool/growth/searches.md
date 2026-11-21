@@ -15036,6 +15036,132 @@ demand is read off competitor install velocity instead (see
   drafted Nov 21, 2026 (WL-178, 146th how-to):
   docs/water-damage-photos-to-usb.html — branch wl-178-water-damage.
 
+### 146. "back up photos to USB before a flight" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return real guides — four
+  of them: desnoulez.fr's field backup (camera card → SSD via
+  phone bridge), PetaPixel's "No Laptop? No Problem" (camera card
+  → SSD via phone bridge), brightideaphotography's computer-free
+  backup (camera card → SSD via phone or iPad), and
+  photographyaxis's "11 Ways To BACKUP PHOTOS Without Computer
+  [While TRAVELING]" (eleven travel backup methods) — plus our own
+  traveling article. The three bridge guides back up a CAMERA card,
+  using the phone as a bridge between the card and an SSD — none of
+  them backs up the phone's own library, none is framed for the
+  before-a-flight moment, and none of them mentions SnapDisk. The
+  eleven-method list is manual, hardware, or cloud throughout. None
+  of the four frames a whole-library one-tap phone-to-USB backup
+  for the before-a-flight moment, and none of them mentions
+  SnapDisk.
+- Current top results (scored Nov 21, 2026, live web search):
+  desnoulez.fr, "How to back up camera photos or SD Card without
+  a laptop"
+  (https://www.desnoulez.fr/en/how-to-back-up-camera-photos-while-traveling-no-laptop-needed/
+  — the field backup: use a smartphone or tablet as a bridge
+  between an SD or CFexpress card and an external SSD via a USB
+  hub, open the file manager, copy the card's folder to the SSD,
+  and keep a third copy on an SSD in checked luggage. A real
+  computer-free backup — but it backs up a CAMERA card, its copy
+  is manual select-copy-paste, it says nothing about the phone's
+  own library or a flight, and it says nothing about SnapDisk;
+  curl 200, 0 SnapDisk mentions in the fetched page);
+  petapixel.com, "No Laptop? No Problem: How to Back Up Photos in
+  the Field With Your Smartphone"
+  (https://petapixel.com/2025/05/11/no-laptop-no-problem-how-to-back-up-photos-in-the-field-with-your-smartphone/
+  — the same bridge workflow, published May 11, 2025: a
+  smartphone, a USB hub, a card reader, and an SSD, copying
+  full-resolution RAW or JPEG files from the memory card to the
+  drive with the phone's file manager, and by the end of the trip
+  one card in the camera, one card on the person, and one SSD in
+  the checked bag. A real field backup — but its subject is the
+  camera card, its copy is manual, it says nothing about a flight
+  or the phone's own library, and it says nothing about SnapDisk;
+  curl 200, 0 SnapDisk mentions in the fetched page);
+  brightideaphotography.com, "Back Up SD Cards Without a Laptop:
+  Phone or iPad to SSD"
+  (https://brightideaphotography.com/computer-free-backup/
+  — the computer-free video guide: an SD card reader and a phone
+  for a small number of photos, then a powered USB-C hub and a
+  portable SSD for big shoots, copying straight from the card to
+  the drive without filling the phone's storage, with a verify step
+  at the end. A real card-to-SSD guide — but its subject is the
+  memory card, its copy is manual, it says nothing about a flight
+  or the phone's own library, and it says nothing about SnapDisk;
+  curl 403 (bot protection), browser-verified live, no SnapDisk in
+  the fetched page text);
+  photographyaxis.com, "11 Ways To BACKUP PHOTOS Without Computer
+  [While TRAVELING]"
+  (https://www.photographyaxis.com/photography-articles/ways-to-backup-photos-without-computer/
+  — the eleven-method travel list: dual memory card slots in the
+  camera, a smartphone or tablet, cloud storage, Wi-Fi SD cards, a
+  microSD slot in the phone, a RAVPower FileHub, a Gnarbox,
+  high-capacity USB pen drives, a wireless portable hard drive with
+  a built-in card reader, and a Raspberry Pi. A real travel backup
+  list — but every method is manual, hardware, or cloud, none of
+  them is a one-tap whole-library backup of the phone's own photos
+  to USB from the phone, it says nothing about a flight, and it
+  says nothing about SnapDisk; curl 200, 0 SnapDisk mentions in
+  the fetched page).
+  Our own traveling article also surfaced — the same one-tap copy,
+  framed for traveling with no Wi-Fi in general — but its moment is
+  the whole trip, not the night before a flight, and it says
+  nothing about boarding, security, or carry-on versus checked
+  bags. The backup has to COMPLETE and be verified on the drive
+  BEFORE boarding — a copy still running when the plane takes off
+  is not a backup, and there is no undo after the phone is lost or
+  stolen. The drive rides in a different bag from the phone —
+  carry-on, never checked, because a checked bag can be lost; two
+  copies in the same bag is one copy. Airport security X-ray does
+  not harm a USB drive — flash memory is not affected by the X-ray
+  dose used at security. No Wi-Fi at the gate means the cloud is
+  not a fallback. One USB-C port holds the drive OR the charger,
+  not both — charge first, or use a powered hub with pass-through
+  charging, which is standard USB-C behaviour but unverified with
+  SnapDisk. The repo facts that carry the article, read from the
+  code this run: the copy runs as a foreground service (dataSync
+  type, BackupService.kt) — the mechanism Android gives a copy
+  that must keep running with the screen off — but the repo holds
+  no wake lock and no battery-saver handling (grep over
+  app/src/main finds no WakeLock) and no before-a-flight run has
+  ever been tested, so screen-off continuation under battery saver
+  is unverified and the article says so instead of promising it.
+  What IS verified: oldest-first on MediaStore DATE_TAKEN
+  (BackupEngine.kt, PhotoQuery.kt); resume covers an interrupted
+  copy — finished files stay on the drive (skip-if-exists with size
+  verification), the file in flight keeps its .part copy (byte-exact
+  .part resume); on Android 15 and later a dataSync foreground
+  service gets 6 hours in 24 hours, so a very long copy can be
+  paused by Android itself, and opening the app resets the timer
+  (WL-34); the manifest holds no INTERNET permission; SnapDisk
+  copies, it never deletes (delete() in BackupEngine.kt touches
+  only .part files). SnapDisk needs Android 7.0 or later (minSdk 24
+  in the repo) and is not on Google Play yet, so install the v0.1.2
+  APK from GitHub. The free version backs up manually up to 5 GB
+  per run, picking up where it stopped past the cap — a phone that
+  has never been backed up often holds a library bigger than 5 GB,
+  so it takes several taps, and that is the case Pro is for; Pro is
+  a one-time $9.99 purchase that auto-starts the backup on connect
+  and removes the size limit. The screenshot in the article is from
+  SnapDisk on a phone — the same settings screen the reader will
+  see. The From folder is a picker, not a fixed path — tap it,
+  browse to the phone's storage, and choose the folder that holds
+  the photos, which the picker reaches because it is the system
+  folder picker, verified in the repo as OpenDocumentTree. Drives
+  formatted FAT32 cannot hold a single file over 4 GB — SnapDisk
+  skips those files and lists them instead of failing the whole
+  backup, per the repo README — so use exFAT. Title is the 37-char
+  form as briefed in WL-179 — no parenthetical, below the 48–53-char
+  template band; the no-computer / no-Wi-Fi qualifier is carried in
+  the dek and TL;DR. This is the thirteenth article in the series
+  about a situation instead of a phone brand — the brand series ran
+  to 134 articles, and the broken-screen, switching-phones, SD-card,
+  tablet, Chromebook, storage-full, low-battery, factory-reset,
+  selling-phone, traveling, Android-update, and water-damage
+  articles were the first twelve.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 21, 2026 (WL-179, 147th how-to):
+  docs/flight-photos-to-usb.html — branch wl-179-flight.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
