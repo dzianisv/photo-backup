@@ -15934,6 +15934,135 @@ demand is read off competitor install velocity instead (see
   Article drafted Nov 21, 2026 (WL-184, 152nd how-to):
   docs/cmf-phone-photos-to-usb.html — branch wl-184-cmf-phone.
 
+### 152. "SnapDisk vs FotoSafe" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a SnapDisk-vs-FotoSafe
+  head-to-head comparison at all — the top results are our
+  own brand articles that name FotoSafe as a rival, FotoSafe's
+  own guide, and its Play listing.
+- Current top results (scored Nov 21, 2026, live web search):
+  our own Handheld article
+  (https://dzianisv.github.io/photo-backup/handheld-photos-to-usb.html
+  — names FotoSafe as a rival app: "FotoSafe backs up Android
+  photos to a USB drive through the system picker, and needs
+  Android 9 or later with USB host or OTG support" — a mention
+  inside a Handheld guide, not a comparison; live 200, verified
+  this run);
+  our own Chainway article
+  (https://dzianisv.github.io/photo-backup/chainway-photos-to-usb.html
+  — the same FotoSafe mention inside a Chainway guide, not a
+  comparison; live 200, verified this run);
+  our own Opticon article
+  (https://dzianisv.github.io/photo-backup/opticon-photos-to-usb.html
+  — the same FotoSafe mention inside an Opticon guide, not a
+  comparison; live 200, verified this run);
+  our own Ulefone article
+  (https://dzianisv.github.io/photo-backup/ulefone-photos-to-usb.html
+  — the same FotoSafe mention inside a Ulefone guide, not a
+  comparison; live 200, verified this run);
+  FotoSafe guide
+  (https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/
+  — a guided app backup to USB via the system picker, needs
+  Android 9+ with USB host/OTG: connect the drive, select it
+  in FotoSafe, review the media, start copying, with a preview
+  and automatic skipping of files already backed up. One run up
+  to 100 media files is free, then further runs need the
+  one-time Pro purchase. A real guided backup to a USB drive —
+  but FotoSafe's own guide, not a comparison; curl 200,
+  0 SnapDisk mentions in the fetched page);
+  FotoSafe home page
+  (https://fotosafe.weidisoft.net/en/ — "Back up Android photos
+  directly to USB": one free run up to 100 media files, then Pro
+  once, no subscription; "Google Play shows the current price".
+  No price figure anywhere on the site; curl 200, verified this
+  run);
+  FotoSafe Play listing
+  (https://play.google.com/store/apps/details?id=at.weidi.fotobackup
+  — "FotoSafe — Photo Backup to USB": one successful free trial
+  backup of up to 100 photos/videos, one-time Pro unlocks
+  unlimited runs, no subscription, no cloud, no account, no ads,
+  no tracking, no automatic deletion of originals, backups in a
+  /FotoSafe/ folder, skips already-backed-up files, progress
+  notification during longer backups; price 0 USD; the listing
+  text we could read shows no Pro price figure; browser-verified
+  live this run);
+  our own VaultDrive comparison
+  (https://dzianisv.github.io/photo-backup/snapdisk-vs-vaultdrive.html
+  — comparison #1 in the series (WL-37), the adjacent ground
+  for this one: the same head-to-head shape, different rival;
+  live 200, verified this run).
+  FotoSafe facts, all from its own live sources this run: the
+  guide is a five-step guided backup (connect, grant media
+  access, pick the USB destination in Android's system picker,
+  review destination / new files / already-backed-up files /
+  required space, start copying); "FotoSafe shows the planned
+  backup before it starts"; Expert mode adds folders beyond the
+  guided flow; repeat runs skip media already backed up; the
+  guide warns the picker "must show USB storage, not internal
+  storage" and documents a Samsung / One UI fallback; "Copying
+  is not moving. Originals remain on the phone."; if the phone,
+  cable, adapter, or drive fails during a backup, "the backup
+  may remain incomplete" and the listing tells the user to
+  "verify important backups on the destination drive". The Pro
+  price is UNVERIFIABLE: the site says "Google Play shows the
+  current price" and the Play listing text shows no in-app
+  purchase price — the article makes no price comparison rather
+  than guessing one. No install count was verified (not shown in
+  the listing text we could read), so none is cited. FotoSafe
+  describes what it copies as photos and videos, without listing
+  formats, so none are claimed. Its guide says nothing about
+  FAT32, so no FAT32 behaviour is claimed for it.
+  The repo facts that carry the article, read from the code
+  this run: the copy runs as a foreground service
+  (dataSync type, BackupService.kt) — the mechanism
+  Android gives a copy that must keep running with the
+  screen off — but the repo holds no wake lock and no
+  battery-saver handling (BackupService.kt has no WakeLock
+  and no Doze reference, verified this run) and no
+  comparison run has ever been tested, so screen-off
+  continuation under battery saver is unverified and the
+  article says so instead of promising it. What IS verified:
+  oldest-first on MediaStore DATE_TAKEN (BackupEngine.kt,
+  PhotoQuery.kt); resume covers an interrupted copy —
+  finished files stay on the drive (skip-if-exists with
+  size verification), the file in flight keeps its .part
+  copy (byte-exact .part resume); on Android 15 and later
+  a dataSync foreground service gets 6 hours in 24 hours,
+  so a very long copy can be paused by Android itself, and
+  opening the app resets the timer (WL-34); the manifest
+  holds no INTERNET permission; SnapDisk copies, it never
+  deletes (delete() in BackupService.kt and BackupEngine.kt
+  touches only .part files). SnapDisk needs Android 7.0 or
+  later (minSdk 24 in the repo) and is not on Google Play
+  yet, so install the v0.1.2 APK from GitHub. The free
+  version backs up manually up to 5 GB per run, picking up
+  where it stopped past the cap — a phone that has never
+  been backed up often holds a library bigger than 5 GB,
+  so it takes several taps, and that is the case Pro is
+  for; Pro is a one-time $9.99 purchase that auto-starts
+  the backup on connect and removes the size limit. The
+  screenshot in the article is from SnapDisk on a phone —
+  the same settings screen the reader will see. The From
+  folder is a picker, not a fixed path — tap it, browse to
+  the phone's storage, and choose the folder that holds the
+  photos, which the picker reaches because it is the system
+  folder picker, verified in the repo as OpenDocumentTree
+  (MainActivity.kt). Drives formatted FAT32 cannot hold a
+  single file over 4 GB — SnapDisk skips those files and
+  lists them instead of failing the whole backup, per the
+  repo README — so use exFAT. Own canonical URL returned
+  404 pre-merge (expected — live only after merge). Title is
+  the 51-char form "SnapDisk vs FotoSafe: back up Android
+  photos to USB" — within the ≤53-char brief. This is the
+  153rd article in the brand series — the VaultDrive
+  comparison (WL-37) is the adjacent ground for this one,
+  comparison #1 in the series, covering price, free tier,
+  copy order, and freeing up space against a different
+  rival.
+- Verdict: how-to article material, not a listing keyword.
+  Article drafted Nov 21, 2026 (WL-185, 153rd how-to):
+  docs/snapdisk-vs-fotosafe.html — branch wl-185-vs-fotosafe.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
