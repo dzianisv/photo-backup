@@ -16682,6 +16682,188 @@ demand is read off competitor install velocity instead (see
   Article drafted Nov 21, 2026 (WL-190, 157th how-to):
   docs/raw-photos-to-usb.html — branch wl-190-raw.
 
+### 157. "back up HEIC photos to USB from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a HEIC-specific
+  phone-to-USB backup guide at all — the top results are
+  a rival product page that mentions HEIC in one line, a
+  converter page that works in the opposite direction, and
+  generic photo transfer guides with a short HEIC section
+  at most. None of them mentions SnapDisk.
+- Current top results (scored Nov 21, 2026, live web search):
+  VaultDrive, "Back Up Phone Photos to a USB Drive, No
+  Computer"
+  (https://coticsy.com/vaultdrive.html
+  — a product page, not a guide: one line under "Original
+  quality, byte for byte" says HEIC, ProRAW, ProRes and 4K
+  video are copied as they are, never compressed or
+  re-encoded; free up to 200 files or 2 GB per backup, Pro
+  $19.99 once, Android 8 or later, on Google Play; the
+  closest near-miss on the copy promise, but no guide and
+  no SnapDisk mention; full page read this run);
+  Photo Backup Stick, "Convert HEIC Images to JPG Images"
+  (https://photobackupstick.com/convert-heic-images-to-jpg/
+  — the opposite direction: its app automatically converts
+  HEIC photos to JPG during backup, and Windows
+  auto-converts HEIC to JPG on a cable copy; the page also
+  states HEIC takes about half the space of JPG at higher
+  quality and stores HDR data, depth maps and thumbnails;
+  full page read this run);
+  techsith, "How Do I Get All My Pictures Off My Phone?"
+  (https://techsith.com/how-do-i-get-all-my-pictures-off-my-phone/
+  — a general get-everything-off guide; its whole HEIC
+  coverage is one short section, "About HEIC, Live Photos,
+  And Dates", noting iPhones shoot HEIC by default and some
+  apps cannot open it; no phone-to-USB HEIC method;
+  search-index excerpt read this run);
+  mefmobile, "How to Transfer Phone Photos to a USB Stick
+  Without a Computer"
+  (https://mefmobile.org/transfer-photos-from-phone-to-usb-stick-without-a-computer-a-step-by-step-guide/
+  — a thorough general transfer guide; its HEIC coverage is
+  one line in its special-cases section, that copying
+  originals preserves their format but older TVs, computers
+  and services may have limited HEIC support; no HEIC
+  method, no SnapDisk mention; full page read this run);
+  manualdobruxo, "Transfer Photos from Android to Flash
+  Drive: The Easy Way Most People Miss"
+  (https://manualdobruxo.com.br/transfer-photos-from-android-to-flash-drive-the-easy-way-most-people-miss-3al
+  — a generic Files-by-Google OTG guide with a short
+  "Dealing with HEIC and Large Files" section; no HEIC
+  backup method; search-index excerpt read this run);
+  ceedo, "How To Transfer Photos From Tablet To USB Flash
+  Drive"
+  (https://www.ceedo.com/how-to-transfer-photos-from-tablet-to-usb-flash-drive/
+  — a generic tablet transfer guide; its only format notes
+  are passing RAW mentions about drive speed and size; no
+  HEIC angle, no SnapDisk mention;
+  search-index excerpt read this run);
+  groovypost, "How to Transfer Photos from Android to a USB
+  Drive"
+  (https://www.groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — a PC middleman (drag and drop from the phone to a
+  computer, then to the drive) and a dual USB-C drive with
+  the file manager; a generic photo transfer guide, no HEIC
+  angle, no SnapDisk mention; search-index excerpt read
+  this run);
+  fonelab, "How to Transfer Photos from Android to Flash
+  Drive in 3 Easy Ways"
+  (https://www.fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html
+  — an OTG adapter, a desktop tool, and Samsung Smart
+  Switch; a generic transfer guide, no HEIC angle;
+  search-index excerpt read this run);
+  coolmuster, "Easily Transfer HEIF/HEIC Format Images to
+  Android (Solved)"
+  (https://www.coolmuster.com/phone-transfer/transfer-heif-images-to-android.html
+  — moving HEIC files from an iPhone onto an Android phone
+  through a PC, then converting them to JPG — the opposite
+  direction from a phone-to-USB backup; search-index excerpt
+  read this run).
+  Google Photos help, "Choose the backup quality of your
+  photos & videos"
+  (https://support.google.com/photos/answer/6220791?hl=en-GB&co=GENIE.Platform=Desktop
+  — the cloud-trap reference the article names, not a
+  competing guide: Storage saver uploads "may be compressed
+  into a different image format, like a .jpg"; Original
+  quality keeps the file as shot and counts against the
+  Google Account storage; search-index excerpt read this
+  run);
+  Samsung community, "Here's how to make Galaxy S10 camera
+  photos take less storage space"
+  (https://community.samsung.com/in/conversations/galaxy-s/Here-s-how-to-make-Galaxy-S10-camera-photos-take-less-storage/r2_1304386
+  — the "High efficiency pictures" camera setting saves
+  .heic instead of .jpg, and the Gallery's "Convert HEIF
+  images when sharing" converts to JPEG on share; the
+  where-HEIC-comes-from reference, not a competing guide;
+  search-index excerpt read this run);
+  DriveForge, "exFAT vs FAT32 vs NTFS: Which Format for Your
+  USB or SD Card?"
+  (https://driveforge.bytehavenstudios.com/guides/exfat-vs-fat32-vs-ntfs/
+  — the format reference the article names, not a competing
+  guide: exFAT has no 4 GB per-file limit and is read and
+  written by current Android phones, Windows, and Mac; FAT32
+  cannot hold a single file of 4 GB or more; NTFS is a
+  Windows format most Android phones cannot open on their
+  own).
+  Adjacent ground in our own series: the RAW article
+  (https://dzianisv.github.io/photo-backup/raw-photos-to-usb.html
+  — WL-190: the same folder-route rule for .dng files, a
+  different format; live 200, verified this run), the
+  SD-card article (WL-169), the VaultDrive comparison
+  (WL-37) and the FotoSafe comparison (WL-185).
+  Anti-duplicate check (this run, before writing): grep of
+  searches.md for the HEIC/HEIF topic finds only incidental
+  mentions — the WL-190 note (a docs/ listing finding no
+  near slug) — and no "### " row title is a HEIC/HEIF
+  topic; a docs/ listing finds no near slug (heic, heif,
+  iphone, apple, convert). No existing HEIC article or row:
+  the gap is a new article, not a rewrite. WL-189 was killed
+  before merge for duplicating WL-168's live
+  switching-phones article — this query is not that moment.
+  The repo facts that carry the article, read from the code
+  this run: the SAF-tree path lists files by extension and
+  .heic and .heif are both in IMAGE_EXTENSIONS
+  (PhotoQuery.kt, lines 131-132, the same list as .dng and
+  .raw), while the default DCIM route queries the MediaStore
+  Images table with no MIME filter — so whether a given
+  phone's MediaStore indexes .heic files is
+  device-dependent, and the certain route for HEIC is picking
+  the source folder via the SAF From-picker (OpenDocumentTree);
+  the copy streams each file byte-for-byte with no
+  transcoding step (copyWithResume, BackupEngine.kt) and
+  renames the .part file to the final file only after the
+  size verification passes; oldest-first on MediaStore
+  DATE_TAKEN (fallback DATE_MODIFIED); the extension list
+  does NOT include .hif, so HEIF files saved with a .hif
+  extension are not copied on the folder route and the
+  article says so; a Live Photo's .mov clip IS in the video
+  extension list, so the still and the clip both copy on the
+  folder route, as two files, not as one linked Live Photo;
+  a file >=4 GiB on FAT32 is skipped with its reason and the
+  job continues (BackupService.kt) — a single HEIC file never
+  reaches that; the free version backs up manually up to
+  5 GB per run (FREE_BACKUP_BYTES_LIMIT, 5 GiB, ProPrefs.kt),
+  repeatable, files already copied never copied twice; Pro
+  is a one-time $9.99 purchase (product id pro_unlock,
+  BillingManager.kt) for auto-backup on connect and
+  unlimited size; the copy runs as a foreground service
+  (dataSync type, BackupService.kt) — the mechanism Android
+  gives a copy that must keep running with the screen off —
+  but the repo holds no wake lock and no battery-saver
+  handling (no WakeLock/Doze reference in the source,
+  verified this run) and no HEIC run has ever been tested, so
+  screen-off continuation under battery saver is unverified
+  and the article says so instead of promising it; on
+  Android 15 and later a dataSync foreground service gets 6
+  hours in 24 hours, and opening the app resets the timer
+  (WL-34); the manifest holds no INTERNET permission;
+  SnapDisk copies, it never deletes (no delete() call in the
+  source touches photos — only .part files). SnapDisk needs
+  Android 7.0 or later (minSdk 24 in the repo) and is not on
+  Google Play yet, so install the v0.1.2 APK from GitHub. The
+  screenshot in the article is from SnapDisk on a phone —
+  the same settings screen the reader will see. The From
+  folder is a picker, not a fixed path — tap it, browse to
+  the phone's storage, and choose the folder that holds the
+  photos, which the picker reaches because it is the system
+  folder picker, verified in the repo as OpenDocumentTree.
+  The repo makes no location claim either way, so the article
+  does not score SnapDisk on location. Own canonical URL
+  returns 404 pre-merge (curl, this run — the known-missing
+  control URL returns the same 404, while existing pages
+  return 200; expected, live only after merge). Title is the
+  50-char form "Back up HEIC photos to USB from Android —
+  SnapDisk" — within the 48–53-char brief. This is the 158th
+  article in the brand series — the RAW article (WL-190) is
+  the adjacent ground for this one, the same folder-route rule
+  for a different format.
+  Scoring-fix sweep (this run): the WL-190 worklog flagged
+  llms-full.txt as still saying "4.5 from 61 reviews" three
+  times in the Buffalo section — re-checked this run on main:
+  0 occurrences; llms-full.txt already says "rated 4.5 from
+  69 ratings" and llms.txt carries "69 ratings" too. The
+  flag was wrong; no figure needed correcting anywhere, and
+  this article carries no Buffalo rating.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
