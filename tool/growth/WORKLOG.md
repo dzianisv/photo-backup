@@ -1,3 +1,66 @@
+## WL-169 — Back up photos from an SD card to USB article, 137th how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #311 MERGED (merge commit 1fdd9b6, merged
+  2026-11-21T00:42:15Z; PR head 893d118, CI run 44845428646
+  build pass, 59s; post-merge main runs Android PR +
+  pages-build-deployment success on 1fdd9b6).
+  Pre-merge readback on head 893d118 (verified by the
+  supervisor from the branch source): feed 137 items incl.
+  sd-card, sitemap 141 URLs incl. sd-card, blog index 137
+  BlogPosting (JSON-LD parses), title 51 chars, meta 130 chars,
+  JSON-LD parses (Article + FAQPage 4 Qs + BreadcrumbList,
+  datePublished 2026-11-20), TL;DR present, 1 script tag, 1 H1,
+  10 H2s, Query 136 row present, only docs/ + tool/growth
+  changed (7 files, +409/−0).
+  Query 136 scored honestly from live evidence (no
+  "no guide exists" claim): the exact query returns five real
+  guides — brightideaphotography.com "Back Up SD Cards Without
+  a Laptop: Phone or iPad to SSD" (video), desnoulez.fr hub
+  guide, PetaPixel 2025-05-11 field-backup guide, Ask Tim Grey
+  2023-07-03 newsletter, goldenlenstraveler.com travel guide —
+  all camera-card → SSD via the phone as a bridge, manual
+  Files-app copy. None of them is about the phone's OWN microSD
+  card, none is a whole-library one-tap backup, and none
+  mentions SnapDisk; the gap stands on that angle. Supervisor's
+  fresh quoted re-search returned the same five results, same
+  conclusion.
+  New docs/sd-card-photos-to-usb.html ("Back up photos from an
+  SD card to USB (no computer)"), following the
+  WL-54–WL-168 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot,
+  with an honest caption). Title 51 chars, meta 130 chars.
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full sd-card section: heading + URL + dek +
+  TL;DR + Search + Method 3 + What this does not do + What to
+  avoid — verified complete), feed.xml updated;
+  searches.md Query 136 row added.
+  Key finding: "SD card" is two different jobs. The phone's own
+  microSD card (Methods 1–2) vs the camera's full-size SD card
+  (Methods 3–4, the bridge guides' route, honestly cited), then
+  no-slot phones (Method 5). Fourteen honest caveats up front.
+  One USB port holds either the card reader or the drive, not
+  both — direct card-to-drive copy needs a powered hub, or two
+  steps through the phone's storage. SnapDisk behaviour verified
+  from the repo itself: minSdk 24 (Android 7.0 floor), Pro $9.99
+  auto-backup on connect, free 5 GB/run with resume
+  (skip-if-exists + .part resume + size verification), FAT32
+  >=4 GB files skipped and listed, From-folder picker is
+  OpenDocumentTree SAF so it reaches the card.
+  Link verification: 7 absolute URLs — 4x200 via curl
+  (desnoulez, goldenlenstraveler, GitHub repo, Ask Tim Grey),
+  2 bot-blocked via curl (brightideaphotography 000, PetaPixel
+  403) verified live via browser search/open as real matching
+  guides, own canonical 404 pre-merge (expected; confirmed
+  live post-merge by the supervisor).
+  Live fetch verified by the supervisor:
+  sd-card-photos-to-usb.html 200 (40,319 B, correct title),
+  feed.xml 137 items live incl. sd-card.
+  Lead's run record shows one failed exec (exit 1, no detail);
+  all receipts independently verified, no effect.
+  WL-170 fallback: tablet/Chromebook scenario (unverified).
+
 ## WL-168 — Back up photos to USB when switching to a new phone article, 136th how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
