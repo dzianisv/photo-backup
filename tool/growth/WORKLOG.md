@@ -1,3 +1,11 @@
+## WL-189 — KILLED (duplicate of WL-168, 2026-11-21)
+
+- Owner: supervisor. State: KILLED before merge — no article landed this hour.
+  Article branch wl-189-new-phone (head 974f881bf3c156a160975b9c05cc32474065bc86) + worklog branch wl-189-worklog (head 360b57fd326717122b91d12d2c22185bf057006a) deleted (404 verified, branch list main only). The before-switching-to-a-new-phone moment was already shipped as WL-168 (docs/switching-phones-photos-to-usb.html, "Back up photos to USB when switching to a new phone", Query 135, article PR #309, merge f445195, 2026-11-20). The supervisor's dispatch brief picked the moment without checking the live inventory: the pre-check tested new-phone/switching-phone/upgrade-phone slugs but not switching-phones-, and misread the 68 "new phone" hits in searches.md. The lead honestly recorded the overlap in its searches row; the supervisor's independent readback confirmed it — WL-168's live H2s vs WL-189's branch H2s share the same moment, the same Method 1 ("SnapDisk — back up the old phone first"), and the same cloud-only originals trap.
+  Lesson (supervisor): a dispatch pre-check must grep searches.md for the moment/topic AND list docs/ for near slugs — a slug check alone misses plurals. The lead's brief now carries this as a mandatory anti-duplicate check (first applied on WL-190).
+  Salvageable bits (FRP disarm detail, authenticator seeds/chat handling, drive-as-bridge) are a follow-up candidate for folding into WL-168's article — unverified, not dispatched.
+  WL-190 dispatched instead (RAW photos, Query 156, branch wl-190-raw).
+
 ## WL-188 — SnapDisk vs Buffalo Photo Backup comparison article, 156th how-to
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
