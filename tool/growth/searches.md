@@ -16584,6 +16584,19 @@ demand is read off competitor install velocity instead (see
   about moving .dng files to an SSD through a laptop,
   darktable, Nextcloud, or Syncthing — a laptop route, not
   a phone-to-USB guide, and no SnapDisk mention; curl 200).
+  sekin.in, "Transfer Photos From Android to a USB Flash Drive"
+  (https://sekin.in/how-to-transfer-pictures-from-android-to-a-usb-flash-drive/
+  — a generic Files-by-Google manual copy guide; its only RAW
+  acknowledgment is one line that a large batch "may require
+  more space than expected, particularly if it includes RAW
+  photos or videos" — no RAW method, no SnapDisk mention;
+  live-read this run, supervisor re-score);
+  fstoppers, "How to Get Camera Raw Files on to Your Smartphone"
+  (https://fstoppers.com/originals/how-get-camera-raw-files-your-smartphone-326480
+  — RAW files ONTO the phone (laptop, Wi-Fi card, card
+  reader), the opposite direction from this article's
+  phone-to-USB backup; no backup guide, no SnapDisk mention;
+  live-read this run, supervisor re-score).
   DriveForge, "exFAT vs FAT32 vs NTFS: Which Format for Your
   USB or SD Card?"
   (https://driveforge.bytehavenstudios.com/guides/exfat-vs-fat32-vs-ntfs/
