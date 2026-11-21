@@ -16913,6 +16913,19 @@ demand is read off competitor install velocity instead (see
   with a progress notification, Pause and Stop, and
   per-file verification; no screenshot-specific guide, no
   SnapDisk mention; full page read this run).
+  Supervisor second-phrasing re-score (this run) surfaced two more
+  near-misses the lead missed — Samsung Community, "How to take
+  pictures off phone and put on memory stick"
+  (https://stg-r1.community.samsung.com/t5/galaxy-s/how-to-take-pictures-off-phone-and-put-on-memory-stick/m-p/15256917
+  — a Galaxy-only manual My Files copy, folder by folder, no
+  screenshot angle, no SnapDisk mention; search-index excerpt read
+  this run); itechguides, "How to Transfer Files from Android to
+  USB Flash Drive"
+  (https://www.itechguides.com/how-to-transfer-files-from-android-to-usb-flash-drive-wired-or-wireless/
+  — a generic wired/wireless transfer guide whose folder table lists
+  Pictures among the locations to copy by hand, no screenshot angle,
+  no SnapDisk mention; search-index excerpt read this run). Gap stands
+  only on the screenshot angle.
   Google Photos help, "Choose the backup quality of your
   photos & videos"
   (https://support.google.com/photos/answer/6220791?hl=en-GB&co=GENIE.Platform=Desktop
