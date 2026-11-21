@@ -1,3 +1,104 @@
+## WL-178 — Back up photos to USB from a water-damaged phone (before it dies) article, 146th how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #329 MERGED (merge commit 26b8d71, merged
+  2026-11-21T08:35:24Z; PR head ec42bac, CI run 44885453547
+  build pass 1m27s; post-merge main runs Android PR 44885597381
+  + pages 44885596936 success on 26b8d71).
+  Pre-merge readback on head ec42bac (verified by the
+  supervisor from the branch source): article 54,645 B, title
+  48 chars, meta 136 chars, 1 H1, 10 H2s, 1 script tag, TL;DR
+  present, JSON-LD parses (Article + FAQPage 4 Qs +
+  BreadcrumbList, datePublished 2026-11-21), feed 146 items
+  incl. water-damage, sitemap 150 URLs incl. water-damage,
+  blog 146 BlogPosting incl. water-damage, Query 145 row
+  present (145 "### " rows, sequential 1–145), only docs/ +
+  tool/growth changed (7 files, +529/−0 vs main 269689b).
+  New docs/water-damage-photos-to-usb.html ("Back up photos
+  to USB from a water-damaged phone (before it dies)"),
+  following the WL-54–WL-177 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot,
+  with an honest caption). Title 48 chars, meta 136 chars.
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full water-damage section), feed.xml updated;
+  searches.md Query 145 row added.
+  Query 145 scored honestly from live evidence: no "no guide
+  exists" claim. Named competitors: alibaba.com generic
+  local-backup guide (OTG manual copy), mdrepairs.com
+  water-damage recovery lab, Wondershare Recoverit's
+  water-damage recovery guide, therepairdepot.com broken-phone
+  recovery guide, gbtimes.com broken-phone transfer guide,
+  MobileTrans recover-or-back-up-to-PC guide, topselect.ca
+  generic USB-C drive guide — plus our own factory-reset
+  article. mdrepairs is the only guide written for the
+  water-damage moment itself, and its route is the lab, not a
+  backup you do yourself — its first step says do not try to
+  back up your photos. The four recovery guides end at a
+  computer, recovery software, the cloud, or a lab; the two
+  generic guides are manual select-copy-paste with nothing
+  about water damage. Gap stands only on the whole-library
+  one-tap phone-to-USB backup framed for the water-damage
+  moment, and only because none of the seven mentions
+  SnapDisk. techdim.com explicitly NOT counted: two searches
+  this run returned no techdim URL for it, so it is neither
+  linked nor counted — the seven above are the verified
+  count. Supervisor re-score from a fresh live search at
+  dispatch: gbtimes, therepairdepot, Wondershare Recoverit,
+  MobileTrans — all broken-phone recovery / PC / cloud / lab
+  routes, none whole-library one-tap for the water-damage
+  moment, none mentions SnapDisk; same conclusion.
+  Key finding: the window is narrow — the route is only for a
+  phone that is on, working normally, and has a dry port.
+  Never charge a wet phone and never plug anything into a wet
+  USB port — power through a damaged board can burn out the
+  chip that holds the photos. Dead phone = lab only, no
+  software route; the article states the conflict with the
+  lab's own advice plainly (lab says power off immediately
+  and do not try to back up) and the lab wins the moment
+  anything about the phone is wrong. The backup must COMPLETE
+  and be verified on the drive BEFORE the phone dies — a copy
+  still running when the phone dies is not a backup; no undo
+  after. Cloud-only originals are a trap (backup off / device
+  folders not switched on / storage-saver compressed copies —
+  check photos.google.com); with no Wi-Fi the upload cannot
+  run at all, so the drive copy comes first. Screen-off
+  continuation under battery saver UNVERIFIED (no WakeLock/Doze
+  code), stated plainly in-article; a powered hub with
+  pass-through charging is standard USB-C behaviour but
+  unverified with SnapDisk — and it still puts power into a
+  wet port, so it is not the route for a wet phone.
+  SnapDisk behaviour verified from the repo: minSdk 24, Pro
+  $9.99 auto-backup on connect + unlimited, free 5 GB/run with
+  resume (skip-if-exists + .part resume + size verification),
+  oldest-first DATE_TAKEN, copies never deletes, FAT32 >=4 GB
+  skipped and listed, From-picker OpenDocumentTree SAF,
+  dataSync foreground service 6h budget (WL-34).
+  Link verification this run (supervisor re-check): all 7
+  external URLs curl 200 (alibaba, mdrepairs, Recoverit,
+  therepairdepot, gbtimes, MobileTrans, topselect); own
+  canonical 404 pre-merge, confirmed live post-merge.
+  Lead-handoff note: the lead's final report said "the git
+  half is blocked and needs the parent's call" — but PR #329
+  was already MERGED (26b8d71, 2026-11-21T08:35:24Z, by
+  dzianisv, CI run 44885453547 build pass) before this settle
+  run started; the merge is verified by readback above, so
+  the "blocked" claim is superseded — no defect, no action.
+  Lead's goal entry recorded on the timeline this run
+  (goal_update_7b9308059689, "146th how-to drafted");
+  supervisor verified it on the timeline — the settle
+  updates it in place to live wording below.
+  Live fetch verified by the supervisor: water-damage article
+  200 (54,645 B, correct title), feed.xml 146 items live
+  incl. water-damage, sitemap 150 URLs live incl.
+  water-damage.
+  WL-179 fallback: another scenario shape (unverified) —
+  candidate before a flight / airport security.
+  Articles 145 → 146 (145 scored queries). Board: 0 open
+  issues, 0 open PRs. External-skills validation this run:
+  Installed 4/4 PASS, Current 4/4 PASS, zero drift, 16:27 fix
+  holds; Used 0/4 FAIL known standing gap.
+
 ## WL-177 — Back up photos to USB before an Android update article, 145th how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
