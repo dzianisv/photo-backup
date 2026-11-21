@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up photos to USB before your Android update</title>
+<meta name="description" content="An Android update rarely wipes photos — but a failed one can. Back up the whole library to USB from the phone before you tap Install.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/android-update-photos-to-usb.html">
+<meta property="og:title" content="Back up photos to USB before your Android update">
+<meta property="og:description" content="An Android update rarely wipes photos — but a failed one can. Back up the whole library to USB from the phone before you tap Install.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/android-update-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/android-update-photos-to-usb.html#article",
+      "headline": "Back up photos to USB before your Android update",
+      "description": "An Android update rarely wipes photos — but a failed one can. Back up the whole library to USB from the phone before you tap Install.",
+      "datePublished": "2026-11-20",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": [
+          "https://github.com/dzianisv"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/android-update-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/android-update-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does an Android update delete your photos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Almost never. A normal Android system update installs over your existing data — your photos, apps, and settings stay where they are, and the phone restarts with everything intact. The real risk is not the update itself but what happens when it goes wrong: an update that fails or gets stuck, a phone that boots into a bootloop after restarting, or a factory reset during troubleshooting when the phone will not boot. That is the moment photos are lost — and a reset has no undo. The backup in this article is insurance against those failures, not against the update itself: copy the whole library to a USB drive and check it on the drive before you tap Install, so a failed update costs you an afternoon, not your photos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I back up photos to a USB drive before an update with no computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — the copy is local, from the phone straight to the drive, and it needs no computer and no Wi-Fi. Plug a USB-C flash drive into the phone, or a regular USB drive through a USB-C OTG adapter, and copy the photos to the drive — by hand in the Files app, or in one tap with SnapDisk, which copies the whole library oldest-first in the background with progress, Pause and Stop, and resume. The one rule that matters before an update: the backup has to finish and be checked on the drive before the update starts — a copy that is still running when the phone restarts for the update is not a backup, and after a wipe there is no undo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need Wi-Fi to check my Google Photos backup before updating?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — and that is the catch. Google Photos backup can be off, it can be set to back up the camera folder only while your WhatsApp photos, screenshots, and downloads sit in device folders that were never switched on, and a backup set to storage saver uploads compressed copies, not the originals. Before trusting the cloud, open photos.google.com on a computer or another device and check that the photos are actually there, in the quality you want — seeing them in the Photos app on the phone proves nothing, because the app shows on-device photos too. With no Wi-Fi the upload cannot run at all, so the cloud check waits for Wi-Fi — the drive copy does not, and it comes first: the drive holds the original files, byte for byte, and it does not depend on the connection, the account, or the subscription."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my photos if the update fails and the phone will not boot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the phone will not boot after an update, the photos on it are out of reach until the phone boots again — and the standard fix for a phone stuck in a bootloop is a factory reset from recovery mode, which erases every photo on the phone. That is why the backup has to exist before the update starts: once the reset runs, there is no un-wipe and no recovery of what was on the phone. If the phone will not boot, no software route exists — check the cloud at photos.google.com on another device, then repair. The USB drive copy is the copy that survives a bootloop, because it was never on the phone when the update failed."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/android-update-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up photos to USB before your Android update",
+          "item": "https://dzianisv.github.io/photo-backup/android-update-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up photos to USB before your Android update</h1>
+  <p class="dek">Your phone is offering an Android update, and the update itself almost never wipes your photos — but a failed or stuck update, a bootloop, or a factory reset during troubleshooting does, and after a wipe there is no undo. Fifteen honest caveats up front: the exact query DOES return real guides — seven of them — FotoSafe&#x27;s guided app backup, mefmobile.org, a YouTube OTG guide, umatechnology.org, Dr.Fone&#x27;s four-method guide, and two update-framed guides, phoneguiding.com and umatechnology.org&#x27;s Samsung-before-an-update guide — and none of the seven is a whole-library one-tap phone-to-USB backup from the phone, and none of them mentions SnapDisk — the two update-framed guides ARE framed for the moment, but their methods are cloud backup, Smart Switch full-device backup, and manual copy, so that angle is the gap this article fills; an Android update rarely wipes user data — that is the plain fact, and the backup here is insurance against a failed update, a bootloop, or a reset during troubleshooting, not against the update itself; the backup must COMPLETE and be verified on the drive BEFORE the update starts — a copy still running when the phone restarts for the update is not a backup, and there is no undo after a wipe; cloud-only originals are a trap — Google Photos backup can be off, device folders like WhatsApp and screenshots may never have been switched on, and storage saver uploads are compressed copies, not originals, so check photos.google.com before trusting the cloud — and with no Wi-Fi the upload cannot run at all, so the drive copy comes first and the cloud check waits for Wi-Fi; one USB-C port holds the drive OR the charger, not both — charge first, or use a powered hub with pass-through charging, which is standard USB-C behaviour but unverified with SnapDisk; a portable SSD may need a powered hub — the phone alone may not supply enough power for both the hub and the drive; SnapDisk needs Android 7.0 or later — minSdk 24 in the repo — and it is not on Google Play yet, so install the v0.1.2 APK from GitHub; the free version backs up manually up to 5 GB per run — run it again past the cap and it picks up where it stopped, because files already copied are never copied twice — and Pro is a one-time $9.99 purchase that auto-starts the backup on connect and removes the size limit; the screenshot below is from SnapDisk on a phone — it is the same settings screen you will see, because this article is about a phone; the From folder is a picker, not a fixed path — tap it, browse to the phone&#x27;s storage, and choose the folder that holds the photos, which the picker reaches because it is the system folder picker, verified in the repo as OpenDocumentTree; drives formatted FAT32 cannot hold a single file over 4 GB — SnapDisk skips those files and lists them instead of failing the whole backup, per the repo README — so use exFAT; a spinning hard drive may need its own power; SnapDisk&#x27;s copy runs as a foreground service — the mechanism Android gives a copy that must keep running with the screen off — but the repo holds no wake lock and no battery-saver handling, and no pre-update run has ever been tested, so screen-off continuation under battery saver is unverified, and this article says so instead of promising it; Android 15 and later give a dataSync foreground service 6 hours in 24 hours — if the copy runs past that, Android pauses it, and opening the app resets the timer; and SnapDisk copies, it never deletes — the phone stays a second copy until you have opened photos on the drive and checked them, and the drive stays unplugged while the update runs. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 20, 2026 · 9 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> An Android update almost never wipes your photos — but a failed or stuck update, a bootloop, or a factory reset during troubleshooting does, and after a wipe there is no undo. So before you tap Install, copy the whole library to a USB drive from the phone, offline, and verify it on the drive. The one-tap way is SnapDisk: plug the drive in, tap Backup in the notification, and the whole library copies oldest-first in the background, with real progress, Pause and Stop, and resume where it stopped if anything interrupts it. The guides this query already returns are all real guides, so this article is not the first guide to getting photos onto a USB drive — five are generic manual phone-to-USB copies with nothing about the update, and two ARE framed for the update but cover cloud backup, Smart Switch full-device backup, and manual copy — and none of them is a one-tap whole-library backup of the phone&#x27;s own photos to USB from the phone, which is the gap this article fills, as of November 20, 2026. And two honest limits: the backup has to finish and be checked before the update starts, because a copy still running when the phone restarts is not a backup; and a cloud backup only counts if the photos actually uploaded — with no Wi-Fi the upload cannot run at all, so the drive copy comes first and the cloud check waits for Wi-Fi.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search &quot;back up photos to USB before Android update no computer&quot; and seven real guides come back — five generic phone-to-USB guides, and two that ARE framed for the before-an-Android-update moment. What none of them does is back up the phone&#x27;s whole photo library to a USB drive in one tap, from the phone, with no computer, in the moment before an Android update. The exact query returned seven results:</p>
+  <ul>
+    <li><strong>fotosafe.weidisoft.net, &quot;Back up Android photos to USB&quot;</strong> (<a href="https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/">Back up Android photos to USB | FotoSafe</a>) — the guided app backup: connect the drive, select it as the destination in FotoSafe, review the media, and start copying, with a planned-backup preview and automatic skipping of files already backed up — one successful run with up to 100 media files is free, then further runs need the one-time Pro purchase — and it warns that cloud-only files may need downloading first, and that originals remain on the phone until you verify them on the drive. A real phone-to-USB guide, and the closest near-miss in the results, because it is a guided app backup rather than a manual copy — but its reason is the backup itself, it says nothing about an Android update, and it says nothing about SnapDisk; curl 200, 0 SnapDisk mentions and 0 mentions of a system or software update in the fetched page.</li>
+    <li><strong>mefmobile.org, &quot;How to Transfer Phone Photos to a USB Stick Without a Computer&quot;</strong> (<a href="https://mefmobile.org/transfer-photos-from-phone-to-usb-stick-without-a-computer-a-step-by-step-guide/">How to Transfer Phone Photos to a USB Stick Without a Computer | mefmobile.org</a>) — the step-by-step phone-to-USB guide: a compatible adapter, a drive the phone recognises, the Files app, copy the photos, verify them on the drive, and only then consider deleting the originals. A real phone-to-USB method — but its reason is the transfer itself, its copy is manual, it says nothing about an Android update, and it says nothing about SnapDisk; curl 200, 0 SnapDisk mentions and 0 mentions of a system or software update in the fetched page.</li>
+    <li><strong>youtube.com, &quot;How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method)&quot;</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos (Best Method) | youtube.com</a>) — the video OTG guide: a USB OTG connection and the phone&#x27;s built-in file manager, connect the drive, open the file manager, select the photos, and move or copy them to the drive — fast, secure, and needing no computer or internet connection. A real phone-to-USB method — but it is a video, not a followable guide, its copy is manual select-and-copy, it says nothing about an Android update, and it says nothing about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page.</li>
+    <li><strong>umatechnology.org, &quot;Transfer Android Photos to a USB Drive Without a Computer&quot;</strong> (<a href="http://umatechnology.org/how-to-transfer-photos-from-android-to-a-usb-flash-drive-without-a-computer/">Transfer Android Photos to a USB Drive Without a Computer | umatechnology.org</a>) — the generic Android phone-to-USB guide: connect a compatible drive or use an OTG adapter, open Files by Google or Samsung My Files, select the photos, and copy them to the drive — copy rather than move if you want a backup that leaves the originals on the phone. A real phone-to-USB method — but its reason is the transfer itself, its copy is manual, it says nothing about an Android update, and it says nothing about SnapDisk; curl 200, 0 SnapDisk mentions and 0 mentions of a system or software update in the fetched page.</li>
+    <li><strong>drfone.wondershare.com, &quot;4 Practical Ways to Transfer Photos from Android to USB Flash Drive&quot;</strong> (<a href="https://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html">4 Practical Ways to Transfer Photos from Android to USB Flash Drive | drfone.wondershare.com</a>) — the four-method guide: direct OTG transfer with no computer or internet, a PC as a middleman over USB File Transfer mode, Google Drive, and AirDroid over the same local network — plus Dr.Fone&#x27;s own Windows and Mac software for bulk export to a computer. A real phone-to-USB guide — but two of its four methods need a computer or a network, its direct method is a manual OTG copy, it says nothing about an Android update, and it says nothing about SnapDisk; curl 200, 0 SnapDisk mentions and 0 mentions of a system or software update in the fetched page.</li>
+    <li><strong>phoneguiding.com, &quot;How to Back Up Android Phone (Google, Samsung, PC)&quot;</strong> (<a href="https://phoneguiding.com/back-up-android-phone/">How to Back Up Android Phone (Google, Samsung, PC) | phoneguiding.com</a>) — explicitly lists &quot;Before a major Android or One UI update&quot; as a moment to back up; methods are Google backup, Google Photos, Smart Switch to a computer, and manual copy. An update-framed guide — but its methods are cloud backup and full-device backup to a computer, not a whole-library one-tap photos-to-USB backup from the phone, and it says nothing about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page.</li>
+    <li><strong>umatechnology.org, &quot;How to Back Up a Samsung Galaxy Before an Update&quot;</strong> (<a href="http://umatechnology.org/how-to-back-up-and-restore-a-samsung-galaxy-before-a-major-update/">How to Back Up a Samsung Galaxy Before an Update | umatechnology.org</a>) — the update-framed Samsung guide: Smart Switch to a computer or supported external storage (USB flash drive/SSD), Samsung Cloud, Google Drive, and manual copy. An update-framed guide — but Smart Switch is a full-device backup, not a one-tap photos-only library backup from the phone, and it says nothing about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page.</li>
+    <li><strong>SnapDisk, &quot;Back up photos to USB before resetting your phone&quot;</strong> (<a href="https://dzianisv.github.io/photo-backup/factory-reset-photos-to-usb.html">Back up photos to USB before resetting your phone | dzianisv.github.io</a>) — the same one-tap copy, oldest-first in the background with progress, Pause and Stop, and resume, framed for the wipe itself. A real one-tap guide — but its moment is a reset you chose, not the update the phone is offering; curl 200.</li>
+  </ul>
+  <p>So the gap is narrow and honest: getting photos off a phone onto a USB drive is well covered, seven times over in the first search, and every mention is real advice — use an OTG adapter, copy rather than move, verify on the drive, keep the originals until the check is done. What is missing is the phone&#x27;s own whole library — the photos that are actually at risk when an update goes wrong — backed up to a USB drive in one tap, from the phone, with no computer, in the moment before an Android update. That is Method 1. The manual version gets Method 2, the cloud check gets Method 3, and the update itself gets Method 4, because the guides already describe the manual copy and the cloud backup — and the one-tap version of the phone&#x27;s own library, before the update, is the only thing left to add.</p>
+
+  <h2>What an Android update actually risks</h2>
+  <p>The update notification makes it sound like a single event — tap Install, wait, done — and almost every time, that is what it is. The risk is not the normal path. It is the three ways the normal path breaks, and all three end in the same place: a phone whose photos are gone, with no undo:</p>
+  <ul>
+    <li><strong>A normal update does not wipe your photos.</strong> An Android system update installs over your existing data — photos, apps, and settings stay where they are, and the phone restarts with everything intact. That is the ordinary outcome, and it is the outcome most updates have. Anyone telling you every update wipes the phone is selling fear, not facts — and this article is not that.</li>
+    <li><strong>A failed or stuck update can.</strong> An update can fail halfway — a download that corrupts, an install that stalls, a battery that dies mid-install — and a phone that will not finish its update is a phone that may not boot. The standard fix for a phone that will not boot is a factory reset from recovery mode, and a factory reset erases every photo on the phone.</li>
+    <li><strong>A bootloop is the same loss, slower.</strong> A phone that restarts, shows the logo, and restarts again is in a bootloop, and the photos on it are out of reach until the phone boots again. The troubleshooting path for a bootloop ends, sooner or later, at the same reset — and the reset is the erasure.</li>
+    <li><strong>A reset during troubleshooting is the erasure itself.</strong> Nobody plans to factory-reset their phone before an update — but support threads, repair shops, and recovery mode all end there when the phone will not boot, and the reset runs before anyone asks whether the photos were backed up. The backup has to exist before the update, because after the reset the question is already answered.</li>
+    <li><strong>The update restarts the phone, and a restart is the moment a half-finished backup dies.</strong> A copy still running when the phone restarts for the update is interrupted mid-file, and a drive left plugged in during the reboot is a drive the update may or may not see again cleanly. The backup has to COMPLETE and be verified, and the drive has to be unplugged, before the update starts.</li>
+    <li><strong>The update needs room and power of its own.</strong> An update package is gigabytes, and the installer needs free space to unpack it and a charged battery to finish it. A phone that is full and flat is a phone whose update is the most likely to fail — which is why the backup, the space check, and the charge are all in Method 4, before the tap.</li>
+    <li><strong>Deleting from the phone is not part of the update.</strong> Freeing space by deleting photos from the phone before the drive copy is verified leaves the photos in neither place if the copy failed. SnapDisk copies, it never deletes — deleting is your step, after the check, and the check is opening photos on the drive.</li>
+  </ul>
+  <p>None of this is fixed by backing up after the update — after the update, the phone either booted with everything intact, and the backup was unnecessary, or it did not boot, and the backup is already too late. The fix is a copy that finishes while the phone still works: oldest-first, verified on the drive, and unplugged before the update runs.</p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li>An Android phone (Android 7.0 or later for SnapDisk) with an update waiting — check in Settings, then System, then System update, or Software update, depending on the phone.</li>
+    <li>A USB drive your phone can read — a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter. Most modern Android phones support OTG; if the phone does not see the drive, try a different adapter. For a whole library, a portable SSD holds more — but a portable SSD may need a powered hub, because the phone alone may not supply enough power for both the hub and the drive.</li>
+    <li>Enough space on the drive for the photos you want to keep. Check first how much your photos take — Settings, then Storage, shows it — and pick a drive with room to spare. A phone that has never been backed up holds years of photos, so check the size before you start, not halfway through.</li>
+    <li>An exFAT drive if you have the choice — a drive formatted FAT32 cannot hold a single file over 4 GB, so a very long video will be skipped and listed, not copied. Reformatting erases the drive, so copy existing files elsewhere first.</li>
+    <li>A charger or a power bank — a big library is a long copy, and the phone powers the USB drive while it copies. Charge first if you can, because one USB-C port holds the drive or the charger, not both — or use a powered USB-C hub with pass-through charging, which is standard USB-C behaviour but unverified with SnapDisk.</li>
+    <li>Wi-Fi, if you want to check the cloud copy in Method 3 — the drive copy itself needs none of it. SnapDisk has no internet permission at all.</li>
+    <li>Time to let the copy finish, and time to check it — the backup is only a backup once you have opened a few photos on the drive. Do it before the update, not during it, and do not delete from the phone until the check is done.</li>
+    <li>What you should not buy: do not buy a drive with no space to grow into — the phone will keep filling it — and do not buy a cable and call it an adapter — a charging cable connects the phone to a computer, which is the opposite direction.</li>
+  </ul>
+  <p>One drive, one job at a time. The phone&#x27;s photos need only the drive; the charger needs only the port, before the drive goes in.</p>
+
+  <h2>Method 1: SnapDisk — the phone, one tap</h2>
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk settings screen">
+    <figcaption>SnapDisk&#x27;s settings screen, showing the backup folder pickers. The From picker is where you point at the folder that holds the photos — tap it, browse to the phone&#x27;s storage, and choose it. Screenshot is from SnapDisk on a working Android phone — the settings screen is the same screen you will see, before an update or any other time.</figcaption>
+  </figure>
+  <p>SnapDisk is the one-tap version, and it runs entirely on the phone — the photos never leave it until they are on the drive, and it needs no Wi-Fi at all. It needs Android 7.0 or later, which is minSdk 24 in the repo, and it is not on Google Play yet, so install the v0.1.2 APK from the GitHub release page before you start. One honest limit first: the copy runs as a foreground service, which is the mechanism Android gives a copy that must keep running with the screen off — but the repo holds no wake lock and no battery-saver handling, and no pre-update run has ever been tested, so screen-off continuation under battery saver is unverified.</p>
+  <ol>
+    <li>Check how much the photos take. Open Settings, then Storage, and look at the photos number. That is the size the drive has to hold — and the reason to copy oldest-first, because the earliest photos on the phone are the ones a failed update puts most at risk.</li>
+    <li>Charge first if you can. A big library is a long copy, and the phone powers the USB drive while it copies — one USB-C port holds the drive or the charger, not both, so charge before the drive goes in, or use a powered hub with pass-through charging.</li>
+    <li>Open SnapDisk. It opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos), To /disk/DCIM on the drive.</li>
+    <li>Check From — and check it twice, because a phone&#x27;s photos may not all sit in DCIM. If your photos live somewhere else — a messaging app&#x27;s folder, a downloads folder, screenshots — tap the From picker and choose that folder. The picker is the Android system folder picker, and the app keeps access to it. Repeat the copy for each folder that holds photos you want to keep.</li>
+    <li>Plug in the USB drive. SnapDisk offers a backup in a notification: &quot;External storage is connected. Backup photos?&quot; with Backup and Cancel.</li>
+    <li>Tap Backup. Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally, with live progress — percent, GB copied / total, speed, time left — and Pause and Stop.</li>
+    <li>Turn the screen off and let it run. The copy is a foreground service, built to keep running with the screen off. Wake the phone when you want to check progress — the notification shows percent, GB copied / total, speed, and time left — then turn the screen off again. If the copy pauses under battery saver, turn battery saver off for the copy and tap Resume — that is advice, not a verified fact, because battery-saver behaviour with SnapDisk is untested.</li>
+    <li>Wait for the copy to finish — all of it. The backup has to complete before the update starts, and an update cannot wait for a backup. If the copy is interrupted, resume it — finished files stay on the drive, and resume picks up where it stopped.</li>
+    <li>Open a few photos on the drive before doing anything else — older photos and a long video, not just the most recent ones. If they open at full quality, the copy is good.</li>
+    <li>Unplug the drive and put it somewhere safe — not in the phone. A backup that stays plugged in while the phone restarts for the update is a backup in the blast radius. Do not delete the photos from the phone yet: SnapDisk copies, it never deletes, and the phone stays a second copy until the drive copy is checked — deleting is your step, after the check, and the check is the drive in your hand, opened, with photos in it.</li>
+  </ol>
+  <p>Free version: backs up manually, up to 5 GB per run — one tap — and running it again past the cap picks up where it stopped, because files already copied are never copied twice. A phone that has never been backed up often holds a library bigger than 5 GB, so it takes several taps, and that is the case Pro is for. Pro is a one-time $9.99 purchase — auto-backup on connect and unlimited size, so the next update is covered the moment you plug the drive in. SnapDisk copies the original files as they are — no recompression, no resizing, no quality loss — and it copies, it never deletes.</p>
+
+  <h2>Method 2: by hand in the Files app (no app needed)</h2>
+  <p>Same phone, no app to install, and no Play Store or APK needed. This is the manual version of Method 1, and it is the route every phone-to-USB guide above describes — and the route to use when the phone cannot install anything, or when the update is already downloaded and you want the backup done now:</p>
+  <ol>
+    <li>Plug the USB drive into the phone — directly, if it is a USB-C drive, or through an OTG adapter for a regular USB drive. A notification appears; tap it and choose Transfer photos or File Transfer if it asks.</li>
+    <li>Open the Files app and find the photos — usually in DCIM, or in Pictures. Select the photos and videos — long-press one, then tap the rest — then tap Copy.</li>
+    <li>Tap the USB drive in the Files app, open the folder you want them in, and tap Paste. Or drag and drop, if the Files app on your phone supports it.</li>
+    <li>Repeat for every folder that holds photos — DCIM, Pictures, Downloads, and any messaging app&#x27;s folder. The Files app copies one selection at a time, so a library spread across folders takes several passes, and a folder you forget is a folder a failed update takes with it.</li>
+    <li>Keep the phone unlocked while the copy runs. The screen stays on for the whole transfer — which is the manual copy&#x27;s cost, and why the background copy is the better route when the library is big and the update is waiting.</li>
+    <li>Wait for the copy to finish, then open a few photos on the drive before doing anything else — older photos and a long video, not just the most recent ones.</li>
+    <li>Unplug the drive and put it somewhere safe — not in the phone — and only then think about deleting anything from the phone, after the check.</li>
+  </ol>
+  <p>Copy, not Move: the Files app&#x27;s Move option copies and then deletes the originals in one step, and if the copy fails halfway, photos are already gone from the phone — and the update is still waiting, so a failed Move leaves photos in neither place. What the manual copy does not give you is the one-tap backup: no oldest-first order, no progress bar with speed and ETA, no Pause and Stop, and no resume if the copy is interrupted — and on a library that can run to tens of gigabytes, the missing resume is the part you will feel first, because you have to repeat the whole selection next time, with the battery you have left.</p>
+
+  <h2>Method 3: the cloud trap — check Google Photos before you trust it</h2>
+  <p>This is the step most people skip before an update — because the Photos app on the phone shows the photos, and showing them feels like backing them up. It is not. And the check has a catch of its own: with no Wi-Fi, the upload cannot run at all, so the cloud check waits for Wi-Fi — the drive copy does not:</p>
+  <ol>
+    <li>Open the Google Photos app, tap your profile picture, then Photos settings, then Backup. Check that Backup is on — and check which account it is backing up to, because photos can upload to an account you do not intend to use.</li>
+    <li>Check the backup quality. If it is set to storage saver, the cloud holds compressed copies, not the originals — fine for viewing, not the same as the files on the phone. If you want the originals, switch the quality and let the upload finish, or copy the originals to a USB drive with Method 1 instead.</li>
+    <li>Check the device folders. In Photos settings, Backup, Back up device folders — switch on every folder that holds photos you want to keep: WhatsApp images and video, screenshots, downloads, and any other app&#x27;s folder. Google Photos can back up more than pictures taken with the camera, but only the folders you switch on.</li>
+    <li>Check the upload actually finished — on another device, not this phone, and on Wi-Fi, not while the update is waiting. Open photos.google.com on a computer or another phone, sign in with the same account, and look for the photos there. Seeing them in the Photos app on this phone proves nothing, because the app shows on-device photos too. A first backup can take up to 24 hours on Wi-Fi while charging — so if the upload is still running, wait for it, or copy to USB with Method 1 and update now.</li>
+    <li>Check the storage. Photos and videos count against the shared 15 GB of free Google account storage across Gmail, Drive, and Photos. If the account is full, the upload stopped without telling you clearly, and the photos that never uploaded are the ones a failed update takes with it.</li>
+    <li>If anything is missing from the cloud, copy it to a USB drive first. The drive copy is the original file, byte for byte, and it does not depend on the Wi-Fi, the account, or the subscription the update does not care about.</li>
+  </ol>
+  <p>Two honest limits: the cloud check only covers Google Photos — if your photos live in Samsung Cloud, Huawei Cloud, or another maker&#x27;s service, check that service the same way, on another device, when Wi-Fi returns — and a cloud backup is a copy that depends on Wi-Fi, an account, a password, and a subscription, while the drive copy depends on none of those. That is why the drive is Method 1 and the cloud is the check, not the other way round — and why, before an update, the drive copy is the backup that is finished when you need it, not the upload that is still running.</p>
+
+  <h2>Method 4: the update itself — before you tap Install</h2>
+  <p>The backup is done and checked. Now the update — and the update has its own short checklist, because the update is the thing that restarts the phone, and a restart is the moment every unfinished job dies:</p>
+  <ol>
+    <li>Confirm the backup first. Open a few photos on the drive — older photos and a long video, not just the most recent ones — and confirm they open at full quality. If anything is missing, finish the copy now. The update waits; a wipe does not.</li>
+    <li>Unplug the drive. The backup is done, and the drive has no job during the update. Unplug it and put it somewhere safe — a drive left in the phone during a reboot is a drive in the blast radius, and the update does not need it.</li>
+    <li>Check the free space. Open Settings, then Storage, and look at what is free. An update package is gigabytes, and the installer needs room to unpack it — if the phone is nearly full, the update is the most likely to fail. If you need room, free it only after the USB copy is verified — deleting photos before the check leaves them in neither place.</li>
+    <li>Charge the phone — or plug it in. An update that runs out of battery mid-install is the classic failed update, and a failed update is the thing the backup is insurance against. Most phones refuse to start an update below a charge threshold; plug the phone in anyway, and let it charge while the update downloads.</li>
+    <li>Download on Wi-Fi, install when you have time. Let the update download on Wi-Fi — a mobile download of gigabytes is slow and metered — and start the install when the phone can sit untouched for the half hour or so it takes. Do not start it on the way out of the door.</li>
+    <li>Tap Install, and leave the phone alone. The phone will restart, possibly more than once — that is normal. Do not hold the power button, do not pull the battery, and do not interrupt it — an interrupted install is the failed update the backup was for.</li>
+    <li>After the restart, check the photos. Open the Photos app and look for the photos — the oldest ones, not just the most recent. If they are there, the update did what updates almost always do, and the backup was insurance you did not need. If the phone will not boot, check the cloud at photos.google.com on another device, then repair — and the drive copy is the copy that survives, because it was never on the phone when the update failed.</li>
+  </ol>
+  <p>One thing the update does not do: it does not back anything up. The update installs over your data and trusts that your data is already safe somewhere else — and that somewhere else is the drive you unplugged in step 2.</p>
+
+  <h2>What this does not do</h2>
+  <ul>
+    <li><strong>Does not make the update itself safe.</strong> The backup does not fix a failed update, a bootloop, or a phone that will not boot — it only makes the failure survivable. If the update fails, the phone still needs fixing; the photos just do not go down with it.</li>
+    <li><strong>Does not undo a wipe.</strong> Once a factory reset runs — during troubleshooting, at a repair shop, or from recovery mode — the photos on the phone are gone, with no un-wipe and no recovery. The backup has to finish before the update starts, not after it.</li>
+    <li><strong>Does not back up anything but photos and videos.</strong> SnapDisk copies image and video files only — no settings, no contacts, no messages, no app data. Back those up in Settings, Google, Backup, before the update too — and export 2FA tokens and transit passes separately, because a phone that will not boot takes those with everything else.</li>
+    <li><strong>Does not back up photos that live only in the cloud.</strong> If your originals live only in Google Photos, they are not on the phone to copy — download them to the phone first, or export them from photos.google.com when Wi-Fi returns. And if they never uploaded at all, Method 3 is how you find out — before the update, not after it.</li>
+    <li><strong>Does not back up photos from apps that hide them.</strong> If an app keeps its photos in a private folder SnapDisk cannot read, those photos stay in the app.</li>
+    <li><strong>Does not promise the copy continues under battery saver.</strong> The repo holds no wake lock and no battery-saver handling, and no pre-update run has been tested — if the copy pauses under battery saver, turn battery saver off for the copy and tap Resume.</li>
+    <li><strong>Does not run past Android&#x27;s 6-hour dataSync budget without a pause.</strong> On Android 15 and later, a dataSync foreground service gets 6 hours in 24 hours — if the copy runs past that, Android pauses it, and opening the app resets the timer.</li>
+    <li><strong>Does not install below Android 7.0.</strong> SnapDisk needs Android 7.0 or later — minSdk 24 in the repo — so on a phone running older Android, use Method 2 instead: the Files-app copy has no version floor.</li>
+    <li><strong>Does not copy files over 4 GB off a FAT32 drive.</strong> Drives formatted FAT32 cannot hold a single file over 4 GB — SnapDisk skips those files and lists them instead of failing the whole backup, per the repo README. A drive formatted exFAT has no such limit.</li>
+    <li><strong>Does not charge the phone while the drive is in the port.</strong> One USB-C port holds the drive or the charger, not both — charge first, or use a powered hub with pass-through charging, which is standard USB-C behaviour but unverified with SnapDisk.</li>
+    <li><strong>Does not power a portable SSD from the phone alone.</strong> A portable SSD may need a powered hub — the phone alone may not supply enough power for both the hub and the drive. A spinning hard drive may need its own power too.</li>
+    <li><strong>Does not fix a phone that will not boot.</strong> If the phone will not turn on, no software route exists — check the cloud, then repair.</li>
+    <li><strong>Does not work on iPhone.</strong> SnapDisk is Android only. On an iPhone the pre-update route is the Files app with a USB-C or Lightning drive — and the same cloud trap applies: check that the photos actually uploaded before trusting it.</li>
+    <li><strong>Does not compress.</strong> SnapDisk copies the original files as they are — no recompression, no resizing, no quality loss.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Tapping Install before the backup finishes.</strong> The backup has to complete and be checked before the update starts — a copy still running when the phone restarts is not a backup, and after a wipe there is no undo.</li>
+    <li><strong>Leaving the drive plugged in during the update.</strong> The backup is done, and the drive has no job during the update. Unplug it before tapping Install — a drive left in the phone during a reboot is a drive in the blast radius.</li>
+    <li><strong>Starting the update on a dying battery.</strong> An update that runs out of battery mid-install is the classic failed update. Charge the phone first, or plug it in while the update downloads — the update can wait for a charged phone.</li>
+    <li><strong>Starting the update with no free space.</strong> An update package is gigabytes, and the installer needs room to unpack it. Check the free space in Settings before tapping Install — and free space only after the USB copy is verified.</li>
+    <li><strong>Interrupting the install.</strong> The phone will restart, possibly more than once — that is normal. Holding the power button or pulling the battery mid-install is how a routine update becomes a failed one.</li>
+    <li><strong>Trusting the cloud without checking it on another device.</strong> Seeing photos in the Photos app on the phone proves nothing — the app shows on-device photos too. Open photos.google.com on a computer or another phone and check that the photos are actually there, in the quality you want — when Wi-Fi returns.</li>
+    <li><strong>Forgetting the device folders.</strong> Google Photos backs up the camera folder by default — WhatsApp images, screenshots, and downloads have to be switched on separately, in Photos settings, Backup, Back up device folders. A folder you never switched on is a folder a failed update takes with it.</li>
+    <li><strong>Moving instead of copying.</strong> The Files app&#x27;s Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone — and the update is still waiting, so a failed Move leaves photos in neither place. Copy first, verify, then decide.</li>
+    <li><strong>Deleting from the phone before verifying.</strong> A backup is only a backup once you have confirmed the copy. Copy, open a few photos on the drive, then decide — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk&#x27;s Stop button exists for exactly this. In the Files app, eject the drive before unplugging it.</li>
+    <li><strong>Using a FAT32 drive for long videos.</strong> FAT32 cannot hold a single file over 4 GB. Use exFAT — and check the drive&#x27;s format before you are relying on it, not after the copy fails.</li>
+    <li><strong>Reformatting the drive without copying its files off first.</strong> Reformatting erases the drive — copy existing files elsewhere before reformatting, and test the drive with the phone before the copy.</li>
+    <li><strong>Buying a drive too small for the whole library.</strong> Make sure it is big enough for the entire library, including videos — a phone that has never been backed up holds years of photos, so check the size in Settings before you buy.</li>
+    <li><strong>Buying a charging cable and calling it an adapter.</strong> A charging cable connects the phone to a computer, which is the opposite direction. What you need is a data-capable adapter or a USB-C drive.</li>
+    <li><strong>Buying the wrong adapter for the port.</strong> USB-C and micro-USB do not fit each other. Check the phone&#x27;s port before buying — and check the adapter supports data transfer, not just charging.</li>
+    <li><strong>Expecting the free 5 GB cap to cover a whole library in one run.</strong> The free version backs up manually up to 5 GB per run — run it again past the cap and it picks up where it stopped, because files already copied are never copied twice — but a whole library is bigger than 5 GB, so it takes several taps, and that is the case Pro is for.</li>
+    <li><strong>Assuming the generic guides cover the update.</strong> The FotoSafe, mefmobile.org, YouTube, umatechnology.org, and Dr.Fone guides move photos to a USB drive — but none of them says when the copy has to finish, none of them unplugs the drive before the update, and none of them checks the battery and the free space the update itself needs. The transfer is Method 2; the update is Method 4.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> an update almost never wipes your photos — but a failed one does, and after a wipe there is no undo — so copy the whole library oldest-first, check a few photos on the drive, unplug the drive, charge the phone, and only then tap Install; and check the cloud when Wi-Fi returns, because the Photos app showing a photo is not proof it uploaded.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>Closest parallel: <a href="factory-reset-photos-to-usb.html">Back up photos to USB before resetting your phone</a> — the same copy-then-wipe job, on a reset you chose instead of an update the phone offered. If the update ends with a new phone, check <a href="switching-phones-photos-to-usb.html">Back up photos to USB when switching to a new phone</a> — the same copy-then-move job, on a phone that is being replaced instead of updated. If the update will not install for lack of room, check <a href="storage-full-photos-to-usb.html">Back up photos to USB when phone storage is full</a> — the other emergency version of this job, on a phone that has already stopped working properly. If the battery is the problem rather than the update, check <a href="low-battery-photos-to-usb.html">Back up photos to USB when your phone battery is low</a> — the charge-first version of this job, on a phone whose clock is running out. If the update ends with the phone changing hands, check <a href="selling-phone-photos-to-usb.html">Back up photos to USB before you sell your phone</a> — the wipe itself, with the accounts and the SIM attached. If you want the generic route with no situation attached, check <a href="transfer-photos-to-usb-automatically.html">Transfer photos to USB automatically</a> — the one-tap copy this article builds on — or <a href="backup-photos-offline.html">How to back up photos offline on Android</a>, the no-cloud version of the same job. Or <a href="index.html">the full list of phone-to-USB guides</a>.</p>
+</article>
+<footer>
+  <p>SnapDisk — back up photos to a USB drive, no computer needed.<br>
+  <a href="./">Home</a> · <a href="blog/">Blog</a> · <a href="https://github.com/dzianisv/photo-backup">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>
