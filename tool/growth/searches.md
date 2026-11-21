@@ -16211,6 +16211,180 @@ demand is read off competitor install velocity instead (see
   Article drafted Nov 21, 2026 (WL-186, 154th how-to):
   docs/snapdisk-vs-photos-to-usb.html — branch wl-186-vs-photos-to-usb.
 
+### 154. "SnapDisk vs SanDisk" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a SnapDisk-vs-SanDisk
+  head-to-head comparison at all — the top results are our
+  own brand articles that name SanDisk only as a drive brand,
+  and unrelated memory-card comparisons.
+- Current top results (scored Nov 21, 2026, live web search):
+  our own Fujitsu article
+  (https://dzianisv.github.io/photo-backup/fujitsu-photos-to-usb.html
+  — names the SanDisk app only in the contrast section
+  ("the SanDisk Memory Zone app for copying photos to the
+  drive"), inside a Fujitsu guide, not a comparison; live
+  200, verified this run);
+  our own Handheld article
+  (https://dzianisv.github.io/photo-backup/handheld-photos-to-usb.html
+  — names the SanDisk app only as a rival mention in the
+  contrast section, not a comparison; live 200, verified
+  this run);
+  Storage card memory comparison testing
+  (https://www.pocketgpsworld.com/storage-card-compatibility.php
+  — a 2005 memory-card compatibility test, SanDisk cards
+  among others, no app, no SnapDisk, no backup comparison);
+  Roundup: CompactFlash Cards For Professionals
+  (https://www.tomshardware.com/reviews/compactflash-card-memory,2166-6.html
+  — a CompactFlash card roundup, no app, no SnapDisk);
+  The Great Flash Memory Shootout
+  (https://www.edn.com/the-great-flash-memory-shootout-round-1/
+  — a flash-memory benchmark, no app, no SnapDisk);
+  Comparing the Speed of SSD, eMMC, Flash Drive and SD Card
+  (https://pawitp.medium.com/comparing-the-speed-of-ssd-emmc-flash-drive-and-sd-card-deefad477d85
+  — a storage-speed benchmark including SanDisk drives, no
+  app, no SnapDisk);
+  Every memory card format that tried to replace SD and lost
+  (https://www.makeuseof.com/every-memory-card-format-that-tried-to-replace-sd-and-lost/
+  — a memory-card format history, no app, no SnapDisk);
+  SANDISK Play listing
+  (https://play.google.com/store/apps/details?id=com.sandisk.smz2
+  — "SANDISK", developer © Sandisk Corporation or its
+  affiliates, formerly SANDISK Memory Zone; "back up,
+  manage, and protect your digital content"; "Use the app
+  with compatible SANDISK USB flash drives such as the
+  SANDISK Phone Drive, SANDISK external solid-state drives,
+  and SANDISK microSD cards (sold separately)"; "Automatic
+  Backup: Set it once and your photos, videos, and contacts
+  will automatically back up when your device is connected";
+  "Organize Your Files: Browse, move, copy, or delete
+  files"; "Free Up Space: Quickly transfer files from your
+  Android phone to a compatible storage device"; "Help
+  Secure Your Files: Add an extra layer of protection with
+  encryption and password-protection"; "Storage Insights";
+  "Explore More: Discover tools and services … from AI
+  enhancements to creative utilities"; Android 8+ required;
+  price 0 USD; rating 4.759 from 37,893 ratings in the
+  listing text read this run; updated Oct 12, 2026;
+  browser-verified live this run, curl 200);
+  SANDISK AppBrain page
+  (https://www.appbrain.com/app/sandisk/com.sandisk.smz2
+  — same listing text as Play, price 0 USD, rating 4.76/5
+  (35,995 ratings); browser-verified live this run, curl
+  403 — AppBrain blocks curl, the browser read is the
+  evidence);
+  SANDISK androidrank page
+  (https://www.androidrank.org/application/sandisk/com.sandisk.smz2
+  — installs achieved 1,000,000+ (estimated 1,231,618),
+  36,818 ratings, average 4.77, price Free, developer ©
+  Sandisk Corporation or its affiliates; download-level
+  stats: 1,000,000 installs achieved Jul 10, 2026;
+  browser-verified live this run, curl 200);
+  SanDisk Memory Zone androidrank page
+  (https://www.androidrank.org/application/sandisk_memory_zone/com.sandisk.mz
+  — the OLD listing: installs achieved 10,000,000+,
+  removed from Play Apr 29, 2025 — this is where the
+  floating 10M+ figure comes from, and it does NOT belong
+  to the current app);
+  our own Photos to USB comparison
+  (https://dzianisv.github.io/photo-backup/snapdisk-vs-photos-to-usb.html
+  — comparison #3 in the series (WL-186), the adjacent
+  ground for this one: the same head-to-head shape,
+  different rival; live 200, verified this run).
+  SANDISK app facts, all from its own live sources this run:
+  the app is free — price 0 USD in the Play listing text,
+  AppBrain, and androidrank — and the listing text we could
+  read names no paid tier, no subscription, and no in-app
+  purchase price, so the article makes no Pro-versus-paid
+  price comparison rather than guessing one. Installs on
+  the CURRENT listing: 1,000,000+ achieved (androidrank,
+  Jul 10, 2026), estimated 1,231,618 — the 10,000,000+
+  figure belongs to the old Memory Zone listing
+  (com.sandisk.mz, 11 million total per AppBrain, removed
+  Apr 29, 2025) and the article corrects that plainly.
+  Rating: 4.76 from about 37,900 ratings (Play listing
+  text read this run; AppBrain 4.76/5, 35,995 ratings;
+  androidrank 4.77, 36,818 ratings). Last update Oct 12,
+  2026; recent changes per AppBrain: removed the Explore
+  tab, bug fixes and stability improvements. Android 8+
+  required (listing footnote). It backs up photos, videos,
+  and contacts automatically on connect; it can browse,
+  move, copy, or delete files; it offers encryption and
+  password protection, storage insights, and a media
+  timeline and grid. It is built for compatible SanDisk
+  drives, sold separately — the listing names no other
+  brand's drives, so no non-SanDisk drive support is
+  claimed for it. Its listing says nothing about a copy
+  order, Pause and Stop, per-file verification, the folder
+  layout backups land in, or whether the copy keeps
+  running with the screen off — so none is claimed for it.
+  Its listing says nothing about ads or an account either
+  way, so neither is claimed. Reviewer complaints on its
+  Play listing, as quoted in our Nov 14 competitor study
+  (tool/growth/competitors.md, from the Play listing text
+  read then — the current listing text read this run shows
+  description only, no reviews): FAT32 >4 GB stalls the
+  whole copy with no skip ("The copy/backup process stops
+  when it encounters a file larger than 4GB because the
+  drives are formatted as FAT32, and there is no feature …
+  to skip the file and continue.", Mar 2026); slow copy
+  ("I found it very slow. A 2 minute transfer took more
+  than 20 minutes.", Jan 2025); broken OTG detection on
+  the current version ("ZERO IMPROVEMENTS ON A17/OUI9. NO
+  DRIVE CONNECT! BROKEN MULTI-PORT/MULTI-DRIVE OTG
+  DETECT!", v3.4.2, Oct 2026) — reviewer reports, not our
+  tests, attributed as such in the article.
+  The repo facts that carry the article, read from the code
+  this run: the copy runs as a foreground service
+  (dataSync type, BackupService.kt) — the mechanism
+  Android gives a copy that must keep running with the
+  screen off — but the repo holds no wake lock and no
+  battery-saver handling (no WakeLock/Doze reference in
+  the source, verified this run) and no comparison run has
+  ever been tested, so screen-off continuation under
+  battery saver is unverified and the article says so
+  instead of promising it. What IS verified: oldest-first
+  on MediaStore DATE_TAKEN (BackupEngine.kt); resume
+  covers an interrupted copy — finished files stay on the
+  drive (skip-if-exists with size verification), the file
+  in flight keeps its .part copy (byte-exact .part resume);
+  the destination mirrors the source folder structure;
+  on Android 15 and later a dataSync foreground service
+  gets 6 hours in 24 hours, so a very long copy can be
+  paused by Android itself, and opening the app resets the
+  timer (WL-34); the manifest holds no INTERNET permission;
+  SnapDisk copies, it never deletes (no delete() call in
+  the source touches photos — only .part files). SnapDisk
+  needs Android 7.0 or later (minSdk 24 in the repo) and
+  is not on Google Play yet, so install the v0.1.2 APK from
+  GitHub. The free version backs up manually up to 5 GB
+  per run, picking up where it stopped past the cap; Pro
+  is a one-time $9.99 purchase (product id pro_unlock,
+  BillingManager.kt) that auto-starts the backup on
+  connect and removes the size limit. A file ≥4 GiB on
+  FAT32 is skipped with its reason and the job continues
+  (BackupService.kt). The screenshot in the article is from
+  SnapDisk on a phone — the same settings screen the
+  reader will see. The From folder is a picker, not a
+  fixed path — tap it, browse to the phone's storage, and
+  choose the folder that holds the photos, which the picker
+  reaches because it is the system folder picker, verified
+  in the repo as OpenDocumentTree. The repo makes no
+  location claim either way, so the article does not score
+  SnapDisk on location. Own canonical URL returns 404
+  pre-merge (curl, this run — the known-missing control
+  URL returns the same 404, while existing pages return
+  200; expected, live only after merge). Title is the
+  54-char form "SnapDisk vs SanDisk app: back up Android
+  photos to USB" — within the 48–56-char brief. This is
+  the 155th article in the brand series — the Photos to
+  USB comparison (WL-186) is the adjacent ground for this
+  one, comparison #3 in the series, covering price, free
+  tier, copy order, and freeing up space against a
+  different rival.
+- Verdict: how-to article material, not a listing keyword.
+  Article drafted Nov 21, 2026 (WL-187, 155th how-to):
+  docs/snapdisk-vs-sandisk.html — branch wl-187-vs-sandisk.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
