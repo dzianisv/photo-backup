@@ -17064,6 +17064,250 @@ demand is read off competitor install velocity instead (see
   section added to llms-full.txt carries no figure that
   appears in any other file.
 
+### 159. "back up motion photos to USB from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a motion-photos-specific
+  phone-to-USB backup guide at all — the top results are
+  a rival product page with a Live Photos section, our own
+  general guides, and generic transfer guides with at most
+  one live-photo line. None of them offers a one-tap
+  whole-library backup for motion photos, and none of
+  them mentions SnapDisk.
+- Current top results (scored Nov 21, 2026, live web search):
+  VaultDrive, "Back Up Phone Photos to a USB Drive, No
+  Computer"
+  (https://coticsy.com/vaultdrive.html
+  — a product page, not a guide: one section, "Live Photos,
+  both parts", says the photo and its motion clip "are saved
+  side by side, with the same name" — the iPhone two-file
+  form, not Android's one-file form — and its Android
+  section says nothing about motion photos at all; free up
+  to 200 files or 2 GB per backup, Pro $19.99 once, Android
+  8 or later, on Google Play; it shows the size before you
+  start, has backup reminders, folders by date or album, an
+  App Lock, and incremental backups on Pro — the fair wins
+  the article names — but no guide and no SnapDisk mention;
+  full page read this run);
+  our own Samsung Galaxy article, "Back up Samsung Galaxy
+  photos to a USB drive"
+  (https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html
+  — a general Galaxy photo backup guide, no motion angle;
+  search-index excerpt read this run);
+  our own transfer article, "Transfer photos to USB
+  automatically"
+  (https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html
+  — a general automatic-transfer guide, no motion angle;
+  search-index excerpt read this run);
+  groovypost, "How to Transfer Photos from Android to a USB
+  Drive"
+  (https://www.groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — a PC middleman (drag and drop from the phone to a
+  computer, then to the drive) and a dual USB-C drive with
+  the file manager; a generic photo transfer guide, no
+  motion angle, no SnapDisk mention; search-index excerpt
+  read this run);
+  pixoneye, "How to Transfer Photos from Your Phone to a USB
+  Stick"
+  (https://pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — a generic file-manager copy; its whole motion coverage
+  is one checklist line, "Keep live-photo/video components
+  and other files that matter to your collection"; no motion
+  method, no SnapDisk mention; supervisor-found in phrasing
+  1, verified by the lead's own follow-up search this run,
+  search-index excerpt read).
+  Second-phrasing re-score (this run) surfaced no new
+  near-miss beyond the supervisor's list — the five it
+  returns are all generic transfer guides: Samsung
+  Community, "How to take pictures off phone and put on
+  memory stick"
+  (https://stg-r1.community.samsung.com/t5/galaxy-s/how-to-take-pictures-off-phone-and-put-on-memory-stick/m-p/15256917
+  — a Galaxy-only manual My Files copy, folder by folder,
+  through an OTG adapter; no motion angle, no SnapDisk
+  mention; search-index excerpt read this run);
+  groovypost (above); YouTube, "How to Connect USB Drive to
+  Android Phone to Move Photos & Videos (Best Method)"
+  (https://www.youtube.com/watch?v=PYcbV25CczI
+  — a manual file-manager OTG walkthrough, and it recommends
+  Move, which deletes the originals as the copy goes; no
+  motion angle, no SnapDisk mention; search-index excerpt
+  read this run);
+  askfilo, "how to transfer pictures from an android phone
+  to a flashdrive"
+  (https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — a generic OTG copy through DCIM/Camera; no motion angle,
+  no SnapDisk mention; search-index excerpt read this run);
+  eztoolset, "How to Transfer Photos from Android to a USB
+  Drive"
+  (https://eztoolset.com/how-to-transfer-photos-from-android-to-a-usb-drive/
+  — a generic Files-by-Google copy, with one honest line,
+  use Copy rather than Move for a first transfer; no motion
+  angle, no SnapDisk mention; search-index excerpt read this
+  run). Gap stands only on the motion-photos angle.
+  Google's Motion Photo format 1.0, Android Developers
+  (https://developer.android.google.cn/media/platform/motion-photo-format?hl=en&authuser=1
+  — the where-motion-photos-come-from reference, not a
+  competing guide: "Motion Photos are single files that
+  contain a still photographic image and a short video, which
+  includes audio recording"; the primary still image is JPEG,
+  HEIC or AVIF with the video file appended to it; filename
+  pattern ….MP.jpg; search-index excerpt read this run);
+  freetoolcabin, "Motion Photo Video Extractor"
+  (https://freetoolcabin.com/motion-photo-extractor/
+  — the second format reference, not a competing guide:
+  "Android phones save motion photos as a single JPG with a
+  short video hidden at the end"; Pixel MVIMG and .MP.jpg,
+  Samsung motion photos with a MotionPhoto_Data marker; the
+  clip is "usually about 1.5 seconds before and after" the
+  shutter; "Many apps keep only the still when you share,
+  edit or upload a motion photo. WhatsApp, most social
+  networks, email apps and Google Photos in storage-saver
+  quality usually remove the clip"; motion photos downloaded
+  in original quality from Google Photos keep their video;
+  search-index excerpt read this run);
+  staysprivate, "Save a Motion Photo as Video (MP4)"
+  (https://staysprivate.com/motion-photo-to-video/
+  — the third format reference, not a competing guide: "A
+  Motion Photo is one JPEG or HEIC file with a short MP4
+  video stored after the still image"; Samsung "says Motion
+  Photo switches itself off in high-resolution modes such as
+  50MP and 200MP, and in Portrait, Panorama and Hyperlapse
+  modes, and it can stop saving clips when storage is almost
+  full"; search-index excerpt read this run);
+  motionphoto, PyPI
+  (https://pypi.org/project/motionphoto/
+  — the fourth format reference, not a competing guide:
+  Google "requires that the video file be embedded inside the
+  image file" and Samsung "requires that the video file be
+  embedded inside the image file by constructing a trailer in
+  a custom format"; search-index excerpt read this run).
+  Google Photos help, "Choose the backup quality of your
+  photos & videos"
+  (https://support.google.com/photos/answer/6220791?hl=en-GB&co=GENIE.Platform=Desktop
+  — the cloud-trap reference the article names, not a
+  competing guide: Storage saver uploads "may be compressed
+  into a different image format, like a .jpg"; Original
+  quality keeps the file as shot and counts against the
+  Google Account storage; search-index excerpt read this
+  run);
+  DriveForge, "exFAT vs FAT32 vs NTFS: Which Format for Your
+  USB or SD Card?"
+  (https://driveforge.bytehavenstudios.com/guides/exfat-vs-fat32-vs-ntfs/
+  — the format reference the article names, not a competing
+  guide: exFAT has no 4 GB per-file limit and is read and
+  written by current Android phones, Windows, and Mac; FAT32
+  cannot hold a single file of 4 GB or more; NTFS is a
+  Windows format most Android phones cannot open on their
+  own).
+  Adjacent ground in our own series: the HEIC article
+  (https://dzianisv.github.io/photo-backup/heic-photos-to-usb.html
+  — WL-191: an iPhone Live Photo's .mov companion copies as a
+  second file, the opposite shape from Android's one-file
+  motion photo; live 200, verified this run), the RAW article
+  (WL-190) and the screenshots article (WL-192) — the same
+  folder-route rule on other formats — the Samsung Galaxy
+  article, the general backup article (WL-1) and the
+  VaultDrive comparison (WL-37).
+  Anti-duplicate check (this run, before writing): grep of
+  searches.md for the motion-photos topic finds only
+  incidental mentions — the BlackBerry Motion phone model in
+  the device rows, and the WL-191 note (a Live Photo's .mov
+  clip as a second file) — and no "### " row title is a
+  motion-photos topic; a docs/ listing finds no
+  motion-photos-to-usb.html and no near slug (motion,
+  live-photo, livephoto). No existing motion-photos article
+  or row: the gap is a new article, not a rewrite. WL-189 was
+  killed before merge for duplicating WL-168's live
+  switching-phones article — this query is not that moment.
+  The repo facts that carry the article, read from the code
+  this run: with no From folder picked, the run calls
+  PhotoQuery.queryMediaStoreOldestFirst (BackupService.kt,
+  enumeratePhotos — fromUri null goes to MediaStore, a
+  picked From goes to the SAF tree walk), and that query
+  reads the MediaStore Images table plus the Video table
+  with selection null — no folder filter, no MIME filter —
+  oldest-first on DATE_TAKEN (fallback DATE_MODIFIED); a JPEG
+  motion photo is a .jpg file, and MediaStore indexes .jpg on
+  every phone, so the default run includes the JPEG motion
+  photos in DCIM/Camera by construction — but whether a
+  phone's MediaStore indexes .heic is device-dependent (the
+  WL-191 finding), so the default route is the uncertain one
+  for .heic motion photos and the folder route is the certain
+  one in every case: the SAF-tree walk recurses into
+  subfolders, so a DCIM From pick covers DCIM/Camera, and
+  .jpg/.jpeg are in IMAGE_EXTENSIONS (PhotoQuery.kt, lines
+  130-131) and .heic/.heif are in the same list, so the
+  folder route copies motion photos whatever the primary
+  format; .mp4/.mov are in VIDEO_EXTENSIONS (line 134), the
+  iPhone Live Photo .mov companion — WL-191's second file;
+  the copy streams each file byte-for-byte with no
+  transcoding step (copyWithResume, BackupEngine.kt) and
+  renames the .part file to the final file only after the size
+  verification passes; files already copied are never copied
+  twice — shouldSkip skips a destination file whose size
+  already matches (BackupEngine.kt); oldest-first on
+  MediaStore DATE_TAKEN (fallback DATE_MODIFIED); a file >=4
+  GiB on FAT32 is skipped with its reason and the job
+  continues (BackupService.kt) — a single motion photo never
+  reaches that; the free version backs up manually up to 5 GB
+  per run (FREE_BACKUP_BYTES_LIMIT, 5 GiB, ProPrefs.kt),
+  repeatable, files already copied never copied twice; Pro
+  is a one-time $9.99 purchase (product id pro_unlock,
+  BillingManager.kt) for auto-backup on connect and
+  unlimited size; the copy runs as a foreground service
+  (dataSync type, BackupService.kt) — the mechanism Android
+  gives a copy that must keep running with the screen off —
+  but the repo holds no wake lock and no battery-saver
+  handling (no WakeLock/Doze reference in the source,
+  verified this run) and no motion-photo run has ever been
+  tested, so screen-off continuation under battery saver is
+  unverified and the article says so instead of promising
+  it; on Android 15 and later a dataSync foreground service
+  gets 6 hours in 24 hours, and opening the app resets the
+  timer (WL-34); the manifest holds no INTERNET permission;
+  SnapDisk copies, it never deletes (no delete() call in the
+  source touches photos — only .part files). SnapDisk needs
+  Android 7.0 or later (minSdk 24 in the repo) and is not on
+  Google Play yet, so install the v0.1.2 APK from GitHub. The
+  screenshot in the article is from SnapDisk on a phone —
+  the same settings screen the reader will see. The From
+  folder is a picker, not a fixed path — tap it, browse to
+  the phone's storage, and choose the folder that holds the
+  motion photos, which the picker reaches because it is the
+  system folder picker, verified in the repo as
+  OpenDocumentTree. The repo makes no location claim either
+  way, so the article does not score SnapDisk on location.
+  Own canonical URL returns 404 pre-merge (curl, this run —
+  the known-missing control URL returns the same 404, while
+  existing pages return 200; expected, live only after
+  merge). Title is the 50-char form "Back up motion photos
+  to USB on Android — SnapDisk" — within the 48–53-char
+  brief. This is the 160th article in the brand series —
+  the HEIC article (WL-191) is the adjacent ground for this
+  one, the opposite shape — iPhone Live Photo as two files
+  against Android motion photo as one — and the RAW (WL-190)
+  and screenshots (WL-192) articles carry the same
+  folder-route rule.
+  Scoring-fix sweep (this run): no figure needed correcting
+  anywhere. The WL-190 worklog flag about llms-full.txt
+  saying "4.5 from 61 reviews" was already settled wrong
+  in WL-191 — re-checked this run on main: 0 occurrences
+  of "61 reviews" in llms-full.txt, llms.txt, or the blog
+  index; llms-full.txt says "69 ratings" (Buffalo) 3 times.
+  This article carries no Buffalo rating, and the
+  motion-photos section added to llms-full.txt carries no
+  figure that appears in any other file. One figure elsewhere
+  moved and is flagged, not fixed, here: the VaultDrive
+  comparison (WL-37) says VaultDrive had about 870 installs
+  as of November 14, 2026 — the live VaultDrive page now says
+  "2,000+ installs on the App Store and Google Play" — the
+  comparison article is a separate file this run does not
+  touch, and this article carries no install count, so the
+  stale figure is the supervisor's call. Note also that the
+  WL-192 row's "99 sections" count for llms-full.txt does not
+  reproduce from a URL-line count (96 URL sections before
+  this run, 97 after) — the count this row uses is the
+  URL-line count, verified this run.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
