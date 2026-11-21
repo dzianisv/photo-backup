@@ -14344,6 +14344,180 @@ demand is read off competitor install velocity instead (see
   drafted Nov 20, 2026 (WL-174, 142nd how-to):
   docs/factory-reset-photos-to-usb.html — branch wl-174-factory-reset.
 
+### 142. "back up photos to USB before selling or trading in your phone (no computer)" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return real guides — five:
+  techsith.com's get-pictures-off guide, a MacRumors forum thread,
+  a Facebook reel, an Instagram reel, plus our own Unitech article —
+  and a second search for the sell-or-trade-in angle itself returned
+  four wipe-before-selling guides: androidphonesblog.com,
+  digitaltrends.com, ezznology.com, and askdavetaylor.com. The five
+  phone-to-USB results are a generic guide, a forum thread, two
+  videos, and a brand article — all manual select-copy-paste or video,
+  with nothing about selling or trading in — and the four
+  wipe-before-selling guides back up to the cloud and never to a USB
+  drive from the phone — none of the nine is a whole-library one-tap
+  phone-to-USB backup framed for the sell-or-trade-in moment, and none
+  of them mentions SnapDisk.
+- Current top results (scored Nov 20, 2026, live web search):
+  techsith.com, "How Do I Get All My Pictures Off My Phone?"
+  (https://techsith.com/how-do-i-get-all-my-pictures-off-my-phone/
+  — the generic get-pictures-off guide: a USB cable to a computer, a
+  cloud backup, or a direct copy to a USB drive, for iPhone and
+  Android, with quick steps and gotchas for each route. A real
+  phone-to-USB guide — but its reasons are getting pictures off the
+  phone in general, its USB route is a manual copy, and it says
+  nothing about selling or trading in the phone, or about SnapDisk;
+  verified via live search index only — the site refused the fetch
+  twice, empty reply, so its page could not be read directly);
+  MacRumors forum, "transfer file to usb stick without computer"
+  (https://forums.macrumors.com/threads/transfer-file-to-usb-stick-without-computer.1853303/
+  — the forum thread: an iPhone user asking how to move photos to a
+  USB stick with no computer or Wi-Fi, answered with a
+  Lightning-to-USB adapter, wireless drives that broadcast their own
+  Wi-Fi, a FileHub app with manual select-and-upload, and cloud backup
+  at a cafe hotspot. A real phone-to-USB discussion — but a forum
+  thread from the iPhone 6 era, its copy is manual select-and-upload,
+  and it says nothing about selling or trading in the phone, or about
+  SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page);
+  Facebook reel by SamMobile, "free up storage on a Samsung Galaxy
+  phone"
+  (https://www.facebook.com/reel/1439352598154982/
+  — the video: a USB stick and a small USB-C adapter plugged into a
+  Samsung phone, Smart Switch opened, the external storage icon
+  tapped, the USB drive chosen, and data types including Images and
+  Videos backed up, with the presenter saying to leave the device
+  connected until completion and that no computer is needed. A real
+  phone-to-USB method — but a video, not a guide you can follow step
+  by step on the page, its reason is freeing storage rather than
+  selling, its backup is an encrypted Smart Switch archive rather
+  than plain photo files, and it says nothing about selling or
+  trading in the phone, or about SnapDisk; verified via live search
+  index only);
+  Instagram reel by Krista Kowalczyk, "transfer photos from an iPhone
+  to a flash drive without a computer"
+  (https://www.instagram.com/reel/DKSLLS2NNV_/
+  — the short video tutorial: a Lightning-to-USB adapter, a flash
+  drive, the Photos app, select multiple images, Save to Files, copy
+  to the flash drive. A real phone-to-USB method — but a video, not a
+  guide you can follow step by step on the page, its copy is manual
+  select-and-copy, it is iPhone-first with Android as an afterthought,
+  and it says nothing about selling or trading in the phone, or about
+  SnapDisk; verified via live search index only);
+  SnapDisk, "Back up Unitech photos to a USB drive"
+  (https://dzianisv.github.io/photo-backup/unitech-photos-to-usb.html
+  — the same one-tap copy, oldest-first in the background with
+  progress, Pause and Stop, and resume, with the honest contrast that
+  no source confirms OTG or host support on the PA768e UHF. A real
+  one-tap guide — but its angle is the brand, and it says nothing
+  about selling or trading in the phone; curl 200).
+  The wipe-before-selling guides the search does return, from a second
+  search for the sell-or-trade-in angle itself:
+  androidphonesblog.com, "Factory Reset Android: FRP Lock, 2FA Backup
+  & eSIM Guide"
+  (https://www.androidphonesblog.com/blog/factory-reset-android-frp-lock-and-backup-checklist/
+  — the trade-in checklist: back up first, export 2FA tokens, remove
+  all Google accounts and sign out of Samsung, check the eSIM erasure
+  option before trade-in and resale, and run the wipe from the
+  Settings menu rather than recovery mode — mandatory per Google Pixel
+  and Samsung trade-in rules. A real before-a-sale guide — but its
+  backup is the cloud, and it says nothing about a USB drive from the
+  phone or about SnapDisk; curl 200, 0 SnapDisk mentions in the
+  fetched page);
+  digitaltrends.com, "How to wipe your Android phone or tablet
+  properly"
+  (https://www.digitaltrends.com/phones/how-to-wipe-your-android-phone-or-tablet/
+  — the wipe guide: disable the screen lock, remove the Google
+  account, remove the Samsung account, then factory reset — because a
+  reset with Factory Reset Protection still enabled asks the next
+  owner for your Google account password. A real before-a-sale guide
+  — but its backup is assumed to exist already, and it says nothing
+  about a USB drive from the phone or about SnapDisk; curl 200, 0
+  SnapDisk mentions in the fetched page);
+  ezznology.com, "Wipe Your Phone Before Selling: 8 Safe Steps"
+  (https://ezznology.com/blog/en/wipe-phone-before-selling
+  — the eight-step seller's list: back up before anything else, unpair
+  the smartwatch, sign out of the Google account to switch off the
+  activation lock, remove the SIM, memory card and eSIM, run a factory
+  reset from Settings, then remove the device from the trusted-devices
+  list — and power the phone on before the buyer leaves to check it
+  shows the setup welcome screen. A real before-a-sale guide — but its
+  backup is Google One or iCloud, and it says nothing about a USB
+  drive from the phone or about SnapDisk; curl 200, 0 SnapDisk
+  mentions in the fetched page);
+  askdavetaylor.com, "How do you Wipe and Reformat an Android
+  Device?"
+  (https://www.askdavetaylor.com/wipe-reformat-android-device/
+  — the reformat guide: a complete reset is exactly what you want
+  before giving or selling a tablet, and it is smart to remove the
+  Google account first to avoid Factory Reset Protection
+  complications. A real before-a-sale guide — but its backup is a
+  working copy you are assumed to have made already, and it says
+  nothing about a USB drive from the phone or about SnapDisk;
+  verified via live search index only — the direct fetch returned
+  403).
+- Selling or trading in a phone ends with a factory reset — and a
+  reset erases every photo on the phone, with no undo once the phone
+  is wiped or handed over. Trade-in, buyback, and carrier-return
+  programs ask for the phone reset before hand-over, and Google Pixel
+  and Samsung trade-in rules say the reset has to run from the
+  Settings app, not from recovery mode. The accounts come off before
+  the reset, not after it: after a factory reset, Android asks for the
+  Google account that was on the phone before — Factory Reset
+  Protection — so removing every Google account, and the Samsung
+  account too if the phone has one, disarms it and the buyer is not
+  asked for your password at setup. The SIM, the microSD card, and
+  the eSIM leave with you — a factory reset does not wipe a microSD
+  card, and the card can still hold your photos. Any on-device copy is
+  not a backup: a second folder on the same phone, a copy in a
+  different app on the same phone — all of it is internal storage, and
+  the reset wipes internal storage. The cloud copy only counts if it
+  actually uploaded: Google Photos backup can be off, it can cover
+  the camera folder only, and it can be set to storage saver, which
+  uploads compressed copies instead of the originals — seeing a photo
+  in the Photos app on the phone proves nothing, because the app
+  shows on-device photos too, so the check has to happen at
+  photos.google.com on another device. The repo facts that carry the
+  article, read from the code this run: the copy runs as a foreground
+  service (dataSync type, BackupService.kt) — the mechanism Android
+  gives a copy that must keep running with the screen off — but the
+  repo holds no wake lock and no battery-saver handling (grep over
+  app/src/main finds no WakeLock, PowerManager, or power-save code),
+  and no selling-prep run has ever been tested, so screen-off
+  continuation under battery saver is unverified and the article says
+  so instead of promising it. What IS verified: the backup has to
+  finish and be checked before the wipe or the hand-over, and resume
+  covers an interrupted copy — finished files stay on the drive, the
+  file in flight keeps its partial copy, and resume picks up where it
+  stopped (byte-exact .part resume, skip-if-exists); and on Android 15
+  and later a dataSync foreground service gets 6 hours in 24 hours, so
+  a very long copy can be paused by Android itself, and opening the
+  app resets the timer (WL-34). SnapDisk needs Android 7.0 or later
+  (minSdk 24 in the repo) and is not on Google Play yet, so install
+  the v0.1.2 APK from GitHub. The free version backs up manually up
+  to 5 GB per run, picking up where it stopped past the cap — a phone
+  about to be sold often holds a library bigger than 5 GB, so it takes
+  several taps, and that is the case Pro is for; Pro is a one-time
+  $9.99 purchase that auto-starts the backup on connect and removes
+  the size limit. The screenshot in the article is from SnapDisk on a
+  phone — the same settings screen the reader will see. The From
+  folder is a picker, not a fixed path — tap it, browse to the phone's
+  storage, and choose the folder that holds the photos, which the
+  picker reaches because it is the system folder picker, verified in
+  the repo as OpenDocumentTree. Drives formatted FAT32 cannot hold a
+  single file over 4 GB — SnapDisk skips those files and lists them
+  instead of failing the whole backup, per the repo README — so use
+  exFAT. SnapDisk copies, it never deletes — deleting photos from the
+  phone afterwards is the reader's step, only after verifying photos
+  on the drive. This is the ninth article in the series about a
+  situation instead of a phone brand — the brand series ran to 134
+  articles, and the broken-screen, switching-phones, SD-card, tablet,
+  Chromebook, storage-full, low-battery, and factory-reset articles
+  were the first eight.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 20, 2026 (WL-175, 143rd how-to):
+  docs/selling-phone-photos-to-usb.html — branch wl-175-selling-phone.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
