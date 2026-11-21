@@ -1,3 +1,90 @@
+## WL-172 — Back up photos to USB when phone storage is full article, 140th how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #317 MERGED (merge commit daec8e5, merged
+  2026-11-21T02:43:04Z; PR head 467e83e, CI run 44857265386
+  build pass, 1m15s; post-merge main runs Android PR
+  44857396827 + pages 44857395638 success).
+  Pre-merge readback on head 467e83e (verified by the
+  supervisor from the branch source): feed 140 items / 140
+  closes incl. storage-full, sitemap 144 URLs incl.
+  storage-full, blog index 140 BlogPosting (JSON-LD @graph
+  parses: Article + FAQPage + BreadcrumbList) + 140 post
+  blocks, title 48 chars, meta 137 chars, JSON-LD parses
+  (Article + FAQPage 4 Qs + BreadcrumbList, datePublished
+  2026-11-20), TL;DR present, 1 script tag, 1 H1, 10 H2s,
+  Query 139 row present ("### 139."; rows 1-139 sequential),
+  only docs/ + tool/growth changed (7 files, +468/-0).
+  Dek states exactly 13 caveats, verified by count (the
+  14th semicolon in a naive count is the &#x27; entity in
+  "phone's storage").
+  Query 139 scored honestly from live evidence (no
+  "no guide exists" claim): the exact query returns seven
+  real storage-full guides — zoriumdaily.com, mobiletrans.
+  wondershare.com, innoparkit.com, thetechedvocate.org,
+  gigagone.com, fonelab.com, eyefi.com — all manual
+  select-copy-paste, cloud backup, or general clean-up.
+  None of them is a whole-library one-tap backup framed
+  for the storage-full moment, and none mentions SnapDisk;
+  the gap stands narrowly on that angle. Supervisor's
+  fresh search returned SnapDisk's own generic guides
+  first (transfer-photos-to-usb-automatically,
+  free-up-space-move-photos-to-usb) — the free-up-space
+  article is named in-article and in the Query 139 row as
+  adjacent ground: this one is the emergency version —
+  camera won't save, apps won't install/update, the
+  Files-app Move can fail halfway, and the too-full-to-
+  install catch-22 (Method 4: free a sliver first, then
+  install). Supervisor re-verified all 7 external links
+  (6x200 curl + gigagone live via browser.open — a real
+  guide: Google Backup + PC USB copy, no one-tap
+  whole-library phone-to-USB).
+  New docs/storage-full-photos-to-usb.html ("Back up photos
+  to USB when phone storage is full (no computer)"),
+  following the WL-54-WL-171 article template exactly
+  (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot,
+  with an honest caption: same phone settings screen the
+  reader will see). Title 48 chars, meta 137 chars.
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full storage-full section: heading + URL +
+  dek + TL;DR + Search + Method 1 + What this does not do
+  + What to avoid — verified complete), feed.xml updated;
+  searches.md Query 139 row added.
+  Key finding: a full phone is not a phone with a lot of
+  photos — it is a phone that has stopped working properly
+  (camera won't save, apps won't install or update, the
+  Files-app Move can fail halfway and leave photos in
+  neither place); a phone with less than about 1-2 GB free
+  will often struggle to update apps or save new photos,
+  per zoriumdaily; SnapDisk needs Android 7.0+ (minSdk 24)
+  and is not on Play yet (v0.1.2 APK from GitHub); free
+  5 GB/run with resume, Pro $9.99 auto-backup on connect
+  + unlimited size; FAT32 >=4 GB files skipped and listed.
+  SnapDisk behaviour verified from the repo itself:
+  minSdk 24, Pro $9.99 auto-backup on connect, free 5 GB/run
+  with resume (skip-if-exists + .part resume + size
+  verification), FAT32 >=4 GB skipped, From-folder picker
+  is OpenDocumentTree SAF, oldest-first
+  (BackupEngine.sortOldestFirst). SnapDisk copies, never
+  deletes — stated throughout.
+  Live fetch verified by the supervisor:
+  storage-full-photos-to-usb.html 200 (42,356 B, correct
+  title), feed.xml 140 items live incl. storage-full.
+  Lead's run record: two recoveries, both caught by
+  checks, none shipped — (1) meta was 143 chars on first
+  write, trimmed to 137; (2) first blog splice corrupted
+  the JSON with a double comma, restored from git and
+  redid the splice cleanly. Lead's goal entry
+  (goal_update_f6f3278c4514, "drafted") verified on the
+  timeline by the supervisor; the settle records the live
+  entry separately.
+  Branch wl-172-storage-full deleted (404 verified).
+  WL-173 fallback: another scenario shape — candidates
+  dead-phone (no software route, already answered in
+  WL-167 scenario 3), low-battery / no-charger backup,
+  or a new device-shape (unverified).
+
 ## WL-171 — Back up photos from a Chromebook to USB article, 139th how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
