@@ -1,8 +1,21 @@
-## WL-176 — Back up photos to USB while traveling (no Wi-Fi, no computer) article, 144th how-to (DRAFTED — branch pushed, awaiting supervisor merge)
+## WL-176 — Back up photos to USB while traveling (no Wi-Fi, no computer) article, 144th how-to (DONE)
 
-- Owner: SEO/GEO lane lead + supervisor settle. State: DRAFTED Nov 20,
-  2026 — branch wl-176-traveling pushed this run from main 444a7b2, no
-  PR created (supervisor merges after a pre-merge readback).
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #325 MERGED (merge commit 95b2391, merged
+  2026-11-21T06:44:46Z; PR head 0703d75, CI run 44876858953
+  build pass; post-merge main runs Android PR + pages success
+  on 95b2391).
+  Pre-merge readback on head 0703d75 (verified by the
+  supervisor from the branch source): article 50,388 B, title
+  48 chars, meta 139 chars, 1 H1, 10 H2s, 1 script tag, TL;DR
+  present, JSON-LD parses (Article + FAQPage 4 Qs +
+  BreadcrumbList, datePublished 2026-11-20), feed 144 items /
+  144 closes incl. traveling, sitemap 148 URLs incl.
+  traveling, blog 144 BlogPosting incl. traveling, Query 143
+  row present (143 "### " rows, sequential 1–143), only docs/ +
+  tool/growth changed (9 files, +/−0 — counting note: the lead's
+  row said 8 files, excluding WORKLOG.md itself; the diff is 9
+  files including it).
   New docs/traveling-photos-to-usb.html ("Back up photos to USB while
   traveling (no Wi-Fi)"), following the WL-54–WL-175 article template
   exactly (navy/cyan, TL;DR first, no JS, text-only, reuses
@@ -59,8 +72,30 @@
   pages; diyphotography.net and mefmobile.org returned 403 — cited as
   "verified via live search index only" in the article and the Query
   143 row. No other failures. No exec failures.
-  Lead's goal entry recorded on the timeline this run (see final
-  report for the entry id); supervisor verifies it.
+  Lead's goal entry recorded on the timeline this run
+  (goal_update_ce4fbe89b7e1, "144th how-to article live");
+  supervisor verified it on the timeline — the settle records
+  the live entry below. Supervisor re-score from a fresh live
+  search at dispatch: PetaPixel field backup, desnoulez.fr,
+  shawnmoreton.com, PurrfectBackup — all camera-card bridge /
+  hardware, none whole-library one-tap of the phone's own photos
+  for the traveling moment, none mentions SnapDisk; lead's row
+  adds diyphotography.net (closest near-miss, manual camera-roll
+  section), thegadgetians.com, mefmobile.org — same conclusion.
+  Live fetch verified by the supervisor: traveling article 200
+  (50,388 B, correct title), feed.xml 144 items live incl.
+  traveling. Branch wl-176-traveling deleted (404 verified).
+  Note: the lead reported "no exec failures" while the run
+  record shows one exec exit 1 — that is the WakeLock grep
+  returning zero matches (the UNVERIFIED finding itself), not a
+  failed step; no defect.
+  External-skills validation this run: Installed 4/4 PASS,
+  Current 4/4 PASS, zero drift, 16:27 fix holds; Used 0/4 FAIL
+  known standing gap. Owner gates unchanged (WL-31 Play Console
+  password, WL-32 AlternativeTo PAUSED, WL-33 Medium overdue —
+  due Nov 19, Sentry DSN, PostHog). No escalation. Side-chat
+  report sent (144th article live, new hour). Goal entry
+  recorded and verified on the timeline. KPI.md updated.
   WL-177 fallback: another scenario shape (unverified) — candidates
   before an Android update, water-damage, before a flight / airport
   security.
