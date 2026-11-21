@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up HEIC photos to USB from Android — SnapDisk</title>
+<meta name="description" content="Back up HEIC photos from Android to a USB drive with SnapDisk: byte-for-byte copies, no conversion to JPG, and the route that includes every .heic file.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/heic-photos-to-usb.html">
+<meta property="og:title" content="Back up HEIC photos to USB from Android — SnapDisk">
+<meta property="og:description" content="Back up HEIC photos from Android to a USB drive with SnapDisk: byte-for-byte copies, no conversion to JPG, and the route that includes every .heic file.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/heic-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/heic-photos-to-usb.html#article",
+      "headline": "Back up HEIC photos to USB from Android — SnapDisk",
+      "description": "Back up HEIC photos from Android to a USB drive with SnapDisk: byte-for-byte copies, no conversion to JPG, and the route that includes every .heic file.",
+      "datePublished": "2026-11-21",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/heic-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/heic-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Will SnapDisk copy my .heic files?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — if you point SnapDisk at the folder that holds them. The From folder picker lists files by extension, and .heic and .heif are both in that list, so a folder-picked backup includes them. The default DCIM route reads the phone's MediaStore Images table with no MIME filter, but whether a given phone's MediaStore indexes .heic files at all is device-dependent — so if your HEIC files matter, pick the folder and do not rely on the default route alone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does SnapDisk convert HEIC to JPG?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SnapDisk streams each file byte-for-byte from the phone to the drive — there is no transcoding step anywhere in its copy path — and it checks the size of every file after copying, renaming the .part file to the final file only after the size verification passes. A .heic that arrives on the drive is the same file that left the phone. That is the opposite of the Photo Backup Stick, whose own page says its app automatically converts HEIC photos to JPG during backup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my HEIC photos in Google Photos Storage saver?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google's own help page says Storage saver uploads may be compressed into a different image format, like a .jpg — so a HEIC photo backed up on Storage saver can come back as a JPEG, with the HEIC original gone from the cloud copy. Original quality keeps the file as shot, but it counts against your Google Account storage. Copy the .heic files to a USB drive first, verify them there, and only then decide what the cloud holds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/heic-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up HEIC photos to USB from Android — SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/heic-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up HEIC photos to USB from Android — SnapDisk</h1>
+  <p class="dek">A HEIC file is the smaller original — convert it to a JPEG once and the extra quality is gone for good. Here is how to get the .heic files off your Android phone onto a USB drive byte-for-byte, and how to check every one of them arrived.</p>
+  <p class="meta">November 21, 2026 · 6 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> A HEIC file is a photo saved in the High Efficiency Image Format — about half the size of the same shot as a JPEG, at equal or better quality — and any step that converts it to a JPEG throws that advantage away, so a HEIC backup has to be a byte-for-byte copy, never a conversion. SnapDisk copies byte-for-byte with no conversion anywhere in its copy path, and it checks the size of every file after copying. The one thing to get right is the route: the default DCIM backup reads the phone's MediaStore Images table with no MIME filter, but whether a given phone's MediaStore indexes .heic files at all is device-dependent — the certain route for HEIC is picking the source folder with the From picker, where .heic and .heif are both in the recognised extension list. HEIC files are small — about half a JPEG each — so the free 5 GB per-run cap barely bites here: a thousand HEIC photos is roughly one to three gigabytes, a single free run. Format the drive exFAT, because the 4K videos sitting next to your HEIC files are the ones that hit the FAT32 4 GB limit. And one honest limit: screen-off continuation under battery saver is unverified — the repo holds no wake lock and no battery-saver handling — so keep the phone awake for the run or check it. As of November 21, 2026, no HEIC-specific phone-to-USB backup guide turned up in search — the pages that exist are a product page that mentions HEIC in one line, a converter page that works in the opposite direction, and generic transfer guides with a short HEIC section at most — so this article is the first on the HEIC angle. The adjacent ground: <a href="raw-photos-to-usb.html">backing up RAW photos to USB from Android</a>, which has the same folder-route rule for .dng files, and the <a href="snapdisk-vs-fotosafe.html">SnapDisk vs FotoSafe</a> and <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive</a> comparisons.</p>
+
+  <h2>What the search results actually offer</h2>
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk&#x27;s settings screen, showing the backup folder pickers. The From picker is where you point at the folder that holds the HEIC files — tap it, browse to the phone&#x27;s storage, and choose it. Screenshot is from SnapDisk on a phone — the settings screen is the same screen you will see when you back up with SnapDisk.</figcaption>
+  </figure>
+  <p>The exact query returns real pages — nine of them worth naming — and none of them is a HEIC-specific phone-to-USB backup guide. VaultDrive's product page is the closest thing to a HEIC mention in a backup tool: one line under "Original quality, byte for byte" says HEIC, ProRAW, ProRes and 4K video are copied as they are, never compressed or re-encoded — a product page, not a guide, and it says nothing about how to get the files off the phone. The Photo Backup Stick page "Convert HEIC Images to JPG Images" works in the opposite direction: its app automatically converts HEIC photos to JPG during backup, which is exactly the conversion this article exists to prevent. Techsith's "How Do I Get All My Pictures Off My Phone?" is a general get-everything-off guide whose whole HEIC coverage is one short section — "About HEIC, Live Photos, And Dates" — noting that iPhones shoot HEIC by default and some apps cannot open it. Mefmobile's "How to Transfer Phone Photos to a USB Stick Without a Computer" is a thorough general transfer guide whose HEIC coverage is one line in its special-cases section: copying originals preserves their format, but older TVs, computers and services may have limited HEIC support. Manualdobruxo's "Transfer Photos from Android to Flash Drive" is a generic Files-by-Google OTG guide with a short "Dealing with HEIC and Large Files" section. Ceedo's tablet transfer guide and groovypost's "How to Transfer Photos from Android to a USB Drive" are generic transfer guides with no HEIC angle at all. FoneLab's "How to Transfer Photos from Android to Flash Drive in 3 Easy Ways" is a PC-middleman and desktop-tool guide, also with no HEIC angle. And Coolmuster's "Easily Transfer HEIF/HEIC Format Images to Android" is about moving HEIC files from an iPhone onto an Android phone through a PC — and converting them to JPG — the opposite direction from a phone-to-USB backup.</p>
+  <p>None of the nine tells you how to back up the .heic files on your Android phone to a USB drive as .heic files. None of them distinguishes the folder route that provably includes .heic from the default route that may or may not, none of them warns that the obvious tools — Windows copy, the Photo Backup Stick, Google Photos Storage saver — convert the files on the way, and none of them mentions SnapDisk. That is the gap this article fills: a phone-to-USB backup that treats the HEIC file as the original it is, with the route that provably includes it.</p>
+
+  <h2>Why HEIC changes the backup</h2>
+  <p>HEIC is the file extension for photos saved in HEIF, the High Efficiency Image Format. Apple made it the default on iPhones with iOS 11, and Samsung Galaxy phones offer the same choice under Camera settings as "High efficiency pictures" — switch it on and the phone saves .heic instead of .jpg. The format's own pitch, stated on the Photo Backup Stick page, is that a HEIC image takes about half the space of the same shot as a JPEG while holding higher quality, and it can also store HDR data, depth maps and thumbnails inside the one file. A smaller file at equal or better quality is a genuine win — until something in the chain decides the file is inconvenient and converts it.</p>
+  <p>That conversion is the trap, and it sits in three places a HEIC owner is likely to meet. First, Windows: connect an iPhone to a Windows computer and copy the photos by hand, and Windows automatically converts the HEIC photos to JPG — the Photo Backup Stick page says so plainly. Second, the backup hardware sold for exactly this job: the Photo Backup Stick Universal app automatically converts HEIC photos to JPG during backup, by its own page's account — you buy a backup stick and the backup itself destroys the format. Third, the cloud: Google's own help page for backup quality says photos uploaded in Storage saver "may be compressed into a different image format, like a .jpg" — so a HEIC photo backed up on Storage saver can come back as a JPEG, with the HEIC original gone from the cloud copy. In all three cases the conversion is silent, one-way, and presented as a convenience. A HEIC backup is therefore not a photo backup with smaller files — it is a different job, with one rule: the file that lands on the drive must be bit-identical to the file on the phone.</p>
+  <p>Where do HEIC files on an Android phone come from? Three ways, and they matter because they decide where the files live. A Samsung Galaxy phone with "High efficiency pictures" switched on shoots .heic straight into DCIM/Camera next to everything else. Photos sent over from an iPhone — by cable, by messaging app, by Quick Share — arrive as .heic files, and they usually land in Downloads or the messaging app's own folder, not in DCIM at all. And photos downloaded from Google Photos or a chat backup land wherever the download went. The point for the backup is that HEIC files are not reliably in one folder — so a backup that only looks in DCIM can miss them, and the folder picker in Method 1 is what covers every folder they might be in.</p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li><strong>An Android phone with HEIC files on it.</strong> Check where yours are before you start: open the Files app and search for ".heic" — look in DCIM/Camera, in Downloads, and in the messaging apps' folders. If your Galaxy shoots HEIC, the setting is Camera, Settings, then "High efficiency pictures" — and the files land in DCIM/Camera. If the .heic files came from an iPhone, they are wherever the transfer put them, and you will point SnapDisk at that folder instead.</li>
+    <li><strong>A USB drive with enough free space.</strong> Add up the HEIC files first: a HEIC photo is about half the size of the same shot as a JPEG, so a thousand HEIC files is roughly one to three gigabytes — a 32 GB drive covers most libraries several times over. Buy the size after the count, not before it.</li>
+    <li><strong>A drive formatted exFAT.</strong> The format reference for this article is DriveForge's exFAT-vs-FAT32-vs-NTFS guide: exFAT has no 4 GB per-file limit and is read and written by current Android phones, Windows, and Mac. FAT32 cannot hold a single file of 4 GB or more — a single HEIC file never reaches that, but the long 4K videos sitting next to your HEIC files can, and exFAT is the practical format for the whole folder. NTFS is a Windows format that most Android phones cannot open on their own — do not use it for a phone backup drive.</li>
+    <li><strong>An OTG adapter if your drive is USB-A.</strong> A dual USB-C drive plugs straight in; a standard USB-A stick needs a data-capable OTG adapter. A portable SSD may need a powered hub — the phone alone may not supply enough power for the drive.</li>
+    <li><strong>SnapDisk v0.1.2.</strong> Not on Google Play yet — install the APK from the GitHub release page. It needs Android 7.0 or later (minSdk 24 in the repo). No account, no cloud, no ads, and no internet permission — your photos physically cannot leave the phone.</li>
+  </ul>
+
+  <h2>Method 1: SnapDisk — the phone, one tap</h2>
+  <p>This is the route this article is for. Plug the drive into the phone and wait for Android to detect it. Open SnapDisk, and pick the folders first — this is the step that decides whether your HEIC files come along. Tap the From picker, browse to the phone's storage, and choose the folder that holds the .heic files: DCIM/Camera if that is where they land, or Downloads or the messaging app's folder if that is where they landed. The From picker is the system folder picker (verified in the repo as OpenDocumentTree), and on that route SnapDisk lists files by extension — and .heic and .heif are both in that list, verified in the repo's PhotoQuery.kt. Then pick the To folder on the drive, in the same picker. Plug the drive in, tap Backup in the notification, and the copy runs in the background: oldest-first by the date the photo was taken, with a progress notification showing percent, copied / total size, speed, and time left, plus Pause and Stop.</p>
+  <p>Why the folder route matters: the default DCIM backup reads the phone's MediaStore Images table, and that query carries no MIME filter — it asks for everything in the Images table, oldest-first. That sounds like it should include .heic files, and on a phone whose MediaStore indexes them, it does. But whether a given phone's MediaStore indexes .heic files at all is device-dependent — some phones list them, some do not — and the repo cannot promise it for your phone. The folder route does not depend on the MediaStore at all: it walks the folder you picked and copies every file whose extension is in the list, .heic and .heif included. So the honest instruction is: if your HEIC files matter, pick the folder. Do not rely on the default route alone, and after the run, check the drive: open the backup folder and confirm the .heic files are there, with sizes that match the phone. A backup is only a backup once you have confirmed the copy.</p>
+  <p>Two honest limits on this route. First, the extension list is exactly that — a list. It recognises .heic and .heif, plus the usual JPEG, PNG, RAW and video extensions, but a few cameras and phones save HEIF files with a .hif extension instead of .heic, and .hif is not in the list — copy those by hand in the Files app, in Method 2 below. Second, screen-off continuation under battery saver is unverified: SnapDisk copies as a foreground service — the mechanism Android gives a copy that must keep running with the screen off — but the repo holds no wake lock and no battery-saver handling, and no HEIC run has ever been tested, so this article says so instead of promising it. Keep the phone awake for the run, or check it. On Android 15 and later a dataSync foreground service gets 6 hours in 24 hours, so a very long copy can be paused by Android itself, and opening the app resets the timer (WL-34).</p>
+  <p>One fair comparison, because the search surfaced a rival that does this right: VaultDrive's own page says HEIC, ProRAW, ProRes and 4K video are copied as they are, never compressed or re-encoded — the same byte-for-byte promise, and VaultDrive is on Google Play today while SnapDisk is not yet. VaultDrive also checks every copy, organises by date or album, and offers incremental backups on its $19.99 once Pro, against SnapDisk's $9.99 once Pro; its free tier covers 200 files or 2 GB per backup, against SnapDisk's 5 GB per run. If being on Play today matters more than the free tier, VaultDrive is the honest pick — the <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive comparison</a> has the full verified row.</p>
+
+  <h2>Method 2: by hand in the Files app (no app needed)</h2>
+  <p>If you would rather not install anything, the Files app does the same copy by hand — and for HEIC files it has one advantage: you see exactly which files you selected. Plug the drive in, open Files by Google (or your phone's file manager), browse to the folder that holds the .heic files, long-press one, tap the rest, tap Copy, navigate to the USB drive, and tap Paste. Check the drive afterwards: open a few .heic files on the drive or on your computer, and confirm the sizes match.</p>
+  <p>Two warnings specific to HEIC on this route. First, copy — do not share. Sharing a photo from the Gallery can convert it: Samsung's own Gallery setting, "Convert HEIF images when sharing", converts a .heic to a JPEG before sending it to another app or device, and the same share-then-convert behaviour is what Windows does on a cable copy. Copy in the Files app moves the file itself; Share hands it to another app, which may hand you back a JPEG. Second, a Live Photo from an iPhone is two files — a .heic still and a .mov motion clip — and both copy on this route, as two files; SnapDisk's folder route copies both too, since .mov is in its video extension list, but neither route keeps them linked as one Live Photo. They land as a still and a clip, side by side.</p>
+  <p>What you give up is everything SnapDisk automates. There is no oldest-first order — you copy in whatever order you selected. There is no progress notification with speed and time left, no Pause and Stop, and no resume: if the drive is unplugged mid-copy, you start that file again and work out yourself which files already arrived. There is no per-file size verification, and no skipped-file list — a file that does not fit, or a copy that silently stops, fails quietly. For a hundred .heic files that is fine. For a thousand, the manual route is an afternoon of tapping and checking, and the one-tap route is the honest recommendation. The manual route is also the fallback for the files SnapDisk's folder route does not recognise — .hif files: select them by hand and copy them the same way.</p>
+
+  <h2>Method 3: the cloud trap — check Google Photos before you trust it</h2>
+  <p>Before you trust the cloud with HEIC files, check what it actually holds. Open photos.google.com on a computer and look for the .heic files: if backup was off, if the device folder that holds them was never switched on, or if the uploads are "Storage saver" quality, the cloud does not hold your HEIC files at all — it holds converted copies, or nothing. Google's own help page says Storage saver uploads "may be compressed into a different image format, like a .jpg" — that is the conversion, in Google's own words, and for a HEIC file it means the cloud copy can be a JPEG while the phone still holds the only .heic. Original-quality upload keeps the file, but it counts against your Google storage quota, and a library that fits on a small USB stick can cost a monthly subscription in the cloud.</p>
+  <p>The cloud is not the enemy — it is a fine second copy once the originals are safe on a drive you hold. The order matters: copy to the USB drive first, verify the .heic files on the drive, and only then let the cloud hold whatever it holds. And never delete the phone originals on the strength of a cloud badge alone. Check the drive copy, then delete — that order is what keeps your originals safe.</p>
+
+  <h2>The 5 GB free cap, and why it barely bites for HEIC</h2>
+  <p>SnapDisk's free version backs up manually up to 5 GB per run — verified in the repo as FREE_BACKUP_BYTES_LIMIT, 5 GiB — and runs can be repeated. Files already copied are never copied twice, so a second run picks up where the first stopped. For HEIC, 5 GB goes a long way: a HEIC photo is about half the size of the same shot as a JPEG, so a thousand HEIC files is roughly one to three gigabytes — a whole library in a single free run, where the same thousand shots as JPEGs would need two. Pro is a one-time $9.99 purchase (product id pro_unlock, verified in the repo's billing code) that auto-starts the backup when a disk is connected and removes the size limit, so a whole season copies in one run.</p>
+  <p>The cap is per run, not per library, and that distinction barely matters for HEIC: the free version can finish almost any HEIC library in one run without paying. If you shoot HEIC every day, Pro is still the honest buy: one tap, one run, no cap. Either way, the count to do before you start is the library size: add up the .heic files, divide by 5 GB, and that is how many free runs the library needs. Do the arithmetic before you plug the drive in, not halfway through the copy.</p>
+  <p>One more size note: a file of 4 GB or more on a FAT32 drive is skipped with its reason and the job continues — verified in the repo's BackupService. A single HEIC file is never 4 GB or more, so this never fires for a .heic. What it does catch is the long 4K video that sits next to your HEIC files in the same folder — that file is skipped and listed, the HEIC files around it copy normally, and the fix is the same exFAT format recommended above.</p>
+
+  <h2>What this does not do</h2>
+  <ul>
+    <li><strong>It does not convert your HEIC files — to anything.</strong> SnapDisk copies the .heic exactly as it is. Converting it to a JPEG, or to any other format, is your editor's or your computer's job, on a copy — never on the only original. The backup's job is to keep the original intact.</li>
+    <li><strong>It does not copy .hif files on the folder route.</strong> The recognised extension list is .heic and .heif for HEIF files. If a camera or phone saves HEIF files with a .hif extension, copy those by hand in the Files app (Method 2).</li>
+    <li><strong>It does not keep a Live Photo linked.</strong> A Live Photo's .heic still and .mov clip both copy on the folder route, but they land as two files — a still and a clip — not as one linked Live Photo. The pairing is your Photos app's job, not the backup's.</li>
+    <li><strong>It does not back up anything but photos and videos.</strong> No app data, no messages, no system state — and no editor catalogues, presets, or edit history. Those live in the app's own storage, not in the photo folders, and they need their own backup.</li>
+    <li><strong>It does not delete anything.</strong> SnapDisk only copies — the only delete calls in its source touch .part files, never your photos — so freeing space is a two-step flow you do yourself: copy to the drive, open a few .heic files on the drive to check they arrived, then delete the originals from your phone. That flow is covered step by step in <a href="free-up-space-move-photos-to-usb.html">How to free up space by moving photos to a USB drive</a>.</li>
+    <li><strong>It does not promise the copy keeps running with the screen off under battery saver.</strong> No wake lock, no battery-saver handling in the repo, no HEIC run ever tested — stated plainly above, not promised. Keep the phone awake for the run.</li>
+    <li><strong>It does not restore or view your photos.</strong> There is no in-app viewer and no restore feature — you open the copied .heic files in a viewer or on your computer yourself. The <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive comparison</a> covers what the rivals add here, and what they charge for it.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Trusting the default DCIM route for HEIC without checking.</strong> Whether your phone's MediaStore indexes .heic files is device-dependent. Pick the folder with the From picker — that route recognises .heic and .heif by extension — and check the drive afterwards.</li>
+    <li><strong>Sharing a HEIC photo when you meant to copy it.</strong> Sharing from the Gallery can convert it: Samsung's "Convert HEIF images when sharing" converts a .heic to a JPEG before sending it on, and Windows does the same on a cable copy. Copy in the Files app; Share hands the file to another app, which may hand you back a JPEG.</li>
+    <li><strong>Letting a backup tool convert your originals.</strong> The Photo Backup Stick's own page says its app automatically converts HEIC photos to JPG during backup. If the tool converts, it is not a backup of your HEIC files — it is a backup of JPEGs made from them.</li>
+    <li><strong>Letting a cloud service recompress your originals.</strong> Google Photos "Storage saver" uploads may be compressed into a different image format, like a .jpg — Google's own words. Check photos.google.com before trusting the cloud, and copy to the drive first.</li>
+    <li><strong>Formatting the drive NTFS.</strong> Most Android phones cannot open NTFS on their own. Use exFAT — DriveForge's guide is the format reference — and keep FAT32 only for a drive an older device must read.</li>
+    <li><strong>Buying a drive before counting the library.</strong> A thousand HEIC files is roughly one to three gigabytes. Count first, then buy the size, and divide by 5 GB to know how many free runs the library needs.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you have confirmed the copy. Copy, open a few .heic files on the drive, check the sizes match, then delete from the phone — never the other way round.</li>
+    <li><strong>Assuming the .hif files came along.</strong> They did not, on the folder route — the extension list does not include them. Copy .hif files by hand.</li>
+    <li><strong>Assuming the copy keeps running with the screen off.</strong> Unverified — no wake lock, no battery-saver handling. Keep the phone awake for the run or check it.</li>
+    <li><strong>Starting a multi-gigabyte copy on a nearly dead battery.</strong> One USB-C port holds the drive or the charger, not both — charge first, or use a powered hub with pass-through charging, which is standard USB-C behaviour but unverified with SnapDisk.</li>
+    <li><strong>Forgetting the videos next to the HEIC files.</strong> The same folder holds long 4K clips, and a clip of 4 GB or more on a FAT32 drive is skipped — listed, not failed — while the HEIC files copy normally. Use exFAT and the problem goes away.</li>
+    <li><strong>Searching for the wrong thing.</strong> The pages the search returns are a product page, a converter page, and generic transfer guides — none of them is a HEIC backup guide. Search for the .heic, not the photo, and the gap is obvious.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> a HEIC file is the smaller original — the copy has to be byte-for-byte, and the check has to be on the drive. Pick the folder, copy, open a few .heic files on the drive, then delete — that order is what keeps your originals safe.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you would rather tap once than copy by hand, <a href="./">SnapDisk</a> copies your HEIC and JPEG photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. Pick the folder that holds the .heic files, tap Backup, and check the drive before you delete anything. See also: <a href="raw-photos-to-usb.html">How to back up RAW photos to USB from Android</a> for .dng files, which follow the same folder-route rule, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a> for the general route, and <a href="free-up-space-move-photos-to-usb.html">How to free up space by moving photos to a USB drive</a> for the delete-after-verify flow.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
