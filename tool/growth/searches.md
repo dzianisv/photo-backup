@@ -13474,6 +13474,107 @@ demand is read off competitor install velocity instead (see
   drafted Nov 20, 2026 (WL-168, 136th how-to):
   docs/switching-phones-photos-to-usb.html — branch wl-168-switching-phones.
 
+### 136. "back up photos from SD card to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return real guides — five of
+  them — brightideaphotography.com, desnoulez.fr, petapixel.com, Ask
+  Tim Grey, and goldenlenstraveler.com — but all five are about a
+  camera's memory card copied to an SSD with the phone as a bridge, by
+  hand in the Files app, and none of them is about the phone's own
+  microSD card, none of them is a whole-library one-tap backup, and
+  none of them mentions SnapDisk.
+- Current top results (scored Nov 20, 2026, live web search):
+  brightideaphotography.com, "Back Up SD Cards Without a Laptop: Phone
+  or iPad to SSD"
+  (https://brightideaphotography.com/computer-free-backup/
+  — a video guide from Tony Photo Pilot: copy your camera's memory
+  card to an external drive using just your phone or tablet. The simple
+  setup is a card reader and a phone: Files app, select the photos on
+  the card, Copy, paste into the phone's internal storage — then
+  unplug the reader, plug the drive in, and copy onward. The better
+  setup is a powered USB-C hub with a built-in SD slot and a portable
+  SSD, copying straight from the card to the drive without filling up
+  the phone's storage — and its warning is worth keeping: the
+  phone's internal storage becomes the limit in the simple setup, and
+  a big shoot will not fit. A real guide — but a camera card, a
+  manual Files-app copy, nothing about the phone's own microSD card
+  or about SnapDisk; curl 403, verified live via browser.open);
+  desnoulez.fr, "How to back up camera photos or SD Card without a
+  laptop"
+  (https://www.desnoulez.fr/en/how-to-back-up-camera-photos-while-traveling-no-laptop-needed/
+  — use a smartphone or tablet as a bridge between an SD or
+  CFexpress card and an external SSD via a USB hub: connect the hub,
+  power it with a charger or power bank, insert the card, connect the
+  SSD, then open the Files app and copy from the card to the drive. On
+  Android the same steps run in the file manager — Google Files or
+  the maker's file manager — navigate to the SD card, select the
+  folder, tap Copy, navigate to the SSD, tap Paste. Featured on
+  PetaPixel on May 11, 2025. A real guide — but a camera card, a
+  manual copy, nothing about the phone's own microSD card or about
+  SnapDisk; curl 200);
+  petapixel.com, "No Laptop? No Problem: How to Back Up Photos in the
+  Field With Your Smartphone" (May 11, 2025)
+  (https://petapixel.com/2025/05/11/no-laptop-no-problem-how-to-back-up-photos-in-the-field-with-your-smartphone/
+  — the field-backup guide: a smartphone, a USB hub, a card
+  reader and an SSD, no laptop, no cloud. Full-resolution RAW or JPEG
+  files copied directly from the memory card (SD or CFexpress) to a
+  solid-state drive using a USB hub connected to the phone —
+  connect the hub, power it, insert the card, plug in the SSD, and use
+  the phone's file manager to copy from the card to the SSD. Its
+  discipline is the three-copy rule: one card in the camera, one card
+  on your person, one SSD in the checked bag. A real guide — but a
+  camera card, a manual copy, nothing about the phone's own microSD
+  card or about SnapDisk; curl 403, verified live via browser.open);
+  myemail.constantcontact.com, Ask Tim Grey, "Media Card Direct to
+  Hard Drive" (July 3, 2023)
+  (https://myemail.constantcontact.com/Ask-Tim-Grey---Media-Card-Direct-to-Hard-Drive---July-3--2023.html?soid=1103416365862&aid=ED-Ni1oKHys
+  — the oldest answer in the results: the purpose-built drives
+  that used to copy a card straight to themselves have largely been
+  discontinued, so what is left is a smartphone or tablet as the
+  intermediary — an adapter to read the card, copy the photos to
+  the mobile device, then a USB adapter to a bus-powered external hard
+  drive. Names the NewQ FileHub (SD slot, takes an external hard drive
+  over USB) and the SanDisk iXpand flash drive for iPhone. A real
+  guide — but a camera card, a manual two-step copy, nothing about
+  the phone's own microSD card or about SnapDisk; curl 200);
+  goldenlenstraveler.com, "How to Back up Photos While Traveling
+  Without a Laptop"
+  (https://goldenlenstraveler.com/how-to-back-up-photos-while-traveling-without-a-laptop/
+  — the travel version of the same workflow: a portable SSD
+  formatted in exFAT on a USB-C OTG adapter, an SD card reader for the
+  camera's card format, a powered USB-C hub to connect everything at
+  once, and the phone's Files app to copy from the card reader
+  directly onto the external drive after each shoot. Its habits are
+  the ones to steal: back up daily or after every shoot, and always
+  safely eject the drive before disconnecting. A real guide — but
+  a camera card, a manual copy, nothing about the phone's own microSD
+  card or about SnapDisk; curl 200).
+- Two cards, two jobs. The phone's microSD card is already in the
+  phone, so the drive is the only thing you plug in — SnapDisk's
+  From picker (OpenDocumentTree in MainActivity.kt, the system folder
+  picker) reaches the card, so tap it, browse to the card, and choose
+  the card's DCIM folder; a camera card may use a folder layout other
+  than DCIM, so check the card's folders first. The camera's card is
+  in the camera, so the reader — and usually the powered hub —
+  comes first, and one USB port holds either the reader or the drive,
+  not both. SnapDisk needs Android 7.0 or later (minSdk 24 in the
+  repo) and is not on Google Play yet, so install the v0.1.2 APK from
+  GitHub. The free version backs up manually up to 5 GB per run,
+  picking up where it stopped past the cap; Pro is a one-time $9.99
+  purchase that auto-starts the backup on connect and removes the size
+  limit. Drives formatted FAT32 cannot hold a single file over 4 GB
+  — SnapDisk skips those files and lists them instead of failing
+  the whole backup, per the repo README — so use exFAT, which the
+  bridge guides recommend too. SnapDisk copies, it never deletes. An
+  iPhone has no microSD slot, so the phone's-card route is Android
+  only. This is the third article in the series about a situation
+  instead of a phone brand — the brand series ran to 134 articles,
+  and the broken-screen and switching-phones articles were the first
+  two.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 20, 2026 (WL-169, 137th how-to):
+  docs/sd-card-photos-to-usb.html — branch wl-169-sd-card.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
