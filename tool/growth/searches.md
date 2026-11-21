@@ -13575,6 +13575,140 @@ demand is read off competitor install velocity instead (see
   drafted Nov 20, 2026 (WL-169, 137th how-to):
   docs/sd-card-photos-to-usb.html — branch wl-169-sd-card.
 
+### 137. "back up photos from a tablet to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return real tablet guides —
+  five of them — ceedo.com, petapixel.com, thecomputerbasics.com,
+  ssa-digital.com, and pixoneye.com — but all five are manual
+  select-copy-paste guides, none of them is a whole-library one-tap
+  backup, and none of them mentions SnapDisk.
+- Current top results (scored Nov 20, 2026, live web search):
+  ceedo.com, "How To Transfer Photos From Tablet To USB Flash Drive"
+  (https://www.ceedo.com/how-to-transfer-photos-from-tablet-to-usb-flash-drive/
+  — the most tablet-specific result: every method from Android and
+  iPad to Windows tablets, USB-C on newer Android tablets, micro-USB
+  OTG cable on older ones, Lightning adapter on older iPads, USB-C on
+  newer iPads, and a full-size USB-A port on most Windows tablets
+  with no adapter needed; the drive should be formatted FAT32 or
+  exFAT. A real tablet guide — but a manual file-manager copy,
+  photo by photo, nothing about SnapDisk; curl 200, 0 SnapDisk
+  mentions in the fetched page);
+  petapixel.com, "No Laptop? No Problem: How to Back Up Photos in the
+  Field With Your Smartphone" (May 11, 2025)
+  (https://petapixel.com/2025/05/11/no-laptop-no-problem-how-to-back-up-photos-in-the-field-with-your-smartphone/
+  — the field-backup guide, already covered in the SD-card article: a
+  smartphone or tablet as a bridge, a USB hub, a card reader and an
+  SSD, no laptop, no cloud — full-resolution RAW or JPEG files
+  straight from the memory card to the drive with the phone's file
+  manager, and the three-copy rule. A real guide — but a camera card,
+  a manual copy, nothing about the tablet's own photos or about
+  SnapDisk; curl 403, verified live via browser search this run);
+  thecomputerbasics.com, "Transfer Files Without a Computer"
+  (https://thecomputerbasics.com/how-to-transfer-videos-from-iphone-to-usb-stick-without-computer/
+  — the general version of the same workflow, covering phones and
+  tablets together: the obstacles are connectors, file systems and
+  power. On Android, connect with a USB-C adapter or an OTG cable
+  and copy in the Files app; on iPhone and iPad, connect the drive
+  and move photos in Files. Its warnings are the ones to keep: a
+  spinning hard drive frequently appears and then disconnects because
+  the tablet cannot power it, and NTFS drives are generally
+  read-only on Android and iOS — exFAT is the format to use. Its
+  page address says iPhone video, but the page itself covers tablets
+  too. A real guide — but a manual copy, nothing about SnapDisk;
+  curl 200);
+  ssa-digital.com, "Practical Tips for Connecting an Android Tablet
+  to a USB Flash Drive!"
+  (https://www.ssa-digital.com/faq/practical-tips-for-connecting-an-android-tablet-to-a-usb-flash-drive-.html
+  — the OTG checklist: check the tablet supports USB OTG first,
+  match the adapter to the port — USB-C to USB-A for newer tablets,
+  micro-USB OTG cable for older ones, a USB-C hub if you need to
+  charge while transferring — and on some tablets the OTG switch has
+  to be turned on in Settings first. Note that this is a tablet
+  seller's site, not an independent guide — but the steps are real. A
+  real guide — but a manual file-manager copy, nothing about
+  SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page);
+  pixoneye.com, "How to Transfer Photos from Your Phone to a USB
+  Stick"
+  (https://pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — a phone guide that surfaced for the tablet query: Android with
+  USB host support, a file manager, and Copy to the drive; iPhone
+  with USB-C or Lightning, Photos and Files; and a warning that a
+  connector fitting physically does not prove the phone can read or
+  write the drive. Its Android steps apply to a tablet with OTG, but
+  it says nothing about tablets specifically, nothing about SnapDisk
+  — and it does name one rival: ThePhotoStick Omni, an app-based
+  photo stick for phones, which is not a tablet backup and not a
+  plain USB drive. A real guide — but a phone guide, a manual copy,
+  nothing about SnapDisk; curl 520, verified live via browser.open
+  this run).
+  Follow-up searches for the tablet-specific guides named in the task
+  turn up three more, and they confirm the same gap from the other
+  side: lenovo.com, "USB Flash Drive for Tablets: A Comprehensive
+  Guide"
+  (https://www.lenovo.com/us/en/knowledgebase/usb-flash-drive-for-tablets-a-comprehensive-guide/
+  — Lenovo's own tablet guide: a flash drive is plug-and-play,
+  connect it and transfer files with the file manager, an adapter
+  may be required for USB-C or micro-USB ports, and yes, a flash
+  drive is excellent for backing up a tablet. A real tablet guide
+  from the maker — but a manual file-manager copy, nothing about
+  SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page);
+  mobilespecs.net, "How to backup ZTE Axon tablet"
+  (https://mobilespecs.net/phone/backup/ZTE/ZTE_Axon_tablet.html
+  — the tablet-specific backup guide for one model, and it never
+  touches a USB drive at all: the routes are Google cloud sync, TWRP
+  recovery, CWM Recovery with ROM Manager, the Titanium Backup app,
+  SP FlashTool with MTK DroidTools, and ADB from a computer. A real
+  guide — but cloud, custom recovery, and a computer, nothing about
+  a USB drive or about SnapDisk; curl 200, 0 SnapDisk mentions in
+  the fetched page);
+  devicesfaq.com, "Frequently asked questions ZTE Axon Pad"
+  (https://www.devicesfaq.com/en/frequently-asked-questions/zte-axon-pad
+  — the maker-adjacent answer for another tablet: back it up by
+  connecting it to a computer with a USB cable and copying with the
+  file browser, or with a cloud backup service such as Google Drive
+  — and photos specifically go through Google Photos. A real answer
+  — but a computer or the cloud, nothing about a USB drive or about
+  SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page).
+- Tablets differ from phones — often larger libraries (a shared
+  family tablet holds years of photos), a microSD slot on many
+  Android tablets but never on an iPad, USB-C on newer tablets and
+  micro-USB on older ones, and OTG support that varies by model
+  (some tablets need it switched on in Settings; some budget or kids
+  tablets lack host support entirely). The phone-bridge pattern from
+  WL-169 does not apply the same way: the tablet holds the photos
+  itself, so the copy is direct tablet-to-drive, and the bridge only
+  reappears for a camera card (Method 4). The ZTE Axon tablet takes
+  microSD up to 128 GB, per mobilespecs. SnapDisk needs Android 7.0
+  or later (minSdk 24 in the repo) and is not on Google Play yet, so
+  install the v0.1.2 APK from GitHub. The free version backs up
+  manually up to 5 GB per run, picking up where it stopped past the
+  cap — on a tablet library bigger than 5 GB that means several
+  taps, which is the case Pro is for; Pro is a one-time $9.99
+  purchase that auto-starts the backup on connect and removes the
+  size limit. The screenshot in the article is from SnapDisk on a
+  phone, not a tablet — the tablet layout is unverified, and the
+  article says so in the caption and the dek. The From folder is a
+  picker, not a fixed path — tap it, browse to the tablet's storage
+  or its card, and choose the DCIM folder, which the picker reaches
+  because it is the system folder picker, verified in the repo as
+  OpenDocumentTree. Drives formatted FAT32 cannot hold a single file
+  over 4 GB — SnapDisk skips those files and lists them instead of
+  failing the whole backup, per the repo README — so use exFAT. A
+  tablet supplies limited power over its port — a USB stick or an SSD
+  is fine, but a spinning hard drive may appear and then disconnect,
+  so use a powered hub for one. An iPad has no microSD slot and
+  SnapDisk is Android only, so the iPad route is the Files app. A
+  Windows tablet usually has a full-size USB-A port and no adapter
+  is needed, per ceedo — but SnapDisk does not run on it, so the
+  copy there is File Explorer. SnapDisk copies, it never deletes.
+  This is the fourth article in the series about a situation instead
+  of a phone brand — the brand series ran to 134 articles, and the
+  broken-screen, switching-phones, and SD-card articles were the
+  first three.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 20, 2026 (WL-170, 138th how-to):
+  docs/tablet-photos-to-usb.html — branch wl-170-tablet.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
