@@ -1,3 +1,96 @@
+## WL-180 — Back up photos to USB before your phone repair article, 148th how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #333 MERGED (merge commit cd61754, merged
+  2026-11-21T11:32:16Z; PR head d65bc8a, CI run 44899454837
+  build pass 1m18s; post-merge main runs Android PR + pages
+  success on cd61754).
+  Pre-merge readback on head d65bc8a (verified by the
+  supervisor from the branch source): article 50,957 B, title
+  46 chars, meta 137 chars, 1 H1, 10 H2s, 1 script tag, TL;DR
+  present, JSON-LD parses (Article + FAQPage 4 Qs +
+  BreadcrumbList, datePublished 2026-11-21), feed 148 items
+  incl. repair, sitemap 152 URLs incl. repair, blog 148
+  BlogPosting incl. repair, Query 147 row present (147 "### "
+  rows, sequential 1–147), only docs/ + tool/growth changed
+  (7 files, +480/−0 vs main 591709c).
+  New docs/repair-photos-to-usb.html ("Back up photos to USB
+  before your phone repair"), following the WL-54–WL-179
+  article template exactly (navy/cyan, TL;DR first, no JS,
+  text-only, reuses docs/screenshots-01-settings-defaults.png
+  as the lead shot, with an honest caption). Title 46 chars
+  (briefed title was 61 chars, over the ≤53 limit — shortened;
+  the full "handing your phone in for repair" phrasing is
+  carried in the dek, TL;DR, and searches row), meta 137 chars.
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full repair section), feed.xml updated;
+  searches.md Query 147 row added.
+  Query 147 scored honestly from live evidence: no "no guide
+  exists" claim. Named competitors: Android Central (cloud +
+  USB-to-PC manual), GigaGone "How to Back Up an Android
+  Phone" (the only one that names the repair risk — "wiped
+  during a repair" — but its route is cloud + PC copy),
+  GigaGone "How to Back Up Your Photos and Videos" (cloud +
+  local drive via computer), Techsith "How Do I Get All My
+  Pictures Off My Phone?" (generic cable/cloud/drive, manual),
+  Samsung's Maintenance Mode backup guide (written for the
+  repair moment itself, but Samsung-only, cloud/external-
+  storage via Maintenance Mode). Gap stands only on the
+  whole-library one-tap phone-to-USB backup framed for the
+  before-repair moment, and only because none of the five
+  mentions SnapDisk. WL-167 broken-screen + WL-175
+  selling-phone articles named in-article as adjacent ground.
+  Key finding: the backup must COMPLETE and be verified on
+  the drive BEFORE handing the phone over — a shop wipe/reset
+  has no undo; keep the drive at home, never hand it to the
+  shop; the backup is what lets you lock the phone down
+  (Maintenance Mode) or wipe it yourself without losing the
+  photos; only for a phone that still works with a dry,
+  undamaged port — dead phone = repair lab only. Screen-off
+  continuation under battery saver UNVERIFIED (no WakeLock/Doze
+  code), stated plainly in-article.
+  SnapDisk behaviour verified from the repo: minSdk 24, Pro
+  $9.99 auto-backup on connect + unlimited, free 5 GB/run with
+  resume (skip-if-exists + .part resume + size verification),
+  oldest-first DATE_TAKEN, copies never deletes, FAT32 >=4 GB
+  skipped and listed, From-picker OpenDocumentTree SAF,
+  dataSync foreground service 6h budget (WL-34).
+  Link verification this run (supervisor re-check): all 5
+  external URLs verified — androidcentral 200, samsung 200,
+  gigagone back-up-android-phone live via browser fetch
+  (crawled 2026-11-21 11:30 UTC, repair risk named, cloud +
+  PC route, 0 SnapDisk), gigagone back-up-photos-and-videos
+  live via browser fetch (crawled 2026-11-21 11:30 UTC, cloud
+  + PC routes, 0 SnapDisk), techsith live via browser fetch
+  (crawled 2026-01-24, generic cable/cloud/drive manual, 0
+  SnapDisk); own canonical 404 pre-merge, confirmed live
+  post-merge. Note: the lead's curl 200 for both gigagone URLs
+  did not reproduce — supervisor curl got 000/403 (bot
+  protection flakiness); browser-fetch verification stands.
+  llms-full.txt verified via raw.githubusercontent.com
+  (1,521,626 B, 1 repair mention) — the contents API returns
+  encoding "none" above 1 MB, so a contents-API fetch reads
+  empty; use raw for files over 1 MB.
+  Lead's failed execs (both recovered, no effect): first
+  feed.xml edit silently missed (</channel> has no leading
+  spaces — caught by the item-count check, still 147, fixed
+  with the exact string, feed re-validated); first meta draft
+  144 chars (over the 130–139 band), trimmed to 137 in all
+  three places.
+  Lead's goal entry (goal_update_5443e984d933, "148th how-to
+  drafted") verified present on the timeline this run — the
+  settle updates it in place to live wording below.
+  Live fetch verified by the supervisor: repair article 200
+  (50,957 B, correct title), feed.xml 148 items live incl.
+  repair.
+  WL-181 fallback: scenario well is dry — repair was the last
+  named fallback; next dispatch needs a fresh scenario pick or
+  a shape rotation (unverified).
+  Articles 147 → 148 (147 scored queries). Board: 0 open
+  issues, 0 open PRs. External-skills validation this run:
+  Installed 4/4 PASS, Current 4/4 PASS, zero drift, 16:27 fix
+  holds; Used 0/4 FAIL known standing gap.
+
 ## WL-179 — Back up photos to USB before a flight article, 147th how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
