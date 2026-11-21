@@ -16864,6 +16864,193 @@ demand is read off competitor install velocity instead (see
   flag was wrong; no figure needed correcting anywhere, and
   this article carries no Buffalo rating.
 
+### 158. "back up screenshots to USB from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a screenshot-specific
+  phone-to-USB backup guide at all — the top results are
+  generic transfer guides that list the Screenshots folder
+  as one row in a manual folder-by-folder copy. None of
+  them offers a one-tap whole-library backup for
+  screenshots, and none of them mentions SnapDisk.
+- Current top results (scored Nov 21, 2026, live web search):
+  AnExplorer, "How to Transfer Files from Android to USB
+  Drive (OTG, No Root)"
+  (https://anexplorer.io/transfer/phone-to-usb
+  — a file-manager guide: plug the drive in, open
+  AnExplorer, copy the files by hand; its folder table
+  lists Screenshots at /Pictures/Screenshots/, 100 MB–2 GB,
+  as one row among many in a manual transfer, not as a
+  backup job; no one-tap backup, no SnapDisk mention; full
+  page read this run);
+  UMA Technology, "How To Transfer Files From Android Phone
+  To USB Drive - Full Guide"
+  (https://umatechnology.org/how-to-transfer-files-from-android-phone-to-usb-drive-full-guide/
+  — a manual, folder-by-folder copy at greater length; it
+  tells you to split the transfer into folders "such as:
+  Camera 2024, Camera 2025, Camera 2026, Screenshots,
+  WhatsApp, Videos" — screenshots are one folder to copy by
+  hand — and it names Pictures/Screenshots as where they
+  live; no one-tap backup, no SnapDisk mention; full page
+  read this run);
+  Dr.Fone, "4 Practical Ways to Transfer Photos from Android
+  to USB Flash Drive"
+  (https://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — four generic routes: Google Drive, drag-and-drop to a
+  PC, an OTG adapter, AirDroid; a photo transfer guide with
+  no screenshot angle at all, its only screenshot mentions
+  are links to a separate article about how to take a
+  screenshot; no SnapDisk mention; full page read this
+  run);
+  WikiTechLibrary, "How to Back Up Your Android Phone to an
+  External Hard Drive (No Cloud Required)"
+  (https://wikitechlibrary.com/android-phone-backup-external-hard-drive/
+  — the closest thing to a whole-phone backup: a manual
+  file-manager copy, folder by folder — DCIM, Downloads,
+  Documents, Screenshots, WhatsApp — and it does suggest an
+  automation, FolderSync, to sync chosen folders on a
+  schedule; FolderSync is a general-purpose sync tool you
+  configure per folder, not a one-tap whole-library backup
+  with a progress notification, Pause and Stop, and
+  per-file verification; no screenshot-specific guide, no
+  SnapDisk mention; full page read this run).
+  Google Photos help, "Choose the backup quality of your
+  photos & videos"
+  (https://support.google.com/photos/answer/6220791?hl=en-GB&co=GENIE.Platform=Desktop
+  — the cloud-trap reference the article names, not a
+  competing guide: Storage saver uploads "may be compressed
+  into a different image format, like a .jpg"; Original
+  quality keeps the file as shot and counts against the
+  Google Account storage; full page read this run);
+  Reminari, "How to save screenshots automatically on
+  Android"
+  (https://www.reminari.com/blog/save-screenshots-automatically-android
+  — the where-screenshots-live reference: Pixel and most
+  stock-Android phones save screenshots to Pictures →
+  Screenshots, Samsung Galaxy to DCIM → Screenshots by
+  default; other device folders, Screenshots included,
+  "often need switching on by hand" in Google Photos; the
+  folder-toggle steps are Google's backup guide; search
+  result read this run);
+  MakeUseOf, "4 Google Photos settings you need to turn off
+  immediately before screenshots eat your storage"
+  (https://www.makeuseof.com/google-photos-stop-screenshot-backup-settings/
+  — the second cloud reference, not a competing guide: on
+  the version it tested, Screenshots is "by default, already
+  selected" in the Back up device folders list, so every
+  screenshot uploads and eats shared Google storage; and
+  Samsung Galaxy devices save screenshots inside the DCIM
+  directory by default, at "Internal storage/DCIM/Screenshots";
+  browser-verified live this run — curl returned 000, a
+  bot block, not a missing page);
+  DriveForge, "exFAT vs FAT32 vs NTFS: Which Format for Your
+  USB or SD Card?"
+  (https://driveforge.bytehavenstudios.com/guides/exfat-vs-fat32-vs-ntfs/
+  — the format reference the article names, not a competing
+  guide: exFAT has no 4 GB per-file limit and is read and
+  written by current Android phones, Windows, and Mac; FAT32
+  cannot hold a single file of 4 GB or more; NTFS is a
+  Windows format most Android phones cannot open on their
+  own).
+  Adjacent ground in our own series: the WhatsApp article
+  (https://dzianisv.github.io/photo-backup/whatsapp-photos-to-usb.html
+  — the same folder-route rule for another folder outside
+  DCIM; live 200, verified this run), the RAW article
+  (WL-190) and the HEIC article (WL-191) — where the default
+  route is the uncertain one and the folder route is the
+  certain one; screenshots are the reverse — the general
+  backup article (WL-1) and the VaultDrive comparison
+  (WL-37).
+  Anti-duplicate check (this run, before writing): grep of
+  searches.md for the screenshot topic finds only incidental
+  mentions — the WL-190 note (a docs/ listing finding no
+  near slug), the WL-191 note, and "screenshot" as the word
+  for the article's own lead image — and no "### " row title
+  is a screenshot topic; a docs/ listing finds no
+  screenshots-to-usb.html and no near slug (screenshot,
+  screenshots — only screenshots-0N.png lead images). No
+  existing screenshots article or row: the gap is a new
+  article, not a rewrite. WL-189 was killed before merge for
+  duplicating WL-168's live switching-phones article — this
+  query is not that moment.
+  The repo facts that carry the article, read from the code
+  this run: with no From folder picked, the run calls
+  PhotoQuery.queryMediaStoreOldestFirst (BackupService.kt,
+  enumeratePhotos — fromUri null goes to MediaStore, a
+  picked From goes to the SAF tree walk), and that query
+  reads the MediaStore Images table plus the Video table
+  with selection null — no folder filter, no MIME filter —
+  oldest-first on DATE_TAKEN (fallback DATE_MODIFIED); .png
+  is a format every Android MediaStore indexes, so the
+  default run includes the screenshots in
+  Pictures/Screenshots by construction; the SAF-tree path
+  walks only the picked tree, so a DCIM From pick misses
+  Pictures/Screenshots on a Pixel or stock-Android phone,
+  while on a Samsung the screenshots live in
+  DCIM/Screenshots and a DCIM pick includes them — the
+  certain routes are the default run or picking Pictures
+  (the tree walk recurses into subfolders, PhotoQuery.kt);
+  .png IS in IMAGE_EXTENSIONS (PhotoQuery.kt, line 131, the
+  same list as .heic/.heif/.dng/.raw), and .jpg/.jpeg are in
+  it too, so screenshots saved as .jpg are recognised on
+  the folder route as well; the copy streams each file
+  byte-for-byte with no transcoding step (copyWithResume,
+  BackupEngine.kt) and renames the .part file to the final
+  file only after the size verification passes; files
+  already copied are never copied twice — shouldSkip skips
+  a destination file whose size already matches
+  (BackupEngine.kt); oldest-first on MediaStore DATE_TAKEN
+  (fallback DATE_MODIFIED); a file >=4 GiB on FAT32 is
+  skipped with its reason and the job continues
+  (BackupService.kt) — a single screenshot never reaches
+  that; the free version backs up manually up to 5 GB per
+  run (FREE_BACKUP_BYTES_LIMIT, 5 GiB, ProPrefs.kt),
+  repeatable, files already copied never copied twice; Pro
+  is a one-time $9.99 purchase (product id pro_unlock,
+  BillingManager.kt) for auto-backup on connect and
+  unlimited size; the copy runs as a foreground service
+  (dataSync type, BackupService.kt) — the mechanism Android
+  gives a copy that must keep running with the screen off —
+  but the repo holds no wake lock and no battery-saver
+  handling (no WakeLock/Doze reference in the source,
+  verified this run) and no screenshot run has ever been
+  tested, so screen-off continuation under battery saver is
+  unverified and the article says so instead of promising
+  it; on Android 15 and later a dataSync foreground service
+  gets 6 hours in 24 hours, and opening the app resets the
+  timer (WL-34); the manifest holds no INTERNET permission;
+  SnapDisk copies, it never deletes (no delete() call in the
+  source touches photos — only .part files). SnapDisk needs
+  Android 7.0 or later (minSdk 24 in the repo) and is not on
+  Google Play yet, so install the v0.1.2 APK from GitHub. The
+  screenshot in the article is from SnapDisk on a phone —
+  the same settings screen the reader will see. The From
+  folder is a picker, not a fixed path — tap it, browse to
+  the phone's storage, and choose the folder that holds the
+  screenshots, which the picker reaches because it is the
+  system folder picker, verified in the repo as
+  OpenDocumentTree. The repo makes no location claim either
+  way, so the article does not score SnapDisk on location.
+  Own canonical URL returns 404 pre-merge (curl, this run —
+  the known-missing control URL returns the same 404, while
+  existing pages return 200; expected, live only after
+  merge). Title is the 50-char form "Back up screenshots to
+  USB from Android — SnapDisk" — within the 48–53-char
+  brief. This is the 159th article in the brand series —
+  the WhatsApp article is the adjacent ground for this one,
+  the same folder-route rule for another folder outside
+  DCIM, and the HEIC (WL-191) and RAW (WL-190) articles are
+  the reverse case, where the default route is the
+  uncertain one.
+  Scoring-fix sweep (this run): no figure needed correcting
+  anywhere. The WL-190 worklog flag about llms-full.txt
+  saying "4.5 from 61 reviews" was already settled wrong
+  in WL-191 — re-checked this run on main: 0 occurrences
+  of "61 reviews" in llms-full.txt, llms.txt, or the blog
+  index; llms-full.txt says "69 ratings" (Buffalo). This
+  article carries no Buffalo rating, and the screenshots
+  section added to llms-full.txt carries no figure that
+  appears in any other file.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
