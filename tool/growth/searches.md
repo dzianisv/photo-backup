@@ -15304,6 +15304,160 @@ demand is read off competitor install velocity instead (see
   drafted Nov 21, 2026 (WL-180, 148th how-to):
   docs/repair-photos-to-usb.html — branch wl-180-repair.
 
+### 148. "back up photos to USB before lending your phone to someone" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return real guides — six
+  of them: Techsith's get-all-pictures-off guide, Alibaba's
+  full-smartphone-to-external-drive guide, MobileTrans
+  Wondershare's phone-to-USB-without-cloud guide, MakeUseOf's old
+  mobile backup guide, RottenWifi's six-ways-to-upload guide, and
+  Android Central's use-your-phone-as-a-hard-drive guide — plus a
+  rival one-tap phone-to-USB app listing (Photos to USB: OTG
+  Backup on Google Play) and our own repair and selling-phone
+  articles. None of the six frames a whole-library one-tap
+  phone-to-USB backup for the before-lending moment, and none of
+  them mentions SnapDisk.
+- Current top results (scored Nov 21, 2026, live web search):
+  techsith.com, "How Do I Get All My Pictures Off My Phone?"
+  (https://techsith.com/how-do-i-get-all-my-pictures-off-my-phone/
+  — the generic get-everything-off guide: a cable to a computer,
+  a cloud backup and then a download, or a direct copy to a USB
+  drive — plug a USB-C drive in, open Files by Google, copy or
+  move DCIM and other folders. A real guide, and the only one of
+  the six with a phone-to-USB-drive step — but its copy is manual
+  select-copy-paste, it covers iPhone and Android and three
+  methods at once, it says nothing about lending a phone to
+  someone, and it says nothing about SnapDisk; curl 000 (bot
+  protection), browser-verified live, no SnapDisk in the fetched
+  page text);
+  alibaba.com, "How To Backup Your Entire Smartphone To An
+  External Drive Without Cloud Storage"
+  (https://www.alibaba.com/product-insights/how-to-backup-your-entire-smartphone-to-an-external-drive-without-cloud-storage.html
+  — the full-smartphone-to-external-drive guide: a portable SSD
+  or hard drive over an OTG cable, a file-manager copy of DCIM,
+  Download, Documents, and the rest, with the drive formatted
+  exFAT. A real guide — but its moment is a device upgrade,
+  theft, or organising a digital life, its copy is manual
+  folder-by-folder in a file manager, it says nothing about
+  lending a phone to someone, and it says nothing about SnapDisk;
+  curl 200, 0 SnapDisk mentions in the fetched page);
+  mobiletrans.wondershare.com, "Back Up a Phone to USB Without
+  Cloud Storage"
+  (https://mobiletrans.wondershare.com/android-backup/how-to-back-up-a-phone-to-an-external-usb-drive-without-cloud-storage.html
+  — the phone-to-USB-without-cloud guide: a USB-OTG adapter and a
+  direct copy in the Files app, or a copy to a computer first and
+  then to the drive, with a verify step at the end. A real guide,
+  and the closest of the six to a phone-to-USB backup — but its
+  copy is manual select-copy-paste, its moment is backing up a
+  phone in general, it says nothing about lending a phone to
+  someone, and it says nothing about SnapDisk; curl 200, 0
+  SnapDisk mentions in the fetched page);
+  makeuseof.com, "How to Backup Photos from a Mobile Device"
+  (https://www.makeuseof.com/tag/backup-photos-mobile-device/
+  — the old mobile backup guide: cloud sync, manual syncing to a
+  PC over a USB cable, and a microSD card in a card reader. A
+  real guide — but it is old, its routes are the cloud or a
+  computer, its copy is manual, it says nothing about lending a
+  phone to someone, and it says nothing about SnapDisk; curl 000
+  (bot protection), browser-verified live, no SnapDisk in the
+  fetched page text);
+  blog.rottenwifi.com, "6 Ways to Upload Photos from a Cell
+  Phone: iPhone and Android"
+  (https://blog.rottenwifi.com/6-ways-to-upload-photos-from-a-cell-phone-iphone-and-android/
+  — the six-ways-to-upload guide: cloud backup, a USB cable to a
+  computer, AirDrop or Quick Share, a browser upload, email or
+  messaging, and external storage. A real guide — but it is a
+  menu of six upload methods, not a backup for a moment, its
+  external-storage route is one row in a table, it says nothing
+  about lending a phone to someone, and it says nothing about
+  SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page);
+  androidcentral.com, "Use your phone as a hard drive"
+  (https://www.androidcentral.com/use-phone-hard-drive
+  — the use-your-phone-as-a-hard-drive guide: plug the phone into
+  a computer, mount it as a drive, and pull the photos off, or
+  load music on. A real guide — but it is old, its route is the
+  phone as a drive attached to a computer, it is about moving
+  files on and off the phone rather than backing the library up,
+  it says nothing about lending a phone to someone, and it says
+  nothing about SnapDisk; curl 200, 0 SnapDisk mentions in the
+  fetched page).
+  A rival one-tap phone-to-USB app listing also surfaced —
+  "Photos to USB: OTG Backup" on Google Play — but it is a store
+  listing, not a guide, and it says nothing about lending.
+  Our own repair article also surfaced — the same one-tap copy,
+  framed for a phone going to a repair shop — but its moment is
+  the repair appointment, not the lend: a shop may wipe the
+  phone, a borrower will not, and the handover rules are
+  different. Our own selling-phone article also surfaced — the
+  same one-tap copy, framed for a phone changing hands for good
+  — but its moment is the sale, not the lend: a sold phone never
+  comes back, a lent phone does. Lending is NOT selling or repair
+  — the phone comes back, so the real risks are accidental
+  deletion by the borrower and snooping, not a shop wipe.
+  SnapDisk copies, it never deletes and it never locks — the
+  backup protects the photos, it does not keep the borrower out
+  of them, and the lock-down (guest profile, screen pinning, app
+  lock) is a separate phone step, described as what the phone
+  itself can do, never as a SnapDisk feature. The backup has to
+  COMPLETE and be verified on the drive BEFORE handing the phone
+  over — a copy still running when the borrower walks off is not
+  a backup, and a deletion has no undo. The drive stays at home
+  with you — never hand it to the borrower with the phone,
+  because a drive handed over is a copy you no longer hold.
+  Cloud-only originals are a trap (backup off / device folders
+  not switched on / storage-saver compressed copies — check
+  photos.google.com); the drive copy comes first and the cloud
+  check waits for Wi-Fi. One USB-C port holds the drive OR the
+  charger, not both — charge first, or use a powered hub with
+  pass-through charging, which is standard USB-C behaviour but
+  unverified with SnapDisk. The repo facts that carry the
+  article, read from the code this run: the copy runs as a
+  foreground service (dataSync type, BackupService.kt) — the
+  mechanism Android gives a copy that must keep running with the
+  screen off — but the repo holds no wake lock and no
+  battery-saver handling (grep over app/src/main finds no
+  WakeLock) and no before-lending run has ever been tested, so
+  screen-off continuation under battery saver is unverified and
+  the article says so instead of promising it. What IS verified:
+  oldest-first on MediaStore DATE_TAKEN (BackupEngine.kt,
+  PhotoQuery.kt); resume covers an interrupted copy — finished
+  files stay on the drive (skip-if-exists with size
+  verification), the file in flight keeps its .part copy
+  (byte-exact .part resume); on Android 15 and later a dataSync
+  foreground service gets 6 hours in 24 hours, so a very long
+  copy can be paused by Android itself, and opening the app
+  resets the timer (WL-34); the manifest holds no INTERNET
+  permission; SnapDisk copies, it never deletes (delete() in
+  BackupEngine.kt touches only .part files). SnapDisk needs
+  Android 7.0 or later (minSdk 24 in the repo) and is not on
+  Google Play yet, so install the v0.1.2 APK from GitHub. The
+  free version backs up manually up to 5 GB per run, picking up
+  where it stopped past the cap — a phone that has never been
+  backed up often holds a library bigger than 5 GB, so it takes
+  several taps, and that is the case Pro is for; Pro is a
+  one-time $9.99 purchase that auto-starts the backup on connect
+  and removes the size limit. The screenshot in the article is
+  from SnapDisk on a phone — the same settings screen the reader
+  will see. The From folder is a picker, not a fixed path — tap
+  it, browse to the phone's storage, and choose the folder that
+  holds the photos, which the picker reaches because it is the
+  system folder picker, verified in the repo as
+  OpenDocumentTree. Drives formatted FAT32 cannot hold a single
+  file over 4 GB — SnapDisk skips those files and lists them
+  instead of failing the whole backup, per the repo README — so
+  use exFAT. Title is the 47-char form as briefed in WL-181 —
+  below the 48–53-char template band; the full "lending your
+  phone to someone" phrasing is carried in the dek and TL;DR.
+  This is the fifteenth article in the series about a situation
+  instead of a phone brand — the brand series ran to 134
+  articles, and the broken-screen, switching-phones, SD-card,
+  tablet, Chromebook, storage-full, low-battery, factory-reset,
+  selling-phone, traveling, Android-update, water-damage, flight,
+  and repair articles were the first fourteen.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 21, 2026 (WL-181, 149th how-to):
+  docs/lending-phone-photos-to-usb.html — branch wl-181-lending.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
