@@ -1,3 +1,62 @@
+## WL-182 — Back up photos to USB before rooting your phone article, 150th how-to
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE (article
+  written, indexes updated, pushed; no PR — the supervisor merges).
+  Evidence: article commit ca89fc1 on branch wl-182-rooting, pushed
+  to origin (based on main eec5b63). Article 53,464 B, title 47
+  chars, meta 134 chars, 1 H1, 10 H2s, 1 script tag, TL;DR present,
+  JSON-LD parses (Article + FAQPage 4 Qs + BreadcrumbList,
+  datePublished 2026-11-21).
+  New docs/rooting-photos-to-usb.html ("Back up photos to USB
+  before rooting your phone"), following the WL-54–WL-181 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption). Title 47 chars (below the
+  48–53-char template band; the full "unlocking the bootloader /
+  rooting / flashing a custom ROM" phrasing is carried in the dek,
+  TL;DR, and searches row), meta 134 chars. Blog index (JSON-LD +
+  post block), sitemap.xml, llms.txt, llms-full.txt (full rooting
+  section), feed.xml updated; searches.md Query 149 row added.
+  Query 149 scored honestly from live evidence: no "no guide
+  exists" claim. Named competitors: UMA Technology's
+  backup-before-flashing checklist (backup as prerequisite, copy
+  to computer), PrivacyPortal's bootloader guide (backup step,
+  cloud/PC), Sod Calculator's custom-ROM guide (copy to computer
+  or cloud), Awesome Android Root's unlock guide (cloud backup
+  list), RottenWifi's unlock guide (independent backup, verify
+  restore). All five frame backup as a step inside a flashing or
+  unlock guide with computer/cloud/manual-copy routes. Gap stands
+  only on the whole-library one-tap phone-to-USB backup framed
+  for the before-unlock moment, and only because none of the five
+  mentions SnapDisk. WL-174 factory-reset + WL-180 repair +
+  WL-175 selling-phone articles named in-article as adjacent
+  ground.
+  Key finding: unlocking the bootloader wipes ALL data BY DESIGN
+  — the backup must COMPLETE and be verified on the drive BEFORE
+  the unlock command runs, because after the wipe there is no
+  recovery. SnapDisk backs up photos and videos ONLY — app data,
+  authenticator seeds, messages, and system state need separate
+  handling (authenticator exports, chat backups, TWRP nandroid
+  for a full system image). Unplug the USB drive before flashing
+  — the USB port is needed for the computer and fastboot — and
+  keep the drive aside until the new ROM boots. Unlocking may
+  void the warranty, can break Play Integrity and banking apps,
+  and some carrier variants cannot be unlocked at all.
+  Screen-off continuation under battery saver UNVERIFIED (no
+  WakeLock/Doze code), stated plainly in-article.
+  SnapDisk behaviour verified from the repo: minSdk 24, Pro
+  $9.99 auto-backup on connect + unlimited, free 5 GB/run with
+  resume (skip-if-exists + .part resume + size verification),
+  oldest-first DATE_TAKEN, copies never deletes, FAT32 >=4 GB
+  skipped and listed, From-picker OpenDocumentTree SAF,
+  dataSync foreground service 6h budget (WL-34).
+  Link verification this run: all 5 external URLs checked —
+  privacyportal 200, sod-calculator 200, awesome-android-root
+  200, umatechnology 000 (bot protection) and rottenwifi 000
+  (bot protection), both browser-verified live; 0 SnapDisk
+  mentions in every fetched page. Own canonical 404 pre-merge
+  (expected — live only after merge).
+
 ## WL-181 — Back up photos to USB before lending your phone article, 149th how-to
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.

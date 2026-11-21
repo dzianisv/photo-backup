@@ -15458,6 +15458,156 @@ demand is read off competitor install velocity instead (see
   drafted Nov 21, 2026 (WL-181, 149th how-to):
   docs/lending-phone-photos-to-usb.html — branch wl-181-lending.
 
+### 149. "back up photos to USB before unlocking the bootloader / rooting / flashing a custom ROM" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return real guides — five
+  of them: UMA Technology's backup-before-flashing checklist,
+  PrivacyPortal's bootloader guide, Sod Calculator's custom-ROM
+  guide, Awesome Android Root's unlock guide, and RottenWifi's
+  unlock guide — plus our own factory-reset, repair, and
+  selling-phone articles. All five frame backup as a step inside
+  a flashing or unlock guide, with computer, cloud, or
+  manual-copy routes. None of the five is a whole-library
+  one-tap phone-to-USB backup framed for the before-unlock
+  moment, and none of them mentions SnapDisk.
+- Current top results (scored Nov 21, 2026, live web search):
+  umatechnology.org, "Backup Before Flashing a Custom ROM:
+  Complete Android Safety Checklist"
+  (http://umatechnology.org/how-to-back-up-your-android-phone-before-flashing-a-custom-rom/
+  — the backup-as-prerequisite checklist: copy personal files
+  to a computer, use the account or cloud backup as a second
+  layer, and take a TWRP backup of system, data, and boot when
+  the device supports it. A real guide, and the most thorough
+  of the five on what to save — but its photo route is a copy
+  to a computer, its moment is the flash itself, and it says
+  nothing about SnapDisk; curl 000 (bot protection),
+  browser-verified live, no SnapDisk in the fetched page text);
+  privacyportal.co.uk, "What Is a Bootloader? Locked vs
+  Unlocked Explained (2026)"
+  (https://www.privacyportal.co.uk/blogs/free-rooting-tips-and-tricks/what-is-bootloader-unlocking-2026
+  — the bootloader guide: a full backup of photos, files, and
+  authenticator seeds as a prerequisite, because unlocking
+  wipes the device — plus the unlock risks, including the Play
+  Integrity verdict an unlocked bootloader can never pass
+  again. A real guide — but backup is one prerequisite line in
+  an unlock explainer, its route is a cloud or PC backup, it
+  says nothing about a phone-to-USB copy, and it says nothing
+  about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched
+  page);
+  sod-calculator.com, "Install Custom Android ROM & Remove
+  Google"
+  (https://sod-calculator.com/how-to-install-a-custom-android-rom-on-your-phone-and-remove-google/
+  — the custom-ROM guide: step one is "back up everything —
+  copy photos, contacts, messages, and any other important data
+  to your computer or cloud storage" — then the unlock, the
+  recovery, and the flash. A real guide — but its backup step
+  is a copy to a computer or cloud, its moment is the flash,
+  and it says nothing about SnapDisk; curl 200, 0 SnapDisk
+  mentions in the fetched page);
+  awesome-android-root.pages.dev, "How to Unlock an Android
+  Bootloader"
+  (https://awesome-android-root.pages.dev/rooting-guides/how-to-unlock-bootloader
+  — the unlock guide: a backup step that lists cloud backups —
+  Google Photos and cloud storage — for photos and videos,
+  before the unlock wipes all data. A real guide — but its
+  photo route is the cloud, its moment is the unlock, and it
+  says nothing about SnapDisk; curl 200, 0 SnapDisk mentions
+  in the fetched page);
+  blog.rottenwifi.com, "How to Unlock an Android Bootloader
+  Safely"
+  (https://blog.rottenwifi.com/how-to-unlock-an-android-bootloader-a-step-by-step-guide/
+  — the unlock guide: "back up everything before unlocking" —
+  an independent backup, verified restorable, covering photos,
+  videos, messages, authenticator accounts, and recovery
+  codes. A real guide — but its backup is an independent
+  backup with no phone-to-USB route, its moment is the unlock,
+  and it says nothing about SnapDisk; curl 000 (bot
+  protection), browser-verified live, no SnapDisk in the
+  fetched page text).
+  Our own factory-reset article also surfaced — the same
+  one-tap copy, framed for a reset you chose — but its moment
+  is the reset, not the unlock: a reset wipes the phone and
+  the stock system comes back, while an unlock wipes the phone
+  and new software goes on. Our own repair article also
+  surfaced — the same one-tap copy, framed for a phone going
+  to a repair shop — but its moment is the repair appointment,
+  not the unlock: a shop may wipe the phone, the unlock will
+  wipe it, and the repair ends with the stock system while the
+  unlock ends with a new ROM. Our own selling-phone article
+  also surfaced — the same one-tap copy, framed for a phone
+  changing hands for good — but its moment is the sale, not
+  the unlock: a sold phone never comes back, an unlocked phone
+  stays yours with new software on it. Rooting is NOT a
+  factory reset or a repair — the wipe is deliberate and the
+  phone then runs new software, not the stock system.
+  SnapDisk backs up photos and videos only — it does not back
+  up app data, authenticator seeds, messages, or system state
+  — so export authenticators, back up chats, and take a TWRP
+  nandroid for a full system image separately. The backup has
+  to COMPLETE and be verified on the drive BEFORE the unlock
+  command runs — a copy still running when the wipe starts is
+  not a backup, and after the wipe there is no recovery.
+  Unplug the USB drive before flashing — the USB port is
+  needed for the computer and fastboot — and keep the drive
+  aside until the new ROM boots. Unlocking may void the
+  warranty, can break Play Integrity and banking apps, and
+  some carrier variants cannot be unlocked at all — check
+  before you start.
+  Cloud-only originals are a trap (backup off / device folders
+  not switched on / storage-saver compressed copies — check
+  photos.google.com); the drive copy comes first and the cloud
+  check waits for Wi-Fi. One USB-C port holds the drive OR the
+  charger, not both — charge first, or use a powered hub with
+  pass-through charging, which is standard USB-C behaviour but
+  unverified with SnapDisk. The repo facts that carry the
+  article, read from the code this run: the copy runs as a
+  foreground service (dataSync type, BackupService.kt) — the
+  mechanism Android gives a copy that must keep running with
+  the screen off — but the repo holds no wake lock and no
+  battery-saver handling (grep over app/src/main finds no
+  WakeLock) and no before-rooting run has ever been tested, so
+  screen-off continuation under battery saver is unverified and
+  the article says so instead of promising it. What IS verified:
+  oldest-first on MediaStore DATE_TAKEN (BackupEngine.kt,
+  PhotoQuery.kt); resume covers an interrupted copy — finished
+  files stay on the drive (skip-if-exists with size
+  verification), the file in flight keeps its .part copy
+  (byte-exact .part resume); on Android 15 and later a dataSync
+  foreground service gets 6 hours in 24 hours, so a very long
+  copy can be paused by Android itself, and opening the app
+  resets the timer (WL-34); the manifest holds no INTERNET
+  permission; SnapDisk copies, it never deletes (delete() in
+  BackupEngine.kt touches only .part files). SnapDisk needs
+  Android 7.0 or later (minSdk 24 in the repo) and is not on
+  Google Play yet, so install the v0.1.2 APK from GitHub. The
+  free version backs up manually up to 5 GB per run, picking up
+  where it stopped past the cap — a phone that has never been
+  backed up often holds a library bigger than 5 GB, so it takes
+  several taps, and that is the case Pro is for; Pro is a
+  one-time $9.99 purchase that auto-starts the backup on connect
+  and removes the size limit. The screenshot in the article is
+  from SnapDisk on a phone — the same settings screen the reader
+  will see. The From folder is a picker, not a fixed path — tap
+  it, browse to the phone's storage, and choose the folder that
+  holds the photos, which the picker reaches because it is the
+  system folder picker, verified in the repo as
+  OpenDocumentTree. Drives formatted FAT32 cannot hold a single
+  file over 4 GB — SnapDisk skips those files and lists them
+  instead of failing the whole backup, per the repo README — so
+  use exFAT. Title is the 47-char form as briefed in WL-182 —
+  below the 48–53-char template band; the full "unlocking the
+  bootloader / rooting / flashing a custom ROM" phrasing is
+  carried in the dek and TL;DR.
+  This is the sixteenth article in the series about a situation
+  instead of a phone brand — the brand series ran to 134
+  articles, and the broken-screen, switching-phones, SD-card,
+  tablet, Chromebook, storage-full, low-battery, factory-reset,
+  selling-phone, traveling, Android-update, water-damage, flight,
+  repair, and lending articles were the first fifteen.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 21, 2026 (WL-182, 150th how-to):
+  docs/rooting-photos-to-usb.html — branch wl-182-rooting.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
