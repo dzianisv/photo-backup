@@ -1,3 +1,72 @@
+## WL-176 — Back up photos to USB while traveling (no Wi-Fi, no computer) article, 144th how-to (DRAFTED — branch pushed, awaiting supervisor merge)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DRAFTED Nov 20,
+  2026 — branch wl-176-traveling pushed this run from main 444a7b2, no
+  PR created (supervisor merges after a pre-merge readback).
+  New docs/traveling-photos-to-usb.html ("Back up photos to USB while
+  traveling (no Wi-Fi)"), following the WL-54–WL-175 article template
+  exactly (navy/cyan, TL;DR first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot, with an
+  honest caption). Title 48 chars, meta 139 chars. Blog index
+  (JSON-LD + post block), sitemap.xml, llms.txt, llms-full.txt (full
+  traveling section), feed.xml updated; searches.md Query 143 row
+  added. Pre-push readback this run: feed 144 items / 144 closes
+  incl. traveling, sitemap 148 URLs incl. traveling, blog index
+  JSON-LD parses (144 BlogPosting) + 144 post blocks, JSON-LD parses
+  (Article + FAQPage 4 Qs + BreadcrumbList, datePublished 2026-11-20),
+  TL;DR present, 1 script tag, 1 H1, 10 H2s, Query 143 row present
+  (143 "### " rows, sequential 1–143), only docs/ + tool/growth
+  changed (8 files).
+  Query 143 scored honestly from live evidence: no "no guide exists"
+  claim. Named competitors: PetaPixel "No Laptop? No Problem"
+  (phone-bridge, camera card to SSD, manual Files copy),
+  desnoulez.fr (same bridge pattern, iPhone + Android),
+  shawnmoreton.com (same bridge pattern, powered hub, five steps),
+  PurrfectBackup (dedicated pocket hardware copier, pre-launch, cards
+  only, no phone/Wi-Fi/apps), plus diyphotography.net (bridge + a
+  phone camera-roll section, manual — the closest near-miss),
+  thegadgetians.com and mefmobile.org (generic manual phone-to-USB),
+  and our own OnePlus article. Gap stands only on the whole-library
+  one-tap backup of the phone's own photos to USB framed for the
+  traveling / no-Wi-Fi / no-computer moment, and only because none of
+  the guides mentions SnapDisk — the distinction is stated in-article:
+  the bridge guides back up a CAMERA card via the phone; this article
+  backs up the phone's own library.
+  Key finding: on the road there is no cloud fallback and no second
+  copy — the phone is the only copy until the drive copy finishes and
+  is checked, so the backup must COMPLETE and be verified before the
+  phone is wiped, lost, or the trip ends; cloud-only originals are a
+  trap (backup off / device folders not switched on / storage-saver
+  compressed copies — check photos.google.com — and with no Wi-Fi the
+  upload cannot run at all, so the drive copy comes first and the
+  cloud check waits for Wi-Fi); one USB-C port holds the drive OR the
+  charger, not both — charge first, or a powered hub with pass-through
+  charging (standard USB-C behaviour, unverified with SnapDisk); a
+  portable SSD may need a powered hub — the phone alone may not supply
+  enough power; keep the drive in a different bag from the phone;
+  copy every few days, not on the last night. Screen-off continuation
+  under battery saver UNVERIFIED (no WakeLock/Doze code), stated
+  plainly in-article.
+  SnapDisk behaviour verified from the repo: minSdk 24, Pro $9.99
+  auto-backup on connect + unlimited, free 5 GB/run with resume
+  (skip-if-exists + .part resume + size verification), oldest-first
+  DATE_TAKEN, copies never deletes, FAT32 >=4 GB skipped and listed,
+  From-picker OpenDocumentTree SAF, dataSync foreground service 6h
+  budget (WL-34).
+  Link verification this run: PetaPixel, desnoulez.fr,
+  shawnmoreton.com, PurrfectBackup, thegadgetians.com, and four
+  own-site cross-links curl 200, 0 SnapDisk mentions in the fetched
+  pages; diyphotography.net and mefmobile.org returned 403 — cited as
+  "verified via live search index only" in the article and the Query
+  143 row. No other failures. No exec failures.
+  Lead's goal entry recorded on the timeline this run (see final
+  report for the entry id); supervisor verifies it.
+  WL-177 fallback: another scenario shape (unverified) — candidates
+  before an Android update, water-damage, before a flight / airport
+  security.
+  Articles 143 → 144 (143 scored queries). Board: 0 open issues,
+  0 open PRs (at branch time).
+
 ## WL-175 — Back up photos to USB before selling or trading in your phone article, 143rd how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.

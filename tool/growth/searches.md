@@ -14518,6 +14518,167 @@ demand is read off competitor install velocity instead (see
   drafted Nov 20, 2026 (WL-175, 143rd how-to):
   docs/selling-phone-photos-to-usb.html — branch wl-175-selling-phone.
 
+### 143. "back up photos to USB while traveling (no Wi-Fi, no computer)" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return real guides — four
+  travel-backup guides: PetaPixel's "No Laptop? No Problem",
+  desnoulez.fr, shawnmoreton.com, and PurrfectBackup — plus the
+  same-shape manual phone-to-USB guides diyphotography.net,
+  thegadgetians.com, and mefmobile.org, and our own OnePlus article.
+  The three bridge guides back up a camera's memory card with the
+  phone as a bridge, by hand in the Files app; PurrfectBackup is
+  pre-launch pocket hardware that copies memory cards, not the
+  phone's library; the manual guides are generic select-copy-paste
+  with nothing about traveling — none of the eight is a
+  whole-library one-tap phone-to-USB backup framed for the
+  traveling / no-Wi-Fi / no-computer moment, and none of them
+  mentions SnapDisk.
+- Current top results (scored Nov 20, 2026, live web search):
+  petapixel.com, "No Laptop? No Problem: How to Back Up Photos in
+  the Field With Your Smartphone"
+  (https://petapixel.com/2025/05/11/no-laptop-no-problem-how-to-back-up-photos-in-the-field-with-your-smartphone/
+  — the field-backup guide: a smartphone, a USB hub, a card reader,
+  and a portable SSD, copying full-resolution RAW or JPEG files from
+  a memory card — SD or CFexpress — to the SSD with the phone's file
+  manager, no laptop, no cloud. A real travel-backup guide — but it
+  backs up the camera's card, not the phone's own library, its copy
+  is manual, and it says nothing about SnapDisk; curl 200, 0
+  SnapDisk mentions in the fetched page);
+  desnoulez.fr, "How to back up camera photos or SD Card without a
+  laptop"
+  (https://www.desnoulez.fr/en/how-to-back-up-camera-photos-while-traveling-no-laptop-needed/
+  — the same phone-bridge pattern, for iPhone and Android: a USB-C
+  or Lightning hub, a portable SSD formatted in exFAT, a power bank
+  for the hub, the card in the reader, the Files app copying the card
+  to the SSD. A real travel-backup guide — but it backs up the
+  camera's card, not the phone's own library, its copy is manual
+  copy-and-paste, and it says nothing about SnapDisk; curl 200, 0
+  SnapDisk mentions in the fetched page);
+  shawnmoreton.com, "How to Back Up Photos While Travelling — No
+  Laptop Needed"
+  (https://www.shawnmoreton.com/blog/travel-photography-how-to-backup-files-on-the-road
+  — the travel-photography guide: the phone, a USB-C hub with a
+  built-in card reader, and a portable SSD, in five steps — power the
+  hub, insert the card and the SSD, open the Files app, copy the card
+  to the SSD, verify and eject — with the warning that the hub must
+  be externally powered to run the SSD, because the phone alone
+  cannot supply enough power. A real travel-backup guide — but it
+  backs up the camera's card, not the phone's own library, its copy
+  is manual, and it says nothing about SnapDisk; curl 200, 0
+  SnapDisk mentions in the fetched page);
+  PurrfectBackup, "PurrfectBackup — Backup RAW Photos Without a
+  Laptop"
+  (https://purrfectbackup.com/
+  — the dedicated pocket hardware copier: a pocket-sized device that
+  copies SD, microSD, CFexpress, and CFast cards directly to fast
+  internal storage or an external SSD — no phone, no Wi-Fi, no apps
+  — one-button copy, about 100 GB in about 10 minutes, running off
+  a power bank. A real travel-backup device — but it is pre-launch,
+  not yet shipping — the site takes a refundable pre-launch pass and
+  says full price is due only once devices ship, later in 2026 —
+  and it copies memory cards, not the phone's own library, and it
+  says nothing about SnapDisk; curl 200, 0 SnapDisk mentions in the
+  fetched page).
+  The phone-to-USB guides the search returns alongside them, from a
+  second look at the same search:
+  diyphotography.net, "Never Lose Your Photos Again: Backing Up on
+  Location with an SSD"
+  (https://www.diyphotography.net/never-lose-your-photos-again-backing-up-on-location-with-an-ssd/
+  — the on-location guide: the same phone-bridge pattern for memory
+  cards, plus a section on the phone's camera roll — an Android phone
+  with USB OTG, the file manager, the DCIM folder selected and copied
+  to the SSD. The closest near-miss in the results, because it does
+  cover the phone's own photos — but its copy is manual
+  select-copy-paste, its travel angle is the card, and it says nothing
+  about SnapDisk; verified via the live search index only — the
+  direct fetch returned 403);
+  thegadgetians.com, "How to Transfer Files From Phone to USB
+  Without Computer: Ultimate Guide"
+  (https://thegadgetians.com/how-to-transfer-files-from-phone-to-usb-without-computer/
+  — the generic phone-to-USB guide: an OTG adapter, the file manager,
+  select the files, copy them to the drive, no computer or internet.
+  A real phone-to-USB method — but its reason is moving files in
+  general, its copy is manual select-and-copy, it says nothing about
+  traveling, and it says nothing about SnapDisk; curl 200, 0
+  SnapDisk mentions in the fetched page);
+  mefmobile.org, "How to Transfer Phone Photos to a USB Stick
+  Without a Computer"
+  (https://mefmobile.org/transfer-photos-from-phone-to-usb-stick-without-a-computer-a-step-by-step-guide/
+  — the step-by-step phone-to-USB guide: a compatible adapter, a
+  drive the phone recognises, the Files app, copy the photos, verify
+  them on the drive, and only then consider deleting the originals.
+  A real phone-to-USB method — but its reason is the transfer itself,
+  its copy is manual, it says nothing about traveling, and it says
+  nothing about SnapDisk; verified via the live search index only —
+  the direct fetch returned 403);
+  SnapDisk, "Back up OnePlus photos to a USB drive"
+  (https://dzianisv.github.io/photo-backup/oneplus-photos-to-usb.html
+  — the same one-tap copy, oldest-first in the background with
+  progress, Pause and Stop, and resume, with the honest contrast that
+  OTG is off by default on OxygenOS. A real one-tap guide — but its
+  angle is the brand, and it says nothing about traveling; curl 200).
+- On the road there is no cloud fallback and no second copy — the
+  phone is the only copy until the drive copy finishes and is checked,
+  so the backup must COMPLETE and be verified before the phone is
+  wiped, lost, or the trip ends. One USB-C port holds the drive OR
+  the charger, not both — charge first, or use a powered hub with
+  pass-through charging, which is standard USB-C behaviour but
+  unverified with SnapDisk; a portable SSD may need a powered hub —
+  the phone alone may not supply enough power for both the hub and
+  the drive, and shawnmoreton.com says the same. Keep the drive in a
+  different bag from the phone — separation is the backup — and copy
+  every few days, not on the last night, because a whole trip's
+  library is tens of gigabytes and the last night is the worst night
+  to start. The cloud copy only counts if it actually uploaded:
+  Google Photos backup can be off, it can cover the camera folder
+  only, and it can be set to storage saver, which uploads compressed
+  copies instead of the originals — seeing a photo in the Photos app
+  on the phone proves nothing, because the app shows on-device photos
+  too, so the check has to happen at photos.google.com on another
+  device — and with no Wi-Fi the upload cannot run at all, so the
+  drive copy comes first and the cloud check waits for Wi-Fi. The
+  repo facts that carry the article, read from the code this run: the
+  copy runs as a foreground service (dataSync type, BackupService.kt)
+  — the mechanism Android gives a copy that must keep running with
+  the screen off — but the repo holds no wake lock and no
+  battery-saver handling (grep over app/src/main finds no WakeLock,
+  PowerManager, or power-save code), and no travel run has ever been
+  tested, so screen-off continuation under battery saver is
+  unverified and the article says so instead of promising it. What IS
+  verified: the backup has to finish and be checked before the phone
+  is wiped, lost, or the trip ends, and resume covers an interrupted
+  copy — finished files stay on the drive, the file in flight keeps
+  its partial copy, and resume picks up where it stopped (byte-exact
+  .part resume, skip-if-exists, size verification); and on Android 15
+  and later a dataSync foreground service gets 6 hours in 24 hours, so
+  a very long copy can be paused by Android itself, and opening the
+  app resets the timer (WL-34). SnapDisk needs Android 7.0 or later
+  (minSdk 24 in the repo) and is not on Google Play yet, so install
+  the v0.1.2 APK from GitHub. The free version backs up manually up
+  to 5 GB per run, picking up where it stopped past the cap — a trip's
+  library is often bigger than 5 GB, so it takes several taps, and
+  that is the case Pro is for; Pro is a one-time $9.99 purchase that
+  auto-starts the backup on connect and removes the size limit. The
+  screenshot in the article is from SnapDisk on a phone — the same
+  settings screen the reader will see. The From folder is a picker,
+  not a fixed path — tap it, browse to the phone's storage, and choose
+  the folder that holds the photos, which the picker reaches because
+  it is the system folder picker, verified in the repo as
+  OpenDocumentTree. Drives formatted FAT32 cannot hold a single file
+  over 4 GB — SnapDisk skips those files and lists them instead of
+  failing the whole backup, per the repo README — so use exFAT.
+  SnapDisk copies, it never deletes — deleting photos from the phone
+  afterwards is the reader's step, only after verifying photos on the
+  drive, and the drive stays in a different bag from the phone. This
+  is the tenth article in the series about a situation instead of a
+  phone brand — the brand series ran to 134 articles, and the
+  broken-screen, switching-phones, SD-card, tablet, Chromebook,
+  storage-full, low-battery, factory-reset, and selling-phone articles
+  were the first nine.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 20, 2026 (WL-176, 144th how-to):
+  docs/traveling-photos-to-usb.html — branch wl-176-traveling.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
