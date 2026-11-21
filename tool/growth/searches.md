@@ -13709,6 +13709,137 @@ demand is read off competitor install velocity instead (see
   drafted Nov 20, 2026 (WL-170, 138th how-to):
   docs/tablet-photos-to-usb.html — branch wl-170-tablet.
 
+### 138. "back up photos from a Chromebook to USB drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return real Chromebook guides —
+  five of them — asurion.com, chromeready.com (twice), itigic.com, and
+  howtogeek.com — but all five are manual select-copy-paste guides, none
+  of them is a whole-library one-tap backup, and none of them mentions
+  SnapDisk.
+- Current top results (scored Nov 20, 2026, live web search):
+  asurion.com, "How to back up and restore your Chromebook"
+  (https://www.asurion.com/connect/tech-tips/how-to-back-up-and-restore-chromebook/
+  — the general Chromebook backup guide: Google Account sync covers
+  settings, bookmarks, passwords and apps, Google Drive holds files you
+  put there, and anything saved locally in Downloads is not synced —
+  move it to Google Drive or an external drive. Its external-storage
+  backup is one line: connect a drive, open the Files app, and copy the
+  files onto it. A real Chromebook guide — but about backing up the
+  Chromebook generally, not a photo library to USB, and a manual copy,
+  nothing about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched
+  page);
+  chromeready.com, "How to Import Google Photos Onto a USB Flash Drive
+  (2026 Guide)"
+  (https://chromeready.com/11331/import-google-photos-onto-usb-flash-drive/
+  — the cloud-library export: do it in the Chrome browser, not the
+  Android Google Photos app, batch-select with the checkmark and
+  Shift-click, press Shift + D to download, and Google Photos compiles
+  the selection into a single ZIP file in the Downloads folder — then
+  push the ZIP onto the drive. A real Chromebook-specific guide — but a
+  cloud export with a ZIP in the middle, a manual copy, nothing about the
+  Chromebook's local photos or about SnapDisk; curl 200, 0 SnapDisk
+  mentions in the fetched page);
+  chromeready.com, "How to Copy Files to a USB Flash Drive on a
+  Chromebook"
+  (https://chromeready.com/3982/copy-files-usb-flash-drive-chromebook/
+  — the plain file copy: plug the drive in, open Files from the
+  Launcher, find the file, right-click and Copy — or Shift and arrow
+  keys to select several, then Ctrl + C — click the USB drive in the
+  left sidebar and paste. A USB-C hub if the Chromebook has no USB-A
+  port. A real guide — but a manual copy of any file, nothing about a
+  photo library, nothing about SnapDisk; curl 200, 0 SnapDisk mentions
+  in the fetched page);
+  itigic.com, "How to Copy Files From a Chromebook to a USB Drive"
+  (updated November 8, 2026)
+  (https://itigic.com/copy-files-from-chromebook-to-usb-pen-drive/
+  — the newest of the five: plug the drive in, open Files, find the
+  files under My files, Downloads, or Google Drive, select with
+  Ctrl-click, Ctrl + C, click the drive in the sidebar, Ctrl + V, wait,
+  check the files open from the drive, then click Eject. Its warnings
+  are the ones to keep: a cloud-only file has to be downloaded before
+  disconnecting, a school or work policy can restrict USB storage, and
+  ChromeOS supports FAT32 and exFAT — exFAT is the practical choice for
+  large files. A real guide — but a manual copy, nothing about SnapDisk;
+  curl 200, 0 SnapDisk mentions in the fetched page);
+  howtogeek.com, "How to Copy Files to a USB Flash Drive on a
+  Chromebook" (September 7, 2020)
+  (https://www.howtogeek.com/687479/how-to-copy-files-to-a-usb-flash-drive-on-a-chromebook/
+  — the oldest of the five and still the pattern: plug the drive in, a
+  "Removable Device Detected" notification appears, open the Files app
+  from the App Launcher, right-click the file and Copy, click the USB
+  Drive in the sidebar, right-click and Paste — or drag and drop — then
+  click Eject. A real guide — but a manual copy, nothing about SnapDisk;
+  curl 000, verified live via browser.open this run).
+  Follow-up searches for the two platform facts this article depends on
+  confirm the same gap from the other side:
+  support.google.com, "Install & use Android apps on your Chromebook"
+  (https://support.google.com/googleplay/answer/7021273
+  — Google's own page: you can download Android apps from the Google
+  Play Store app and use them on your Chromebook — but the Play Store
+  is available for only some Chromebooks, and some apps do not work
+  with some Chromebooks. The platform supports the one-tap route — but
+  Google's page says nothing about backing up photos to USB, and
+  nothing about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched
+  page);
+  thedroidguy.com, "How To Fix Chromebook Not Showing USB Drive Or SD
+  Card (2026)"
+  (https://thedroidguy.com/chromebook-usb-drive-sd-card-not-showing-1290519
+  — the fix list, drawn from Google's Chromebook Help pages: if the
+  Files app shows the drive but an Android app cannot see it, an access
+  setting is off — Settings, System preferences, Storage management,
+  External storage preference — turn the storage device on. That
+  setting is the gate between the Files-app copy, which always works,
+  and any Android app's access to the drive, which does not work until
+  the setting is on. A real, current fix — but a troubleshooting page,
+  not a backup guide, and nothing about SnapDisk; curl 200, 0 SnapDisk
+  mentions in the fetched page).
+- A Chromebook is not an Android phone with a keyboard — it runs Android
+  apps inside ChromeOS, only some Chromebooks have Google Play at all
+  (per Google's own help page), its photos live in three places at once
+  (Downloads, Google Drive, Google Photos in the cloud), and whether an
+  Android app can even see a USB drive depends on the External storage
+  preference, which most owners have never opened. SnapDisk has never
+  been run on a Chromebook — whether its folder picker (OpenDocumentTree
+  in MainActivity.kt) reaches a USB drive on ChromeOS is unverified, and
+  whether the connect notification fires on ChromeOS is unverified too,
+  so the article tells the reader to open the app and tap Backup rather
+  than wait for the notification, and treats Pro's auto-start the same
+  way: on a Chromebook Pro buys the unlimited size, and the tap still
+  starts the copy. SnapDisk needs Android 7.0 or later (minSdk 24 in the
+  repo) and is not on Google Play yet, so install the v0.1.2 APK from
+  GitHub. The free version backs up manually up to 5 GB per run, picking
+  up where it stopped past the cap — on a Chromebook library bigger
+  than 5 GB that means several taps, which is the case Pro is for; Pro
+  is a one-time $9.99 purchase that auto-starts the backup on connect
+  and removes the size limit. The screenshot in the article is from
+  SnapDisk on a phone, not a Chromebook — the Chromebook layout is
+  unverified, and the article says so in the caption and the dek. The
+  From folder is a picker, not a fixed path — tap it, browse to the
+  Chromebook's storage, and choose the folder that holds the photos,
+  which the picker reaches because it is the system folder picker,
+  verified in the repo as OpenDocumentTree — but that reach on ChromeOS
+  is unverified, so the article says to check the drive appears in the
+  picker before trusting the copy. A Chromebook's photos may not all sit
+  in one place — some in Downloads, some in Google Drive, some only in
+  Google Photos in the cloud — and a cloud-only photo is not on the
+  Chromebook to copy, so download the originals first (Method 3: Google
+  Photos web, Shift-click batch select, Shift + D, ZIP to Downloads,
+  then copy the ZIP to the drive). Drives formatted FAT32 cannot hold a
+  single file over 4 GB — SnapDisk skips those files and lists them
+  instead of failing the whole backup, per the repo README — so use
+  exFAT, which ChromeOS reads and writes. Many Chromebooks have 64 GB
+  of internal storage or less, so a big library may not fit on the
+  Chromebook first — copy straight from the source folder to the drive.
+  A school or work Chromebook may block the Play Store or USB storage
+  entirely — an administrator can switch both off. SnapDisk copies, it
+  never deletes. This is the fifth article in the series about a
+  situation instead of a phone brand — the brand series ran to 134
+  articles, and the broken-screen, switching-phones, SD-card, and
+  tablet articles were the first four.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 20, 2026 (WL-171, 139th how-to):
+  docs/chromebook-photos-to-usb.html — branch wl-171-chromebook.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
