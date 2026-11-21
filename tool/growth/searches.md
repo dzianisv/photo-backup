@@ -16531,6 +16531,157 @@ demand is read off competitor install velocity instead (see
   Article drafted Nov 21, 2026 (WL-188, 156th how-to):
   docs/snapdisk-vs-buffalo.html — branch wl-188-vs-buffalo.
 
+### 156. "back up RAW photos to USB from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a RAW/DNG-specific
+  phone-to-USB backup guide at all — the top results are
+  generic JPEG-era photo transfer guides (file manager, PC
+  middleman, cloud, OTG copy), plus one forum thread about
+  moving RAW files through a laptop. None of them mentions
+  SnapDisk.
+- Current top results (scored Nov 21, 2026, live web search):
+  groovypost, "How to Transfer Photos from Android to a USB
+  Drive"
+  (https://www.groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — a PC middleman (drag and drop from the phone to a
+  computer, then to the drive) and a dual USB-C drive with
+  the file manager; a generic photo transfer guide, no RAW
+  angle, no SnapDisk mention in the search excerpt read;
+  curl 403, browser-verified live via the search index this
+  run);
+  robots.net, "How To Move Pictures From Android To External
+  Hard Drive"
+  (https://robots.net/tech/how-to-move-pictures-from-android-to-external-hard-drive/
+  — an OTG cable plus a file manager copy, DCIM folder,
+  select, copy, eject; a generic photo transfer guide, no
+  RAW angle; fetched page curl 200, 0 SnapDisk mentions, 0
+  .dng mentions in the guide text read);
+  FotoSafe, "Back up Android photos to a USB drive"
+  (https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/
+  — a guided app backup to USB through the system picker,
+  Android 9+ with USB host/OTG; the closest near-miss, a
+  real guided backup to USB, but generic Android photos, no
+  RAW angle; curl 200, 0 SnapDisk mentions, 0 RAW/DNG
+  mentions in the fetched page);
+  Dr.Fone, "4 Practical Ways to Transfer Photos from Android
+  to USB Flash Drive"
+  (https://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — Google Drive, drag-and-drop to a PC, an OTG adapter,
+  and AirDroid; cloud, PC, or manual copy in four flavours,
+  a generic photo transfer guide, no RAW angle; curl 200, 0
+  SnapDisk mentions, 0 .dng mentions, 0 whole-word "raw"
+  mentions in the fetched page);
+  Google Photos community thread, "How do I back up photos
+  to a plug in drive"
+  (https://support.google.com/photos/thread/443333707/how-do-i-back-up-photos-to-a-plug-in-drive?hl=en
+  — the answer is a manual Files-by-Google move of files to
+  the USB drive; a generic photo transfer answer, no RAW
+  angle, no SnapDisk mention; curl 200);
+  pixls.us forum thread, "Moving raw files from my Android
+  phone an SSD"
+  (https://discuss.pixls.us/t/moving-raw-files-from-my-android-phone-an-ssd/34892
+  — the only result that even says RAW: a forum question
+  about moving .dng files to an SSD through a laptop,
+  darktable, Nextcloud, or Syncthing — a laptop route, not
+  a phone-to-USB guide, and no SnapDisk mention; curl 200).
+  sekin.in, "Transfer Photos From Android to a USB Flash Drive"
+  (https://sekin.in/how-to-transfer-pictures-from-android-to-a-usb-flash-drive/
+  — a generic Files-by-Google manual copy guide; its only RAW
+  acknowledgment is one line that a large batch "may require
+  more space than expected, particularly if it includes RAW
+  photos or videos" — no RAW method, no SnapDisk mention;
+  live-read this run, supervisor re-score);
+  fstoppers, "How to Get Camera Raw Files on to Your Smartphone"
+  (https://fstoppers.com/originals/how-get-camera-raw-files-your-smartphone-326480
+  — RAW files ONTO the phone (laptop, Wi-Fi card, card
+  reader), the opposite direction from this article's
+  phone-to-USB backup; no backup guide, no SnapDisk mention;
+  live-read this run, supervisor re-score).
+  DriveForge, "exFAT vs FAT32 vs NTFS: Which Format for Your
+  USB or SD Card?"
+  (https://driveforge.bytehavenstudios.com/guides/exfat-vs-fat32-vs-ntfs/
+  — the format reference the article names, not a competing
+  guide: exFAT has no 4 GB per-file limit and is read and
+  written by current Android phones, Windows, and Mac; FAT32
+  cannot hold a single file of 4 GB or more; NTFS is a
+  Windows format most Android phones cannot open on their
+  own; curl 200).
+  Adjacent ground in our own series: the SD-card article
+  (https://dzianisv.github.io/photo-backup/sd-card-photos-to-usb.html
+  — WL-169: full-resolution RAW or JPEG files copied
+  directly from the camera's memory card through a powered
+  hub — a camera-card guide, not the phone's own library,
+  so a different angle; live 200, verified this run), the
+  VaultDrive comparison (WL-37) and the FotoSafe comparison
+  (WL-185, the guide above is the same FotoSafe guide, now
+  scored as a rival guide rather than a rival app).
+  Anti-duplicate check (this run, before writing): grep of
+  searches.md for the RAW/DNG topic finds only incidental
+  mentions — the WL-169 SD-card rows (RAW or JPEG from a
+  camera card, not the phone library) and the PurrfectBackup
+  pocket hardware copier (copies memory cards, not the
+  phone's library, pre-launch, not shipping) — and no "### "
+  row title is a RAW/DNG/HEIC/camera topic; a docs/ listing
+  finds no near slug (raw, dng, heic, camera-raw). No
+  existing RAW/DNG article or row: the gap is a new article,
+  not a rewrite. WL-189 was killed before merge for
+  duplicating WL-168's live switching-phones article — this
+  query is not that moment.
+  The repo facts that carry the article, read from the code
+  this run: the SAF-tree path lists files by extension and
+  .dng and .raw are both in IMAGE_EXTENSIONS
+  (PhotoQuery.kt), while the default DCIM route queries the
+  MediaStore Images table with no MIME filter — so whether a
+  given phone's MediaStore indexes .dng files is
+  device-dependent, and the certain route for RAW is picking
+  the source folder via the SAF From-picker (OpenDocumentTree);
+  the copy streams each file byte-for-byte with no
+  transcoding step (copyWithResume, BackupEngine.kt) and
+  renames the .part file to the final file only after the
+  size verification passes; oldest-first on MediaStore
+  DATE_TAKEN (fallback DATE_MODIFIED); the extension list
+  does NOT include .tif/.tiff or .xmp sidecars, so those are
+  not copied on the folder route and the article says so;
+  a file >=4 GiB on FAT32 is skipped with its reason and the
+  job continues (BackupService.kt); the free version backs up
+  manually up to 5 GB per run (FREE_BACKUP_BYTES_LIMIT, 5 GiB,
+  ProPrefs.kt), repeatable, files already copied never copied
+  twice; Pro is a one-time $9.99 purchase (product id
+  pro_unlock, BillingManager.kt) for auto-backup on connect
+  and unlimited size; the copy runs as a foreground service
+  (dataSync type, BackupService.kt) — the mechanism Android
+  gives a copy that must keep running with the screen off —
+  but the repo holds no wake lock and no battery-saver
+  handling (no WakeLock/Doze reference in the source,
+  verified this run) and no RAW run has ever been tested, so
+  screen-off continuation under battery saver is unverified
+  and the article says so instead of promising it; on
+  Android 15 and later a dataSync foreground service gets 6
+  hours in 24 hours, and opening the app resets the timer
+  (WL-34); the manifest holds no INTERNET permission;
+  SnapDisk copies, it never deletes (no delete() call in the
+  source touches photos — only .part files). SnapDisk needs
+  Android 7.0 or later (minSdk 24 in the repo) and is not on
+  Google Play yet, so install the v0.1.2 APK from GitHub. The
+  screenshot in the article is from SnapDisk on a phone —
+  the same settings screen the reader will see. The From
+  folder is a picker, not a fixed path — tap it, browse to
+  the phone's storage, and choose the folder that holds the
+  photos, which the picker reaches because it is the system
+  folder picker, verified in the repo as OpenDocumentTree.
+  Own canonical URL returns 404 pre-merge (curl, this run
+  — the known-missing control URL returns the same 404,
+  while existing pages return 200; expected, live only
+  after merge). Title is the 49-char form "Back up RAW
+  photos to USB from Android — SnapDisk" — within the
+  48–53-char brief. This is the 157th article in the brand
+  series — the SD-card article (WL-169) is the adjacent
+  ground for this one, a different angle (camera card
+  through a powered hub vs the phone's own library).
+- Verdict: how-to article material, not a listing keyword.
+  Article drafted Nov 21, 2026 (WL-190, 157th how-to):
+  docs/raw-photos-to-usb.html — branch wl-190-raw.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),

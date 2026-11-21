@@ -1098,5 +1098,12 @@
       <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
       <description>Two Android apps that back up your photos to a USB drive — one from Japan&#x27;s biggest external-drive maker, one from a small team. Here is how they actually differ, from the facts we could verify as of November 2026.</description>
     </item>
+    <item>
+      <title>Back up RAW photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/raw-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/raw-photos-to-usb.html</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A RAW file is the negative — recompress it once and the edit is gone for good. Here is how to get the .dng files off your Android phone onto a USB drive byte-for-byte, and how to check every one of them arrived.</description>
+    </item>
 </channel>
 </rss>
