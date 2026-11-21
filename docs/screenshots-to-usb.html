@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up screenshots to USB from Android — SnapDisk</title>
+<meta name="description" content="Back up screenshots from Android to a USB drive with SnapDisk: the default run includes every .png, byte-for-byte — and the folder choice that would miss them.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/screenshots-to-usb.html">
+<meta property="og:title" content="Back up screenshots to USB from Android — SnapDisk">
+<meta property="og:description" content="Back up screenshots from Android to a USB drive with SnapDisk: the default run includes every .png, byte-for-byte — and the folder choice that would miss them.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/screenshots-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/screenshots-to-usb.html#article",
+      "headline": "Back up screenshots to USB from Android — SnapDisk",
+      "description": "Back up screenshots from Android to a USB drive with SnapDisk: the default run includes every .png, byte-for-byte — and the folder choice that would miss them.",
+      "datePublished": "2026-11-21",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/screenshots-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/screenshots-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Will SnapDisk back up my screenshots?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, on the default run: with no From folder picked, SnapDisk reads the phone's MediaStore Images table with no folder filter and no MIME filter, so every image on the phone is included — screenshots in Pictures/Screenshots included, since .png is a format every Android MediaStore indexes. The one exception is the folder route: if you picked DCIM as the From folder, the copy walks only that folder tree, and on a Pixel or stock-Android phone the screenshots live outside DCIM, so they are missed. On a Samsung Galaxy phone the screenshots live in DCIM/Screenshots by default, so a DCIM pick includes them there."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does SnapDisk convert screenshots to JPG?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SnapDisk streams each file byte-for-byte from the phone to the drive — there is no transcoding step anywhere in its copy path — and it checks the size of every file after copying, renaming the .part file to the final file only after the size verification passes. A screenshot that arrives on the drive is the same .png file that left the phone, pixel for pixel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I already backed up with DCIM picked — are my screenshots lost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — they are still on the phone, the backup just did not copy them. Run the backup again with no From folder picked, or pick Pictures as the From folder, and the screenshots copy along. Files already copied are never copied twice: SnapDisk skips any file whose destination copy already has the same size, so the second run only adds what the first run missed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/screenshots-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up screenshots to USB from Android — SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/screenshots-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up screenshots to USB from Android — SnapDisk</h1>
+  <p class="dek">Screenshots are the receipts, boarding passes, QR codes and chats of your phone — and they live outside DCIM, where most backup guides never look. Here is how to get them onto a USB drive byte-for-byte, and the one folder choice that would leave them behind.</p>
+  <p class="meta">November 21, 2026 · 6 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> A screenshot is a .png file, and on most Android phones it lives in Pictures/Screenshots — outside DCIM, where every camera-photo backup looks. That is the whole trap: a backup that only looks in DCIM never sees your screenshots at all. SnapDisk's default run does not look in DCIM — with no From folder picked it reads the phone's MediaStore Images table with no folder filter and no MIME filter, oldest-first, so every image on the phone is included, screenshots included, because .png is a format every Android MediaStore indexes. The certain routes are the default run or picking Pictures as the From folder. The one route that misses them is picking DCIM as From on a Pixel or stock-Android phone: the folder route walks only the tree you picked, and Pictures/Screenshots sits outside it — on a Samsung Galaxy phone the screenshots live in DCIM/Screenshots by default, so a DCIM pick includes them there. SnapDisk copies byte-for-byte with no conversion — a .png stays a .png — and checks the size of every file after copying. Screenshots are small files, so the free 5 GB per-run cap barely bites here: a thousand screenshots is roughly half a gigabyte to two gigabytes, a single free run, and a second run picks up where the first stopped. Format the drive exFAT, because the 4K videos sitting next to your screenshots are the ones that hit the FAT32 4 GB limit. And one honest limit: screen-off continuation under battery saver is unverified — the repo holds no wake lock and no battery-saver handling — so keep the phone awake for the run or check it. As of November 21, 2026, no screenshot-specific phone-to-USB backup guide turned up in search — the pages that exist are generic transfer guides that list the Screenshots folder as one row in a manual copy, and none of them offers a one-tap whole-library backup for screenshots or mentions SnapDisk — so this article is the first on the screenshot angle. The adjacent ground: <a href="whatsapp-photos-to-usb.html">backing up WhatsApp photos to USB from Android</a>, which has the same folder-route rule for another folder outside DCIM, and the <a href="raw-photos-to-usb.html">RAW</a> and <a href="heic-photos-to-usb.html">HEIC</a> articles, where the default route is the uncertain one and the folder route is the certain one — screenshots are the reverse.</p>
+
+  <h2>What the search results actually offer</h2>
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk&#x27;s settings screen, showing the backup folder pickers. The From picker is where you choose Pictures to cover the Screenshots folder — or leave From unpicked and the default run covers the whole phone, screenshots included. Screenshot is from SnapDisk on a phone — the settings screen is the same screen you will see when you back up with SnapDisk.</figcaption>
+  </figure>
+  <p>The exact query returns real pages — four of them worth naming — and none of them is a screenshot-specific phone-to-USB backup guide. AnExplorer's "How to Transfer Files from Android to USB Drive (OTG, No Root)" is a file-manager guide: plug the drive in, open AnExplorer, copy the files by hand. Its folder table does list Screenshots — /Pictures/Screenshots/, 100 MB–2 GB — but as one row among many in a manual transfer, not as a backup job. UMA Technology's "How To Transfer Files From Android Phone To USB Drive - Full Guide" is the same shape at greater length: a manual, folder-by-folder copy, and it tells you to split the transfer into folders "such as: Camera 2024, Camera 2025, Camera 2026, Screenshots, WhatsApp, Videos" — screenshots are one folder to copy by hand, and the guide also names Pictures/Screenshots as where they live. Dr.Fone's "4 Practical Ways to Transfer Photos from Android to USB Flash Drive" is four generic routes — Google Drive, drag-and-drop to a PC, an OTG adapter, and AirDroid — a photo transfer guide with no screenshot angle at all; its only screenshot mentions are links to a separate article about how to take a screenshot. WikiTechLibrary's "How to Back Up Your Android Phone to an External Hard Drive (No Cloud Required)" is the closest thing to a whole-phone backup: a manual file-manager copy, folder by folder — DCIM, Downloads, Documents, Screenshots, WhatsApp — and it does suggest an automation, FolderSync, to sync chosen folders on a schedule. FolderSync is a real automation mention, and it is worth naming fairly: it syncs the folders you configure, on a schedule, to an OTG drive. But it is a general-purpose sync tool you configure per folder, not a one-tap whole-library backup with a progress notification, Pause and Stop, and per-file verification — and the page is still not a screenshot guide.</p>
+  <p>None of the four tells you how to back up the screenshots on your Android phone to a USB drive as screenshots. None of them distinguishes the default route that provably includes them from the DCIM folder route that provably misses them on most phones, none of them warns that the obvious folder to pick is the wrong one, and none of them mentions SnapDisk. That is the gap this article fills: a phone-to-USB backup that treats the screenshot as a file worth keeping pixel-exact, with the route that provably includes it.</p>
+
+  <h2>Where screenshots live — and why that decides the backup</h2>
+  <p>On a Pixel and most phones running close-to-stock Android, screenshots are saved to Internal storage → Pictures → Screenshots. On a Samsung Galaxy phone, they are saved to DCIM → Screenshots by default — inside the camera folder, not outside it. Both locations are stated in the transfer guides themselves: AnExplorer's folder table puts Screenshots at /Pictures/Screenshots/, UMA's guide lists "Pictures for screenshots and saved images" and "Internal storage/Pictures/Screenshots", and MakeUseOf's Google Photos guide notes that Samsung saves screenshots inside the DCIM directory by default, at "Internal storage/DCIM/Screenshots". The location matters because it decides which backup route sees them: on a Pixel, a backup of DCIM alone misses every screenshot; on a Samsung, the same backup includes them by accident.</p>
+  <p>That is the reverse of the HEIC and RAW problem in the two adjacent articles. For .heic and .dng files, the default route is the uncertain one — whether a given phone's MediaStore indexes those formats is device-dependent — and the folder route is the certain one. For screenshots, the default route is the certain one: the MediaStore Images table indexes .png files on every Android phone, the query SnapDisk runs carries no folder filter and no MIME filter, and it asks for every image in the table, oldest-first — so the screenshots are in the result set by construction. The uncertain route for screenshots is the folder route, and only in one configuration: a DCIM folder picked as From on a phone whose screenshots live outside DCIM.</p>
+  <p>What is a screenshot, as a file? On most Android phones it is a .png — a lossless image, pixel for pixel what was on the screen — and .png is in SnapDisk's recognised extension list, verified in the repo's PhotoQuery.kt, alongside .jpg, .jpeg, .heic, .heif, .dng and .raw. A few phones save screenshots as .jpg instead; .jpg and .jpeg are in the same list, so either way the folder route recognises them. And the files are small: a typical phone screenshot is a few hundred kilobytes to a couple of megabytes, so even a thousand of them is roughly half a gigabyte to two gigabytes. The reason they matter is not their size but what they hold: receipts, boarding passes, QR codes, two-factor backup codes, chats, error messages, confirmations — the paper trail of your phone, saved as pictures because there was no other way to save it. Lose the phone without a backup and the photos are the loss you notice first; the screenshots are the loss you notice a week later, at a check-in desk or a returns counter.</p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li><strong>An Android phone with screenshots on it.</strong> Check where yours are before you start: open the Files app and look in Pictures/Screenshots — or in DCIM/Screenshots if you have a Samsung Galaxy. If the folder is empty and you take screenshots every day, look in the other one; the two locations are the only ones the guides name.</li>
+    <li><strong>A USB drive with enough free space.</strong> Add up the screenshots first: a thousand of them is roughly half a gigabyte to two gigabytes, so a 32 GB drive covers most screenshot libraries many times over — and the same drive holds the camera photos too. Buy the size after the count, not before it.</li>
+    <li><strong>A drive formatted exFAT.</strong> The format reference for this article is DriveForge's exFAT-vs-FAT32-vs-NTFS guide: exFAT has no 4 GB per-file limit and is read and written by current Android phones, Windows, and Mac. FAT32 cannot hold a single file of 4 GB or more — a single screenshot never reaches that, but the long 4K videos sitting next to your screenshots can, and exFAT is the practical format for the whole folder. NTFS is a Windows format that most Android phones cannot open on their own — do not use it for a phone backup drive.</li>
+    <li><strong>An OTG adapter if your drive is USB-A.</strong> A dual USB-C drive plugs straight in; a standard USB-A stick needs a data-capable OTG adapter. A portable SSD may need a powered hub — the phone alone may not supply enough power for the drive.</li>
+    <li><strong>SnapDisk v0.1.2.</strong> Not on Google Play yet — install the APK from the GitHub release page. It needs Android 7.0 or later (minSdk 24 in the repo). No account, no cloud, no ads, and no internet permission — your photos physically cannot leave the phone.</li>
+  </ul>
+
+  <h2>Method 1: SnapDisk — the phone, one tap</h2>
+  <p>This is the route this article is for, and for screenshots it is the easy one: the default run already includes them. Plug the drive into the phone and wait for Android to detect it. Open SnapDisk, and leave the From folder unpicked — that is the default, and it is the route that covers the whole phone. Tap Backup in the notification, and the copy runs in the background: oldest-first by the date the photo was taken, with a progress notification showing percent, copied / total size, speed, and time left, plus Pause and Stop. The default run reads the phone's MediaStore Images table and the Video table, with no folder filter and no MIME filter — verified in the repo as PhotoQuery.queryMediaStoreOldestFirst, called from BackupService when no From folder is picked — so the screenshots in Pictures/Screenshots copy along with the camera photos, in date order, as .png files.</p>
+  <p>If you would rather copy screenshots only, pick the folder: tap the From picker, browse to the phone's storage, and choose Pictures/Screenshots. The From picker is the system folder picker (verified in the repo as OpenDocumentTree), and on that route SnapDisk walks the folder you picked — subfolders included — and copies every file whose extension is in the list, .png and .jpg included. Picking Pictures as From covers the Screenshots subfolder too, so either choice works: Pictures for the whole folder, Screenshots for screenshots only. Then pick the To folder on the drive, in the same picker, and tap Backup.</p>
+  <p>The trap, stated plainly, is the third choice: picking DCIM as the From folder. The folder route walks only the tree you picked, so on a Pixel or stock-Android phone — where screenshots live in Pictures/Screenshots — a DCIM pick copies the camera photos and leaves every screenshot behind, silently: the run succeeds, the notification says done, and the screenshots are still only on the phone. On a Samsung Galaxy phone the same pick includes them, because Samsung saves screenshots in DCIM/Screenshots by default. So the rule is: if you pick a folder, pick Pictures — never DCIM alone — unless you have checked that your screenshots live inside DCIM. And after any run, check the drive: open the backup folder and confirm the .png files are there, with sizes that match the phone. A backup is only a backup once you have confirmed the copy.</p>
+  <p>Two honest limits on this route. First, there is no screenshots-only mode on the default run: it copies the whole library, oldest-first, screenshots mixed in with camera photos in date order. If you want screenshots only, that is what the Pictures/Screenshots pick is for. Second, screen-off continuation under battery saver is unverified: SnapDisk copies as a foreground service — the mechanism Android gives a copy that must keep running with the screen off — but the repo holds no wake lock and no battery-saver handling, and no screenshot run has ever been tested, so this article says so instead of promising it. Keep the phone awake for the run, or check it. On Android 15 and later a dataSync foreground service gets 6 hours in 24 hours, so a very long copy can be paused by Android itself, and opening the app resets the timer (WL-34).</p>
+  <p>One fair comparison, because the search surfaced a rival that does part of this right: WikiTechLibrary's guide suggests FolderSync to automate folder sync to an OTG drive — a real automation, and if you already use FolderSync to sync chosen folders on a schedule, it covers the Screenshots folder too. What it does not give you is the one-tap whole-library backup: no oldest-first order across the library, no progress notification with speed and time left, no Pause and Stop, and no per-file size verification with .part resume. If scheduled sync of chosen folders is what you want, FolderSync is the honest pick — for a one-tap copy of everything on the phone, with a check that every file arrived, SnapDisk is the route this article is for.</p>
+
+  <h2>Method 2: by hand in the Files app (no app needed)</h2>
+  <p>If you would rather not install anything, the Files app does the same copy by hand — and for screenshots it has one advantage: you see exactly which files you selected. Plug the drive in, open Files by Google (or your phone's file manager), browse to Pictures/Screenshots — or DCIM/Screenshots on a Samsung — long-press one screenshot, tap the rest, tap Copy, navigate to the USB drive, and tap Paste. Check the drive afterwards: open a few .png files on the drive or on your computer, and confirm the sizes match.</p>
+  <p>Two warnings specific to screenshots on this route. First, copy — do not share. Sharing a screenshot through a messaging app hands the file to that app, and messaging apps recompress images before sending — the file that arrives is smaller and no longer pixel-exact. Copy in the Files app moves the file itself; Share hands it to another app, which may hand you back a recompressed copy. Second, do not use Move. The guides that suggest Move are telling you to delete the originals as the copy goes — and a Move that is interrupted halfway leaves some screenshots on the drive, some on the phone, and no record of which is which. Copy, verify, then delete — that order is what keeps your screenshots safe.</p>
+  <p>What you give up is everything SnapDisk automates. There is no oldest-first order — you copy in whatever order you selected. There is no progress notification with speed and time left, no Pause and Stop, and no resume: if the drive is unplugged mid-copy, you start that file again and work out yourself which files already arrived. There is no per-file size verification, and no skipped-file list — a file that does not fit, or a copy that silently stops, fails quietly. For a hundred screenshots that is fine. For a thousand, the manual route is an afternoon of tapping and checking, and the one-tap route is the honest recommendation. The manual route is also the fallback for the one configuration SnapDisk's folder route gets wrong: if you picked DCIM as From and the screenshots did not come along, select them by hand in the Screenshots folder and copy them the same way.</p>
+
+  <h2>Method 3: the cloud trap — check Google Photos before you trust it</h2>
+  <p>Before you trust the cloud with screenshots, check what it actually holds. Google Photos backs up the camera folder, and the Screenshots folder is a separate toggle under Photos settings → Backup → Back up device folders — and whether that toggle is on varies by phone and app version. Reminari's guide to saving screenshots says other device folders, Screenshots included, "often need switching on by hand"; MakeUseOf's guide to the same settings says that on the version it tested, Screenshots is "by default, already selected". Both cannot be the rule for your phone, so do not assume either one: open photos.google.com on a computer and look for the screenshots. If they are not there, the cloud does not hold them at all — and a backup you never switched on is not a backup.</p>
+  <p>Even when the toggle is on, the cloud is the wrong place for screenshots twice over. First, every screenshot uploads and counts against your Google Account storage — MakeUseOf's point is that screenshots eat the storage you would rather save for actual photos, and the 15 GB shared across Gmail, Drive and Photos goes faster than you think when every screen grab syncs the moment you take it. Second, the quality setting matters: Google's own help page says Storage saver uploads "may be compressed into a different image format, like a .jpg" — and a screenshot saved as a JPEG is no longer the pixel-exact original. A receipt or a QR code survives compression well enough to read, but the file is no longer the file you took, and the original is gone from the cloud copy. Original-quality upload keeps the file, but it counts against the same storage quota, and a folder of screenshots that fits on a small USB stick can cost a monthly subscription in the cloud.</p>
+  <p>The cloud is not the enemy — it is a fine second copy once the originals are safe on a drive you hold. The order matters: copy to the USB drive first, verify the .png files on the drive, and only then let the cloud hold whatever it holds. And never delete the phone originals on the strength of a cloud badge alone. Check the drive copy, then delete — that order is what keeps your screenshots safe.</p>
+
+  <h2>The 5 GB free cap, and why it barely bites for screenshots</h2>
+  <p>SnapDisk's free version backs up manually up to 5 GB per run — verified in the repo as FREE_BACKUP_BYTES_LIMIT, 5 GiB — and runs can be repeated. Files already copied are never copied twice, so a second run picks up where the first stopped. For screenshots, 5 GB goes a very long way: a screenshot is a few hundred kilobytes to a couple of megabytes, so a thousand screenshots is roughly half a gigabyte to two gigabytes — a whole screenshot library in a single free run, with room for the camera photos beside it. Pro is a one-time $9.99 purchase (product id pro_unlock, verified in the repo's billing code) that auto-starts the backup when a disk is connected and removes the size limit, so a whole season copies in one run.</p>
+  <p>The cap is per run, not per library, and that distinction barely matters for screenshots: the free version can finish almost any screenshot library in one run without paying. If you screenshot everything, Pro is still the honest buy: one tap, one run, no cap. Either way, the count to do before you start is the library size: add up the screenshots, divide by 5 GB, and that is how many free runs the library needs. Do the arithmetic before you plug the drive in, not halfway through the copy.</p>
+  <p>One more size note: a file of 4 GB or more on a FAT32 drive is skipped with its reason and the job continues — verified in the repo's BackupService. A single screenshot is never 4 GB or more, so this never fires for a .png. What it does catch is the long 4K video that sits next to your screenshots in the same folder — that file is skipped and listed, the screenshots around it copy normally, and the fix is the same exFAT format recommended above.</p>
+
+  <h2>What this does not do</h2>
+  <ul>
+    <li><strong>It does not convert your screenshots — to anything.</strong> SnapDisk copies the .png exactly as it is. Converting it to a JPEG, or to any other format, is your editor's or your computer's job, on a copy — never on the only original. The backup's job is to keep the original intact.</li>
+    <li><strong>It does not copy screenshots only on the default run.</strong> The default run copies the whole library, oldest-first, screenshots mixed in with camera photos in date order. Screenshots only is the Pictures/Screenshots pick in Method 1.</li>
+    <li><strong>It does not keep a screenshot's context.</strong> A screenshot of a boarding pass is a picture of the pass, not the pass itself — the QR code inside it still scans, but the booking behind it lives in the app, not in the image. Back up the app's own data separately if the booking matters.</li>
+    <li><strong>It does not read or index your screenshots.</strong> There is no OCR and no search inside the images — SnapDisk copies files, and finding a receipt among a thousand .png files is your file manager's job, on the drive, after the copy.</li>
+    <li><strong>It does not back up anything but photos and videos.</strong> No app data, no messages, no system state — and no browser tabs, notes, or clipboard history. Those live in the app's own storage, not in the photo folders, and they need their own backup.</li>
+    <li><strong>It does not delete anything.</strong> SnapDisk only copies — the only delete calls in its source touch .part files, never your photos — so freeing space is a two-step flow you do yourself: copy to the drive, open a few .png files on the drive to check they arrived, then delete the originals from your phone. That flow is covered step by step in <a href="free-up-space-move-photos-to-usb.html">How to free up space by moving photos to a USB drive</a>.</li>
+    <li><strong>It does not promise the copy keeps running with the screen off under battery saver.</strong> No wake lock, no battery-saver handling in the repo, no screenshot run ever tested — stated plainly above, not promised. Keep the phone awake for the run.</li>
+    <li><strong>It does not restore or view your photos.</strong> There is no in-app viewer and no restore feature — you open the copied .png files in a viewer or on your computer yourself. The <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive comparison</a> covers what the rivals add here, and what they charge for it.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Picking DCIM as the From folder and assuming the screenshots came along.</strong> On a Pixel or stock-Android phone they live in Pictures/Screenshots, outside the DCIM tree — a DCIM pick leaves every one of them behind, and the run still says done. Pick Pictures, or leave From unpicked.</li>
+    <li><strong>Assuming your screenshots are in Pictures/Screenshots without checking.</strong> Samsung saves them in DCIM/Screenshots by default. Look in the Files app first — the folder you pick depends on the phone you hold.</li>
+    <li><strong>Trusting Google Photos without checking the Screenshots toggle.</strong> Whether the folder backs up depends on the Back up device folders setting, which varies by phone and app version — one guide says it often needs switching on by hand, another says it is already selected by default. Check photos.google.com instead of assuming.</li>
+    <li><strong>Letting a cloud service recompress your originals.</strong> Google Photos "Storage saver" uploads may be compressed into a different image format, like a .jpg — Google's own words. A screenshot saved as a JPEG is no longer pixel-exact. Copy to the drive first.</li>
+    <li><strong>Sharing a screenshot when you meant to copy it.</strong> Messaging apps recompress images before sending, so the file that arrives is not the pixel-exact original. Copy in the Files app; Share hands the file to another app.</li>
+    <li><strong>Using Move instead of Copy in the Files app.</strong> Move deletes the originals as the copy goes — an interrupted Move leaves screenshots split between phone and drive with no record of which is which. Copy, verify, then delete.</li>
+    <li><strong>Formatting the drive NTFS.</strong> Most Android phones cannot open NTFS on their own. Use exFAT — DriveForge's guide is the format reference — and keep FAT32 only for a drive an older device must read.</li>
+    <li><strong>Buying a drive before counting the library.</strong> A thousand screenshots is roughly half a gigabyte to two gigabytes. Count first, then buy the size, and divide by 5 GB to know how many free runs the library needs.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you have confirmed the copy. Copy, open a few .png files on the drive, check the sizes match, then delete from the phone — never the other way round.</li>
+    <li><strong>Assuming the copy keeps running with the screen off.</strong> Unverified — no wake lock, no battery-saver handling. Keep the phone awake for the run or check it.</li>
+    <li><strong>Starting a multi-gigabyte copy on a nearly dead battery.</strong> One USB-C port holds the drive or the charger, not both — charge first, or use a powered hub with pass-through charging, which is standard USB-C behaviour but unverified with SnapDisk.</li>
+    <li><strong>Searching for the wrong thing.</strong> The pages the search returns are generic transfer guides that list the Screenshots folder as one row in a manual copy — none of them is a screenshot backup guide. Search for the screenshots, not the photos, and the gap is obvious.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> a screenshot is the paper trail of your phone — the copy has to be byte-for-byte, and the check has to be on the drive. Leave From unpicked, or pick Pictures — never DCIM alone — copy, open a few .png files on the drive, then delete. That order is what keeps your screenshots safe.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you would rather tap once than copy by hand, <a href="./">SnapDisk</a> copies your screenshots and camera photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. Leave From unpicked and the default run covers the whole phone, screenshots included — or pick Pictures/Screenshots for screenshots only — then tap Backup, and check the drive before you delete anything. See also: <a href="whatsapp-photos-to-usb.html">How to back up WhatsApp photos to USB from Android</a> for another folder outside DCIM, <a href="heic-photos-to-usb.html">How to back up HEIC photos to USB from Android</a> and <a href="raw-photos-to-usb.html">How to back up RAW photos to USB from Android</a> for the formats where the default route is the uncertain one, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a> for the general route, and <a href="free-up-space-move-photos-to-usb.html">How to free up space by moving photos to a USB drive</a> for the delete-after-verify flow.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
