@@ -1,3 +1,103 @@
+## WL-171 — Back up photos from a Chromebook to USB article, 139th how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #315 MERGED (merge commit 62ed0af, merged
+  2026-11-21T02:06:15Z; PR head 43e0193, CI run 44853477824
+  build pass, 1m17s; post-merge main runs Android PR
+  44853998762 + pages 44853998280 success).
+  Pre-merge readback on head 43e0193 (verified by the
+  supervisor from the branch source): feed 139 items / 139
+  closes incl. Chromebook, sitemap 143 URLs incl.
+  Chromebook, blog index 139 BlogPosting (JSON-LD parses,
+  Blog node blogPost array) + 139 post blocks, title 53
+  chars, meta 128 chars, JSON-LD parses (Article + FAQPage
+  4 Qs + BreadcrumbList, datePublished 2026-11-20), TL;DR
+  present, 1 script tag, 1 H1, 10 H2s, Query 138 row
+  present, only docs/ + tool/growth changed (7 files,
+  +450/−0).
+  Query 138 scored honestly from live evidence (no
+  "no guide exists" claim): the exact query returns five
+  real Chromebook guides — asurion.com "How to back up
+  and restore your Chromebook" (external-storage backup
+  is one line: Files app copy), chromeready.com ×2
+  (Google Photos export as ZIP; plain Files copy),
+  itigic.com "How to Copy Files From a Chromebook to a
+  USB Drive" (updated Nov 8, 2026), howtogeek.com
+  (Sep 7, 2020) — all manual select-copy-paste. None of
+  them is a whole-library one-tap Chromebook-to-USB
+  backup, and none mentions SnapDisk; the gap stands on
+  that angle. Supervisor's fresh quoted re-search
+  returned the same five, same conclusion. Follow-ups
+  confirm the platform facts: Google Play Help (Android
+  apps on only some Chromebooks; some apps don't work
+  on some models) and thedroidguy (Android apps can't
+  see a USB drive until Settings → System preferences →
+  Storage management → External storage preference is
+  on).
+  New docs/chromebook-photos-to-usb.html ("Back up photos
+  from a Chromebook to USB (no computer)"), following the
+  WL-54–WL-170 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot,
+  with an honest caption: screenshot is from a phone, not a
+  Chromebook — Chromebook layout unverified, stated in
+  caption, dek, and FAQ). Title 53 chars, meta 128 chars.
+  Dek states exactly 13 caveats, verified by count
+  (supervisor recount of the semicolon-separated dek
+  clauses = 13).
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full Chromebook section: heading + URL +
+  dek + TL;DR + Search + Method 1 + What this does not do
+  + What to avoid — verified complete), feed.xml updated;
+  searches.md Query 138 row added.
+  Key finding: a Chromebook is not an Android phone with a
+  keyboard for backup — Android apps run only on some
+  Chromebooks (Google Play Help), photos live in three
+  places at once (Downloads, Drive, Google Photos cloud),
+  and Android apps can't see a USB drive until the
+  External storage preference is turned on. SnapDisk has
+  never been run on a Chromebook: SAF picker reach to a
+  USB drive and connect-notification firing are both
+  unverified, stated in dek + FAQ + Method 1; Pro's
+  auto-start is treated as unverified on ChromeOS (Pro
+  buys unlimited size, tap still starts the copy).
+  SnapDisk behaviour verified from the repo itself:
+  minSdk 24 (build.gradle.kts:12, Android 7.0 floor),
+  Pro $9.99 auto-backup on connect, free 5 GB/run with
+  resume (skip-if-exists + .part resume + size
+  verification), FAT32 >=4 GB files skipped and listed,
+  From-folder picker is OpenDocumentTree SAF
+  (MainActivity.kt:62,71), oldest-first
+  (BackupEngine.sortOldestFirst).
+  Link verification: 7 outbound links — supervisor
+  re-checked all 7 curl 200 (asurion, chromeready ×2,
+  itigic, support.google.com, thedroidguy, howtogeek —
+  the lead had howtogeek as curl 000, verified live via
+  browser.open; supervisor's curl now returns 200);
+  own canonical 503 pre-merge (expected; confirmed live
+  post-merge by the supervisor).
+  Live fetch verified by the supervisor:
+  chromebook-photos-to-usb.html 200 (45,751 B, correct
+  title), feed.xml 139 items live incl. Chromebook.
+  Lead's run record: four recoveries, all caught by
+  checks, none shipped — (1) first worktree add landed
+  nested at repo/repo-wl171, removed and re-added;
+  (2) feed splice dropped the tablet item's </item>,
+  caught by the parse check, fixed; (3) blog-JSON and
+  sitemap splices duplicated the tablet entry, caught
+  by count checks (144 URLs, JSON parse error), fixed
+  to 143 URLs / 139 BlogPosting; (4) one verification
+  heredoc ran from the wrong cwd, re-run correctly.
+  Supervisor note: my own first blog check repeated the
+  WL-170 check-script mistake (looked for top-level
+  BlogPosting; entries live in the Blog node's blogPost
+  array) — re-ran with the right path, 139 confirmed.
+  Branch wl-171-chromebook deleted (404 verified),
+  lead worktree removed.
+  WL-172 fallback: phone-storage-full scenario —
+  back up photos to USB when the phone's storage is full
+  (no computer) (unverified).
+
 ## WL-170 — Back up photos from a tablet to USB article, 138th how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
