@@ -13840,6 +13840,160 @@ demand is read off competitor install velocity instead (see
   drafted Nov 20, 2026 (WL-171, 139th how-to):
   docs/chromebook-photos-to-usb.html — branch wl-171-chromebook.
 
+### 139. "back up photos to USB when phone's storage is full (no computer)" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return real storage-full guides —
+  seven of them — zoriumdaily.com, mobiletrans.wondershare.com,
+  innoparkit.com, thetechedvocate.org, gigagone.com, fonelab.com, and
+  eyefi.com — but all seven are manual select-copy-paste, cloud backup,
+  or general clean-up guides, none of them is a whole-library one-tap
+  backup framed for the storage-full moment, and none of them mentions
+  SnapDisk. Our own free-up-space article is the adjacent ground: it
+  covers moving photos to USB to free space on a phone that still works,
+  and this article is the emergency version — the phone is already full,
+  the camera will not save, apps will not install, and the file-manager
+  move can fail halfway.
+- Current top results (scored Nov 20, 2026, live web search):
+  zoriumdaily.com, "Phone Storage Full? Free Up Space Without Deleting
+  Your Photos"
+  (https://zoriumdaily.com/free-up-phone-storage-without-deleting-photos/
+  — the closest guide to this article's moment: it starts from the
+  warning itself — one day the phone works fine, the next it says
+  storage full and you cannot take a photo, record a video, or update an
+  app — and it walks through finding what is filling the phone, backing
+  photos up before deleting anything, and clearing only safe items. Its
+  backup routes are Google Photos, iCloud Photos, or a computer copy,
+  and its rule runs through the whole guide: back up first, delete
+  second, never the other way round. A real storage-full guide — but its
+  USB route is a computer copy, not a phone-to-drive copy, and it says
+  nothing about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched
+  page);
+  mobiletrans.wondershare.com, "Back Up a Phone to USB Without Cloud
+  Storage"
+  (https://mobiletrans.wondershare.com/android-backup/how-to-back-up-a-phone-to-an-external-usb-drive-without-cloud-storage.html
+  — the closest guide to this article's method: connect the phone
+  through a USB-OTG adapter, or copy phone files to a computer first,
+  then move them to the drive. Photos, videos, documents, downloads,
+  and selected folders transfer reliably. Its fixes are the ones to
+  keep: copied files can appear incomplete after a transfer
+  interruption, so repeat the transfer in smaller batches. A real
+  phone-to-USB guide — but a manual folder copy in the Files app, with a
+  computer as the fallback, and it says nothing about the storage-full
+  moment or about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched
+  page);
+  innoparkit.com, "How to Free Up Storage on Android: 10 Ways to Reclaim
+  Space Fast"
+  (https://www.innoparkit.com/how-to-free-up-storage-android-reclaim-space-november-7-2026
+  — the ten-way clean-up: check what is using storage, clear app cache,
+  back up photos and videos then delete them, delete downloads and old
+  media, uninstall unused apps, use Files by Google's Clean feature,
+  move files to an SD card or a computer. Its photo step is Google
+  Photos backup plus the Free up space option, and its USB line is one
+  sentence — a USB-C flash drive also works on most modern Android
+  phones. A real storage-full guide — but a list of ten clean-up moves,
+  not a photo backup to USB, and it says nothing about SnapDisk; curl
+  200, 0 SnapDisk mentions in the fetched page);
+  thetechedvocate.org, "How to fix Android storage full"
+  (https://www.thetechedvocate.org/how-to-fix-android-storage-full/
+  — the seven-tip clean-up: check storage usage, clear app cache and
+  data, uninstall unused apps, move files to the cloud, use an SD card,
+  delete old files and backups, and a factory reset as a last resort.
+  Its storage-full description is the one this article borrows: the
+  message prevents you from taking photos, installing new apps, or
+  updating existing ones. A real storage-full guide — but its photo
+  route is the cloud, its USB route is an SD card, and it says nothing
+  about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page);
+  gigagone.com, "How to Back Up an Android Phone"
+  (https://gigagone.com/back-up-android-phone/
+  — the whole-phone backup: turn on Google device backup in Settings,
+  turn on Google Photos backup for the camera roll, and copy local
+  folders to a computer over USB in File Transfer mode. Its rule is the
+  one to keep: never use Google Photos' Free up space option until you
+  have verified at photos.google.com that the photos are already backed
+  up. A real Android backup guide — but its USB route needs a computer
+  in between, its photo route is the cloud, and it says nothing about
+  the storage-full moment or about SnapDisk; curl 200, 0 SnapDisk
+  mentions in the fetched page);
+  fonelab.com, "How to Transfer Photos from Android to Flash Drive in 3
+  Easy Ways"
+  (https://www.fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html
+  — the three-way transfer: an OTG adapter plus the Files app, a PC
+  with File Explorer, or Samsung Smart Switch. Its framing is the
+  storage-full framing — too many photos on the phone's storage,
+  transfer them to a flash drive to free up space — and its OTG steps
+  are the manual pattern: plug the drive in, open the Files app, select
+  the photos, Move or Copy, choose the flash drive. A real
+  phone-to-flash-drive guide — but a manual select-copy-paste, one of
+  its three ways needs a PC, and it says nothing about SnapDisk; curl
+  200, 0 SnapDisk mentions in the fetched page);
+  eyefi.com, "What's the best way to move photos from my Android to a
+  USB drive?"
+  (https://eyefi.com/t/whats-the-best-way-to-move-photos-from-my-android-to-a-usb-drive/1113
+  — the forum thread: a user whose phone storage is almost full asks
+  how to save pictures externally to free up space, and the answer is
+  the nine-step manual route — check OTG support, plug the drive in,
+  open a file manager, find DCIM, long-press, Copy or Move, paste on
+  the drive, eject. A real storage-full question with a real answer —
+  but a forum thread, not a guide, and its answer is the same manual
+  select-copy-paste, with nothing about SnapDisk; curl 200, 0 SnapDisk
+  mentions in the fetched page).
+  Our own adjacent article, named because it is the closest thing to
+  this one: SnapDisk, "How to free up space by moving photos to a USB
+  drive" (https://dzianisv.github.io/photo-backup/free-up-space-move-photos-to-usb.html
+  — copy the photos to the drive, open a few on the drive to check they
+  arrived, then delete the originals from the phone. Its angle is
+  housekeeping — freeing space on a phone that still works — and its
+  order is copy, verify, delete. This article is the emergency version
+  of the same job: the phone is already full, the camera will not save,
+  apps will not install, and the file-manager move can fail halfway;
+  curl 200).
+- A full phone is not a phone with a lot of photos — it is a phone that
+  has stopped working properly: the camera will not save the next photo
+  or record the next video, apps will not install or update, downloads
+  and messages stop landing, and the phone itself slows down. The
+  zoriumdaily guide opens on exactly this — one day the phone works
+  fine, the next it says storage full and you cannot take a photo,
+  record a video, or update an app — and adds the threshold: a phone
+  with less than about one or two gigabytes free will often struggle to
+  update apps or save new photos, even before it shows a warning. That
+  threshold is the catch-22 of the whole article: the app that would
+  fix the problem needs the space the problem took away, so Method 4
+  frees a sliver first — clear an app cache (the innoparkit and
+  thetechedvocate guides both list it as the first safe step), use
+  Files by Google's Clean feature, or delete one big thing already
+  backed up elsewhere — then installs SnapDisk, and the drive does the
+  heavy lifting. The file-manager move is riskier on a full phone than
+  on a working one: the Files app's Move option copies and then deletes
+  the originals in one step, and the mobiletrans guide warns that
+  copied files can appear incomplete after a transfer interruption — a
+  photo deleted from the phone halfway through a failed move is gone
+  from both places. The cloud detour (Method 3) is slower and has its
+  own full-storage trap: Google Photos backup needs Wi-Fi, upload time,
+  and free space in the Google account — if the account is full, nothing
+  uploads — and the gigagone guide's rule stands: never use Free up
+  space until you have verified at photos.google.com that the photos
+  are actually backed up. SnapDisk needs Android 7.0 or later (minSdk
+  24 in the repo) and is not on Google Play yet, so install the v0.1.2
+  APK from GitHub. The free version backs up manually up to 5 GB per
+  run, picking up where it stopped past the cap — on a full phone's
+  library that means several taps, which is the case Pro is for; Pro is
+  a one-time $9.99 purchase that auto-starts the backup on connect and
+  removes the size limit. The screenshot in the article is from
+  SnapDisk on a phone — the same settings screen the reader will see.
+  The From folder is a picker, not a fixed path — tap it, browse to the
+  phone's storage, and choose the folder that holds the photos, which
+  the picker reaches because it is the system folder picker, verified
+  in the repo as OpenDocumentTree. Drives formatted FAT32 cannot hold a
+  single file over 4 GB — SnapDisk skips those files and lists them
+  instead of failing the whole backup, per the repo README — so use
+  exFAT. SnapDisk copies, it never deletes. This is the sixth article
+  in the series about a situation instead of a phone brand — the brand
+  series ran to 134 articles, and the broken-screen, switching-phones,
+  SD-card, tablet, and Chromebook articles were the first five.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 20, 2026 (WL-172, 140th how-to):
+  docs/storage-full-photos-to-usb.html — branch wl-172-storage-full.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
