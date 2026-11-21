@@ -1,3 +1,80 @@
+## WL-179 — Back up photos to USB before a flight article, 147th how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #331 MERGED (merge commit 44ceb2e, merged
+  2026-11-21T10:36:06Z; PR head a2b6a74, CI run 44894954925
+  build pass 1m18s; post-merge main runs Android PR 44895124241
+  + pages 44895123859 success on 44ceb2e).
+  Pre-merge readback on head a2b6a74 (verified by the
+  supervisor from the branch source): article 46,941 B, title
+  37 chars, meta 137 chars, 1 H1, 10 H2s, 1 script tag, TL;DR
+  present, JSON-LD parses (Article + FAQPage 4 Qs +
+  BreadcrumbList, datePublished 2026-11-21), feed 147 items
+  incl. flight, sitemap 151 URLs incl. flight, blog 147
+  BlogPosting incl. flight, Query 146 row present (146 "### "
+  rows, sequential 1–146), only docs/ + tool/growth changed
+  (7 files, +459/−0 vs main 410b313).
+  New docs/flight-photos-to-usb.html ("Back up photos to USB
+  before a flight"), following the WL-54–WL-178 article
+  template exactly (navy/cyan, TL;DR first, no JS, text-only,
+  reuses docs/screenshots-01-settings-defaults.png as the lead
+  shot, with an honest caption). Title 37 chars, meta 137 chars.
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full flight section), feed.xml updated;
+  searches.md Query 146 row added.
+  Query 146 scored honestly from live evidence: no "no guide
+  exists" claim. Named competitors: desnoulez.fr field backup,
+  PetaPixel "No Laptop? No Problem", brightideaphotography
+  computer-free backup, photographyaxis "11 Ways To BACKUP
+  PHOTOS Without Computer [While TRAVELING]" — all camera-card
+  → SSD via phone bridge / manual copy / travel-framed. Gap
+  stands only on the whole-library one-tap phone-to-USB backup
+  framed for the before-a-flight moment, and only because none
+  of the four mentions SnapDisk. WL-176 traveling article named
+  in-article as the general traveling guide (adjacent ground);
+  this one is specifically the flight moment (night-before /
+  at-the-gate backup, drive in carry-on vs checked bag, airport
+  security).
+  Key finding: the backup must COMPLETE and be verified on the
+  drive BEFORE boarding — a copy still running when the plane
+  takes off is not a backup; keep the drive in a DIFFERENT bag
+  from the phone (checked bag can be lost); airport security
+  X-ray does not harm a USB drive, keep it accessible in the
+  tray; no Wi-Fi at the gate means cloud is not a fallback;
+  one USB-C port holds the drive OR the charger (charge first /
+  powered hub). Screen-off continuation under battery saver
+  UNVERIFIED (no WakeLock/Doze code), stated plainly in-article.
+  SnapDisk behaviour verified from the repo: minSdk 24, Pro
+  $9.99 auto-backup on connect + unlimited, free 5 GB/run with
+  resume (skip-if-exists + .part resume + size verification),
+  oldest-first DATE_TAKEN, copies never deletes, FAT32 >=4 GB
+  skipped and listed, From-picker OpenDocumentTree SAF,
+  dataSync foreground service 6h budget (WL-34).
+  Link verification this run (supervisor re-check): all 4
+  external URLs verified — desnoulez.fr 200, PetaPixel 200,
+  photographyaxis 200 (all 0 SnapDisk), brightideaphotography
+  403 curl (bot protection) verified live via browser fetch
+  (page crawled 2026-11-21 10:27 UTC), camera-card bridge
+  manual copy, no SnapDisk in fetched text; own canonical 404
+  pre-merge, confirmed live post-merge.
+  Lead's failed execs (both recovered, no effect): first git
+  commit exit 128 (no git identity in fresh clone — set
+  repo-local identity, then committed and pushed cleanly);
+  first feed.xml edit dropped closing </rss> (caught by XML
+  parse validation before commit, fixed; feed parses clean).
+  Lead's goal entry recorded on the timeline this run;
+  supervisor verified it on the timeline — the settle updates
+  it in place to live wording below.
+  Live fetch verified by the supervisor: flight article 200
+  (46,941 B, correct title), feed.xml 147 items live incl.
+  flight.
+  WL-180 fallback: another scenario shape (unverified) —
+  candidate before handing the phone in for repair.
+  Articles 146 → 147 (146 scored queries). Board: 0 open
+  issues, 0 open PRs. External-skills validation this run:
+  Installed 4/4 PASS, Current 4/4 PASS, zero drift, 16:27 fix
+  holds; Used 0/4 FAIL known standing gap.
+
 ## WL-178 — Back up photos to USB from a water-damaged phone (before it dies) article, 146th how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
