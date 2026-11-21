@@ -15752,6 +15752,188 @@ demand is read off competitor install velocity instead (see
   drafted Nov 21, 2026 (WL-183, 151st how-to):
   docs/child-photos-to-usb.html — branch wl-183-child.
 
+### 151. "back up photos from CMF Phone to USB flash drive without computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a CMF-specific
+  photo-backup guide at all, let alone a CMF-specific
+  automated whole-library backup with progress, Pause/Stop,
+  and resume — the top results are our own Nothing Phone
+  article, generic manual guides, a guided-app guide
+  (FotoSafe), a PC troubleshooting guide, and spec tables.
+- Current top results (scored Nov 21, 2026, live web search):
+  our own Nothing Phone article
+  (https://dzianisv.github.io/photo-backup/nothing-phone-photos-to-usb.html
+  — the top result for this query: the main Nothing Phone
+  models with the CMF Phone 1 named only as the OTG
+  exception to check — GSMArena lists its USB as Type-C
+  with no OTG, one comparison site lists OTG as not
+  supported, and another lists it as supported — and the
+  CMF Phone 2 Pro not covered at all. Adjacent ground, not
+  a CMF guide; live 200, verified this run);
+  YouTube video
+  (https://www.youtube.com/watch?v=PYcbV25CczI — generic
+  OTG + file manager walkthrough: OTG adapter, the phone's
+  built-in file manager, select photos in DCIM, Copy or
+  Move to the drive. Generic Android, not written for CMF;
+  surfaced in search this run);
+  askfilo.com guide
+  (https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432
+  — a generic Android-to-flash-drive guide: OTG adapter,
+  file manager, DCIM, select, Copy, paste to the drive, or
+  a computer as a middleman. Generic Android, not written
+  for CMF; curl 200, 0 SnapDisk mentions in the fetched
+  page);
+  FotoSafe guide
+  (fotosafe.weidisoft.net/en/guides/back-up-android-photos-
+  to-usb/ — a guided app backup, and the closest near-miss
+  in the results: connect the drive, select it in FotoSafe,
+  review the media, and start copying, with a preview and
+  automatic skipping of files already backed up. One run up
+  to 100 media files is free, then further runs need the
+  one-time Pro purchase. A real guided backup to a USB
+  drive — but generic Android, not written for CMF; curl
+  200, 0 SnapDisk mentions in the fetched page);
+  GroovyPost, "How to Transfer Photos from Android to a USB
+  Drive"
+  (groovypost.com/howto/transfer-photos-from-android-to-a-
+  usb-drive/ — a generic manual guide: copy to a PC over a
+  USB cable with MTP, or plug a USB-C dual drive straight
+  into the phone and copy photos across in the Files app by
+  hand. Generic Android, not written for CMF; curl 403,
+  browser-verified live via search this run);
+  eyefi.com forum thread
+  (https://eyefi.com/t/what-s-the-best-way-to-move-photos-from-my-android-phone-to-a-flash-drive/1121
+  — a forum answer with the same generic OTG-cable steps,
+  plus a cloud detour through Google Drive or Dropbox and
+  a computer. A forum thread, not a guide, and not written
+  for CMF; curl 200, 0 SnapDisk mentions in the fetched
+  page);
+  Technobezz, "Fix CMF Phone 2 Pro USB Not Recognized by
+  PC (10 Solutions)"
+  (https://www.technobezz.com/cmf-phone-2-not-connecting-to-pc-fix
+  — the only CMF-specific result in the top results, and
+  it is a troubleshooting guide, not a backup guide: check
+  the cable and port, restart both devices, select File
+  transfer / MTP mode in Settings > Connected devices >
+  USB, update the phone, update the PC drivers, enable USB
+  debugging, try another computer. Its USB route is a
+  cable to a PC, not a drive plugged into the phone — but
+  its first fixes (a charge-only cable, the wrong USB
+  mode) are the same reasons a drive would not mount; curl
+  403, browser-verified live this run; 0 SnapDisk
+  mentions);
+  spec tables, not guides: GSMArena CMF Phone 1 review
+  (https://www.gsmarena.com/nothing_cmf_phone_1-review-2719p3.php
+  — the Type-C port "offers USB Host/OTG support", curl
+  200, verified this run — which contradicts GSMArena's
+  own comparison table, recorded in Query 27, listing
+  plain USB Type-C with no OTG for the same phone);
+  Croma CMF Phone 1
+  (https://www.croma.com/nothing-cmf-phone-1-5g-8gb-ram-128gb-light-green-/p/308343
+  — OTG Support Yes, curl 403, browser-verified live this
+  run); MySmartPrice CMF Phone 2 Pro
+  (https://www.mysmartprice.com/mobile/cmf-phone-2-pro-256gb-msp619852
+  — USB OTG Support Yes, curl 403, browser-verified live
+  this run); GadgetsFocus CMF Phone 2 Pro
+  (https://gadgetsfocus.com/product/nothing-cmf-phone-2-pro/
+  — USB Type-C 2.0, OTG, curl 200, 0 SnapDisk mentions in
+  the fetched page). Spec tables confirm the port can host
+  a drive — they do not tell you how to back photos up to
+  one.
+  CMF specifics: CMF is Nothing's sub-brand — same company,
+  same Nothing OS, a cheaper phone with a swappable back
+  and an accessory point instead of the Glyph lights. Two
+  distinct models: CMF Phone 1 (2024, Dimensity 7300, 6 or
+  8 GB RAM, 128 GB storage, microSD up to 2 TB in a hybrid
+  slot, Android 14 with Nothing OS 2.6, USB Type-C 2.0,
+  5,000 mAh, 33 W charging) and CMF Phone 2 Pro (2025,
+  Dimensity 7300 Pro, 8 GB RAM, 128 or 256 GB storage,
+  microSD up to 2 TB in a hybrid slot, Android 15, USB
+  Type-C 2.0, 5,000 mAh, 33 W charging, triple rear camera
+  50 MP + 50 MP telephoto + 8 MP ultra-wide). OTG splits
+  them: the CMF Phone 2 Pro lists USB Type-C 2.0 with OTG
+  on every spec source checked (GadgetsFocus, PhoneSpecX,
+  Bajaj Finserv, Croma, MySmartPrice); the CMF Phone 1 is
+  disputed — GSMArena's review says it offers USB
+  Host/OTG support, and Croma, MySmartPrice, Beebom, and
+  Cashify all list OTG as supported, while GSMArena's
+  comparison table lists plain USB Type-C with no OTG and
+  phonebunch lists OTG as Not Supported — five sources say
+  yes, two say no, GSMArena disagreeing with itself, so
+  the article tells the reader to plug a drive in and look
+  for the mount notification on a CMF Phone 1 before
+  buying an adapter. Both phones are USB-C and both clear
+  Android 7.0 by a wide margin. Both take a microSD card
+  up to 2 TB in a hybrid slot — the one storage option the
+  main Nothing phones do not have — named in the article
+  as an adjacent route, never as a SnapDisk feature: a card
+  in the phone is storage, not a backup, and the slot holds
+  the card or a second SIM, not both. Nothing's own tools:
+  Google Photos (Photos settings > Backup, to Google's
+  cloud, 15 GB free) and Google backup (Settings > Google
+  > Backup, Back up by Google One) restore to a new phone
+  from the cloud; no Nothing-owned cloud backup for photos
+  exists; the gallery app depends on OS version — Google
+  Photos on Nothing OS 2.x, Nothing Gallery on Nothing OS
+  3.0+ — and Nothing Gallery is a viewer, not a backup
+  tool. Stock file manager is Files by Google
+  (com.google.android.apps.nbu.files — CMF phones ship
+  Google's apps rather than a Nothing-made file manager,
+  per the Nothing Community thread in Query 27).
+  The repo facts that carry the article, read from the code
+  this run: the copy runs as a foreground service
+  (dataSync type, BackupService.kt) — the mechanism
+  Android gives a copy that must keep running with the
+  screen off — but the repo holds no wake lock and no
+  battery-saver handling (BackupService.kt has no WakeLock
+  and no Doze reference, verified this run) and no CMF run
+  has ever been tested, so screen-off continuation under
+  battery saver is unverified and the article says so
+  instead of promising it. What IS verified: oldest-first
+  on MediaStore DATE_TAKEN (BackupEngine.kt,
+  PhotoQuery.kt); resume covers an interrupted copy —
+  finished files stay on the drive (skip-if-exists with
+  size verification), the file in flight keeps its .part
+  copy (byte-exact .part resume); on Android 15 and later
+  a dataSync foreground service gets 6 hours in 24 hours,
+  so a very long copy can be paused by Android itself, and
+  opening the app resets the timer (WL-34); the manifest
+  holds no INTERNET permission; SnapDisk copies, it never
+  deletes (delete() in BackupService.kt and BackupEngine.kt
+  touches only .part files). SnapDisk needs Android 7.0 or
+  later (minSdk 24 in the repo) and is not on Google Play
+  yet, so install the v0.1.2 APK from GitHub. The free
+  version backs up manually up to 5 GB per run, picking up
+  where it stopped past the cap — a phone that has never
+  been backed up often holds a library bigger than 5 GB,
+  so it takes several taps, and that is the case Pro is
+  for; Pro is a one-time $9.99 purchase that auto-starts
+  the backup on connect and removes the size limit. The
+  screenshot in the article is from SnapDisk on a phone —
+  the same settings screen the reader will see. The From
+  folder is a picker, not a fixed path — tap it, browse to
+  the phone's storage, and choose the folder that holds the
+  photos, which the picker reaches because it is the system
+  folder picker, verified in the repo as OpenDocumentTree
+  (MainActivity.kt). Drives formatted FAT32 cannot hold a
+  single file over 4 GB — SnapDisk skips those files and
+  lists them instead of failing the whole backup, per the
+  repo README — so use exFAT. Own canonical URL returned
+  503 on two checks this run (a control nonexistent slug
+  returned 404, so the 503 is specific to this slug, not
+  the site) — the article is live only after merge, and
+  the 503 is reported, not smoothed over. Title is the
+  39-char form "Back up CMF Phone photos to a USB drive"
+  — within the ≤53-char brief; the "(no computer)" form
+  is carried in the og:title, headline, and breadcrumb.
+  This is the 135th article in the brand series — the
+  Nothing Phone article (Query 27) is the adjacent ground
+  for this one, covering the main Nothing models and
+  naming the CMF Phone 1 only as the OTG exception.
+- Verdict: how-to article material, not a listing keyword.
+  Article drafted Nov 21, 2026 (WL-184, 152nd how-to):
+  docs/cmf-phone-photos-to-usb.html — branch wl-184-cmf-phone.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
