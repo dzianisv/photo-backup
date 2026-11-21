@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up photos from an SD card to USB (no computer)</title>
+<meta name="description" content="Back up photos from your phone's SD card to a USB drive in one tap — no computer, no upload, no account. Whole card, oldest-first.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/sd-card-photos-to-usb.html">
+<meta property="og:title" content="Back up photos from an SD card to USB (no computer)">
+<meta property="og:description" content="Back up photos from your phone's SD card to a USB drive in one tap — no computer, no upload, no account. Whole card, oldest-first.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/sd-card-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/sd-card-photos-to-usb.html#article",
+      "headline": "Back up photos from an SD card to USB (no computer)",
+      "description": "Back up photos from your phone's SD card to a USB drive in one tap — no computer, no upload, no account. Whole card, oldest-first.",
+      "datePublished": "2026-11-20",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": [
+          "https://github.com/dzianisv"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/sd-card-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/sd-card-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up photos from an SD card to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — the phone is the computer here. If the card is the microSD card in your Android phone, point SnapDisk's From picker at the card's folder, plug the USB drive in, tap Backup, and the whole card copies oldest-first to the drive in the background, no computer, no upload, no account. If the card is a camera's full-size SD card, plug it into a card reader, plug the reader into the phone — through a powered hub if the drive is connected at the same time — and copy with the Files app, or point SnapDisk's From picker at the reader. SnapDisk needs Android 7.0 or later and is not on Google Play yet, so install the v0.1.2 APK from the GitHub release page."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does SnapDisk back up photos stored on the microSD card?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. SnapDisk's From folder is a picker, not a fixed path: tap it, browse to the card, and choose the card's DCIM folder — or whatever folder on the card holds the photos. The picker is the system folder picker (OpenDocumentTree in MainActivity.kt), so it reaches removable storage, not just internal storage. The defaults are From /sdcard/DCIM and To /disk/DCIM; the card is the one change you make. Free version: manual backup, up to 5 GB per run, and running it again past the cap picks up where it stopped. Pro is a one-time $9.99 purchase: auto-backup on connect and unlimited size."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my phone has no SD card slot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Then the phone's-card route does not apply — most high-end phones no longer take a card — but the camera-card route still works: a full-size SD card in a USB card reader, plugged into the phone, with the USB drive on a powered hub beside it, and the copy done in the Files app or with SnapDisk's From picker pointed at the reader. Your phone's own photos live in internal storage in that case, so back those up with the generic route instead. The hub matters because one USB port holds either the reader or the drive, not both."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the phone's SD card the same as a camera SD card?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — same family, different job. The phone's card is a microSD card sitting in the phone's slot, holding photos the phone itself took or saved. A camera's card is usually a full-size SD card (or CFexpress) sitting in the camera, holding RAW or JPEG files the camera shot. This article covers the phone's card first, then the camera's card: the phone's card backs up with one tap from inside the phone, while the camera's card needs a reader and, for a direct card-to-drive copy, a powered hub. Every existing guide for this query covers only the camera card, by hand, with the phone as a bridge."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/sd-card-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up photos from an SD card to USB (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/sd-card-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up photos from an SD card to USB (no computer)</h1>
+  <p class="dek">Your photos may live on a card, not in the phone — on the microSD card in the phone&#x27;s slot, or on the full-size SD card in your camera. Either way the copy to a USB drive can be made with the phone alone, no computer — but the two cards are not the same job, and the guides that already exist only cover one of them. Fourteen honest caveats up front: the exact query DOES return real guides — five of them — brightideaphotography.com, desnoulez.fr, petapixel.com, Ask Tim Grey, and goldenlenstraveler.com; all five are about a camera&#x27;s memory card copied to an SSD with the phone as a bridge, by hand in the Files app; none of them is about the phone&#x27;s own microSD card; none of them is a whole-library one-tap backup; and none of them mentions SnapDisk — that angle is the gap this article fills; &quot;SD card&quot; means two different things here — the microSD card in your phone and the full-size SD card in your camera — and this article covers the phone&#x27;s card first, then the camera&#x27;s card; SnapDisk needs Android 7.0 or later — minSdk 24 in the repo — and it is not on Google Play yet, so install the v0.1.2 APK from GitHub; the free version backs up manually up to 5 GB per run — run it again past the cap and it picks up where it stopped, because files already copied are never copied twice — and Pro is a one-time $9.99 purchase that auto-starts the backup on connect and removes the size limit; the From folder is a picker, not a fixed path — tap it, browse to the card, and choose the card&#x27;s DCIM folder, which the picker reaches because it is the system folder picker, verified in the repo as OpenDocumentTree; drives formatted FAT32 cannot hold a single file over 4 GB — SnapDisk skips those files and lists them instead of failing the whole backup, per the repo README — so use exFAT, which the bridge guides recommend too; one USB port holds either the card reader or the drive, not both — copying straight from card to drive needs a powered hub, or two steps through the phone&#x27;s storage; SnapDisk copies, it never deletes — the card stays a second copy until you have opened photos on the drive and checked them; an iPhone has no microSD slot, so the phone&#x27;s-card route is Android only, and the camera-card route on iPhone is the Files app, not SnapDisk; and a card formatted by a camera may use a folder layout other than DCIM — check the card&#x27;s folders before picking, and pick the folder that actually holds the photos. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 20, 2026 · 9 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> If the card is the microSD card in your Android phone, point SnapDisk&#x27;s From picker at the card&#x27;s folder, plug the USB drive in, tap Backup, and the whole card copies oldest-first to the drive in the background — with real progress, Pause and Stop, and resume where it stopped if you unplug — no computer, no upload, no account. If the card is a camera&#x27;s SD card, it needs a reader and, for a direct card-to-drive copy, a powered hub — that is the route every existing guide describes, by hand in the Files app — and SnapDisk can still do the one-tap version once the reader is plugged in, with the From picker pointed at it. Either way, open a few photos on the drive before you trust the copy, and keep the card until you have. The five guides this query already returns are all camera-card-to-SSD via a phone bridge, so this article is not the first guide to SD-card backup — but none of them covers the phone&#x27;s own card, and none of them is a one-tap whole-library backup, which is the gap this article fills, as of November 20, 2026.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search &quot;back up photos from SD card to USB drive without computer&quot; and five results come back — and, to be honest, all five are real guides. What none of them does is back up the phone&#x27;s own microSD card to a USB drive in one tap. The exact query returned five results:</p>
+  <ul>
+    <li><strong>brightideaphotography.com, &quot;Back Up SD Cards Without a Laptop: Phone or iPad to SSD&quot;</strong> (<a href="https://brightideaphotography.com/computer-free-backup/">Back Up SD Cards Without a Laptop: Phone or iPad to SSD | brightideaphotography.com</a>) — a video guide from Tony Photo Pilot: copy your camera&#x27;s memory card to an external drive using just your phone or tablet. The simple setup is a card reader and a phone: open the Files app, select the photos on the card, tap Copy, and paste them into the phone&#x27;s internal storage — then unplug the reader, plug the drive in, and copy them onward to the drive. The better setup is a powered USB-C hub with a built-in SD slot and a portable SSD, copying straight from the card to the drive without filling up the phone&#x27;s storage — and its warning is worth keeping: the phone&#x27;s internal storage becomes the limit in the simple setup, and a big shoot will not fit. A real guide — but it is a camera card, a manual Files-app copy, and it says nothing about the phone&#x27;s own microSD card or about SnapDisk.</li>
+    <li><strong>desnoulez.fr, &quot;How to back up camera photos or SD Card without a laptop&quot;</strong> (<a href="https://www.desnoulez.fr/en/how-to-back-up-camera-photos-while-traveling-no-laptop-needed/">How to back up camera photos or SD Card without a laptop | desnoulez.fr</a>) — use a smartphone or tablet as a bridge between an SD or CFexpress card and an external SSD via a USB hub: connect the hub, power it with a charger or power bank, insert the card, connect the SSD, then open the Files app and copy from the card to the drive. On Android the same steps run in the file manager — Google Files or the maker&#x27;s file manager — navigate to the SD card, select the folder, tap Copy, navigate to the SSD, tap Paste. This guide was featured on PetaPixel on May 11, 2025. A real guide — but it is a camera card, a manual copy, and it says nothing about the phone&#x27;s own microSD card or about SnapDisk.</li>
+    <li><strong>petapixel.com, &quot;No Laptop? No Problem: How to Back Up Photos in the Field With Your Smartphone&quot; (May 11, 2025)</strong> (<a href="https://petapixel.com/2025/05/11/no-laptop-no-problem-how-to-back-up-photos-in-the-field-with-your-smartphone/">No Laptop? No Problem: How to Back Up Photos in the Field With Your Smartphone | petapixel.com</a>) — the field-backup guide: a smartphone, a USB hub, a card reader and an SSD, no laptop, no cloud. Full-resolution RAW or JPEG files copied directly from the memory card (SD or CFexpress) to a solid-state drive using a USB hub connected to the phone — connect the hub, power it, insert the card, plug in the SSD, and use the phone&#x27;s file manager to copy from the card to the SSD. Its discipline is the three-copy rule: one card in the camera, one card on your person, one SSD in the checked bag — all made without opening a laptop. A real guide — but it is a camera card, a manual copy, and it says nothing about the phone&#x27;s own microSD card or about SnapDisk.</li>
+    <li><strong>Ask Tim Grey, &quot;Media Card Direct to Hard Drive&quot; (July 3, 2023)</strong> (<a href="https://myemail.constantcontact.com/Ask-Tim-Grey---Media-Card-Direct-to-Hard-Drive---July-3--2023.html?soid=1103416365862&amp;aid=ED-Ni1oKHys">Ask Tim Grey — Media Card Direct to Hard Drive — July 3, 2023</a>) — the oldest answer in the results, and the one that names the dead end first: the purpose-built drives that used to copy a card straight to themselves have largely been discontinued. What is left is a smartphone or tablet as the intermediary: an adapter to read the card, copy the photos to the mobile device, then a USB adapter to a bus-powered external hard drive. It also names two gadgets of its own — the NewQ FileHub, a device with an SD slot that takes an external hard drive over USB, and the SanDisk iXpand flash drive for iPhone, which has both a Lightning connector and a USB connector. A real guide — but it is a camera card, a manual two-step copy, and it says nothing about the phone&#x27;s own microSD card or about SnapDisk.</li>
+    <li><strong>goldenlenstraveler.com, &quot;How to Back up Photos While Traveling Without a Laptop&quot;</strong> (<a href="https://goldenlenstraveler.com/how-to-back-up-photos-while-traveling-without-a-laptop/">How to Back up Photos While Traveling Without a Laptop | goldenlenstraveler.com</a>) — the travel version of the same workflow: a portable SSD formatted in exFAT on a USB-C OTG adapter, an SD card reader for the camera&#x27;s card format, a powered USB-C hub to connect everything at once, and the phone&#x27;s Files app to copy from the card reader directly onto the external drive after each shoot. Its habits are the ones to steal even if you use an app: back up daily or after every shoot, and always safely eject the drive before disconnecting, because skipping that step risks data corruption. A real guide — but it is a camera card, a manual copy, and it says nothing about the phone&#x27;s own microSD card or about SnapDisk.</li>
+  </ul>
+  <p>So the gap is narrow and honest: the camera-card bridge is well covered, five times over, and every one of those guides is a manual copy. What is missing is the phone&#x27;s own card — the microSD card in the phone&#x27;s slot, holding the photos the phone itself took — backed up to a USB drive in one tap, whole-library, with progress and resume. That is Method 1. The camera card gets Methods 3 and 4, because the bridge guides already describe the manual version and the one-tap version is the only thing left to add.</p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li>For the phone&#x27;s card: an Android phone with a microSD slot and the card in it — most budget and mid-range Android phones still have one; most high-end phones no longer do, per Android Authority, so check the slot before you start. If there is no slot, skip to Method 5.</li>
+    <li>For the camera&#x27;s card: the card out of the camera, and a card reader that matches it — SD, microSD in an adapter, or CFexpress. The brightideaphotography guide&#x27;s warning applies here: match the reader to the card, because a slow reader becomes the bottleneck for a fast card.</li>
+    <li>A USB drive with enough free space for the whole card, including videos. If the card holds more than the drive, copy the folder you care about most first — or buy a bigger drive before you start, not during the copy.</li>
+    <li>An exFAT drive if the phone supports it — exFAT is what every bridge guide recommends, it works on iPhone and most current Android phones, and it has no 4 GB single-file limit. A drive formatted FAT32 cannot hold a single file over 4 GB, so a very long video will be skipped and listed, not copied — and reformatting erases the drive, so copy existing files elsewhere first.</li>
+    <li>For a direct card-to-drive copy: a powered USB-C hub with an SD slot (or a spare port for the reader) and a power source — a PD wall adapter at home, a PD power bank in the field. One USB port holds either the reader or the drive, not both, and the hub is what lets them share the phone.</li>
+    <li>For an Android phone: a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter. Most modern Android phones support OTG; if the phone does not see the drive, try a different adapter — and on some phones the OTG setting has to be switched on first, per the brightideaphotography guide.</li>
+    <li>Time to let the copy finish, and time to check it — the backup is only a backup once you have opened a few photos on the drive. Do not delete anything from the card until the check is done.</li>
+    <li>What you should not buy: do not buy a drive with no space to grow into — the card will keep filling up — and do not buy a cable and call it an adapter — a charging cable connects the phone to a computer, which is the opposite direction.</li>
+  </ul>
+  <p>Two cards, two jobs. The phone&#x27;s microSD card is already in the phone, so the drive is the only thing you plug in. The camera&#x27;s card is in the camera, so the reader — and usually the hub — comes first. The methods below run in that order.</p>
+
+  <h2>Method 1: SnapDisk — the phone&#x27;s own microSD card, one tap</h2>
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk settings screen">
+    <figcaption>SnapDisk&#x27;s settings screen, showing the backup folder pickers. The From picker is where you point at the card — tap it, browse to the card, and choose its photo folder. Screenshot is from SnapDisk on a working Android phone, shown so you can see what the app looks like; your phone will show the same screens.</figcaption>
+  </figure>
+  <p>SnapDisk is the one-tap version, and it runs entirely inside the phone — the card never leaves its slot. It needs Android 7.0 or later, which is minSdk 24 in the repo, and it is not on Google Play yet, so install the v0.1.2 APK from the GitHub release page before you start.</p>
+  <ol>
+    <li>Open SnapDisk. It opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for photos stored in internal storage: From /sdcard/DCIM (your camera photos), To /disk/DCIM on the drive.</li>
+    <li>Point From at the card. Tap the From picker, browse to the card — it appears as removable storage in the picker — and choose the card&#x27;s DCIM folder, or whatever folder on the card holds the photos. The picker is the system folder picker (OpenDocumentTree in MainActivity.kt), so it reaches the card, not just internal storage. If the card was formatted by a camera, check its folders first: the photos may sit in a folder that is not called DCIM.</li>
+    <li>Check To. It should point at the drive — /disk/DCIM by default. If the drive is not plugged in yet, plug it in now and let the phone see it before you pick.</li>
+    <li>Plug the USB drive into the phone. SnapDisk offers a backup in a notification: &quot;External storage is connected. Backup photos?&quot; with Backup and Cancel.</li>
+    <li>Tap Backup in the notification. SnapDisk copies photos and videos oldest-first from the card to the drive, in the background, with live progress — percent, GB copied / total, speed, time left — and Pause and Stop.</li>
+    <li>Wait for the copy to finish. If you unplug the drive mid-copy, the backup pauses with the full error shown and resumes where it stopped when the drive is back — files already copied are never copied twice, per the repo README.</li>
+    <li>Open a few photos on the drive before doing anything else — older photos and a long video, not just the most recent ones. If they open at full quality, the copy is good. Keep the card as the second copy until you have checked — SnapDisk only copies, it never deletes.</li>
+  </ol>
+  <p>Free version: backs up manually, up to 5 GB per run — one notification tap — and running it again past the cap picks up where it stopped, because files already copied are never copied twice. Pro is a one-time $9.99 purchase — auto-backup on connect and unlimited size — and it is the hands-free route here: with Pro set up, plugging the drive in starts the backup with no tap at all, so the card backs itself up every time you plug the drive in. SnapDisk copies the original files as they are — no recompression, no resizing, no quality loss.</p>
+
+  <h2>Method 2: file manager — the phone&#x27;s card, by hand</h2>
+  <p>Same card, no app to install. This is the manual version of Method 1, and it is the route the bridge guides describe for the camera card, applied to the phone&#x27;s own card instead:</p>
+  <ol>
+    <li>Plug the USB drive into the phone — directly, if it is a USB-C drive, or through an OTG adapter for a regular USB drive.</li>
+    <li>Check the phone sees the drive. If nothing appears, the drive does not mount and this method does not work on that phone — check the OTG setting first, then try a different adapter.</li>
+    <li>Open the phone&#x27;s file manager and find the card — it appears as removable or external storage, separate from internal storage — then open its DCIM folder, or whatever folder holds the photos.</li>
+    <li>Select the photos and videos, copy them to the USB drive, and wait for the copy to finish. Copy, not Move: the file manager&#x27;s Move option copies and then deletes the originals in one step, and if the copy fails halfway, photos are already gone from the card.</li>
+    <li>Open a few photos on the drive before doing anything else — older photos and a long video, not just the most recent ones.</li>
+  </ol>
+  <p>The file-manager copy works on any Android phone with a card slot and USB OTG, with no version floor at all — it is the route when SnapDisk cannot install, because the phone runs below Android 7.0. What it does not give you is the one-tap backup: no oldest-first order, no progress bar with speed and ETA, no Pause and Stop, and no resume if you unplug mid-copy — and you have to repeat the whole selection next time the card fills up. The brightideaphotography guide&#x27;s warning about the Files app applies here too: the progress indicator is easy to miss — a small ring near the folder name — so look there before you assume the transfer stalled, or worse, unplug anything mid-copy.</p>
+
+  <h2>Method 3: the camera card through a powered hub</h2>
+  <p>This is the bridge guides&#x27; route, and it is the one to use when the card is a camera&#x27;s SD card and you want the copy to go straight from the card to the drive. It is the desnoulez and PetaPixel workflow, step for step:</p>
+  <ol>
+    <li>Connect the powered hub to the phone, and power the hub — a PD wall adapter at home, a PD power bank in the field. A powered hub gives the connected devices their own power, so the phone stays charged during a long transfer instead of draining, per the brightideaphotography guide.</li>
+    <li>Insert the camera&#x27;s card into the hub&#x27;s SD slot, or into a card reader plugged into the hub. Plug the SSD or USB drive into the hub as well.</li>
+    <li>Open the phone&#x27;s file manager. The card and the drive both appear — on iPhone in the Files app, on Android in Google Files or the maker&#x27;s file manager, which on Samsung can show the card and the drive side by side, per the brightideaphotography guide.</li>
+    <li>Select the photos and videos on the card, tap Copy, choose the drive as the destination, and tap Paste. The files go straight from the card to the drive without ever taking up space on the phone&#x27;s internal storage — that is the whole point of the hub, and it is what the simple two-step setup cannot do.</li>
+    <li>Check the copy the way the bridge guides insist on: the file count and total size look right, then open a few photos and a video directly from the backup drive and make sure they actually are readable. A copy is not much use if you discover later that something went wrong, per the brightideaphotography guide — and the PetaPixel guide&#x27;s version of the same rule is the three-copy habit: one card in the camera, one card on your person, one SSD in the checked bag.</li>
+    <li>Safely eject everything once done, per the goldenlenstraveler guide — skipping that step risks data corruption, and a corrupted backup on the road is the costly mistake this whole workflow exists to prevent.</li>
+  </ol>
+  <p>The one-tap version of this method is SnapDisk with the From picker pointed at the reader: plug the hub in, check the phone sees the card, then in SnapDisk tap the From picker, browse to the card reader, and choose the card&#x27;s folder — the picker is the system folder picker, so a mounted reader appears in it the same way the phone&#x27;s own card does — and tap Backup when the drive connects. The copy then runs oldest-first with progress, Pause and Stop, and resume — the parts the Files-app copy does not give you. If the reader does not mount, the file-manager copy in the steps above is the fallback, and the hub, the reader, or the card format is the thing to check.</p>
+
+  <h2>Method 4: a card reader straight into the phone</h2>
+  <p>No hub, no second port — just the card, a reader, and the phone. This is the brightideaphotography guide&#x27;s simple setup, and it is the right method when the card is small or the shoot was short:</p>
+  <ol>
+    <li>Put the camera&#x27;s card into the reader, and plug the reader into the phone — a USB-C reader plugs straight in, and a regular USB reader needs an OTG adapter. On iPhone 15 and newer the port is USB-C; on iPhone 14 and older it is Lightning, and you need Apple&#x27;s Lightning to USB 3 Camera Adapter instead, per the brightideaphotography guide.</li>
+    <li>Open the Files app and check the card is there. On iPhone, select the photos and videos, tap Copy, then browse to On My Phone, choose a folder — or create one — and tap Paste. The files copy from the card to the phone&#x27;s internal storage — that is the first step, and it is the step that needs free space on the phone.</li>
+    <li>On Android the same step runs in the file manager: navigate to the card, select the folder, tap Copy, navigate to the phone&#x27;s storage, and tap Paste.</li>
+    <li>Unplug the reader, plug the USB drive in, and copy the files from the phone&#x27;s storage to the drive. Only one port means two steps — card to phone, then phone to drive — and the phone&#x27;s free space is the limit on the first step, which is why the hub in Method 3 exists.</li>
+    <li>Open a few photos on the drive before doing anything else, then — and only then — delete the copy from the phone&#x27;s storage if you need the space back. Copy first, verify, then delete, per the brightideaphotography guide.</li>
+  </ol>
+  <p>The Ask Tim Grey version of this method is the same two steps with older hardware: an adapter to read the card, copy to the mobile device, then a USB adapter to a bus-powered external hard drive — and its gadget alternatives are still around if you want a single-purpose device instead of a phone: the NewQ FileHub, which takes an external hard drive over USB and has an SD slot of its own, or the SanDisk iXpand flash drive for iPhone, which has both a Lightning connector and a USB connector. Either way the rule is the same: the card is copied twice, and the phone&#x27;s storage is the middle step, so check the free space before you start.</p>
+
+  <h2>Method 5: when the phone has no card slot</h2>
+  <p>Most high-end phones no longer take a card, per Android Authority — so if your phone has no slot, the phone&#x27;s-card route in Methods 1 and 2 does not apply to you at all. What still works:</p>
+  <ul>
+    <li><strong>Your phone&#x27;s own photos live in internal storage.</strong> Back those up with the generic route instead — plug the drive in, tap Backup in SnapDisk, and the library copies oldest-first from /sdcard/DCIM. That is the same one-tap backup, with the From folder left on its default.</li>
+    <li><strong>A camera card still backs up through a reader.</strong> Methods 3 and 4 do not need a card slot in the phone — the card sits in the reader, and the reader plugs into the phone&#x27;s USB port. The phone is the bridge either way; the slot was never the point.</li>
+    <li><strong>A microSD card in an adapter counts as a camera card.</strong> A microSD card from another device — a drone, an action camera, a second phone — goes into a full-size SD adapter or a microSD reader, and from there Methods 3 and 4 apply exactly as written. Check the card&#x27;s folders before picking: a drone or action camera may not use DCIM.</li>
+    <li><strong>Do not buy a phone for its slot.</strong> If you are choosing a phone because you want card backup, the slot is one feature among many — and a phone without a slot still backs up its own photos to USB with one tap, and still reads a camera card through a reader. The slot only decides whether the card can stay inside the phone while it backs up.</li>
+  </ul>
+  <p>In short: the slot decides which method you use, not whether the backup happens. No slot means the generic route for the phone&#x27;s photos and the reader route for the camera&#x27;s card — and both of those are covered above.</p>
+
+  <h2>What this does not do</h2>
+  <ul>
+    <li><strong>Does not read a card the phone cannot mount.</strong> The phone has to see the card at all — in its slot, or in a reader it recognises. If the card does not appear in the file manager, neither the one-tap backup nor the manual copy works on it, and the card format, the reader, or the adapter is the thing to check. Format the drive as exFAT before a trip, per the bridge guides — iOS cannot write to an NTFS drive, and a drive formatted for Windows needs checking before you rely on it in the field.</li>
+    <li><strong>Does not run the phone&#x27;s-card route on an iPhone.</strong> An iPhone has no microSD slot, so there is no phone&#x27;s card to back up — and SnapDisk is Android only. On the iPhone side the camera-card route is the Files app, as Methods 3 and 4 describe, or a rival app.</li>
+    <li><strong>Does not install below Android 7.0.</strong> SnapDisk needs Android 7.0 or later — minSdk 24 in the repo — so on a phone running older Android, use Method 2 instead: the file-manager copy has no version floor.</li>
+    <li><strong>Does not copy files over 4 GB off a FAT32 drive.</strong> Drives formatted FAT32 cannot hold a single file over 4 GB — SnapDisk skips those files and lists them instead of failing the whole backup, per the repo README. A drive formatted exFAT has no such limit.</li>
+    <li><strong>Does not delete photos.</strong> SnapDisk only copies — it never deletes — so the card keeps its photos until you delete them yourself, and that step is always yours, and always after the check.</li>
+    <li><strong>Does not back up anything but photos and videos.</strong> SnapDisk copies image and video files only — no settings, no contacts, no messages, no app data.</li>
+    <li><strong>Does not download your cloud originals for you.</strong> If your originals live only in iCloud or Google Photos, you have to download them to the phone first — SnapDisk copies what is on the phone or on the card, and a cloud-only photo is in neither place.</li>
+    <li><strong>Does not work if the phone does not host a drive.</strong> The phone has to support USB OTG to see the drive at all. Most Android phones do, but a phone that lists OTG No cannot mount a drive, and then neither the one-tap backup nor the file-manager copy works on it.</li>
+    <li><strong>Does not back up photos from apps that hide them.</strong> If an app keeps its photos in a private folder SnapDisk cannot read, those photos stay in the app.</li>
+    <li><strong>Does not compress.</strong> SnapDisk copies the original files as they are — no recompression, no resizing, no quality loss.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Moving instead of copying.</strong> The file manager&#x27;s Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the card. Copy first, verify, then delete — the brightideaphotography guide makes the same point about the Files app&#x27;s Move option.</li>
+    <li><strong>Deleting from the card before verifying.</strong> A backup is only a backup once you&#x27;ve confirmed the copy. Copy, open a few photos on the drive, then delete from the card — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk&#x27;s Stop button exists for exactly this. The goldenlenstraveler guide&#x27;s version is the same rule at the end: always safely eject the drive before disconnecting.</li>
+    <li><strong>Using the phone&#x27;s storage as the middle step without checking the space.</strong> The two-step copy in Method 4 needs enough free space on the phone to hold everything on the card first. A big shoot will not fit — that is the brightideaphotography guide&#x27;s warning, and it is the reason the hub in Method 3 exists.</li>
+    <li><strong>Using a FAT32 drive for long videos.</strong> FAT32 cannot hold a single file over 4 GB. Use exFAT — it is what every bridge guide recommends — and check the drive&#x27;s format before the trip, not after you are relying on it.</li>
+    <li><strong>Reformatting the drive without copying its files off first.</strong> Reformatting erases the drive — copy existing files elsewhere before reformatting, and test the drive with the phone before the trip.</li>
+    <li><strong>Buying a drive too small for the whole card.</strong> Make sure it is big enough for the entire card, including videos — and with room to keep backing up the same card afterwards.</li>
+    <li><strong>Buying a charging cable and calling it an adapter.</strong> A charging cable connects the phone to a computer, which is the opposite direction. What you need is a data-capable OTG adapter or a USB-C drive.</li>
+    <li><strong>Assuming the card uses DCIM.</strong> A card formatted by a camera may use a folder layout other than DCIM. Check the card&#x27;s folders before picking, and pick the folder that actually holds the photos — in SnapDisk and in the file manager alike.</li>
+    <li><strong>Forgetting the card in the camera.</strong> The camera-card route needs the card out of the camera and in a reader. If the card is still in the camera, there is nothing to copy — and the camera&#x27;s own USB connection is a different workflow, not this one.</li>
+    <li><strong>Mistaking a cloud backup for a photo copy.</strong> Google Photos backs your phone up to Google&#x27;s servers — if you want to plug the drive into a computer and open the pictures, you need a plain copy, that is Method 1 or 2, not a cloud backup. And a cloud backup stops working the day you stop paying for storage.</li>
+    <li><strong>Expecting Pro to follow you to an iPhone.</strong> SnapDisk Pro is a Google Play purchase, so it follows your Google account to another Android phone — it does not follow you to an iPhone, and SnapDisk does not run on iPhone at all.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> the card is the original — the drive is the copy, and the copy is only a backup once you have opened photos on the drive and checked them. Point the From picker at the card, tap Backup, wait, check, and only then think about deleting anything from the card.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>Closest parallel: <a href="transfer-photos-to-usb-automatically.html">Transfer photos to USB automatically</a> — the generic one-tap route this article builds on, with the same notification tap and the same oldest-first copy, without the card framing. If your photos live in internal storage rather than on a card, check <a href="usb-photo-backup.html">USB photo backup on Android</a> — the same drive copy from the default folders. If your old phone&#x27;s screen is broken as well, check <a href="broken-screen-photos-to-usb.html">Back up photos from a broken-screen phone to USB</a> — a mouse and one tap, before the switch. If the card backup is part of moving to a new phone, check <a href="switching-phones-photos-to-usb.html">Back up photos to USB when switching to a new phone</a> — the drive copy comes before the transfer, and the wipe comes after the check. If your phone has no card slot at all, check <a href="index.html">the full list of phone-to-USB guides</a> — there is one per brand, and the generic route is <a href="usb-photo-backup.html">USB photo backup on Android</a>.</p>
+</article>
+<footer>
+  <p>SnapDisk — back up photos to a USB drive, no computer needed.<br>
+  <a href="./">Home</a> · <a href="blog/">Blog</a> · <a href="https://github.com/dzianisv/photo-backup">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>
