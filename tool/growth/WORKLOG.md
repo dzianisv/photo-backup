@@ -1,6 +1,7 @@
-## WL-181 — Back up photos to USB before lending your phone article, 149th how-to (LEAD DRAFT — supervisor settles)
+## WL-181 — Back up photos to USB before lending your phone article, 149th how-to
 
-- Owner: SEO/GEO lane lead + supervisor settle. State: LEAD DRAFT.
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Evidence: article PR #335 MERGED (merge f421892, 2026-11-21T12:34:34Z, CI run 44904453793 build pass 1m27s on head 17c6b35; post-merge main runs Android PR 44904593412 success 1m41s + pages 44904592939 success 38s). Live: lending article 200 (53,214 B, correct title), feed.xml 149 items incl. lending. Supervisor re-score: Alibaba, MakeUseOf, AIVAnet, itfix, Android Central — all generic/computer routes, none framed for the before-lending moment, none mentions SnapDisk; gap stands. WL-182 fallback: scenario well is dry — next dispatch needs a fresh scenario pick or a shape rotation.
   Article on branch wl-181-lending (head 3a51f02, pushed; no PR —
   the supervisor merges). Article 53,214 B, title 47 chars, meta
   134 chars, 1 H1, 10 H2s, 1 script tag, TL;DR present, JSON-LD
