@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up CMF Phone photos to a USB drive</title>
+<meta name="description" content="Back up CMF Phone photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/cmf-phone-photos-to-usb.html">
+<meta property="og:title" content="Back up CMF Phone photos to a USB drive (no computer)">
+<meta property="og:description" content="Back up CMF Phone photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/cmf-phone-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/cmf-phone-photos-to-usb.html#article",
+      "headline": "Back up CMF Phone photos to a USB drive (no computer)",
+      "description": "Back up CMF Phone photos to a USB drive without a computer: plug in, tap Backup, and SnapDisk copies them oldest-first — original files, no upload.",
+      "datePublished": "2026-11-21",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": [
+          "https://github.com/dzianisv"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/cmf-phone-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/cmf-phone-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do both CMF phones support USB OTG?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The CMF Phone 2 Pro does — every spec source checked lists USB Type-C 2.0 with OTG for it. The CMF Phone 1 is disputed: GSMArena's own review says it offers USB Host/OTG support, and Croma, MySmartPrice, Beebom, and Cashify all list OTG as supported — but GSMArena's comparison table lists its USB as plain Type-C with no OTG, and phonebunch lists OTG as Not Supported for it. So on a CMF Phone 1, plug a drive in and look for the mount notification before buying an adapter or counting on the one-tap route."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I back up CMF Phone photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — if your model supports OTG, plug a USB-C flash drive straight into the phone and the drive mounts with a notification. The stock route is Files by Google: open it, pick the photos, and Copy them to the drive. SnapDisk does the same copy automatically: plug in, tap Backup, and the whole photo library copies oldest-first with progress, Pause and Stop, and resume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does backing up to USB lose photo quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not when the backup copies files instead of re-encoding them. SnapDisk streams each file byte-for-byte to the drive — it never recompresses or resizes — and checks the size of every file after copying, so the copy on the drive is the original file. Cloud backups are the ones that shrink photos: Google Photos' Storage saver setting compresses them, so check that setting before trusting a cloud copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I back up for free, and is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free version backs up photos and videos manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. Files already copied are never copied twice, so a second run picks up where the first stopped. SnapDisk is not on Google Play yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later, and both CMF phones clear that."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/cmf-phone-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up CMF Phone photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/cmf-phone-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up CMF Phone photos to a USB drive</h1>
+  <p class="dek">CMF is Nothing&#x27;s sub-brand, and its two phones — the CMF Phone 1 (2024, Dimensity 7300, 128 GB) and the CMF Phone 2 Pro (2025, Dimensity 7300 Pro, 128 or 256 GB) — run Nothing OS, the same near-stock Android skin as the main Nothing phones, with USB-C on both. The honest caveats, up front: the CMF Phone 2 Pro supports OTG on every spec source checked, but the CMF Phone 1 is disputed — GSMArena&#x27;s own review says it offers USB Host/OTG support, and Croma, MySmartPrice, Beebom, and Cashify all list OTG as supported, while GSMArena&#x27;s comparison table lists its USB as plain Type-C with no OTG and phonebunch lists OTG as Not Supported — so on a CMF Phone 1, plug a drive in and look for the mount notification before buying an adapter or counting on the one-tap route; both phones take a microSD card up to 2 TB in a hybrid slot, which is a real adjacent route — a card in the phone is storage, not a backup, and the slot holds the card or a second SIM, not both — and it is never a SnapDisk feature; Nothing&#x27;s own backup tools are Google&#x27;s — Google Photos and Google backup — which back your photos up to the cloud, not to a USB drive as plain files; SnapDisk needs Android 7.0 or later — minSdk 24 in the repo — and it is not on Google Play yet, so install the v0.1.2 APK from GitHub; the free version backs up manually up to 5 GB per run — run it again past the cap and it picks up where it stopped, because files already copied are never copied twice — and Pro is a one-time $9.99 purchase that auto-starts the backup on connect and removes the size limit; the screenshot below is from SnapDisk on a phone — it is the same settings screen you will see, because this article is about a phone; the From folder is a picker, not a fixed path — tap it, browse to the phone&#x27;s storage, and choose the folder that holds the photos, which the picker reaches because it is the system folder picker, verified in the repo as OpenDocumentTree; drives formatted FAT32 cannot hold a single file over 4 GB — SnapDisk skips those files and lists them instead of failing the whole backup, per the repo README — so use exFAT; a spinning hard drive may need its own power; SnapDisk&#x27;s copy runs as a foreground service — the mechanism Android gives a copy that must keep running with the screen off — but the repo holds no wake lock and no battery-saver handling, and no CMF run has ever been tested, so screen-off continuation under battery saver is unverified, and this article says so instead of promising it; Android 15 and later give a dataSync foreground service 6 hours in 24 hours — if the copy runs past that, Android pauses it, and opening the app resets the timer; and SnapDisk copies, it never deletes — the phone stays a second copy until you have opened photos on the drive and checked them. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 21, 2026 · 8 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> On a CMF Phone, check OTG first — the CMF Phone 2 Pro lists USB Type-C 2.0 with OTG on every spec source checked, but the CMF Phone 1 is disputed: GSMArena&#x27;s review says it offers USB Host/OTG support and Croma, MySmartPrice, Beebom, and Cashify list OTG as supported, while GSMArena&#x27;s comparison table lists plain USB Type-C with no OTG and phonebunch lists it as Not Supported — so plug a drive into a CMF Phone 1 and look for the mount notification before buying an adapter — then plug a USB drive in: a model that supports OTG mounts it straight away with a &quot;USB storage added&quot; notification; if nothing appears, check Settings &gt; Storage — then tap Backup in SnapDisk, and your whole photo library copies oldest-first to the drive in the background — with real progress (percent, GB copied / total, speed, time left), Pause and Stop, and resume where it stopped if you unplug. No computer, no upload, no account. The copies are the original files: SnapDisk streams each file byte-for-byte to the drive, never recompresses or resizes, and checks the size of every file after copying. The honest contrast, up front: Files by Google works — it is the stock file manager on CMF phones, and it copies photos to a USB drive — but it is manual select-copy-paste with no progress detail, no resume, and no verification; Nothing&#x27;s own backup routes work too, but they are Google&#x27;s routes — Google Photos and Google backup — and none of them writes your photos as plain files to a USB drive: Google Photos backs photos up to Google&#x27;s cloud, Google backup restores your data to a new phone from the cloud, and there is no Nothing-owned cloud backup for photos at all. A microSD card up to 2 TB fits both phones, but a card in the phone is storage, not a backup — lose the phone and you lose the card with it. One rival app does exist — Photos to USB: OTG Backup copies a whole gallery to a pen drive in one tap and resumes where it stopped — so SnapDisk is not the only one-tap option; what it adds is oldest-first order, detailed progress with Pause and Stop, size verification of every file, no ads, and a free 5 GB per run with a $9.99 one-time Pro for auto-backup and unlimited size. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 21, 2026, no top search result for this query is a CMF-specific photo-backup guide at all, let alone a CMF-specific automated whole-library backup with progress, Pause/Stop, and resume: the top results are our own Nothing Phone article, generic manual guides, a PC troubleshooting guide, and spec tables.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search &quot;back up photos from CMF Phone to USB flash drive without computer&quot; and there is no CMF-specific photo-backup guide in the top results at all — the closest result is our own Nothing Phone article, which covers the CMF Phone 1 only as the OTG exception. The rest are generic Android guides, a PC troubleshooting guide, and spec tables:</p>
+  <ul>
+    <li><strong>SnapDisk, &quot;Back up Nothing Phone photos to a USB drive&quot;</strong> (<a href="https://dzianisv.github.io/photo-backup/nothing-phone-photos-to-usb.html">Back up Nothing Phone photos to a USB drive | dzianisv.github.io</a>) — our own Nothing Phone article, the top result for this query. It covers the main Nothing Phone models and names the CMF Phone 1 only as the exception to check — GSMArena lists its USB as Type-C with no OTG, one comparison site lists OTG as not supported, and another lists it as supported. Adjacent ground, not a CMF guide: it does not cover the CMF Phone 2 Pro at all, and it does not settle the CMF Phone 1 question. Live 200, verified this run.</li>
+    <li><strong>YouTube</strong> (<a href="https://www.youtube.com/watch?v=PYcbV25CczI">How to Connect USB Drive to Android Phone to Move Photos &amp; Videos</a>) — a video walkthrough of the generic route: OTG adapter, the phone&#x27;s built-in file manager, select photos in DCIM, Copy or Move to the drive. Generic Android, not written for CMF. Surfaced in search this run.</li>
+    <li><strong>askfilo.com</strong> (<a href="https://askfilo.com/user-question-answers-smart-solutions/how-to-transfer-pictures-from-an-android-phone-to-a-3436303837303432">how to transfer pictures from an android phone to a flashdrive</a>) — a generic Android-to-flash-drive guide: OTG adapter, file manager, DCIM, select, Copy, paste to the drive, or a computer as a middleman. Generic Android, not written for CMF; curl 200, 0 SnapDisk mentions in the fetched page.</li>
+    <li><strong>eyefi.com forum thread</strong> (<a href="https://eyefi.com/t/what-s-the-best-way-to-move-photos-from-my-android-phone-to-a-flash-drive/1121">What&#x27;s the best way to move photos from my Android phone to a flash drive?</a>) — a forum answer with the same generic OTG-cable steps, plus a cloud detour through Google Drive or Dropbox and a computer. A forum thread, not a guide, and not written for CMF; curl 200, 0 SnapDisk mentions in the fetched page.</li>
+    <li><strong>Technobezz, &quot;Fix CMF Phone 2 Pro USB Not Recognized by PC (10 Solutions)&quot;</strong> (<a href="https://www.technobezz.com/cmf-phone-2-not-connecting-to-pc-fix">Fix CMF Phone 2 Pro USB Not Recognized by PC | technobezz.com</a>) — the only CMF-specific result in the top results, and it is a troubleshooting guide, not a backup guide: check the cable and port, restart both devices, select File transfer / MTP mode in Settings &gt; Connected devices &gt; USB, update the phone, update the PC drivers, enable USB debugging, try another computer. Its USB route is a cable to a PC, not a drive plugged into the phone — and it is still useful background, because its first fixes (a charge-only cable, the wrong USB mode) are the same reasons a drive would not mount. Curl 403, browser-verified live this run; 0 SnapDisk mentions.</li>
+    <li><strong>Spec tables, not guides.</strong> GSMArena&#x27;s CMF Phone 1 review says the Type-C port &quot;offers USB Host/OTG support&quot; (curl 200, verified this run) — which contradicts GSMArena&#x27;s own comparison table, recorded in our Nothing Phone article, listing plain USB Type-C with no OTG for the same phone. Croma lists OTG Support Yes for the CMF Phone 1 (curl 403, browser-verified live this run). MySmartPrice lists USB OTG Support Yes for the CMF Phone 2 Pro (curl 403, browser-verified live this run). GadgetsFocus lists USB Type-C 2.0, OTG for the CMF Phone 2 Pro (curl 200, 0 SnapDisk mentions). Spec tables confirm the port can host a drive — they do not tell you how to back photos up to one.</li>
+  </ul>
+  <p>So the gap is the whole-library one-tap phone-to-USB angle: backing up an Android phone is well covered in general, and the CMF Phone 2 Pro&#x27;s USB troubleshooter exists — but no result is a CMF-specific guide that copies the phone&#x27;s whole photo library to a USB drive in one tap, from the phone, with no computer, with progress, Pause and Stop, and resume. That is Method 1. The manual version gets Method 2, Nothing&#x27;s own tools get Method 3, and the microSD card — the other storage both CMF phones have — gets Method 4, because it is the option a CMF owner will actually consider first.</p>
+
+  <h2>CMF Phone 1 vs CMF Phone 2 Pro: the OTG question</h2>
+  <p>CMF is Nothing&#x27;s sub-brand — the same company, the same Nothing OS, a cheaper phone with a swappable back and an accessory point instead of the Glyph lights. The two models are distinct phones, and the OTG question splits them:</p>
+  <ul>
+    <li><strong>CMF Phone 1 (2024).</strong> Dimensity 7300, 6 or 8 GB of RAM, 128 GB of storage, microSD up to 2 TB in a hybrid slot, Android 14 with Nothing OS 2.6, USB Type-C 2.0, 5,000 mAh battery with 33 W charging. OTG is disputed: GSMArena&#x27;s review says the port offers USB Host/OTG support, and Croma, MySmartPrice, Beebom, and Cashify all list OTG as supported — but GSMArena&#x27;s comparison table lists its USB as plain Type-C with no OTG, and phonebunch lists OTG as Not Supported. Five sources say yes, two say no, and the two no-votes include GSMArena disagreeing with itself. Treat OTG as likely but unconfirmed on this model: plug a drive in and look for the mount notification before buying an adapter.</li>
+    <li><strong>CMF Phone 2 Pro (2025).</strong> Dimensity 7300 Pro, 8 GB of RAM, 128 or 256 GB of storage, microSD up to 2 TB in a hybrid slot, Android 15 with Nothing OS, USB Type-C 2.0, 5,000 mAh battery with 33 W charging, triple rear camera (50 MP main + 50 MP telephoto + 8 MP ultra-wide). OTG is not disputed: GadgetsFocus, PhoneSpecX, Bajaj Finserv, Croma, and MySmartPrice all list USB Type-C 2.0 with OTG, or OTG Support Yes. On this model the one-tap route is the tested-first step, not a gamble.</li>
+    <li><strong>Both phones are USB-C, both clear Android 7.0.</strong> The CMF Phone 1 ships Android 14 and the CMF Phone 2 Pro ships Android 15, so both clear SnapDisk&#x27;s Android 7.0 minimum (minSdk 24) by a wide margin. A USB-C flash drive plugs straight into either phone — no adapter needed — and a regular USB drive needs only a USB-C OTG adapter.</li>
+    <li><strong>Both phones have a microSD slot, and the main Nothing phones do not.</strong> Only the CMF Phone 1 has a slot among the Nothing range in our Nothing Phone article — and the CMF Phone 2 Pro has one too. That makes the card a real option on both CMF phones, covered in Method 4 — and also the reason the card is not a backup: it lives in the phone.</li>
+    <li><strong>The gallery app depends on the OS version.</strong> Nothing phones relied on Google Photos for photo management on Nothing OS 2.x, and Nothing is releasing its own Gallery app with Nothing OS 3.0 — so the CMF Phone 1 on Nothing OS 2.6 shows Google Photos, while a CMF Phone 2 Pro on a newer Nothing OS may show Nothing Gallery instead. Either way the gallery is a viewer, not a backup tool.</li>
+    <li><strong>If the drive does not mount, check the cable and the mode first.</strong> Technobezz&#x27;s CMF Phone 2 Pro guide — written for a PC connection, but the same port — says the usual culprits are a charge-only cable with no data wires, a dusty port, and the wrong USB mode. For a drive plugged into the phone there is no MTP mode to select, but the cable still matters: a charging cable cannot carry data to a drive either, and a drive that never mounts on a CMF Phone 1 may be the disputed OTG, not a broken drive — try the drive on another phone or a computer before blaming it.</li>
+  </ul>
+  <p>The short version: on a CMF Phone 2 Pro, plug the drive in and go. On a CMF Phone 1, plug the drive in and check — the sources disagree, and your own phone is the tiebreaker.</p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li>A CMF Phone 1 or CMF Phone 2 Pro that still works normally, with a dry, undamaged USB port — SnapDisk needs Android 7.0 or later, which is minSdk 24 in the repo, and both phones clear it. Never plug anything into a damaged port: a bent, loose, or wet port can short the board, and power through a damaged port can burn out the chip that holds the photos. A dead phone is a repair-lab job only — no software route.</li>
+    <li>A USB drive your phone can read — a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter. On a CMF Phone 2 Pro, OTG is listed on every spec source checked. On a CMF Phone 1, the sources disagree — plug the drive in first and look for the mount notification before buying an adapter. For a whole library, a portable SSD holds more — but a portable SSD may need a powered hub, because the phone alone may not supply enough power for both the hub and the drive.</li>
+    <li>Enough space on the drive for the photos you want to keep. Check first how much your photos take — Settings, then Storage, shows it — and pick a drive with room to spare. A phone that has never been backed up holds years of photos, so check the size before you start, not halfway through.</li>
+    <li>An exFAT drive if you have the choice — a drive formatted FAT32 cannot hold a single file over 4 GB, so a very long video will be skipped and listed, not copied. Reformatting erases the drive, so copy existing files elsewhere first.</li>
+    <li>A charged phone, or a powered hub — one USB-C port holds the drive or the charger, not both. Charge first, then plug the drive in — or use a powered USB-C hub with pass-through charging, which is standard USB-C behaviour but unverified with SnapDisk.</li>
+    <li>Time to let the copy finish, and time to check it — the backup is only a backup once you have opened a few photos on the drive. Do it at home, not on the move, and do not delete anything from the phone until the check is done.</li>
+    <li>No Wi-Fi needed — the drive copy runs entirely offline, and SnapDisk has no internet permission at all. Wi-Fi matters only if you want to check the cloud copy in Method 3.</li>
+    <li>What you should not buy: do not buy a drive with no space to grow into — the phone will keep filling it — and do not buy a cable and call it an adapter — a charging cable connects the phone to a computer, which is the opposite direction, and a charge-only cable cannot carry data to a drive either.</li>
+  </ul>
+  <p>One drive, one job, one quiet moment at home. The phone&#x27;s photos need only the drive; the charger needs to be done before the drive goes in.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk&#x27;s settings screen, showing the backup folder pickers. The From picker is where you point at the folder that holds the photos — tap it, browse to the phone&#x27;s storage, and choose it. Screenshot is from SnapDisk on a phone — the settings screen is the same screen you will see on a CMF Phone.</figcaption>
+  </figure>
+  <p>SnapDisk is the one-tap version, and it runs entirely on the phone — the photos never leave it until they are on the drive, and it needs no Wi-Fi at all. It needs Android 7.0 or later, which is minSdk 24 in the repo, and it is not on Google Play yet, so install the v0.1.2 APK from the GitHub release page before you start. Two honest limits first: on a CMF Phone 1, OTG itself is disputed — if the drive never mounts, the one-tap route cannot start, and that is a phone question, not an app question — and the copy runs as a foreground service, which is the mechanism Android gives a copy that must keep running with the screen off — but the repo holds no wake lock and no battery-saver handling, and no CMF run has ever been tested, so screen-off continuation under battery saver is unverified.</p>
+  <ol>
+    <li>Check how much the photos take. Open Settings, then Storage, and look at the photos number. That is the size the drive has to hold — and the reason to copy oldest-first, because the earliest photos on the phone are the ones you would miss most.</li>
+    <li>Charge the phone first. One USB-C port holds the drive or the charger, not both — so charge to full, then unplug the charger and plug the drive in. A powered USB-C hub with pass-through charging is standard USB-C behaviour but unverified with SnapDisk.</li>
+    <li>Open SnapDisk. It opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos), To /disk/DCIM on the drive.</li>
+    <li>Check From — and check it twice, because a phone&#x27;s photos may not all sit in DCIM. If your photos live somewhere else — a messaging app&#x27;s folder, a downloads folder, screenshots — tap the From picker and choose that folder. The picker is the Android system folder picker, and the app keeps access to it. Repeat the copy for each folder that holds photos you want to keep.</li>
+    <li>Plug in the USB drive. SnapDisk offers a backup in a notification: &quot;External storage is connected. Backup photos?&quot; with Backup and Cancel. On a CMF Phone 1, if no notification appears at all, the drive has not mounted — check Settings &gt; Storage, try another adapter or cable, and try the drive on another device before assuming the phone is at fault.</li>
+    <li>Tap Backup. Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally, with live progress — percent, GB copied / total, speed, time left — and Pause and Stop.</li>
+    <li>Turn the screen off and let it run. The copy is a foreground service, built to keep running with the screen off. Wake the phone when you want to check progress — the notification shows percent, GB copied / total, speed, and time left — then turn the screen off again. If the copy pauses under battery saver, turn battery saver off for the copy and tap Resume — that is advice, not a verified fact, because battery-saver behaviour with SnapDisk is untested.</li>
+    <li>Wait for the copy to finish — all of it. If the copy is interrupted, resume it — finished files stay on the drive, and resume picks up where it stopped.</li>
+    <li>Open a few photos on the drive before doing anything else — older photos and a long video, not just the most recent ones. If they open at full quality, the copy is good.</li>
+    <li>Unplug the drive and put it away somewhere safe — not in the bag with the phone. Do not delete the photos from the phone yet: SnapDisk copies, it never deletes, and the phone stays a second copy until the drive copy is checked — deleting is your step, after the check, and the check is the drive in your hand, opened, with photos in it.</li>
+  </ol>
+  <p>Free version: backs up manually, up to 5 GB per run — one tap — and running it again past the cap picks up where it stopped, because files already copied are never copied twice. A phone that has never been backed up often holds a library bigger than 5 GB, so it takes several taps, and that is the case Pro is for. Pro is a one-time $9.99 purchase — auto-backup on connect and unlimited size, so the next time you plug a drive in, the copy starts by itself. SnapDisk copies the original files as they are — no recompression, no resizing, no quality loss — and it copies, it never deletes.</p>
+
+  <h2>Method 2: Files by Google (the stock route, no app needed)</h2>
+  <p>Same phone, no app to install, and no Play Store or APK needed. This is the manual version of Method 1, and it is the route every generic guide above describes for photos — Files by Google is the stock file manager on CMF phones, which ship Google&#x27;s apps rather than a Nothing-made file manager:</p>
+  <ol>
+    <li>Charge the phone first — one port holds the drive or the charger, not both — then plug the USB drive into the phone — directly, if it is a USB-C drive, or through an OTG adapter for a regular USB drive. A notification appears; tap it and choose Transfer photos or File Transfer if it asks. If nothing appears on a CMF Phone 1, the drive has not mounted — see the OTG section above before going further.</li>
+    <li>Open Files by Google and find the photos — usually in DCIM, or in Pictures. Select the photos and videos — long-press one, then tap the rest — then tap Copy.</li>
+    <li>Tap the USB drive in Files by Google, open the folder you want them in, and tap Paste.</li>
+    <li>Repeat for every folder that holds photos — DCIM, Pictures, Downloads, and any messaging app&#x27;s folder. Files by Google copies one selection at a time, so a library spread across folders takes several passes, and a folder you forget is a folder with no copy anywhere else.</li>
+    <li>Keep the phone unlocked while the copy runs. The screen stays on for the whole transfer — which is the manual copy&#x27;s cost, and why the background copy is the better route when the library is big.</li>
+    <li>Wait for the copy to finish, then open a few photos on the drive before doing anything else — older photos and a long video, not just the most recent ones.</li>
+    <li>Unplug the drive and put it away somewhere safe — and only then think about deleting anything from the phone, after the check.</li>
+  </ol>
+  <p>Copy, not Move: the Files app&#x27;s Move option copies and then deletes the originals in one step, and if the copy fails halfway, photos are already gone from the phone. What the manual copy does not give you is the one-tap backup: no oldest-first order, no progress bar with speed and ETA, no Pause and Stop, and no resume if the copy is interrupted — and on a library that can run to tens of gigabytes, the missing resume is the part you will feel first, because you have to repeat the whole selection next time.</p>
+
+  <h2>Method 3: Nothing&#x27;s own tools (Google Photos and Google backup — not phone-to-USB)</h2>
+  <p>CMF phones have no Nothing-owned backup for photos — the backup routes are Google&#x27;s, the same as on the main Nothing phones. They work, but they back photos up to Google&#x27;s cloud, not to a USB drive as plain files:</p>
+  <ul>
+    <li><strong>Google Photos</strong> (Photos settings &gt; Backup, to Google&#x27;s cloud, 15 GB free) — backs photos up to your Google account. Check that Backup is on, check the quality (storage saver holds compressed copies, not originals), switch on the device folders (WhatsApp images and video, screenshots, downloads), and check the upload actually finished on another device at photos.google.com — seeing photos in the Photos app on the phone proves nothing, because the app shows on-device photos too.</li>
+    <li><strong>Google backup</strong> (Settings &gt; Google &gt; Backup, Back up by Google One) — restores your data to a new phone from the cloud. It is a restore route for a new phone, not a copy of your photos as files on a drive.</li>
+    <li><strong>Nothing Gallery</strong> — Nothing&#x27;s own gallery app, arriving with Nothing OS 3.0. It is a clean media viewer, not a backup tool — it shows the photos, it does not copy them anywhere.</li>
+  </ul>
+  <p>Two honest limits: a cloud backup is a copy that depends on Wi-Fi, an account, a password, and a subscription, while the drive copy depends on none of those — and a cloud backup can be off, a device folder can be unswitched, and a storage-saver upload can be a compressed copy, so check photos.google.com before trusting the cloud. That is why the drive is Method 1 and the cloud is the check, not the other way round.</p>
+
+  <h2>Method 4: the microSD route (an adjacent option, not a SnapDisk feature)</h2>
+  <p>Both CMF phones take a microSD card up to 2 TB in a hybrid slot — the one storage option the main Nothing phones do not have. It is a real route, and it is worth naming honestly, with its limits stated:</p>
+  <ul>
+    <li><strong>How it works.</strong> Put a microSD card in the SIM tray, open Files by Google, select the photos, Copy, and paste them to the card. No drive, no adapter, no app needed — and no computer either.</li>
+    <li><strong>A card in the phone is storage, not a backup.</strong> The card lives in the phone, so a lost, stolen, or broken phone takes the card with it — and a card that holds the only copy of a photo is not a backup of that photo. The drive in Method 1 is a second copy in a different place; the card is the same place.</li>
+    <li><strong>The slot holds the card or a second SIM, not both.</strong> The microSD slot is a hybrid slot in the SIM tray — so if you use two SIMs, there is no room for the card, and if you use the card, the second SIM comes out. Check which you need before buying a card.</li>
+    <li><strong>It is not a SnapDisk feature.</strong> SnapDisk backs photos up to a USB drive plugged into the phone — it does not copy to the microSD card, and it does not manage the card. The card route is a manual Files-app copy, with the same limits as Method 2: no oldest-first order, no progress detail, no resume.</li>
+    <li><strong>Use it as a spare, not the plan.</strong> A card is a good place to keep a second copy of the newest photos while the drive holds the whole library — and a good place to free space on the phone once the drive copy is checked. It is not a substitute for the drive copy.</li>
+  </ul>
+  <p>The card is the convenient option and the drive is the safe one. If you can only do one, do the drive — and if you already have a card, copy to the drive first, then to the card.</p>
+
+  <h2>What this does not do</h2>
+  <ul>
+    <li><strong>Does not settle the CMF Phone 1 OTG question for you.</strong> Five sources say the CMF Phone 1 supports OTG and two say it does not, including GSMArena disagreeing with itself. The only test that counts is your own phone with a drive plugged into it — and if the drive never mounts, the one-tap route cannot start.</li>
+    <li><strong>Does not back up to the microSD card.</strong> SnapDisk backs photos up to a USB drive plugged into the phone — the card route in Method 4 is a manual Files-app copy, not a SnapDisk feature, and a card in the phone is storage, not a backup.</li>
+    <li><strong>Does not back up anything but photos and videos.</strong> SnapDisk copies image and video files only — no settings, no contacts, no messages, no app data.</li>
+    <li><strong>Does not back up photos that live only in the cloud.</strong> If your originals live only in Google Photos, they are not on the phone to copy — download them to the phone first, or export them from photos.google.com.</li>
+    <li><strong>Does not back up photos from apps that hide them.</strong> If an app keeps its photos in a private folder SnapDisk cannot read, those photos stay in the app.</li>
+    <li><strong>Does not promise the copy continues under battery saver.</strong> The repo holds no wake lock and no battery-saver handling, and no CMF run has been tested — if the copy pauses under battery saver, turn battery saver off for the copy and tap Resume.</li>
+    <li><strong>Does not run past Android&#x27;s 6-hour dataSync budget without a pause.</strong> On Android 15 and later, a dataSync foreground service gets 6 hours in 24 hours — if the copy runs past that, Android pauses it, and opening the app resets the timer.</li>
+    <li><strong>Does not install below Android 7.0.</strong> SnapDisk needs Android 7.0 or later — minSdk 24 in the repo — so on a phone running older Android, use Method 2 instead: the Files-app copy has no version floor. Both CMF phones clear 7.0 by a wide margin.</li>
+    <li><strong>Does not copy files over 4 GB off a FAT32 drive.</strong> Drives formatted FAT32 cannot hold a single file over 4 GB — SnapDisk skips those files and lists them instead of failing the whole backup, per the repo README. A drive formatted exFAT has no such limit.</li>
+    <li><strong>Does not charge the phone while the drive is in the port.</strong> One USB-C port holds the drive or the charger, not both — charge first, then plug the drive in.</li>
+    <li><strong>Does not power a portable SSD from the phone alone.</strong> A portable SSD may need a powered hub — the phone alone may not supply enough power for both the hub and the drive. A spinning hard drive may need its own power too.</li>
+    <li><strong>Does not work on a damaged port or a dead phone.</strong> Never plug anything into a damaged USB port — power through a damaged port can burn out the chip that holds the photos — and a dead phone is a repair-lab job only, not a free app.</li>
+    <li><strong>Does not work on iPhone.</strong> SnapDisk is Android only. On an iPhone the photo route is the Files app with a USB-C or Lightning drive — and the same rules apply: copy at home, verify on the drive, keep the drive somewhere safe.</li>
+    <li><strong>Does not compress.</strong> SnapDisk copies the original files as they are — no recompression, no resizing, no quality loss.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Buying an adapter before checking OTG on a CMF Phone 1.</strong> The sources disagree on the CMF Phone 1 — plug a drive in first and look for the mount notification. On a CMF Phone 2 Pro, OTG is listed on every source checked, so the adapter is the safe buy.</li>
+    <li><strong>Buying a charge-only cable and calling it an adapter.</strong> A charging cable connects the phone to a computer, which is the opposite direction — and a charge-only cable has no data wires, so it cannot carry photos to a drive either. What you need is a data-capable adapter or a USB-C drive.</li>
+    <li><strong>Buying the wrong adapter for the port.</strong> USB-C and micro-USB do not fit each other. Both CMF phones are USB-C — check the drive&#x27;s plug before buying, and check the adapter supports data transfer, not just charging.</li>
+    <li><strong>Trusting the cloud without checking it on another device.</strong> Seeing photos in the Photos app on the phone proves nothing — the app shows on-device photos too. Open photos.google.com on a computer or another phone and check that the photos are actually there, in the quality you want.</li>
+    <li><strong>Forgetting the device folders.</strong> Google Photos backs up the camera folder by default — WhatsApp images, screenshots, and downloads have to be switched on separately, in Photos settings, Backup, Back up device folders. A folder you never switched on is a folder with no copy anywhere else.</li>
+    <li><strong>Calling the microSD card a backup.</strong> A card in the phone goes where the phone goes — lost, stolen, or broken takes the card with it. The card is a spare copy, not the backup; the drive is the backup.</li>
+    <li><strong>Using the hybrid slot without checking the second SIM.</strong> The microSD slot holds the card or a second SIM, not both — if you use two SIMs, the card has nowhere to go.</li>
+    <li><strong>Moving instead of copying.</strong> The Files app&#x27;s Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone. Copy first, verify, then decide.</li>
+    <li><strong>Deleting from the phone before verifying.</strong> A backup is only a backup once you have confirmed the copy. Copy, open a few photos on the drive, then decide — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk&#x27;s Stop button exists for exactly this. In the Files app, eject the drive before unplugging it.</li>
+    <li><strong>Using a FAT32 drive for long videos.</strong> FAT32 cannot hold a single file over 4 GB. Use exFAT — and check the drive&#x27;s format before you are relying on it, not after the copy fails.</li>
+    <li><strong>Reformatting the drive without copying its files off first.</strong> Reformatting erases the drive — copy existing files elsewhere before reformatting, and test the drive with the phone before the copy.</li>
+    <li><strong>Buying a drive too small for the whole library.</strong> Make sure it is big enough for the entire library, including videos — a phone that has never been backed up holds years of photos, so check the size in Settings before you buy.</li>
+    <li><strong>Expecting the free 5 GB cap to cover a whole library in one run.</strong> The free version backs up manually up to 5 GB per run — run it again past the cap and it picks up where it stopped, because files already copied are never copied twice — but a whole library is bigger than 5 GB, so it takes several taps, and that is the case Pro is for.</li>
+    <li><strong>Assuming the generic guides cover CMF.</strong> The YouTube video, the askfilo guide, and the EyeFi thread back up photos from any Android phone to a USB drive — but none of them is written for a CMF Phone, none of them settles the CMF Phone 1 OTG question, and none of them mentions the microSD slot both CMF phones have. The generic copy is their job; the CMF-specific one is this article&#x27;s.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> on a CMF Phone 2 Pro, plug the drive in and tap Backup — OTG is listed everywhere. On a CMF Phone 1, plug the drive in first and look for the mount notification, because the sources disagree — then copy the whole library oldest-first, check a few photos on the drive, and put the drive away somewhere safe.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If your phone is a main Nothing Phone rather than a CMF, check <a href="nothing-phone-photos-to-usb.html">Back up Nothing Phone photos to a USB drive</a> — the same copy job, on the Phone (1), Phone (2), Phone (2a), and Phone (3a), where OTG is listed without dispute. If you want the generic route with no brand attached, check <a href="transfer-photos-to-usb-automatically.html">Transfer photos to USB automatically</a> — the one-tap copy this article builds on — or <a href="backup-photos-offline.html">How to back up photos offline on Android</a>, the no-cloud version of the same job. Or <a href="index.html">the full list of phone-to-USB guides</a>.</p>
+</article>
+<footer>
+  <p>SnapDisk — back up photos to a USB drive, no computer needed.<br>
+  <a href="./">Home</a> · <a href="blog/">Blog</a> · <a href="https://github.com/dzianisv/photo-backup">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>
