@@ -1,3 +1,102 @@
+## WL-177 — Back up photos to USB before an Android update article, 145th how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #327 MERGED (merge commit e073f75, merged
+  2026-11-21T07:44:00Z; PR head f49bc35, CI run 44881442543
+  build pass 1m16s; post-merge main runs Android PR 44881601655
+  1m7s + pages 44881601003 success on e073f75).
+  Pre-merge readback on head f49bc35 (verified by the
+  supervisor from the branch source): article 50,474 B, title
+  48 chars, meta 133 chars, 1 H1, 10 H2s, 1 script tag, TL;DR
+  present, JSON-LD parses (Article + FAQPage 4 Qs +
+  BreadcrumbList, datePublished 2026-11-20), feed 145 items
+  incl. android-update, sitemap 149 URLs incl. android-update,
+  blog 145 BlogPosting incl. android-update, Query 144 row
+  present (144 "### " rows, sequential 1–144), only docs/ +
+  tool/growth changed (7 files, +505/−0 vs main 741ea33).
+  Counting notes (no defects): the fix commit is +38/−10
+  (article +6/−4, searches.md +32/−6) — the 10 deleted lines
+  were added by the lead's own commits, so base→head diff is
+  +505/−0; the fix agent's "meta 135" is the supervisor's
+  exact readback of 133 (content-attribute length), still in
+  the 130–139 range.
+  New docs/android-update-photos-to-usb.html ("Back up photos
+  to USB before your Android update"), following the
+  WL-54–WL-176 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot,
+  with an honest caption). Title 48 chars, meta 133 chars.
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full android-update section), feed.xml updated;
+  searches.md Query 144 row added.
+  Query 144 scored honestly from live evidence: no "no guide
+  exists" claim. Named competitors: FotoSafe's guided app
+  backup, mefmobile.org, a YouTube OTG guide,
+  umatechnology.org generic transfer guide, and Dr.Fone's
+  four-method guide — all generic phone-to-USB manual copy —
+  PLUS two update-framed near-misses the lead first missed
+  and the supervisor's fresh search surfaced: phoneguiding.com
+  "How to Back Up Android Phone" (explicitly lists "Before a
+  major Android or One UI update" as a moment; methods Google
+  backup / Google Photos / Smart Switch to a computer /
+  manual copy) and umatechnology.org "How to Back Up a
+  Samsung Galaxy Before an Update" (Smart Switch to a computer
+  or supported external storage incl. USB flash drive/SSD,
+  Samsung Cloud, Google Drive, manual copy). Both fetched live
+  by the fix run (curl 200, 0 SnapDisk mentions). Gap stands
+  only on the whole-library one-tap phone-to-USB backup framed
+  for the before-an-Android-update moment — both near-misses
+  are cloud / Smart Switch full-device backup / manual copy,
+  none mentions SnapDisk. The fix (+38/−10, head f49bc35)
+  corrected the row and the article ("none of the six" →
+  "none of the eight", "five results" → "seven results") before
+  the PR was created; no merge happened on the unfixed head.
+  Key finding: an Android update rarely wipes user data,
+  stated plainly in-article — the real risk is a failed/stuck
+  update, a bootloop, or a factory reset during troubleshooting;
+  the backup must COMPLETE and be verified on the drive BEFORE
+  the update starts (no undo after a wipe); cloud-only
+  originals are a trap (backup off / device folders not
+  switched on / storage-saver compressed copies — check
+  photos.google.com); SnapDisk copies, never deletes.
+  Screen-off continuation under battery saver UNVERIFIED (no
+  WakeLock/Doze code), stated plainly in-article.
+  SnapDisk behaviour verified from the repo: minSdk 24, Pro
+  $9.99 auto-backup on connect + unlimited, free 5 GB/run with
+  resume (skip-if-exists + .part resume + size verification),
+  oldest-first DATE_TAKEN, copies never deletes, FAT32 >=4 GB
+  skipped and listed, From-picker OpenDocumentTree SAF,
+  dataSync foreground service 6h budget (WL-34).
+  Link verification: all absolute URLs cited curl 200 (the 5
+  generic guides, the 2 update-framed guides, photos.google.com,
+  github.com/dzianisv/photo-backup, live factory-reset page).
+  No failed execs on the lead run; the supervisor's `gh pr
+  checks --watch` hit one transient GraphQL error, recovered by
+  polling `gh pr view` (no effect).
+  Lead's goal entry recorded on the timeline this run
+  (goal_update_9e2774492931, "145th how-to article live");
+  supervisor verified it on the timeline — the settle records
+  the live entry below. Supervisor re-score from a fresh live
+  search at dispatch: Android Police, phoneguiding, itechguides,
+  rottenwifi, umatechnology Samsung before-update — all cloud /
+  manual / Smart Switch routes; gap stands, scored honestly
+  after the fix.
+  Live fetch verified by the supervisor: android-update article
+  200 (50,474 B, correct title), feed.xml 145 items live incl.
+  android-update. Branch wl-177-android-update deleted (404
+  verified).
+  External-skills validation this run: Installed 4/4 PASS,
+  Current 4/4 PASS, zero drift, 16:27 fix holds; Used 0/4 FAIL
+  known standing gap. Owner gates unchanged (WL-31 Play Console
+  password, WL-32 AlternativeTo PAUSED, WL-33 Medium overdue —
+  due Nov 19, Sentry DSN, PostHog). No escalation. Side-chat
+  report sent (145th article live, new hour). Goal entry
+  recorded and verified on the timeline. KPI.md updated.
+  WL-178 fallback: another scenario shape (unverified) —
+  candidates water-damage, before a flight / airport security.
+  Articles 144 → 145 (144 scored queries). Board: 0 open issues,
+  0 open PRs.
+
 ## WL-176 — Back up photos to USB while traveling (no Wi-Fi, no computer) article, 144th how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
