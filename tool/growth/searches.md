@@ -16385,6 +16385,152 @@ demand is read off competitor install velocity instead (see
   Article drafted Nov 21, 2026 (WL-187, 155th how-to):
   docs/snapdisk-vs-sandisk.html — branch wl-187-vs-sandisk.
 
+### 155. "SnapDisk vs Buffalo" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a SnapDisk-vs-Buffalo
+  head-to-head comparison at all — the top results are our
+  own brand articles, one of which names Buffalo Photo Backup
+  only as a rival listing, and the Buffalo Play listing itself.
+- Current top results (scored Nov 21, 2026, live web search):
+  our own POCO article
+  (https://dzianisv.github.io/photo-backup/poco-photos-to-usb.html
+  — names Buffalo Photo Backup only as a rival listing in
+  the contrast section ("Buffalo, the external-drive maker:
+  open the app, connect an SSD, USB flash drive, or card
+  reader, and backup starts automatically, keeping the
+  original data"), inside a POCO guide, not a comparison;
+  live 200, verified this run);
+  our own Samsung Galaxy article
+  (https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html
+  — no Buffalo mention in the excerpt read; live, verified
+  this run);
+  our own AGM article
+  (https://dzianisv.github.io/photo-backup/agm-photos-to-usb.html
+  — no Buffalo mention in the live page read this run
+  (grep: 0 mentions); live 200, verified this run);
+  our own Google Pixel article
+  (https://dzianisv.github.io/photo-backup/google-pixel-photos-to-usb.html
+  — no Buffalo mention in the excerpt read; live, verified
+  this run);
+  Buffalo Photo Backup Play listing
+  (https://play.google.com/store/apps/details?id=jp.buffalo.photobackup&hl=en_US
+  — "Photo Backup" (写真バックアップ), developer BUFFALO
+  INC.; "Buffalo, the No. 1 external SSD and card reader
+  manufacturer in Japan (＊2), has released a free backup
+  app for Android!"; "Simply open the app and connect an
+  SSD, USB Flash Drive, or card reader to automatically
+  start backup. Easily back up your photos and videos while
+  preserving their original data."; "Incremental Backup from
+  the Second Time Onward"; "View Photos and Videos";
+  "Restore All or Selected Photos"; "Supports Photos and
+  Videos Stored on Internal SD Card"; "Multiple Storage
+  Devices for Even More Reliable Backups" (remembers the
+  backup status of up to 10 devices); "Compatible
+  Smartphones: Android smartphones with a USB-C connector";
+  "Compatible OS: Android 13 or later"; "Verified Devices:
+  Buffalo SSDs, USB flash drives, and card readers"; price
+  0 USD; rating 4.5 from 61 reviews and updated Dec 16,
+  2025 per the JP-locale listing read this run (the en-US
+  listing text read this run shows the description and the
+  $0 price but no rating block); the support contact on the
+  listing is support@melcoinc.co.jp; browser-verified live
+  this run, curl 200);
+  Buffalo compatibility page
+  (https://86886.jp/photobackup_special_android/
+  — the URL the Play listing points to for detailed
+  compatibility information; the page itself only says it
+  redirects automatically to Buffalo's site, so no device
+  list could be read from it; browser-verified live this
+  run, curl 200);
+  Buffalo launch coverage
+  (https://third-news.com/article/8b7f0b86-99af-11f0-9cfc-9ca3ba0a67df
+  — the iOS version of Photo Backup passed 100,000
+  downloads within four months of release; iOS only, no
+  Android install figure; browser-verified live this run);
+  our own SanDisk comparison
+  (https://dzianisv.github.io/photo-backup/snapdisk-vs-sandisk.html
+  — comparison #4 in the series (WL-187), the adjacent
+  ground for this one: the same head-to-head shape,
+  different rival; live 200, verified this run).
+  Buffalo app facts, all from its own live sources this run:
+  the app is free — price 0 USD in the Play listing text —
+  and the listing text we could read names no paid tier, no
+  subscription, and no in-app purchase price, so the article
+  makes no Pro-versus-paid price comparison rather than
+  guessing one. Rating: 4.5 from 61 reviews (JP-locale
+  listing read this run; the en-US listing text read this
+  run shows no rating block). Last update Dec 16, 2025.
+  Android 13+ required, USB-C phone. It backs up photos
+  and videos automatically on connect, preserving the
+  originals; from the second time onward it copies only
+  newly added photos and videos; it can view backed-up
+  photos and videos in the app, restore all or selected
+  photos, back up photos on the phone's internal SD card,
+  and remember the backup status of up to 10 storage
+  devices. It is built for verified Buffalo drives — the
+  listing names Buffalo SSDs, USB flash drives, and card
+  readers, and no other brand's drives, so no non-Buffalo
+  drive support is claimed for it. Its listing says nothing
+  about a copy order, Pause and Stop, per-file verification,
+  the folder layout backups land in, or whether the copy
+  keeps running with the screen off — so none is claimed
+  for it. Its listing says nothing about ads, an account, or
+  files over 4 GB either way, so none is claimed. No review
+  text was readable in the listing this run, so no reviewer
+  complaints are quoted — the rating is shown, but no
+  individual review. The app's name is the collision itself:
+  it is literally named "Photo Backup", which is why this
+  app is called SnapDisk instead.
+  The repo facts that carry the article, read from the code
+  this run: the copy runs as a foreground service
+  (dataSync type, BackupService.kt) — the mechanism
+  Android gives a copy that must keep running with the
+  screen off — but the repo holds no wake lock and no
+  battery-saver handling (no WakeLock/Doze reference in
+  the source, verified this run) and no comparison run has
+  ever been tested, so screen-off continuation under
+  battery saver is unverified and the article says so
+  instead of promising it. What IS verified: oldest-first
+  on MediaStore DATE_TAKEN (BackupEngine.kt); resume
+  covers an interrupted copy — finished files stay on the
+  drive (skip-if-exists with size verification), the file
+  in flight keeps its .part copy (byte-exact .part resume);
+  the destination mirrors the source folder structure;
+  on Android 15 and later a dataSync foreground service
+  gets 6 hours in 24 hours, so a very long copy can be
+  paused by Android itself, and opening the app resets the
+  timer (WL-34); the manifest holds no INTERNET permission;
+  SnapDisk copies, it never deletes (no delete() call in
+  the source touches photos — only .part files). SnapDisk
+  needs Android 7.0 or later (minSdk 24 in the repo) and
+  is not on Google Play yet, so install the v0.1.2 APK from
+  GitHub. The free version backs up manually up to 5 GB
+  per run, picking up where it stopped past the cap; Pro
+  is a one-time $9.99 purchase (product id pro_unlock,
+  BillingManager.kt) that auto-starts the backup on
+  connect and removes the size limit. A file ≥4 GiB on
+  FAT32 is skipped with its reason and the job continues
+  (FilesystemInfo.kt, README). The screenshot in the
+  article is from SnapDisk on a phone — the same settings
+  screen the reader will see. The From folder is a picker,
+  not a fixed path — tap it, browse to the phone's storage,
+  and choose the folder that holds the photos, which the
+  picker reaches because it is the system folder picker,
+  verified in the repo as OpenDocumentTree (MainActivity.kt).
+  Own canonical URL returns 404 pre-merge (curl, this run
+  — the known-missing control URL returns the same 404,
+  while existing pages return 200; expected, live only
+  after merge). Title is the 52-char form "SnapDisk vs
+  Buffalo Photo Backup: Android USB backup" — within the
+  48–53-char brief. This is the 156th article in the brand
+  series — the SanDisk comparison (WL-187) is the adjacent
+  ground for this one, comparison #4 in the series,
+  covering price, free tier, copy order, and freeing up
+  space against a different rival.
+- Verdict: how-to article material, not a listing keyword.
+  Article drafted Nov 21, 2026 (WL-188, 156th how-to):
+  docs/snapdisk-vs-buffalo.html — branch wl-188-vs-buffalo.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
