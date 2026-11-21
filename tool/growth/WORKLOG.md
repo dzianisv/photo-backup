@@ -1,3 +1,81 @@
+## WL-173 — Back up photos to USB when phone battery is low article, 141st how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #319 MERGED (merge commit 726b86b, merged
+  2026-11-21T03:42:09Z; PR head cfd9f6a, CI run 44862325324
+  build pass, 1m20s; post-merge main runs Android PR
+  44862467032 + pages 44862466070 success).
+  Pre-merge readback on head cfd9f6a (verified by the
+  supervisor from the branch source): feed 141 items / 141
+  closes incl. low-battery, sitemap 145 URLs incl.
+  low-battery, blog index 141 BlogPosting (JSON-LD @graph
+  parses: Article + FAQPage + BreadcrumbList), title 52
+  chars, meta 131 chars, JSON-LD parses (Article + FAQPage
+  4 Qs + BreadcrumbList, datePublished 2026-11-20), TL;DR
+  present, 1 script tag, 1 H1, 10 H2s, Query 140 row
+  present ("### 140."; rows 1-140 sequential), only docs/ +
+  tool/growth changed (7 files).
+  Query 140 scored honestly from live evidence (no
+  "no guide exists" claim): the exact query returns five
+  real results — SnapDisk's own offline-backup +
+  external-drive articles, mobiletrans, a Samsung community
+  thread, a $34.99 Photostock OmniX review — plus four
+  battery-advice guides from a second search (fonelab
+  "charge first", invotech power section, sekin
+  "reasonably charged phone", eztoolset hub note). All nine
+  are manual copy, one-line battery advice, or a hardware
+  product. None of them is a whole-library one-tap backup
+  framed for the low-battery moment, and none mentions
+  SnapDisk; the gap stands narrowly on that angle.
+  Supervisor's fresh re-search returned SnapDisk's own
+  generic guides first plus a MacRumors forum thread
+  (manual Wi-Fi drives) — same conclusion.
+  New docs/low-battery-photos-to-usb.html ("Back up photos
+  to USB when your phone battery is low"), following the
+  WL-54-WL-172 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot,
+  with an honest caption). Title 52 chars, meta 131 chars.
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full low-battery section), feed.xml updated;
+  searches.md Query 140 row added.
+  Key finding: the copy runs as a dataSync foreground service
+  (BackupService.kt); grep over app/src/main, README, docs
+  finds NO WakeLock, NO battery-saver/Doze handling, NO
+  REQUEST_IGNORE_BATTERY_OPTIMIZATIONS — so screen-off
+  continuation under battery saver is UNVERIFIED, and the
+  article says so plainly instead of promising it. Verified:
+  .part byte-exact resume if the phone dies mid-copy;
+  Android 15+ 6-hour dataSync budget with app-open timer
+  reset (WL-34). Hub pass-through charging is standard
+  USB-C behaviour but unverified with SnapDisk. One-port
+  problem (drive vs charger) is the same class as the
+  broken-screen article's mouse-vs-drive problem.
+  Live fetch verified by the supervisor:
+  low-battery-photos-to-usb.html 200 (46,545 B, correct
+  title), feed.xml 141 items live incl. low-battery.
+  Link verification 7 URLs (5x200 curl, Samsung community
+  000 verified via browser text fetch, invotech 000
+  confirmed via live search index); 0 SnapDisk mentions in
+  fetched pages. Lead reported no failed execs.
+  GOAL-ENTRY CLAIM FALSE: the lead reported "goal entry
+  recorded" but no WL-173 entry exists on the timeline —
+  supervisor recorded the live entry itself
+  (goal_update_e39c04ac1054, verified by readback). Lesson:
+  verify lead goal-entry claims on the timeline, never trust
+  them (same defect class as the WL-164 BQ/Prestigio gap).
+  Branch wl-173-low-battery deleted (404 verified).
+  WL-174 fallback: another scenario shape (unverified).
+  Articles 140 → 141 (140 scored queries). Board: 0 open
+  issues, 0 open PRs. External-skills validation this run:
+  Installed 4/4 PASS, Current 4/4 PASS, zero drift, 16:27
+  fix holds; Used 0/4 FAIL known standing gap. Owner gates
+  unchanged (WL-31 Play Console password, WL-32
+  AlternativeTo PAUSED, WL-33 Medium overdue — due Nov 19,
+  Sentry DSN, PostHog). No escalation. Side-chat report sent
+  (141st article live, new hour). Goal entry recorded and
+  verified on the timeline. KPI.md updated.
+
 ## WL-172 — Back up photos to USB when phone storage is full article, 140th how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
