@@ -1,3 +1,79 @@
+## WL-175 — Back up photos to USB before selling or trading in your phone article, 143rd how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #323 MERGED (merge commit 000e935, merged
+  2026-11-21T05:35:10Z; PR head 4dd3911, CI run 44871443110
+  build pass, 1m12s; post-merge main runs Android PR
+  44871565404 + pages 44871565090 success).
+  Pre-merge readback on head 4dd3911 (verified by the
+  supervisor from the branch source): feed 143 items / 143
+  closes incl. selling-phone, sitemap 147 URLs incl.
+  selling-phone, blog index JSON-LD parses (143 BlogPosting)
+  + 143 post blocks, title 48 chars, meta 132 chars, JSON-LD parses (Article +
+  FAQPage 4 Qs + BreadcrumbList, datePublished 2026-11-20),
+  TL;DR present, 1 script tag, 1 H1, 10 H2s, Query 142 row
+  present (142 "### " rows), only docs/ + tool/growth changed (7 files, +512/-0).
+  Query 142 scored honestly from live evidence: no
+  "no guide exists" claim. Named competitors: techsith
+  get-pictures-off guide (computer/cloud/manual USB), MacRumors
+  forum thread (manual copy), SamMobile Facebook reel, Krista
+  Kowalczyk Instagram reel (manual iPhone select-copy), own
+  Unitech article, plus four wipe-before-selling guides from a
+  second search (androidphonesblog, digitaltrends, ezznology,
+  askdavetaylor). Gap stands only on the whole-library one-tap
+  phone-to-USB backup framed for the sell/trade-in moment, and
+  only because none of the guides mentions SnapDisk.
+  Supervisor's fresh search at dispatch returned the same shape:
+  techsith generic guide, SnapDisk's own Unitech article,
+  Instagram reel, MacRumors thread — same conclusion.
+  New docs/selling-phone-photos-to-usb.html ("Back up photos
+  to USB before you sell your phone"), following the
+  WL-54-WL-174 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot,
+  with an honest caption). Title 48 chars, meta 132 chars.
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full selling-phone section), feed.xml updated;
+  searches.md Query 142 row added.
+  Key finding: the backup must COMPLETE and be verified on the
+  drive BEFORE the wipe/hand-over — no undo; trade-in/carrier
+  programs require a factory reset before hand-over; remove
+  Google + Samsung accounts to disarm FRP; SIM/microSD/eSIM out
+  (reset does not wipe microSD); cloud-only originals are a trap
+  (backup off / device folders not switched on / storage-saver
+  compressed copies — check photos.google.com); SnapDisk copies,
+  never deletes — deleting afterwards is the reader's step only
+  after verifying photos on the drive. Screen-off continuation
+  under battery saver UNVERIFIED (no WakeLock/Doze code),
+  stated plainly in-article.
+  SnapDisk behaviour verified from the repo: minSdk 24, Pro
+  $9.99 auto-backup on connect + unlimited, free 5 GB/run with
+  resume (skip-if-exists + .part resume + size verification),
+  oldest-first, copies never deletes, FAT32 >=4 GB skipped and
+  listed, From-picker OpenDocumentTree SAF.
+  Live fetch verified by the supervisor:
+  selling-phone-photos-to-usb.html 200 (50,906 B, correct title),
+  feed.xml 143 items live incl. selling-phone.
+  Lead's run record: two fetches refused and recorded honestly —
+  techsith (empty reply, curl rc 52, twice) and askdavetaylor
+  (HTTP 403); both cited as "verified via live search index
+  only" in the article and the Query 142 row. No other failures.
+  Lead's goal entry (goal_update_d98d39f68d6a, "drafted") verified
+  on the timeline by the supervisor; settle records the live entry.
+  Branch wl-175-selling-phone deleted (404 verified).
+  WL-176 fallback: another scenario shape (unverified) —
+  candidates traveling / no-Wi-Fi backup, before an Android
+  update, water-damage.
+  Articles 142 → 143 (142 scored queries). Board: 0 open
+  issues, 0 open PRs. External-skills validation this run:
+  Installed 4/4 PASS, Current 4/4 PASS, zero drift, 16:27 fix
+  holds; Used 0/4 FAIL known standing gap. Owner gates
+  unchanged (WL-31 Play Console password, WL-32
+  AlternativeTo PAUSED, WL-33 Medium overdue — due Nov 19,
+  Sentry DSN, PostHog). No escalation. Side-chat report sent
+  (143rd article live, new hour). Goal entry recorded and
+  verified on the timeline. KPI.md updated.
+
 ## WL-174 — Back up photos to USB before a factory reset article, 142nd how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
