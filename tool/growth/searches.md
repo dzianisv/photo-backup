@@ -14165,6 +14165,185 @@ demand is read off competitor install velocity instead (see
   drafted Nov 20, 2026 (WL-173, 141st how-to):
   docs/low-battery-photos-to-usb.html — branch wl-173-low-battery.
 
+### 141. "back up photos to USB before a factory reset (no computer)" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return real guides — four
+  phone-to-USB guides — fotosafe.weidisoft.net, a YouTube
+  walkthrough, sekin.in, and umatechnology.org — plus four
+  factory-reset guides from a second search (how to back up before a
+  factory reset): gadgets.beebom.com, androidauthority.com,
+  memeburn.com, and everydaytech.org. The four phone-to-USB guides
+  are manual select-copy-paste with nothing about the reset, and the
+  four factory-reset guides back up to the cloud or a PC, never to a
+  USB drive from the phone — none of the eight is a whole-library
+  one-tap phone-to-USB backup framed for the before-the-reset moment,
+  and none of them mentions SnapDisk. Our own Huawei article also
+  surfaced in the first search — the adjacent ground: the same
+  one-tap copy, but its angle is the brand, and it says nothing about
+  a factory reset.
+- Current top results (scored Nov 20, 2026, live web search):
+  fotosafe.weidisoft.net, "Back up Android photos to USB"
+  (https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/
+  — the closest guide to this article's method, and the only
+  competing app in the results: connect the drive, select it as the
+  destination in FotoSafe, review the media, and start copying, with
+  a guided preview and automatic skipping of files already backed
+  up. Its honest alternative is the one to keep: Android file
+  managers can copy folders like DCIM/Camera to USB for free. A real
+  phone-to-USB guide — but it is FotoSafe's guide for FotoSafe, its
+  free run covers up to 100 media files before the one-time Pro
+  purchase, and it says nothing about a factory reset or about
+  SnapDisk; curl 200, 0 SnapDisk mentions and 0 factory-reset
+  mentions in the fetched page);
+  YouTube, "How to Connect USB Drive to Android Phone to Move Photos
+  & Videos (Best Method)"
+  (https://www.youtube.com/watch?v=PYcbV25CczI
+  — the video walkthrough: a USB-OTG connection and the phone's
+  built-in file manager, fast and secure, no computer or internet. A
+  real phone-to-USB method — but a video, not a guide you can follow
+  step by step on the page, its action is Move, which copies and then
+  deletes the originals in one step, and it says nothing about a
+  factory reset or about SnapDisk; verified via live search index
+  only, no factory-reset mention in the indexed excerpt);
+  sekin.in, "Transfer Photos From Android to a USB Flash Drive"
+  (https://sekin.in/how-to-transfer-pictures-from-android-to-a-usb-flash-drive/
+  — the direct-USB guide: a USB-C flash drive, or a USB-A drive
+  through an OTG data adapter, then Files by Google, Copy not Move,
+  verify, eject. Its battery line is the one to keep: a reasonably
+  charged phone, because large transfers can take time and the phone
+  powers the USB device. A real phone-to-flash-drive guide — but its
+  reasons are freeing storage, making an offline backup, or moving
+  photos to a computer later, its copy is manual, and it says nothing
+  about a factory reset or about SnapDisk; curl 200, 0 SnapDisk
+  mentions and 0 factory-reset mentions in the fetched page);
+  umatechnology.org, "Transfer Android Photos to a USB Drive Without
+  a Computer"
+  (http://umatechnology.org/how-to-transfer-photos-from-android-to-a-usb-flash-drive-without-a-computer/
+  — the direct-USB guide: connect a compatible drive or use an OTG
+  adapter, open a file manager, and copy the photos to the drive,
+  with Copy rather than Move if you want a backup that leaves the
+  originals on the phone. A real phone-to-USB guide — but its copy is
+  manual select-copy-paste in Files by Google or Samsung My Files,
+  and it says nothing about a factory reset or about SnapDisk; curl
+  200, 0 SnapDisk mentions and 0 factory-reset mentions in the
+  fetched page).
+  The factory-reset guides the search does return, from a second
+  search for the factory-reset angle itself:
+  gadgets.beebom.com, "How to Back Up an Android Phone (2026 Guide)"
+  (https://gadgets.beebom.com/guides/how-to-back-up-android-phone
+  — the full backup guide: Google's built-in backup, brand-specific
+  cloud services from Samsung, Xiaomi, OnePlus, Vivo and Oppo, and
+  local PC backups. Its warning is the one this article borrows:
+  photos and videos are handled separately by Google Photos, and
+  everything counts against the shared Google account storage — 15 GB
+  free across Gmail, Drive, and Photos. A real before-a-reset guide
+  — but its routes are the cloud or a PC, its first backup can take
+  up to 24 hours on Wi-Fi while charging, and it says nothing about a
+  USB drive from the phone or about SnapDisk; curl 200, 0 SnapDisk
+  mentions in the fetched page, 1 factory-reset mention);
+  androidauthority.com, "How to back up your Android phone"
+  (https://www.androidauthority.com/android-phone-backup-guide-desktop-computer-local-how-to-75652/
+  — the backup guide that names the reset outright: maybe you need to
+  backup before performing a factory reset on your device. Its routes
+  are Google One, Amazon Photos, OneDrive, and a computer. A real
+  before-a-reset guide — but its photo route is Google Photos, which
+  counts against the free 15 GB since June 2021, its computer route
+  needs a PC, and it says nothing about a USB drive from the phone or
+  about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page,
+  2 factory-reset mentions);
+  memeburn.com, "How to Back Up an Android Phone: Google, Photos &
+  PC"
+  (https://memeburn.com/how-to-backup-android-phone/
+  — the backup guide that names the reset as the reason: Google
+  Backup is a good starting point when preparing an Android phone for
+  a factory reset. Its photo section is the one to keep: your phone's
+  Google Backup does not automatically mean every photo and video is
+  saved — Google Photos has its own backup controls, and device
+  folders for messaging apps, screenshots, and downloads have to be
+  switched on separately. A real before-a-reset guide — but its
+  routes are Google Backup, Google Photos, and a computer, and it
+  says nothing about a USB drive from the phone or about SnapDisk;
+  curl 200, 0 SnapDisk mentions in the fetched page, 3 factory-reset
+  mentions);
+  everydaytech.org, "How to Reset Your Android Phone to Factory
+  Settings"
+  (https://everydaytech.org/devices-hardware/device-settings-management/how-reset-an-android-phone
+  — the reset guide itself: a factory reset wipes your Android phone
+  back to the state it left the factory, all your apps, photos,
+  messages, and settings vanish, and photos stored only on your phone
+  will be gone. Its backup section is the one to keep: Google Photos
+  is the easiest backup for pictures and videos, and for anything not
+  in Google Drive or Google Photos, connect the phone to a computer
+  with a USB cable. A real reset guide — but its backup is the cloud
+  or a PC, and it says nothing about a USB drive from the phone or
+  about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page,
+  13 factory-reset mentions).
+  Adjacent ground from our own library, also surfaced in the first
+  search:
+  SnapDisk, "Back up Huawei photos to a USB drive"
+  (https://dzianisv.github.io/photo-backup/huawei-photos-to-usb.html
+  — the same one-tap copy, oldest-first in the background with
+  progress, Pause and Stop, and resume, with the honest contrast that
+  Huawei Backup writes an encrypted archive only a Huawei phone can
+  restore. A real one-tap guide — but its angle is the brand, and it
+  says nothing about a factory reset; curl 200).
+- A factory reset is the one button on the phone that cannot be
+  undone — it erases every photo, app, message, and setting on the
+  internal storage, and the photos are gone the moment it runs. Any
+  on-device copy is not a backup: a second folder on the same phone,
+  a copy in a different app on the same phone, a photo in an app's
+  private storage on the same phone — all of it is internal storage,
+  and the reset wipes internal storage. The cloud copy only counts if
+  it actually uploaded: Google Photos backup can be off, it can cover
+  the camera folder only, and it can be set to storage saver, which
+  uploads compressed copies instead of the originals — seeing a photo
+  in the Photos app on the phone proves nothing, because the app
+  shows on-device photos too, so the check has to happen at
+  photos.google.com on another device. After the reset, Android asks
+  for the Google account that was on the phone before — Factory Reset
+  Protection — so the account password has to be known before
+  resetting, or the phone can lock its owner out of his own device.
+  The repo facts that carry the article, read from the code this run:
+  the copy runs as a foreground service (dataSync type,
+  BackupService.kt) — the mechanism Android gives a copy that must
+  keep running with the screen off — but the repo holds no wake lock
+  and no battery-saver handling (grep over app/src/main finds no
+  WakeLock, PowerManager, or power-save code), and no reset-prep run
+  has ever been tested, so screen-off continuation under battery
+  saver is unverified and the article says so instead of promising
+  it. What IS verified: the backup has to finish before the reset,
+  and resume covers an interrupted copy — finished files stay on the
+  drive, the file in flight keeps its partial copy, and resume picks
+  up where it stopped (byte-exact .part resume, skip-if-exists); and
+  on Android 15 and later a dataSync foreground service gets 6 hours
+  in 24 hours, so a very long copy can be paused by Android itself,
+  and opening the app resets the timer (WL-34). SnapDisk needs
+  Android 7.0 or later (minSdk 24 in the repo) and is not on Google
+  Play yet, so install the v0.1.2 APK from GitHub. The free version
+  backs up manually up to 5 GB per run, picking up where it stopped
+  past the cap — a phone about to be reset often holds a library
+  bigger than 5 GB, so it takes several taps, and that is the case
+  Pro is for; Pro is a one-time $9.99 purchase that auto-starts the
+  backup on connect and removes the size limit. The screenshot in the
+  article is from SnapDisk on a phone — the same settings screen the
+  reader will see. The From folder is a picker, not a fixed path —
+  tap it, browse to the phone's storage, and choose the folder that
+  holds the photos, which the picker reaches because it is the system
+  folder picker, verified in the repo as OpenDocumentTree. Drives
+  formatted FAT32 cannot hold a single file over 4 GB — SnapDisk
+  skips those files and lists them instead of failing the whole
+  backup, per the repo README — so use exFAT. A factory reset erases
+  the phone's internal storage, not a USB drive — but the article
+  says to unplug the drive before tapping reset anyway. SnapDisk
+  copies, it never deletes. This is the eighth article in the series
+  about a situation instead of a phone brand — the brand series ran
+  to 134 articles, and the broken-screen, switching-phones, SD-card,
+  tablet, Chromebook, storage-full, and low-battery articles were the
+  first seven.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 20, 2026 (WL-174, 142nd how-to):
+  docs/factory-reset-photos-to-usb.html — branch wl-174-factory-reset.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
