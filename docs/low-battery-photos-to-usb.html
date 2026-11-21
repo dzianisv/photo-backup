@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up photos to USB when your phone battery is low</title>
+<meta name="description" content="Phone battery low and no charger? Back up photos to a USB drive in one tap — screen off, background copy, resume if the phone dies.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/low-battery-photos-to-usb.html">
+<meta property="og:title" content="Back up photos to USB when your phone battery is low">
+<meta property="og:description" content="Phone battery low and no charger? Back up photos to a USB drive in one tap — screen off, background copy, resume if the phone dies.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/low-battery-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/low-battery-photos-to-usb.html#article",
+      "headline": "Back up photos to USB when your phone battery is low",
+      "description": "Phone battery low and no charger? Back up photos to a USB drive in one tap — screen off, background copy, resume if the phone dies.",
+      "datePublished": "2026-11-20",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": [
+          "https://github.com/dzianisv"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/low-battery-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/low-battery-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up photos to a USB drive when my phone battery is low?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — and a USB drive is the best option on a low battery, because the copy is local: no Wi-Fi, no upload, no hours of radio burning the battery. Plug a USB-C flash drive into the phone, or a regular USB drive through a USB-C OTG adapter, and copy the photos to the drive — by hand in the Files app, or in one tap with SnapDisk, which copies the whole library oldest-first in the background with progress, Pause and Stop, and resume. Two honest limits: the drive draws its power from the phone, so the copy itself costs battery — the fonelab guide says an OTG adapter drains the battery quickly and to charge first if you can — and the drive occupies the phone's only USB-C port, so the phone cannot charge from a power bank at the same time unless the connection goes through a USB-C hub with pass-through charging. Start the copy, turn the screen off, and let the background copy do the work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the backup keep running with the screen off?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That is what SnapDisk's foreground service is for — it is the mechanism Android gives a copy that must keep running with the screen off — and the manual Files-app copy is the opposite: the mobiletrans guide says to keep the phone unlocked during large transfers to prevent connection pauses, so the manual copy needs the screen on, which burns the battery you are trying to save. One honest limit, stated plainly because it is unverified: the SnapDisk repo holds no wake lock and no battery-saver handling, and no low-battery run has ever been tested, so screen-off continuation while the phone is in battery saver is unverified — if the copy pauses under battery saver, turn battery saver off for the copy and tap Resume. What is verified in the repo is the other half: if the phone dies mid-copy, finished files stay on the drive, the file in flight keeps its partial copy, and resume picks up where it stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I charge my phone while copying photos to a USB drive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only through a USB-C hub with pass-through (PD) charging — the drive occupies the phone's only USB-C port, so a power bank plugged straight into the phone has nowhere to go while the drive is in. The hub route is: hub into the phone, power bank into the hub's PD charging port, drive into the hub's USB-A port, then check the drive appears before tapping Backup. Two honest limits: the hub has to support data and PD pass-through, not just charging — a charging-only hub will not carry the drive — and the hub route is standard USB-C behaviour but unverified with SnapDisk, so test it before relying on it. Without a hub, the fonelab guide's advice stands: charge the phone first, then copy — and copy oldest-first, so even a short run saves the earliest photos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my phone dies in the middle of the backup?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With SnapDisk, nothing already copied is lost. Finished files stay on the drive, the file in flight keeps its partial copy, and when you charge the phone a little, reopen SnapDisk, and tap Resume, the copy picks up where it stopped — files already copied are never copied twice, verified in the repo. One more limit, also verified: on Android 15 and later, a dataSync foreground service gets 6 hours in 24 hours, so a very long copy can be paused by Android itself — opening the app resets the timer. With the manual Files-app copy there is no resume at all: you re-select and copy again, and the file that was in flight when the phone died may be incomplete on the drive, so open it and check it before trusting it."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/low-battery-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up photos to USB when your phone battery is low",
+          "item": "https://dzianisv.github.io/photo-backup/low-battery-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up photos to USB when your phone battery is low</h1>
+  <p class="dek">A low battery is a clock, not a wall — the photos are still on the phone, the drive is still in your hand, and the copy is still a local one that needs no Wi-Fi and no upload. Fourteen honest caveats up front: the exact query DOES return real guides — our own offline-backup and external-drive articles, mobiletrans.wondershare.com, a Samsung community thread, and a Photostock OmniX review — plus four battery-advice guides, fonelab.com, invotech.dut.ac.za, sekin.in, and eztoolset.com; all of them are manual select-copy-paste, one-line battery advice, or a $34.99 hardware product, and none of them is a whole-library one-tap backup framed for the low-battery moment, and none of them mentions SnapDisk — that angle is the gap this article fills; SnapDisk&#x27;s copy runs as a foreground service — the mechanism Android gives a copy that must keep running with the screen off — but the repo holds no wake lock and no battery-saver handling, and no low-battery run has ever been tested, so screen-off continuation under battery saver is unverified, and this article says so instead of promising it; the drive occupies the phone&#x27;s only USB-C port — the phone cannot charge from a power bank at the same time unless the connection goes through a USB-C hub with pass-through charging, which is standard USB-C behaviour but unverified with SnapDisk; if the phone dies mid-copy, nothing already copied is lost — finished files stay on the drive, the file in flight keeps its partial copy, and resume picks up where it stopped, verified in the repo; Android 15 and later give a dataSync foreground service 6 hours in 24 hours — if the copy runs past that, Android pauses it, and opening the app resets the timer; an OTG adapter drains the battery — fonelab says so plainly, charge first if you can — and the drive draws its power from the phone; a spinning hard drive may need its own power; SnapDisk needs Android 7.0 or later — minSdk 24 in the repo — and it is not on Google Play yet, so install the v0.1.2 APK from GitHub; the free version backs up manually up to 5 GB per run — run it again past the cap and it picks up where it stopped, because files already copied are never copied twice — and Pro is a one-time $9.99 purchase that auto-starts the backup on connect and removes the size limit; the screenshot below is from SnapDisk on a phone — it is the same settings screen you will see, because this article is about a phone; the From folder is a picker, not a fixed path — tap it, browse to the phone&#x27;s storage, and choose the folder that holds the photos, which the picker reaches because it is the system folder picker, verified in the repo as OpenDocumentTree; drives formatted FAT32 cannot hold a single file over 4 GB — SnapDisk skips those files and lists them instead of failing the whole backup, per the repo README — so use exFAT; a cloud backup is the slow way out of a low battery — it needs Wi-Fi, upload time, and free space in the account, and the phone burns battery uploading for hours; and SnapDisk copies, it never deletes — the phone stays a second copy until you have opened photos on the drive and checked them. Here is the manual way, and the one-tap version.</p>
+  <p class="meta">November 20, 2026 · 9 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> When the battery is low and there is no charger, plug a USB drive straight into the phone and copy the photos to the drive — no computer, no upload, no account. The one-tap way is SnapDisk: plug the drive in, tap Backup in the notification, turn the screen off, and the whole library copies oldest-first in the background, with real progress, Pause and Stop, and resume where it stopped if the phone dies. The copy is local, so switching Wi-Fi and mobile data off costs nothing and saves battery — the phone is not uploading anything. The guides this query already returns are all real guides, so this article is not the first guide to a low battery — but all of them are manual select-copy-paste, one-line battery advice, or a $34.99 hardware product, and none of them is a one-tap whole-library backup to USB framed for the low-battery moment, which is the gap this article fills, as of November 20, 2026. And two honest limits: the drive draws its power from the phone, so charge first if you can; and the drive takes the phone&#x27;s only USB-C port, so the phone cannot charge from a power bank at the same time without a hub that passes power through.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search &quot;back up photos to USB when phone battery is low no charger&quot; and five results come back — and the low-battery moment itself is not one of them. What none of them does is back up the phone&#x27;s whole photo library to a USB drive in one tap, with the battery low and no charger in sight. The exact query returned five results:</p>
+  <ul>
+    <li><strong>SnapDisk, &quot;How to back up photos offline on Android&quot;</strong> (<a href="https://dzianisv.github.io/photo-backup/backup-photos-offline.html">How to back up photos offline on Android | dzianisv.github.io</a>) — our own article, and the closest ground to this one: plug a USB drive into the phone and copy the photos to it — no cloud, no account, no upload — in one tap with SnapDisk, oldest-first in the background with progress, Pause and Stop. Its angle is privacy — a copy that never leaves your devices — and it says nothing about a low battery, a power bank, or charging while copying. A real offline-backup guide, but not a low-battery guide.</li>
+    <li><strong>SnapDisk, &quot;How to back up photos to an external drive on Android&quot;</strong> (<a href="https://dzianisv.github.io/photo-backup/backup-photos-to-external-drive.html">How to back up photos to an external drive on Android | dzianisv.github.io</a>) — our own article again: the same one-tap copy to a USB-C flash drive, a portable hard drive, or a portable SSD, with the same oldest-first background copy. Its angle is the drive — which drive to pick, and that a spinning hard drive may need its own power. A real external-drive guide, but it says nothing about a low battery either.</li>
+    <li><strong>mobiletrans.wondershare.com, &quot;Back Up a Phone to USB Without Cloud Storage&quot;</strong> (<a href="https://mobiletrans.wondershare.com/android-backup/how-to-back-up-a-phone-to-an-external-usb-drive-without-cloud-storage.html">Back Up a Phone to USB Without Cloud Storage | mobiletrans.wondershare.com</a>) — the closest guide to this article&#x27;s method: connect the phone through a USB-OTG adapter, or copy phone files to a computer first, then move them to the drive. Its fixes are the ones to keep: copied files can appear incomplete after a transfer interruption, so repeat the transfer in smaller batches; and keep the phone unlocked during large transfers to prevent connection pauses — which is the manual copy&#x27;s battery problem in one line, because an unlocked screen burns the battery you are trying to save. A real phone-to-USB guide — but it is a manual folder copy in the Files app, with a computer as the fallback, and it says nothing about the low-battery moment or about SnapDisk.</li>
+    <li><strong>Samsung community, &quot;How to take pictures off phone and put on memory stick&quot;</strong> (<a href="https://stg-r1.community.samsung.com/t5/galaxy-s/how-to-take-pictures-off-phone-and-put-on-memory-stick/m-p/15256917">How to take pictures off phone and put on memory stick | stg-r1.community.samsung.com</a>) — the forum thread: plug the USB stick into the phone through an OTG adapter, open My Files, select the photos, Copy, choose the USB drive, then unmount. A real phone-to-USB answer — but it is a forum thread, not a guide, and its answer is the same manual select-copy-paste, with nothing about a low battery or about SnapDisk.</li>
+    <li><strong>curatedly.co, &quot;Photostock OmniX Review (2026)&quot;</strong> (<a href="https://curatedly.co/products/of_photostock_omni_x">Photostock OmniX Review (2026) | curatedly.co</a>) — the hardware alternative: a $34.99 portable drive with four built-in connectors and a companion app that scans the phone and copies media with one tap, offline, with no Wi-Fi and no batteries. A real one-tap offline product — but it is a product review, not a guide, it costs $34.99 for the drive, and it says nothing about a low battery, a power bank, or SnapDisk.</li>
+  </ul>
+  <p>And the battery advice the search does return is real, but it is one line inside a general transfer guide, never the guide itself. A second search, for the power-bank and charge-while-copying angle, returned four more:</p>
+  <ul>
+    <li><strong>invotech.dut.ac.za, &quot;Easy! Transfer Files From Android to USB Drive (Guide)&quot;</strong> (<a href="https://www.invotech.dut.ac.za/how-to-transfer-files-from-android-to-usb-drive/">Easy! Transfer Files From Android to USB Drive (Guide) | invotech.dut.ac.za</a>) — the only guide with a power section: USB drives draw power from the connected phone, which can affect battery life during large transfers, and certain drives may exceed what the phone can supply — so use a lower-power drive, or connect the phone to a power source during the transfer. Its FAQ asks it outright — does transferring files consume significant battery power — and answers yes, especially for large files, and to connect to a power source during the transfer. The closest thing to a low-battery guide in the results — but it is one section inside a general transfer guide, its copy is manual, and it says nothing about SnapDisk.</li>
+    <li><strong>fonelab.com, &quot;How to Transfer Photos from Android to Flash Drive in 3 Easy Ways&quot;</strong> (<a href="https://www.fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html">How to Transfer Photos from Android to Flash Drive in 3 Easy Ways | fonelab.com</a>) — the three-way transfer: an OTG adapter plus the Files app, a PC with File Explorer, or Samsung Smart Switch. Its battery line is the one this article borrows: an OTG adapter drains your Android phone battery quickly, so before transferring your photos using it, it is better to charge your Android phone first. A real phone-to-flash-drive guide — but the battery advice is one sentence, the copy is manual select-copy-paste, one of its three ways needs a PC, and it says nothing about SnapDisk.</li>
+    <li><strong>sekin.in, &quot;Transfer Photos From Android to a USB Flash Drive&quot;</strong> (<a href="https://sekin.in/how-to-transfer-pictures-from-android-to-a-usb-flash-drive/">Transfer Photos From Android to a USB Flash Drive | sekin.in</a>) — the direct-USB guide: a USB-C flash drive, or a USB-A drive through an OTG data adapter, then Files by Google, Copy not Move, verify, eject. Its battery line is one item in the what-you-need list: a reasonably charged phone, because large transfers can take time and the phone powers the USB device. A real phone-to-flash-drive guide — but the battery advice is one line, the copy is manual, and it says nothing about SnapDisk.</li>
+    <li><strong>eztoolset.com, &quot;How to Transfer Photos from Android to a USB Drive&quot;</strong> (<a href="https://eztoolset.com/how-to-transfer-photos-from-android-to-a-usb-drive/">How to Transfer Photos from Android to a USB Drive | eztoolset.com</a>) — the direct-USB guide: a USB-C flash drive, or a USB-A drive through an OTG adapter, then Files by Google. Its hub line is the one to keep: a USB-C hub with USB-A ports can be useful if you need several peripherals, but it is less portable and may create additional power and compatibility issues — and a portable SSD is better considered for very large libraries, because phones may not supply enough power for every SSD. A real phone-to-USB guide — but its hub is for peripherals, not for charging while copying, its copy is manual, and it says nothing about SnapDisk.</li>
+  </ul>
+  <p>So the gap is narrow and honest: a low battery is well mentioned, nine times over across the two searches, and every mention is real advice — charge first, use a low-power drive, connect to a power source during the transfer. What is missing is the low battery&#x27;s whole library — the photos that are actually at risk when the phone is about to die — backed up to a USB drive in one tap, with the screen off, with progress and resume, in the moment the battery is low and there is no charger. That is Method 1. The manual versions get Method 2, the power-bank hub gets Method 3, and the phone dying mid-copy gets Method 4, because the guides already describe the manual copy and the charge-first advice, and the one-tap version with resume is the only thing left to add.</p>
+
+  <h2>What low battery actually breaks</h2>
+  <p>A phone at 40% still works. A phone at 8% is a clock — and the copy has to fit inside what is left. The breakage lands in a specific order, which is why the order of the fix matters:</p>
+  <ul>
+    <li><strong>The copy itself costs battery.</strong> The drive draws its power from the phone — the invotech guide says so plainly, and the sekin guide adds the consequence: large transfers can take time, and the phone powers the USB device. A big library is a long copy, and a long copy on a low battery is a race.</li>
+    <li><strong>The adapter drains it faster.</strong> The fonelab guide says it outright: an OTG adapter drains your Android phone battery quickly, and it is better to charge first. This is the catch of the whole article: the thing that would save the photos needs the power the problem took away — Method 3 is the way through it when you have a power bank, and Method 1&#x27;s screen-off copy is the way through it when you do not.</li>
+    <li><strong>The screen is the biggest drain you control.</strong> The manual copy needs the phone unlocked — the mobiletrans guide says to keep the phone unlocked during large transfers to prevent connection pauses — so a manual copy burns battery on the screen for the whole transfer. A background copy does not: start it, turn the screen off, and the copy runs on its own. That is the one real battery saving in this article, and it is the reason Method 1 exists.</li>
+    <li><strong>Battery saver can slow the copy down — and nobody has tested it.</strong> Stated plainly, because it is unverified: the SnapDisk repo holds no wake lock and no battery-saver handling, and no low-battery run has ever been tested, so whether the copy keeps running with the screen off while the phone is in battery saver is unknown. If the copy pauses under battery saver, turn battery saver off for the copy and tap Resume — that is advice, not a verified fact, and the article does not dress it up as one.</li>
+    <li><strong>The cloud is the worst option on a low battery.</strong> A cloud backup needs Wi-Fi, upload time, and free space in the account — and the phone burns battery uploading for hours, which is the opposite of what a low battery needs. The drive copy is local: no radio, no upload, no account quota. Switch Wi-Fi and mobile data off before the copy — SnapDisk has no internet permission at all, so the copy loses nothing, and the phone saves the radio&#x27;s share of the battery.</li>
+    <li><strong>The one-port trap.</strong> The drive occupies the phone&#x27;s only USB-C port, so the phone cannot charge from a power bank at the same time — unless the connection goes through a hub that passes power through. That is the same class of problem as the broken-screen article&#x27;s one-port problem, where one port holds either the mouse or the drive, not both — and the fix is the same shape: a hub, or doing the two jobs in sequence instead of at once.</li>
+    <li><strong>A dying phone mid-copy is not a lost backup — with resume.</strong> Without resume it is: the manual copy has no resume, so a phone that dies halfway means re-selecting and re-copying everything, and the file that was in flight may be incomplete on the drive. With resume, the finished files stay copied and the partial file picks up where it stopped — which is why Method 4 is a resume, not a restart.</li>
+  </ul>
+  <p>None of this is fixed by waiting for the phone to charge — there is no charger. The fix is a copy that fits inside the battery that is left: oldest-first, screen off, and resume if the phone dies.</p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li>An Android phone (Android 7.0 or later for SnapDisk).</li>
+    <li>A USB drive your phone can read — a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter. Most modern Android phones support OTG; if the phone does not see the drive, try a different adapter. A spinning hard drive may need its own power.</li>
+    <li>Enough space on the drive for the photos you want to keep. Check first how much your photos take — Settings, then Storage, shows it — and pick a drive with room to spare.</li>
+    <li>An exFAT drive if you have the choice — a drive formatted FAT32 cannot hold a single file over 4 GB, so a very long video will be skipped and listed, not copied. Reformatting erases the drive, so copy existing files elsewhere first.</li>
+    <li>A power bank, if you have one — and a USB-C hub with pass-through charging, if you want to charge while you copy. The hub has to support data and PD pass-through, not just charging, and the hub route is unverified with SnapDisk, so test it before relying on it.</li>
+    <li>Wi-Fi and mobile data off — the copy is local, so the radios are pure battery cost. SnapDisk has no internet permission at all.</li>
+    <li>Time to let the copy finish, and time to check it — the backup is only a backup once you have opened a few photos on the drive. Do not delete anything from the phone until the check is done.</li>
+    <li>What you should not buy: do not buy a drive with no space to grow into — the phone will keep filling up — and do not buy a cable and call it an adapter — a charging cable connects the phone to a computer, which is the opposite direction.</li>
+  </ul>
+  <p>One drive, one job at a time. The phone&#x27;s photos need only the drive; the power bank needs the hub in Method 3.</p>
+
+  <h2>Method 1: SnapDisk — the phone, one tap</h2>
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk settings screen">
+    <figcaption>SnapDisk&#x27;s settings screen, showing the backup folder pickers. The From picker is where you point at the folder that holds the photos — tap it, browse to the phone&#x27;s storage, and choose it. Screenshot is from SnapDisk on a working Android phone — the settings screen is the same screen you will see.</figcaption>
+  </figure>
+  <p>SnapDisk is the one-tap version, and it runs entirely on the phone — the photos never leave it until they are on the drive. It needs Android 7.0 or later, which is minSdk 24 in the repo, and it is not on Google Play yet, so install the v0.1.2 APK from the GitHub release page before you start. One honest limit first: the copy runs as a foreground service, which is the mechanism Android gives a copy that must keep running with the screen off — but the repo holds no wake lock and no battery-saver handling, and no low-battery run has ever been tested, so screen-off continuation under battery saver is unverified.</p>
+  <ol>
+    <li>Charge first if you can. The fonelab guide&#x27;s advice is the right first step whenever there is a charger at all: an OTG adapter drains the battery quickly, so a few minutes on the charger before the drive goes in buys copy time. If there is no charger, skip to the next step — the copy fits inside the battery that is left.</li>
+    <li>Check how much the photos take. Open Settings, then Storage, and look at the photos number. That is the size the drive has to hold — and the reason to copy oldest-first, because the earliest photos are the ones a dying phone puts most at risk.</li>
+    <li>Switch Wi-Fi and mobile data off. The copy is local — SnapDisk has no internet permission — so the radios are pure battery cost, and the phone saves their share for the copy.</li>
+    <li>Open SnapDisk. It opens to a settings screen with a From folder and a To folder, each with a folder picker. The defaults are already right for most people: From /sdcard/DCIM (your camera photos), To /disk/DCIM on the drive.</li>
+    <li>Check From — and check it twice, because a phone&#x27;s photos may not all sit in DCIM. If your photos live somewhere else — a messaging app&#x27;s folder, a downloads folder — tap the From picker and choose that folder. The picker is the Android system folder picker, and the app keeps access to it.</li>
+    <li>Plug in the USB drive. SnapDisk offers a backup in a notification: &quot;External storage is connected. Backup photos?&quot; with Backup and Cancel.</li>
+    <li>Tap Backup. Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally, with live progress — percent, GB copied / total, speed, time left — and Pause and Stop.</li>
+    <li>Turn the screen off. This is the battery saving that matters: the copy is a foreground service, built to keep running with the screen off, and the screen is the biggest drain you control. Wake the phone when you want to check progress — the notification shows percent, GB copied / total, speed, and time left — then turn the screen off again.</li>
+    <li>If the phone is in battery saver and the copy pauses, turn battery saver off for the copy and tap Resume. This is advice, not a verified fact — battery-saver behaviour with SnapDisk is untested — and the resume is the safety net either way.</li>
+    <li>Wait for the copy to finish. If the phone dies first, go to Method 4 — finished files stay on the drive, and resume picks up where it stopped.</li>
+    <li>Open a few photos on the drive before doing anything else — older photos and a long video, not just the most recent ones. If they open at full quality, the copy is good.</li>
+    <li>Delete the originals from the phone. In the Gallery or the Files app, select the photos you just copied and delete them. Only now does the phone get its space back — the copy alone freed nothing.</li>
+  </ol>
+  <p>Free version: backs up manually, up to 5 GB per run — one tap — and running it again past the cap picks up where it stopped, because files already copied are never copied twice. On a low battery that cap is a feature, not just a limit: a short run copies the oldest 5 GB first, so even a partial run saves the earliest photos. Pro is a one-time $9.99 purchase — auto-backup on connect and unlimited size. SnapDisk copies the original files as they are — no recompression, no resizing, no quality loss — and it copies, it never deletes.</p>
+
+  <h2>Method 2: by hand in the Files app (no app needed)</h2>
+  <p>Same phone, no app to install, and no Play Store or APK needed. This is the manual version of Method 1, and it is the route every guide above describes — and the route to use when the phone cannot install anything:</p>
+  <ol>
+    <li>Plug the USB drive into the phone — directly, if it is a USB-C drive, or through an OTG adapter for a regular USB drive. A notification appears; tap it and choose Transfer photos or File Transfer if it asks.</li>
+    <li>Open the Files app and find the photos — usually in DCIM, or in Pictures. Select the photos and videos — long-press one, then tap the rest — then tap Copy.</li>
+    <li>Tap the USB drive in the Files app, open the folder you want them in, and tap Paste. Or drag and drop, if the Files app on your phone supports it.</li>
+    <li>Keep the phone unlocked while the copy runs. The mobiletrans guide says so plainly: keep the phone unlocked during large transfers to prevent connection pauses. This is the manual copy&#x27;s battery cost — the screen stays on for the whole transfer — and it is why the manual copy is the worse choice on a low battery, not the better one.</li>
+    <li>Wait for the copy to finish, then open a few photos on the drive before doing anything else — older photos and a long video, not just the most recent ones.</li>
+    <li>Delete the originals from the phone. In the Gallery or the Files app, select the photos you just copied and delete them.</li>
+  </ol>
+  <p>Copy, not Move: the Files app&#x27;s Move option copies and then deletes the originals in one step, and if the copy fails halfway, photos are already gone from the phone — and on a low battery the copy is more likely to fail, not less. The mobiletrans guide&#x27;s version of the same warning is to repeat an interrupted transfer in smaller batches. What the manual copy does not give you is the one-tap backup: no oldest-first order, no progress bar with speed and ETA, no Pause and Stop, and no resume if the phone dies mid-copy — and on a library that can run to tens of gigabytes, the missing resume is the part you will feel first, because you have to repeat the whole selection next time.</p>
+
+  <h2>Method 3: charge while you copy — the power bank and the hub</h2>
+  <p>This is the route to use when you have a power bank but no wall charger — and it is the only route that charges the phone while the drive is in. The problem is the port: the drive occupies the phone&#x27;s only USB-C port, so a power bank plugged straight into the phone has nowhere to go while the drive is in. The hub is what gives the port back:</p>
+  <ol>
+    <li>Plug the USB-C hub into the phone. The hub needs a USB-C port for the phone, at least one USB-A port for the drive, and a USB-C PD port for power in — a charging-only hub will not carry the drive, so check the hub supports data and PD pass-through before you buy it.</li>
+    <li>Plug the power bank into the hub&#x27;s PD charging port. The phone should show it is charging — check that first, before the drive goes in, because a hub that does not pass power through is just an expensive adapter.</li>
+    <li>Plug the USB drive into the hub&#x27;s USB-A port. Check the drive appears — in the Files app, or in SnapDisk&#x27;s notification — before tapping Backup. If the phone does not see the drive through the hub, try a different hub: the eztoolset guide warns that a hub may create additional power and compatibility issues.</li>
+    <li>Tap Backup in SnapDisk, turn the screen off, and let the copy run while the phone charges. This is the same copy as Method 1, with the clock switched off.</li>
+  </ol>
+  <p>Two honest limits, both stated in the dek: the hub route is standard USB-C behaviour but unverified with SnapDisk — no hub run has been tested — so test it before relying on it, and a powered hub is also the mobiletrans guide&#x27;s fix for a drive the phone cannot power on its own. And without a hub, the fonelab guide&#x27;s advice stands: charge the phone first, then copy — doing the two jobs in sequence instead of at once is the hub-free version of the same fix, and copying oldest-first means even a short run saves the earliest photos.</p>
+
+  <h2>Method 4: if the phone dies mid-copy</h2>
+  <p>This is the step the resume exists for, and it is the step where the one-tap version and the manual version split apart:</p>
+  <ol>
+    <li>Charge the phone a little. You do not need a full charge — a few percent is enough to reopen the app and resume, because the copy picks up where it stopped instead of starting over.</li>
+    <li>Plug the USB drive back in and reopen SnapDisk. The backup shows as paused, with the progress it reached — finished files are already on the drive, and the file that was in flight keeps its partial copy.</li>
+    <li>Tap Resume. The copy continues from where it stopped, because files already copied are never copied twice — verified in the repo, where a paused copy resumes the same file, byte-exact, from its partial file.</li>
+    <li>One more limit, also verified: on Android 15 and later, a dataSync foreground service gets 6 hours in 24 hours, so a very long copy can be paused by Android itself. Opening the app resets the timer — which is what you just did by reopening it — so the resume works.</li>
+    <li>Open a few photos on the drive before doing anything else — older photos and a long video, not just the most recent ones. If they open at full quality, the copy is good.</li>
+  </ol>
+  <p>If you were copying by hand in the Files app, there is no resume to tap: re-select the photos and copy again, and open the file that was in flight when the phone died and check it before trusting it — the mobiletrans guide warns that copied files can appear incomplete after a transfer interruption, and a phone dying mid-copy is exactly that interruption. The manual copy&#x27;s answer to a dead phone is to start over; SnapDisk&#x27;s answer is to resume.</p>
+
+  <h2>What this does not do</h2>
+  <ul>
+    <li><strong>Does not charge the phone while the drive is plugged in.</strong> One port holds either the drive or the charger, not both — unless the connection goes through a USB-C hub with pass-through charging, which is standard USB-C behaviour but unverified with SnapDisk.</li>
+    <li><strong>Does not keep copying if the phone dies.</strong> A dead phone copies nothing — the copy pauses, finished files stay on the drive, and resume picks up where it stopped after you charge a little and reopen the app.</li>
+    <li><strong>Does not promise the copy continues under battery saver.</strong> The repo holds no wake lock and no battery-saver handling, and no low-battery run has been tested — if the copy pauses under battery saver, turn battery saver off for the copy and tap Resume.</li>
+    <li><strong>Does not run past Android&#x27;s 6-hour dataSync budget without a pause.</strong> On Android 15 and later, a dataSync foreground service gets 6 hours in 24 hours — if the copy runs past that, Android pauses it, and opening the app resets the timer.</li>
+    <li><strong>Does not install below Android 7.0.</strong> SnapDisk needs Android 7.0 or later — minSdk 24 in the repo — so on a phone running older Android, use Method 2 instead: the Files-app copy has no version floor.</li>
+    <li><strong>Does not copy files over 4 GB off a FAT32 drive.</strong> Drives formatted FAT32 cannot hold a single file over 4 GB — SnapDisk skips those files and lists them instead of failing the whole backup, per the repo README. A drive formatted exFAT has no such limit.</li>
+    <li><strong>Does not back up anything but photos and videos.</strong> SnapDisk copies image and video files only — no settings, no contacts, no messages, no app data.</li>
+    <li><strong>Does not back up photos that live only in the cloud.</strong> If your originals live only in Google Photos, they are not on the phone to copy — download them to the phone first, or export them from photos.google.com.</li>
+    <li><strong>Does not back up photos from apps that hide them.</strong> If an app keeps its photos in a private folder SnapDisk cannot read, those photos stay in the app.</li>
+    <li><strong>Does not fix a phone that will not boot.</strong> If the phone will not turn on, no software route exists — check the cloud, then repair.</li>
+    <li><strong>Does not work on iPhone.</strong> SnapDisk is Android only. On an iPhone the low-battery route is the Files app with a USB-C drive, or iCloud — and the cloud route burns battery uploading for hours.</li>
+    <li><strong>Does not compress.</strong> SnapDisk copies the original files as they are — no recompression, no resizing, no quality loss.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Starting a big copy at 5% with no plan.</strong> Charge first if you can — the fonelab guide&#x27;s advice — or copy oldest-first in short runs, so even a partial run saves the earliest photos. A library that needs hours does not fit in a battery that has minutes.</li>
+    <li><strong>Starting the manual copy on a low battery.</strong> The manual copy needs the phone unlocked for the whole transfer, so the screen burns the battery you are trying to save. The background copy with the screen off is the low-battery route — that is Method 1, not Method 2.</li>
+    <li><strong>Moving instead of copying.</strong> The Files app&#x27;s Move option copies and then deletes the originals in one step. If the copy fails halfway, photos are already gone from the phone — and on a low battery the copy is more likely to fail, not less. Copy first, verify, then delete.</li>
+    <li><strong>Deleting from the phone before verifying.</strong> A backup is only a backup once you have confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Uploading to the cloud on a low battery.</strong> A cloud backup needs Wi-Fi, upload time, and free space in the account — and the phone burns battery uploading for hours. The drive copy is local, and it is the fast way out of a low battery.</li>
+    <li><strong>Leaving Wi-Fi and mobile data on during the copy.</strong> The copy is local — SnapDisk has no internet permission — so the radios are pure battery cost. Switch them off before the copy starts.</li>
+    <li><strong>Buying a charging-only hub and expecting data.</strong> A hub that only passes power through will not carry the drive — check the hub supports data and PD pass-through before you buy it, and test it before relying on it.</li>
+    <li><strong>Buying a hub without pass-through charging and expecting it to charge.</strong> A hub with USB-A ports and no PD port is the eztoolset guide&#x27;s peripherals hub, not a charging hub — the phone still cannot charge while the drive is in.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk&#x27;s Stop button exists for exactly this. In the Files app, eject the drive before unplugging it.</li>
+    <li><strong>Using a FAT32 drive for long videos.</strong> FAT32 cannot hold a single file over 4 GB. Use exFAT — it is what the mobiletrans guide recommends for large files — and check the drive&#x27;s format before you are relying on it.</li>
+    <li><strong>Reformatting the drive without copying its files off first.</strong> Reformatting erases the drive — copy existing files elsewhere before reformatting, and test the drive with the phone before the copy.</li>
+    <li><strong>Buying a drive too small for the whole library.</strong> Make sure it is big enough for the entire library, including videos — and with room to keep backing up the same phone afterwards. Check the size in Settings before you buy.</li>
+    <li><strong>Buying a charging cable and calling it an adapter.</strong> A charging cable connects the phone to a computer, which is the opposite direction. What you need is a data-capable adapter or a USB-C drive.</li>
+    <li><strong>Buying the wrong adapter for the port.</strong> USB-C and micro-USB do not fit each other. Check the phone&#x27;s port before buying — and check the adapter supports data transfer, not just charging.</li>
+    <li><strong>Expecting the free 5 GB cap to cover a whole library in one run.</strong> The free version backs up manually up to 5 GB per run — run it again past the cap and it picks up where it stopped, because files already copied are never copied twice — but a whole library is bigger than 5 GB, so it takes several taps, and that is the case Pro is for.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> a low battery is a clock, not a wall — charge first if you can, copy oldest-first with the screen off if you can&#x27;t, and if the phone dies, charge a little and resume: finished files stay copied, the partial file picks up where it stopped, and the delete comes only after the check.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>Closest parallel: <a href="storage-full-photos-to-usb.html">Back up photos to USB when phone storage is full</a> — the other emergency version of this job, on a phone that is already full: same copy, same verify-then-delete order, with the too-full-to-install step instead of the low-battery clock. If the battery is fine and you just want the space back, check <a href="free-up-space-move-photos-to-usb.html">How to free up space by moving photos to a USB drive</a> — the housekeeping version, on a phone that still works. If you want the generic route with no situation attached, check <a href="transfer-photos-to-usb-automatically.html">Transfer photos to USB automatically</a> — the one-tap copy this article builds on — or <a href="backup-photos-offline.html">How to back up photos offline on Android</a>, the no-cloud version of the same job. If your phone&#x27;s screen is broken as well, check <a href="broken-screen-photos-to-usb.html">Back up photos from a broken-screen phone to USB</a> — the same one-port problem, with a mouse instead of a charger fighting the drive for the port. Or <a href="index.html">the full list of phone-to-USB guides</a>.</p>
+</article>
+<footer>
+  <p>SnapDisk — back up photos to a USB drive, no computer needed.<br>
+  <a href="./">Home</a> · <a href="blog/">Blog</a> · <a href="https://github.com/dzianisv/photo-backup">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>
