@@ -13994,6 +13994,177 @@ demand is read off competitor install velocity instead (see
   drafted Nov 20, 2026 (WL-172, 140th how-to):
   docs/storage-full-photos-to-usb.html — branch wl-172-storage-full.
 
+### 140. "back up photos to USB when your phone battery is low / with no charger (no computer)" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return real guides — five of
+  them — our own offline-backup and external-drive articles,
+  mobiletrans.wondershare.com, a Samsung community thread, and a
+  Photostock OmniX review — plus four battery-advice guides from a
+  second search (power bank / charge while copying): fonelab.com,
+  invotech.dut.ac.za, sekin.in, and eztoolset.com. All nine are manual
+  select-copy-paste, one-line battery advice, or a $34.99 hardware
+  product, none of them is a whole-library one-tap backup framed for
+  the low-battery moment, and none of them mentions SnapDisk. Our own
+  offline-backup and external-drive articles are the adjacent ground:
+  they cover the same one-tap copy, but say nothing about a low
+  battery, a power bank, or charging while copying — and this article
+  is the low-battery version, with the screen-off copy, the
+  power-bank hub, and the resume if the phone dies.
+- Current top results (scored Nov 20, 2026, live web search):
+  SnapDisk, "How to back up photos offline on Android"
+  (https://dzianisv.github.io/photo-backup/backup-photos-offline.html
+  — our own article, and the closest ground to this one: plug a USB
+  drive into the phone and copy the photos to it — no cloud, no
+  account, no upload — in one tap with SnapDisk, oldest-first in the
+  background with progress, Pause and Stop. Its angle is privacy — a
+  copy that never leaves your devices — and it says nothing about a
+  low battery, a power bank, or charging while copying; curl 200);
+  SnapDisk, "How to back up photos to an external drive on Android"
+  (https://dzianisv.github.io/photo-backup/backup-photos-to-external-drive.html
+  — our own article again: the same one-tap copy to a USB-C flash
+  drive, a portable hard drive, or a portable SSD, with the same
+  oldest-first background copy. Its angle is the drive — which drive
+  to pick, and that a spinning hard drive may need its own power. A
+  real external-drive guide, but it says nothing about a low battery
+  either; curl 200);
+  mobiletrans.wondershare.com, "Back Up a Phone to USB Without Cloud
+  Storage"
+  (https://mobiletrans.wondershare.com/android-backup/how-to-back-up-a-phone-to-an-external-usb-drive-without-cloud-storage.html
+  — the closest guide to this article's method: connect the phone
+  through a USB-OTG adapter, or copy phone files to a computer first,
+  then move them to the drive. Its fixes are the ones to keep: copied
+  files can appear incomplete after a transfer interruption, so repeat
+  the transfer in smaller batches; and keep the phone unlocked during
+  large transfers to prevent connection pauses — which is the manual
+  copy's battery problem in one line, because an unlocked screen burns
+  the battery you are trying to save. A real phone-to-USB guide — but
+  a manual folder copy in the Files app, with a computer as the
+  fallback, and it says nothing about the low-battery moment or about
+  SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page);
+  Samsung community, "How to take pictures off phone and put on memory
+  stick"
+  (https://stg-r1.community.samsung.com/t5/galaxy-s/how-to-take-pictures-off-phone-and-put-on-memory-stick/m-p/15256917
+  — the forum thread: plug the USB stick into the phone through an OTG
+  adapter, open My Files, select the photos, Copy, choose the USB
+  drive, then unmount. A real phone-to-USB answer — but a forum thread,
+  not a guide, and its answer is the same manual select-copy-paste,
+  with nothing about a low battery or about SnapDisk; curl 000,
+  verified via browser text fetch, full page, 0 SnapDisk mentions);
+  curatedly.co, "Photostock OmniX Review (2026)"
+  (https://curatedly.co/products/of_photostock_omni_x
+  — the hardware alternative: a $34.99 portable drive with four
+  built-in connectors and a companion app that scans the phone and
+  copies media with one tap, offline, with no Wi-Fi and no batteries.
+  A real one-tap offline product — but a product review, not a guide,
+  it costs $34.99 for the drive, and it says nothing about a low
+  battery, a power bank, or SnapDisk; curl 200, 0 SnapDisk mentions
+  in the fetched page).
+  The battery advice the search does return, from a second search for
+  the power-bank and charge-while-copying angle:
+  invotech.dut.ac.za, "Easy! Transfer Files From Android to USB Drive
+  (Guide)"
+  (https://www.invotech.dut.ac.za/how-to-transfer-files-from-android-to-usb-drive/
+  — the only guide with a power section: USB drives draw power from
+  the connected phone, which can affect battery life during large
+  transfers, and certain drives may exceed what the phone can supply
+  — so use a lower-power drive, or connect the phone to a power source
+  during the transfer. Its FAQ asks it outright — does transferring
+  files consume significant battery power — and answers yes,
+  especially for large files, and to connect to a power source during
+  the transfer. The closest thing to a low-battery guide in the
+  results — but one section inside a general transfer guide, its copy
+  is manual, and it says nothing about SnapDisk; curl 000, content
+  confirmed via live search index, no SnapDisk in the indexed
+  excerpt);
+  fonelab.com, "How to Transfer Photos from Android to Flash Drive in 3
+  Easy Ways"
+  (https://www.fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html
+  — the three-way transfer: an OTG adapter plus the Files app, a PC
+  with File Explorer, or Samsung Smart Switch. Its battery line is the
+  one this article borrows: an OTG adapter drains your Android phone
+  battery quickly, so before transferring your photos using it, it is
+  better to charge your Android phone first. A real
+  phone-to-flash-drive guide — but the battery advice is one sentence,
+  the copy is manual select-copy-paste, one of its three ways needs a
+  PC, and it says nothing about SnapDisk; curl 200, 0 SnapDisk
+  mentions in the fetched page);
+  sekin.in, "Transfer Photos From Android to a USB Flash Drive"
+  (https://sekin.in/how-to-transfer-pictures-from-android-to-a-usb-flash-drive/
+  — the direct-USB guide: a USB-C flash drive, or a USB-A drive
+  through an OTG data adapter, then Files by Google, Copy not Move,
+  verify, eject. Its battery line is one item in the what-you-need
+  list: a reasonably charged phone, because large transfers can take
+  time and the phone powers the USB device. A real
+  phone-to-flash-drive guide — but the battery advice is one line, the
+  copy is manual, and it says nothing about SnapDisk; curl 200, 0
+  SnapDisk mentions in the fetched page);
+  eztoolset.com, "How to Transfer Photos from Android to a USB Drive"
+  (https://eztoolset.com/how-to-transfer-photos-from-android-to-a-usb-drive/
+  — the direct-USB guide: a USB-C flash drive, or a USB-A drive
+  through an OTG adapter, then Files by Google. Its hub line is the one
+  to keep: a USB-C hub with USB-A ports can be useful if you need
+  several peripherals, but it is less portable and may create
+  additional power and compatibility issues — and a portable SSD is
+  better considered for very large libraries, because phones may not
+  supply enough power for every SSD. A real phone-to-USB guide — but
+  its hub is for peripherals, not for charging while copying, its copy
+  is manual, and it says nothing about SnapDisk; curl 200, 0 SnapDisk
+  mentions in the fetched page).
+- A low battery is a clock, not a wall — the photos are still on the
+  phone, the drive is still in your hand, and the copy is still a
+  local one that needs no Wi-Fi and no upload. The copy itself costs
+  battery: the drive draws its power from the phone (invotech), and an
+  OTG adapter drains the battery quickly (fonelab — charge first if
+  you can). The screen is the biggest drain the reader controls: the
+  manual copy needs the phone unlocked for the whole transfer
+  (mobiletrans), so a manual copy burns battery on the screen, while a
+  background copy does not — start it, turn the screen off, and the
+  copy runs on its own. The one-port trap is the same class of problem
+  as the broken-screen article's: one port holds either the drive or
+  the charger, not both, unless the connection goes through a USB-C
+  hub with pass-through charging — standard USB-C behaviour, but
+  unverified with SnapDisk, so the article says to test it before
+  relying on it. The cloud is the worst option on a low battery: it
+  needs Wi-Fi, upload time, and free space in the account, and the
+  phone burns battery uploading for hours. The repo facts that carry
+  the article, read from the code this run: the copy runs as a
+  foreground service (dataSync type, BackupService.kt) — the mechanism
+  Android gives a copy that must keep running with the screen off —
+  but the repo holds no wake lock and no battery-saver handling (grep
+  over app/src/main, README, and docs finds no WakeLock, PowerManager,
+  or power-save code, and the manifest holds no
+  REQUEST_IGNORE_BATTERY_OPTIMIZATIONS), and no low-battery run has
+  ever been tested, so screen-off continuation under battery saver is
+  unverified and the article says so instead of promising it. What IS
+  verified: if the phone dies mid-copy, finished files stay on the
+  drive, the file in flight keeps its partial copy, and resume picks up
+  where it stopped (byte-exact .part resume, skip-if-exists); and on
+  Android 15 and later a dataSync foreground service gets 6 hours in
+  24 hours, so a very long copy can be paused by Android itself, and
+  opening the app resets the timer (WL-34). SnapDisk needs Android 7.0
+  or later (minSdk 24 in the repo) and is not on Google Play yet, so
+  install the v0.1.2 APK from GitHub. The free version backs up
+  manually up to 5 GB per run, picking up where it stopped past the
+  cap — on a low battery that cap is a feature, because a short run
+  copies the oldest 5 GB first — which is the case Pro is for; Pro is
+  a one-time $9.99 purchase that auto-starts the backup on connect and
+  removes the size limit. The screenshot in the article is from
+  SnapDisk on a phone — the same settings screen the reader will see.
+  The From folder is a picker, not a fixed path — tap it, browse to the
+  phone's storage, and choose the folder that holds the photos, which
+  the picker reaches because it is the system folder picker, verified
+  in the repo as OpenDocumentTree. Drives formatted FAT32 cannot hold a
+  single file over 4 GB — SnapDisk skips those files and lists them
+  instead of failing the whole backup, per the repo README — so use
+  exFAT. SnapDisk copies, it never deletes. This is the seventh article
+  in the series about a situation instead of a phone brand — the brand
+  series ran to 134 articles, and the broken-screen, switching-phones,
+  SD-card, tablet, Chromebook, and storage-full articles were the first
+  six.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 20, 2026 (WL-173, 141st how-to):
+  docs/low-battery-photos-to-usb.html — branch wl-173-low-battery.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
