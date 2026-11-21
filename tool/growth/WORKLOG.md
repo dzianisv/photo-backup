@@ -1,3 +1,75 @@
+## WL-170 — Back up photos from a tablet to USB article, 138th how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #313 MERGED (merge commit 5f9887f3, merged
+  2026-11-21T01:37:41Z; PR head 76c9fee, CI run 44851090083
+  build pass, 1m34s; post-merge main runs Android PR
+  44851282034 + pages 44851281149 success).
+  Pre-merge readback on head 76c9fee (verified by the
+  supervisor from the branch source): feed 138 items incl.
+  tablet, sitemap 142 URLs incl. tablet, blog index 138
+  BlogPosting (JSON-LD parses), title 49 chars, meta 132 chars,
+  JSON-LD parses (Article + FAQPage 4 Qs + BreadcrumbList,
+  datePublished 2026-11-20), TL;DR present, 1 script tag, 1 H1,
+  10 H2s, Query 137 row present, only docs/ + tool/growth
+  changed (7 files, +448/−0).
+  Query 137 scored honestly from live evidence (no
+  "no guide exists" claim): the exact query returns real
+  tablet guides — ceedo.com "How To Transfer Photos From
+  Tablet To USB Flash Drive" (most tablet-specific,
+  Android/iPad/Windows, USB-C vs micro-USB), thecomputerbasics.com
+  "Transfer Files Without a Computer" (phones + tablets; warns
+  spinning drives disconnect on tablet power, NTFS read-only,
+  exFAT recommended), ssa-digital.com Android tablet OTG
+  checklist, brightideaphotography.com camera-card → SSD bridge
+  (phone/tablet as bridge, not the tablet's own photos), and
+  (lead's search) pixoneye.com phone-to-USB guide — all manual
+  select-copy-paste. None of them is a whole-library one-tap
+  tablet-to-USB backup, and none mentions SnapDisk; the gap
+  stands on that angle. Supervisor's fresh quoted re-search
+  returned the same four (ceedo, thecomputerbasics,
+  ssa-digital, brightideaphotography), same conclusion.
+  New docs/tablet-photos-to-usb.html ("Back up photos from a
+  tablet to USB (no computer)"), following the
+  WL-54–WL-169 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot,
+  with an honest caption: screenshot is from a phone, not a
+  tablet — tablet layout unverified, stated in caption, dek,
+  and FAQ). Title 49 chars, meta 132 chars. Dek states
+  exactly 14 caveats, verified by count.
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full tablet section: heading + URL + dek +
+  TL;DR + Search + Method 3 + What this does not do + What to
+  avoid — verified complete), feed.xml updated;
+  searches.md Query 137 row added.
+  Key finding: a tablet is not a big phone for backup —
+  larger libraries, microSD slot on many Android tablets
+  (ZTE Axon tablet takes microSD to 128 GB) but never on
+  iPad, USB-C vs micro-USB, OTG varying by model; the
+  WL-169 phone-bridge pattern does not apply the same way
+  (tablet holds the photos itself; bridge only reappears
+  for a camera card). SnapDisk behaviour verified from the
+  repo itself: minSdk 24 (Android 7.0 floor), Pro $9.99
+  auto-backup on connect, free 5 GB/run with resume
+  (skip-if-exists + .part resume + size verification), FAT32
+  >=4 GB files skipped and listed, From-folder picker is
+  OpenDocumentTree SAF so it reaches the card.
+  Link verification: 8 outbound links — 6 curl 200,
+  petapixel curl 403 verified live via search, pixoneye
+  curl 520 verified live via browser.open; own canonical
+  404 pre-merge (expected; confirmed live post-merge by
+  the supervisor).
+  Live fetch verified by the supervisor:
+  tablet-photos-to-usb.html 200 (42,130 B, correct title),
+  feed.xml 138 items live incl. tablet.
+  Lead's run record: no failed execs. One self-inflicted
+  check-script mistake (blog JSON-LD looked for top-level
+  BlogPosting in @graph; entries live in the Blog's
+  blogPost array) — file was correct, re-ran with the
+  right path, passed (138 entries).
+  WL-171 fallback: Chromebook scenario (unverified).
+
 ## WL-169 — Back up photos from an SD card to USB article, 137th how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
