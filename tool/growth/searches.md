@@ -15162,6 +15162,148 @@ demand is read off competitor install velocity instead (see
   drafted Nov 21, 2026 (WL-179, 147th how-to):
   docs/flight-photos-to-usb.html — branch wl-179-flight.
 
+### 147. "back up photos to USB before handing your phone in for repair" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return real guides — five
+  of them: Android Central's cloud-and-USB-to-PC transfer guide,
+  GigaGone's Android backup guide (which DOES name a repair wipe as
+  a risk, but its route is cloud plus a PC copy) and its
+  photos-and-videos guide, Techsith's get-all-pictures-off guide,
+  and Samsung's Maintenance Mode backup guide, which IS written
+  for the repair moment — plus our own broken-screen and
+  selling-phone articles. None of the five frames a whole-library
+  one-tap phone-to-USB backup for the before-repair moment, and
+  none of them mentions SnapDisk.
+- Current top results (scored Nov 21, 2026, live web search):
+  androidcentral.com, "How to transfer Android photos to PC or
+  back them up in the cloud"
+  (https://www.androidcentral.com/how-get-photos-your-android-phone
+  — the cloud-and-PC transfer guide: Google Photos, Prime Photos,
+  Google Drive, Dropbox, and OneDrive for the cloud, and a manual
+  USB transfer to a computer — connect the phone, tap Transfer
+  images, open DCIM, copy, paste. A real backup guide — but its
+  route is the cloud or a computer, its copy is manual
+  select-copy-paste, it says nothing about a repair or handing the
+  phone in, and it says nothing about SnapDisk; curl 200, 0
+  SnapDisk mentions in the fetched page);
+  gigagone.com, "How to Back Up an Android Phone"
+  (https://gigagone.com/back-up-android-phone/
+  — the Android backup guide: Google device backup in Settings,
+  Google Photos for the camera roll, and a local USB copy to a PC
+  in File Transfer mode. The closest near-miss of the five — it
+  DOES name the risk: a reliable backup protects your photos "if
+  your phone is lost, damaged, or wiped during a repair". A real
+  guide, and the only one of the five that says the repair word at
+  all — but its route is still cloud plus a PC copy, it needs a
+  computer, its copy is manual, it is not a one-tap phone-to-USB
+  backup, and it says nothing about SnapDisk; curl 200, 0
+  SnapDisk mentions in the fetched page);
+  gigagone.com, "How to Back Up Your Photos and Videos"
+  (https://gigagone.com/back-up-photos-and-videos/
+  — the photos-and-videos guide: back up photos and videos from
+  iPhone, Android, Windows, and Mac using cloud services and a
+  local external drive. A real guide — but it is a general guide
+  for four platforms at once, its local copy goes through a
+  computer to an external drive, it says nothing about a repair or
+  handing the phone in, and it says nothing about SnapDisk; curl
+  200, 0 SnapDisk mentions in the fetched page);
+  techsith.com, "How Do I Get All My Pictures Off My Phone?"
+  (https://techsith.com/how-do-i-get-all-my-pictures-off-my-phone/
+  — the generic get-everything-off guide: a cable to a computer,
+  a cloud backup and then a download, or a direct copy to a USB
+  drive — plug a USB-C drive in, open Files by Google, copy or
+  move DCIM and other folders. A real guide, and the only one of
+  the five with a phone-to-USB-drive step — but its copy is manual
+  select-copy-paste, it covers iPhone and Android and three
+  methods at once, it says nothing about a repair or handing the
+  phone in, and it says nothing about SnapDisk; curl 000 (bot
+  protection), browser-verified live, no SnapDisk in the fetched
+  page text);
+  samsung.com, "Backup your Galaxy device with a broken or damaged
+  screen using Maintenance mode"
+  (https://www.samsung.com/ca/support/mobile-devices/backup-your-galaxy-device-with-a-broken-or-damaged-screen-using-maintenance-mode/
+  — the one guide written for the repair moment itself: Samsung's
+  Maintenance Mode, which locks personal data away before sending
+  the phone in for repair, with a backup step — Temporary cloud
+  backup or External storage backup — and Samsung says enabling
+  Maintenance Mode is mandatory before a repair appointment. A
+  real repair guide — but it is Samsung-only, it needs an external
+  display, a USB-C to HDMI hub, a mouse, and a keyboard to reach
+  the backup on a broken screen, and its backup is a cloud or
+  external-storage backup through Maintenance Mode, not a one-tap
+  whole-library phone-to-USB backup, and it says nothing about
+  SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page).
+  Our own broken-screen article also surfaced — the same one-tap
+  copy, framed for a phone with a cracked screen — but its moment
+  is the broken screen, not the repair appointment, and it says
+  nothing about the handover, the shop, or what to take out of
+  the phone before it goes in. Our own selling-phone article also
+  surfaced — the same one-tap copy, framed for a phone changing
+  hands for good — but its moment is the sale, not the repair: a
+  sold phone never comes back, a repaired phone does, and the
+  handover rules are different. The backup has to COMPLETE and be
+  verified on the drive BEFORE handing the phone over — a copy
+  still running at the shop is not a backup, and a shop wipe or
+  reset has no undo. The drive stays at home with you — never
+  hand it to the shop with the phone, because a drive handed over
+  is a copy you no longer hold. A repair shop is a stranger with
+  your phone — the backup is what lets you lock the phone down,
+  or wipe it yourself, without losing the photos. This route is
+  only for a phone that still works and has a dry, undamaged port
+  — never plug anything into a damaged port, and a dead phone is a
+  repair-lab job only (per WL-167). Cloud-only originals are a
+  trap (backup off / device folders not switched on /
+  storage-saver compressed copies — check photos.google.com);
+  the drive copy comes first and the cloud check waits for Wi-Fi.
+  One USB-C port holds the drive OR the charger, not both — charge
+  first, or use a powered hub with pass-through charging, which is
+  standard USB-C behaviour but unverified with SnapDisk. The repo
+  facts that carry the article, read from the code this run: the
+  copy runs as a foreground service (dataSync type,
+  BackupService.kt) — the mechanism Android gives a copy that
+  must keep running with the screen off — but the repo holds no
+  wake lock and no battery-saver handling (grep over
+  app/src/main finds no WakeLock) and no before-repair run has
+  ever been tested, so screen-off continuation under battery saver
+  is unverified and the article says so instead of promising it.
+  What IS verified: oldest-first on MediaStore DATE_TAKEN
+  (BackupEngine.kt, PhotoQuery.kt); resume covers an interrupted
+  copy — finished files stay on the drive (skip-if-exists with size
+  verification), the file in flight keeps its .part copy (byte-exact
+  .part resume); on Android 15 and later a dataSync foreground
+  service gets 6 hours in 24 hours, so a very long copy can be
+  paused by Android itself, and opening the app resets the timer
+  (WL-34); the manifest holds no INTERNET permission; SnapDisk
+  copies, it never deletes (delete() in BackupEngine.kt touches
+  only .part files). SnapDisk needs Android 7.0 or later (minSdk 24
+  in the repo) and is not on Google Play yet, so install the v0.1.2
+  APK from GitHub. The free version backs up manually up to 5 GB
+  per run, picking up where it stopped past the cap — a phone that
+  has never been backed up often holds a library bigger than 5 GB,
+  so it takes several taps, and that is the case Pro is for; Pro is
+  a one-time $9.99 purchase that auto-starts the backup on connect
+  and removes the size limit. The screenshot in the article is from
+  SnapDisk on a phone — the same settings screen the reader will
+  see. The From folder is a picker, not a fixed path — tap it,
+  browse to the phone's storage, and choose the folder that holds
+  the photos, which the picker reaches because it is the system
+  folder picker, verified in the repo as OpenDocumentTree. Drives
+  formatted FAT32 cannot hold a single file over 4 GB — SnapDisk
+  skips those files and lists them instead of failing the whole
+  backup, per the repo README — so use exFAT. Title is the 46-char
+  form as briefed in WL-180 — no parenthetical, below the 48–53-char
+  template band; the full "handing your phone in for repair"
+  phrasing is carried in the dek and TL;DR. This is the fourteenth
+  article in the series about a situation instead of a phone brand
+  — the brand series ran to 134 articles, and the broken-screen,
+  switching-phones, SD-card, tablet, Chromebook, storage-full,
+  low-battery, factory-reset, selling-phone, traveling,
+  Android-update, water-damage, and flight articles were the first
+  thirteen.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 21, 2026 (WL-180, 148th how-to):
+  docs/repair-photos-to-usb.html — branch wl-180-repair.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
