@@ -14684,13 +14684,22 @@ demand is read off competitor install velocity instead (see
 - Difficulty: Low. The exact query DOES return real guides — five
   generic phone-to-USB guides: FotoSafe's guided app backup,
   mefmobile.org, a YouTube OTG guide, umatechnology.org, and
-  Dr.Fone's four-method guide — plus our own factory-reset article.
-  FotoSafe is the closest near-miss, a guided app backup rather
+  Dr.Fone's four-method guide — plus two update-framed guides
+  (phoneguiding.com and umatechnology.org's Samsung-before-an-update
+  guide) and our own factory-reset article. FotoSafe is the closest
+  near-miss for the phone-to-USB method, a guided app backup rather
   than a manual copy, but its reason is the backup itself; the
-  other four are manual select-copy-paste with nothing about an
-  update — none of the six is a whole-library one-tap phone-to-USB
-  backup framed for the before-an-Android-update moment, and none
-  of them mentions SnapDisk.
+  other four generic guides are manual select-copy-paste with
+  nothing about an update. The two update-framed guides ARE framed
+  for the before-an-Android-update moment — phoneguiding.com lists
+  "Before a major Android or One UI update" as a moment to back up,
+  and the Samsung guide is titled for backing up before an update —
+  but their methods are cloud backup, Smart Switch full-device
+  backup, and manual copy, not a whole-library one-tap
+  photos-to-USB backup from the phone. None of the eight is a
+  whole-library one-tap phone-to-USB backup framed for the
+  before-an-Android-update moment, and none of them mentions
+  SnapDisk.
 - Current top results (scored Nov 20, 2026, live web search):
   fotosafe.weidisoft.net, "Back up Android photos to USB"
   (https://fotosafe.weidisoft.net/en/guides/back-up-android-photos-to-usb/
@@ -14753,6 +14762,23 @@ demand is read off competitor install velocity instead (see
   manual OTG copy, it says nothing about an Android update, and it
   says nothing about SnapDisk; curl 200, 0 SnapDisk mentions and 0
   mentions of a system or software update in the fetched page);
+  phoneguiding.com, "How to Back Up Android Phone (Google, Samsung, PC)"
+  (https://phoneguiding.com/back-up-android-phone/
+  — explicitly lists "Before a major Android or One UI update" as a
+  moment to back up; methods are Google backup, Google Photos,
+  Smart Switch to a computer, and manual copy. An update-framed
+  guide — but its methods are cloud backup and full-device backup
+  to a computer, not a whole-library one-tap photos-to-USB backup
+  from the phone, and it says nothing about SnapDisk; curl 200, 0
+  SnapDisk mentions in the fetched page);
+  umatechnology.org, "How to Back Up a Samsung Galaxy Before an Update"
+  (http://umatechnology.org/how-to-back-up-and-restore-a-samsung-galaxy-before-a-major-update/
+  — the update-framed Samsung guide: Smart Switch to a computer or
+  supported external storage (USB flash drive/SSD), Samsung Cloud,
+  Google Drive, and manual copy. An update-framed guide — but
+  Smart Switch is a full-device backup, not a one-tap photos-only
+  library backup from the phone, and it says nothing about
+  SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page);
   SnapDisk, "Back up photos to USB before resetting your phone"
   (https://dzianisv.github.io/photo-backup/factory-reset-photos-to-usb.html
   — the same one-tap copy, oldest-first in the background with
