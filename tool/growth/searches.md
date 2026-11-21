@@ -16063,6 +16063,154 @@ demand is read off competitor install velocity instead (see
   Article drafted Nov 21, 2026 (WL-185, 153rd how-to):
   docs/snapdisk-vs-fotosafe.html — branch wl-185-vs-fotosafe.
 
+### 153. "SnapDisk vs Photos to USB" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a SnapDisk-vs-Photos-to-USB
+  head-to-head comparison at all — the top results are our
+  own brand articles that name Photos to USB as a rival, and
+  an unrelated photo-stick comparison.
+- Current top results (scored Nov 21, 2026, live web search):
+  our own FOSSiBOT article
+  (https://dzianisv.github.io/photo-backup/fossibot-photos-to-usb.html
+  — names Photos to USB as a rival app: "Photos to USB: OTG
+  Backup copies a whole gallery to a pen drive in one tap and
+  resumes where it stopped" — a mention inside a FOSSiBOT
+  guide, not a comparison; live 200, verified this run);
+  our own Fujitsu article
+  (https://dzianisv.github.io/photo-backup/fujitsu-photos-to-usb.html
+  — the same Photos to USB mention inside a Fujitsu guide
+  ("free with ads, a one-time purchase removing the ads"),
+  not a comparison; live 200, verified this run);
+  our own Huawei article
+  (https://dzianisv.github.io/photo-backup/huawei-photos-to-usb.html
+  — names Photos to USB only in the contrast section, not a
+  comparison; live 200, verified this run);
+  Photo Stick vs. USB Flash Drive
+  (https://mefmobile.org/photo-stick-vs-usb-flash-drive-which-is-better-for-backing-up-android-photos/
+  — a generic photo-stick vs flash-drive comparison, no app
+  head-to-head, no SnapDisk mention);
+  Photos to USB Play listing
+  (https://play.google.com/store/apps/details?id=com.arzdrz.photos_to_usb
+  — "Photos to USB: OTG Backup", developer Akshay C P, first
+  release, updated Oct 1, 2026: one tap copies the whole
+  gallery — photos and videos, camera, WhatsApp, every other
+  folder — to a pen drive; next time only new photos are
+  copied; location kept; one folder per phone, sorted by
+  month; byte-for-byte original quality; each file fully
+  written before the app says it is done; FAT32 or exFAT,
+  NTFS read-only on many phones; "Keep the app open while it
+  copies. The screen stays on by itself."; "Free, with ads. A
+  one time purchase removes the ads for good." — price 0 USD;
+  the listing text we could read shows no ad-removal price
+  figure, no install count, and no rating; browser-verified
+  live this run);
+  Photos to USB AppBrain page
+  (https://www.appbrain.com/app/photos-to-usb-otg-backup/com.arzdrz.photos_to_usb
+  — same listing text as Play, price 0 USD; no install count
+  or rating shown in the page text we could read;
+  browser-verified live this run);
+  our own FotoSafe comparison
+  (https://dzianisv.github.io/photo-backup/snapdisk-vs-fotosafe.html
+  — comparison #2 in the series (WL-185), the adjacent ground
+  for this one: the same head-to-head shape, different rival;
+  live 200, verified this run).
+  Photos to USB facts, all from its own live sources this run:
+  the listing is a three-step flow (plug in, allow the drive
+  once, tap Copy); it spots the drive the moment it is in and
+  shows how much space it has; "One tap copies everything:
+  photos and videos, from your camera, WhatsApp and every
+  other folder"; "Next time, only new photos are copied. Plug
+  the same drive in next month and it skips everything that
+  is already there."; "Pulled the drive out by mistake?
+  Nothing breaks. Plug it back in and it carries on where it
+  stopped. Half copied files are never left looking
+  finished."; "Original quality. Every file is copied byte
+  for byte, nothing is compressed."; "Location kept. Android
+  normally strips where a photo was taken when an app reads
+  it. Photos to USB asks for the original, so your copies keep
+  it."; "Tidy folders. Photos land in one folder per phone,
+  sorted by month, so the drive stays easy to browse on a
+  computer."; "Safe to unplug. Each file is fully written to
+  the drive before the app says it is done."; "Works with pen
+  drives formatted as FAT32 or exFAT"; "A drive formatted as
+  NTFS opens read only on many phones; the app tells you if
+  that happens."; "FAT32 drives cannot hold a single file
+  over 4 GB, so very long videos need an exFAT drive. The app
+  tells you which ones were skipped."; "Keep the app open
+  while it copies. The screen stays on by itself."; "No
+  internet, no cloud, no account. Your photos never leave
+  your hands."; "Free, with ads. A one time purchase removes
+  the ads for good." The ad-removal price is UNVERIFIABLE: no
+  price figure appears in the Play listing text or the
+  AppBrain page text we could read — the article makes no
+  price comparison rather than guessing one. No install count,
+  rating, or review count was verified (none shown in the
+  listing text we could read), so none is cited. The listing
+  describes a copy ("copies your gallery onto it") and does
+  not say it deletes originals — the "Move your photos to a
+  pen drive" line is about the use case, not a delete claim.
+  No minimum Android version is stated in the listing text,
+  so none is claimed. Its guide says nothing about a
+  planned-backup preview, Pause and Stop, or a copy order,
+  so none is claimed for it.
+  The repo facts that carry the article, read from the code
+  this run: the copy runs as a foreground service
+  (dataSync type, BackupService.kt) — the mechanism
+  Android gives a copy that must keep running with the
+  screen off — but the repo holds no wake lock and no
+  battery-saver handling (BackupService.kt has no WakeLock
+  and no Doze reference, verified this run) and no
+  comparison run has ever been tested, so screen-off
+  continuation under battery saver is unverified and the
+  article says so instead of promising it. What IS verified:
+  oldest-first on MediaStore DATE_TAKEN (BackupEngine.kt,
+  PhotoQuery.kt); resume covers an interrupted copy —
+  finished files stay on the drive (skip-if-exists with
+  size verification), the file in flight keeps its .part
+  copy (byte-exact .part resume); the destination mirrors
+  the source folder structure (relativePath, BackupEngine.kt
+  / PhotoQuery.kt / BackupService.kt — Camera, Screenshots,
+  and the rest land where they were); on Android 15 and later
+  a dataSync foreground service gets 6 hours in 24 hours,
+  so a very long copy can be paused by Android itself, and
+  opening the app resets the timer (WL-34); the manifest
+  holds no INTERNET permission; SnapDisk copies, it never
+  deletes (delete() in BackupService.kt and BackupEngine.kt
+  touches only .part files). SnapDisk needs Android 7.0 or
+  later (minSdk 24 in the repo) and is not on Google Play
+  yet, so install the v0.1.2 APK from GitHub. The free
+  version backs up manually up to 5 GB per run, picking up
+  where it stopped past the cap — a phone that has never
+  been backed up often holds a library bigger than 5 GB,
+  so it takes several taps, and that is the case Pro is
+  for; Pro is a one-time $9.99 purchase that auto-starts
+  the backup on connect and removes the size limit. The
+  screenshot in the article is from SnapDisk on a phone —
+  the same settings screen the reader will see. The From
+  folder is a picker, not a fixed path — tap it, browse to
+  the phone's storage, and choose the folder that holds the
+  photos, which the picker reaches because it is the system
+  folder picker, verified in the repo as OpenDocumentTree
+  (MainActivity.kt). Drives formatted FAT32 cannot hold a
+  single file over 4 GB — SnapDisk skips those files and
+  lists them instead of failing the whole backup, per the
+  repo README — so use exFAT. The repo makes no location
+  claim either way, so the article does not score SnapDisk
+  on location. Own canonical URL returned 503 pre-merge
+  (the site's current not-found response — the
+  known-missing control URL returns the same 503, while
+  existing pages return 200; expected, live only after
+  merge). Title is the 56-char form "SnapDisk vs Photos to
+  USB: back up Android photos to USB" — within the ≤60-char
+  brief. This is the 154th article in the brand series —
+  the FotoSafe comparison (WL-185) is the adjacent ground
+  for this one, comparison #2 in the series, covering price,
+  free tier, copy order, and freeing up space against a
+  different rival.
+- Verdict: how-to article material, not a listing keyword.
+  Article drafted Nov 21, 2026 (WL-186, 154th how-to):
+  docs/snapdisk-vs-photos-to-usb.html — branch wl-186-vs-photos-to-usb.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
