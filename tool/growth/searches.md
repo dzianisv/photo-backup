@@ -14850,6 +14850,192 @@ demand is read off competitor install velocity instead (see
   drafted Nov 20, 2026 (WL-177, 145th how-to):
   docs/android-update-photos-to-usb.html — branch wl-177-android-update.
 
+### 145. "back up photos to USB from a water-damaged phone (before it dies)" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. The exact query DOES return real guides — seven
+  of them: alibaba.com's generic local-backup guide (USB cable +
+  computer, OTG manual copy, NAS, Wi-Fi apps), mdrepairs.com's
+  water-damage recovery lab, Wondershare Recoverit's water-damage
+  recovery guide, therepairdepot.com's broken-phone recovery guide,
+  gbtimes.com's broken-phone transfer guide, MobileTrans's
+  recover-or-back-up-to-PC guide, and topselect.ca's generic USB-C
+  drive backup guide — plus our own factory-reset article.
+  mdrepairs is the only guide written for the water-damage moment
+  itself, and its route is the lab, not a backup you do yourself —
+  its first step says do not try to back up your photos. The four
+  recovery guides end at a computer, recovery software, the cloud,
+  or a lab. The two generic guides are manual select-copy-paste
+  with nothing about water damage. None of the seven frames a
+  whole-library one-tap phone-to-USB backup for the water-damage
+  moment, and none of them mentions SnapDisk. (The supervisor's
+  gap also named techdim.com as a generic phone-to-flash-drive
+  manual copy, but two searches this run returned no techdim.com
+  URL for it, so it is not linked or counted as a fetched result
+  here — the seven above are the verified count.)
+- Current top results (scored Nov 21, 2026, live web search):
+  alibaba.com, "Step By Step Guide To Backing Up Photos From
+  Android To External Drive"
+  (https://www.alibaba.com/product-insights/step-by-step-guide-to-backing-up-photos-from-android-to-external-drive.html
+  — the generic local-backup guide: connect an external drive
+  over OTG, open the file manager, go to Internal Storage, DCIM,
+  Camera, select the photos, copy them to the drive, and safely
+  eject it. A real phone-to-USB method — but its reason is the
+  backup itself, its copy is manual select-copy-paste, it says
+  nothing about water damage, and it says nothing about SnapDisk;
+  curl 200, 0 SnapDisk mentions in the fetched page);
+  mdrepairs.com, "Water Damaged Phone? How to Save Your Data
+  First"
+  (https://mdrepairs.com/blog/water-damaged-phone-data-recovery/
+  — the recovery lab: power the phone off immediately, do not
+  turn it back on to "check" it, do not charge it or connect it,
+  because that pushes current through a corroding board — skip
+  the rice, arrange an inspection promptly, and check existing
+  backups from another device. A real water-damage guide, and the
+  only one in the results written for the moment itself — but its
+  route is the lab, not a backup you do yourself: its first step
+  says do not try to back up your photos, and it says nothing
+  about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched
+  page. The page quotes a $100 diagnostic, credited toward a
+  successful recovery, per the search result text);
+  recoverit.wondershare.com, "Top Ways to Retrieve Data from a
+  Water-Damaged Phone"
+  (https://recoverit.wondershare.com/memorycard-recovery/recover-data-from-water-damaged-phone.html
+  — the water-damage recovery guide: power the phone off right
+  away, remove the SD card, SIM, and battery, dry it with silica
+  packets for 24 to 48 hours, and do not turn it on, use a hair
+  dryer, or put it in rice — then retrieve the data with recovery
+  software, an SD card plugged into a PC, Dr.Fone over USB, a
+  cloud backup, or a professional recovery service. A real
+  water-damage guide — but its routes are a PC, recovery
+  software, the cloud, or a lab, not a whole-library one-tap
+  phone-to-USB backup from the phone, and it says nothing about
+  SnapDisk; curl 200, 0 SnapDisk mentions in the fetched page);
+  therepairdepot.com, "Can You Recover Data From a Broken or
+  Water-Damaged Phone?"
+  (https://www.therepairdepot.com/blog/post/can-you-recover-data-from-a-broken-or-water-damaged-phone
+  — the broken-phone recovery guide: check cloud backups first,
+  connect the phone to a computer over USB if it powers on, use a
+  USB OTG mouse if the screen is broken, and if the phone is
+  totally dead, chip-off recovery — professionals removing the
+  memory chip and extracting the data directly. A real recovery
+  guide — but its routes are the cloud, a computer, or chip-off
+  lab work, not a whole-library one-tap phone-to-USB backup from
+  the phone, and it says nothing about SnapDisk; curl 200, 0
+  SnapDisk mentions in the fetched page);
+  gbtimes.com, "How to Transfer Data from a Broken Phone?"
+  (https://gbtimes.com/how-to-transfer-data-from-a-broken-phone/
+  — the broken-phone transfer guide: turn a water-damaged phone
+  off immediately and resist the urge to turn it back on, dry it
+  with silica gel rather than rice, then transfer the data
+  through a cloud backup, a USB cable to a computer, or an OTG
+  mouse. A real transfer guide with a water-damage section — but
+  its routes are the cloud, a computer, or a mouse, not a
+  whole-library one-tap phone-to-USB backup from the phone, and
+  it says nothing about SnapDisk; curl 200, 0 SnapDisk mentions
+  in the fetched page);
+  mobiletrans.wondershare.com, "How to Recover or Back Up Data
+  from a Lost or Damaged Phone to a PC"
+  (https://mobiletrans.wondershare.com/android-backup/how-to-recover-or-back-up-data-from-a-lost-or-damaged-phone-to-a-pc.html
+  — the recover-to-PC guide: check existing backups first,
+  connect a working phone to a PC over USB in File Transfer mode
+  and copy DCIM and the other folders, use a microSD card in a PC
+  reader, and if the phone will not turn on, seek professional
+  recovery — while warning not to keep powering a liquid-exposed
+  phone. A real damaged-phone guide — but its destination is a
+  PC, not a USB drive plugged into the phone, and it says nothing
+  about SnapDisk; curl 200, 0 SnapDisk mentions in the fetched
+  page);
+  topselect.ca, "Back Up Phone Photos to a USB-C Drive"
+  (https://www.topselect.ca/blogs/guides/how-to-backup-photos-from-your-mobile-the-easy-way-with-usb-c-drives
+  — the generic USB-C drive backup guide: plug a USB-C drive into
+  the phone, open the file manager, find DCIM, select the photos,
+  copy them to the drive, and safely eject it. A real phone-to-USB
+  method — but its reason is the backup itself, its copy is
+  manual select-copy-paste, it says nothing about water damage,
+  and it says nothing about SnapDisk; curl 200, 0 SnapDisk
+  mentions in the fetched page);
+  SnapDisk, "Back up photos to USB before resetting your phone"
+  (https://dzianisv.github.io/photo-backup/factory-reset-photos-to-usb.html
+  — the same one-tap copy, oldest-first in the background with
+  progress, Pause and Stop, and resume, with the honest contrast
+  that a reset is a wipe you chose. A real one-tap guide — but
+  its moment is a reset, not a phone that got wet and may die;
+  curl 200).
+- Do NOT charge a wet phone and do NOT plug anything into a wet USB
+  port — power through a damaged board can burn out the chip that
+  holds the photos (mdrepairs: charging "pushes current through a
+  corroding board", short circuits "can fry components
+  permanently"). The lab's advice conflicts with this article's
+  premise and the article states the conflict plainly: the lab says
+  power the phone off immediately and do not try to back up your
+  photos — this article's route is only for a phone that is on,
+  working normally, and has a dry port, and the lab's advice wins
+  the moment anything about the phone is wrong. Dry the port first
+  (port down, shake the water out); if the phone is off or dead
+  there is NO software route — only a recovery lab. Corrosion
+  starts within hours and spreads over days (mdrepairs); salt
+  water is the worst case. Rice does nothing; a hair dryer pushes
+  water deeper. The backup must COMPLETE and be verified on the
+  drive before the phone dies — a copy still running when the
+  phone dies is not a backup, and there is no undo after. The
+  copy runs on the battery the phone has left, because a wet phone
+  must not be charged. Cloud-only originals are a trap — Google
+  Photos backup can be off, device folders like WhatsApp and
+  screenshots may never have been switched on, and storage saver
+  uploads are compressed copies, not originals, so check
+  photos.google.com before trusting the cloud — and with no Wi-Fi
+  the upload cannot run at all, so the drive copy comes first and
+  the cloud check waits for Wi-Fi. The repo facts that carry the
+  article, read from the code this run: the copy runs as a
+  foreground service (dataSync type, BackupService.kt) — the
+  mechanism Android gives a copy that must keep running with the
+  screen off — but the repo holds no wake lock and no
+  battery-saver handling (grep over app/src/main finds no
+  WakeLock) and no water-damage run has ever been tested, so
+  screen-off continuation under battery saver is unverified and
+  the article says so instead of promising it. What IS verified:
+  oldest-first on MediaStore DATE_TAKEN (BackupEngine.kt,
+  PhotoQuery.kt); resume covers an interrupted copy — finished
+  files stay on the drive (skip-if-exists with size verification),
+  the file in flight keeps its .part copy (byte-exact .part
+  resume); on Android 15 and later a dataSync foreground service
+  gets 6 hours in 24 hours, so a very long copy can be paused by
+  Android itself, and opening the app resets the timer (WL-34);
+  the manifest holds no INTERNET permission; SnapDisk copies, it
+  never deletes (delete() in BackupEngine.kt touches only .part
+  files). SnapDisk needs Android 7.0 or later (minSdk 24 in the
+  repo) and is not on Google Play yet, so install the v0.1.2 APK
+  from GitHub. The free version backs up manually up to 5 GB per
+  run, picking up where it stopped past the cap — a phone that has
+  never been backed up often holds a library bigger than 5 GB, so
+  it takes several taps, and that is the case Pro is for; Pro is a
+  one-time $9.99 purchase that auto-starts the backup on connect
+  and removes the size limit. The screenshot in the article is
+  from SnapDisk on a phone — the same settings screen the reader
+  will see. The From folder is a picker, not a fixed path — tap
+  it, browse to the phone's storage, and choose the folder that
+  holds the photos, which the picker reaches because it is the
+  system folder picker, verified in the repo as OpenDocumentTree.
+  Drives formatted FAT32 cannot hold a single file over 4 GB —
+  SnapDisk skips those files and lists them instead of failing
+  the whole backup, per the repo README — so use exFAT. The
+  $1,000–$2,000 chip-level recovery range from the supervisor's
+  brief was NOT verified in the fetched mdrepairs page text (no
+  $ amounts in the fetched body) and is NOT used in the article;
+  only the $100 diagnostic from the search result text is cited.
+  Title is the 48-char form without the parenthetical —
+  "(before it dies)" is the scenario qualifier, carried in the
+  dek and TL;DR, so the title stays inside the 48–53-char
+  template band. This is the twelfth article in the series about
+  a situation instead of a phone brand — the brand series ran to
+  134 articles, and the broken-screen, switching-phones, SD-card,
+  tablet, Chromebook, storage-full, low-battery, factory-reset,
+  selling-phone, traveling, and Android-update articles were the
+  first eleven.
+- Verdict: how-to article material, not a listing keyword. Article
+  drafted Nov 21, 2026 (WL-178, 146th how-to):
+  docs/water-damage-photos-to-usb.html — branch wl-178-water-damage.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
