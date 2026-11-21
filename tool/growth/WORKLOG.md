@@ -1,3 +1,82 @@
+## WL-174 — Back up photos to USB before a factory reset article, 142nd how-to (DONE)
+
+- Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
+  Article PR #321 MERGED (merge commit fec4727, merged
+  2026-11-21T04:37:22Z; PR head fb06edc, CI run 44866848795
+  build pass, 1m20s; post-merge main runs Android PR
+  44867014744 + pages 44867014210 success).
+  Pre-merge readback on head fb06edc (verified by the
+  supervisor from the branch source): feed 142 items / 142
+  closes incl. factory-reset, sitemap 146 URLs incl.
+  factory-reset, blog index JSON-LD parses (Blog node, 142
+  blogPost entries incl. factory-reset) + 142 post blocks,
+  title 49 chars, meta 138 chars, JSON-LD parses (Article +
+  FAQPage 4 Qs + BreadcrumbList, datePublished 2026-11-20),
+  TL;DR present, 1 script tag, 1 H1, 10 H2s, Query 141 row
+  present ("### 141."; rows 1-141 sequential), only docs/ +
+  tool/growth changed (7 files, +513/-0).
+  Query 141 scored honestly from live evidence: factory-reset
+  guides DO exist — the gap stands only on the whole-library
+  one-tap phone-to-USB backup framed for the before-the-reset
+  moment, and only because none of the eight competing guides
+  mentions SnapDisk. Named competitors: FotoSafe guide
+  (fotosafe.weidisoft.net — free run covers 100 media files,
+  then Pro), YouTube OTG walkthrough (Move action), sekin.in,
+  umatechnology.org (all manual select-copy-paste, no reset
+  angle); Beebom, Android Authority, Memeburn,
+  everydaytech.org (real factory-reset guides, but cloud/PC
+  routes only). Supervisor's fresh search returned VaultDrive
+  (coticsy), FotoSafe guide, PetaPixel field backup, mefmobile
+  generic guide — same conclusion: none framed for the
+  factory-reset moment, none mentions SnapDisk.
+  New docs/factory-reset-photos-to-usb.html ("Back up photos
+  to USB before resetting your phone"), following the
+  WL-54-WL-173 article template exactly (navy/cyan, TL;DR
+  first, no JS, text-only, reuses
+  docs/screenshots-01-settings-defaults.png as the lead shot,
+  with an honest caption). Title 49 chars, meta 138 chars.
+  Blog index (JSON-LD + post block), sitemap.xml, llms.txt,
+  llms-full.txt (full factory-reset section), feed.xml updated;
+  searches.md Query 141 row added.
+  Key finding: the backup must COMPLETE before the reset — no
+  undo; cloud-only originals are a trap (backup off / device
+  folders not switched on / storage-saver compressed copies —
+  check photos.google.com); Factory Reset Protection needs the
+  Google password known beforehand. No WakeLock / battery-saver
+  / Doze handling in the code — screen-off continuation under
+  battery saver UNVERIFIED, stated plainly in-article.
+  SnapDisk behaviour verified from the repo: minSdk 24, Pro
+  $9.99 auto-backup on connect + unlimited, free 5 GB/run with
+  resume (skip-if-exists + .part resume + size verification),
+  oldest-first, copies never deletes, FAT32 >=4 GB skipped and
+  listed, From-picker OpenDocumentTree SAF.
+  Live fetch verified by the supervisor:
+  factory-reset-photos-to-usb.html 200 (correct title),
+  feed.xml 142 items live incl. factory-reset.
+  Lead's run record: one failed exec — the first llms.txt
+  insertion script failed its anchor assertion (leading-space
+  anchor mismatch); no data lost, feed and sitemap had already
+  succeeded in that script, llms.txt fixed on immediate retry.
+  Counting notes (no defects): lead reported the article at
+  48,630 B; raw readback at head is 48,252 B (same class as
+  WL-168's 16-vs-17 hrefs). Blog JSON-LD carries the 142
+  entries in the Blog node's blogPost array, not as standalone
+  BlogPosting objects — the supervisor's first count of 0 was
+  the counting method, not a defect.
+  Branch wl-174-factory-reset deleted (404 verified).
+  WL-175 fallback: another scenario shape (unverified) —
+  candidates traveling / no-Wi-Fi backup, before selling or
+  trading in the phone, before an Android update, water-damage.
+  Articles 141 → 142 (141 scored queries). Board: 0 open
+  issues, 0 open PRs. External-skills validation this run:
+  Installed 4/4 PASS, Current 4/4 PASS, zero drift, 16:27 fix
+  holds; Used 0/4 FAIL known standing gap. Owner gates
+  unchanged (WL-31 Play Console password, WL-32
+  AlternativeTo PAUSED, WL-33 Medium overdue — due Nov 19,
+  Sentry DSN, PostHog). No escalation. Side-chat report sent
+  (142nd article live, new hour). Goal entry recorded and
+  verified on the timeline. KPI.md updated.
+
 ## WL-173 — Back up photos to USB when phone battery is low article, 141st how-to (DONE)
 
 - Owner: SEO/GEO lane lead + supervisor settle. State: DONE.
