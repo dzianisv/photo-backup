@@ -1105,5 +1105,12 @@
       <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
       <description>A RAW file is the negative — recompress it once and the edit is gone for good. Here is how to get the .dng files off your Android phone onto a USB drive byte-for-byte, and how to check every one of them arrived.</description>
     </item>
+    <item>
+      <title>Back up HEIC photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/heic-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/heic-photos-to-usb.html</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A HEIC file is the smaller original — convert it to a JPEG once and the extra quality is gone for good. Here is how to get the .heic files off your Android phone onto a USB drive byte-for-byte, and how to check every one of them arrived.</description>
+    </item>
 </channel>
 </rss>
