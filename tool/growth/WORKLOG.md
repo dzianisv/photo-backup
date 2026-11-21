@@ -24,10 +24,12 @@
   cloud/PC), Sod Calculator's custom-ROM guide (copy to computer
   or cloud), Awesome Android Root's unlock guide (cloud backup
   list), RottenWifi's unlock guide (independent backup, verify
-  restore). All five frame backup as a step inside a flashing or
-  unlock guide with computer/cloud/manual-copy routes. Gap stands
+  restore), Coolmuster's before-rooting guide (PC tool / Google
+  account / AutoPlay to PC), MobiKin's before-rooting guide (six
+  means, all PC/cloud), MobiKin's before-unlocking guide (PC
+  backup manager + brand cloud routes). All eight frame backup as a step inside a flashing, unlock, or rooting guide with computer/cloud/manual-copy routes. Gap stands
   only on the whole-library one-tap phone-to-USB backup framed
-  for the before-unlock moment, and only because none of the five
+  for the before-unlock moment, and only because none of the eight
   mentions SnapDisk. WL-174 factory-reset + WL-180 repair +
   WL-175 selling-phone articles named in-article as adjacent
   ground.
