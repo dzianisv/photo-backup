@@ -1147,5 +1147,12 @@
       <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
       <description>A panorama looks like an ordinary wide photo — and that is the trap. For a plain sweep it is just pixels, but for a Photo Sphere the spin is a note inside the file, and anything that re-saves it can drop the note and leave you with a flat strip. Here is how to get panoramas onto a USB drive with the spin still inside them.</description>
     </item>
+    <item>
+      <title>Back up timelapse videos to USB drive — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/timelapse-videos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/timelapse-videos-to-usb.html</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A timelapse video looks like a mistake — a few seconds of video for hours of recording — and that is the trap. It is an ordinary .mp4, and the speed is baked into the frames, not stored as a note. Anything that copies the file keeps it fast. Here is how to get timelapse videos onto a USB drive with the speed still in them.</description>
+    </item>
 </channel>
 </rss>
