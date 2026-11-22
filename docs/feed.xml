@@ -1196,5 +1196,12 @@
       <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
       <description>Your TikTok videos live inside the app until you save one — Share → Save video puts a copy on your phone. Then copy that copy straight to a USB drive, no computer, no upload.</description>
     </item>
+    <item>
+      <title>Restore photos from USB to Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/restore-photos-from-usb-to-android.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/restore-photos-from-usb-to-android.html</guid>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
+      <description>SnapDisk has no restore button — the backup on your drive is plain files in plain folders. Copy them back with the Files app, put them where the Gallery looks, and check they show up before you unplug.</description>
+    </item>
 </channel>
 </rss>
