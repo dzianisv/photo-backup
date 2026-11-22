@@ -1140,5 +1140,12 @@
       <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
       <description>A slow-motion video looks like a special file — and that is the trap. It is an ordinary .mp4, and the slow part is a note inside the file, not a second file. Anything that re-saves or re-encodes it can drop the note, and the video that comes back plays at full speed. Here is how to get slow-motion videos onto a USB drive with the slow part still inside them.</description>
     </item>
+    <item>
+      <title>Back up panorama photos to USB drive — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/panorama-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/panorama-photos-to-usb.html</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A panorama looks like an ordinary wide photo — and that is the trap. For a plain sweep it is just pixels, but for a Photo Sphere the spin is a note inside the file, and anything that re-saves it can drop the note and leave you with a flat strip. Here is how to get panoramas onto a USB drive with the spin still inside them.</description>
+    </item>
 </channel>
 </rss>
