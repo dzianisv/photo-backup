@@ -18505,6 +18505,142 @@ demand is read off competitor install velocity instead (see
   (167 before, 168 after). Next article candidate after this
   one: unverified.
 
+### 165. "Back up Telegram photos and videos to USB from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle, High on the folders themselves.
+  No guide in search covers backing up Telegram's downloaded media
+  folders directly from the phone to a USB drive in one tap. The
+  guide that names the folders is a phone-to-phone move; the guides
+  that do phone-to-USB copy by hand and never name Telegram; the
+  apps that do one-tap phone-to-USB copy the whole gallery without
+  naming Telegram's folders; and the Telegram-named apps save media
+  to the phone or use Telegram as cloud storage — the opposite
+  direction. The gap stands ONLY on that narrow angle: the Telegram
+  folders (Telegram Images / Telegram Video, or
+  Android/data/org.telegram.messenger on Android 11+) copied
+  oldest-first in one background run to a USB drive, with progress,
+  resume and verification, no computer (SnapDisk).
+- Current top results (scored Nov 22, 2026, live web search):
+  NetworkUstad, "Move Telegram Downloaded Files To A New Phone
+  Manually"
+  (https://networkustad.co.uk/transfer-telegram-downloaded-files-manually/
+  — the strongest near-miss and the only page that names the
+  folders exactly: Telegram folder with Telegram Images, Telegram
+  Video, Telegram Documents and Telegram Audio subfolders on older
+  setups, or inside Android/data/org.telegram.messenger on newer
+  Android, and the built-in file manager may refuse Android/data;
+  but its job is moving files to a NEW PHONE — connect the old
+  phone to a PC, copy the folders to the PC, copy them to the new
+  phone — and the USB drive appears only as a middleman between
+  the two phones; full page read this run, 0 SnapDisk mentions, no
+  one-tap phone-to-USB backup);
+  Wondershare MobileTrans, "Back Up a Phone to USB Without Cloud
+  Storage"
+  (https://mobiletrans.wondershare.com/android-backup/how-to-back-up-a-phone-to-an-external-usb-drive-without-cloud-storage.html
+  — generic phone-to-USB guide: OTG copy by hand in the Files app
+  or computer-first, step 3 copies "DCIM, Pictures, Movies, Music,
+  Download, Documents, and messaging-media folders"; Telegram is
+  never named anywhere on the page (0 "Telegram" occurrences in
+  the full-page read this run), no Telegram folder path is given,
+  no scoped-storage note, manual select-copy-paste with no
+  progress, no resume, no verification; its own fix for missing
+  folders is "use an approved backup utility or export data from
+  the relevant app");
+  AnExplorer, "How to Transfer Files from Android to USB Drive
+  (OTG, No Root)" (https://anexplorer.io/transfer/phone-to-usb —
+  thorough generic OTG file-manager guide, manual long-press,
+  Copy, Paste, with a progress bar; examples are DCIM/Camera,
+  Download, Music; Telegram never named; search-index excerpt
+  read this run);
+  RottenWifi, "How to Find Downloaded Files in Telegram on Any
+  Device"
+  (https://blog.rottenwifi.com/how-to-find-telegram-downloaded-files-on-android-iphone-windows-mac-and-linux/
+  — finds the files and draws the cache-vs-exported distinction
+  this article relies on (viewing an attachment does not
+  necessarily create a permanent file; a cached file can be
+  invisible to a normal file manager), but stops at finding them
+  — no USB copy at all; search-index excerpt read this run);
+  Tom's Guide, "How to Connect USB Storage Devices to Your
+  Android Phone"
+  (https://www.tomsguide.com/us/connect-usb-drive-to-android,news-21213.html
+  — generic OTG connect-and-copy in the built-in file manager,
+  manual select and Copy; Telegram never named; search-index
+  excerpt read this run);
+  PhotoStick Mobile setup guide (ossaward.org,
+  https://ossaward.org/how-to-use-photostick-mobile-for-android-devices/
+  — one-tap whole-library backup to its own drive, "finds photos
+  in every folder (DCIM, Screenshots, Downloads, WhatsApp,
+  etc.)"; Telegram never named, no Telegram folders, and it is a
+  proprietary drive plus companion app, not a guide for the
+  Telegram folders; search-index excerpt read this run);
+  Photos to USB: OTG Backup (AppBrain,
+  https://www.appbrain.com/app/photos-to-usb-otg-backup/com.arzdrz.photos_to_usb
+  — "Back up every photo and video on your phone to a USB pen
+  drive, with one tap", "from your camera, WhatsApp and every
+  other folder"; Telegram never named; an app listing, not a
+  guide for the Telegram folders; search-index excerpt read this
+  run);
+  Telegram Media Saver and Media Saver for Telegram (AppBrain —
+  one-tap saving from the Telegram share menu into gallery folders
+  on the phone; they save Telegram media TO the phone, not to a
+  USB drive; search-index excerpts read this run);
+  TeleDrive (https://github.com/Mahmud0808/TeleDrive) and
+  Telegrive (https://daveragos.github.io/telegrive/ — both turn
+  the Telegram account into cloud storage and upload files INTO
+  Telegram; the opposite direction from getting Telegram files
+  OUT onto a drive; search-index excerpts read this run);
+  YouTube OTG walkthroughs ("How to Connect USB Drive to Android
+  Phone to Move Photos & Videos", "How to Transfer Photos, Videos
+  and any Files from Android Phone to USB Pendrive") — manual
+  file-manager Move/Copy in DCIM, Telegram never named;
+  answers.informer.com, "How to transfer a download on an
+  android phone to an usb drive" — generic OTG + file manager
+  answer, Downloads folder only.
+  VaultDrive's product page (https://coticsy.com/vaultdrive.html
+  — full page read this run, not a search-index excerpt) has 0
+  "Telegram" occurrences; its Telegram-relevant features are
+  "Backs up the files and folders you pick, as well as photos and
+  videos" and "Back up Android photos to a USB drive with OTG";
+  free tier 200 files or 2 GB per backup; Pro $19.99 once;
+  Android 8 or later; "2,000+ installs on the App Store and
+  Google Play", unchanged since WL-194. The Android/data wall is
+  verified from Android's own documentation (Android Developers,
+  "Access documents and other files from shared storage",
+  https://developer.android.com/training/data-storage/shared/documents-files
+  — on Android 11 and higher, ACTION_OPEN_DOCUMENT_TREE cannot be
+  used to select files under Android/data or Android/obb;
+  search-index excerpt read this run, plus two corroborating pages
+  on the "Can't use this folder" picker message), which is why the
+  article states the wall as a platform rule and gives the Save to
+  Downloads and PC fallbacks instead of promising a tap through
+  it. SnapDisk behaviour re-verified from the repo by the lead:
+  From-picker OpenDocumentTree SAF (MainActivity.kt:62, 71),
+  oldest-first DATE_TAKEN (PhotoQuery / BackupEngine), image
+  extensions .jpg .jpeg .png .heic .heif .webp .gif .bmp .dng
+  .raw and video .mp4 .mov .mkv .webm .3gp .m4v .avi
+  (PhotoQuery.kt:131-137) — so Telegram Documents and Telegram
+  Audio are skipped by design — free 5 GB/run
+  (FREE_BACKUP_BYTES_LIMIT = 5 GiB, ProPrefs.kt:43), Pro $9.99
+  once (strings.xml "Upgrade to Pro — $9.99 once", product id
+  pro_unlock), no INTERNET permission (0 occurrences in the
+  manifest), no WakeLock/Doze code (0 matches, as in WL-203).
+  ANTI-DUPLICATE CHECK (first, before writing — the WL-189
+  lesson): grep of searches.md for "telegram" finds 0 hits before
+  this row; a docs/ listing finds no telegram slug; no wl-204
+  branch existed before this run. No existing Telegram article or
+  row: the gap is a new article, not a rewrite. The honest centre
+  is the folder route plus the wall: the one-tap copy covers the
+  Telegram folders the system picker can reach, and the article
+  says plainly in the TL;DR, in a dedicated H2, and in the FAQ
+  that Android/data is refused by the platform and what the
+  fallbacks are — the wall is the article's distinguishing fact,
+  not a footnote. Screen-off continuation under battery saver
+  UNVERIFIED (no WakeLock/Doze code), stated plainly in-article in
+  the WL-182 form — "screen-off continuation under battery saver
+  is unverified" in the TL;DR, plus a capitalised "Unverified" in
+  What to avoid. Next article candidate after this one:
+  unverified.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),

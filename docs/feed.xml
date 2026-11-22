@@ -1161,5 +1161,12 @@
       <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
       <description>One copy of your photos is not a backup — it is a hope. The 3-2-1 rule says keep three copies, on two kinds of storage, with one off-site. Here is how to do that for Android photos with a USB drive, no computer, and no cloud account you did not choose.</description>
     </item>
+    <item>
+      <title>Back up Telegram photos to USB on Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/telegram-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/telegram-photos-to-usb.html</guid>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Your Telegram photos are files on your phone — in Telegram's own folders, which you can point a backup app at. Plug a USB drive into the phone and copy them straight to it, no computer, no upload.</description>
+    </item>
 </channel>
 </rss>
