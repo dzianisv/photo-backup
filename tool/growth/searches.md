@@ -18777,8 +18777,8 @@ demand is read off competitor install velocity instead (see
   one-tap copy covers the Instagram folders the system picker can
   reach, and the article says plainly in the TL;DR, in a dedicated
   H2, and in the FAQ that Instagram content is not in DCIM, that
-  the default run misses it, and that the Meta export zip must be
-  unzipped before copying — the DCIM correction is the article's
+  the default run covers it via MediaStore whatever folder it sits
+  in, and that the Meta export zip must be unzipped before copying — the DCIM correction is the article's
   distinguishing fact, not a footnote. Screen-off continuation
   under battery saver UNVERIFIED (no WakeLock/Doze code), stated
   plainly in-article in the WL-182 form — "screen-off continuation
@@ -18939,11 +18939,15 @@ demand is read off competitor install velocity instead (see
   (tecnobits, Mobikin, itgeared). SnapDisk behaviour re-verified
   from the repo by the lead: default From /sdcard/DCIM, To
   /disk/DCIM (BackupPrefs.kt DEFAULT_FROM_LABEL, DEFAULT_TO_LABEL)
-  — and the copy walks the tree recursively (PhotoQuery.kt:89-105,
-  walkTree), so DCIM/Facebook IS covered by the default run while
-  Downloads and Pictures/Facebook are outside DCIM and are missed
-  — so the Facebook route is the From-picker folder route, not the
-  default run; From-picker OpenDocumentTree SAF (MainActivity.kt:62,
+  — but those are only the labels on the settings screen until a
+  folder is picked: with no folder picked the default run reads the
+  whole media library via MediaStore (PhotoQuery.kt:23-35,
+  queryMediaStoreOldestFirst, no folder filter and no MIME filter),
+  so DCIM/Facebook, Downloads and Pictures/Facebook are all covered
+  by the default run, whatever folder they sit in — the From-picker
+  folder route (PhotoQuery.kt:89-105, walkTree) is for copying only
+  the Facebook folders instead of the whole library; From-picker
+  OpenDocumentTree SAF (MainActivity.kt:62,
   71), oldest-first DATE_TAKEN (PhotoQuery / BackupEngine), image
   extensions .jpg .jpeg .png .heic .heif .webp .gif .bmp .dng
   .raw and video .mp4 .mov .mkv .webm .3gp .m4v .avi
@@ -18963,9 +18967,9 @@ demand is read off competitor install velocity instead (see
   single documented folder, so the article names all three
   candidate folders and tells the reader to check them, and states
   plainly in the TL;DR, in a dedicated H2, and in the FAQ that the
-  default run covers DCIM/Facebook only because it walks DCIM
-  recursively, that Downloads and Pictures/Facebook are missed by
-  the default run, and that the Meta export zip must be unzipped
+  default run covers the whole media library via MediaStore —
+  DCIM/Facebook, Downloads and Pictures/Facebook alike, whatever
+  folder they sit in — and that the Meta export zip must be unzipped
   before copying — the folder disagreement is the article's
   distinguishing fact, not a footnote. Screen-off continuation
   under battery saver UNVERIFIED (no WakeLock/Doze code), stated
