@@ -18498,8 +18498,8 @@ demand is read off competitor install velocity instead (see
   reviews" stays settled wrong — re-checked this run on main:
   0 occurrences in llms-full.txt, llms.txt, or the blog index.
   The new article's prices check out: $9.99 three times, $19.99
-  twice, "5 GB per run" eight times — all matching the verified
-  figures. The llms-full.txt count this row uses is the
+  twice, "5 GB" eight times ("5 GB per run" four of them) — all
+  matching the verified figures. The llms-full.txt count this row uses is the
   URL-line count, verified this run (101 before, 102 after).
   The llms.txt count is the URL-line count, verified this run
   (167 before, 168 after). Next article candidate after this
