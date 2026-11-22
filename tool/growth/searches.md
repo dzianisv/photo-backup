@@ -18500,7 +18500,7 @@ demand is read off competitor install velocity instead (see
   The new article's prices check out: $9.99 three times, $19.99
   twice, "5 GB per run" eight times — all matching the verified
   figures. The llms-full.txt count this row uses is the
-  URL-line count, verified this run (105 before, 106 after).
+  URL-line count, verified this run (101 before, 102 after).
   The llms.txt count is the URL-line count, verified this run
   (167 before, 168 after). Next article candidate after this
   one: unverified.
