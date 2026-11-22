@@ -17840,6 +17840,244 @@ demand is read off competitor install velocity instead (see
   The llms-full.txt count this row uses is the URL-line
   count, verified this run (98 before, 99 after).
 
+### 162. "back up panorama photos to USB from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a panorama-specific
+  phone-to-USB backup guide at all — the top results are
+  our own general guides, generic transfer guides, and a
+  Google Photos community thread. None of them says a word
+  about panoramas, none of them offers a one-tap
+  whole-library backup for panoramas, and none of them
+  mentions SnapDisk.
+- Current top results (scored Nov 21, 2026, live web search):
+  our own Samsung Galaxy article, "Back up Samsung Galaxy
+  photos to a USB drive"
+  (https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html
+  — a general phone backup guide, no panorama angle;
+  search-index excerpt read this run);
+  our own automatic-transfer article, "Transfer photos to
+  USB automatically"
+  (https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html
+  — a general whole-library guide, no panorama angle;
+  search-index excerpt read this run);
+  our own general backup article, "How to back up photos
+  to a USB drive"
+  (https://dzianisv.github.io/photo-backup/backup-photos-to-usb.html
+  — a general guide, no panorama angle; search-index
+  excerpt read this run);
+  our own Google Pixel article, "Back up Google Pixel
+  photos to a USB drive"
+  (https://dzianisv.github.io/photo-backup/google-pixel-photos-to-usb.html
+  — a general phone backup guide, no panorama angle;
+  search-index excerpt read this run);
+  Google Photos community, "How do I back up photos to a
+  plug in drive"
+  (https://support.google.com/photos/thread/443333707/how-do-i-back-up-photos-to-a-plug-in-drive?hl=en
+  — a manual Files-by-Google move to a USB drive, select
+  the files, Move to the drive; no panorama angle, no
+  SnapDisk mention; search-index excerpt read this run).
+  Second-phrasing re-score (this run) surfaced no new
+  near-miss beyond the same shape — the four it returns
+  are our own general articles plus one generic guide:
+  our own automatic-transfer article (above);
+  Pixoneye, "How to Transfer Photos from Your Phone to a
+  USB Stick"
+  (https://pixoneye.com/how-to-transfer-photos-from-phone-to-usb-stick/
+  — a thorough manual guide, copy local originals to USB
+  storage, open the files from the destination, make an
+  independent backup before deleting anything, with a
+  good warning that cloud-only pictures must be
+  downloaded first; no panorama angle, no SnapDisk
+  mention; search-index excerpt read this run);
+  our own Samsung Galaxy article (above);
+  our own Google Pixel article (above).
+  Third-phrasing re-score (this run) surfaced three more
+  generic near-misses, all already named in the excerpts
+  of our own articles: Dr.Fone, "4 Practical Ways to
+  Transfer Photos from Android to USB Flash Drive"
+  (https://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — four generic ways: Google Drive, PC drag-and-drop,
+  OTG copy in the file manager, AirDroid over Wi-Fi; no
+  panorama angle, no SnapDisk mention; direct search this
+  run, search-index excerpt read);
+  YouTube, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (https://www.youtube.com/watch?v=PYcbV25CczI
+  — a manual OTG copy in the file manager, select photos
+  and videos in DCIM, Move or Copy to the drive; no
+  panorama angle, no SnapDisk mention; search-index
+  excerpt read this run);
+  a second YouTube OTG tutorial, "How to Transfer
+  Photos, Videos and any Files from Android Phone to USB
+  Pendrive (USB Drive Tutorial)"
+  (https://www.youtube.com/watch?v=ch1evyu5PPM
+  — manual select-copy-paste, step by step; no panorama
+  angle; search-index excerpt read this run).
+  Gap stands only
+  on the panorama angle.
+  VaultDrive's product page
+  (https://coticsy.com/vaultdrive.html
+  — the rival page, full page read this run, not a
+  search-index excerpt: it says nothing about panoramas
+  at all, not one panorama line anywhere on it, so it is
+  not a panorama guide either; what it does have, and
+  what is genuinely panorama-relevant, is a choose-photos
+  feature ("Back up just the photos and videos you pick")
+  and "Original quality, byte for byte" (HEIC, ProRAW,
+  ProRes and 4K video copied as they are, never
+  compressed or re-encoded), plus "Dates and places kept"
+  (the capture date, location and camera details inside
+  each photo stay intact), folders by date or album and
+  incremental backups on Pro, and a free tier of 200
+  files or 2 GB per backup against SnapDisk's 5 GB per
+  run with no file count — a panorama collection is
+  usually dozens of files, so the 200-file cap rarely
+  bites, and the 2 GB cap is the one that can bite a big
+  photosphere library; Pro $19.99 once, Android 8 or
+  later, on Google Play; "2,000+ installs on the App
+  Store and Google Play", unchanged since WL-194).
+  The panorama-format references, not competing guides:
+  Google for Developers, Photo Sphere XMP Metadata
+  (https://developers.google.com/streetview/spherical-metadata
+  — photo spheres use the
+  http://ns.google.com/photos/1.0/panorama/ namespace,
+  embedded inside the image file according to the Adobe
+  XMP standard; GPano:ProjectionType equirectangular and
+  the crop fields are what make a viewer display it as a
+  photo sphere; search-index excerpt read this run);
+  Google blog, "4 tips on using Pixel's upgraded
+  panorama mode"
+  (https://blog.google/products-and-platforms/devices/pixel/tips-how-to-use-pixel-new-panorama-mode/
+  — panorama mode used to work via video and now uses the
+  HDR+ photo pipeline, stacking photos into a stitched
+  panorama, with full 360 capabilities and vertical
+  panoramas; search-index excerpt read this run);
+  the panorama-vs-photosphere write-up
+  (https://my-weird-prompts.vercel.app/episode/panorama-photosphere-metadata-difference/
+  — a plain panorama sweep is "a standard wide JPEG with
+  no spherical metadata at all", a photosphere is the
+  same JPEG with GPano XMP tags, "a standard panorama
+  might run five to ten megabytes" and "a photosphere of
+  the same scene can easily hit fifteen to twenty-five";
+  search-index excerpt read this run);
+  Google Photos help, "Choose the backup quality of your
+  photos & videos"
+  (https://support.google.com/photos/answer/6220791
+  — the cloud-trap reference the article names, not a
+  competing guide: Storage saver uploads "may be
+  compressed into a different image format, like a .jpg",
+  and photos larger than 16 MP are resized to 16 MP,
+  which catches most panoramas) and DriveForge
+  "exFAT vs FAT32 vs NTFS" is the format reference the
+  article names, not a competing guide.
+  Key finding + ANTI-DUPLICATE CHECK (first, before
+  writing — the WL-189 lesson): grep of searches.md for
+  "panorama" finds only one incidental mention before
+  this row is added (line 17179, "in Portrait, Panorama
+  and Hyperlapse" inside a phone-spec row); no "### " row
+  title is a panorama topic; a docs/ listing finds no
+  panorama slug (panorama, pano, photosphere,
+  wide-angle — nothing). No existing panorama article or
+  row: the gap is a new article, not a rewrite. WL-189
+  was killed before merge for duplicating WL-168's live
+  switching-phones article — this query is not that
+  moment. The honest centre is the metadata shape,
+  verified from live sources + repo: a panorama is an
+  ordinary wide .jpg in DCIM/Camera; a plain sweep is
+  just pixels, and a Photo Sphere is the same .jpg with
+  GPano XMP metadata inside it. The certain route is
+  BOTH routes for .jpg — the default run reads the
+  MediaStore Images table with selection null, no folder
+  filter, no MIME filter
+  (PhotoQuery.queryMediaStoreOldestFirst), and .jpg is
+  indexed on every phone — and the folder route is the
+  certain one for every format in the list (.jpg in
+  IMAGE_EXTENSIONS at PhotoQuery.kt line 130). Second
+  honest limit: no promise that the spin survives on
+  every viewer — the check is copying one panorama back
+  and opening it in Google Photos to look for the sphere
+  viewer, or comparing size and dimensions — and the
+  article says so. Screen-off continuation under battery
+  saver UNVERIFIED (no WakeLock/Doze code), stated
+  plainly in-article (lowercase "unverified", 3
+  occurrences + 1 capitalised "Unverified" — the WL-182
+  form). Adjacent ground named in-article: the
+  slow-motion article (WL-196) as the same shape — one
+  file with a note inside it — the motion-photos article
+  (WL-193), the burst article (WL-195) as the opposite
+  shape, the RAW article (WL-190), the HEIC article
+  (WL-191) and the screenshots article (WL-192) for the
+  same folder-route rule, the Samsung Galaxy article,
+  the general backup article, and the VaultDrive
+  comparison (WL-37). The article names VaultDrive's
+  verifiable wins fairly: on Play today, choose-photos
+  (back up just the photos you pick — the honest pick
+  for a handful of panoramas only), original quality
+  byte-for-byte, dates and places kept, folders by date
+  or album, incremental backups on Pro — against
+  SnapDisk's oldest-first order, detailed progress with
+  Pause/Stop, per-file size verification, free 5 GB per
+  run with no file count, and Pro $9.99 once vs $19.99.
+  No price is invented (every price is from the repo or
+  the vendor's own page).
+  SnapDisk behaviour re-verified from the repo by the
+  lead: minSdk 24, Pro $9.99 one-time (pro_unlock,
+  PRO_PRICE_LABEL), free 5 GB/run (FREE_BACKUP_BYTES_LIMIT
+  = 5 GiB), oldest-first DATE_TAKEN, .part resume + size
+  verification, FAT32 >=4 GiB skip-and-continue,
+  From-picker OpenDocumentTree SAF, dataSync foreground
+  service 6h budget (WL-34), no INTERNET permission, no
+  WakeLock/Doze code. Verified file by file this run:
+  PhotoQuery.kt (IMAGE_EXTENSIONS includes ".jpg"/".jpeg"
+  at lines 130-133; queryMediaStoreOldestFirst reads the
+  Images table plus the Video table with selection null,
+  no folder filter, no MIME filter; the tree walk
+  recurses into subfolders), ProPrefs.kt
+  (FREE_BACKUP_BYTES_LIMIT = 5 GiB, PRO_PRICE_LABEL
+  $9.99), BackupService.kt (dataSync 6h onTimeout pause).
+  Link verification this run: VaultDrive full page read
+  (0 "panorama" occurrences on the page; Pro $19.99
+  once, free 200 files or 2 GB, "2,000+ installs on the
+  App Store and Google Play"); the panorama-format
+  references read as search-index excerpts (Google for
+  Developers Photo Sphere XMP, Google Pixel panorama
+  blog, panorama-vs-photosphere write-up); Dr.Fone,
+  Pixoneye, the two YouTube OTG walkthroughs and the
+  Google Photos community thread read as search-index
+  excerpts (0 SnapDisk mentions in every page read
+  except our own); Google Photos help and DriveForge are
+  the standing references from the WL-191/WL-192 rows;
+  own canonical 404 pre-merge (curl, this run — the
+  known-missing control URL returns 404 on retry, while
+  the existing burst page returns 200; a first attempt
+  returned a transient 503 from the Pages edge; expected,
+  live only after merge).
+  SCORING-FIX SWEEP (this run): one correction to WL-196.
+  WL-196's row says the single "2,000+ installs" in
+  llms-full.txt is "this run's own slow-motion section"
+  — re-checked this run: the slow-motion section (lines
+  2083-2109) contains zero "2,000" and zero "installs".
+  The single occurrence in llms-full.txt is line 194, in
+  the comparison section, correctly attributed to the
+  vendor page as the combined-stores figure — and this
+  article carries no install count. The WL-190 worklog
+  flag about llms-full.txt saying "4.5 from 61 reviews"
+  stays settled wrong — re-checked this run on main: 0
+  occurrences in llms-full.txt, llms.txt, or the blog
+  index. The "870 installs" lines in llms-full.txt (9)
+  and searches.md (8 — was 7 before WL-196's row added
+  its own mention) are the dated AppBrain-sourced lines
+  settled by WL-194 — AppBrain still reads 870, the
+  vendor page still says "2,000+ installs on the App
+  Store and Google Play" (full page read this run) — and
+  this article carries no install count. No other figure
+  needed correcting anywhere in this run's files. The new
+  article's prices check out: $9.99 twice, $19.99 once,
+  "5 GB per run" twice, "200 files or 2 GB" once — all
+  matching the verified figures. The llms-full.txt count
+  this row uses is the URL-line count, verified this run
+  (99 before, 100 after).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
