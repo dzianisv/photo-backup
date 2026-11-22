@@ -18596,6 +18596,16 @@ demand is read off competitor install velocity instead (see
   answers.informer.com, "How to transfer a download on an
   android phone to an usb drive" — generic OTG + file manager
   answer, Downloads folder only.
+  PhotoStick Mobile and Photos to USB: OTG Backup — two one-tap
+  whole-library phone-to-USB apps (named in the article's gap
+  section; Photos to USB surfaced by the supervisor's
+  fourth-phrasing re-score, "Instagram photos backup to USB drive
+  Android one tap automatic app"): Photos to USB copies
+  "everything: photos and videos, from your camera, WhatsApp and
+  every other folder" in one tap (AppBrain listing read this run)
+  — but neither names Instagram or its folders, and neither is a
+  guide for the Instagram folders, so the Instagram angle stands.
+  Added to this row by the supervisor's scoring fix before merge.
   VaultDrive's product page (https://coticsy.com/vaultdrive.html
   — full page read this run, not a search-index excerpt) has 0
   "Telegram" occurrences; its Telegram-relevant features are
