@@ -17373,7 +17373,15 @@ demand is read off competitor install velocity instead (see
   (https://www.fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html
   — an OTG copy, a PC tool, and Smart Switch — three
   generic routes, no burst angle, no SnapDisk mention;
-  search-index excerpt read this run). Gap stands only
+  search-index excerpt read this run);
+  drfone, "4 Practical Ways to Transfer Photos from Android
+  to USB Flash Drive"
+  (https://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — an OTG adaptor copy, PC drag-and-drop, Google Drive,
+  and AirDroid — four generic routes, no burst angle, no
+  SnapDisk mention; search-index excerpt read this run,
+  surfaced by the supervisor's second-phrasing re-score).
+  Gap stands only
   on the burst angle.
   A third phrasing (this run) surfaces the EyeFi forum
   thread the supervisor named — EyeFi Forum, "What's the
