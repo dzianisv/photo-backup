@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up photos to an NTFS USB drive from Android</title>
+<meta name="description" content="Most Android phones can't write to NTFS drives. Check the format, reformat to exFAT, or copy by hand with an NTFS app — then SnapDisk works.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/ntfs-photos-to-usb.html">
+<meta property="og:title" content="Back up photos to an NTFS USB drive from Android — SnapDisk">
+<meta property="og:description" content="Most Android phones can't write to NTFS drives. Check the format, reformat to exFAT, or copy by hand with an NTFS app — then SnapDisk works.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/ntfs-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/ntfs-photos-to-usb.html#article",
+      "headline": "Back up photos to an NTFS USB drive from Android — SnapDisk",
+      "description": "Most Android phones can't write to NTFS drives. Check the format, reformat to exFAT, or copy by hand with an NTFS app — then SnapDisk works.",
+      "datePublished": "2026-11-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/ntfs-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/ntfs-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up photos from an Android phone to an NTFS USB drive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — but usually not directly. Most Android phones cannot write to NTFS drives: they either do not mount the drive at all, or mount it read-only. Check the drive's format first. If it is NTFS, the clean fix is to reformat it to exFAT (which erases the drive, so copy its contents off first), and then SnapDisk's one-tap backup works. If you must keep NTFS, an NTFS-writer app such as Paragon exFAT/NTFS for USB or NTFS Reader lets you copy photos to the drive by hand — but that is a manual file-manager copy, not an automated whole-library backup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why can't my Android phone write to an NTFS drive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NTFS is Windows' own format. Android has no native NTFS write support: most phones will not mount an NTFS drive at all, and the ones that do often mount it read-only. Android reads and writes FAT32 and exFAT natively on most current phones, which is why exFAT is the format to use for a drive shared between a phone and a PC. An NTFS-writer app works around this with its own filesystem drivers, but the phone's own file manager and backup apps still cannot write to the drive through it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I run SnapDisk on an NTFS drive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SnapDisk has no NTFS detection at all — there is no NTFS code and no read-only-mount check in the app. If the phone does not mount the drive, no backup offer appears, because SnapDisk only offers a backup when the phone reports a drive attached. If the phone mounts the drive read-only, the offer appears and tapping Backup fails on the first file: the write is refused, the file is recorded in the skipped list with its full error, and the job moves on — every file fails the same way and the run ends with nothing copied. Whether a given phone mounts an NTFS drive read-only or not at all is unverified: no real-disk test of SnapDisk against an NTFS drive has been run."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/ntfs-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up photos to an NTFS USB drive from Android — SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/ntfs-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up photos to an NTFS USB drive from Android</h1>
+  <p class="dek">The drive's format decides whether your phone can write to it at all. NTFS is a Windows format — most Android phones won't mount it, and the ones that do often mount it read-only. Check the format first, then pick the route that fits.</p>
+  <p class="meta">November 22, 2026 · 6 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> If your USB drive is formatted NTFS, your Android phone probably cannot back photos up to it — not because the backup app is broken, but because the phone cannot write to the drive. NTFS is Windows' own format: Android has no native NTFS write support, most phones will not mount an NTFS drive at all, and the ones that do often mount it read-only. So check the drive's format first — on a Windows PC, right-click the drive and look at Properties, or on the phone, check the drive's Properties in a USB file-manager app. Then pick one of three routes: (a) reformat the drive to exFAT — the clean fix, and the format a phone and a PC both write to, with no 4 GB file limit — but reformatting erases the drive, so copy its contents off first; (b) keep NTFS and copy by hand with an NTFS-writer app such as Paragon exFAT/NTFS for USB or NTFS Reader, which bring their own filesystem drivers — manual file-manager copy, one batch at a time, no automation; (c) once the drive is writable — exFAT or FAT32 — run SnapDisk's one-tap backup, oldest-first in the background with progress, Pause and Stop. The honest centre, verified in the code: SnapDisk v0.1.2 has no NTFS detection at all — no NTFS code and no read-only-mount check anywhere in the app — so on a read-only mount the offer appears, the first file's write is refused, and every file ends up skipped with its reason while the run ends with nothing copied. Whether a given phone mounts an NTFS drive read-only or not at all is unverified — no real-disk test of SnapDisk against an NTFS drive has been run. Screen-off continuation under battery saver is unverified — stated plainly, in the WL-182 form. SnapDisk's default run copies your whole media library via MediaStore, not DCIM only, oldest-first, in the background, with progress, Pause and Stop, and resume where it stopped. Free version: 5 GB per run; Pro is $9.99 once. As of November 22, 2026, no top search result gives this whole job in one guide — check the format, then the real routes, plus the honest statement that SnapDisk's one-tap run needs a writable drive. The results are NTFS-writer apps that copy by hand, or format explainers that never get to the backup.</p>
+
+  <h2>The honest centre: the format is the gate</h2>
+  <p>A USB drive is not just storage — it is storage with a format, and the format decides who can write to it. NTFS is the format Windows uses for its own disks. It is robust and handles huge files, but outside Windows the support is patchy: a Mac opens an NTFS drive read-only, and most Android phones, cameras and car stereos don't open it at all. That is not a guess — it is what the format guides say, and it is the whole problem this article exists to solve. The drive that came out of a Windows PC, the external hard drive you have been using with your laptop for years, the flash drive a Windows machine formatted by default — all of them are very likely NTFS, and all of them hit the same wall when you plug them into a phone.</p>
+  <p>Android reads and writes FAT32 and exFAT natively on most current phones. NTFS is the odd one out: Android on most phones won't mount it, and a few manufacturers add support of their own, so the behaviour varies by phone. Where the phone does mount it, the mount is often read-only — you can look at the files, but you cannot add one. And "the phone can see the drive" is not one thing: an NTFS-writer app can show you the drive inside its own file manager while the phone itself still cannot mount it for other apps. That distinction matters, because SnapDisk writes to the mounted volume — the drive as the phone sees it — not to whatever one app's private drivers can reach. So the first question is never "which backup app", it is "what format is this drive, and can this phone write to it".</p>
+  <p>The second half of the honest centre is what SnapDisk does when the answer is no, and it was verified by reading the code at the current base, not by trying it on a phone. SnapDisk has no NTFS code at all — the word "ntfs" does not appear anywhere in the app, and there is no check for a read-only mount. The only format check in the app is the FAT32 one: a file of 4 GB or more on a FAT32 drive is skipped up front with the reason "use exFAT". On a drive the phone cannot mount at all, there is nothing to check: SnapDisk offers the backup when the phone reports a drive attached, and a drive the phone never sees produces no offer, no notification, nothing to tap. On a drive the phone mounts read-only, the offer does appear — the phone did report a drive — and the failure comes later, file by file, in a way the article spells out in its own section below. What the code cannot tell you is which of those two cases your phone falls into: whether a given phone mounts an NTFS drive read-only or not at all is unverified — no real-disk test of SnapDisk against an NTFS drive has been run, and the follow-up for exactly that test is still open in the Work Log. So this article tells you how the code behaves in both cases, and tells you to check the format before you trust either one.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search for this job three ways and the results split into three shapes, none of them the narrow job — a single guide that first checks the drive's format, then gives the real routes (reformat to exFAT; an NTFS-writer app plus manual copy; SnapDisk's one-tap run once the drive is writable), plus the honest statement that SnapDisk's one-tap backup needs a writable drive. The first shape is the NTFS-writer app: Paragon exFAT/NTFS for USB, NTFS Reader, USB File Manager, AnExplorer. All four do the same job — they bring their own filesystem drivers so the phone can read and write a drive Android itself cannot — and all four do it the same way: by hand, in a file manager, one selection at a time. Paragon works as a document provider inside Android's file picker, with NTFS support as an in-app purchase. NTFS Reader reads NTFS free and unlocks NTFS write with a single one-time in-app purchase; reading and writing exFAT and FAT32 is free. USB File Manager reads and writes NTFS, exFAT, FAT32 and ext4, and imports files or whole folders from the phone — by hand, with no automation. AnExplorer reads and writes NTFS without root, again as a manual copy. None of them backs up a whole library in one tap, oldest-first, in the background, with progress, Pause and Stop, resume, and per-file verification. They are file managers with a driver, not backup apps.</p>
+  <p>The second shape is the format explainer: guides that compare FAT32, exFAT and NTFS and tell you which format to use where. The best of them, DriveForge's "exFAT vs FAT32 vs NTFS", is the reference this article leans on: its table says Android reads and writes FAT32 and exFAT on most current phones and NTFS "not on most phones without an app", its NTFS section says Android on most phones won't mount it, and its reformat section says plainly that changing the format means formatting and formatting erases the drive — copy your files off first — and that a phone can format a drive itself with an OTG adapter, using a formatting app. KnowTechie says the same in one line: Android can't run NTFS natively, exFAT is the best option. These guides answer the format question well, and then they stop: none of them gets to the backup, none of them names a one-tap copy, and none of them says what a backup app does when the drive is read-only.</p>
+  <p>The third shape is our own articles, which describe the one-tap copy and assume the drive is writable — the exact assumption this query breaks. Our external-drive and auto-backup articles plug the drive in and tap Backup; the format of the drive never comes up, because on an exFAT or FAT32 drive there is nothing to say. The gap is not a new route — the reformat route and the NTFS-writer apps both exist — it is the check plus the three routes plus the honest statement that SnapDisk's one-tap run needs a writable drive, in one place, with the read-only failure spelled out instead of hidden. That is what no top result does, in any of the three phrasings.</p>
+
+  <h2>First, check the drive's format</h2>
+  <p>Do this before anything else, because the format decides which route you take, and because "the drive doesn't work with my phone" is very often a format problem wearing a different name. There are two checks, and you need only one of them to come back with an answer.</p>
+  <p><strong>1. On a Windows PC: right-click the drive, then Properties.</strong> Plug the drive into a Windows computer, open File Explorer, right-click the drive, and choose Properties. The "File system" line says NTFS, exFAT, or FAT32 — that is the answer, in one word. This is the most reliable check there is, because Windows reports the format exactly as it is, with no app in between. If it says NTFS, the rest of this article is your route. If it says exFAT or FAT32, the drive is already writable and you can skip to Method 3.</p>
+  <p><strong>2. On the phone: check the drive's Properties in a USB file-manager app.</strong> If there is no computer handy, plug the drive into the phone through an OTG adapter and open a file-manager app that reads USB drives. USB File Manager shows the file system among the drive's Properties — exact size, number of files and folders, file system, capacity, and free space — so the format is listed next to the capacity. The same goes for the NTFS-writer apps in Method 2: they show the drive they have mounted, and the format with it. One caution: if the phone shows nothing at all when you plug the drive in — no drive in the file manager, no notification, no offer from SnapDisk — that is itself an answer. The phone cannot mount the drive, and the most likely reason is the format: NTFS, on a phone that does not support it. Do not conclude the drive is broken, or the adapter is broken, until you have checked the format on a computer.</p>
+  <p>If the check says NTFS, do not try to force it. There is no setting on the phone that turns NTFS write on, no toggle in SnapDisk, and no file-manager trick that makes the phone's own mount writable. The routes that work are the ones in this article: change the format, or bring an app that carries its own NTFS driver, and copy by hand.</p>
+
+  <h2>What you need</h2>
+  <p>For the check: the drive, an OTG adapter if it is USB-A, and either a Windows computer or a USB file-manager app on the phone. For the reformat route: the same, plus somewhere to put the drive's current contents while you reformat — a folder on the computer, or another drive — because reformatting erases everything on the drive. For the NTFS-writer route: the NTFS-writer app of your choice, installed from Google Play, and the drive. For the SnapDisk route: the drive, reformatted to exFAT or FAT32, and the SnapDisk v0.1.2 APK (it is not on Google Play yet). One format note for every route: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit, and it is the format to use if you are formatting fresh.</p>
+
+  <h2>Method 1: reformat to exFAT — the clean route</h2>
+  <p>This is the route to pick when the drive does not have to stay NTFS — and for a photo-backup drive, it almost never does. NTFS is the right format for a drive that lives on Windows PCs. A backup drive that travels between a phone and a PC wants exFAT: Windows and Mac both write to it without extra software, Android reads and writes it on most current phones, and it has no 4 GB file limit, so a long 4K video copies in one piece. Reformatting is the only route in this article that ends with SnapDisk's one-tap backup working — because after the reformat, the drive is a drive the phone itself can write to, not one an app has to translate.</p>
+  <p>The price is stated up front because it is the whole risk: reformatting erases the drive. Everything on it — photos, documents, whatever the drive holds — is gone after the format. So the first step is not the format, it is the copy-off: plug the drive into a computer, copy everything on it to a folder on the computer, and check the copy before you format. Only then reformat. On Windows, right-click the drive in File Explorer and choose Format, then pick exFAT. On a Mac, open Disk Utility, select the drive, and click Erase, then pick exFAT. On the phone itself, a formatting app such as DriveForge formats the drive from the phone with an OTG adapter — it writes exFAT, FAT32 up to 32 GB, FAT16 and ext4 for free, and NTFS and large FAT32 with its one-time Pro unlock — so no computer is needed for the format step, only for holding the drive's contents while you do it. Whichever tool you use, pick exFAT, not FAT32: FAT32 caps a single file at 4 GB, and a long video will fail on it later, while exFAT takes files of any size.</p>
+  <p>After the format, the drive is empty and writable, and the rest is Method 3: plug it into the phone, tap Backup in SnapDisk, and the library copies oldest-first in the background. One more check before you trust the new format: after the first backup, open three or four photos from the drive on another device and confirm they render — the format change is only proven by a copy that reads back, not by the format dialog saying exFAT.</p>
+
+  <h2>Method 2: an NTFS-writer app + manual copy</h2>
+  <p>If the drive must stay NTFS — it is shared with a Windows setup that expects NTFS, or it holds files you cannot move off, or you simply do not want to reformat — the route is an app that carries its own NTFS driver. Android itself cannot write to the drive, so the app does the writing, through its own filesystem engines, and you do the copying, by hand, in the app's file manager. This is the honest trade of this method: it keeps the format, and it gives up the automation.</p>
+  <p>Four apps do this, and they differ in how you pay and how you copy. <strong>Paragon exFAT/NTFS for USB</strong> is a document provider built on Android's Storage Access Framework: install it, plug the drive in through OTG, mount the filesystem you need, and copy, move, delete and rename files using the file manager, with the drive reached through Paragon's provider. NTFS support is an in-app purchase — the listing says the supported filesystems are available via in-app purchase, and you can try the app in trial mode first. <strong>NTFS Reader: USB+Bitlocker</strong> is a file manager with its own USB storage stack: it reads NTFS free, and NTFS write unlocks with a single one-time in-app purchase; reading and writing exFAT and FAT32 is free, with no root and no computer. <strong>USB File Manager</strong> opens NTFS, exFAT, FAT32 and ext4 drives and reads and writes their files without a PC or root: copy and move files between the phone and the drive, import files or whole folders from the phone, and open files from the drive in other apps. <strong>AnExplorer</strong> reads and writes NTFS without root, again as a manual copy in its file manager. All four need a phone with USB host (OTG) support and an OTG adapter, and a large hard drive may need a powered USB hub — the drive has to appear for the app's drivers to reach it, and power is the usual reason it does not.</p>
+  <p>The manual copy itself is the same in all four: open the app, open the drive, select the photos — or a folder of them — and copy them to the drive, then wait. There is no oldest-first ordering, no whole-library run, no background progress notification with Pause and Stop, no resume where it stopped, and no per-file size verification beyond what the app shows you. A new batch of photos means the same manual selection again, and a copy interrupted halfway means working out for yourself what arrived and what did not. That is the price of keeping NTFS: the format stays, and the backup stays a chore. If the chore is the problem, Method 1 is the fix — reformat once, and the one-tap backup in Method 3 does the rest, every time, without the manual step.</p>
+  <p>One limit that applies to every app in this method, stated plainly: the NTFS write happens inside the app, through its own drivers. SnapDisk cannot use it. SnapDisk writes to the mounted volume — the drive as the phone sees it — and an NTFS-writer app's private mount is not that volume. So Method 2 and SnapDisk do not combine: you copy by hand in the NTFS app, or you reformat and let SnapDisk do it. There is no route where SnapDisk writes to an NTFS drive through another app's driver.</p>
+
+  <h2>What SnapDisk actually does on a read-only drive</h2>
+  <p>This section exists because the failure is silent in the worst way: the app does not warn you, and the run does not stop. It just skips everything, one file at a time, and ends. Here is exactly what happens, verified by reading the code at the current base — and where the code gives no answer, that is stated too.</p>
+  <p>First, the setup: SnapDisk has no NTFS detection at all. The word "ntfs" does not appear anywhere in the app's code, and there is no check for a read-only mount. The only format check in the app is the FAT32 one — a file of 4 GB or more on a FAT32 drive is skipped up front with its reason. So the app never tells you "this drive is NTFS" or "this drive is read-only". It only ever tells you, file by file, that a write failed.</p>
+  <p>Then the two cases. <strong>Case one: the phone does not mount the drive at all.</strong> This is the common case on most phones. SnapDisk offers the backup when the phone reports a drive attached — it listens for the system telling it a drive appeared — and a drive the phone never sees produces no offer. There is no notification, nothing to tap, and no error, because from the app's point of view nothing happened. If you plug the drive in and nothing appears, check the format on a computer before you blame the app or the adapter: the drive is almost certainly NTFS on a phone that does not support it.</p>
+  <p><strong>Case two: the phone mounts the drive read-only.</strong> The offer appears — the phone did report a drive — and tapping Backup starts the run. The first file fails when the app tries to open its working file for writing: a read-only filesystem refuses the write, and the copy returns a failure carrying the full error. The service does not retry it — the retry-once rule fires only on a size-verification failure, when a copy finished but the size does not match, and a refused write is not that. It does not stop the run either: one bad file never stalls the job, so the file is recorded in the skipped list with its reason and the job moves to the next file. The next file fails the same way, and the one after that, and the run ends with every file skipped and nothing copied — 0 files, 0 bytes, the whole library listed as skipped. There is no "drive is read-only" message anywhere in that outcome; the skipped list is the only signal, and the full error behind each skipped file is what says the filesystem refused the write.</p>
+  <p>And the boundary of what is known: whether a given phone mounts an NTFS drive read-only or not at all is unverified — no real-disk test of SnapDisk against an NTFS drive has been run, and the follow-up for exactly that test is still open in the Work Log, with the Firebase Test Lab route never attempted. So this section tells you the code's behaviour in both cases, and the format check tells you which case you are in. Do not run a backup onto an NTFS drive and trust it without opening the copy on another device first — and if the run ends with everything skipped, the drive's format is the first thing to check, not the app.</p>
+
+  <h2>Method 3: SnapDisk's one-tap copy — once the drive is writable</h2>
+  <p>This is the backup step itself, and it belongs in this article for one reason: it is what the reformat in Method 1 buys you. Once the drive is exFAT or FAT32 — a format the phone itself can write to — the one-tap route opens, and this is how it runs. Install SnapDisk from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"</li>
+    <li><strong>Tap Backup.</strong> Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally. The default run reads the whole media library via MediaStore, not DCIM only, so every photo the gallery sees is covered, whatever folder it sits in. This was verified in the code, not assumed: with no From folder picked, the app queries the MediaStore images and videos tables with no folder filter.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. With no From folder picked, the default run copies the whole library, saved photos included.</figcaption>
+  </figure>
+
+  <p><strong>Copying only some photos?</strong> If you would rather copy just one folder than the whole library, use the From folder picker: tap it, navigate to the folder, and the run copies only that folder, recursively. The picker route keeps only recognised photo and video extensions. If the drive is unplugged by accident, the backup pauses with the full error shown and resumes where it stopped when the drive is back. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+  <p>And the combination, stated once more because it is the question this article exists to answer: the one-tap copy needs a writable drive. On exFAT or FAT32 it runs; on NTFS it does not — either nothing appears at all, or every file is skipped. That is not a SnapDisk limitation to work around with a setting; it is the drive's format, and the fix is Method 1 or Method 2. If you ran the format check and it said exFAT, run the backup and check the copy before you trust it: open three or four photos from the drive on another device, confirm they render, and only then treat the drive as the backup.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Reformatting without copying the drive's contents off first.</strong> Formatting erases the drive — everything on it, gone. Copy it all to a computer first, check the copy, and only then format. The reformat step is quick; the regret is not.</li>
+    <li><strong>Assuming the phone will mount NTFS because the drive shows up somewhere.</strong> A drive can appear inside an NTFS-writer app's file manager while the phone itself still cannot mount it for other apps. Appearing in one app is not the same as being writable for SnapDisk — the app writes to the mounted volume, not to another app's private drivers.</li>
+    <li><strong>Buying an NTFS-writer app before checking what the purchase unlocks.</strong> Paragon sells its filesystem support as an in-app purchase; NTFS Reader reads NTFS free and charges a one-time purchase for NTFS write, while exFAT and FAT32 read and write free. Read the listing before you pay, and remember the purchase buys a manual copy, not an automated backup.</li>
+    <li><strong>Expecting SnapDisk to write to an NTFS drive.</strong> The app has no NTFS code and no read-only check. On a drive the phone mounts read-only, the run ends with every file skipped and nothing copied — and the skipped list is the only signal. Reformat first, or copy by hand in an NTFS-writer app.</li>
+    <li><strong>Reformatting to FAT32 for a library with long videos.</strong> FAT32 can't hold a single file of 4 GB or more, and SnapDisk skips those files with "use exFAT". Pick exFAT when you format fresh: no 4 GB limit, and Windows, Mac and Android all write to it.</li>
+    <li><strong>Assuming the copy keeps running with the screen off.</strong> Unverified — no wake lock, no battery-saver handling in the repo — so keep the phone awake for the run, or check it. Screen-off continuation under battery saver is unverified, and a run that stopped when the screen went dark is the expected failure, not a surprise.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> check the format before you blame the app — most "won't back up to this drive" cases are NTFS, and the fix is a format change, not a different backup app. exFAT is the format a phone and a PC both write to, with no 4 GB limit — reformat once, and the one-tap backup works every time after.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If your drive is exFAT or FAT32 and you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. The direct rival, VaultDrive, charges $19.99 once for Pro (free up to 200 files or 2 GB per backup) and its own page says 2,000+ installs across the App Store and Google Play — but its Android route is headed "Back up Android photos to a USB drive with OTG", it recommends exFAT, and it warns about FAT32 before you start, so it is no help on an NTFS drive either: the format gate applies to it exactly as it applies to SnapDisk. SnapDisk's Pro is $9.99 once, with a 5 GB free run instead of 200 files. See also: <a href="backup-photos-to-external-drive.html">How to back up photos to an external drive on Android</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos to a USB drive automatically (no manual copy)</a>, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="backup-photos-offline.html">How to back up photos offline on Android — no cloud, no account</a>, <a href="no-otg-photos-to-usb.html">Back up photos to USB when Android has no OTG</a>, and <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive: USB photo backup on Android, compared</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

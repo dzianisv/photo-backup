@@ -1224,5 +1224,12 @@
       <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
       <description>Without OTG the phone cannot see a USB drive at all — nothing to copy to, and no app that fixes it. The photos still get to the drive, but the route goes through a computer, a Wi-Fi drive, or a phone that does support OTG.</description>
     </item>
+    <item>
+      <title>Back up photos to an NTFS USB drive from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/ntfs-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/ntfs-photos-to-usb.html</guid>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Most Android phones can't write to NTFS drives. Check the format, reformat to exFAT, or copy by hand with an NTFS app — then SnapDisk works.</description>
+    </item>
 </channel>
 </rss>
