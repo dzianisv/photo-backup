@@ -55,10 +55,27 @@ the mark.
 - **Landing copy:** the same icon file serves the landing page
   (`docs/icon-512.png`, byte-identical to `tool/play-store/icon-512.png`,
   md5 `91f311265ab5921717b07f3e6ddc62a9`).
-- Gap, stated plainly: the logo exists as the Android vector
-  drawable + the 512 PNG only. There is no standalone SVG and no
-  192/128/48/16 px PNG set yet (growth-design asks for them). That
-  is follow-up work, not a blocker for the Play listing.
+- Gap closed (WL-201, 2026-11-21): the standalone SVG and the
+  192/128/48/16 px PNG set now exist. `tool/play-store/icon.svg`
+  (630 B) is the launcher vector path data copied verbatim
+  (`ic_launcher_foreground.xml`, viewport 108x108) on a navy
+  `#0F172A` field — it renders the same mark as `icon-512.png`
+  at 512 (same white arrow-into-tray on navy, same 300 px mark
+  width, navy corner (15, 23, 42)) but is NOT pixel-identical to
+  it: 9.4% of pixels differ, because `generate_creatives.py`
+  `arrow()` redraws the mark with a wider, shorter head than the
+  vector (head tip at 53% of height in the PNG vs 64% in the
+  vector; tray 13 px lower). The SVG follows the canonical
+  vector; the PNG redraw's proportions are the divergence, not
+  the SVG — so the "same proportions redrawn" line above is
+  imprecise and stands corrected by this measurement.
+  `tool/play-store/icons/icon-{192,128,48,16}.png` are LANCZOS
+  downscales of `icon-512.png` (RGB, navy corners; the 192
+  white bbox is within 1 px of the scaled source). Honest
+  limit: at 16 px the arrow/tray detail blurs into one white
+  glyph on navy (6 pure-white pixels) — readable as the mark,
+  not crisp; a hand-tuned 16 px redraw is follow-up work, not
+  a blocker for the Play listing.
 
 ## Palette — exact hexes, verified from the generator scripts
 
