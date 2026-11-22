@@ -1175,5 +1175,12 @@
       <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
       <description>Your Instagram photos are files on your phone — in the Instagram folder and the Downloads folder, which you can point a backup app at. Plug a USB drive into the phone and copy them straight to it, no computer, no upload.</description>
     </item>
+    <item>
+      <title>Back up Facebook photos to USB on Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/facebook-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/facebook-photos-to-usb.html</guid>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Your Facebook photos are files on your phone — in the Downloads folder or a Facebook folder, which you can point a backup app at. Plug a USB drive into the phone and copy them straight to it, no computer, no upload.</description>
+    </item>
 </channel>
 </rss>

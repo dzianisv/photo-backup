@@ -18786,6 +18786,194 @@ demand is read off competitor install velocity instead (see
   capitalised "Unverified" in What to avoid. Next article candidate
   after this one: unverified.
 
+### 167. "Back up Facebook photos and videos to USB from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle, High on the folders themselves.
+  No guide in search covers backing up Facebook's downloaded media
+  folders directly from the phone to a USB drive in one tap. The
+  guides that name the folders download media to the phone and stop
+  there; the downloader apps save to the device and never mention a
+  USB drive; the guide that exports the whole account delivers a zip
+  on the device that still needs a copy step; and the guides that do
+  phone-to-USB copy by hand never name Facebook. The gap stands ONLY
+  on that narrow angle: the Facebook folders (Downloads,
+  Pictures/Facebook, DCIM/Facebook — whichever holds the photos on
+  that phone) copied oldest-first in one background run to a USB
+  drive, with progress, resume and verification, no computer
+  (SnapDisk).
+- Current top results (scored Nov 22, 2026, live web search):
+  itechguides, "Transfer Photos from Phone to Memory Stick: iPhone
+  and Android"
+  (https://www.itechguides.com/transfer-photos-from-phone-to-memory-stick-a-comprehensive-guide/
+  — generic OTG + file manager guide, DCIM/Camera folders, Facebook
+  never named; search-index excerpt read this run);
+  YouTube OTG walkthroughs ("How to Connect USB Drive to Android
+  Phone to Move Photos & Videos", "How to Transfer Photos, Videos
+  and any Files from Android Phone to USB Pendrive")
+  (https://www.youtube.com/watch?v=PYcbV25CczI and
+  https://www.youtube.com/watch?v=ch1evyu5PPM — manual
+  file-manager Move/Copy in DCIM/Pictures/Movies, Facebook never
+  named; search-index excerpts read this run);
+  mefmobile.org, "How to Transfer Phone Photos to a USB Stick
+  Without a Computer"
+  (https://mefmobile.org/transfer-photos-from-phone-to-usb-stick-without-a-computer-a-step-by-step-guide/
+  — generic OTG + file manager guide, DCIM/Camera, Facebook never
+  named; search-index excerpt read this run);
+  EyeFi forum, "What's the best way to move photos from my Android
+  to a USB drive?"
+  (https://eyefi.com/t/whats-the-best-way-to-move-photos-from-my-android-to-a-usb-drive/1113
+  — OTG + file manager, DCIM/Pictures/Downloads, "apps' specific
+  folders if you've saved images from social media" with no app
+  named; search-index excerpt read this run);
+  Wondershare MobileTrans, "Back Up a Phone to USB Without Cloud
+  Storage"
+  (https://mobiletrans.wondershare.com/android-backup/how-to-back-up-a-phone-to-an-external-usb-drive-without-cloud-storage.html
+  — generic phone-to-USB guide: OTG copy by hand in the Files app
+  or computer-first, step 3 copies "DCIM, Pictures, Movies, Music,
+  Download, Documents, and messaging-media folders"; Facebook is
+  never named anywhere on the page, no Facebook folder path is
+  given, manual select-copy-paste with no progress, no resume, no
+  verification; search-index excerpt read this run);
+  Photos to USB: OTG Backup
+  (https://www.appbrain.com/app/photos-to-usb-otg-backup/com.arzdrz.photos_to_usb
+  — the strongest near-miss on the one-tap side: "Back up every
+  photo and video on your phone to a USB pen drive, with one tap",
+  "from your camera, WhatsApp and every other folder" — one-tap
+  whole-library phone-to-USB, but Facebook is never named and no
+  Facebook folder is given; search-index excerpt read this run);
+  our own SnapDisk articles ("How to back up photos to a USB drive"
+  and "Transfer photos to USB automatically") — the same one-tap
+  copy, oldest-first in the background with progress, Pause and
+  Stop, and resume — but generic, Facebook never named;
+  All Media Downloader
+  (https://play.google.com/store/apps/details?id=com.amd.allmediadownloader&hl=en&gl=us
+  — "Save images and videos from Social Media to your device":
+  Facebook, Instagram, X, DailyMotion, Vimeo, TikTok, Reddit — to
+  the device, not to a drive; search-index excerpt read this run);
+  Bulk Photos Videos Downloader
+  (https://play.google.com/store/apps/details?id=fb.album.photo.downloader&hl=en_IN
+  — "Ultimate Facebook Photos Videos Stories Downloader for
+  Android", "entire media albums from Facebook directly to your
+  Android device", bulk FB album downloads in one click — to the
+  device, not to a drive, no USB step; search-index excerpt read
+  this run);
+  Dailyhunt, "Top 6 FB Downloader Apps for Android in 2026"
+  (https://m.dailyhunt.in/news/india/english/thehansindia-epaper-hans/top+6+fb+downloader+apps+for+android+in+2026-newsid-n708827056
+  — FvidGo (web-based, "The MP4 or MP3 file goes straight into
+  your Android's default" download location), FastVid, Snaptube,
+  VidMate — every one saves to the device; none mentions a USB
+  drive; search-index excerpt read this run);
+  MyBackup
+  (https://play.google.com/store/apps/details?id=com.rerware.android.MyBackup&hl=en&gl=us
+  — "Backup and restore using an On The Go (OTG) USB card", generic
+  whole-device backup, Facebook never named, no Facebook folder;
+  search-index excerpt read this run);
+  solveyourtech, "How to Save All Photos From Facebook"
+  (https://www.solveyourtech.com/how-to-save-all-photos-from-facebook-a-comprehensive-step-by-step-guide/?ref=techblog&utm_source=techblog&utm_content=/techblog/ultimate-guide-to-facebook-bulk-image-downloader-how-to-download-multiple-images-effortlessly/
+  — Meta export: Accounts Center → Your information and permissions
+  → Export your information, Create export, Export to device, 4
+  days to download, delivered as a ZIP — the zip lands on the
+  device, and the guide stops there; also notes the export "won't
+  include information that someone else shared, such as another
+  person's photos that you're tagged in"; search-index excerpt read
+  this run);
+  androidgreek, "How to Download All Your Photos from Your Facebook
+  Profile" (https://androidgreek.com/download-profile-facebook-photos/
+  — Meta export on web and in the app, "Download Your Information",
+  Create File, Available Copies tab, Download — the archive's
+  photos sit in Posts\media\your_photos and your_videos after
+  unzipping; the guide stops at the download; search-index excerpt
+  read this run);
+  mokubetech, "How to Download Your Facebook Data (Complete
+  Step-by-Step Guide)"
+  (https://mokubetech.com/how-to-download-your-facebook-data/ — Meta
+  export on desktop, Android, and iPhone, same Accounts Center
+  path, Export to device, downloaded as a .zip, inside it a
+  photos_and_videos folder — the guide stops at the zip; search-index
+  excerpt read this run);
+  umatechnology.org, "How to Keep a Local Copy of Facebook Photos on
+  Your Phone"
+  (https://umatechnology.org/how-to-keep-a-local-copy-of-facebook-photos-on-your-phone/
+  — download individual photos to the phone's camera roll/gallery, or
+  bulk-download with Facebook's Download Your Information tool; no USB
+  step, the guide stops at the phone; search-index excerpt read this
+  run, supervisor fourth phrasing);
+  HowToGeek, "How to Keep a Local Copy of Facebook Photos on Your
+  Phone"
+  (https://www.howtogeek.com/193378/ask-htg-how-can-i-easily-keep-a-local-copy-of-facebook-photos-on-my-phone/
+  — Sep 29, 2016: download each photo by hand, or bulk-download the
+  Facebook archive and grab the photos from it, then IFTTT to Dropbox
+  for future photos; no USB step anywhere; search-index excerpt read
+  this run, supervisor fourth phrasing).
+  VaultDrive's product page (https://coticsy.com/vaultdrive.html
+  — full page read this run, not a search-index excerpt) has 0
+  "Facebook" occurrences; its Facebook-relevant features are
+  "Backs up the files and folders you pick, as well as photos and
+  videos" and "Back up Android photos to a USB drive with OTG";
+  free tier 200 files or 2 GB per backup; Pro $19.99 once;
+  Android 8 or later; "2,000+ installs on the App Store and
+  Google Play", unchanged since WL-194. The folder facts are
+  verified from live sources this run, not from the brief — and
+  they DISAGREE, which is the article's distinguishing fact:
+  tecnobits ("The photo will automatically be saved to the
+  downloads folder on your Android device"), Mobikin ("Select Save
+  to phone (or Download). The photo will appear in your phone's
+  gallery under Facebook or Downloads"), and GBTimes ("Facebook
+  downloads typically land in your device's Downloads folder")
+  all say Downloads; guiaalfa says "Facebook: Downloads in
+  Internal storage/DCIM/Facebook"; eathealthy365 says "Facebook:
+  Creates a 'Facebook' folder inside your main 'Pictures' or
+  'DCIM' folder"; solvemix says "Android phones often use Pictures
+  or Downloads". No single Facebook folder can be asserted, so the
+  article tells the reader to check all three — Downloads,
+  Pictures/Facebook, DCIM/Facebook — and back up whichever ones
+  hold photos. The Meta export zip arrives on the phone (Downloads)
+  and must be unzipped before copying — the zip itself is not an
+  image or video file, so SnapDisk skips it (solveyourtech: "Export
+  to device", four-day download window, "delivers it as a ZIP
+  file"; androidgreek/mokubetech: photos_and_videos /
+  your_photos, your_videos inside after unzipping). Facebook's
+  in-app Save is a bookmark, not a file — it adds the post to Saved
+  items inside Facebook and vanishes if the post is deleted; the
+  download is the separate "Save to phone" / Download menu item
+  (tecnobits, Mobikin, itgeared). SnapDisk behaviour re-verified
+  from the repo by the lead: default From /sdcard/DCIM, To
+  /disk/DCIM (BackupPrefs.kt DEFAULT_FROM_LABEL, DEFAULT_TO_LABEL)
+  — and the copy walks the tree recursively (PhotoQuery.kt:89-105,
+  walkTree), so DCIM/Facebook IS covered by the default run while
+  Downloads and Pictures/Facebook are outside DCIM and are missed
+  — so the Facebook route is the From-picker folder route, not the
+  default run; From-picker OpenDocumentTree SAF (MainActivity.kt:62,
+  71), oldest-first DATE_TAKEN (PhotoQuery / BackupEngine), image
+  extensions .jpg .jpeg .png .heic .heif .webp .gif .bmp .dng
+  .raw and video .mp4 .mov .mkv .webm .3gp .m4v .avi
+  (PhotoQuery.kt:131-137) — free 5 GB/run
+  (FREE_BACKUP_BYTES_LIMIT = 5 GiB, ProPrefs.kt:43), Pro $9.99
+  once (strings.xml "Upgrade to Pro — $9.99 once", product id
+  pro_unlock), no INTERNET permission (0 occurrences in the
+  manifest), no WakeLock/Doze code (0 matches, as in WL-203).
+  ANTI-DUPLICATE CHECK (first, before writing — the WL-189
+  lesson): grep of searches.md for "facebook" finds only incidental
+  mentions before this row (three lines, all in the selling-phone
+  row: a Facebook reel by SamMobile and its reel URL); a docs/
+  listing finds no facebook slug; no wl-206 branch existed before
+  this run. No existing Facebook article or row: the gap is a new
+  article, not a rewrite. The honest centre is the folder route
+  plus the folder disagreement: Facebook, unlike Instagram, has no
+  single documented folder, so the article names all three
+  candidate folders and tells the reader to check them, and states
+  plainly in the TL;DR, in a dedicated H2, and in the FAQ that the
+  default run covers DCIM/Facebook only because it walks DCIM
+  recursively, that Downloads and Pictures/Facebook are missed by
+  the default run, and that the Meta export zip must be unzipped
+  before copying — the folder disagreement is the article's
+  distinguishing fact, not a footnote. Screen-off continuation
+  under battery saver UNVERIFIED (no WakeLock/Doze code), stated
+  plainly in-article in the WL-182 form — "screen-off continuation
+  under battery saver is unverified" in the TL;DR, plus a
+  capitalised "Unverified" in What to avoid. Next article candidate
+  after this one: unverified.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
