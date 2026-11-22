@@ -32,7 +32,6 @@ folder is `tool/growth/`, so this file lives at
   (`docs/index.html`). The feature-graphic line is the canonical
   brand tagline; the landing variants predate this file and are
   flagged for reconciliation, not silently adopted.
-
 ## The mark
 
 One idea: a white download arrow into a tray, on navy. No text in
@@ -54,28 +53,38 @@ the mark.
   in muted grey DejaVu 36.
 - **Landing copy:** the same icon file serves the landing page
   (`docs/icon-512.png`, byte-identical to `tool/play-store/icon-512.png`,
-  md5 `91f311265ab5921717b07f3e6ddc62a9`).
-- Gap closed (WL-201, 2026-11-21): the standalone SVG and the
+  md5 `2a5b2836044a2fd1c30a3385e7fc831d`).
+- Gap closed (WL-201, 2026-11-21; unified WL-202, 2026-11-21): the standalone SVG and the
   192/128/48/16 px PNG set now exist. `tool/play-store/icon.svg`
   (630 B) is the launcher vector path data copied verbatim
   (`ic_launcher_foreground.xml`, viewport 108x108) on a navy
-  `#0F172A` field — it renders the same mark as `icon-512.png`
-  at 512 (same white arrow-into-tray on navy, same 300 px mark
-  width, navy corner (15, 23, 42)) but is NOT pixel-identical to
-  it: 9.4% of pixels differ, because `generate_creatives.py`
-  `arrow()` redraws the mark with a wider, shorter head than the
-  vector (head tip at 53% of height in the PNG vs 64% in the
-  vector; tray 13 px lower). The SVG follows the canonical
-  vector; the PNG redraw's proportions are the divergence, not
-  the SVG — so the "same proportions redrawn" line above is
-  imprecise and stands corrected by this measurement.
+  `#0F172A` field. WL-202 regenerated `tool/play-store/icon-512.png`
+  from that SVG with cairosvg at 512: it now matches a fresh SVG
+  render pixel-for-pixel (0 differing pixels of 262,144; was
+  24,712, 9.4%). New 512: 2,895 B, md5
+  `2a5b2836044a2fd1c30a3385e7fc831d`; `docs/icon-512.png` is
+  md5-identical. The mark moved to the vector's own geometry:
+  white bbox (92, 124)–(392, 397), centre x 242 (was 256) — the
+  vector's mark sits 14 px left of the canvas centre, and the
+  unified icon keeps that instead of the old redraw's centred
+  placement. `generate_creatives.py` `arrow()` is aligned to the
+  same verbatim vector coordinates (WL-202) and no longer writes
+  the icon — the script now regenerates only the feature graphic,
+  whose arrow uses the vector proportions (title and tagline
+  pixels unchanged, 0 differing pixels at x≥340). Residual: a PIL
+  render of the aligned `arrow()` in the canonical box still
+  differs from the shipped SVG icon by 1,417 pixels (0.54%) —
+  antialiasing only, white bboxes within 2 px — because PIL draws
+  un-antialiased polygons and cairosvg antialiases. The "same
+  proportions redrawn" line above is true again for `arrow()`;
+  the icon itself is a render, not a redraw.
   `tool/play-store/icons/icon-{192,128,48,16}.png` are LANCZOS
-  downscales of `icon-512.png` (RGB, navy corners; the 192
-  white bbox is within 1 px of the scaled source). Honest
-  limit: at 16 px the arrow/tray detail blurs into one white
-  glyph on navy (6 pure-white pixels) — readable as the mark,
-  not crisp; a hand-tuned 16 px redraw is follow-up work, not
-  a blocker for the Play listing.
+  downscales of the NEW `icon-512.png` (RGB, navy corners; the 192
+  white bbox is within 1 px of the scaled source; the 16 px file
+  now has 7 pure-white pixels, visible-glyph bbox (3, 4)–(11, 12)).
+  Honest limit: at 16 px the arrow/tray detail blurs into one white
+  glyph on navy — readable as the mark, not crisp; a hand-tuned 16 px
+  redraw is follow-up work, not a blocker for the Play listing.
 
 ## Palette — exact hexes, verified from the generator scripts
 
