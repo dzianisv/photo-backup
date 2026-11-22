@@ -1,10 +1,21 @@
 #!/usr/bin/env python3
-"""Generate SnapDisk Play Store creatives from the launcher glyph.
+"""Generate the SnapDisk Play Store feature graphic (1024x500), navy
+#0F172A background (same as the launcher), white download-arrow glyph.
 
-Icon (512x512) + feature graphic (1024x500), navy #0F172A background
-(same as the launcher), white download-arrow glyph — the same arrow
-as ic_launcher_foreground.xml, drawn from the same proportions.
-Regenerate any time with: python3 tool/play-store/generate_creatives.py
+The arrow is the launcher mark, not a redraw: arrow() maps the verbatim
+path coordinates from app/src/main/res/drawable/ic_launcher_foreground.xml
+(viewport 108x108) into the caller's box, so its internal proportions
+(head height, shaft width, tray position) are the vector's own.
+
+The app icon (icon-512.png) is NOT generated here. It is rendered from
+tool/play-store/icon.svg (the same vector, standalone SVG) with cairosvg:
+  python3 -c "import cairosvg; cairosvg.svg2png(url='tool/play-store/icon.svg', write_to='tool/play-store/icon-512.png', output_width=512, output_height=512)"
+That split is deliberate (WL-202): PIL draws un-antialiased polygons,
+cairosvg antialiases, so a PIL icon would re-diverge from the SVG by
+thousands of pixels even with identical geometry. Do not re-add an
+icon() writer to this script.
+Regenerate the feature graphic any time with:
+python3 tool/play-store/generate_creatives.py
 """
 import os
 from PIL import Image, ImageDraw, ImageFont
@@ -19,29 +30,26 @@ REG = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
 
 def arrow(draw, cx, top, w, h):
-    """Download arrow into a tray, in a box (cx-w/2, top, cx+w/2, top+h)."""
-    # Arrow shaft + head (top 60% of the box), tray (bottom 15%).
-    shaft_w = w * 0.22
-    head_h = h * 0.34
-    tray_h = h * 0.10
-    tray_y = top + h - tray_h
-    # Shaft
-    draw.rectangle([cx - shaft_w / 2, top, cx + shaft_w / 2, top + h * 0.42], fill=WHITE)
-    # Head (triangle)
-    draw.polygon([
-        (cx - w / 2, top + h * 0.22),
-        (cx + w / 2, top + h * 0.22),
-        (cx, top + h * 0.22 + head_h),
-    ], fill=WHITE)
-    # Tray
-    draw.rectangle([cx - w / 2, tray_y, cx + w / 2, top + h], fill=WHITE)
+    """Download arrow into a tray, in a box (cx-w/2, top, cx+w/2, top+h).
 
-
-def icon():
-    img = Image.new("RGB", (512, 512), NAVY)
-    draw = ImageDraw.Draw(img)
-    arrow(draw, 256, 110, 300, 292)
-    img.save(os.path.join(OUT, "icon-512.png"))
+    Geometry is the launcher vector verbatim
+    (ic_launcher_foreground.xml, viewport 108x108): the arrow is one
+    polygon (shaft + head), the tray a separate rect, mapped from the
+    mark's own bounding box (x 19..83, y 26..84) into the caller's box.
+    A box with the vector's aspect (w/h = 64/58) reproduces the vector
+    exactly; any other box keeps the vector's internal proportions and
+    stretches only the overall aspect, as the old code did.
+    """
+    # Arrow polygon (shaft + head), tray rect, mark bbox — vector coords.
+    ARROW = [(73, 42), (53, 42), (53, 26), (39, 26), (39, 42), (19, 42), (46, 69)]
+    TRAY = (25, 76, 83, 84)  # x0, y0, x1, y1
+    MX0, MY0, MX1, MY1 = 19, 26, 83, 84
+    def X(vx):
+        return cx - w / 2 + (vx - MX0) / (MX1 - MX0) * w
+    def Y(vy):
+        return top + (vy - MY0) / (MY1 - MY0) * h
+    draw.polygon([(X(x), Y(y)) for x, y in ARROW], fill=WHITE)
+    draw.rectangle([X(TRAY[0]), Y(TRAY[1]), X(TRAY[2]), Y(TRAY[3])], fill=WHITE)
 
 
 def feature_graphic():
@@ -56,6 +64,5 @@ def feature_graphic():
 
 
 if __name__ == "__main__":
-    icon()
     feature_graphic()
-    print("wrote icon-512.png + feature-graphic-1024x500.png")
+    print("wrote feature-graphic-1024x500.png (icon-512.png comes from icon.svg, see header)")

@@ -60,8 +60,9 @@ to usb stick, photo backup app offline, backup dcim to otg.
 
 ## Creatives
 
-- Icon: `icon-512.png` (512x512, generated from the launcher glyph
-  by `generate_creatives.py`).
+- Icon: `icon-512.png` (512x512, rendered from `icon.svg` — the
+  launcher vector — with cairosvg at 512; `generate_creatives.py`
+  no longer writes the icon, WL-202).
 - Feature graphic: `feature-graphic-1024x500.png` (1024x500).
 - Screenshots: `screenshots/` — real screenshots from smoke-test
   runs only, never mockups. (Filled after the first green smoke run:
