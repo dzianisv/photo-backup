@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3-2-1 backup for Android photos to USB — SnapDisk</title>
+<meta name="description" content="Apply the 3-2-1 backup rule to Android photos: phone, a USB drive via SnapDisk's one-tap copy, and one off-site copy — no computer for copy 2.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/321-backup-photos-to-usb.html">
+<meta property="og:title" content="3-2-1 backup for Android photos to USB — SnapDisk">
+<meta property="og:description" content="Apply the 3-2-1 backup rule to Android photos: phone, a USB drive via SnapDisk's one-tap copy, and one off-site copy — no computer for copy 2.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/321-backup-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/321-backup-photos-to-usb.html#article",
+      "headline": "3-2-1 backup for Android photos to USB — SnapDisk",
+      "description": "Apply the 3-2-1 backup rule to Android photos: phone, a USB drive via SnapDisk's one-tap copy, and one off-site copy — no computer for copy 2.",
+      "datePublished": "2026-11-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/321-backup-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/321-backup-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the 3-2-1 backup rule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keep three copies of anything you cannot replace, on two different kinds of storage, with one copy kept somewhere else. For Android photos that maps to: the phone itself is copy 1, a USB drive is copy 2 on different media, and a second drive kept elsewhere — or a cloud copy — is the off-site copy 3. The rule is the same one NIST describes in its 3-2-1 guidance, and the same one CISA tells small businesses to follow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I follow 3-2-1 for Android photos without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Plug a USB drive straight into the phone and copy the whole library to it with SnapDisk — one tap, oldest-first, in the background, with progress, Pause and Stop — and that is copy 2 with no computer anywhere in the chain. Copy 3 still needs a second drive kept somewhere else, or a cloud step, because the phone and the first drive usually sit in the same room."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does SnapDisk make the off-site copy too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — and this article says so instead of implying it. SnapDisk is offline-only: it holds no internet permission, so your photos physically cannot leave the phone, and it has no cloud step at all. The off-site copy is a second drive kept at a relative's home, at work, or in a safe deposit box — or a cloud backup you run yourself. SnapDisk does copy 2; copy 3 is your step."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/321-backup-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "3-2-1 backup for Android photos to USB — SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/321-backup-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>3-2-1 backup for Android photos to USB — SnapDisk</h1>
+  <p class="dek">One copy of your photos is not a backup — it is a hope. The 3-2-1 rule says keep three copies, on two kinds of storage, with one off-site. Here is how to do that for Android photos with a USB drive, no computer, and no cloud account you did not choose.</p>
+  <p class="meta">November 22, 2026 · 6 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> The 3-2-1 rule is three copies, on two different kinds of storage, with one copy kept somewhere else — the same rule NIST describes in its 3-2-1 guidance, and the same one CISA tells small businesses to follow. For an Android phone owner it maps cleanly: the phone itself is copy 1, a USB drive is copy 2 on different media, and a second drive kept elsewhere — or a cloud copy — is the off-site copy 3. The USB copy is the one this article is about, because it is the copy the search results make hardest: every 3-2-1 guide that turns up for Android photos routes it through a computer — plug the phone in with a cable, drag DCIM to the computer, then copy that folder to a drive — or through the cloud, or through a manual file-manager copy on the phone. None of them offers the USB copy as a one-tap whole-library copy straight from the phone to the drive, with no computer anywhere in the chain, and none of them mentions SnapDisk. SnapDisk is that copy: plug the drive in, tap Backup, and the whole library copies oldest-first in the background, with progress, Pause and Stop, per-file size verification, and resume where it stopped — free up to 5 GB per run, Pro $9.99 once for auto-backup on connect and unlimited size. The honest trade-off is copy 3: SnapDisk is offline-only — it holds no internet permission, so your photos physically cannot leave the phone — and it has no cloud step, so the off-site copy is a second drive kept at a relative's home, at work, or in a safe deposit box, or a cloud backup you run yourself. One honest limit: screen-off continuation under battery saver is unverified — the repo holds no wake lock and no battery-saver handling — so keep the phone awake for the run or check it. As of November 22, 2026, no 3-2-1 guide in search covers Android photos with the USB copy as a one-tap phone-to-USB copy with no computer — the pages that exist are thorough 3-2-1 guides whose USB copy needs a PC, a manual file-manager copy, or a cloud account — so this article is the first on the no-computer USB angle. The adjacent ground: <a href="backup-photos-to-usb.html">how to back up photos to a USB drive without uploading them</a> for the general route, the <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive comparison</a> for what the rival adds and what it charges, and the <a href="raw-photos-to-usb.html">RAW</a>, <a href="heic-photos-to-usb.html">HEIC</a>, <a href="screenshots-to-usb.html">screenshots</a>, <a href="burst-photos-to-usb.html">burst</a>, <a href="slow-motion-videos-to-usb.html">slow-motion</a>, <a href="panorama-photos-to-usb.html">panorama</a> and <a href="timelapse-videos-to-usb.html">timelapse</a> articles, where the certain route is the same folder pick.</p>
+
+  <h2>What the search results actually offer</h2>
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk&#x27;s settings screen, showing the backup folder pickers. The From picker is where you choose DCIM for the whole library — or a narrower folder for one part of it — and the To picker is the folder on the drive. Screenshot is from SnapDisk on a phone — the settings screen is the same screen you will see when you back up with SnapDisk.</figcaption>
+  </figure>
+  <p>The exact query returns real, thorough 3-2-1 guides — and every one of them routes the USB copy through a computer or through your hands. NoQuadu's "Android Local Backup: How to Protect Your Data Without the Cloud" is the strongest near-miss: it states the rule exactly — three copies, two media types, one stored away from the phone, matching NIST's 3-2-1 guidance — and maps copy 2 to a computer or laptop and copy 3 to an external SSD, USB drive, or another secure location. Its step-by-step is a cable: connect the phone to the computer, choose File Transfer, open File Explorer, copy DCIM and the rest, paste them onto the computer, external SSD, or USB flash drive. Its own recommendation is "USB backup Android to a computer". No SnapDisk mention anywhere on the page, and no one-tap whole-library copy. Revaults' "How to back up your photos and documents (the 3-2-1 rule)" states the rule the same way — the original plus two backups, two kinds of storage, one away from home — and its local backup is the same shape: connect the phone to a computer, copy the photos and files to a folder, then copy that folder to an external drive or a USB stick. Its off-site copy is a cloud account or a second drive kept at a relative's home, a workplace, or a safe deposit box. No SnapDisk mention, no one-tap copy. Sync by Miciniti's "The 3-2-1 Backup Rule, Explained for Normal People" maps the rule onto two saved tasks — a Backup task to a USB or external drive for copy 2, a second Backup task to a cloud drive for copy 3 — which is the closest any rival comes to an app doing the USB copy, but it is a task you set up and run by hand, not a one-tap whole-library copy, and its USB and external drives sit behind a paid upgrade. GadgetsNow's "How to Back Up All Your Photos Without Paying for Extra Cloud Storage" starts the same way — transfer the photos to a laptop or desktop with a USB cable first, then copy them to an external hard drive or a USB drive — and its 3-2-1 section repeats the rule without changing the route. TechCity's "Complete Phone Backup Guide: Never Lose Your Photos Again" states the 3-2-1 strategy up front — phone as one copy, a cloud service as the off-site copy, a computer or external hard drive as the third — and its five methods are Google Photos, iCloud, back up to your computer, OneDrive, and Samsung Smart Switch: cloud and PC, no phone-to-USB copy at all, no SnapDisk mention.</p>
+  <p>The second phrasing — 3-2-1 backup redundancy for Android photos to a USB flash drive, no computer — returns the same shape from the other side, and still nothing on the narrow angle. WITNESS's "Backing Up Phone Media Without Internet or a Computer" is the only page that does phone-to-USB with no computer at all — plug an OTG drive straight into the phone and copy the media — but it is a manual copy in the file manager, it never mentions 3-2-1, and it never mentions SnapDisk. Sync by Miciniti's Android photos guide says the safest setup is two of three routes — Google Photos, a cloud drive, or an SD card or USB drive — and its USB route is again a saved Backup task you run by hand. NeverOpen's backup plan follows the 3-2-1 rule with three copies on a laptop and an external hard drive, moved over Quick Share, LocalSend, or a USB-C adapter — a computer in the chain again. Revaults again, and a Louisiana government preparedness page stating the rule in the abstract — three copies, two media types, one off-site — with no Android route at all. The third phrasing, checked this run to pin down the remaining names, returns more of the same: TechBulletinNow's phone-and-computer guide (cloud, computer, external drive), PengJiangWen's TechLife guide (cloud copy two, computer copy three), TechBuniyaad's "How To Back Up Your Phone Properly" (cloud for the daily copy, local to a computer once a month), Dr.Fone's Android backup guide (its own PC tool plus Google Backup), and Techwire's phone guide (cloud, then an external drive or computer every few months). Not one of them offers a one-tap whole-library phone-to-USB copy, and not one of them mentions SnapDisk. VaultDrive's own page — read in full this run — says nothing about 3-2-1 at all, not one occurrence anywhere on it, so it is not a 3-2-1 guide either. That is the gap this article fills: 3-2-1 where copy 2 is the whole library, one tap, phone straight to USB, no computer.</p>
+
+  <h2>The 3-2-1 rule, in plain English</h2>
+  <p>Three copies of anything you cannot replace. Two different kinds of storage. One copy kept somewhere else. That is the whole rule, and every page in the search above states it the same way — the only thing they disagree on is what the copies sit on. The numbers defend against three different ways of losing photos, and each number answers one of them. Three copies protects you if one copy fails: a phone dies, a drive corrupts, a cloud account locks you out — two copies left is still a backup, one copy left is a hope. Two kinds of storage protects you if one kind of device has a fault: two folders on the same laptop are not two kinds of storage, and neither are two drives in the same drawer from the same batch. One copy off-site protects you from the thing that takes a whole location at once: a fire, a flood, a burglary — the copies in the house go together, and only the copy somewhere else survives.</p>
+  <p>For a phone owner the mapping is the one this article uses throughout. Copy 1 is the phone itself — the originals, in DCIM/Camera and Pictures, the copy you look at every day. Copy 2 is a USB drive — a different kind of storage from a phone, a copy you can hold, that needs no account and no internet. Copy 3 is the off-site copy — a second drive kept at a relative's home, at work, or in a safe deposit box, or a cloud backup you run yourself. The rule does not care which cloud, or which drive, or which app made copy 2 — it cares that the three copies are really three, that two kinds of storage are really two, and that one copy is really somewhere else. Two traps hide inside that sentence. The first is sync pretending to be backup: a synced photo library is not a second copy, because deleting a photo in one place can delete it everywhere — Google Photos itself documents that deleting a photo in Google Photos also deletes the copy on the device. The second is two copies that are really one: a phone and a drive that always sit in the same bag, or a phone and a computer that always sit in the same room, fail together in the same theft or the same fire. The rule is only satisfied when the copies are independent — different media, different places — and the rest of this article is the routine that keeps them that way.</p>
+  <p>One more thing the rule does not say, because people read it into it: it does not say the copies have to be made the same way, or at the same time, or by the same tool. Copy 2 can be a one-tap app copy and copy 3 can be a cloud upload you switch on once and forget — the rule counts copies, not tools. What it does demand is that each copy is complete and that you have checked it: a backup you have never tested is a hope, not a backup, and the check for each copy is in the method that makes it.</p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li><strong>An Android phone with photos on it.</strong> The phone is copy 1 — the originals. Check the count before you start: open the Files app, look at the DCIM folder size, and add Pictures (screenshots and saved images live there, not in DCIM) — that total is the library copy 2 has to hold.</li>
+    <li><strong>A USB drive with enough free space.</strong> Count first, buy second: the drive has to hold the whole library for copy 2, and a second drive of the same size for copy 3 if the off-site copy is a drive rather than the cloud. Divide the library size by 5 GB to know how many free SnapDisk runs copy 2 needs.</li>
+    <li><strong>A drive formatted exFAT.</strong> The format reference for this article is DriveForge's exFAT-vs-FAT32-vs-NTFS guide: exFAT has no 4 GB per-file limit and is read and written by current Android phones, Windows, and Mac. FAT32 cannot hold a single file of 4 GB or more — a long 4K video can reach that — and exFAT is the practical format for the whole folder. NTFS is a Windows format that most Android phones cannot open on their own — do not use it for a phone backup drive.</li>
+    <li><strong>An OTG adapter if your drive is USB-A.</strong> A dual USB-C drive plugs straight in; a standard USB-A stick needs a data-capable OTG adapter. A portable SSD may need a powered hub — the phone alone may not supply enough power for the drive.</li>
+    <li><strong>A second drive, or a cloud account, for copy 3.</strong> The off-site copy is the one SnapDisk does not make — see the copy-3 section below — so decide before you start whether it is a second drive kept elsewhere or a cloud backup you run yourself. Either way it is a separate step, not part of the USB copy.</li>
+    <li><strong>SnapDisk v0.1.2.</strong> Not on Google Play yet — install the APK from the GitHub release page. It needs Android 7.0 or later (minSdk 24 in the repo). No account, no cloud, no ads, and no internet permission — your photos physically cannot leave the phone.</li>
+  </ul>
+
+  <h2>Method 1: SnapDisk — copy 2 in one tap</h2>
+  <p>This is the route this article is for, and it is the copy the search results make hardest. The default run — leave From unpicked — reads the phone's MediaStore Images and Video tables with no folder filter and no MIME filter, verified in the repo as PhotoQuery.queryMediaStoreOldestFirst, called from BackupService when no From folder is picked — so it covers the whole camera library in one run: photos and videos together, oldest-first by the date each was taken. The folder route — tap the From picker, browse to the phone's storage, and choose DCIM — is the certain one for every format in the list: the From picker is the system folder picker (verified in the repo as OpenDocumentTree), the tree walk recurses into subfolders, and it copies every file whose extension is in the list. Then pick the To folder on the drive, in the same picker, and tap Backup. The copy runs in the background: oldest-first, with a progress notification showing percent, copied / total size, speed, and time left, plus Pause and Stop. The oldest-first order is not cosmetic here — it is what makes a 3-2-1 routine repeatable: every run starts with the oldest photos you have not copied yet, so a second run picks up where the first stopped instead of starting over.</p>
+  <p>The copy is byte-for-byte, and that is what makes it a real second copy rather than a re-encoded lookalike. SnapDisk streams each file from the phone to the drive with no conversion — there is no transcoding step anywhere in its copy path — and it checks the size of every file after copying, renaming the .part file to the final file only after the size verification passes. Files already copied are never copied twice: if the destination already holds a file of the same size, it is skipped, and a partial .part file resumes instead of restarting. That is the mechanism the routine depends on: copy 2 is not one giant run, it is a run you repeat, and each repeat only copies what is new. And the check that makes it a backup rather than a hope is yours: open a few photos on the drive yourself before you delete anything from the phone — a matching file size and a photo that opens are the proof the copy arrived whole.</p>
+  <p>Two honest limits on this route. First, there is no choose-photos mode on the default run: it copies the whole library, oldest-first, every photo and video in date order. If you want only some photos, that is what the folder pick is for — and even then, the pick copies every file in the folder, not a selection. Second, screen-off continuation under battery saver is unverified: SnapDisk copies as a foreground service — the mechanism Android gives a copy that must keep running with the screen off — but the repo holds no wake lock and no battery-saver handling, and no 3-2-1 run has ever been tested, so this article says so instead of promising it. Keep the phone awake for the run, or check it. On Android 15 and later a dataSync foreground service gets 6 hours in 24 hours, so a very long copy can be paused by Android itself, and opening the app resets the timer (WL-34).</p>
+  <p>One fair comparison, because the search surfaced a rival that does part of this right: VaultDrive's page — read in full this run — says nothing about 3-2-1 at all, so it is not a 3-2-1 guide either, but what it does have is genuinely relevant to copy 2. Its choose-photos feature — back up just the photos and videos you pick — is the honest route if you want a handful of photos and nothing else, and SnapDisk has no equivalent. Its "Original quality, byte for byte" line — HEIC, ProRAW, ProRes and 4K video copied as they are, never compressed or re-encoded — is the same byte-for-byte promise this article makes. Its folders by date or album — Photos/2024/03-March, or your albums as folders — and incremental backups on Pro, copying only what is new since last time, are real wins SnapDisk does not have. But its free tier is the tighter trap for a whole library: 200 files or 2 GB per backup, against SnapDisk's 5 GB per run with no file count — a library of a few thousand photos hits VaultDrive's 200-file cap in the first run, and the 2 GB cap bites a library with any long 4K video in it. VaultDrive is on Google Play today at $19.99 once for Pro Lifetime against SnapDisk's $9.99 once. What SnapDisk adds is the oldest-first order across the whole library, the detailed progress notification with Pause and Stop, per-file size verification with .part resume, and this article's rule: copy 2 is the whole library in one tap, with no computer in the chain.</p>
+
+  <h2>Copy 3: the off-site copy SnapDisk does not do</h2>
+  <p>Here is the honest trade-off, stated up front instead of buried: SnapDisk makes copy 2, and copy 3 is your step. SnapDisk is offline-only — it holds no internet permission, so your photos physically cannot leave the phone — and it has no cloud step at all. That is a deliberate privacy property, and it is also a limit: an app that cannot reach the internet cannot put a copy anywhere else. So the off-site copy needs a second drive or a cloud step that SnapDisk does not do, and this section is that step.</p>
+  <p>The drive route is the one that keeps the whole routine offline. Take a second USB drive — the same size as the first, formatted exFAT — and copy the library to it the same way: plug it in, tap Backup, let the same oldest-first run copy the whole library. Then keep it somewhere else: a relative's home, a workplace you trust, a safe deposit box. The rule is only satisfied when the copy is really somewhere else — a second drive in the same drawer as the first is not an off-site copy, it is the same fire, the same theft, the same flood taking both. Rotate it on a schedule you will actually keep: once a month is the honest cadence for most people, and always before a major trip, a repair, or a phone replacement. The cost is the second drive and the discipline — the copy itself is the same one tap as copy 2.</p>
+  <p>The cloud route is the one most people actually keep up, because it runs itself once it is switched on — and it is also the one with a trap this article has to name, because the cloud copy is only a real copy 3 if it holds the originals. Google Photos backs up the camera folder, but the default is not Original quality: Google's own help page says Storage saver stores photos and videos "at a slightly reduced quality" — photos larger than 16 MP are resized to 16 MP, and videos higher than 1080p are resized to high-definition 1080p. A 4K photo backed up at Storage saver comes back as a smaller file — still the same picture, but no longer the original. The setting is one tap in Photos settings, easy to have wrong for years without noticing, because the photo still looks right at a glance. And the second trap is sync pretending to be backup: deleting a photo in Google Photos also deletes the copy on the device, and with backup on that deletion carries across every device backing up to the account. So the rule for the cloud route is the same as for every other format in this series: copy to the drive first, at original quality, and check the copy — and only then let the cloud hold whatever it holds. Set the quality to Original, check that the upload has actually finished, and never delete the phone originals on the strength of a cloud badge alone. Copy 3 is only a copy when you have confirmed it holds the originals; a badge that says "backed up" is not the confirmation.</p>
+
+  <h2>Method 2: by hand in the Files app (no app needed)</h2>
+  <p>If you would rather not install anything, the Files app does the same copy by hand — and for 3-2-1 it has one advantage: you see exactly which files you selected, and you can do copy 3 the same way on the second drive. Plug the drive in, open Files by Google (or your phone's file manager), browse to DCIM/Camera, long-press one photo, tap the rest, tap Copy, navigate to the USB drive, and tap Paste. Repeat for Pictures if you want the screenshots and saved images too. Check the drive afterwards: compare the file counts and sizes against the phone, and open a few photos on the drive yourself. Then do the same again on the second drive, and take that drive somewhere else.</p>
+  <p>Three warnings specific to 3-2-1 on this route. First, copy in the Files app — do not share from the Gallery. Sharing a photo from the Gallery hands the file to another app, and what that app does with it — re-encode it at lower quality, save a fresh file — is out of your control. Copy in the Files app moves the file itself; Share hands the file to another app. Second, do not use Move. The guides that suggest Move are telling you to delete the originals as the copy goes — and a Move that is interrupted halfway leaves some photos on the drive, some on the phone, and no record of which is which. Copy, verify, then delete — that order is what keeps your photos safe, and it is doubly true when the copy is one of three. Third, do not mistake two copies for three. The manual route makes it easy to copy the library to one drive, feel done, and never make the second one — and one drive plus the phone is two copies in the same room, which is not 3-2-1. The routine is not finished until the second drive is copied and somewhere else.</p>
+  <p>What you give up is everything SnapDisk automates. There is no oldest-first order — you copy in whatever order you selected. There is no progress notification with speed and time left, no Pause and Stop, and no resume: if the drive is unplugged mid-copy, you start that file again and work out yourself which photos already arrived. There is no per-file size verification, and no skipped-file list — a file that does not fit, or a copy that silently stops, fails quietly. And there is no skip-if-exists: the second run copies everything again, because the file manager does not remember what arrived last time. For a few hundred photos that is fine. For a library of thousands, the manual route is an afternoon of tapping and checking, repeated every month, and the one-tap route is the honest recommendation. The manual route is also the fallback for the one configuration SnapDisk's default run gets wrong: if your photos live outside DCIM and the default run did not include them, select them by hand in the Files app and copy them the same way.</p>
+
+  <h2>The 5 GB free cap, and how it shapes the routine</h2>
+  <p>SnapDisk's free version backs up manually up to 5 GB per run — verified in the repo as FREE_BACKUP_BYTES_LIMIT, 5 GiB — and runs can be repeated. Files already copied are never copied twice, so a second run picks up where the first stopped. For 3-2-1, 5 GB per run shapes the routine rather than blocking it: the cap is per run, not per library, so the free version can finish any library if you run it again — and the routine is a repeat, not a single event, so the cap is a count of runs, not a ceiling. Pro is a one-time $9.99 purchase (product id pro_unlock, verified in the repo's billing code) that auto-starts the backup when a disk is connected and removes the size limit, so a whole library copies in one run — and the auto-start is what makes the monthly repeat actually happen, because the copy starts when the drive connects instead of waiting for you to remember.</p>
+  <p>The count to do before you start is the library size: open the Files app, look at the DCIM folder size, add Pictures, divide by 5 GB, and that is how many free runs copy 2 needs — and the same count again for copy 3 on the second drive, if the off-site copy is a drive. Do the arithmetic before you plug the drive in, not halfway through the copy. A library of 20 GB is four free runs for copy 2 and four more for copy 3; a library of 100 GB is twenty and twenty, and that is the point where Pro's unlimited size stops being a convenience and starts being the routine itself.</p>
+  <p>One more size note: a file of 4 GB or more on a FAT32 drive is skipped with its reason and the job continues — verified in the repo's BackupService. A single photo never reaches that, but a long 4K video can — and that file is skipped and listed, the photos around it copy normally, and the fix is the same exFAT format recommended above. The skipped-file list is the part of the routine most people skip: read it after every run, because a file the job skipped is a hole in copy 2, and a hole in copy 2 is a hole in the rule.</p>
+
+  <h2>What this does not do</h2>
+  <ul>
+    <li><strong>It does not make the off-site copy for you.</strong> SnapDisk is offline-only — no internet permission, no cloud step — so copy 3 is a second drive kept elsewhere or a cloud backup you run yourself. An article that implied SnapDisk alone satisfies 3-2-1 would be wrong, and this one says so.</li>
+    <li><strong>It does not convert your photos — to anything.</strong> SnapDisk copies each file exactly as it is. Converting a photo to a smaller file re-encodes it — and a re-encode is exactly the step that can drop the quality. That is your editor's or your computer's job, on a copy, never on the only original.</li>
+    <li><strong>It does not copy only the photos you pick on the default run.</strong> The default run copies the whole library, oldest-first, photos and videos together in date order. Picking only some photos is the folder pick in Method 1 — and even then, every file in the folder copies — or the manual route in Method 2.</li>
+    <li><strong>It does not promise a shared copy is the original.</strong> Sharing hands the file to another app, which may re-encode it at lower quality. The check is the drive copy, not the shared one.</li>
+    <li><strong>It does not read or index your photos.</strong> There is no photo detection and no search inside the photos — SnapDisk copies files, and finding one photo among thousands is your file manager's job, on the drive, after the copy.</li>
+    <li><strong>It does not back up anything but photos and videos.</strong> No app data, no messages, no system state — and no browser tabs, notes, or clipboard history. Those live in the app's own storage, not in the photo folders, and they need their own backup.</li>
+    <li><strong>It does not delete anything.</strong> SnapDisk only copies — the only delete calls in its source touch .part files, never your photos — so freeing space is a two-step flow you do yourself: copy to the drive, open a few photos and check they arrived, then delete the originals from your phone. That flow is covered step by step in <a href="free-up-space-move-photos-to-usb.html">How to free up space by moving photos to a USB drive</a>.</li>
+    <li><strong>It does not promise the copy keeps running with the screen off under battery saver.</strong> No wake lock, no battery-saver handling in the repo, no 3-2-1 run ever tested — stated plainly above, not promised. Keep the phone awake for the run.</li>
+    <li><strong>It does not restore or view your photos.</strong> There is no in-app viewer and no restore feature — you open the copied files in a viewer or on your computer yourself. The <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive comparison</a> covers what the rivals add here, and what they charge for it.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Counting sync as a backup.</strong> A synced photo library is not a second copy — deleting a photo in one place can delete it everywhere. The rule counts copies that survive each other, not copies that mirror each other.</li>
+    <li><strong>Keeping both drives in the same place.</strong> Two drives in the same drawer fail together in the same fire, the same theft, the same flood. Copy 3 is only a copy when it is somewhere else.</li>
+    <li><strong>Stopping at two copies and calling it 3-2-1.</strong> The phone plus one drive is two copies in one room. The routine is not finished until the second drive is copied and somewhere else, or the cloud copy is confirmed at Original quality.</li>
+    <li><strong>Letting Storage saver shrink the cloud copy.</strong> Google Photos Storage saver resizes photos larger than 16 MP to 16 MP and videos higher than 1080p to 1080p — Google's own words. Copy to the drive first, at original quality, and set the cloud quality to Original.</li>
+    <li><strong>Sharing the photo when you meant to copy it.</strong> Sharing from the Gallery hands the file to another app, which may re-encode it at lower quality. Copy in the Files app; Share hands the file to another app.</li>
+    <li><strong>Using Move instead of Copy in the Files app.</strong> Move deletes the originals as the copy goes — an interrupted Move leaves photos split between phone and drive with no record of which is which. Copy, verify, then delete.</li>
+    <li><strong>Formatting the drive NTFS.</strong> Most Android phones cannot open NTFS on their own. Use exFAT — DriveForge's guide is the format reference — and keep FAT32 only for a drive an older device must read.</li>
+    <li><strong>Buying a drive before counting the library.</strong> Count the DCIM folder plus Pictures first, then buy the size — and buy two of them, because copy 3 needs a drive of its own. Divide by 5 GB to know how many free runs each copy needs.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you have confirmed the copy — open a few photos on the drive and check they arrived. Copy, check, then delete from the phone — never the other way round.</li>
+    <li><strong>Assuming the copy keeps running with the screen off.</strong> Unverified — no wake lock, no battery-saver handling. Keep the phone awake for the run or check it.</li>
+    <li><strong>Starting a multi-gigabyte copy on a nearly dead battery.</strong> One USB-C port holds the drive or the charger, not both — charge first, or use a powered hub with pass-through charging, which is standard USB-C behaviour but unverified with SnapDisk.</li>
+    <li><strong>Searching for the wrong thing.</strong> The pages the search returns are thorough 3-2-1 guides whose USB copy needs a PC, a manual file-manager copy, or a cloud account — none of them is a no-computer phone-to-USB guide. Search for the USB copy, not the rule, and the gap is obvious.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> three copies, two kinds of storage, one somewhere else — and each copy has to be complete and checked. Phone is copy 1, the USB drive is copy 2 in one tap with SnapDisk, and copy 3 is a second drive kept elsewhere or a cloud copy at Original quality. Copy to the drive first, check a few photos on the drive, then make the off-site copy — that order is what keeps your photos safe.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you would rather tap once than copy by hand, <a href="./">SnapDisk</a> copies your photos and videos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. Leave From unpicked and the default run copies the whole library oldest-first — or pick DCIM as the From folder and the folder route copies every photo in the tree — then tap Backup, and open a few photos on the drive and check they arrived before you delete anything. Then make copy 3: a second drive kept somewhere else, or a cloud backup at Original quality — SnapDisk does not do that step, and this article does not pretend it does. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a> for the general route, <a href="transfer-photos-to-usb-automatically.html">Transfer photos to USB automatically</a> for the one-tap route on its own, <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive</a> for the rival that adds choose-photos, folders by date or album, and incremental backups on Pro at $19.99 once, <a href="raw-photos-to-usb.html">How to back up RAW photos to USB from Android</a> for the .dng rule the folder route follows, <a href="heic-photos-to-usb.html">How to back up HEIC photos to USB from Android</a> for the format a re-encode destroys, <a href="screenshots-to-usb.html">How to back up screenshots to USB from Android</a> for the photos that live outside DCIM, <a href="burst-photos-to-usb.html">How to back up burst photos to USB from Android</a> for the dozens of files behind one thumbnail, <a href="slow-motion-videos-to-usb.html">How to back up slow-motion videos to USB from Android</a> for the file with a note inside it, <a href="panorama-photos-to-usb.html">How to back up panorama photos to USB drive</a> for the spin that lives in the metadata, <a href="timelapse-videos-to-usb.html">How to back up timelapse videos to USB drive</a> for the speed baked into the frames, and <a href="free-up-space-move-photos-to-usb.html">How to free up space by moving photos to a USB drive</a> for the delete-after-verify flow.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
