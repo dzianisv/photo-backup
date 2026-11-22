@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restore photos from USB to Android — SnapDisk</title>
+<meta name="description" content="Restore photos from a USB drive back to your Android phone with no computer: copy the SnapDisk backup back, and get the Gallery to see it.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/restore-photos-from-usb-to-android.html">
+<meta property="og:title" content="Restore photos from USB to Android phone">
+<meta property="og:description" content="Restore photos from a USB drive back to your Android phone with no computer: copy the SnapDisk backup back, and get the Gallery to see it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/restore-photos-from-usb-to-android.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/restore-photos-from-usb-to-android.html#article",
+      "headline": "Restore photos from USB to Android phone",
+      "description": "Restore photos from a USB drive back to your Android phone with no computer: copy the SnapDisk backup back, and get the Gallery to see it.",
+      "datePublished": "2026-11-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/restore-photos-from-usb-to-android.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/restore-photos-from-usb-to-android.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can SnapDisk restore photos from a USB drive back to my phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — not in v0.1.2. SnapDisk copies one way, phone to USB drive, and has no restore or import button: verified in the code, there is no copy-back path at all. The backup on the drive is plain files in plain folders, so you restore by copying them back with the Files app: plug the drive into the phone, copy the folders back to the same folders they came from under Internal storage, and the Gallery picks them up. The rival VaultDrive does not restore either — its own guide says so."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where do I copy the photos back to so the Gallery sees them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Back to the same relative folder they came from. SnapDisk's backup mirrors the source tree on the drive, so a camera photo sits in DCIM/Camera on the drive and goes back to Internal storage, DCIM, Camera. Copying to Downloads would still show in the Gallery, but under a Downloads album instead of with your camera photos — the folder decides the album, not whether the photo is visible. If a restored photo does not appear, restart the phone: the media scanner runs at boot and re-indexes the folders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my restored photos keep their original dates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The file itself is unchanged by a copy, so the taken date stored inside the photo is the original. But the gallery's Recently added view sorts by when the file arrived on the phone, so restored photos may sit under the restore date there — the timeline view by taken date should still show the original date. Open a restored photo and check its Details: the taken date should read the original."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I restore the backup to a different phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The backup is plain files on a plain drive — no account, no proprietary archive, nothing tied to the old phone. Plug the drive into the new phone and copy the folders back the same way, to the same relative folders. Then run SnapDisk on the new phone to protect them again: files already on the drive at the same size are skipped, so a re-run only copies what is new."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/restore-photos-from-usb-to-android.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Restore photos from USB to Android phone",
+          "item": "https://dzianisv.github.io/photo-backup/restore-photos-from-usb-to-android.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Restore photos from USB to Android phone</h1>
+  <p class="dek">SnapDisk has no restore button — the backup on your drive is plain files in plain folders. Copy them back with the Files app, put them where the Gallery looks, and check they show up before you unplug.</p>
+  <p class="meta">November 22, 2026 · 6 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> SnapDisk does <strong>not</strong> restore — version 0.1.2 has no restore or import function at all, verified in the code this run: the app copies one way, phone to USB drive, and there is no copy-back path. That is not a dead end, it is the shape of the job: the backup on the drive is plain files in the same folders they came from, so you restore by copying them back with the Files app — plug the drive into the phone, copy the folders back to the <strong>same relative folders</strong> under Internal storage (DCIM/Camera goes back to DCIM/Camera), and the Gallery picks them up. Copying to Downloads would still show in the Gallery, but under a Downloads album instead of with your camera photos — the folder decides the album, not whether the photo is visible. If a restored photo does not appear, restart the phone: the media scanner runs at boot and re-indexes the folders. The file itself is unchanged by a copy, so the taken date inside the photo is the original — but Recently added sorts by arrival, so restored photos may sit under the restore date there. Copy back only what is missing, or you will end up with two copies of the same photo. And the backup is the file as it was at backup time: later edits, albums, favourites, and people tags live in the gallery app or the cloud, not in the file, so they do not come back with it. As of November 22, 2026, no top search result offers a SnapDisk restore, or any one-tap restore from a USB backup to the phone: the results are a Samsung-only guide, a generic USB guide with a one-line reverse mention, the Files by Google help page, photo-stick comparisons, and a deleted-file recovery app — which is a different job entirely.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search for this job and the results split into five shapes, none of them a restore for a SnapDisk backup. The first shape is the Samsung-only guide: Samsung's "Download Media Files from a USB to my Galaxy Device" walks through My Files — plug in the drive with an OTG adapter, select the file on the USB drive, Copy, go back to Internal storage, pick a folder, Copy here — and its example pastes into Downloads. It works, and it is the closest thing to a real answer, but it is Galaxy-only by its own note ("designed for Australian variant devices"), it says nothing about where camera photos belong, and it never mentions SnapDisk or any backup app. The second shape is the generic USB guide: How-To Geek's "How to Use a USB Flash Drive With Your Android Phone or Tablet" is a phone-to-USB guide first, and the reverse direction gets a single line — "You can use this same method in reverse to move files from your USB drive to your Android device" — with Samsung My Files screenshots and no word about the Gallery. Tom's Guide's "How to Connect USB Storage Devices to Your Android Phone" is the same shape: connect the drive, browse it, copy files to the phone — generic, no backup, no Gallery step. The third shape is the platform help page: Google's "Use USB storage devices" for Files by Google gives the exact copy steps — Storage devices, tap the USB drive, find the file, Copy to, choose where, Copy here — but it is a file-manager manual, not a restore guide: it says nothing about which folder the photos belong in or how the Gallery finds them. The fourth shape is the photo-stick comparison: the umatechnology and mefmobile "Photo Stick vs. USB Flash Drive" pages both say the copy is manual — file manager, or through a computer — and stop there; a photo stick is a product label, not a restore workflow. The fifth shape is the wrong job entirely: Unerased and the deleted-file recovery tools recover files deleted from the phone itself — a different problem from copying a backup back off a drive you hold. That is the gap: the copy-back is taught as a generic file move for one phone brand, or in one line, and nobody puts together the SnapDisk backup, the folder it belongs in, and the Gallery step.</p>
+
+  <h2>What SnapDisk does — and does not do — for restore</h2>
+  <p>Say it plainly, because this is the fact the whole article turns on: <strong>SnapDisk does not restore.</strong> Version 0.1.2 copies photos and videos one way, from the phone to the USB drive, and has no restore button, no import button, and no copy-back path of any kind. This was verified in the code this run, not assumed: a search of the backup engine, the photo query, the main activity, the backup service, the settings screen, and the manifest at the current base finds no restore function — the only matches for "restore" or "import" are the word <code>import</code> at the top of Kotlin files, which is how the language loads libraries, not a feature. The app's job is the backup half, and it is honest about that. The restore half is a plain file copy, and the Files app already does it. Two consequences follow. First, there is nothing to install, buy, or sign into for the restore: the drive, the phone, and the file manager you already have are the whole toolkit, and the free 5 GB per-run cap and the $9.99 Pro purchase are backup facts, not restore facts — restoring costs nothing either way. Second, the rival does not restore either, and that is worth stating fairly: VaultDrive's own guide, "How to Back Up Your Photos Before Switching to a New Phone" on coticsy.com, says "VaultDrive doesn't currently restore photos back into your photo library itself" — because, like SnapDisk, its backups are plain files, and you copy them back onto the phone yourself. VaultDrive's prices, re-verified from its own site this run: Pro is $19.99 once, free up to 200 files or 2 GB per backup. So neither app sells you a restore button; the difference between them is in the backup, not the way back.</p>
+
+  <h2>Where your backup actually sits on the drive</h2>
+  <p>Before you copy anything back, look at what is on the drive — because the restore copies the folders, not the app, and the folders tell you where everything goes. SnapDisk's default run copies your <strong>whole media library</strong> via MediaStore — every photo and video the gallery sees, oldest first — not DCIM only. And the copy <strong>mirrors the source tree</strong> on the drive: a photo that lived in DCIM/Camera on the phone sits in DCIM/Camera on the drive, a photo from Pictures sits in Pictures, a download sits in Download. Both facts are verified in the code this run — the photo query reads MediaStore images and videos with no folder filter, and the backup engine carries the source relative path through to the destination. So the restore rule is simple: <strong>copy each folder back to the same relative folder it came from.</strong> DCIM/Camera on the drive goes back to Internal storage, DCIM, Camera. Pictures on the drive goes back to Pictures. That is what puts the photos back in the albums they came from, instead of in one flat pile. Three things on the drive are not photos. First, files ending in <code>.part</code> — an in-progress copy writes to <code>&lt;name&gt;.part</code> and is renamed to the real name only after the size verification passes, so a <code>.part</code> file is an unfinished copy, not a photo: do not copy it back, and delete it or leave it. Second, a video that is missing from the drive was probably never copied: files of 4 GB or more cannot sit on a FAT32 drive, and SnapDisk skips them with the reason listed instead of failing the whole backup — check the skipped list from the backup run before concluding a video is lost. Third, the drive holds the files, not your gallery's organisation: albums, favourites, people tags, and edits live in the gallery app or the cloud, not in the file — see "What restore does not bring back" below.</p>
+
+  <h2>Method 1: copy back with Files by Google (the restore)</h2>
+  <p>This is the restore. No app to install, no computer, no account — the phone, the drive, and the file manager. It works on any Android phone, not just Samsung, because Files by Google is the platform's own file manager:</p>
+  <ol>
+    <li><strong>Plug the USB drive into the phone.</strong> A USB-C flash drive goes straight in; a regular USB drive needs a USB-C OTG adapter. A notification should offer the drive — if nothing appears, open Files by Google and look under Storage devices.</li>
+    <li><strong>Find the backup on the drive.</strong> In Files by Google, tap the USB drive under Storage devices and browse to the folder you want back — DCIM/Camera for camera photos, Pictures for the rest, or the folder you pointed SnapDisk's From picker at if you backed up a single folder.</li>
+    <li><strong>Select what is missing — not the whole drive.</strong> Long-press one photo, then tap the rest, or long-press a folder to select the whole thing. Copy back only the photos you lost: if the phone still holds half of a folder and you copy the whole folder back over it, you can end up with two copies of the same photo.</li>
+    <li><strong>Copy, don't move.</strong> Tap the menu and choose <strong>Copy to</strong> — not Move. The drive is your backup: keep it intact until the restore is checked. Move deletes from the drive as it goes, and a failed move is how a backup becomes a loss.</li>
+    <li><strong>Choose the same folder on the phone.</strong> Navigate to Internal storage and into the same relative folder the files came from — DCIM, then Camera, for camera photos; Pictures for the rest. Tap <strong>Copy here</strong>.</li>
+    <li><strong>Wait for the copy to finish — and don't unplug the drive until it says it is done.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight.</li>
+    <li><strong>Open the Gallery and check.</strong> The restored photos should be back in their albums. If they are not there, do not copy again yet — see "When the photos don't appear in the Gallery" below; the files are almost certainly on the phone, just not indexed yet.</li>
+    <li><strong>Check a few photos before you touch the drive.</strong> Open two or three restored photos full-screen and confirm they render. Only then is the restore done — and the drive stays your backup until then.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive). The restore runs the other way: the drive is the source now, and the same folders are the destination on the phone.</figcaption>
+  </figure>
+
+  <p>On a Samsung phone the same steps run in My Files instead: plug in the drive, open My Files, tap USB storage, long-press to select, tap Copy, go back to Internal storage, open the matching folder, and tap Copy here. The buttons have different names and the example in Samsung's own guide pastes into Downloads — but the rule is the same: copy to the folder the photos came from, not to Downloads, or they land in a Downloads album instead of with your camera photos. Either file manager does the job; the folder you choose is what matters, not the app you choose it in.</p>
+
+  <h2>Method 2: restore a whole folder — or a whole phone</h2>
+  <p>Method 1 restores the photos you lost. This method is for the bigger cases: a folder wiped by accident, or a new phone. The steps are the same, the scale is different. For a whole folder — say every photo in DCIM/Camera is gone — long-press the DCIM folder on the drive, Copy to, Internal storage, and paste it back as DCIM: the folder structure inside comes with it, so the photos land in the albums they came from. For a new phone, the backup is plain files on a plain drive, so nothing ties it to the old phone: plug the drive into the new phone, copy the folders back to the same relative folders, and the photos are the new phone's photos. No account to sign into, no proprietary archive to unlock, no transfer code. Two honest notes. First, the new phone's camera photos will land in the same DCIM/Camera folder, so a restore and a new camera roll mix cleanly — but copy the backup back before the new phone's own photos pile up, or you will be sorting old from new by hand. Second, after the restore, run SnapDisk on the phone you restored to: it protects the restored photos again, and files already on the drive at the same size are skipped — verified in the backup engine, a destination file that already exists with the same size is never copied twice — so a re-run only copies what is actually new. The switching-phones guide covers the new-phone case from the backup side; this article is the restore half of it.</p>
+
+  <h2>When the photos don't appear in the Gallery</h2>
+  <p>This is the step people get wrong, because it looks like the restore failed when it didn't. The Gallery does not read folders — it reads a database called the MediaStore. A background scanner fills that index: it runs when the phone boots, when storage is mounted, when an app saves a file through the proper APIs, and when an app explicitly asks for a scan. A file copied by a file manager is on the disk but may not be in the index yet, and until something tells the index about it, the Gallery has no reason to know it exists. That is the mechanism, and it decides the fix. Usually the restored photos appear within seconds — the file manager's copy does trigger a scan — but if they don't, do not copy them a second time. Instead, in order:</p>
+  <ul>
+    <li><strong>Restart the phone.</strong> The scanner runs at boot, so a restart is the reliable nudge: give it a few minutes after booting, then open the Gallery. This is the fix to try first, and it is the one that needs no app and no computer.</li>
+    <li><strong>Check the folder has no <code>.nomedia</code> file.</strong> A file named <code>.nomedia</code> in a folder tells the scanner to skip that folder and everything under it. In your file manager, turn on Show hidden files, look in the folder you copied back to, and delete any <code>.nomedia</code> you find there — then restart the phone.</li>
+    <li><strong>Check the Gallery's permission.</strong> On Android 13 and later, the gallery needs Photos and videos permission: Settings, Apps, your Gallery app, Permissions, Photos and videos, Allow all — not a partial selection. Then reopen the Gallery.</li>
+    <li><strong>Check the Files app itself.</strong> Open Files by Google and look in the folder you copied to. If the photos are there, the files are safe and the problem is indexing only — work through the steps above, not another copy. If they are not there either, the copy itself did not land, and that is a different problem: repeat Method 1 and watch for the copy to finish before unplugging.</li>
+  </ul>
+  <p>One more check, and it settles the date question at the same time: open a restored photo and look at its Details. The taken date should read the original — the file itself is unchanged by a copy, so the date stored inside the photo is the one from when it was taken. What changes is the arrival date: the gallery's Recently added view sorts by when the file arrived on the phone, so restored photos may sit under the restore date there, while the timeline view by taken date should still show the original date.</p>
+
+  <h2>What restore does not bring back</h2>
+  <p>A restore brings back files. It does not bring back everything around them, and the honest version of that list is:</p>
+  <ul>
+    <li><strong>Albums, favourites, and people tags.</strong> Those live in the gallery app's database, or in the cloud — not in the photo file. The restored file is the photo; the album it sat in, the star you gave it, and the face tag are not in it.</li>
+    <li><strong>Edits made after the backup.</strong> The drive holds the file as it was at backup time. A crop, a filter, or an adjustment you made in the gallery or in Google Photos after that backup is not in the file on the drive — and a later backup of the edited file is a different file, not the same one with the edit attached.</li>
+    <li><strong>Photos that were only in the cloud.</strong> A photo that lived only in Google Photos — freed from the phone, never downloaded as a file — was never on the phone for SnapDisk to copy, so it was never on the drive. The restore can only bring back what the backup actually held.</li>
+    <li><strong>Videos the backup skipped.</strong> A video of 4 GB or more on a FAT32 drive was skipped at backup time with its reason listed — it is not on the drive to restore. The fix for next time is a drive formatted exFAT, which has no such limit.</li>
+    <li><strong>App data and messages.</strong> Chats, app settings, and account data are not files in a photo folder. The backup is photos and videos; everything else needs its own backup.</li>
+  </ul>
+  <p>None of this makes the restore a failure — it makes it a file restore, and the files are the irreplaceable part. But it is why the backup should run before the loss, not after: a backup made yesterday cannot hold an edit made today, and a photo that was never a file on the phone cannot be copied back from a drive.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Looking for a restore button in SnapDisk.</strong> There isn't one in v0.1.2 — verified in the code. Tapping around the settings for an import that does not exist wastes the time the copy-back would have taken. The Files app is the restore.</li>
+    <li><strong>Using Move instead of Copy.</strong> Move deletes from the drive as it goes. If the move fails halfway, the photos are neither on the phone nor on the drive. Copy, check, and only then decide what the drive is for.</li>
+    <li><strong>Copying everything back over a phone that still has half of it.</strong> Copy back only what is missing. A whole-folder copy over a half-full folder can leave two copies of the same photo — and sorting duplicates out is slower than selecting the missing ones in the first place.</li>
+    <li><strong>Copying the <code>.part</code> files back.</strong> A <code>.part</code> file is an unfinished copy, not a photo. It will not open, and it is not a backup of anything. Leave it on the drive or delete it.</li>
+    <li><strong>Copying back to Downloads because Samsung's example does.</strong> Downloads is a folder the Gallery indexes, so the photos would show up — but under a Downloads album, not with your camera photos. Copy camera photos back to DCIM/Camera, where they came from.</li>
+    <li><strong>Concluding the restore failed because the Gallery is empty.</strong> The files are probably on the phone and unindexed — check the Files app first, then restart the phone so the scanner runs at boot. A second copy over the first one is how duplicates happen.</li>
+    <li><strong>Deleting the drive copy before checking the restore.</strong> The drive is the only other copy until the restore is verified. Open a few restored photos full-screen first — then decide what to do with the drive.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or the restore creates the damage it was meant to fix.</li>
+    <li><strong>Expecting the albums and edits to come back with the files.</strong> They live in the app or the cloud, not in the file. The restore brings back the photos; rebuilding the albums is a separate, manual job.</li>
+    <li><strong>Treating a deleted-file recovery app as a restore.</strong> Unerased and its kind recover files deleted from the phone — a different job, with its own limits. If you hold the backup on a drive, the copy-back is faster, surer, and free.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> there is no restore button — the backup is plain files, so the restore is a plain copy. Copy back only what is missing, to the same folder it came from, with Copy — never Move — and check the Gallery before you touch the drive. If the photos don't show, restart the phone: the scanner runs at boot. The files are the irreplaceable part; the albums and edits around them are not in the file, and they don't come back with it.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone — and the copy back is the Files app's job, described above. You delete the originals yourself, after you check the copy. See also: <a href="switching-phones-photos-to-usb.html">Switching phones? Back up your photos to USB first</a> for the new-phone case from the backup side, <a href="factory-reset-photos-to-usb.html">Back up photos before a factory reset</a> for the backup to make before you wipe the phone, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos to a USB drive automatically (no manual copy)</a>, <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive: USB photo backup on Android, compared</a>, and <a href="free-up-space-move-photos-to-usb.html">How to free up space by moving photos to a USB drive</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

@@ -19322,6 +19322,118 @@ demand is read off competitor install velocity instead (see
   Next article candidate after this one: unverified.
 
 
+### 170. "Restore photos from USB to Android phone" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle, Medium on the Gallery step.
+  No guide in search covers restoring a SnapDisk USB backup to the
+  phone — what to copy back, which folder it belongs in so the
+  Gallery sees it, and what the backup app itself does or does not
+  do for restore. The Samsung guide copies files back by hand and
+  pastes into Downloads; the generic OTG guides mention the reverse
+  direction in one line; the Files by Google help page gives copy
+  steps and no folder or Gallery guidance; the photo-stick pages
+  say the copy is manual and stop there; the recovery apps solve a
+  different job (files deleted from the phone, not a backup on a
+  drive). The gap stands ONLY on that narrow angle: a SnapDisk USB
+  backup copied back to the phone with the Files app — same folders
+  it came from, Gallery re-indexed — with the plain statement that
+  SnapDisk itself has no restore function (SnapDisk).
+- Current top results (scored Nov 22, 2026, live web search):
+  Phrasing 1, "restore photos from USB flash drive back to Android
+  phone gallery" (supervisor): Samsung's Galaxy-only My Files guide,
+  Nucleo Visual (thin generic), Unerased (deleted-file recovery — a
+  different job), gauginggadgets (Samsung-only, brief reverse
+  section); no SnapDisk-specific restore article (verified this
+  run, not re-run); Phrasing 2, "transfer photos from USB drive to
+  Android phone without computer restore backup" (supervisor): the
+  same Samsung page, howtogeek (generic, one-line reverse mention),
+  and photo-stick comparison pages; no SnapDisk-specific restore
+  article (verified this run, not re-run); Phrasing 3, "copy photos
+  from USB flash drive back to Android phone gallery without
+  computer" (lead, this run): howtogeek, "How to Use a USB Flash
+  Drive With Your Android Phone or Tablet"
+  https://www.howtogeek.com/129800/how-to-use-usb-drives-with-android-phone-or-tablet/
+  — phone-to-USB first, the reverse direction in one line ("You can
+  use this same method in reverse to move files from your USB drive
+  to your Android device"), Samsung My Files screenshots, no Gallery
+  step; umatechnology.org and mefmobile.org, "Photo Stick vs. USB
+  Flash Drive for Android Photos: Which to Choose"
+  http://umatechnology.org/photo-stick-vs-usb-flash-drive-which-is-better-for-backing-up-android-photos/
+  and
+  https://mefmobile.org/photo-stick-vs-usb-flash-drive-which-is-better-for-backing-up-android-photos/
+  — manual copy via the file manager or a computer, no
+  restore-to-gallery guidance; Files by Google help, "Use USB
+  storage devices"
+  https://support.google.com/files/answer/9301516?hl=en — exact
+  copy steps (Storage devices, USB drive, Copy to, choose where,
+  Copy here), no folder or Gallery guidance; Samsung, "Download
+  Media Files from a USB to my Galaxy Device"
+  https://www.samsung.com/au/support/mobile-devices/download-media-files-from-usb-to-samsung-phone/
+  — My Files, select on the USB drive, Copy, Internal storage,
+  pick a folder, Copy here, example pastes into Downloads;
+  Galaxy-only by its own note, nothing about where camera photos
+  belong, SnapDisk never named; Tom's Guide, "How to Connect USB
+  Storage Devices to Your Android Phone"
+  https://www.tomsguide.com/us/connect-usb-drive-to-android,news-21213.html
+  — connect the drive, browse it, copy files to the phone;
+  generic, no backup, no Gallery step (all search-index excerpts
+  read this run). No SnapDisk-specific restore article and no
+  one-tap restore app in any of the three phrasings.
+  Verification searches this run: MediaStore re-indexing
+  (adbhandbook, "Making adb-pushed media files show up in the
+  Android gallery"
+  https://www.adbhandbook.com/blog/making-adb-pushed-media-files-show-up-in-the-android-gallery
+  — the gallery reads the MediaStore database, not folders; the
+  scanner runs on boot, on storage mount, when an app saves through
+  the proper APIs, and when explicitly asked; a file copied by other
+  means is on disk but not in the index; anexplorer.io,
+  "Photos Not Showing in Gallery on Android"
+  https://anexplorer.io/solve/photos-not-showing — a .nomedia file
+  hides a folder, permissions on Android 13+, restart as the
+  scanner nudge, move-a-file-and-back as a re-scan trigger;
+  codestudy.net,
+  https://www.codestudy.net/blog/image-saved-to-sdcard-doesn-t-appear-in-android-s-gallery-app/
+  — Files by Google Refresh and third-party rescan apps trigger the
+  scanner; all search-index excerpts read this run); VaultDrive
+  restore + prices (coticsy.com/vaultdrive.html
+  https://coticsy.com/vaultdrive.html — Pro $19.99 once, free up to
+  200 files or 2 GB per backup, "Pay once and keep Pro for life";
+  coticsy.com/blog/backup-photos-before-switching-phones
+  https://coticsy.com/blog/backup-photos-before-switching-phones —
+  "VaultDrive doesn't currently restore photos back into your photo
+  library itself"; both search-index excerpts read this run, prices
+  re-verified live from the vendor page this run); code verification
+  at base e8c7cf8 (PhotoQuery.kt reads MediaStore images + videos
+  with no folder filter, oldest first; BackupEngine.kt carries the
+  source relativePath to the destination — "destination mirrors the
+  source tree"; no restore/import function in BackupEngine.kt,
+  PhotoQuery.kt, MainActivity.kt, BackupService.kt,
+  SettingsScreen.kt, or AndroidManifest.xml — only the keyword
+  `import` in Kotlin import statements; .part files renamed only
+  after size verification; same-size destination files skipped;
+  all read this run via the GitHub API).
+  Adjacent ground: the switching-phones article names the
+  copy-from-drive to a new phone in passing ("getting the photos
+  onto the new phone is the transfer in Methods 3, 4 and 5, or a
+  copy from the drive with the Files app") and notes VaultDrive
+  does not restore either; the factory-reset article is
+  backup-before-reset only and never covers the copy back. No
+  dedicated restore article exists: 0 "restore photos" query rows
+  in searches.md before this one, no restore slug in docs/.
+  The honest centre is the no-restore statement plus the
+  folder rule: SnapDisk has no restore/import in v0.1.2 (verified
+  in code), so the restore is a Files-app copy back to the same
+  relative folders — DCIM/Camera back to DCIM/Camera — because the
+  folder decides the album, not whether the Gallery sees the photo;
+  a photo that does not appear after the copy is an indexing gap,
+  fixed by restarting the phone so the scanner runs at boot, not by
+  copying a second time; the taken date inside the file is the
+  original, but Recently added sorts by arrival, so restored photos
+  may sit under the restore date there; copy back only what is
+  missing (Copy, never Move), and never copy .part files back.
+  Next article candidate after this one: unverified.
+
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
