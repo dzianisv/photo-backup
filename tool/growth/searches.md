@@ -17746,12 +17746,13 @@ demand is read off competitor install velocity instead (see
   does not need to understand slow motion, it needs to
   copy the file byte-for-byte, because a re-encode can
   drop the note. The certain route is both routes for
-  .mp4 — the default run reads the MediaStore Video
-  table with no folder filter and no MIME filter, and
-  .mp4 is indexed on every phone — and the folder route
-  alone for .mov, which is in the recognised extension
-  list but whose MediaStore indexing is not promised the
-  same way. Second honest limit: the slow part is a
+  .mp4 and for .mov — the default run reads the
+  MediaStore Video table with no folder filter and no
+  MIME filter, and .mp4 is indexed on every phone — and
+  .mov is indexed on every phone — Android's platform
+  MIME map lists .mov as video/quicktime — so the
+  default run covers both, and the folder route is
+  certain for both too. Second honest limit: the slow part is a
   property of the player as well as the file — a player
   that does not read the metadata plays the clip at full
   speed while the note is still inside it — so the check
