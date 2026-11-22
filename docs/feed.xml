@@ -1133,5 +1133,12 @@
       <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
       <description>A burst looks like one photo — and that is the trap. Behind the single thumbnail in your gallery sit dozens of individual files, and the one you want is frame 37 of 60. Here is how to get every frame of a burst onto a USB drive, and how to prove they all arrived.</description>
     </item>
+    <item>
+      <title>Back up slow-motion videos to USB drive — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/slow-motion-videos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/slow-motion-videos-to-usb.html</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A slow-motion video looks like a special file — and that is the trap. It is an ordinary .mp4, and the slow part is a note inside the file, not a second file. Anything that re-saves or re-encodes it can drop the note, and the video that comes back plays at full speed. Here is how to get slow-motion videos onto a USB drive with the slow part still inside them.</description>
+    </item>
 </channel>
 </rss>

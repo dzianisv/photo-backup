@@ -17586,6 +17586,260 @@ demand is read off competitor install velocity instead (see
   the URL-line count, verified this run (97 before, 98
   after).
 
+### 161. "back up slow-motion videos to USB from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a slow-motion-specific
+  phone-to-USB backup guide at all — the top results are
+  our own general guides, generic transfer guides, and
+  two OTG walkthrough videos. None of them says a word
+  about slow motion, none of them offers a one-tap
+  whole-library backup for slow-motion videos, and none
+  of them mentions SnapDisk.
+- Current top results (scored Nov 21, 2026, live web search):
+  our own videos article, "Back up videos from Android
+  to a USB drive"
+  (https://dzianisv.github.io/photo-backup/videos-to-usb.html
+  — a general video backup guide, no slow-motion angle;
+  search-index excerpt read this run);
+  YouTube, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (https://www.youtube.com/watch?v=PYcbV25CczI
+  — a manual OTG copy in the file manager, select photos
+  and videos in DCIM, Move or Copy to the drive; no
+  slow-motion angle, no SnapDisk mention; search-index
+  excerpt read this run);
+  our own external-drive article, "How to back up photos
+  to an external drive on Android"
+  (https://dzianisv.github.io/photo-backup/backup-photos-to-external-drive.html
+  — a general external-drive guide, no slow-motion angle;
+  search-index excerpt read this run);
+  wikitechlibrary, "How to Back Up Your Android Phone to
+  an External Hard Drive (No Cloud Required)"
+  (https://wikitechlibrary.com/android-phone-backup-external-hard-drive/
+  — a manual file-manager copy, folder by folder, which
+  suggests FolderSync to automate folder sync — a
+  general-purpose sync tool, not a one-tap whole-library
+  backup; no slow-motion angle, no SnapDisk mention;
+  search-index excerpt read this run);
+  thewiredshopper, "How to Transfer Photos From Android
+  Phone to USB Flash Drive"
+  (https://thewiredshopper.com/how-to-transfer-photos-from-android-phone-to-usb-flash-drive/
+  — a manual file-manager copy and a PC tool, with a
+  videos section that is still just select-copy-paste;
+  no slow-motion angle, no SnapDisk mention;
+  search-index excerpt read this run).
+  Second-phrasing re-score (this run) surfaced no new
+  near-miss beyond the same shape — the five it returns
+  are all generic transfer guides or our own general
+  articles: our own videos article (above);
+  itechguides, "How to Transfer Files from Android to
+  USB Flash Drive"
+  (https://www.itechguides.com/how-to-transfer-files-from-android-to-usb-flash-drive-wired-or-wireless/
+  — a thorough manual OTG guide, Files by Google,
+  select the files in DCIM or Videos, Copy to the
+  drive; no slow-motion angle, no SnapDisk mention;
+  search-index excerpt read this run);
+  the same YouTube OTG walkthrough (above);
+  a second YouTube OTG tutorial, "How to Transfer
+  Photos, Videos and any Files from Android Phone to USB
+  Pendrive (USB Drive Tutorial)"
+  (https://www.youtube.com/watch?v=ch1evyu5PPM
+  — manual select-copy-paste, step by step; no
+  slow-motion angle; search-index excerpt read this
+  run);
+  mobiletrans, "Back Up a Phone to an External USB Drive
+  Without Cloud Storage"
+  (https://mobiletrans.wondershare.com/android-backup/how-to-back-up-a-phone-to-an-external-usb-drive-without-cloud-storage.html
+  — a manual folder copy with a computer route attached;
+  no slow-motion angle, no SnapDisk mention;
+  search-index excerpt read this run).
+  Gap stands only
+  on the slow-motion angle.
+  VaultDrive's product page
+  (https://coticsy.com/vaultdrive.html
+  — the rival page, full page read this run, not a
+  search-index excerpt: it says nothing about slow
+  motion at all, not one slow-motion line anywhere on
+  it — the single "slow" on the page is a marketing
+  line about a slow internet connection — so it is not
+  a slow-motion guide either; what it does have, and
+  what is genuinely slow-motion-relevant, is a
+  choose-photos feature ("Back up just the photos and
+  videos you pick") and "Original quality, byte for
+  byte" (HEIC, ProRAW, ProRes and 4K video copied as
+  they are, never compressed or re-encoded), plus
+  folders by date or album and incremental backups on
+  Pro, and a free tier of 200 files or 2 GB per backup
+  against SnapDisk's 5 GB per run with no file count —
+  a few long slow-motion clips eat the 2 GB in a single
+  backup; Pro $19.99 once, Android 8 or later, on
+  Google Play; "2,000+ installs on the App Store and
+  Google Play", unchanged since WL-194).
+  The slow-motion-format references, not competing guides:
+  Android Developers, media3 extractor metadata mp4
+  (https://developer.android.com/reference/androidx/media3/extractor/metadata/mp4/package-summary
+  — SlowMotionData "holds information about the segments
+  of slow motion playback within a track", and
+  SmtaMetadataEntry "stores metadata from the Samsung
+  smta box"; search-index excerpt read this run);
+  Samsung support, "What is Slow Motion and how do I use
+  it?"
+  (https://www.samsung.com/uk/support/mobile-devices/what-is-slow-motion-and-how-do-i-use-it/
+  — "Slow Motion allows you to record a video then play
+  it back up to 8 times slower than normal", and "The
+  Super Slow-mo feature plays your videos back 32 times
+  slower than normal videos"; the slow portion is chosen
+  with sliders and saved with Export or Save;
+  search-index excerpt read this run);
+  Samsung Members community, "Samsung's Super Slow Motion
+  Explained"
+  (https://community.samsung.com/in/conversations/galaxy-s/Samsung-s-Super-Slow-Motion-Explained/r2_4890708
+  — "slow motion video works by shooting at a high
+  frames per second (fps) rate and then playing it back
+  at a much slower rate"; Super Slow-mo "is shot at 960
+  fps" and "when it's played back at 30 fps, that's 32x
+  slower"; search-index excerpt read this run);
+  Android Central, "How to use the Galaxy S5's slow (and
+  fast) motion video features"
+  (https://www.androidcentral.com/how-use-galaxy-s5s-slow-motion-video-features
+  — "Slow and fast motion videos are saved the same way
+  any other video is"; search-index excerpt read this
+  run);
+  Samsung support, "Capture slow motion videos on your
+  Galaxy phone"
+  (https://www.samsung.com/us/support/answer/ANS10001595/
+  — the Instant Slow-mo reference: touch and hold the
+  screen to slow any video on playback, and "To save
+  Slow-mo clips, tap Save slow-mo clip"; search-index
+  excerpt read this run).
+  Google Photos help, "Choose the backup quality of your
+  photos & videos"
+  (https://support.google.com/photos/answer/6220791?hl=en-GB&co=GENIE.Platform=Desktop
+  — the cloud-trap reference the article names, not a
+  competing guide: Storage saver uploads "may be
+  compressed into a different image format, like a .jpg";
+  search-index excerpt read this run);
+  DriveForge, "exFAT vs FAT32 vs NTFS: Which Format for Your
+  USB or SD Card?"
+  (https://driveforge.bytehavenstudios.com/guides/exfat-vs-fat32-vs-ntfs/
+  — the format reference the article names, not a
+  competing guide: exFAT has no 4 GB per-file limit;
+  search-index excerpt read this run).
+  Key finding + ANTI-DUPLICATE CHECK (first, before
+  writing — the WL-189 lesson): grep of searches.md for
+  "slow" / "slow-motion" / "slow motion" finds only
+  incidental mentions — the WL-190 note ("slow copy")
+  and a reviewer quote ("I found it very slow") — and no
+  "### " row title is a slow-motion topic; a docs/
+  listing finds no slow-motion-videos-to-usb.html and no
+  near slug (slow, slow-mo, slowmo — only
+  motion-photos-to-usb.html exists). No existing
+  slow-motion article or row: the gap is a new article,
+  not a rewrite. WL-189 was killed before merge for
+  duplicating WL-168's live switching-phones article —
+  this query is not that moment. The honest centre is
+  the one-file-with-a-note shape, verified from live
+  sources: a slow-motion video is an ordinary .mp4 (or
+  .mov) file in DCIM/Camera whose slow part is playback
+  metadata inside the file — Android's media3
+  SlowMotionData, Samsung's smta box — so the backup
+  does not need to understand slow motion, it needs to
+  copy the file byte-for-byte, because a re-encode can
+  drop the note. The certain route is both routes for
+  .mp4 — the default run reads the MediaStore Video
+  table with no folder filter and no MIME filter, and
+  .mp4 is indexed on every phone — and the folder route
+  alone for .mov, which is in the recognised extension
+  list but whose MediaStore indexing is not promised the
+  same way. Second honest limit: the slow part is a
+  property of the player as well as the file — a player
+  that does not read the metadata plays the clip at full
+  speed while the note is still inside it — so the check
+  is the phone's own Gallery, which reads the note.
+  Screen-off continuation under battery saver UNVERIFIED
+  (no WakeLock/Doze code), stated plainly in-article
+  (lowercase "unverified", 4 occurrences — the WL-182
+  form). Adjacent ground named in-article: the videos
+  article, the motion-photos article (WL-193) as the same
+  shape — one file with something hidden inside it — the
+  burst article (WL-195) as the opposite shape, the RAW
+  article (WL-190), the HEIC article (WL-191) and the
+  screenshots article (WL-192) for the same folder-route
+  rule, the Samsung Galaxy article, the general backup
+  article, and the VaultDrive comparison (WL-37). The
+  article names VaultDrive's verifiable wins fairly: on
+  Play today, choose-photos (back up just the photos and
+  videos you pick — the honest pick for a handful of
+  slow-motion clips), original quality byte-for-byte,
+  folders by date or album, incremental backups on Pro —
+  against SnapDisk's oldest-first order, detailed
+  progress with Pause/Stop, per-file size verification,
+  free 5 GB per run with no file count, and Pro $9.99
+  once vs $19.99. No price is invented (every price is
+  from the repo or the vendor's own page).
+  SnapDisk behaviour re-verified from the repo by the
+  lead: minSdk 24, Pro $9.99 one-time (pro_unlock), free
+  5 GB/run, oldest-first DATE_TAKEN, .part resume + size
+  verification, FAT32 >=4 GiB skip-and-continue,
+  From-picker OpenDocumentTree SAF, dataSync foreground
+  service 6h budget (WL-34), no INTERNET permission, no
+  WakeLock/Doze code. Verified file by file this run:
+  PhotoQuery.kt (VIDEO_EXTENSIONS includes ".mp4"/".mov"
+  at line 134, IMAGE_EXTENSIONS at line 130;
+  queryMediaStoreOldestFirst reads the Images table plus
+  the Video table with selection null, no folder filter,
+  no MIME filter; the tree walk recurses into subfolders),
+  BackupEngine.kt (copyWithResume, .part resume, size
+  verification, shouldSkip — a destination file whose size
+  already matches is never copied twice, oldest-first
+  sort), BackupService.kt (enumeratePhotos: fromUri null
+  goes to MediaStore, a picked From goes to the SAF tree
+  walk; FAT32 >=4 GiB skip with reason,
+  FREE_BACKUP_BYTES_LIMIT cap, dataSync 6h onTimeout
+  pause), ProPrefs.kt (FREE_BACKUP_BYTES_LIMIT = 5 GiB,
+  PRO_PRICE_LABEL $9.99), AndroidManifest.xml (no
+  INTERNET permission; FOREGROUND_SERVICE_DATA_SYNC),
+  build.gradle.kts (minSdk 24, version 0.1.2).
+  Link verification this run: VaultDrive full page read
+  (0 "slow-motion" occurrences on the page — the single
+  "slow" is "the internet is slow" in a marketing line;
+  Pro $19.99 once, free 200 files or 2 GB, "2,000+
+  installs on the App Store and Google Play"); the five
+  format references read as search-index excerpts
+  (Android Developers, Samsung support x2, Samsung
+  community, Android Central); YouTube, WikiTechLibrary,
+  thewiredshopper, itechguides and MobileTrans read as
+  search-index excerpts (0 SnapDisk mentions in every
+  page read except our own); Google Photos help and
+  DriveForge are the standing references from the
+  WL-191/WL-192 rows; own canonical 404 pre-merge
+  (curl, this run — the known-missing control URL returns
+  the same 404, while the existing burst page returns
+  200; expected, live only after merge).
+  SCORING-FIX SWEEP (this run): no figure needed
+  correcting anywhere in this run's files. The WL-190
+  worklog flag about llms-full.txt saying "4.5 from 61
+  reviews" stays settled wrong — re-checked this run on
+  main: 0 occurrences of "61 reviews" in llms-full.txt,
+  llms.txt, or the blog index; the 9 "61 reviews" lines
+  in searches.md are 2 live AppBrain-sourced rating lines
+  in older device rows plus 7 historical flag-discussion
+  lines, none of them a figure in this run's files, and
+  this run's row adds none. The "870 installs" lines in
+  llms-full.txt (9) and searches.md (7) are the dated
+  AppBrain-sourced lines settled by WL-194 — AppBrain
+  still reads 870, the vendor page still says "2,000+
+  installs on the App Store and Google Play" (full page
+  read this run) — and this article carries no install
+  count; the single "2,000+ installs" in llms-full.txt
+  is this run's own slow-motion section, correctly
+  attributed to the vendor page as the combined-stores
+  figure. The new article's prices check out: $9.99
+  twice, $19.99 once, "5 GB per run" twice, "200 files
+  or 2 GB" once — all matching the verified figures.
+  The llms-full.txt count this row uses is the URL-line
+  count, verified this run (98 before, 99 after).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
