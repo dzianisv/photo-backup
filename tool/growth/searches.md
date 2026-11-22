@@ -18890,7 +18890,21 @@ demand is read off competitor install velocity instead (see
   export on desktop, Android, and iPhone, same Accounts Center
   path, Export to device, downloaded as a .zip, inside it a
   photos_and_videos folder — the guide stops at the zip; search-index
-  excerpt read this run).
+  excerpt read this run);
+  umatechnology.org, "How to Keep a Local Copy of Facebook Photos on
+  Your Phone"
+  (https://umatechnology.org/how-to-keep-a-local-copy-of-facebook-photos-on-your-phone/
+  — download individual photos to the phone's camera roll/gallery, or
+  bulk-download with Facebook's Download Your Information tool; no USB
+  step, the guide stops at the phone; search-index excerpt read this
+  run, supervisor fourth phrasing);
+  HowToGeek, "How to Keep a Local Copy of Facebook Photos on Your
+  Phone"
+  (https://www.howtogeek.com/193378/ask-htg-how-can-i-easily-keep-a-local-copy-of-facebook-photos-on-my-phone/
+  — Sep 29, 2016: download each photo by hand, or bulk-download the
+  Facebook archive and grab the photos from it, then IFTTT to Dropbox
+  for future photos; no USB step anywhere; search-index excerpt read
+  this run, supervisor fourth phrasing).
   VaultDrive's product page (https://coticsy.com/vaultdrive.html
   — full page read this run, not a search-index excerpt) has 0
   "Facebook" occurrences; its Facebook-relevant features are
