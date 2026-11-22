@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Telegram photos to USB on Android — SnapDisk</title>
+<meta name="description" content="Back up Telegram photos and videos to USB on Android with no computer: point SnapDisk at the Telegram folders and copy oldest-first — files only, not chats.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/telegram-photos-to-usb.html">
+<meta property="og:title" content="Back up Telegram photos and videos to USB from Android">
+<meta property="og:description" content="Back up Telegram photos and videos to USB on Android with no computer: point SnapDisk at the Telegram folders and copy oldest-first — files only, not chats.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/telegram-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/telegram-photos-to-usb.html#article",
+      "headline": "Back up Telegram photos and videos to USB from Android",
+      "description": "Back up Telegram photos and videos to USB on Android with no computer: point SnapDisk at the Telegram folders and copy oldest-first — files only, not chats.",
+      "datePublished": "2026-11-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/telegram-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/telegram-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up Telegram photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Plug a USB drive into your Android phone, point SnapDisk's From folder at the Telegram Images folder (or the Telegram Video folder, or the parent Telegram folder for both), and tap Backup — the photos and videos copy oldest-first to the drive, with no computer and no upload. The free version covers 5 GB per run; run it again past the cap and it picks up where it stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does Telegram store photos on Android?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Downloaded media lives in Telegram folders on the phone: a Telegram folder with Telegram Images, Telegram Video, Telegram Documents and Telegram Audio subfolders on older setups, or inside Android/data/org.telegram.messenger on Android 11 and later. Check which one exists on your phone in the Files app before you start — and if the media is only under Android/data, the folder picker cannot open it, so use Telegram's own Save to Downloads or the PC route instead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why can't SnapDisk open the Android/data Telegram folder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Android itself blocks it. On Android 11 and later, the system folder picker (ACTION_OPEN_DOCUMENT_TREE, which SnapDisk uses) cannot be used to select files under Android/data or Android/obb — the picker answers \"Can't use this folder. To protect your privacy, choose another folder.\" That is the platform's rule, not the app refusing. Pick the Telegram folder the picker can reach, or save the files out of Telegram first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this back up my Telegram chats too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SnapDisk copies media files only — the photos and videos in the folder you pick. It does not back up chat history, which lives in Telegram's cloud and reappears when you sign in on any device; secret chats are device-bound and never sync at all. It also does not copy voice messages, documents, or the cache. For a chat archive, use Telegram Desktop's Export chat history on a computer."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/telegram-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up Telegram photos and videos to USB from Android",
+          "item": "https://dzianisv.github.io/photo-backup/telegram-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up Telegram photos and videos to USB from Android</h1>
+  <p class="dek">Your Telegram photos are files on your phone — in Telegram's own folders, which you can point a backup app at. Plug a USB drive into the phone and copy them straight to it, no computer, no upload.</p>
+  <p class="meta">November 22, 2026 · 5 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> Plug a USB drive into your Android phone, point SnapDisk's From folder at the Telegram Images folder (or the parent Telegram folder for images and videos together), and tap Backup — your Telegram photos and videos copy oldest-first to the drive, with no computer and no upload in between. The honest limits, up front: SnapDisk copies media <strong>files only</strong> — the photos and videos in the folder you pick. It does <strong>not</strong> back up chat history (your cloud chats reappear when you sign in anywhere; secret chats are device-bound and never sync), voice messages, documents, stickers outside the picked folder, or the cache. And there is one wall to know about before you start: on Android 11 and later, Telegram's working data lives under <strong>Android/data/org.telegram.messenger</strong>, and Android's own folder picker refuses that folder — so if your Telegram media only exists there, the one-tap route cannot reach it, and the fallback is Telegram's own Save to Downloads or the PC route, both described below. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. Screen-off continuation under battery saver is unverified — keep the phone awake for the run. As of November 22, 2026, no top search result offers phone-to-USB Telegram backup in one tap: the top results move Telegram files phone-to-phone through a PC, copy by hand in a file manager, save Telegram media to the phone only, or use Telegram itself as cloud storage.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search for this job and the results split into four shapes, none of them the one-tap phone-to-USB copy. The closest guide that actually names Telegram's folders is NetworkUstad's "Move Telegram Downloaded Files To A New Phone Manually": it finds the Telegram folder (Telegram Images, Telegram Video, Telegram Documents, Telegram Audio) or Android/data/org.telegram.messenger on newer Android — but its job is moving files to a <strong>new phone</strong>, through a PC or with the USB drive only as a middleman between two phones. Wondershare MobileTrans' generic phone-to-USB guide is the second near-miss: it copies "DCIM, Pictures, Movies, Music, Download, Documents, and messaging-media folders" by hand in the Files app, with a computer-first fallback — Telegram is never named, no Telegram folder path is given, there is no scoped-storage note, and the copy is manual select-copy-paste with no progress, no resume, and no verification. AnExplorer's OTG guide and the YouTube OTG walkthroughs are the same shape: a manual file-manager copy, with DCIM and Download as the examples. RottenWifi's "How to Find Downloaded Files in Telegram" finds the files but stops there — no USB copy at all — though it makes one distinction this article relies on: a file you only viewed may be cache, not a permanent file, and cache is not a backup. The third shape is apps that save Telegram media <strong>to the phone</strong>, not to a drive: Telegram Media Saver and Media Saver for Telegram (one-tap saving from the share menu into gallery folders). The fourth shape goes the opposite direction: TeleDrive and Telegrive use your Telegram account as cloud storage — they upload your files <em>into</em> Telegram, which is the reverse of getting Telegram files <em>out</em> onto a drive you hold. Two one-tap whole-library apps do appear — PhotoStick Mobile and Photos to USB: OTG Backup, both of which copy the whole gallery in one tap, PhotoStick with its own drive — but neither names Telegram or its folders, and neither is a guide for the Telegram folders. VaultDrive, the rival this site compares against, also does phone-to-USB with no computer and lets you pick files and folders — and its page, read in full this run, never mentions Telegram either, so there is no Telegram-specific guide there. That is the gap: the folders are named in a phone-to-phone guide, the USB copy is done by hand in generic guides, and nobody puts the two together in one tap.</p>
+
+  <h2>Where Telegram keeps your photos and videos</h2>
+  <p>Telegram saves every photo and video you download as an ordinary file in a folder on your phone. Where that folder sits depends on the Android version and how Telegram was installed, so check which one exists on your phone before you start:</p>
+  <ul>
+    <li><strong>Older setups:</strong> Internal storage &gt; Telegram &gt; Telegram Images (photos), Telegram Video (videos), Telegram Documents, Telegram Audio.</li>
+    <li><strong>Android 11 and later:</strong> Telegram's working data lives under Internal storage &gt; Android &gt; data &gt; org.telegram.messenger. The built-in file manager may refuse to open Android/data — that is the wall the next-but-one section is about.</li>
+  </ul>
+  <p>Videos live in <strong>Telegram Video</strong> next to Telegram Images, so picking the parent Telegram folder gets both in one run. You do not need to memorise either path — in the steps below you navigate to the folder in a picker and tap it, so you just follow whichever one exists on your phone. Two things worth knowing before you start. First, if a photo never downloaded (the blurred thumbnail with a download arrow), it is not on your phone yet — open the chat and download it first, or there is nothing to copy. Second, viewing a photo is not downloading it: Telegram keeps a cache so you can reopen what you viewed, and the cache is fragments keyed to the installation, not your photos in any usable sense — do not copy the cache folder and call it a backup. Only files you deliberately downloaded sit in the Telegram Images and Telegram Video folders.</p>
+
+  <h2>What you need</h2>
+  <p>An Android phone (Android 7.0 or later for SnapDisk); a USB drive your phone can read — a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter (most modern Android phones support OTG; if the phone doesn't see the drive, try a different adapter); and enough space on the drive for the Telegram photos and videos you want to keep. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit. And one check before you start: open the Files app, look at the Telegram folder sizes, and divide by 5 GB — that is how many free runs the copy needs, and the arithmetic belongs before you plug the drive in, not halfway through the copy.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Open SnapDisk and set the From folder.</strong> The app opens to a settings screen with a From folder and a To folder, each with a folder picker. Tap the From folder picker and navigate to the Telegram Images folder — Internal storage &gt; Telegram &gt; Telegram Images — and tap it. To get the videos too, pick the parent Telegram folder instead: SnapDisk walks the folder recursively, so one run copies Telegram Images and Telegram Video together. (Other file types in that folder — documents, voice messages — are simply skipped; only image and video files copy.)</li>
+    <li><strong>Set the To folder to the USB drive.</strong> Plug in the USB drive, tap the To folder picker, and choose a folder on the drive. The copy mirrors the source folder structure, so your Telegram Images stay in a Telegram Images folder on the drive.</li>
+    <li><strong>Plug in the USB drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"</li>
+    <li><strong>Tap Backup.</strong> Photos and videos copy oldest-first — your earliest Telegram photos first — in the background, while you use the phone normally.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big Telegram folder partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. Point From at the Telegram folder and the copy runs between these two folders.</figcaption>
+  </figure>
+
+  <p>If you unplug the drive mid-copy, the backup pauses with the full error shown and resumes where it stopped when the drive is back. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device. What SnapDisk adds over the rival that also does phone-to-USB — VaultDrive, Pro $19.99 once, free up to 200 files or 2 GB per backup, "2,000+ installs on the App Store and Google Play" — is the oldest-first order, the detailed progress with Pause and Stop, per-file size verification, a free tier of 5 GB per run with no file count, and half the Pro price. VaultDrive's own wins, stated fairly: you can pick just the photos you want, folders are organised by date or album, and Pro copies only what's new since last time.</p>
+
+  <h2>The Android/data wall — and what to do about it</h2>
+  <p>This is the one configuration where Method 1 cannot work, and it is worth a section of its own because the search results name the folder without naming the wall. On Android 11 and later, you cannot use the system folder picker to select files under <strong>Android/data</strong> or <strong>Android/obb</strong> — Android's own developer documentation says so, for both picking single files and picking a folder tree. SnapDisk's From picker is that system picker (the Storage Access Framework's folder picker), so if you navigate to Android/data/org.telegram.messenger and tap it, the picker answers "Can't use this folder. To protect your privacy, choose another folder." That is the platform's rule, not the app refusing, and no setting in SnapDisk changes it — the restriction applies to every third-party app that asks for a folder, including the built-in file manager, which is why NetworkUstad tells you to connect the phone to a PC instead. What to do depends on where your Telegram media actually sits, so check first in the Files app: if a Telegram folder exists outside Android/data — the top-level Telegram folder with Telegram Images and Telegram Video — pick that one and Method 1 works as written. If the media only exists under Android/data, use one of the two fallbacks. The first is Telegram's own route: in each chat, save the photos and videos you want to keep with Save to Downloads or Save to Gallery, which puts ordinary copies in folders the picker can reach — slow for a whole library, but exact for the files that matter. The second is the PC route from NetworkUstad's guide: connect the phone to a computer in File Transfer mode, copy the Telegram folders to the computer, then copy them from the computer to the USB drive. Neither fallback is one-tap, and this article does not pretend otherwise — the one-tap route covers the Telegram folders the picker can reach, and the wall is the reason the folder check comes before the plug-in, not after.</p>
+
+  <h2>Method 2: by hand in the Files app (no app needed)</h2>
+  <p>If you'd rather not install anything, Android's built-in Files app can copy the Telegram folder to the USB drive: 1. Plug in the USB drive. A notification or a "USB drive" entry should appear in the Files app under Storage devices. 2. Open Files, browse to Internal storage and find the Telegram folder — Telegram &gt; Telegram Images on older setups, or the folder you found in the check above. 3. Select the photos (or long-press the Telegram Images folder to select the whole thing), tap ⋮ → Copy to, then choose the USB drive as the destination. 4. Wait for the copy to finish — and don't unplug the drive until the Files app says it's done. This works fine for a one-off copy, and it is also the fallback for the one configuration SnapDisk's route gets wrong: if your Telegram media sits under Android/data and the picker refuses it, the Files app at least lets you look — and if it refuses too, the PC route in the section above is the way in. Its limits are the reason SnapDisk exists: no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time Telegram photos pile up. For a Telegram folder that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>The 5 GB free cap, and how it shapes the routine</h2>
+  <p>SnapDisk's free version backs up manually up to 5 GB per run — verified in the repo as FREE_BACKUP_BYTES_LIMIT, 5 GiB — and runs can be repeated. Files already copied are never copied twice, so a second run picks up where the first stopped. For Telegram, 5 GB goes further than it does for a camera library: Telegram photos are usually compressed by the sender or by Telegram, and the folder is mostly images, so a whole Telegram Images folder is often one free run. The videos are the part that eats the cap — a Telegram Video folder full of long clips can pass 5 GB on its own, and that is the count to do before you start: open the Files app, look at the Telegram Images and Telegram Video folder sizes, divide by 5 GB, and that is how many free runs the copy needs. Pro is a one-time $9.99 purchase (product id pro_unlock, verified in the repo's billing code) that auto-starts the backup when a disk is connected and removes the size limit, so a whole Telegram library copies in one run — and the auto-start is what makes the repeat actually happen, because the copy starts when the drive connects instead of waiting for you to remember. One more size note: a file of 4 GB or more on a FAT32 drive is skipped with its reason and the job continues — verified in the repo's BackupService. A single photo never reaches that, but a long 4K video can — and that file is skipped and listed, the photos around it copy normally, and the fix is the same exFAT format recommended above.</p>
+
+  <h2>What this does not back up</h2>
+  <p>This is the part people get wrong, so here it is plainly. Copying the Telegram Images and Telegram Video folders backs up the <strong>files</strong> — the photos and videos. It does not back up:</p>
+  <ul>
+    <li><strong>Chat history.</strong> Your messages live in Telegram's cloud, not in the Images folder, and they reappear when you sign in on any device. SnapDisk only copies image and video files. For a chat archive, use Telegram Desktop's Export chat history on a computer.</li>
+    <li><strong>Secret chats.</strong> Secret chats are device-bound and never sync — they do not travel to a new phone by signing in, and they are not files in the Telegram folders. This article's route does not back them up.</li>
+    <li><strong>Voice messages and audio.</strong> Voice messages are .opus audio files, and Telegram Audio holds audio — SnapDisk copies image and video files only (verified in the repo: .jpg, .jpeg, .png, .heic, .heif, .webp, .gif, .bmp, .dng, .raw for images; .mp4, .mov, .mkv, .webm, .3gp, .m4v, .avi for videos), so audio files are skipped.</li>
+    <li><strong>Documents.</strong> PDFs and other files sent in Telegram live in Telegram Documents, and they are not image or video files, so they are skipped. Copy them by hand in the Files app if they matter.</li>
+    <li><strong>The cache.</strong> Files Telegram downloaded only to show you once sit in the cache, not in the media folders, and the cache is rebuilt per installation. Copying it achieves nothing — the proper copies are in Telegram Images and Telegram Video, or re-downloadable from the chats.</li>
+    <li><strong>Stickers outside the picked folder.</strong> Stickers live in their own folder; they only copy if they sit inside the folder you picked, and only if they are image files.</li>
+  </ul>
+  <p>If you want the whole Telegram — chats and media together — the Telegram Desktop export is the route, and it is the only one Telegram itself supports. This article's route is for the photos and videos as files on a drive you hold.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>PC-only tools when you have no computer.</strong> The top search results for moving Telegram files assume a computer in between — NetworkUstad's guide routes through a PC, and MobileTrans is a Windows/Mac program at heart. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 22, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> TeleDrive and Telegrive store your files <em>in</em> Telegram — that is a cloud shelf, not a USB backup. If the app needs an account and an upload before your photos are safe, your photos sit on someone else's server, and the backup stops working the day you stop paying.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Assuming the chats came along.</strong> The photo files are not the conversation. Cloud chats reappear on sign-in, secret chats never leave the device, and neither is in the folders this article copies. If the chats matter, run Telegram Desktop's export too — the folder copy does not replace it.</li>
+    <li><strong>Copying the cache and calling it a backup.</strong> Cache files are fragments keyed to the old installation. The proper copies are in Telegram Images and Telegram Video, or re-downloadable from the chats — the cache is not a backup of either.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+    <li><strong>Assuming the copy keeps running with the screen off.</strong> Unverified — no wake lock, no battery-saver handling in the repo. Keep the phone awake for the run or check it.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> the photos are files in a folder — back up the folder. The chats are in the cloud — they follow your sign-in. The secret chats are on the device — they follow nothing. Do the folder copy, check the copy on the drive before you delete anything, and export the chats on a computer if the conversation itself matters.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your Telegram photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. See also: <a href="whatsapp-photos-to-usb.html">Back up WhatsApp photos to a USB drive on Android (no computer)</a> for the same folder-route rule on WhatsApp's folders, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos to a USB drive automatically (no manual copy)</a>, <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive: USB photo backup on Android, compared</a>, and <a href="free-up-space-move-photos-to-usb.html">How to free up space by moving photos to a USB drive</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
