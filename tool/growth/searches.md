@@ -18078,6 +18078,253 @@ demand is read off competitor install velocity instead (see
   this row uses is the URL-line count, verified this run
   (99 before, 100 after).
 
+### 163. "how to transfer timelapse videos from Android phone to USB flash drive" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a timelapse-specific
+  phone-to-USB backup guide at all — the top results are
+  our own general guides, generic transfer guides, and
+  two YouTube OTG walkthroughs. None of them says a word
+  about timelapse, none of them offers a one-tap
+  whole-library backup for timelapse videos, and none of
+  them mentions SnapDisk.
+- Current top results (scored Nov 21, 2026, live web search):
+  our own videos article, "Back up videos from Android
+  to a USB drive"
+  (https://dzianisv.github.io/photo-backup/videos-to-usb.html
+  — a general video backup guide, no timelapse angle;
+  search-index excerpt read this run);
+  HowToGeek, "How to Use a USB Flash Drive With Your
+  Android Phone or Tablet"
+  (https://www.howtogeek.com/129800/how-to-use-usb-drives-with-android-phone-or-tablet/
+  — a generic USB guide, plug the drive in through an
+  OTG adapter, open the file manager, select files, Move
+  them to the drive; no timelapse angle, no SnapDisk
+  mention; search-index excerpt read this run);
+  YouTube, "How to Connect USB Drive to Android Phone to
+  Move Photos & Videos (Best Method)"
+  (https://www.youtube.com/watch?v=PYcbV25CczI
+  — a manual OTG copy in the file manager, select photos
+  and videos in DCIM, Move or Copy to the drive; no
+  timelapse angle, no SnapDisk mention; search-index
+  excerpt read this run);
+  ITechGuides, "How to Transfer Files from Android to
+  USB Flash Drive"
+  (https://www.itechguides.com/how-to-transfer-files-from-android-to-usb-flash-drive-wired-or-wireless/
+  — a thorough manual OTG guide, Files by Google, select
+  the files in DCIM or Videos, Copy to the drive; no
+  timelapse angle, no SnapDisk mention; search-index
+  excerpt read this run);
+  a second YouTube OTG tutorial, "How to Transfer
+  Photos, Videos and any Files from Android Phone to USB
+  Pendrive (USB Drive Tutorial)"
+  (https://www.youtube.com/watch?v=ch1evyu5PPM
+  — manual select-copy-paste, step by step; no timelapse
+  angle; search-index excerpt read this run);
+  TheWiredShopper, "How to Transfer Photos From Android
+  Phone to USB Flash Drive"
+  (https://thewiredshopper.com/how-to-transfer-photos-from-android-phone-to-usb-flash-drive/
+  — a manual file-manager copy and a PC tool, with a
+  videos section that is still just select-copy-paste;
+  no timelapse angle, no SnapDisk mention; search-index
+  excerpt read this run).
+  Second-phrasing re-score (this run) surfaced no new
+  near-miss beyond the same shape — the five it returns
+  are our own general articles plus three generic guides:
+  our own videos article (above);
+  the same YouTube OTG walkthrough (above);
+  Google Photos community, "How do I back up photos to
+  a plug in drive"
+  (https://support.google.com/photos/thread/443333707/how-do-i-back-up-photos-to-a-plug-in-drive?hl=en
+  — a manual Files-by-Google move to a USB drive, select
+  the files, Move to the drive; no timelapse angle, no
+  SnapDisk mention; search-index excerpt read this run);
+  our own external-drive article, "How to back up
+  photos to an external drive on Android"
+  (https://dzianisv.github.io/photo-backup/backup-photos-to-external-drive.html
+  — a general backup guide, no timelapse angle;
+  search-index excerpt read this run);
+  ITechGuides' generic guide (above).
+  Third-phrasing re-score (this run) returned the same
+  shape once more — five results, all already named:
+  our own videos article (above); ITechGuides' generic
+  guide (above); both YouTube OTG walkthroughs (above);
+  our own external-drive article (above).
+  Gap stands only
+  on the timelapse angle.
+  VaultDrive's product page
+  (https://coticsy.com/vaultdrive.html
+  — the rival page, full page read this run, not a
+  search-index excerpt: it says nothing about timelapse
+  at all, not one timelapse line anywhere on it, so it is
+  not a timelapse guide either; what it does have, and
+  what is genuinely timelapse-relevant, is a choose-photos
+  feature ("Back up just the photos and videos you pick")
+  and "Original quality, byte for byte" (HEIC, ProRAW,
+  ProRes and 4K video copied as they are, never
+  compressed or re-encoded), plus folders by date or album
+  and incremental backups on Pro, and a free tier of 200
+  files or 2 GB per backup against SnapDisk's 5 GB per
+  run with no file count — a timelapse collection is
+  usually a handful of clips, so the 200-file cap rarely
+  bites, and the 2 GB cap is the one that can bite a long
+  4K timelapse; Pro $19.99 once, Android 8 or later, on
+  Google Play; "2,000+ installs on the App Store and
+  Google Play", unchanged since WL-194).
+  The timelapse-format references, not competing guides:
+  Google Store, "How to Film Time Lapse Videos on Your
+  Phone"
+  (https://store.google.com/intl/en_uk/ideas/articles/time-lapse-filming/
+  — time-lapse filming "allows you to capture individual
+  frames at a frequency much lower than the rate they'll
+  be played back in"; on a Pixel, switch to video mode
+  and tap Time Lapse, with interval, resolution (720p,
+  1080p, 4K) and speed (5x or 120x) settings;
+  search-index excerpt read this run);
+  HowToGeek, "How to Make Timelapse Videos on a Samsung
+  Galaxy Phone"
+  (https://www.howtogeek.com/785570/how-to-make-timelapse-videos-on-a-samsung-galaxy-phone/
+  — Hyperlapse is under More in the Camera app, and
+  "recording a hyperlapse is just like recording any
+  other video"; a hyperlapse is a timelapse where the
+  camera moves; search-index excerpt read this run);
+  Android Authority, "How to use Time Lapse on Google
+  Pixel phones"
+  (https://www.androidauthority.com/google-pixel-time-lapse-983301/
+  — Time Lapse sits next to Slow Motion under More, with
+  1x, 5x, 10x, 30x and 120x speeds, and 120x records 20
+  minutes into a 10-second clip; search-index excerpt
+  read this run);
+  Filmora, "The Ultimate Guide to Android Time-Lapse
+  Videography [2026]"
+  (https://filmora.wondershare.com/mobile-editing-tips/best-ways-to-take-time-lapse-video-android.html
+  — most modern Android devices include a time-lapse
+  mode in the camera app, and "recording 1 hour in 4K
+  may require 3–5 GB of storage space"; search-index
+  excerpt read this run);
+  Google Photos help, "Choose the backup quality of your
+  photos & videos"
+  (https://support.google.com/photos/answer/6220791
+  — the cloud-trap reference the article names, not a
+  competing guide: Storage saver stores photos and videos
+  "at a slightly reduced quality", videos higher than
+  1080p are resized to 1080p, and "some information, like
+  closed captions, might be lost" — a 4K timelapse comes
+  back 1080p, still fast because the speed is in the
+  frames, but no longer the original file) and DriveForge
+  "exFAT vs FAT32 vs NTFS" is the format reference the
+  article names, not a competing guide.
+  Key finding + ANTI-DUPLICATE CHECK (first, before
+  writing — the WL-189 lesson): grep of searches.md for
+  "timelapse" or "time-lapse" finds zero mentions before
+  this row is added (162 "### " rows); a docs/ listing
+  finds no timelapse slug (timelapse, time-lapse,
+  timelaps — nothing); docs/videos-to-usb.html has zero
+  timelapse mentions; no wl-198 branch existed before
+  this run. No existing timelapse article or row: the gap
+  is a new article, not a rewrite. WL-189 was killed
+  before merge for duplicating WL-168's live
+  switching-phones article — this query is not that
+  moment. The honest centre is the baked-in-speed shape,
+  verified from live sources + repo: a timelapse is an
+  ordinary .mp4 in DCIM/Camera, and the speed is baked
+  into the frames at record time — frames captured at a
+  frequency much lower than the playback rate — so there
+  is NO metadata note to lose, unlike slow motion (a
+  slow-motion playback note inside the file) and panorama
+  (GPano XMP metadata). Even a re-encode keeps the speed;
+  what a re-encode changes is resolution, not pace. The
+  certain route is BOTH routes for .mp4 — the default run
+  reads the MediaStore Video table with selection null,
+  no folder filter, no MIME filter
+  (PhotoQuery.queryMediaStoreOldestFirst), and .mp4 is
+  indexed on every phone — and the folder route is the
+  certain one for every format in the list (.mp4 and .mov
+  in VIDEO_EXTENSIONS at PhotoQuery.kt lines 134-136).
+  Second honest limit: no promise a shared copy is the
+  original — the check is playing one clip and watching
+  it run fast on ANY player, because the speed is in the
+  frames and no player has to read a note — and the
+  article says so. Screen-off continuation under battery
+  saver UNVERIFIED (no WakeLock/Doze code), stated
+  plainly in-article (lowercase "unverified", 3
+  occurrences + 1 capitalised "Unverified" — the WL-182
+  form). Adjacent ground named in-article: the
+  slow-motion article (WL-196) as the opposite shape —
+  one file with a note inside it, against the timelapse's
+  speed baked into the frames — the motion-photos article
+  (WL-193), the burst article (WL-195) as the opposite
+  shape, the RAW article (WL-190), the HEIC article
+  (WL-191) and the screenshots article (WL-192) for the
+  same folder-route rule, the Samsung Galaxy article,
+  the general backup article, and the VaultDrive
+  comparison (WL-37). The article names VaultDrive's
+  verifiable wins fairly: on Play today, choose-photos
+  (back up just the photos you pick — the honest pick
+  for a handful of timelapses only), original quality
+  byte-for-byte, folders by date or album, incremental
+  backups on Pro — against SnapDisk's oldest-first order,
+  detailed progress with Pause/Stop, per-file size
+  verification, free 5 GB per run with no file count,
+  and Pro $9.99 once vs $19.99. No price is invented
+  (every price is from the repo or the vendor's own page).
+  SnapDisk behaviour re-verified from the repo by the
+  lead: minSdk 24, Pro $9.99 one-time (pro_unlock,
+  PRO_PRODUCT_ID), free 5 GB/run (FREE_BACKUP_BYTES_LIMIT
+  = 5 GiB), oldest-first DATE_TAKEN, .part resume + size
+  verification, FAT32 >=4 GiB skip-and-continue,
+  From-picker OpenDocumentTree SAF, dataSync foreground
+  service 6h budget (WL-34), no INTERNET permission, no
+  WakeLock/Doze code. Verified file by file this run:
+  PhotoQuery.kt (VIDEO_EXTENSIONS includes ".mp4"/".mov"
+  at lines 134-136; queryMediaStoreOldestFirst reads the
+  Video table with selection null, no folder filter, no
+  MIME filter; the tree walk recurses into subfolders),
+  ProPrefs.kt (FREE_BACKUP_BYTES_LIMIT = 5 GiB,
+  PRO_PRODUCT_ID "pro_unlock"), BackupService.kt (dataSync
+  6h onTimeout pause).
+  Link verification this run: VaultDrive full page read
+  (0 "timelapse" occurrences on the page; Pro $19.99
+  once, free 200 files or 2 GB, "2,000+ installs on the
+  App Store and Google Play"); the timelapse-format
+  references read as search-index excerpts (Google Store
+  Pixel time-lapse page, HowToGeek Hyperlapse, Android
+  Authority Pixel Time Lapse, Filmora time-lapse guide,
+  Google Photos help); HowToGeek, ITechGuides, the two
+  YouTube OTG walkthroughs, TheWiredShopper and the
+  Google Photos community thread read as search-index
+  excerpts (0 SnapDisk mentions in every page read
+  except our own); Google Photos help and DriveForge are
+  the standing references from the WL-191/WL-192 rows;
+  own canonical 404 pre-merge (curl, this run — the
+  known-missing control URL returns 404 on retry, while
+  the existing burst page returns 200; a first attempt
+  returned a transient 503 from the Pages edge; expected,
+  live only after merge).
+  SCORING-FIX SWEEP (this run): no correction needed
+  anywhere in this run's files. The "870 installs" lines
+  in llms-full.txt (9) and searches.md (9 before this
+  row, 10 after — this row's own mention) are the dated
+  AppBrain-sourced lines settled by WL-194 — AppBrain
+  still reads 870, the vendor page still says "2,000+
+  installs on the App Store and Google Play" (full page
+  read this run) — and this article carries no install
+  count. The "2,000+ installs" lines in searches.md (10
+  before this row, 13 after — this row's own three
+  mentions) and the single occurrence in llms-full.txt (line 194,
+  in the comparison section, correctly attributed to the
+  vendor page as the combined-stores figure) are
+  unchanged. The WL-190 worklog flag about llms-full.txt
+  saying "4.5 from 61 reviews" stays settled wrong —
+  re-checked this run on main: 0 occurrences in
+  llms-full.txt, llms.txt, or the blog index. The new
+  article's prices check out: $9.99 twice, $19.99 once,
+  "5 GB per run" twice, "200 files or 2 GB" once — all
+  matching the verified figures. The llms-full.txt count
+  this row uses is the URL-line count, verified this run
+  (100 before, 101 after). Next article candidate after
+  this one: 3-2-1 backup redundancy (unverified, carried
+  from WL-196 via WL-197).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
