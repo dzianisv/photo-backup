@@ -18325,6 +18325,186 @@ demand is read off competitor install velocity instead (see
   this one: 3-2-1 backup redundancy (unverified, carried
   from WL-196 via WL-197).
 
+### 164. "3-2-1 backup redundancy for Android photos to USB" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle, High on the rule itself.
+  The 3-2-1 rule for Android photos is covered thoroughly — the
+  top results are real, thorough guides — but none of them makes
+  the USB copy as a one-tap whole-library phone-to-USB copy with
+  no computer. Every one of them routes copy 2 through a PC or
+  cable, a manual file-manager copy, or a cloud account, and none
+  of them mentions SnapDisk. The gap stands ONLY on that narrow
+  angle: 3-2-1 where the USB copy is the whole-library one-tap
+  phone-to-USB copy with NO computer (SnapDisk).
+- Current top results (scored Nov 22, 2026, live web search):
+  NoQuadu, "Android Local Backup: How to Protect Your Data
+  Without the Cloud"
+  (https://noquadu.com/android-local-backup.html
+  — the strongest near-miss: states the rule exactly, three
+  copies, two media types, one stored away from the phone,
+  matching NIST's 3-2-1 guidance, maps copy 2 to a computer or
+  laptop and copy 3 to an external SSD, USB drive, or another
+  secure location; its step-by-step is a cable — connect the
+  phone to the computer, choose File Transfer, open File
+  Explorer, copy DCIM and the rest, paste them onto the
+  computer, external SSD, or USB flash drive; its own
+  recommendation is "USB backup Android to a computer"; full
+  page read this run, 0 SnapDisk mentions, no one-tap
+  whole-library copy);
+  Revaults, "How to back up your photos and documents (the
+  3-2-1 rule)"
+  (https://revaults.app/blog/how-to-back-up-photos-and-documents
+  — states the rule the same way, original plus two backups,
+  two kinds of storage, one away from home; its local backup is
+  the same shape — connect the phone to a computer, copy the
+  photos and files to a folder, then copy that folder to an
+  external drive or a USB stick; off-site copy is a cloud
+  account or a second drive kept at a relative's home, a
+  workplace, or a safe deposit box; no SnapDisk mention, no
+  one-tap copy; search-index excerpt read this run);
+  Sync by Miciniti, "The 3-2-1 Backup Rule, Explained for
+  Normal People"
+  (https://sync.miciniti.com/blog/the-3-2-1-backup-rule-explained
+  — maps the rule onto two saved tasks, a Backup task to a USB
+  or external drive for copy 2 and a second Backup task to a
+  cloud drive for copy 3; the closest any rival comes to an app
+  doing the USB copy, but it is a task you set up and run by
+  hand, not a one-tap whole-library copy, and USB and external
+  drives sit behind a paid upgrade; no SnapDisk mention;
+  search-index excerpt read this run);
+  GadgetsNow, "How to Back Up All Your Photos Without Paying
+  for Extra Cloud Storage"
+  (https://gadgetsnow.indiatimes.com/how-to/how-to-back-up-all-your-photos-without-paying-for-extra-cloud-storage/articleshow/135801450.cms?frmapp=yes
+  — transfer the photos to a laptop or desktop with a USB cable
+  first, then copy them to an external hard drive or a USB
+  drive; its 3-2-1 section repeats the rule without changing
+  the route; no SnapDisk mention, no one-tap copy;
+  search-index excerpt read this run);
+  TechCity, "Complete Phone Backup Guide: Never Lose Your
+  Photos Again"
+  (https://www.techcityng.com/complete-phone-backup-guide-never-lose-your-photos-again/
+  — states the 3-2-1 strategy up front, phone as one copy, a
+  cloud service as the off-site copy, a computer or external
+  hard drive as the third; its five methods are Google Photos,
+  iCloud, back up to your computer, OneDrive, and Samsung Smart
+  Switch — cloud and PC, no phone-to-USB copy at all, no
+  SnapDisk mention; search-index excerpt read this run);
+  QuickTopicGuide, "Backing Up Your Photos: A Beginner Guide"
+  (https://www.quicktopicguide.com/backing-up-your-photos-beginner-guide/
+  — follows the 3-2-1 rule, phone plus external drive plus a
+  cloud backup, and cites CISA's version of the rule; the
+  off-site copy is the cloud; no SnapDisk mention, no one-tap
+  copy; search-index excerpt read this run).
+  Second-phrasing re-score (this run) returned the same shape
+  from the other side, and still nothing on the narrow angle:
+  WITNESS, "Backing Up Phone Media Without Internet or a
+  Computer"
+  (https://blog.witness.org/2020/02/backing-up-phone-media-without-internet-or-a-computer/
+  — the only page that does phone-to-USB with no computer at
+  all, plug an OTG drive straight into the phone and copy the
+  media — but a manual copy in the file manager, never mentions
+  3-2-1, never mentions SnapDisk; search-index excerpt read
+  this run);
+  Sync by Miciniti, "How to Back Up Android Photos (With or
+  Without Google Photos)"
+  (https://sync.miciniti.com/blog/how-to-back-up-android-photos-without-google-photos
+  — safest setup is two of three routes, Google Photos, a cloud
+  drive, or an SD card or USB drive, and its USB route is again
+  a saved Backup task you run by hand; search-index excerpt
+  read this run);
+  NeverOpen, "I could lose my phone without losing any of my
+  files thanks to this backup plan"
+  (https://neveropen.tech/i-could-lose-my-phone-without-losing-any-of-my-files-thanks-to-this-backup-plan/
+  — follows the 3-2-1 rule with three copies on a laptop and an
+  external hard drive, moved over Quick Share, LocalSend, or a
+  USB-C adapter — a computer in the chain again; search-index
+  excerpt read this run);
+  Revaults' 3-2-1 guide (above);
+  GOHSEP, "Backup Your Data"
+  (https://gohsep.la.gov/preparedness/cybersecurity/backup-your-data/
+  — states the rule in the abstract, three copies, two media
+  types, one off-site, with no Android route at all;
+  search-index excerpt read this run).
+  Third-phrasing re-score (this run) pinned the remaining names
+  and returned more of the same — cloud and PC, no one-tap
+  phone-to-USB copy, no SnapDisk mention:
+  TechBulletinNow, "How to Back Up Your Phone and Computer: A
+  Simple Guide"
+  (https://www.techbulletinnow.com/how-to-back-up-phone-and-computer/
+  — cloud, computer, external drive; search-index excerpt read
+  this run);
+  TechCity's guide (above);
+  PengJiangWen, "How to Back Up Your Phone (The Right Way)"
+  (https://pengjiangwen.github.io/tech/how-to-back-up-your-phone-the-right-way/
+  — cloud copy two, computer copy three; search-index excerpt
+  read this run);
+  TechBuniyaad, "How To Back Up Your Phone Properly: The 3-2-1
+  Rule Made Simple"
+  (https://techbuniyaad.com/how-to-back-up-your-phone-properly-the-3-2-1-rule-made-simple/
+  — cloud for the daily copy, local to a computer once a month;
+  search-index excerpt read this run);
+  Dr.Fone, "How to Backup Android Phone: Safe Backup Methods
+  Explained Step by Step"
+  (https://drfone.wondershare.com/backup/how-to-backup-android-phone.html
+  — its own PC tool plus Google Backup; search-index excerpt
+  read this run);
+  Techwire, "Guide: how to back up your phone, photos and
+  WhatsApp before it's too late"
+  (https://www.techwire.co.il/en/article/guide-how-to-back-up-phone-photos-whatsapp
+  — cloud, then an external drive or computer every few months;
+  search-index excerpt read this run).
+  Gap stands only
+  on the narrow angle: 3-2-1 where the USB copy is the
+  whole-library one-tap phone-to-USB copy with NO computer.
+  VaultDrive's product page
+  (https://coticsy.com/vaultdrive.html
+  — the rival page, full page read this run, not a
+  search-index excerpt: it says nothing about 3-2-1 at all, not
+  one occurrence anywhere on it, so it is not a 3-2-1 guide
+  either; what it does have, and what is genuinely relevant to
+  copy 2, is a choose-photos feature ("Back up just the photos
+  and videos you pick") and "Original quality, byte for byte"
+  (HEIC, ProRAW, ProRes and 4K video copied as they are, never
+  compressed or re-encoded), plus folders by date or album and
+  incremental backups on Pro, and a free tier of 200 files or
+  2 GB per backup against SnapDisk's 5 GB per run with no file
+  count — a library of a few thousand photos hits VaultDrive's
+  200-file cap in the first run, and the 2 GB cap bites a
+  library with any long 4K video in it; Pro $19.99 once,
+  Android 8 or later, on Google Play; "2,000+ installs on the
+  App Store and Google Play", unchanged since WL-194).
+  The 3-2-1 rule itself, not a competing guide: NIST's 3-2-1
+  guidance and CISA's version of the rule, as stated by NoQuadu
+  and QuickTopicGuide (search-index excerpts read this run) —
+  three copies, two storage types, one copy off-site.
+  Link verification this run: NoQuadu full page read (0
+  "SnapDisk" occurrences; step-by-step is a cable to a
+  computer); VaultDrive full page read (0 "3-2-1" occurrences;
+  Pro $19.99 once, free 200 files or 2 GB, "2,000+ installs on
+  the App Store and Google Play"); the remaining near-misses
+  read as search-index excerpts (0 SnapDisk mentions in every
+  page read except our own); own canonical 404 pre-merge (curl,
+  this run — the known-missing control URL returns 404 on
+  retry, while the existing timelapse page returns 200;
+  expected, live only after merge).
+  SCORING-FIX SWEEP (this run): no correction needed anywhere
+  in this run's files. The "2,000+ installs" lines in
+  searches.md (13 before this row, 16 after — this row's own
+  three mentions) and the single occurrence in llms-full.txt
+  (line 194, in the install-counts section, correctly
+  attributed to the vendor page as the combined-stores figure)
+  are unchanged. The
+  WL-190 worklog flag about llms-full.txt saying "4.5 from 61
+  reviews" stays settled wrong — re-checked this run on main:
+  0 occurrences in llms-full.txt, llms.txt, or the blog index.
+  The new article's prices check out: $9.99 three times, $19.99
+  twice, "5 GB per run" eight times — all matching the verified
+  figures. The llms-full.txt count this row uses is the
+  URL-line count, verified this run (105 before, 106 after).
+  The llms.txt count is the URL-line count, verified this run
+  (167 before, 168 after). Next article candidate after this
+  one: unverified.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
