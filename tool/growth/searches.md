@@ -19,6 +19,12 @@ demand is read off competitor install velocity instead (see
   870 installs total, ~21/day over the last 30 days (AppBrain,
   Nov 14, 2026). The niche has real but small demand; two new
   direct rivals launched Oct 2026 and are both still unrated.
+- Re-checked November 21, 2026: AppBrain still reads 870 installs
+  for VaultDrive (490 in the last 30 days, ~16/day; last updated
+  November 3, 2026), so the November 14 figure above stands;
+  VaultDrive's own product page claims 2,000+ installs across the
+  App Store and Google Play combined — a different, vendor-claimed
+  count, not the Android-only AppBrain figure.
 - Difficulty is qualitative, from the size/ratings of the apps
   ranking on top for that query on Nov 14, 2026.
 
