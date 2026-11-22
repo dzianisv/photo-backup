@@ -19684,6 +19684,119 @@ demand is read off competitor install velocity instead (see
   this run and is not used in this article).
 
 
+### 174. "Back up photos from an Android phone to an NTFS USB drive" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle, Medium on the check step.
+  No guide in search covers this job whole: check the drive's
+  format, then the real routes (reformat to exFAT; an NTFS-writer
+  app plus manual copy; SnapDisk's one-tap run once the drive is
+  writable), plus the honest statement that SnapDisk's one-tap run
+  needs a writable drive. The NTFS-writer apps copy by hand; the
+  format explainers never get to the backup; our own articles
+  describe the one-tap copy and assume the drive is writable.
+  The gap stands ONLY on that narrow angle: the check plus the
+  three routes plus the honest read-only statement, in one guide
+  (SnapDisk).
+- Current top results (scored Nov 22, 2026, live web search):
+  Phrasing 1, "back up photos to NTFS USB drive from Android phone"
+  (supervisor, verified this run, not re-run): Paragon exFAT/NTFS
+  for USB (Play listing — SAF document provider, NTFS via in-app
+  purchase, manual file-manager copy), USB File Manager (APKMirror
+  — read/write NTFS/exFAT/FAT32/ext4, manual import, no
+  automation), AnExplorer USB OTG page (reads/writes NTFS without
+  root, manual copy), NTFS Reader: USB+Bitlocker (AppBrain — NTFS
+  write is a one-time in-app purchase, manual file manager), own
+  Samsung article (generic OTG guide). Phrasing 2, "transfer photos
+  Android phone to USB drive NTFS write" (supervisor, verified this
+  run, not re-run): the same four NTFS apps, no guide does automated
+  whole-library phone-to-USB one-tap backup to an NTFS drive.
+  Phrasing 3 (lead, this run), "can Android write to NTFS USB drive
+  back up photos": NTFS Reader: USB+Bitlocker (AppBrain — read AND
+  write NTFS, exFAT and FAT32, copy files onto the drive, no root,
+  no computer; NTFS read free, NTFS write a one-time in-app
+  purchase, exFAT/FAT32 read and write free; "Android can't reliably
+  read or write any of them on its own"), USB File Manager
+  (mixapplications — opens NTFS, exFAT, FAT or ext4 and reads and
+  writes their files without a PC or root; import files or whole
+  folders from the phone; Properties lists the file system),
+  Paragon exFAT/NTFS for USB (Play listing — SAF document provider,
+  NTFS via in-app purchase, manual copy/move/delete through the file
+  manager), KnowTechie "Which file systems can Android read?"
+  (FAT32, Ext3, Ext4, exFAT on newer devices; "Android can't run
+  NTFS natively, and it's a pain to set up. exFAT is your best
+  option"), DriveForge "exFAT vs FAT32 vs NTFS" (Android reads and
+  writes FAT32 and exFAT on most current phones, NTFS "not on most
+  phones without an app"; "most Android phones, cameras and car
+  stereos don't open it at all"; formatting erases the drive; a
+  phone can format a drive itself with an OTG adapter, DriveForge
+  writes exFAT free). No dedicated NTFS-backup guide in any of the
+  three phrasings; no guide does an automated whole-library
+  phone-to-USB one-tap backup to an NTFS drive — the writer apps
+  copy by hand, and the explainers stop at the format. The gap
+  stands ONLY on the narrow angle above.
+- Honest centre (verified from the code and live pages this run, not
+  assumed): SnapDisk v0.1.2 has NO NTFS detection at all — the word
+  "ntfs" does not appear anywhere in the app code (0 matches in
+  app/src/main), and there is no read-only-mount check; the only
+  format check in the app is the FAT32 one (a file >= 4 GiB on a
+  FAT32 drive is skipped up front with "use exFAT",
+  FilesystemInfo.tooLargeForFat32 checks fstype == "vfat" only,
+  FilesystemInfo.kt). Two cases, both read from the code at base
+  826a3abd. (1) The phone does not mount the drive at all — the
+  common case on most phones: SnapDisk offers the backup when the
+  phone reports a drive attached (StorageReceiver listens for
+  media-mounted / USB-device-attached, StorageReceiver.kt:34-35),
+  so no offer appears and there is nothing to tap. (2) The phone
+  mounts the drive read-only: the offer appears, tapping Backup
+  fails on the first file — FileOutputStream on the .part file
+  throws, caught as CopyResult.Failed with the full error
+  (BackupEngine.copyWithResume, BackupEngine.kt:130; verify,
+  BackupEngine.kt:107) — the service records it in the skipped list
+  with its reason and continues (BackupService.kt:489-497), the
+  retry-once rule does not fire (it fires only on size-verification
+  failures, BackupService.kt:540-541, 581), and the run ends DONE
+  with every file skipped and nothing copied; a read-only error
+  matches none of the detach keywords (BackupService.kt:655-661),
+  so it is not treated as a detach, and there is no "drive is
+  read-only" message — the skipped list is the only signal.
+  Whether a given phone mounts an NTFS drive read-only or not at
+  all is UNVERIFIED — no real-disk test of SnapDisk against an NTFS
+  drive has been run; the NTFS read-only detection follow-up is
+  still open in the Work Log (Firebase Test Lab route, never
+  attempted). Workable routes, verified live this run: (1) reformat
+  to exFAT — Windows right-click Format, Mac Disk Utility Erase, or
+  a formatting app such as DriveForge from the phone with an OTG
+  adapter (exFAT free); exFAT has no 4 GB file limit, and
+  reformatting erases the drive, so copy its contents off first
+  (DriveForge guide, read in full this run); (2) keep NTFS and copy
+  by hand with an NTFS-writer app — Paragon (in-app purchase),
+  NTFS Reader (NTFS write one-time purchase), USB File Manager,
+  AnExplorer — manual file-manager copy, no automation, and SnapDisk
+  cannot use another app's private NTFS mount; (3) once the drive is
+  writable (exFAT/FAT32), SnapDisk's one-tap copy: plug in, tap
+  Backup, oldest-first in the background with progress, Pause and
+  Stop, size-verified. Default-run scope verified in the code this
+  run (PhotoQuery.queryMediaStoreOldestFirst, PhotoQuery.kt:23;
+  BackupService.kt:634-641): with no From folder picked SnapDisk
+  reads the whole MediaStore library — images + videos, no folder
+  filter, oldest-first. Free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT = 5L*1024^3, ProPrefs.kt:43); Pro
+  $9.99 one-time (PRO_PRICE_LABEL, ProPrefs.kt:40). Copy is a byte
+  copy with a size check only (BackupEngine.copyWithResume,
+  BackupEngine.kt:130; verify, BackupEngine.kt:107). Screen-off
+  continuation under battery saver UNVERIFIED (no WakeLock/Doze code,
+  0 matches in app/src/main; no INTERNET permission, 0 occurrences
+  in the manifest). VaultDrive re-verified live this run from the full
+  vendor page (coticsy.com/vaultdrive.html): Pro $19.99 once, free up
+  to 200 files or 2 GB per backup, vendor page says "2,000+ installs
+  on the App Store and Google Play" (both stores combined — never
+  swapped with the AppBrain-only figure, which was not re-verified
+  this run and is not used in this article); its Android section is
+  headed "Back up Android photos to a USB drive with OTG", it
+  recommends exFAT and warns about FAT32 before you start, so the
+  format gate applies to it exactly as it applies to SnapDisk.
+
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
