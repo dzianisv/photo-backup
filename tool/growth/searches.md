@@ -19433,6 +19433,85 @@ demand is read off competitor install velocity instead (see
   missing (Copy, never Move), and never copy .part files back.
   Next article candidate after this one: unverified.
 
+### 171. "Back up WeChat photos and videos to USB from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle, Medium on the save-first step.
+  No guide in search covers backing up WeChat photos and videos from
+  the phone straight to a USB drive — the saved WeChat photos copied
+  oldest-first in one background run, with progress, resume and
+  verification, and no computer. The generic OTG guides copy camera
+  photos and never name WeChat; the WeChat backup guides need a
+  computer (WeChat for Windows/Mac, iTunes, Google Drive, chat-log
+  migration); the one-tap whole-library apps are generic and never
+  name WeChat either. The gap stands ONLY on that narrow angle: the
+  WeChat folders copied oldest-first in one background run, phone
+  straight to USB, with progress, resume and verification, no
+  computer (SnapDisk). This continues the messaging-app series
+  (Telegram Query 165, Instagram 166, Facebook 167, Snapchat 168,
+  TikTok 169, WhatsApp Query 8) — those apps are not re-covered here.
+- Current top results (scored Nov 22, 2026, live web search):
+  Phrasing 1, "back up WeChat photos videos to USB flash drive from
+  Android phone" (supervisor, verified this run, not re-run):
+  generic OTG guides only — YouTube OTG walkthroughs PYcbV25CczI /
+  ch1evyu5PPM, MobileTrans generic phone-to-USB, UMA generic, MobiKin
+  generic — plus Coolmuster's WeChat backup guide (WeChat Desktop,
+  iTunes, Google Drive, chat-log migration — PC/cloud/new-phone
+  routes, NO phone-to-USB). WeChat never named in the generic guides;
+  Phrasing 2, "save WeChat photos to USB drive Android OTG one tap
+  backup app" (supervisor, verified this run, not re-run): Photos to
+  USB: OTG Backup (one-tap whole-library, generic, WeChat never
+  named), our own SnapDisk generic articles, Zhihu (PC
+  backup/migration), MobileTrans generic. No WeChat-specific
+  phone-to-USB guide, no SnapDisk WeChat article; Phrasing 3, "back
+  up WeChat photos videos to USB flash drive Android without
+  computer" (lead, this run): YouTube, "How to Connect USB Drive to
+  Android Phone to Move Photos & Videos (Best Method)"
+  https://www.youtube.com/watch?v=PYcbV25CczI — OTG + file manager,
+  DCIM photos, WeChat never named; mefmobile.org, "How to Transfer
+  Phone Photos to a USB Stick Without a Computer"
+  https://mefmobile.org/transfer-photos-from-phone-to-usb-stick-without-a-computer-a-step-by-step-guide/
+  — generic phone-to-USB, Files by Google Copy to, DCIM/Camera,
+  WeChat never named; our own SnapDisk generic articles
+  (transfer-photos-to-usb-automatically, backup-photos-to-external-drive)
+  https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html
+  and
+  https://dzianisv.github.io/photo-backup/backup-photos-to-external-drive.html
+  — whole-library / external-drive guides, WeChat never named;
+  anexplorer.io, "How to Transfer Files from Android to USB Drive
+  (OTG, No Root)"
+  https://anexplorer.io/transfer/phone-to-usb — generic OTG file
+  transfer via AnExplorer, DCIM/Camera example, WeChat never named.
+  No WeChat-specific phone-to-USB guide in any of the three
+  phrasings.
+- Folder facts (verified live this run, sources disagree — stated
+  plainly in the article, no single folder asserted): saved copies
+  land in the gallery under a WeChat album (the phone's Pictures
+  area, Pictures/[app] pattern — Motorola help); WeChat's own
+  storage is /sdcard/tencent/MicroMsg/[account]/ with image/video
+  subfolders plus a diskcache of concatenated cache.data files, not
+  plain photos (WechatImageDecoder docs); the private folder
+  Android/data/com.tencent.mm is closed to other apps on Android 11+
+  — SAF cannot grant a tree there (Android Developers storage
+  updates, umatechnology scoped-storage guide). WeChat does NOT
+  auto-save to the gallery (unlike WhatsApp): save first — long-press
+  a photo and save it to your phone, or Search Chat History, then
+  Media, to save up to 9 at once (live2tech, WeChat help center
+  route); Moments/Channels posts give no save option and stay inside
+  WeChat. Default-run scope verified in the code this run
+  (PhotoQuery.queryMediaStoreOldestFirst, BackupService.kt:635-639):
+  with no From folder picked SnapDisk reads the whole MediaStore
+  library — images + videos, no folder filter, oldest-first — so
+  saved WeChat photos are already covered; the From-picker route is
+  for copying only the WeChat folder. SnapDisk v0.1.2 has no
+  restore/import function. Free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT = 5L*1024^3); Pro $9.99 one-time.
+  VaultDrive re-verified live this run from the full vendor page
+  (coticsy.com/vaultdrive.html): Pro $19.99 once, free up to 200
+  files or 2 GB per backup, vendor page says "2,000+ installs on the
+  App Store and Google Play" (both stores combined — never swapped
+  with the AppBrain-only figure, which was not re-verified this run
+  and is not used in this article).
+
 
 ## Winners and what changed
 
