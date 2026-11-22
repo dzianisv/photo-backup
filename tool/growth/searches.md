@@ -18596,6 +18596,16 @@ demand is read off competitor install velocity instead (see
   answers.informer.com, "How to transfer a download on an
   android phone to an usb drive" — generic OTG + file manager
   answer, Downloads folder only.
+  PhotoStick Mobile and Photos to USB: OTG Backup — two one-tap
+  whole-library phone-to-USB apps (named in the article's gap
+  section; Photos to USB surfaced by the supervisor's
+  fourth-phrasing re-score, "Instagram photos backup to USB drive
+  Android one tap automatic app"): Photos to USB copies
+  "everything: photos and videos, from your camera, WhatsApp and
+  every other folder" in one tap (AppBrain listing read this run)
+  — but neither names Instagram or its folders, and neither is a
+  guide for the Instagram folders, so the Instagram angle stands.
+  Added to this row by the supervisor's scoring fix before merge.
   VaultDrive's product page (https://coticsy.com/vaultdrive.html
   — full page read this run, not a search-index excerpt) has 0
   "Telegram" occurrences; its Telegram-relevant features are
@@ -18640,6 +18650,141 @@ demand is read off competitor install velocity instead (see
   is unverified" in the TL;DR, plus a capitalised "Unverified" in
   What to avoid. Next article candidate after this one:
   unverified.
+
+### 166. "Back up Instagram photos and videos to USB from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle, High on the folders themselves.
+  No guide in search covers backing up Instagram's downloaded media
+  folders directly from the phone to a USB drive in one tap. The
+  guides that name the folders download media to the phone and stop
+  there; the guide that exports the whole account delivers a zip on
+  the device that still needs a copy step; the guides that do
+  phone-to-USB copy by hand and never name Instagram; and the
+  bookmark saves nothing to the phone at all. The gap stands ONLY
+  on that narrow angle: the Instagram folders (Pictures/Instagram,
+  plus Downloads for browser-saved Reels) copied oldest-first in
+  one background run to a USB drive, with progress, resume and
+  verification, no computer (SnapDisk).
+- Current top results (scored Nov 22, 2026, live web search):
+  en.androidayuda, "How to download Instagram photos on Android
+  and other safe methods"
+  (https://en.androidayuda.com/como-bajar-todas-las-fotos-de-cuenta-de-instagram-con-tu-android/
+  — the strongest near-miss on the download side: InstaPP downloads
+  one photo at a time into a folder on the phone called "InstaPP"
+  ("Each downloaded image is stored in a folder called InstaPP"),
+  one tap per photo, no whole set, no USB; the alternatives it names
+  are PC tools (4K Stogram), web tools (DownloadGram), or the
+  browser Inspect trick; search-index excerpt read this run);
+  HowToGeek, "How to Download All of Your Instagram Photos and
+  Stories"
+  (https://www.Howtogeek.Com/how-to-download-all-of-your-instagram-photos-and-stories/
+  — the strongest near-miss on the bulk side: Meta Accounts Center
+  export (Settings → Your Information and Permissions → Download
+  Your Information, "Download or Transfer Information", choose
+  "Download to your device"), wait for the email, download within
+  four days — but the zip lands on the device, and the guide stops
+  there: no unzip step, no copy to a drive; search-index excerpt
+  read this run);
+  umatechnology, "Download Instagram Photos and Videos to Your
+  Android Device"
+  (https://umatechnology.org/download-instagram-photos-and-videos-to-your-android-device/
+  — InstaSave and FastSave for Instagram guides: copy the post link,
+  the saver app saves the photo or video into the phone's gallery —
+  to the phone, not to a drive, one post at a time; web tools
+  (DownloadGram, InstaDownloader) and screenshots are the same
+  shape; search-index excerpt read this run);
+  FastSaveMedia, "How to Back Up Your Instagram Content"
+  (https://fastsavemedia.com/blog/security/instagram-content-backup-importance
+  — Meta export plus the 3-2-1 rule: "Local: your computer plus an
+  external drive", "Example setup: originals on your computer, the
+  Instagram export on an external drive, and a third copy in cloud
+  storage" — the USB copy is a computer/external-drive step, no
+  phone-to-USB one-tap; search-index excerpt read this run);
+  GeekChamp, "How to Download Instagram Stories, Photos, and Reels
+  Safely"
+  (https://geekchamp.com/how-to-download-stories-photos-and-reels-from-instagram-a-step-by-step-guide/
+  — save a Story to the camera roll, Share → Download for an
+  eligible public Reel, Accounts Centre export for a bulk backup —
+  every route ends on the phone; search-index excerpt read this
+  run);
+  Wondershare MobileTrans, "Back Up a Phone to USB Without Cloud
+  Storage"
+  (https://mobiletrans.wondershare.com/android-backup/how-to-back-up-a-phone-to-an-external-usb-drive-without-cloud-storage.html
+  — generic phone-to-USB guide: OTG copy by hand in the Files app
+  or computer-first, step 3 copies "DCIM, Pictures, Movies, Music,
+  Download, Documents, and messaging-media folders"; Instagram is
+  never named anywhere on the page, no Instagram folder path is
+  given, manual select-copy-paste with no progress, no resume, no
+  verification; search-index excerpt read this run);
+  AnExplorer, "How to Transfer Files from Android to USB Drive
+  (OTG, No Root)" (https://anexplorer.io/transfer/phone-to-usb —
+  thorough generic OTG file-manager guide, manual long-press,
+  Copy, Paste, with a progress bar; examples are DCIM/Camera,
+  Download, Music; Instagram never named; search-index excerpt
+  read this run);
+  YouTube OTG walkthroughs ("How to Connect USB Drive to Android
+  Phone to Move Photos & Videos", "How to Transfer Photos, Videos
+  and any Files from Android Phone to USB Pendrive") — manual
+  file-manager Move/Copy in DCIM, Instagram never named;
+  mefmobile.org, "How to Transfer Phone Photos to a USB Stick
+  Without a Computer" and cellularnews.com, "How to Move Pictures
+  to a Flash Drive From a Google Phone" — generic OTG + file manager
+  guides, DCIM only, Instagram never named; search-index excerpts
+  read this run.
+  VaultDrive's product page (https://coticsy.com/vaultdrive.html
+  — full page read this run, not a search-index excerpt) has 0
+  "Instagram" occurrences; its Instagram-relevant features are
+  "Backs up the files and folders you pick, as well as photos and
+  videos" and "Back up Android photos to a USB drive with OTG";
+  free tier 200 files or 2 GB per backup; Pro $19.99 once;
+  Android 8 or later; "2,000+ installs on the App Store and
+  Google Play", unchanged since WL-194. The folder facts are
+  verified from live sources this run, not from the brief:
+  Instagram saves to Internal storage/Pictures/Instagram
+  (guiaalfa.com, "Instagram: Images and videos are stored in
+  Internal storage/Pictures/Instagram"; corroborated by techsith's
+  Save Original Photos toggle and mimfold's "the Instagram folder
+  in your gallery on Android"); Reels saved through a browser
+  downloader land in Downloads (tapdl, reelbolt, dropig, igdl,
+  saveinstant — all agree), and Reels downloaded with Instagram's
+  own Download option land in the gallery's Instagram folder
+  (tapdl, mimfold) — NOT DCIM, which is the camera folder, so the
+  brief's "or DCIM" resolves to Downloads and the article states
+  the DCIM correction as its distinguishing fact. The Meta export
+  zip arrives on the phone (Downloads) and must be unzipped before
+  copying — the zip itself is not an image or video file, so
+  SnapDisk skips it (HowToGeek: "Download to your device", four-day
+  download window; gadgetsfeed: "unzip it"). SnapDisk behaviour
+  re-verified from the repo by the lead: default From
+  /sdcard/DCIM, To /disk/DCIM (BackupPrefs.kt:50, 53) — so the
+  Instagram route is the From-picker folder route, not the default
+  run; From-picker OpenDocumentTree SAF (MainActivity.kt:62, 71),
+  oldest-first DATE_TAKEN (PhotoQuery / BackupEngine), image
+  extensions .jpg .jpeg .png .heic .heif .webp .gif .bmp .dng
+  .raw and video .mp4 .mov .mkv .webm .3gp .m4v .avi
+  (PhotoQuery.kt:131-137) — free 5 GB/run
+  (FREE_BACKUP_BYTES_LIMIT = 5 GiB, ProPrefs.kt:43), Pro $9.99
+  once (strings.xml "Upgrade to Pro — $9.99 once", product id
+  pro_unlock), no INTERNET permission (0 occurrences in the
+  manifest), no WakeLock/Doze code (0 matches, as in WL-203).
+  ANTI-DUPLICATE CHECK (first, before writing — the WL-189
+  lesson): grep of searches.md for "instagram" finds only
+  incidental mentions before this row (one Instagram reel mention
+  in an earlier row); a docs/ listing finds no instagram slug; no
+  wl-205 branch existed before this run. No existing Instagram
+  article or row: the gap is a new article, not a rewrite. The
+  honest centre is the folder route plus the DCIM correction: the
+  one-tap copy covers the Instagram folders the system picker can
+  reach, and the article says plainly in the TL;DR, in a dedicated
+  H2, and in the FAQ that Instagram content is not in DCIM, that
+  the default run misses it, and that the Meta export zip must be
+  unzipped before copying — the DCIM correction is the article's
+  distinguishing fact, not a footnote. Screen-off continuation
+  under battery saver UNVERIFIED (no WakeLock/Doze code), stated
+  plainly in-article in the WL-182 form — "screen-off continuation
+  under battery saver is unverified" in the TL;DR, plus a
+  capitalised "Unverified" in What to avoid. Next article candidate
+  after this one: unverified.
 
 ## Winners and what changed
 
