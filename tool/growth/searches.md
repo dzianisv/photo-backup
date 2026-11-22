@@ -19174,6 +19174,153 @@ demand is read off competitor install velocity instead (see
   the TL;DR, plus a capitalised "Unverified" in What to avoid.
   Next article candidate after this one: unverified.
 
+### 169. "Back up TikTok photos and videos to USB from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle, High on the save itself.
+  No guide in search covers backing up TikTok videos already saved
+  to the phone directly to a USB drive in one tap. The downloader
+  apps save TikTok videos to the phone and stop there; the generic
+  OTG guides copy by hand without naming TikTok; the one-tap rival
+  is generic and never names TikTok. The gap stands ONLY on that
+  narrow angle: TikTok videos already saved/downloaded to the phone
+  copied oldest-first in one background run to a USB drive, with
+  progress, resume and verification, no computer (SnapDisk).
+- Current top results (scored Nov 22, 2026, live web search):
+  Phrasing 1, "save TikTok videos photos to USB flash drive from
+  Android phone" (supervisor): only our own generic SnapDisk
+  articles plus generic YouTube OTG walkthroughs — no
+  TikTok-specific-to-USB article (verified this run, not re-run);
+  Phrasing 2, "download TikTok videos to USB drive Android one tap
+  backup app" (supervisor): TikTok downloader apps only — TikPro!
+  Video Downloader, SnapTik, VidTube, TikSaverPro, Video Downloader
+  For Tiktok — all save TikTok videos to the PHONE (gallery /
+  in-app library), none does the phone-to-USB step; no
+  TikTok-to-USB article (verified this run, not re-run); Phrasing
+  3, "backup TikTok videos to USB stick Android phone one tap"
+  (lead, this run): our own SnapDisk articles ("Back up videos
+  from Android to a USB drive", "How to back up photos to a USB
+  drive", "How to back up photos to an external drive on Android",
+  "Transfer photos to USB automatically" —
+  https://dzianisv.github.io/photo-backup/videos-to-usb.html and
+  siblings — the same one-tap copy, oldest-first in the background
+  with progress, Pause and Stop, and resume — but generic, TikTok
+  never named) plus Photos to USB: OTG Backup
+  (https://www.appbrain.com/app/photos-to-usb-otg-backup/com.arzdrz.photos_to_usb
+  — "Back up every photo and video on your phone to a USB pen
+  drive, with one tap", free with ads, a one-time purchase removing
+  the ads — generic, TikTok never named, and it names no
+  oldest-first order and no per-file verification; search-index
+  excerpt read this run). No TikTok-specific-to-USB article in any
+  of the three phrasings. Verification searches this run: where a
+  saved TikTok lands on Android (itechguides,
+  "How to Download TikTok Videos on Android"
+  http://itechguides.com/how-to-download-tiktok-videos-on-android/
+  — Share → Save video, only when the creator allows downloads;
+  "the album and folder name vary by phone manufacturer, Android
+  version, TikTok release, and app permissions"; search-index
+  excerpt read this run; pixellize, "How to Save TikTok Videos on
+  iPhone and Android"
+  https://pixellize.io/blog/how-to-save-tiktok-videos-on-iphone-android
+  — saved clips keep the watermark and the creator's handle, "on
+  Android, in your gallery's Videos" or "usually under a Videos or
+  Download folder"; search-index excerpt read this run;
+  maketecheasier, "How to Download TikTok Videos Anywhere"
+  https://maketecheasier.com/download-tiktok-videos-anywhere/ —
+  "find it in your Gallery app under the Camera folder on Android"
+  in one place and "in the TikTok folder in the Gallery app" in
+  another — the two folder claims in the same guide disagree with
+  each other and with the other two guides, so no single folder
+  can be asserted; search-index excerpt read this run; tapdownload,
+  "How to Download TikTok Videos"
+  https://www.tapdownload.com/guides/how-to-download-tiktok-videos/
+  — TikTok's help page: the video "is then saved to your device's
+  gallery automatically", "also checking your device's download
+  folder, or a TikTok album in your gallery"; search-index excerpt
+  read this run); own-video save before posting and watermark rules
+  (itechguides, "How to Download TikTok Videos Without a Watermark"
+  https://www.itechguides.com/how-to-download-tiktok-videos-without-a-watermark/
+  — "save your own video to your device before posting: on the Post
+  screen, open More options and enable Save to device"; "third-party
+  downloaders only claim to remove watermarks and require
+  permission"; search-index excerpt read this run; rottenwifi,
+  "TikTok and Instagram Video Download: Safe Methods, Watermarks
+  and Rights"
+  https://blog.rottenwifi.com/tiktok-video-downloader-online-and-instagram-video-download-safe-ways-to-save-videos/
+  — "use Share → Save video when the creator allows downloads",
+  "Private accounts and accounts belonging to users under 16 have
+  downloads disabled by default", "Save to device" before posting
+  is the safest watermark-free workflow for your own video;
+  search-index excerpt read this run); downloader-app save location
+  (snaptik.life, "TikTok Video Downloader"
+  https://snaptik.life/tiktok-video-downloader/ — "On Android the
+  file goes to the Downloads folder", "Most Android galleries pick
+  it up automatically within a few seconds", "not affiliated with
+  TikTok or ByteDance"; search-index excerpt read this run);
+  TikTok's Download your data export (takeoutday, "Export TikTok
+  Data: History, Messages and Videos"
+  https://takeoutday.org/guides/how-to-export-tiktok-data — "The
+  TikTok export does not contain your videos. It has the metadata,
+  the URLs, the likes and the DMs, and not one MP4"; "the link
+  expires four days later"; search-index excerpt read this run;
+  streamfab, "How to Export TikTok Videos Before Any Ban"
+  https://streamfab.com/how-to-download-tiktok-videos — "the file
+  you eventually receive contains links to your videos, not the
+  videos themselves", "download the archive within 4 days";
+  search-index excerpt read this run; itechguides, "How to Save All
+  Your TikTok Content and Data"
+  https://www.itechguides.com/how-to-save-all-your-tiktok-content-and-data/
+  — "TikTok's export contains account records, but it is not a
+  guaranteed copy of every media file", "A prepared TikTok
+  data-download file remains available for up to four days", "the
+  last 24 to 48 hours of some data categories may not be included";
+  search-index excerpt read this run); VaultDrive re-verified live
+  this run from the vendor page itself
+  (https://coticsy.com/vaultdrive.html — "Free to try · Pro is
+  $19.99 once · No account", "Up to 200 files or 2 GB per backup",
+  "Pro Lifetime is $19.99", search-index excerpt of the live page
+  read this run). No install-count claim is carried in the new
+  article: the vendor page's "2,000+ installs" line was not in the
+  excerpt read this run, and AppBrain's 870-install figure was not
+  re-verified from its source this run — per the standing rule, no
+  install count without live re-verification.
+- Article: docs/tiktok-photos-videos-to-usb.html (WL-209).
+  Honest centre: the save-then-copy route plus the folder
+  disagreement, and the disagreement is the article's
+  distinguishing fact, not a footnote: the sources disagree on
+  where a saved TikTok lands — Videos or a Download folder
+  (pixellize), the Camera folder or a TikTok folder (maketecheasier,
+  disagreeing with itself), "varies by phone manufacturer, Android
+  version, TikTok release, and app permissions" (itechguides) — so
+  the article tells the reader to check the gallery first, then
+  Downloads, DCIM, and Pictures, and states the disagreement in
+  the TL;DR, in a dedicated H2, and in the FAQ. The default run
+  copies the whole media library via MediaStore, not DCIM only
+  (verified in code this run: BackupService.kt:634-641
+  enumeratePhotos → PhotoQuery.kt:23 queryMediaStoreOldestFirst,
+  Images + Video tables, null selection, no folder filter), so
+  saved TikToks are covered by the default run whatever folder they
+  sit in; the From-picker SAF tree route is for copying only the
+  TikTok folder instead of the whole library — the WL-207
+  correction, not repeated here. The second honest centre is the
+  export: TikTok's Download your data archive carries links and
+  metadata, not MP4s, its link expires after 4 days, and the last
+  24 to 48 hours of some data may be missing — so the article gives
+  it as Method 2 as the index of what you posted, with the files
+  still saved one by one, instead of promising a bulk on-device
+  TikTok-to-USB export, which does not exist. The third honest
+  centre is permission: Save video appears only when the creator
+  allows downloads, a missing button is the creator's no, and this
+  article covers your own videos or ones you have permission to
+  store — no watermark-removal claims, and SnapDisk copies the file
+  exactly as it is. A Favorite is a bookmark inside TikTok, not a
+  file; drafts live only in the app and are not in the export.
+  Screen-off continuation under battery saver UNVERIFIED
+  (no WakeLock/Doze code), stated plainly in-article in the WL-182
+  form — "screen-off continuation under battery saver is
+  unverified" in the TL;DR, plus a capitalised "Unverified" in What
+  to avoid.
+  Next article candidate after this one: unverified.
+
 
 ## Winners and what changed
 
