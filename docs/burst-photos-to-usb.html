@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up burst photos to USB on Android — SnapDisk</title>
+<meta name="description" content="Back up burst photos from Android to a USB drive with SnapDisk: one burst is dozens of .jpg files behind one thumbnail — only a whole-library copy gets them.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/burst-photos-to-usb.html">
+<meta property="og:title" content="Back up burst photos to USB on Android — SnapDisk">
+<meta property="og:description" content="Back up burst photos from Android to a USB drive with SnapDisk: one burst is dozens of .jpg files behind one thumbnail — only a whole-library copy gets them.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/burst-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/burst-photos-to-usb.html#article",
+      "headline": "Back up burst photos to USB on Android — SnapDisk",
+      "description": "Back up burst photos from Android to a USB drive with SnapDisk: one burst is dozens of .jpg files behind one thumbnail — only a whole-library copy gets them.",
+      "datePublished": "2026-11-21",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/burst-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/burst-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Will SnapDisk back up my burst photos — all of them, or just the cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All of them. A burst is a run of individual .jpg files in DCIM/Camera — the single thumbnail is something the gallery app shows you, not something the files are. SnapDisk copies files, not thumbnails: the default run reads the phone's MediaStore Images table with no folder filter and no MIME filter, and every .jpg in it copies, oldest-first. The DCIM/Camera pick is the burst-only route if you want just the bursts. Check the count afterwards: the number of files on the drive should match the number on the phone, because the gallery count and the file count are not the same thing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My Samsung saves bursts under one parent photo — does the backup see the rest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Samsung's Gallery files a burst under a single parent photo — the first frame — and tapping it reveals the rest, up to 100 shots in one hold. That grouping lives in the Gallery app. On disk the frames are individual .jpg files in DCIM/Camera, and SnapDisk's copy sees files, not the Gallery's grouping, so every frame copies. The same is true of Google Photos, which shows a burst as one thumbnail with a burst badge and a counter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I shoot bursts in Expert RAW — do the .dng files copy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With the folder route, yes. An Expert RAW burst saves its frames as .dng files, and .dng is in SnapDisk's recognised extension list, so picking DCIM as the From folder copies every one of them — the tree walk copies every file whose extension is in the list. Do not rely on the default run alone for .dng: whether a given phone's MediaStore indexes .dng files at all is device-dependent, which is the RAW article's rule. Pick the folder, then check the drive: open the backup folder and confirm the .dng files are there, with sizes that match the phone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/burst-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up burst photos to USB on Android — SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/burst-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up burst photos to USB on Android — SnapDisk</h1>
+  <p class="dek">A burst looks like one photo — and that is the trap. Behind the single thumbnail in your gallery sit dozens of individual files, and the one you want is frame 37 of 60. Here is how to get every frame of a burst onto a USB drive, and how to prove they all arrived.</p>
+  <p class="meta">November 21, 2026 · 6 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> A burst is not one photo and not one file. Hold the shutter and the camera saves a run of individual .jpg files in DCIM/Camera — about 10 frames a second, and up to 100 shots in a single hold on a Samsung Galaxy. The gallery hides the count: Google Photos shows one thumbnail with a burst badge and a counter, Samsung Gallery files the burst under a single parent photo, and tapping it reveals the rest. On disk they are ordinary .jpg files, named like any other camera photo, and that is the whole point of this article: the backup does not need to understand bursts at all — it needs to copy every file, because the frame you want is one of dozens and the gallery only shows you the cover. SnapDisk copies byte-for-byte with no conversion, so every frame arrives intact. The default run covers JPEG bursts — they are .jpg files, MediaStore indexes .jpg on every phone, and the query carries no folder filter and no MIME filter — and the DCIM/Camera pick is the burst-only route. If you shoot bursts in Expert RAW they save as .dng, and the folder route is the certain one there, the RAW article's rule. A burst multiplies the library — one hold is dozens of files — so count the DCIM/Camera folder first and divide by the 5 GB free per-run cap. Format the drive exFAT, because the 4K videos sitting next to your bursts are the ones that hit the FAT32 4 GB limit. And one honest limit: screen-off continuation under battery saver is unverified — the repo holds no wake lock and no battery-saver handling — so keep the phone awake for the run or check it. As of November 21, 2026, no burst-specific phone-to-USB backup guide turned up in search — the pages that exist are our own general guides, generic transfer guides, and one forum thread — and none of them offers a one-tap whole-library backup for burst photos or mentions SnapDisk — so this article is the first on the burst angle. The adjacent ground: <a href="motion-photos-to-usb.html">backing up motion photos to USB from Android</a>, where one file hides a video inside it — the burst is the opposite shape, many files hiding behind one thumbnail — and the <a href="heic-photos-to-usb.html">HEIC</a>, <a href="raw-photos-to-usb.html">RAW</a> and <a href="screenshots-to-usb.html">screenshots</a> articles, where the certain route is the same folder pick.</p>
+
+  <h2>What the search results actually offer</h2>
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk&#x27;s settings screen, showing the backup folder pickers. The From picker is where you choose DCIM/Camera for the burst-only route — the folder walk copies every burst frame in the tree — or leave From unpicked and the default run covers the JPEG bursts. Screenshot is from SnapDisk on a phone — the settings screen is the same screen you will see when you back up with SnapDisk.</figcaption>
+  </figure>
+  <p>The exact query returns real pages — and none of them is a burst-specific phone-to-USB backup guide. Our own pages come up first: the Samsung Galaxy article, the general backup article, and the external-drive article are all general photo backup guides with no burst angle. Groovypost's "How to Transfer Photos from Android to a USB Drive" is a generic photo transfer guide — a PC middleman drag-and-drop, then a dual USB-C drive with the file manager — with no burst angle and no SnapDisk mention. None of the four says a word about bursts, and none of them offers a one-tap whole-library backup for them.</p>
+  <p>The second phrasing — transfer burst photos from an Android phone to a USB drive — returns the same shape at greater length, and still nothing burst-specific. The Samsung community's "How to take pictures off phone and put on memory stick" is a Galaxy-only manual My Files copy, folder by folder, through an OTG adapter — no burst angle, no SnapDisk mention. Our own automatic-transfer article is a general guide with no burst angle. A generic guide from connect.gmb.org.uk is a manual file-manager copy with a PC method attached. The Samsung Galaxy article again. Fonelab's "How to Transfer Photos from Android to Flash Drive in 3 Easy Ways" is an OTG copy, a PC tool, and Smart Switch — three generic routes, no burst angle, no SnapDisk mention. A third phrasing surfaces the EyeFi forum thread, "What's the best way to move photos from my Android phone to a flash drive?" — a manual OTG copy in a file manager, with Send Anywhere and a PC tool as alternates — no burst angle, no SnapDisk mention — and a Google Photos community thread about moving too many photos to an external drive, which is a cloud-download-then-Files-move, no burst angle either. None of the pages in any phrasing distinguishes a burst from a single photo, none of them warns that one thumbnail hides dozens of files, and none of them mentions SnapDisk. That is the gap this article fills: a phone-to-USB backup that treats a burst as what it is — many files behind one thumbnail — with the route that provably copies every frame.</p>
+
+  <h2>What a burst actually is</h2>
+  <p>A burst is a run of individual files. Hold the shutter and the camera fires as fast as it can — about 10 frames a second, by Google Photos' own account — and each frame is saved as its own .jpg file in DCIM/Camera, named like any other camera photo, with no special extension and no container holding them together. On a Samsung Galaxy you can capture as many as 100 burst photos in one hold, by swiping the shutter button down and holding it there. That is the whole shape: many ordinary files, saved in one run, in the same folder as everything else the camera shoots.</p>
+  <p>The grouping is something the gallery app does, not something the files are. Google Photos shows a burst as a single thumbnail with a burst badge and a counter — tap it and you can slide through all the frames and pick a favourite — and its newer photo stacks do the same for any run of similar shots: the rest do not disappear or get deleted, they remain accessible at any time. Samsung Gallery files a burst under a single parent photo, the first frame of the bunch, and tapping that photo reveals all the other burst shots, which you can delete one by one or all at the same time. Two different presentations, one fact: the files on disk are individual, and the count is hidden behind one thumbnail. That is the opposite of the motion photo in the WL-193 article, where one file hides a video inside it. Here many files hide behind one thumbnail — and the risk runs the other way: not that a file gets re-saved, but that frames get left behind or deleted because nobody counted them.</p>
+  <p>Where do they live? In DCIM/Camera, alongside the ordinary stills — a burst is a camera burst, saved as .jpg files in the camera folder, and the people who have actually looked confirm it: open a file browser and the burst pictures are there in the DCIM/Camera folder, and connect the phone to a computer, navigate to DCIM, and you see the individual images there. Google Photos groups a burst with the cover photo set as the top pick, but the files themselves are saved in the Camera folder and backed up as default. That decides the backup route: a DCIM pick covers them, because the folder walk recurses into the Camera subfolder and copies every .jpg in the tree. Two things to check before you start. First, how many frames you actually have: open the burst in the gallery and look at the counter — "1/12" or "1/60" — because the number on the thumbnail is the number the backup has to match on the drive. Second, what format yours are in: ordinary bursts are .jpg, but Samsung's Expert RAW burst saves its frames as .dng — up to 30 DNG files per burst — and .dng follows the RAW article's rule instead of the JPEG one.</p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li><strong>An Android phone with burst photos on it.</strong> On a Pixel, hold the shutter in the camera; on a Samsung Galaxy, swipe the shutter button down and hold it — up to 100 shots in one hold. Then check the count: open a burst in Google Photos or Samsung Gallery and look at the counter, so you know how many frames the backup has to match on the drive. If nothing shows a burst badge, burst was off when the photos were taken, and no backup can put the frames back.</li>
+    <li><strong>A USB drive with enough free space.</strong> Count first: one burst is dozens of files, and a season of bursts adds up faster than a season of single shots — so add up the DCIM/Camera folder in the Files app before you buy the drive, and divide by 5 GB to know how many free runs the library needs.</li>
+    <li><strong>A drive formatted exFAT.</strong> The format reference for this article is DriveForge's exFAT-vs-FAT32-vs-NTFS guide: exFAT has no 4 GB per-file limit and is read and written by current Android phones, Windows, and Mac. FAT32 cannot hold a single file of 4 GB or more — a single burst frame never reaches that, but the long 4K videos sitting next to your bursts can, and exFAT is the practical format for the whole folder. NTFS is a Windows format that most Android phones cannot open on their own — do not use it for a phone backup drive.</li>
+    <li><strong>An OTG adapter if your drive is USB-A.</strong> A dual USB-C drive plugs straight in; a standard USB-A stick needs a data-capable OTG adapter. A portable SSD may need a powered hub — the phone alone may not supply enough power for the drive.</li>
+    <li><strong>SnapDisk v0.1.2.</strong> Not on Google Play yet — install the APK from the GitHub release page. It needs Android 7.0 or later (minSdk 24 in the repo). No account, no cloud, no ads, and no internet permission — your photos physically cannot leave the phone.</li>
+  </ul>
+
+  <h2>Method 1: SnapDisk — the phone, one tap</h2>
+  <p>This is the route this article is for, and the certain route is the folder route. Plug the drive into the phone and wait for Android to detect it. Open SnapDisk, tap the From picker, browse to the phone's storage, and choose DCIM — or DCIM/Camera, for bursts only. The From picker is the system folder picker (verified in the repo as OpenDocumentTree), and on that route SnapDisk walks the folder you picked — subfolders included — and copies every file whose extension is in the list. Both .jpg and .dng are in that list, verified in the repo's PhotoQuery.kt, so a DCIM pick copies every burst frame in the tree whatever its format — JPEG bursts and Expert RAW bursts alike. Then pick the To folder on the drive, in the same picker, and tap Backup. The copy runs in the background: oldest-first by the date the photo was taken, with a progress notification showing percent, copied / total size, speed, and time left, plus Pause and Stop.</p>
+  <p>The default run — leave From unpicked — covers JPEG bursts too, and for most people that is enough: with no From folder picked, SnapDisk reads the phone's MediaStore Images table and the Video table with no folder filter and no MIME filter, verified in the repo as PhotoQuery.queryMediaStoreOldestFirst, called from BackupService when no From folder is picked — and a JPEG burst frame is a .jpg file, which every Android MediaStore indexes, so it is in the result set by construction. But the default route is the uncertain one for .dng bursts: whether a given phone's MediaStore indexes .dng files at all is device-dependent, which is the RAW article's finding. So the rule is the same as the RAW article's: if you shoot bursts in Expert RAW, pick the folder. The folder route is certain in every case; the default route is certain only for JPEG.</p>
+  <p>The frames survive because the copy never touches the files' bytes. SnapDisk streams each file byte-for-byte from the phone to the drive — there is no transcoding step anywhere in its copy path — and it checks the size of every file after copying, renaming the .part file to the final file only after the size verification passes. A burst that arrives on the drive is the same set of .jpg files that left the phone, frame for frame. And here is the check that matters, because it is the one most people get wrong for bursts: count, do not look. Open the backup folder on the drive and count the files — the number should match the frame count on the phone, the "1/60" the gallery showed you. A gallery thumbnail count and a file count are not the same thing, and the file count is the one that proves the backup worked. If the drive holds 60 files where the phone held a 60-frame burst, the burst is safe.</p>
+  <p>Two honest limits on this route. First, there is no burst-only mode on the default run: it copies the whole library, oldest-first, burst frames mixed in with stills in date order. If you want bursts only, that is what the DCIM/Camera pick is for. Second, screen-off continuation under battery saver is unverified: SnapDisk copies as a foreground service — the mechanism Android gives a copy that must keep running with the screen off — but the repo holds no wake lock and no battery-saver handling, and no burst run has ever been tested, so this article says so instead of promising it. Keep the phone awake for the run, or check it. On Android 15 and later a dataSync foreground service gets 6 hours in 24 hours, so a very long copy can be paused by Android itself, and opening the app resets the timer (WL-34).</p>
+  <p>One fair comparison, because the search surfaced a rival that does part of this right: VaultDrive's page — read in full this run — says nothing about burst photos at all, no burst line anywhere on it, so it is not a burst guide either. What it does have, and what is genuinely burst-relevant, is a choose-photos feature: back up just the photos and videos you pick. If you want one burst and nothing else, picking it in VaultDrive is the honest route, and its folders-by-date-or-album and incremental backups on Pro are real wins SnapDisk does not have. But its free tier is the burst trap: 200 files or 2 GB per backup, and one 100-frame burst eats half of that in a single backup — against SnapDisk's 5 GB per run with no file count. VaultDrive is on Google Play today at $19.99 once for Pro Lifetime against SnapDisk's $9.99 once. What SnapDisk adds is the oldest-first order across the whole library, the detailed progress notification with Pause and Stop, per-file size verification with .part resume, and this article's rule: the folder route that provably copies every frame, whatever the format.</p>
+
+  <h2>Method 2: by hand in the Files app (no app needed)</h2>
+  <p>If you would rather not install anything, the Files app does the same copy by hand — and for bursts it has one advantage: you see exactly which files you selected. Plug the drive in, open Files by Google (or your phone's file manager), browse to DCIM/Camera, long-press one burst frame, tap the rest, tap Copy, navigate to the USB drive, and tap Paste. The file manager shows you the individual files, not the gallery's single thumbnail — so you can see the frame count as you select, which is the check the gallery hides from you. Check the drive afterwards: compare the file count against the phone, and open a few frames on the drive to confirm they arrived.</p>
+  <p>Three warnings specific to bursts on this route. First, copy in the Files app — do not share from the Gallery. Sharing a burst from the Gallery hands the file to another app, and what gets shared is the cover frame, or the few frames you picked — not the whole burst. Copy in the Files app moves the files themselves; Share hands one frame to another app. Second, do not delete the stack before opening it. The gallery groups a burst under one thumbnail, and the stack controls include deleting multiple photos at once — one careless delete can take the whole burst, all 60 frames, because the thumbnail never showed you the count. Open the stack, check the counter, and delete frame by frame if you must delete at all. Third, do not use Move. The guides that suggest Move are telling you to delete the originals as the copy goes — and a Move that is interrupted halfway leaves some burst frames on the drive, some on the phone, and no record of which is which. Copy, verify the count, then delete — that order is what keeps your bursts safe.</p>
+  <p>What you give up is everything SnapDisk automates. There is no oldest-first order — you copy in whatever order you selected. There is no progress notification with speed and time left, no Pause and Stop, and no resume: if the drive is unplugged mid-copy, you start that file again and work out yourself which frames already arrived. There is no per-file size verification, and no skipped-file list — a file that does not fit, or a copy that silently stops, fails quietly. For one burst that is fine. For a season of them, the manual route is an afternoon of tapping and counting, and the one-tap route is the honest recommendation. The manual route is also the fallback for the one configuration SnapDisk's default run gets wrong: if your bursts are .dng and the default run did not include them, select them by hand in DCIM/Camera and copy them the same way.</p>
+
+  <h2>Method 3: the cloud trap — check Google Photos before you trust it</h2>
+  <p>Before you trust the cloud with bursts, check what it actually holds. Google Photos backs up the camera folder, and a burst uploaded there keeps its frames — the grouped photos are saved in the Camera folder and backed up as default. But the default is not Original quality. Google's own help page says Storage saver uploads "may be compressed into a different image format, like a .jpg" — and a burst frame re-saved at reduced quality is a worse frame, with no way back to the original. The extractor sources in the motion-photo article say the same thing in plainer words for that format, and the rule holds here: the cloud copy of a burst is only as good as the quality setting it was uploaded at, and the setting is one tap in Photos settings — easy to have wrong for years without noticing, because the cover frame looks identical.</p>
+  <p>One more cloud detail, because it confuses people with bursts specifically: the gallery shows one thumbnail for the whole burst, and the stack controls include deleting multiple photos at once. That means the cloud copy is one careless delete away from losing frames you never reviewed — the frames behind the cover, the ones you kept the burst for in the first place. Google Photos does let you save all the frames from a burst, frame by frame, from inside the stack — but that is a manual step per burst, and it only helps if you do it before you delete anything. The order matters: copy to the USB drive first, count the files on the drive against the phone, and only then let the cloud hold whatever it holds. And never delete the phone originals on the strength of a cloud badge alone. Check the drive copy, count the frames, then delete — that order is what keeps your bursts safe.</p>
+
+  <h2>The 5 GB free cap, and why bursts feel it</h2>
+  <p>SnapDisk's free version backs up manually up to 5 GB per run — verified in the repo as FREE_BACKUP_BYTES_LIMIT, 5 GiB — and runs can be repeated. Files already copied are never copied twice, so a second run picks up where the first stopped. For bursts, 5 GB does not go as far as it does for single shots: one hold is dozens of files, and a season of bursts is hundreds or thousands of frames, so the library adds up faster than a library of single shots. Pro is a one-time $9.99 purchase (product id pro_unlock, verified in the repo's billing code) that auto-starts the backup when a disk is connected and removes the size limit, so a whole season copies in one run.</p>
+  <p>The cap is per run, not per library, and that distinction is what matters here: the free version can finish any burst library if you run it again, because files already copied are never copied twice. The count to do before you start is the library size: open the Files app, look at the DCIM/Camera folder size, divide by 5 GB, and that is how many free runs the library needs. Do the arithmetic before you plug the drive in, not halfway through the copy.</p>
+  <p>One more size note: a file of 4 GB or more on a FAT32 drive is skipped with its reason and the job continues — verified in the repo's BackupService. A single burst frame is never 4 GB or more, so this never fires for a .jpg. What it does catch is the long 4K video that sits next to your bursts in the same folder — that file is skipped and listed, the bursts around it copy normally, and the fix is the same exFAT format recommended above.</p>
+
+  <h2>What this does not do</h2>
+  <ul>
+    <li><strong>It does not pick the best frame for you.</strong> SnapDisk copies files — every frame of every burst, oldest-first. Choosing the keeper is the gallery's job: open the burst, slide through the frames, and star the one you want. The backup's job is to make sure the frame you pick later is still there to pick.</li>
+    <li><strong>It does not turn a burst into a GIF or a video.</strong> The frames stay individual .jpg files, the way the phone saved them. If you want the burst as an animation, that is a separate tool's job, on a copy, never on the only original. The backup's job is to keep the originals intact.</li>
+    <li><strong>It does not copy bursts only on the default run.</strong> The default run copies the whole library, oldest-first, burst frames mixed in with stills in date order. Bursts only is the DCIM/Camera pick in Method 1.</li>
+    <li><strong>It does not convert your bursts — to anything.</strong> SnapDisk copies the .jpg exactly as it is. Converting a frame to a smaller JPEG, or to any other format, loses quality — and that is your editor's or your computer's job, on a copy, never on the only original.</li>
+    <li><strong>It does not read or index your bursts.</strong> There is no best-frame detection and no search inside the frames — SnapDisk copies files, and finding one burst among a thousand .jpg files is your file manager's job, on the drive, after the copy.</li>
+    <li><strong>It does not back up anything but photos and videos.</strong> No app data, no messages, no system state — and no browser tabs, notes, or clipboard history. Those live in the app's own storage, not in the photo folders, and they need their own backup.</li>
+    <li><strong>It does not delete anything.</strong> SnapDisk only copies — the only delete calls in its source touch .part files, never your photos — so freeing space is a two-step flow you do yourself: copy to the drive, count the frames on the drive against the phone, then delete the originals from your phone. That flow is covered step by step in <a href="free-up-space-move-photos-to-usb.html">How to free up space by moving photos to a USB drive</a>.</li>
+    <li><strong>It does not promise the copy keeps running with the screen off under battery saver.</strong> No wake lock, no battery-saver handling in the repo, no burst run ever tested — stated plainly above, not promised. Keep the phone awake for the run.</li>
+    <li><strong>It does not restore or view your photos.</strong> There is no in-app viewer and no restore feature — you open the copied .jpg files in a viewer or on your computer yourself. The <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive comparison</a> covers what the rivals add here, and what they charge for it.</li>
+  </ul>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Assuming one thumbnail is one photo.</strong> A burst is dozens of files wearing one thumbnail. The gallery count and the file count are not the same thing — count the files on the drive, not the thumbnails in the gallery.</li>
+    <li><strong>Deleting the stack before opening it.</strong> The stack controls include deleting multiple photos at once, so one careless delete can take the whole burst. Open the stack, check the counter, and delete frame by frame if you must delete at all.</li>
+    <li><strong>Sharing the cover when you meant to copy the burst.</strong> Sharing from the Gallery hands one frame to another app. Copy in the Files app; Share hands the file to another app.</li>
+    <li><strong>Assuming the default run missed the burst because the gallery shows one item.</strong> The gallery shows one thumbnail for 60 files. Check the file count on the drive — if it matches the frame count on the phone, the burst is safe.</li>
+    <li><strong>Letting Storage saver recompress the frames.</strong> Google Photos Storage saver uploads "may be compressed into a different image format, like a .jpg" — Google's own words. Copy to the drive first, at original quality.</li>
+    <li><strong>Assuming the default run covers .dng bursts.</strong> MediaStore indexing of .dng is device-dependent. If you shoot bursts in Expert RAW, pick DCIM as the From folder — the folder route is certain whatever the format.</li>
+    <li><strong>Using Move instead of Copy in the Files app.</strong> Move deletes the originals as the copy goes — an interrupted Move leaves burst frames split between phone and drive with no record of which is which. Copy, verify the count, then delete.</li>
+    <li><strong>Formatting the drive NTFS.</strong> Most Android phones cannot open NTFS on their own. Use exFAT — DriveForge's guide is the format reference — and keep FAT32 only for a drive an older device must read.</li>
+    <li><strong>Buying a drive before counting the library.</strong> One burst is dozens of files. Count the DCIM/Camera folder first, then buy the size, and divide by 5 GB to know how many free runs the library needs.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you have confirmed the copy — and for a burst, the check is the frame count on the drive. Copy, count the frames, then delete from the phone — never the other way round.</li>
+    <li><strong>Assuming the copy keeps running with the screen off.</strong> Unverified — no wake lock, no battery-saver handling. Keep the phone awake for the run or check it.</li>
+    <li><strong>Starting a multi-gigabyte copy on a nearly dead battery.</strong> One USB-C port holds the drive or the charger, not both — charge first, or use a powered hub with pass-through charging, which is standard USB-C behaviour but unverified with SnapDisk.</li>
+    <li><strong>Searching for the wrong thing.</strong> The pages the search returns are generic transfer guides, our own general articles, and one forum thread — none of them is a burst backup guide. Search for the burst photos, not the photos, and the gap is obvious.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> a burst is dozens of files wearing one thumbnail — the copy has to get every frame, and the check has to count frames, not thumbnails. Pick DCIM/Camera as From, copy, count the files on the drive against the phone, then delete. That order is what keeps your bursts safe.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you would rather tap once than copy by hand, <a href="./">SnapDisk</a> copies your burst photos and camera photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. Pick DCIM/Camera as the From folder and the folder route copies every burst frame, .jpg or .dng — or leave From unpicked and the default run covers the JPEG bursts — then tap Backup, and count the frames on the drive before you delete anything. See also: <a href="motion-photos-to-usb.html">How to back up motion photos to USB from Android</a> for the opposite shape — one file with a video hidden inside it, against the burst's many files behind one thumbnail — <a href="raw-photos-to-usb.html">How to back up RAW photos to USB from Android</a> for the .dng rule the Expert RAW burst follows, <a href="heic-photos-to-usb.html">How to back up HEIC photos to USB from Android</a> and <a href="screenshots-to-usb.html">How to back up screenshots to USB from Android</a> for the same folder-route rule on other formats, <a href="samsung-galaxy-photos-to-usb.html">Back up Samsung Galaxy photos to a USB drive</a> for the Galaxy route, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a> for the general route, and <a href="free-up-space-move-photos-to-usb.html">How to free up space by moving photos to a USB drive</a> for the delete-after-verify flow.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

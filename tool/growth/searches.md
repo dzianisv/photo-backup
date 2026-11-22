@@ -17314,6 +17314,278 @@ demand is read off competitor install velocity instead (see
   this run, 97 after) — the count this row uses is the
   URL-line count, verified this run.
 
+### 160. "back up burst photos to USB from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a burst-specific
+  phone-to-USB backup guide at all — the top results are
+  our own general guides, generic transfer guides, and
+  one forum thread. None of them says a word about
+  bursts, none of them offers a one-tap whole-library
+  backup for burst photos, and none of them mentions
+  SnapDisk.
+- Current top results (scored Nov 21, 2026, live web search):
+  our own Samsung Galaxy article, "Back up Samsung Galaxy
+  photos to a USB drive"
+  (https://dzianisv.github.io/photo-backup/samsung-galaxy-photos-to-usb.html
+  — a general Galaxy photo backup guide, no burst angle;
+  search-index excerpt read this run);
+  our own general backup article, "How to back up photos
+  to a USB drive"
+  (https://dzianisv.github.io/photo-backup/backup-photos-to-usb.html
+  — a general photo backup guide, no burst angle;
+  search-index excerpt read this run);
+  groovypost, "How to Transfer Photos from Android to a USB
+  Drive"
+  (https://www.groovypost.com/howto/transfer-photos-from-android-to-a-usb-drive/
+  — a PC middleman (drag and drop from the phone to a
+  computer, then to the drive) and a dual USB-C drive with
+  the file manager; a generic photo transfer guide, no
+  burst angle, no SnapDisk mention; search-index excerpt
+  read this run);
+  our own external-drive article, "How to back up photos
+  to an external drive on Android"
+  (https://dzianisv.github.io/photo-backup/backup-photos-to-external-drive.html
+  — a general external-drive guide, no burst angle;
+  search-index excerpt read this run).
+  Second-phrasing re-score (this run) surfaced no new
+  near-miss beyond the same shape — the five it returns
+  are all generic transfer guides or our own general
+  articles: Samsung Community, "How to take pictures off
+  phone and put on memory stick"
+  (https://stg-r1.community.samsung.com/t5/galaxy-s/how-to-take-pictures-off-phone-and-put-on-memory-stick/m-p/15256607
+  — a Galaxy-only manual My Files copy, folder by folder,
+  through an OTG adapter; no burst angle, no SnapDisk
+  mention; search-index excerpt read this run);
+  our own transfer article, "Transfer photos to USB
+  automatically"
+  (https://dzianisv.github.io/photo-backup/transfer-photos-to-usb-automatically.html
+  — a general automatic-transfer guide, no burst angle;
+  search-index excerpt read this run);
+  connect.gmb.org.uk, "Transfer Pictures from Android to
+  Flash Drive Your Photo Savior!"
+  (https://connect.gmb.org.uk/transfer-pictures-from-android-to-flash-drive/
+  — a generic file-manager OTG copy with a PC method
+  attached; no burst angle, no SnapDisk mention;
+  search-index excerpt read this run);
+  our own Samsung Galaxy article (above);
+  fonelab, "How to Transfer Photos from Android to Flash
+  Drive in 3 Easy Ways"
+  (https://www.fonelab.com/resource/how-to-transfer-photos-from-android-phone-to-usb-flash-drive.html
+  — an OTG copy, a PC tool, and Smart Switch — three
+  generic routes, no burst angle, no SnapDisk mention;
+  search-index excerpt read this run);
+  drfone, "4 Practical Ways to Transfer Photos from Android
+  to USB Flash Drive"
+  (https://drfone.wondershare.com/android-transfer/how-to-transfer-photos-from-android-to-usb.html
+  — an OTG adaptor copy, PC drag-and-drop, Google Drive,
+  and AirDroid — four generic routes, no burst angle, no
+  SnapDisk mention; search-index excerpt read this run,
+  surfaced by the supervisor's second-phrasing re-score).
+  Gap stands only
+  on the burst angle.
+  A third phrasing (this run) surfaces the EyeFi forum
+  thread the supervisor named — EyeFi Forum, "What's the
+  best way to move photos from my Android phone to a flash
+  drive?"
+  (https://eyefi.com/t/what-s-the-best-way-to-move-photos-from-my-android-phone-to-a-flash-drive/1121
+  — a manual OTG copy in a file manager, with Send
+  Anywhere and a PC tool as alternates; no burst angle,
+  no SnapDisk mention; search-index excerpt read this
+  run) — and a Google Photos community thread, "Too many
+  pics"
+  (https://support.google.com/photos/thread/440184774?hl=en&msgid=440222397
+  — download from the cloud, then move with the Files
+  app; a cloud-download-then-move, no burst angle, no
+  SnapDisk mention; search-index excerpt read this run)
+  — and groovypost again. Still nothing burst-specific.
+  VaultDrive's product page
+  (https://coticsy.com/vaultdrive.html
+  — the rival page, full page read this run, not a
+  search-index excerpt: it says nothing about burst
+  photos at all, no burst line anywhere on it — so it is
+  not a burst guide either; what it does have, and what
+  is genuinely burst-relevant, is a choose-photos feature
+  ("Back up just the photos and videos you pick") and
+  folders by date or by album, incremental backups on
+  Pro, and a free tier of 200 files or 2 GB per backup
+  against SnapDisk's 5 GB per run with no file count —
+  one 100-frame burst eats half of VaultDrive's free
+  tier in a single backup; Pro $19.99 once, Android 8
+  or later, on Google Play; "2,000+ installs on the App
+  Store and Google Play", unchanged since WL-194).
+  The burst-format references, not competing guides:
+  Android Central forum, "Camera burst mode doesn't save
+  pictures"
+  (https://forums.androidcentral.com/threads/camera-burst-mode-doesnt-save-pictures.847233/
+  — "using a file browser I can see the burst pictures
+  in the DCIM\\Camera folder"; search-index excerpt read
+  this run);
+  exchangetuts, "Burst mode camera in Android which can
+  take multiple pictures"
+  (https://exchangetuts.com/burst-mode-camera-in-android-which-can-take-multiple-pictures-1640392924887112
+  — "connect your phone to a computer and navigate to
+  the DCIM/Pictures folder and you should see the
+  individual images there"; search-index excerpt read
+  this run);
+  SamMobile, "Here's how you capture burst photos on One
+  UI 2.1"
+  (https://www.sammobile.com/news/how-you-capture-burst-photos-on-one-ui-2-1/
+  — "you can capture as many as 100 burst photos if you
+  hold the shutter button swiped down long enough", and
+  "your burst shots are neatly organized in the Gallery
+  app under a single *parent* photo (the first burst
+  shot from the bunch)"; search-index excerpt read this
+  run);
+  Google Photos community, "What does it mean to Burst a
+  pic"
+  (https://support.google.com/photos/thread/139095524/what-does-it-mean-to-burst-a-pic?hl=en
+  — "The burst mode can take about 10 frames per
+  second", and "You can review the entire series at any
+  time and save them all or choose one or more of your
+  favorite photos and delete the rest"; search-index
+  excerpt read this run);
+  mickmel, "Burst mode on Android finally works like iOS"
+  (https://www.mickmel.com/burst-mode-android-finally-works-like-ios/
+  — "if you took a quick burst of photos, each photo
+  would show up separately in your gallery" and now
+  "Android put them behind a single thumbnail with an
+  icon in the corner to show you how many photos were
+  behind it"; search-index excerpt read this run);
+  androidgreek, "How to use Google Photos Stack"
+  (https://androidgreek.com/stacking-google-photos/
+  — the stack groups similar photos, "The Burst Brigade"
+  includes "all images on your phone clicked at the
+  camera's highest potential"; search-index excerpt read
+  this run);
+  Notebookcheck, "Samsung Galaxy S27 Ultra gets new
+  camera features, according to One UI 9.5 leak"
+  (https://www.notebookcheck.net/Samsung-Galaxy-S27-Ultra-gets-new-camera-features-according-to-One-UI-9-5-leak.1451434.0.html
+  — the Expert RAW burst reference: "a dedicated burst
+  mode allows up to 30 DNG RAW files to be captured
+  before they need to be processed"; search-index
+  excerpt read this run).
+  Google Photos help, "Choose the backup quality of your
+  photos & videos"
+  (https://support.google.com/photos/answer/6220791?hl=en-GB&co=GENIE.Platform=Desktop
+  — the cloud-trap reference the article names, not a
+  competing guide: Storage saver uploads "may be
+  compressed into a different image format, like a .jpg";
+  search-index excerpt read this run);
+  DriveForge, "exFAT vs FAT32 vs NTFS: Which Format for Your
+  USB or SD Card?"
+  (https://driveforge.bytehavenstudios.com/guides/exfat-vs-fat32-vs-ntfs/
+  — the format reference the article names, not a competing
+  guide: exFAT has no 4 GB per-file limit and is read and
+  written by current Android phones, Windows, and Mac; FAT32
+  cannot hold a single file of 4 GB or more; NTFS is a
+  Windows format most Android phones cannot open on their
+  own).
+  Adjacent ground in our own series: the motion-photos
+  article (WL-193) — the opposite shape, one file with a
+  video hidden inside it against the burst's many files
+  behind one thumbnail — the HEIC article (WL-191), the
+  RAW article (WL-190) — the .dng rule the Expert RAW
+  burst follows — and the screenshots article (WL-192),
+  all carrying the same folder-route rule, plus the
+  Samsung Galaxy article, the general backup article
+  (WL-1) and the VaultDrive comparison (WL-37).
+  Anti-duplicate check (this run, before writing): grep of
+  searches.md for "burst" finds zero matches before this
+  row is added, and no "### " row title is a burst topic;
+  a docs/ listing finds no burst-photos-to-usb.html and
+  no near slug (burst, burst-photos, burst-mode). No
+  existing burst article or row: the gap is a new article,
+  not a rewrite. WL-189 was killed before merge for
+  duplicating WL-168's live switching-phones article —
+  this query is not that moment.
+  The repo facts that carry the article, read from the code
+  this run: with no From folder picked, the run calls
+  PhotoQuery.queryMediaStoreOldestFirst (BackupService.kt,
+  enumeratePhotos — fromUri null goes to MediaStore, a
+  picked From goes to the SAF tree walk), and that query
+  reads the MediaStore Images table plus the Video table
+  with selection null — no folder filter, no MIME filter —
+  oldest-first on DATE_TAKEN (fallback DATE_MODIFIED); a
+  JPEG burst frame is a .jpg file, and MediaStore indexes
+  .jpg on every phone, so the default run includes the
+  JPEG bursts in DCIM/Camera by construction — but
+  whether a phone's MediaStore indexes .dng is
+  device-dependent (the WL-190 RAW finding), so the
+  default route is the uncertain one for Expert RAW
+  bursts and the folder route is the certain one in every
+  case: the SAF-tree walk recurses into subfolders, so a
+  DCIM From pick covers DCIM/Camera, and .jpg/.jpeg and
+  .dng/.raw are in IMAGE_EXTENSIONS (PhotoQuery.kt, lines
+  130-133) — the folder route copies burst frames whatever
+  the format; the copy streams each file byte-for-byte
+  with no transcoding step (copyWithResume, BackupEngine.kt)
+  and renames the .part file to the final file only after
+  the size verification passes; files already copied are
+  never copied twice — shouldSkip skips a destination file
+  whose size already matches (BackupEngine.kt); oldest-first
+  on MediaStore DATE_TAKEN (fallback DATE_MODIFIED); a file
+  >=4 GiB on FAT32 is skipped with its reason and the job
+  continues (BackupService.kt) — a single burst frame never
+  reaches that; the free version backs up manually up to 5 GB
+  per run (FREE_BACKUP_BYTES_LIMIT, 5 GiB, ProPrefs.kt),
+  repeatable, files already copied never copied twice; Pro
+  is a one-time $9.99 purchase (product id pro_unlock,
+  BillingManager.kt) for auto-backup on connect and
+  unlimited size; the copy runs as a foreground service
+  (dataSync type, BackupService.kt) — the mechanism Android
+  gives a copy that must keep running with the screen off —
+  but the repo holds no wake lock and no battery-saver
+  handling (no WakeLock/Doze reference in the source,
+  verified this run) and no burst run has ever been
+  tested, so screen-off continuation under battery saver is
+  unverified and the article says so instead of promising
+  it; on Android 15 and later a dataSync foreground service
+  gets 6 hours in 24 hours, and opening the app resets the
+  timer (WL-34); the manifest holds no INTERNET permission;
+  SnapDisk copies, it never deletes (no delete() call in the
+  source touches photos — only .part files). SnapDisk needs
+  Android 7.0 or later (minSdk 24 in the repo) and is not on
+  Google Play yet, so install the v0.1.2 APK from GitHub. The
+  screenshot in the article is from SnapDisk on a phone —
+  the same settings screen the reader will see. The From
+  folder is a picker, not a fixed path — tap it, browse to
+  the phone's storage, and choose the folder that holds the
+  bursts, which the picker reaches because it is the
+  system folder picker, verified in the repo as
+  OpenDocumentTree. The repo makes no location claim either
+  way, so the article does not score SnapDisk on location.
+  Own canonical URL returns 404 pre-merge (curl, this run —
+  the known-missing control URL returns the same 404, while
+  existing pages return 200; expected, live only after
+  merge). Title is the 49-char form "Back up burst photos
+  to USB on Android — SnapDisk" — within the 48–53-char
+  brief. This is the 161st article in the brand series —
+  the motion-photos article (WL-193) is the adjacent
+  ground for this one, the opposite shape — many files
+  behind one thumbnail against one file with a video
+  inside it — and the RAW (WL-190), HEIC (WL-191) and
+  screenshots (WL-192) articles carry the same
+  folder-route rule.
+  Scoring-fix sweep (this run): the WL-190 worklog flag
+  about llms-full.txt saying "4.5 from 61 reviews" stays
+  settled wrong — re-checked this run on main: 0
+  occurrences of "61 reviews" in llms-full.txt, llms.txt,
+  or the blog index. The WL-193 flag about the VaultDrive
+  install count is settled by WL-194, not re-opened here:
+  AppBrain still reads 870 installs (WL-194, Nov 21,
+  2026) and the vendor page still says "2,000+ installs
+  on the App Store and Google Play" (full page read this
+  run) — two different counts, AppBrain Android-only
+  against the vendor's combined figure, and this article
+  carries no install count. The "870 installs" string
+  occurs 5 times in searches.md — the Volume-section
+  lines are AppBrain-sourced and dated, and the WL-193
+  row's flag about them is the one WL-194's re-verification
+  answers. No figure needed correcting anywhere in this
+  run's files. The llms-full.txt count this row uses is
+  the URL-line count, verified this run (97 before, 98
+  after).
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
