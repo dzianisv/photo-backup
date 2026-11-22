@@ -19601,6 +19601,89 @@ demand is read off competitor install velocity instead (see
   this run and is not used in this article).
 
 
+### 173. "Back up photos from an Android phone to a USB drive when the phone doesn't support OTG" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle, Medium on the check step.
+  No guide in search covers this job whole: check whether the phone
+  really lacks OTG, then the computer route, the Wi-Fi-drive route,
+  and the plain statement that the one-tap automated backup is closed
+  without host mode. The generic OTG guides assume the drive plugs
+  in; the PC-first guides give the computer route only; our own
+  articles describe the one-tap copy and assume the drive plugs in.
+  The gap stands ONLY on that narrow angle: the check plus the three
+  routes plus the honest closed door, in one guide (SnapDisk).
+- Current top results (scored Nov 22, 2026, live web search):
+  Phrasing 1, "back up photos from Android phone to USB flash drive
+  without OTG" (supervisor, verified this run, not re-run): our own
+  Pixel / external-drive / Samsung articles (generic OTG guides),
+  eztoolset (manual OTG copy; notes some older phones do not support
+  USB host mode). Phrasing 2, "transfer photos Android phone to USB
+  drive phone does not support OTG" (supervisor, verified this run,
+  not re-run): our own external-drive + auto-backup articles;
+  rottenwifi (PC-first guide: computer workflow most dependable,
+  direct OTG only when compatible); mobiletrans (OTG or PC-first —
+  "use a computer when OTG is unavailable"); sekin.in (Windows-PC
+  method for phones that don't support OTG). Phrasing 3 (lead, this
+  run), "Android phone does not support OTG transfer photos to USB
+  drive": rottenwifi (same PC-first guide — most dependable method is
+  phone to computer, then computer to drive; direct OTG only when
+  phone, adapter, drive power, and storage format are compatible),
+  our own external-drive article, mobiletrans (same OTG-or-PC-first
+  guide — "The phone may lack OTG support, or the drive may require
+  more power"), our own auto-backup article (quotes sekin.in's
+  Windows-PC method for phones that don't support OTG). No dedicated
+  no-OTG guide in any of the three phrasings; no guide does an
+  automated whole-library phone-to-USB one-tap backup for a no-OTG
+  phone — because without OTG the drive cannot plug in directly at
+  all. The gap stands ONLY on the narrow angle above.
+- Honest centre (verified from the code and live pages this run, not
+  assumed): SnapDisk v0.1.2 copies to a CONNECTED drive — it needs
+  the phone to see the drive. The offer fires on the system reporting
+  a drive attached (StorageReceiver listens for media-mounted /
+  USB-device-attached, StorageReceiver.kt:35, 51) and the copy writes
+  to the mounted volume, so on a phone without OTG/host support the
+  one-tap route is CLOSED — stated in the article everywhere it
+  matters. Workable routes, verified live this run: (1) PC-first —
+  phone to computer via MTP File transfer, then computer to drive
+  (rottenwifi, mobiletrans — both read in full this run; sekin.in
+  per the supervisor's verified phrasing 2); (2) check whether the
+  phone REALLY lacks OTG — an OTG-checker app reads what Android
+  reports (USB manager present, android.hardware.usb.host.xml host
+  feature flag, connected OTG devices listed) and only reports, it
+  cannot enable OTG (Play listings read this run); "if OTG support
+  cannot be confirmed, the app avoids making a false unsupported
+  claim" — and many "doesn't support" cases are a bad adapter, a
+  charging-only cable, or a drive needing more power (mobiletrans;
+  try a USB-C drive direct, try a USB mouse through the same
+  adapter); (3) Wi-Fi flash drive — SanDisk Connect Wireless Stick
+  (SDWS4, 2015 product, own Wi-Fi network, app auto-backs-up the
+  camera roll; plugged into a computer it works as a normal USB
+  drive) — but SanDisk's own support page says the Connect Wireless
+  Flash Drive app was retired effective March 18, 2021, and the
+  Stick is sold as old stock, so the article says to check the
+  companion app is still available before buying; SnapDisk cannot
+  copy to a Wi-Fi drive (it never mounts); (4) if the phone truly
+  has no host mode, the USB copy needs a computer or a different
+  phone — stated plainly, with the Quick Share relay to an
+  OTG-capable phone as the no-computer fallback. Default-run scope
+  verified in the code this run (PhotoQuery.queryMediaStoreOldestFirst,
+  PhotoQuery.kt:23; BackupService.kt:634-641): with no From folder
+  picked SnapDisk reads the whole MediaStore library — images +
+  videos, no folder filter, oldest-first. Free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT = 5L*1024^3, ProPrefs.kt:43); Pro
+  $9.99 one-time (PRO_PRICE_LABEL, ProPrefs.kt:40). Copy is a byte
+  copy with a size check only (BackupEngine.copyWithResume,
+  BackupEngine.kt:130; verify, BackupEngine.kt:107). Screen-off
+  continuation under battery saver UNVERIFIED (no WakeLock/Doze code,
+  0 matches in app/src/main; no INTERNET permission, 0 occurrences
+  in the manifest). VaultDrive re-verified live this run from the full
+  vendor page (coticsy.com/vaultdrive.html): Pro $19.99 once, free up
+  to 200 files or 2 GB per backup, vendor page says "2,000+ installs
+  on the App Store and Google Play" (both stores combined — never
+  swapped with the AppBrain-only figure, which was not re-verified
+  this run and is not used in this article).
+
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
