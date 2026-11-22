@@ -19042,6 +19042,15 @@ demand is read off competitor install velocity instead (see
   second-copy options are a computer, an external drive via its
   own large-export guide, iCloud, or Google Photos — no one-tap
   phone-to-USB step; search-index excerpt read this run);
+  backupmemories.com, "How to backup Snapchat Memories, and where
+  to keep them" (https://backupmemories.com/help/how-to-backup-snapchat-memories
+  — request the My Data export, download the ZIPs, fix
+  dates/places/captions, then keep the copy in Google Photos, the
+  phone gallery, Google Drive or Dropbox, or a computer or hard
+  drive — no one-tap phone-to-USB step; "from January 2027,
+  memories above your free 5GB in Snapchat get archived unless
+  you pay"; search-index excerpt read this run by the supervisor's
+  fourth phrasing);
   Snapchat help, "How do I download my data from Snapchat?"
   (https://help.snapchat.com/hc/en-gb/articles/7012305371156-How-do-I-download-my-data-from-Snapchat
   — the official My Data route: accounts.snapchat.com, My Data,
