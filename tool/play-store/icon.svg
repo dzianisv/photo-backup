@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SnapDisk mark — standalone SVG (WL-201, 2026-11-21).
+     Source: app/src/main/res/drawable/ic_launcher_foreground.xml
+     (Android vector, viewport 108x108) — path data copied verbatim,
+     white #FFFFFF mark on navy #0F172A field, the same field as
+     tool/play-store/icon-512.png. No text in the mark. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 108 108">
+  <rect width="108" height="108" fill="#0F172A"/>
+  <path fill="#FFFFFF" d="M73,42 L53,42 L53,26 L39,26 L39,42 L19,42 L46,69 L73,42 Z M25,76 L25,84 L83,84 L83,76 L25,76 Z"/>
+</svg>
