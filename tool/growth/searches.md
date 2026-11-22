@@ -16637,10 +16637,11 @@ demand is read off competitor install velocity instead (see
   this run: the SAF-tree path lists files by extension and
   .dng and .raw are both in IMAGE_EXTENSIONS
   (PhotoQuery.kt), while the default DCIM route queries the
-  MediaStore Images table with no MIME filter — so whether a
-  given phone's MediaStore indexes .dng files is
-  device-dependent, and the certain route for RAW is picking
-  the source folder via the SAF From-picker (OpenDocumentTree);
+  MediaStore Images table with no MIME filter — and .dng is indexed on every phone (Android's platform map
+  carries .dng as image/x-adobe-dng, WL-217), so the default
+  route includes them; the folder route via the SAF From-picker
+  (OpenDocumentTree) is the route for RAW files that live
+  outside DCIM;
   the copy streams each file byte-for-byte with no
   transcoding step (copyWithResume, BackupEngine.kt) and
   renames the .part file to the final file only after the
@@ -17508,12 +17509,11 @@ demand is read off competitor install velocity instead (see
   oldest-first on DATE_TAKEN (fallback DATE_MODIFIED); a
   JPEG burst frame is a .jpg file, and MediaStore indexes
   .jpg on every phone, so the default run includes the
-  JPEG bursts in DCIM/Camera by construction — but
-  whether a phone's MediaStore indexes .dng is
-  device-dependent (the WL-190 RAW finding), so the
-  default route is the uncertain one for Expert RAW
-  bursts and the folder route is the certain one in every
-  case: the SAF-tree walk recurses into subfolders, so a
+  JPEG bursts in DCIM/Camera by construction — but .dng is indexed on every phone (Android's platform
+  map carries .dng as image/x-adobe-dng — the WL-190
+  'device-dependent' finding is corrected in WL-217), so the
+  default route covers Expert RAW bursts too and the folder
+  route is the certain one in every case: the SAF-tree walk recurses into subfolders, so a
   DCIM From pick covers DCIM/Camera, and .jpg/.jpeg and
   .dng/.raw are in IMAGE_EXTENSIONS (PhotoQuery.kt, lines
   130-133) — the folder route copies burst frames whatever
