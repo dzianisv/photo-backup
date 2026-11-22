@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up WeChat photos and videos to USB from Android</title>
+<meta name="description" content="Back up WeChat photos and videos to a USB drive on Android with no computer: save them to the gallery first, then copy oldest-first — files only, not chats.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/wechat-photos-videos-to-usb.html">
+<meta property="og:title" content="Back up WeChat photos and videos to USB from Android (no computer)">
+<meta property="og:description" content="Back up WeChat photos and videos to a USB drive on Android with no computer: save them to the gallery first, then copy oldest-first — files only, not chats.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/wechat-photos-videos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/wechat-photos-videos-to-usb.html#article",
+      "headline": "Back up WeChat photos and videos to USB from Android (no computer)",
+      "description": "Back up WeChat photos and videos to a USB drive on Android with no computer: save them to the gallery first, then copy oldest-first — files only, not chats.",
+      "datePublished": "2026-11-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/wechat-photos-videos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/wechat-photos-videos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up WeChat photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — with one step first. WeChat does not save received photos to your gallery on its own, so save the ones you want in WeChat (long-press a photo and save it to your phone, or use Search Chat History, then Media, to save up to 9 at once). Then plug a USB drive into your Android phone and tap Backup in SnapDisk: the saved photos and videos copy oldest-first to the drive, with no computer and no upload. The free version covers 5 GB per run; run it again past the cap and it picks up where it stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does WeChat save photos on Android?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sources disagree, so check the gallery, not one guide's path. Photos and videos you save from a chat land in your gallery under a WeChat album (the phone's Pictures area, in the Pictures/[app] pattern). WeChat's own storage is a different place: /sdcard/tencent/MicroMsg/[account]/, with image and video subfolders and a diskcache of concatenated cache files that are not plain photos. The app's private folder under Android/data is closed to other apps on Android 11 and later, so no backup app or file manager can read it. The reliable route is the saved copies in the gallery, which SnapDisk's default run already covers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this back up my WeChat chats too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SnapDisk copies media files only — the photos and videos you saved to your gallery. It does not back up chat history, voice messages (.opus/.amr audio is not a copied file type), stickers kept inside WeChat, or files. WeChat's own backup route is to a computer, through WeChat for Windows or Mac — it has no chat backup to a USB drive from the phone, and unlike WhatsApp it has no Google Drive chat backup either."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/wechat-photos-videos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up WeChat photos and videos to USB from Android (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/wechat-photos-videos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up WeChat photos and videos to USB from Android</h1>
+  <p class="dek">Your WeChat photos are not in your gallery until you save them there — WeChat keeps them inside the app. Save them first, then copy them straight to a USB drive, no computer, no upload.</p>
+  <p class="meta">November 22, 2026 · 5 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> WeChat does not save received photos and videos to your gallery on its own — unlike WhatsApp, which does. So the job has two steps, not one: first save the photos you want inside WeChat (long-press a photo and save it to your phone, or save up to 9 at once from a chat's Search Chat History → Media screen), then plug a USB drive into your Android phone and copy the saved copies to it with SnapDisk — oldest-first, in the background, with real progress, Pause and Stop, and resume where it stopped. The honest limits, up front: SnapDisk copies media <strong>files only</strong> — the photos and videos you saved to your gallery. It does <strong>not</strong> back up chat history, voice messages, stickers kept inside WeChat, or files, and it has no restore function — the copy back is the Files app's job. SnapDisk <strong>copies, it never deletes</strong> — deleting from the phone afterwards is your step, only after verifying a few photos on the drive. Free version: 5 GB per run; run it again past the cap and it picks up where it stopped, because files already copied are never copied twice. As of November 22, 2026, no top search result offers WeChat photos to USB from the phone: the top results are generic OTG file-manager guides that never name WeChat, or WeChat backup guides that need a computer.</p>
+
+  <h2>Where WeChat keeps your photos — and why the sources disagree</h2>
+  <p>WeChat photos live in two different places, and the guides that name only one of them are the reason this is confusing. Here are both, plainly:</p>
+  <ul>
+    <li><strong>The saved copies — in your gallery.</strong> When you save a photo or video from a chat, WeChat writes a copy your gallery app can see, under a WeChat album. The phone's own help pages describe the pattern as Pictures/[app] for photos saved from a messaging app, and the saved copies show up among your most recent gallery items. This is the copy a backup can use — and the one this article is about.</li>
+    <li><strong>WeChat's own storage — /sdcard/tencent/MicroMsg/[account]/.</strong> This is where WeChat keeps everything it received, in subfolders for images, videos, and voice files, plus a diskcache folder holding cache.data files — several JPEGs packed into single files with no extension. Those are not plain photos: no gallery app shows them, and no file copy of them gives you your photos back. Do not go digging here for a backup.</li>
+  </ul>
+  <p>There is a third place people point at that does not work at all: the app's private folder, Android/data/com.tencent.mm. On Android 11 and later, scoped storage closes other apps out of Android/data — the system file picker cannot even grant a folder there, and a file manager shows it empty or refuses it. So no backup app and no file manager can read WeChat's private folder from the phone, and any guide that tells you to browse it is describing an Android that no longer exists. The reliable route is the saved copies in the gallery: save first, then back up the saved copies. If a photo never got saved — the thumbnail in the chat, never downloaded, or a Moments or Channels post with no save option — it is not on your phone as a file yet, and there is nothing to copy. Save it first, or it is not backed up.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search for this job three ways and the results split into four shapes, none of them a WeChat-to-USB guide for the phone. The first shape is the generic OTG guide: a YouTube walkthrough ("How to Connect USB Drive to Android Phone to Move Photos &amp; Videos") and written guides from mefmobile and AnExplorer — plug the drive in with an OTG adapter, open the file manager, select photos in DCIM, copy them to the drive. They work, and they are the honest manual route, but they are generic: they copy camera photos, and WeChat is never named in any of them. The second shape is the one-tap generic app: "Photos to USB: OTG Backup" copies the whole photo library in one tap — again generic, WeChat never named, and it is a whole-library copy, not a WeChat copy. The third shape is the WeChat backup guide that needs a computer: Coolmuster's WeChat backup guide covers WeChat for Windows/Mac, iTunes, Google Drive, and chat-log migration to a new phone — PC, cloud, or a new phone, and no phone-to-USB route anywhere in it. The fourth shape is the forum thread: Zhihu answers about backing up WeChat describe the same PC backup and migration routes. And our own SnapDisk articles — the generic transfer guide and the WhatsApp, Telegram, Instagram, Facebook, Snapchat, and TikTok articles in the same series — cover those apps' folders, not WeChat's. That is the gap: the saved WeChat photos, copied oldest-first in one background run, phone straight to USB, with progress, resume, and verification, and no computer in between.</p>
+
+  <h2>What you need</h2>
+  <p>An Android phone (Android 7.0 or later for SnapDisk); a USB drive your phone can read — a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter (most modern Android phones support OTG; if the phone doesn't see the drive, try a different adapter); and enough space on the drive for the WeChat photos you want to keep. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+
+  <h2>Step 0: save the WeChat photos to your gallery first</h2>
+  <p>This is the step the other guides skip, and without it there is nothing to back up. WeChat keeps received photos inside the app until you save them. Two ways to save, both inside WeChat:</p>
+  <ol>
+    <li><strong>One photo at a time.</strong> Open the chat, tap the photo so it opens full screen, then long-press it and choose the save option (worded "Save to phone" or similar — the wording changes between WeChat versions). The copy lands in your gallery under the WeChat album.</li>
+    <li><strong>Up to 9 at once.</strong> Open the chat, tap the icon in the top-right corner for the chat details, tap Search Chat History, then tap Media — the photos and videos from that chat appear together. Choose the select option, tick up to 9 photos or videos (WeChat sets a maximum of 9 per action), and choose the option to save them to your device's album. Repeat per chat.</li>
+  </ol>
+  <p>Two things to know before you start saving. First, the first time you save, your phone asks whether WeChat may add items to your photos — if you said no earlier, the save fails without much warning, so check WeChat's Photos and videos permission in your phone's app settings first. Second, some things cannot be saved at all: other people's Moments and Channels posts give WeChat no save option, so those stay inside WeChat — a screenshot is the only copy you can take of those. Once the photos are in your gallery, they are ordinary files, and the backup below treats them like any other photo on your phone.</p>
+
+  <h2>Method 1: SnapDisk (one tap, background copy)</h2>
+  <p>SnapDisk is a free Android app that does exactly this job and nothing else. Install it from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Save the WeChat photos first</strong> (Step 0 above). This is the whole trick: once the photos are in your gallery, SnapDisk's default run already includes them. The default run reads the phone's whole media library — every photo and video the gallery sees, oldest-first — not DCIM only, so a saved WeChat photo copies with no folder picking at all. This was verified in the code, not assumed: with no From folder picked, the app queries the MediaStore images and videos tables with no folder filter.</li>
+    <li><strong>Plug in the USB drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"</li>
+    <li><strong>Tap Backup.</strong> Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. With no From folder picked, the default run copies the whole library, saved WeChat photos included.</figcaption>
+  </figure>
+
+  <p><strong>Copying only the WeChat photos?</strong> If you would rather copy just the WeChat album than the whole library, use the From folder picker: tap it, navigate to the Pictures folder and pick the WeChat folder inside it (or the folder your phone's gallery shows for the WeChat album), and the run copies only that folder, recursively. If your phone has no WeChat folder under Pictures — some phones file the saved copies differently — fall back to the default run: it covers every saved photo whatever folder the phone chose, so check the gallery album, not one guide's path. What the From picker cannot do is reach WeChat's own storage: Android 11 and later will not grant a folder inside Android/data, and the tencent/MicroMsg cache files are not plain photos anyway — point the picker at the gallery copies, never at the app's private folders. If you unplug the drive mid-copy, the backup pauses with the full error shown and resumes where it stopped when the drive is back. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+
+  <h2>Method 2: by hand in the Files app (no app needed)</h2>
+  <p>If you'd rather not install anything, Android's built-in Files app can copy the saved WeChat photos to the USB drive — after Step 0, exactly as for any other photo: 1. Plug in the USB drive. A notification or a "USB drive" entry should appear in the Files app under Storage devices. 2. Open Files, browse to Internal storage → Pictures, and find the WeChat folder (or the folder your phone used for the saved copies — check the gallery album name if Pictures has no WeChat folder). 3. Select the photos (or long-press the WeChat folder to select the whole thing), tap ⋮ → Copy to, then choose the USB drive as the destination. 4. Wait for the copy to finish — and don't unplug the drive until the Files app says it's done. This works fine for a one-off copy. Its limits are the reason SnapDisk exists: no progress detail beyond a spinner, no resume if you unplug mid-copy, no verification that every file actually arrived, and you have to repeat the whole manual selection next time WeChat photos pile up. For a WeChat album that grows every day, the app's oldest-first background copy is the calmer option.</p>
+
+  <h2>What this does not back up</h2>
+  <p>This is the part people get wrong, so here it is plainly. Copying the saved WeChat photos backs up the <strong>files</strong> — the photos and videos you saved to your gallery. It does not back up:</p>
+  <ul>
+    <li><strong>Chat history.</strong> Your messages live in WeChat's own database, not in a photo folder, and SnapDisk only copies image and video files. WeChat's own backup route is to a computer, through WeChat for Windows or Mac — unlike WhatsApp, it has no Google Drive chat backup, and no chat backup to a USB drive from the phone.</li>
+    <li><strong>Voice messages.</strong> Voice messages are audio files (.opus/.amr), which SnapDisk does not copy.</li>
+    <li><strong>Stickers kept inside WeChat.</strong> Stickers live in WeChat's own storage; they only copy if they sit inside the folder you picked, and only if they are image files.</li>
+    <li><strong>Documents and files.</strong> PDFs and other files sent in WeChat are not image or video files, so they are skipped.</li>
+    <li><strong>Photos you never saved.</strong> A photo that only ever lived inside a chat — never saved to the gallery — is not a file on your phone, so no backup of any kind can copy it. Save it first (Step 0), or it is not backed up.</li>
+    <li><strong>Moments and Channels posts.</strong> Other people's posts give no save option in WeChat, so they stay inside the app. A screenshot is the only copy — and a screenshot is a photo like any other once it is in your gallery, so the default run picks it up.</li>
+  </ul>
+  <p>If you want the whole WeChat — chats and media together — the computer backup is the route, and it is the only one WeChat itself supports. This article's route is for the photos and videos as files on a drive you hold.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Backing up before saving.</strong> The most common failure here is running a backup and finding no WeChat photos on the drive — because they were never saved to the gallery. The backup can only copy files that exist. Save first, then back up, then check the drive.</li>
+    <li><strong>Digging in tencent/MicroMsg.</strong> The cache.data files there are not your photos — they are several JPEGs packed into single files with no extension. Copying them gives you nothing a gallery can open, and SnapDisk skips them for exactly that reason.</li>
+    <li><strong>Chasing the Android/data folder.</strong> On Android 11 and later it is closed to other apps by design. A guide that tells you to browse Android/data/com.tencent.mm is describing an old Android, and the time spent fighting the permission prompt is time the save-and-backup route would have taken.</li>
+    <li><strong>PC-only tools when you have no computer.</strong> The top search results for WeChat backup are Windows/Mac programs (Coolmuster and similar) that need a computer in between. If the phone and the drive are all you have, a phone-to-USB copy is the route — that is the gap this article fills, as of November 22, 2026.</li>
+    <li><strong>Cloud backup dressed as USB backup.</strong> If the app needs an account and an upload before your photos are safe, that's a cloud subscription with a USB step. Your photos sit on someone else's server, and the backup stops working the day you stop paying.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Assuming the chats came along.</strong> The photo files are not the conversation. If the chats matter, run WeChat's own computer backup too — the folder copy does not replace it.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> the photos are files in a folder only once you save them — save them to the gallery first, then back up the folder. The chats are a database — back them up in WeChat, to a computer. Do both, and check the copy on the drive before you delete anything from the phone.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your WeChat photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. The direct rival, VaultDrive, charges $19.99 once for Pro (free up to 200 files or 2 GB per backup) and its own page says 2,000+ installs across the App Store and Google Play — SnapDisk's Pro is $9.99 once, with a 5 GB free run instead of 200 files. See also: <a href="whatsapp-photos-to-usb.html">Back up WhatsApp photos to USB from Android</a>, <a href="telegram-photos-to-usb.html">Back up Telegram photos to USB from Android</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos to a USB drive automatically (no manual copy)</a>, and <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive: USB photo backup on Android, compared</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
