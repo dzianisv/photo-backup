@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up photos to USB when Android has no OTG</title>
+<meta name="description" content="No OTG means the phone can't see a USB drive at all — the one-tap backup is closed. Check first, then copy via a computer, a Wi-Fi drive, or another phone.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/no-otg-photos-to-usb.html">
+<meta property="og:title" content="Back up photos to USB when Android has no OTG — SnapDisk">
+<meta property="og:description" content="No OTG means the phone can't see a USB drive at all — the one-tap backup is closed. Check first, then copy via a computer, a Wi-Fi drive, or another phone.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/no-otg-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/no-otg-photos-to-usb.html#article",
+      "headline": "Back up photos to USB when Android has no OTG — SnapDisk",
+      "description": "No OTG means the phone can't see a USB drive at all — the one-tap backup is closed. Check first, then copy via a computer, a Wi-Fi drive, or another phone.",
+      "datePublished": "2026-11-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/no-otg-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/no-otg-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I back up photos from an Android phone to a USB drive if the phone doesn't support OTG?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — but not by plugging the drive into the phone. Without OTG (USB host mode) the phone cannot see a USB drive at all, so no app can copy to it directly. The photos still get to the drive: copy them from the phone to a computer first, then from the computer to the drive; or use a Wi-Fi flash drive that the phone reaches over Wi-Fi; or move the photos to a different phone that does support OTG and copy from there."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I check if my phone supports OTG?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Install a free OTG checker app — it reads what Android itself reports: whether the USB manager is present, whether the phone declares the USB host feature, and whether any connected OTG device is detected. A checker only reports what is there; it cannot enable OTG on a phone that lacks it. Before trusting a 'no', try a USB-C drive plugged in directly with no adapter, try a different adapter, and try a USB mouse through the same adapter — if the cursor appears, host mode works and the problem is the drive or the adapter, not the phone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can SnapDisk back up photos to a USB drive on a phone without OTG?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SnapDisk v0.1.2 copies to a connected drive — it offers the backup when the phone reports a drive attached, and writes to the mounted volume. On a phone without OTG the drive never appears, so the one-tap route is closed and no setting in the app changes that. If the checker says the phone does support OTG, the route opens: plug the drive in, tap Backup, and the whole library copies oldest-first in the background with progress, Pause and Stop."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/no-otg-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up photos to USB when Android has no OTG — SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/no-otg-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up photos to USB when Android has no OTG</h1>
+  <p class="dek">Without OTG the phone cannot see a USB drive at all — nothing to copy to, and no app that fixes it. The photos still get to the drive, but the route goes through a computer, a Wi-Fi drive, or a phone that does support OTG.</p>
+  <p class="meta">November 22, 2026 · 6 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> OTG is the phone acting as a USB host — the thing that lets it see a drive plugged into its own port. If your phone does not support it, plugging a drive in does nothing: the phone never sees the drive, no file manager shows it, and no backup app can copy to it. That includes SnapDisk. SnapDisk v0.1.2 copies to a <strong>connected</strong> drive — it offers the backup when the phone reports a drive attached, and writes to the mounted volume — so on a phone without OTG the one-tap route is <strong>closed</strong>, and no setting changes that; this is verified in the code, not assumed. Before you accept that verdict, check it, because many "doesn't support OTG" cases are not the phone at all: a charging-only cable, a bad adapter, or a drive that needs more power than the phone can give. A free OTG checker app reads what Android itself reports — the USB manager, the host feature flag, and any connected OTG device — and it only reports, it cannot enable OTG. If the phone truly has no host mode, the workable routes are: (a) through a computer — phone to computer by cable, then computer to drive, the most dependable method, and the one every guide recommends when OTG is uncertain; (b) a Wi-Fi flash drive, which the phone reaches over Wi-Fi instead of the USB port — but the best-known one, the SanDisk Connect Wireless Stick, is a 2015 product whose companion apps SanDisk has been retiring, so check the app is still available before you buy one; (c) a different phone that does support OTG — move the photos to it and copy from there with SnapDisk. Screen-off continuation under battery saver is unverified — stated plainly, in the WL-182 form. SnapDisk's default run copies your whole media library via MediaStore, not DCIM only, oldest-first, in the background, with progress, Pause and Stop, and resume where it stopped. Free version: 5 GB per run; Pro is $9.99 once. As of November 22, 2026, no top search result gives this whole job in one guide — check whether the phone really lacks OTG, then the computer route, the Wi-Fi route, and the honest statement that the one-tap backup is closed without it. The results are generic OTG guides, a PC-first guide, or our own articles that assume the drive plugs in.</p>
+
+  <h2>The honest centre: without OTG, there is no direct copy</h2>
+  <p>OTG — On-The-Go — is the phone switching its USB port into host mode, the way a computer's USB port works. In host mode the phone can see what is plugged into it: a flash drive, a hard drive, a keyboard, a mouse. Without host mode the port only does two things: charge, and act as a device when plugged into a computer. A drive plugged into a phone without OTG is invisible — not "unsupported format", not "permission denied", simply never there. The file manager shows nothing, because there is nothing to show. No app can work around that, because there is nothing for an app to open: the drive is not a file, not a folder, not a device the system reports. SnapDisk is in exactly that position. Its code listens for the system telling it a drive appeared — a media-mounted broadcast or a USB-device-attached broadcast — and only then offers the backup notification; the copy writes to the mounted volume. If the broadcast never comes, the offer never comes, and the backup never starts. That was verified by reading the code at the current base, not by trying it: the receiver waits on the system, and the system only speaks when the phone sees the drive.</p>
+  <p>So the first sentence of this article is also its whole point: if your phone truly does not support OTG, the one-tap phone-to-USB backup does not exist for you, in SnapDisk or in any other app. The rival that looks closest, VaultDrive, says so on its own page — its Android section is headed "Back up Android photos to a USB drive with OTG", and its whole Android route assumes the drive plugs in. VaultDrive charges $19.99 once for Pro (free up to 200 files or 2 GB per backup), and its own page says 2,000+ installs across the App Store and Google Play — but none of that helps a phone without host mode, because its copy needs the same plugged-in drive SnapDisk needs. What this article does instead is the honest work: first, prove whether the phone really lacks OTG, because the verdict is often wrong; then the three routes that do not need the phone to host anything.</p>
+  <p>One scope fact before the methods, because it decides which of them SnapDisk can help with at all. SnapDisk copies image and video files only. On the default run it reads the phone's MediaStore images and videos tables, with no folder filter — the whole library, oldest-first, whatever folder the photos sit in. On the From-picker route it walks the folder you picked and keeps only recognised photo and video extensions. A Wi-Fi drive never appears as a mounted volume, so SnapDisk cannot write to one at all — the Wi-Fi route in Method 2 uses the drive maker's own app, not SnapDisk. And the computer route in Method 1 uses no phone app at all — the copy happens on the computer. SnapDisk's part in this article is Method 3 and Method 4: the phone that does support OTG, and the check that tells you which phone you have.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search for this job three ways and the results split into four shapes, none of them the narrow job — a single guide that first checks whether the phone really lacks OTG, then gives the computer route, the Wi-Fi route, and the plain statement that the one-tap backup is closed without it. The first shape is the generic OTG guide: our own external-drive and auto-backup articles, and the eztoolset guide — plug the drive in, open the file manager, copy by hand. Eztoolset notes that some older phones do not support USB host mode, and then moves on; the guide itself assumes the drive plugs in. The second shape is the PC-first guide: rottenwifi's "How to Move Pictures From Android to External Hard Drive" says the most dependable method is to copy the pictures from the unlocked phone to a computer, then copy that folder to the external drive, and that a direct phone-to-drive transfer is possible through USB OTG only when the phone, adapter, drive power, and storage format are compatible. Mobiletrans says the same in two sentences: a phone can be backed up to an external USB drive by connecting through a USB-OTG adapter, or by copying phone files to a computer first and then moving them to the drive — and, in its own words, "use a computer when OTG is unavailable". Sekin.in's guide has a Windows-PC method for phones that don't support OTG, alongside the manual OTG copy. The third shape is our own articles, which describe the one-tap copy and assume the drive plugs in — the exact assumption this query breaks. The fourth shape is what is missing: nobody checks the phone first, nobody names the Wi-Fi drive, and nobody says plainly that the automated whole-library backup — oldest-first, one tap, background with progress, Pause and Stop, resume and per-file verification — is closed on a no-OTG phone. That is the gap: not a new route, but the check plus the three routes plus the honest closed door, in one place.</p>
+
+  <h2>First, check whether the phone really lacks OTG</h2>
+  <p>Do this before anything else, because the answer changes everything downstream, and because "doesn't support OTG" is very often wrong. There are four checks, cheapest first, and you need only one of them to come back yes.</p>
+  <p><strong>1. Run an OTG checker app.</strong> These are free apps on Google Play whose only job is to read what Android itself reports about your phone: whether the USB manager is present, whether the phone declares the USB host feature (the <code>android.hardware.usb.host.xml</code> capabilities file), and whether any OTG device is currently connected. One listing puts the limit in plain words: the app "tests and reports existing capabilities; it cannot enable OTG on incompatible devices". Another adds a useful caution: if OTG support cannot be confirmed, the app avoids making a false unsupported claim — a "cannot confirm" is not the same as a "no". So run the checker with a drive plugged in, not with an empty port: the connected-device list is the strongest signal it gives. If it reports host support, the phone does support OTG, and the problem is downstream — the adapter, the cable, or the drive. Skip to Method 4.</p>
+  <p><strong>2. Try a USB-C drive plugged in directly.</strong> If your drive is USB-C, plug it straight into the phone with no adapter in between. Adapters are the most common point of failure: a cheap one, a worn one, or one wired for charging only. If the phone sees the drive now, the phone was never the problem — the adapter was. The same applies in reverse: if you have been using a USB-A drive with an adapter, borrow a different adapter before concluding anything. Rottenwifi's guide makes the same point from the other side: direct OTG works only when the phone, the adapter, the drive power, and the storage format are all compatible — four parts, and the phone is only one of them.</p>
+  <p><strong>3. Try a USB mouse through the same adapter.</strong> A mouse is the cheapest host-mode test there is. Keyboards and mice work under Android USB host mode, and a mouse needs almost no power. Plug it in through the adapter you have been using: if a cursor appears on the screen, host mode works, and the phone supports OTG — the drive is the problem, not the phone. If no cursor appears with a mouse either, and the checker also says no, the phone very likely has no host mode. Either way you have an answer that does not depend on one app's reading.</p>
+  <p><strong>4. Check the power and the cable.</strong> Two failure modes that look exactly like "no OTG". First, power: a spinning hard drive, and some large flash drives, need more power than a phone port supplies. Mobiletrans names this directly: if the drive is not detected, the phone may lack OTG support, "or the drive may require more power" — its fix is a powered USB hub, a compatible adapter, or the computer-first transfer. If a small flash drive works but a hard drive does not, the phone supports OTG and the drive is thirsty. Second, the cable: for the computer route, and for any test that involves a cable, a charging-only cable transfers nothing. Rottenwifi repeats Google's own warning that not all USB cables can transfer files — charging does not prove the cable carries data. Use the cable that came with the phone, or one you know transfers files.</p>
+  <p>If all four checks say no — the checker reports no host support, no drive appears, no mouse cursor, and a known-good small drive on a known-good adapter still shows nothing — the phone has no host mode, and the rest of this article is your route. Do not root the phone to fix it: one checker listing is blunt that an incompatible result is "not fatal" but fixing it "will probably need to root your device", and rooting for a photo backup trades the whole phone's security for a copy job a computer does in minutes. The computer route is cheaper than the risk.</p>
+
+  <h2>What you need</h2>
+  <p>For the check: the phone, a USB-C flash drive or a USB-A drive with an OTG adapter, and a free OTG checker app from Google Play. For the computer route: a Windows or Mac computer, a data-capable USB cable (the one that came with the phone is the safe bet), and the USB drive. For the Wi-Fi route: a Wi-Fi flash drive and its companion app — see Method 2 before buying one. For the different-phone route: a second Android phone that passes the checker, with enough free space to hold the photos in transit, and the drive. One format note for every route: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit, and it is the format to use if you are formatting fresh.</p>
+
+  <h2>Method 1: through a computer — the route that always works</h2>
+  <p>This is the route every guide falls back on when OTG is uncertain, and the one to pick when the phone truly has no host mode. Rottenwifi calls it the most dependable method; mobiletrans says to use a computer when OTG is unavailable; sekin.in gives it as the Windows-PC method for phones that don't support OTG. It is slower than a direct copy and it needs a computer — that is the whole price — and in exchange it works on every phone, every drive, and every Android version, because the phone is never asked to host anything. The phone acts as a device, plugged into the computer, which is a job every Android phone can do.</p>
+  <ol>
+    <li><strong>Connect the phone to the computer with a data-capable cable.</strong> Use the cable that came with the phone. The phone will start charging — charging proves nothing about data, so do not take it as a good sign.</li>
+    <li><strong>Unlock the phone and set it to File transfer.</strong> When you plug in, Android asks what the connection is for, or shows a notification you tap. Choose <strong>File transfer</strong> (MTP on some phones). Charging-only mode will not expose the phone's files — rottenwifi's guide is explicit that the phone must be unlocked and set to File transfer, and mobiletrans lists the charging-only setting as the first thing to fix when a transfer does not work. If the computer still shows nothing, unlock the phone again — a locked phone hides its files — and re-plug the cable.</li>
+    <li><strong>Copy the photos to a folder on the computer.</strong> On Windows the phone appears as a device you can browse; on a Mac you need Android File Transfer or the phone maker's tool. Copy DCIM and Pictures first — that is where the camera and most saved photos live — then Movies and Download if you want videos and the rest. Copy to a folder on the computer, not straight to the drive in the same step: the two-step copy is easier to check, and a failure halfway leaves the computer copy intact.</li>
+    <li><strong>Plug the drive into the computer and copy the folder to it.</strong> Drag the folder across, wait for the copy to finish, and do not unplug early — a spinning hard drive is slow at the end of a large copy.</li>
+    <li><strong>Verify before you delete anything.</strong> Open three or four photos from the drive on the computer and confirm they render, and check the folder sizes match. Only then delete from the phone — and the delete step is always yours, after the check, never before.</li>
+  </ol>
+  <p>The honest limits. First, the manual step: every new batch of photos needs the same two-step copy again, because nothing here is automated and nothing resumes where it stopped — there is no progress notification with Pause and Stop, and no per-file verification beyond the sizes you compare yourself. Second, the computer is a hard requirement: no computer, no route — if there is no computer in the house, skip to Method 2 or Method 3. Third, SnapDisk plays no part here: it is an Android app with no desktop version, and the copy happens on the computer, so its oldest-first background run, its resume, and its size check do not apply to this copy. What does apply is the discipline the app enforces: copy first, verify, delete after — in that order, every time.</p>
+
+  <h2>Method 2: a Wi-Fi flash drive — no cable, no OTG</h2>
+  <p>A Wi-Fi flash drive is a drive with its own Wi-Fi radio and battery: the phone connects to the drive's own Wi-Fi network, and the drive's app moves the photos over the air. The USB port is never involved, so host mode is never asked for — this is the only route in this article where the photos leave the phone without a cable and without OTG. The best-known example is the SanDisk Connect Wireless Stick: a flash drive in 16 GB to 256 GB sizes that creates its own Wi-Fi network, lets the phone browse it in the SanDisk Connect app, and — in the maker's own words from its user guide — automatically backs up the camera roll when connected, and streams to up to three devices at once. Plugged into a computer, the same stick works as an ordinary USB drive, which is how the photos get off it and onto anything else.</p>
+  <p>The catch is that this is old hardware, and the article would be lying if it recommended buying one as if it were current. The Stick is a 2015 product. SanDisk's own support pages say the Connect Wireless Flash Drive app was retired, effective March 18, 2021 — and the Stick still appears on Amazon as old stock, not as a live product line. So the honest guidance is: if you already own a Wi-Fi drive, use it — it is the neatest answer to a no-OTG phone, and its app auto-backup is the closest thing to a one-tap copy on this list. If you do not own one, check before you pay that the companion app is still available for your phone and still works on your Android version — a Wi-Fi drive whose app is gone is a plain drive you cannot reach without OTG, which is the problem you started with. And check the capacity against your library before you buy: the Stick tops out at 256 GB, and its Wi-Fi copy is far slower than a cable, so a large library means an overnight run, not a quick one.</p>
+  <p>Two more limits, stated plainly. First, SnapDisk cannot copy to a Wi-Fi drive at all: SnapDisk writes to a mounted USB volume, and a Wi-Fi drive never mounts — the copy goes through the drive maker's app, with whatever progress, resume, and verification that app offers, which is not SnapDisk's oldest-first background run with Pause and Stop. Second, the Wi-Fi is the drive's own network, not your home Wi-Fi: while the phone is connected to the drive it is not on the internet, so anything that needs the internet waits until the copy is done. Use this route for the photos, not as a general-purpose drive.</p>
+
+  <h2>Method 3: a different phone that does support OTG</h2>
+  <p>If there is no computer and no Wi-Fi drive, the remaining host is another phone. USB host mode is a property of the phone, not of the photos: a phone that supports OTG can host the drive, even if the photos started on a phone that cannot. The route is a relay, and it is honest to call it one: the photos travel from the no-OTG phone to the OTG phone, and from the OTG phone to the drive.</p>
+  <ol>
+    <li><strong>Check the second phone with the checker app.</strong> Same check as above — it must report host support, and ideally you confirm it by plugging the drive in and seeing it appear. Do not assume a phone supports OTG because it is newer or more expensive; run the check.</li>
+    <li><strong>Move the photos to the second phone.</strong> Android's Quick Share (formerly Nearby Share) sends files between Android phones over Wi-Fi Direct, with no cable and no account — open the gallery, select the photos, share with Quick Share to the second phone. For a handful of photos this is quick; for a whole library it is slow, and the second phone needs enough free space to hold them in transit. Bluetooth works for a few photos and is far too slow for a library — use it only for a small batch. Do not use a messaging app as the relay: most of them compress photos, and the copy on the drive would not be the original.</li>
+    <li><strong>Plug the drive into the second phone and copy with SnapDisk.</strong> This is Method 4, run on the second phone: the drive appears, SnapDisk offers the backup, and the library copies oldest-first in the background with progress, Pause and Stop. The free version covers 5 GB per run; Pro is $9.99 once.</li>
+  </ol>
+  <p>The honest limit is the relay itself: the photos cross the air twice, and a library of thousands of photos is a long Quick Share session, not a quick one. This route is best when the backup is a small batch — the holiday photos, the month's camera roll — and the computer route is best for the whole library. And the second phone's free space is the ceiling: if it cannot hold the photos, it cannot relay them. If neither a computer nor a second phone is available, the Wi-Fi drive in Method 2 is the remaining route — and if none of the three is available, the photos stay on the phone until one of them is, because no app can conjure a host the phone does not have.</p>
+
+  <h2>Method 4: SnapDisk's one-tap copy — when the checker says yes</h2>
+  <p>This is the backup step itself, and it belongs in this article for one reason: many readers who search "phone doesn't support OTG" will find, on checking, that their phone does. If the checker reports host support, or the mouse cursor appears, or a USB-C drive plugged in directly shows up — the one-tap route is open, and this is how it runs. Install SnapDisk from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"</li>
+    <li><strong>Tap Backup.</strong> Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally. The default run reads the whole media library via MediaStore, not DCIM only, so every photo the gallery sees is covered, whatever folder it sits in. This was verified in the code, not assumed: with no From folder picked, the app queries the MediaStore images and videos tables with no folder filter.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. With no From folder picked, the default run copies the whole library, saved photos included.</figcaption>
+  </figure>
+
+  <p><strong>Copying only some photos?</strong> If you would rather copy just one folder than the whole library, use the From folder picker: tap it, navigate to the folder, and the run copies only that folder, recursively. The picker route keeps only recognised photo and video extensions. If the drive is unplugged by accident, the backup pauses with the full error shown and resumes where it stopped when the drive is back. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+  <p>And the combination, stated once more because it is the question this article exists to answer: if the phone truly has no host mode, none of this runs — the notification never appears, because the phone never reports a drive attached. That is not a SnapDisk limitation to work around; it is the phone's USB port, and the workaround is Methods 1 to 3. If you ran the checker and it said yes, run the backup and check the copy before you trust it: open three or four photos from the drive on another device, confirm they render, and only then treat the drive as the backup.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Assuming the phone lacks OTG because the drive did not appear.</strong> A bad adapter, a charging-only cable, a drive that needs more power, or a FAT32 drive with a file over 4 GB all look exactly like "no OTG". Run the checker, try a USB-C drive direct, try a mouse — the check is five minutes and it changes the whole answer.</li>
+    <li><strong>Buying an app that promises to "enable OTG".</strong> Checker apps test and report existing capabilities; they cannot enable OTG on an incompatible device — the listings say so themselves. An app that claims to switch host mode on is selling a toggle that does not exist, and the rooting it usually needs trades the phone's security for a copy job a computer does in minutes.</li>
+    <li><strong>Buying a Wi-Fi drive without checking its app first.</strong> SanDisk has retired the Connect apps for this line — its own support page dates the Wireless Flash Drive app's retirement to March 18, 2021 — and a Wi-Fi drive without its app is a plain drive you cannot reach without OTG. Check the app is still available for your phone before you pay, and check the capacity against your library: the Stick tops out at 256 GB.</li>
+    <li><strong>Using a messaging app as the relay.</strong> Most messaging apps compress photos. The copy on the drive would not be the original, and a backup that is not the original is not a backup. Use Quick Share for the relay, or the computer route.</li>
+    <li><strong>Copying straight to the drive in one step on the computer route.</strong> Copy phone to computer, then computer to drive, and verify between the steps. A failure halfway through a direct phone-to-drive copy leaves you unsure what arrived; the two-step copy leaves the computer copy intact.</li>
+    <li><strong>Leaving the phone locked or on charging-only.</strong> A locked phone hides its files, and charging-only mode exposes nothing. Unlock the phone and choose File transfer every time you plug it into the computer — the setting does not always stick between plugs.</li>
+    <li><strong>Assuming the copy keeps running with the screen off.</strong> Unverified — no wake lock, no battery-saver handling in the repo — so keep the phone awake for the run, or check it. Screen-off continuation under battery saver is unverified, and a run that stopped when the screen went dark is the expected failure, not a surprise.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> check the phone before you route around it — most "no OTG" verdicts are a bad adapter, a charging-only cable, or a thirsty drive. If the phone truly has no host mode, the copy needs a host: a computer, a Wi-Fi drive, or another phone — and no app can be that host for it.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If your phone does support OTG and you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. The direct rival, VaultDrive, charges $19.99 once for Pro (free up to 200 files or 2 GB per backup) and its own page says 2,000+ installs across the App Store and Google Play — but its Android route needs OTG too, so it is no help on a phone without host mode. SnapDisk's Pro is $9.99 once, with a 5 GB free run instead of 200 files. See also: <a href="backup-photos-to-external-drive.html">How to back up photos to an external drive on Android</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos to a USB drive automatically (no manual copy)</a>, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="backup-photos-offline.html">How to back up photos offline on Android — no cloud, no account</a>, and <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive: USB photo backup on Android, compared</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

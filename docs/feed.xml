@@ -1217,5 +1217,12 @@
       <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
       <description>SnapDisk does not encrypt — it copies your photos exactly as they are. The protection has to come from the drive itself, or from encrypting the files before they leave the phone. Here are the routes that actually work.</description>
     </item>
+    <item>
+      <title>Back up photos to USB when Android has no OTG — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/no-otg-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/no-otg-photos-to-usb.html</guid>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Without OTG the phone cannot see a USB drive at all — nothing to copy to, and no app that fixes it. The photos still get to the drive, but the route goes through a computer, a Wi-Fi drive, or a phone that does support OTG.</description>
+    </item>
 </channel>
 </rss>
