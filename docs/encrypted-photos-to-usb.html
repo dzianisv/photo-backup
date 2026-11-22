@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up photos to an encrypted USB drive from Android</title>
+<meta name="description" content="Back up photos from Android to a password-protected USB drive: SnapDisk copies them plain — the protection comes from the drive, or from encrypting first.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/encrypted-photos-to-usb.html">
+<meta property="og:title" content="Back up photos to an encrypted USB drive from Android (no computer)">
+<meta property="og:description" content="Back up photos from Android to a password-protected USB drive: SnapDisk copies them plain — the protection comes from the drive, or from encrypting first.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/encrypted-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/encrypted-photos-to-usb.html#article",
+      "headline": "Back up photos to an encrypted USB drive from Android (no computer)",
+      "description": "Back up photos from Android to a password-protected USB drive: SnapDisk copies them plain — the protection comes from the drive, or from encrypting first.",
+      "datePublished": "2026-11-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/encrypted-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/encrypted-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does SnapDisk encrypt my photos when it backs them up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SnapDisk copies your photos exactly as they are — plain files, byte for byte, with a size check after each copy. There is no encryption code in the app at all. The protection has to come from somewhere else: a hardware-encrypted drive that locks itself, an encrypted archive you make on the phone first, or an encrypted vault app. This article covers all three routes, and says plainly which one SnapDisk can and cannot do."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I back up photos to a password-protected USB drive from Android without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — with a hardware-encrypted drive. A drive like the iStorage datAshur PRO2 unlocks with a PIN typed on the drive itself, then behaves as a normal flash drive, and the maker's own page lists Android as a compatible host with no software required. Plug it into the phone, unlock it, and copy with SnapDisk in one tap. Whether SnapDisk itself has been run against an unlocked datAshur on a real phone is unverified — no real-device test has been done — so treat the combination as expected-to-work, not proven."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will SnapDisk copy an encrypted ZIP file or a vault to the drive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SnapDisk copies image and video files only — on the default run it reads the phone's MediaStore images and videos tables, and on the folder route it walks the folder and keeps only recognised photo and video extensions. An encrypted .zip or .rar archive, or a vault container file, is not an image or a video, so SnapDisk skips it on both routes. If you encrypt first, the archive itself goes to the drive with the Files app, by hand — that step is manual, and it is the only way the encrypted copy gets there."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/encrypted-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up photos to an encrypted USB drive from Android (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/encrypted-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up photos to an encrypted USB drive from Android</h1>
+  <p class="dek">SnapDisk does not encrypt — it copies your photos exactly as they are. The protection has to come from the drive itself, or from encrypting the files before they leave the phone. Here are the routes that actually work.</p>
+  <p class="meta">November 22, 2026 · 6 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> SnapDisk does <strong>not</strong> encrypt your photos. It copies plain files, byte for byte, with a size check after each copy — there is no encryption code in the app at all, verified by reading the code, not assumed. So the protection has to come from somewhere else, and there are four honest routes: (a) a hardware-encrypted drive, such as the iStorage datAshur PRO2, which unlocks with a PIN typed on the drive and then behaves as a normal flash drive — the maker's own page lists Android as a compatible host with no software required; (b) encrypting the files first on the phone, with ZArchiver or RAR per the WITNESS guide, or DroidFS or Photok per AndroidAuthority — but an encrypted archive is not a photo, so SnapDisk skips it and the archive itself goes to the drive by hand in the Files app; (c) UltraVault, which keeps photos in an on-phone AES-256 vault and offers an encrypted backup to a folder you choose, including a USB drive — a vault container, restored only inside UltraVault, not a whole-library copy of plain files; (d) Huawei Backup's encrypted archive, which restores only on a Huawei phone. Two things are <strong>unverified</strong> and stated as such: whether SnapDisk itself has been run against an unlocked hardware-encrypted drive on a real phone — no real-device test has been done — and screen-off continuation under battery saver is unverified. SnapDisk's default run copies your whole media library via MediaStore, not DCIM only, oldest-first, in the background, with progress, Pause and Stop, and resume where it stopped. Free version: 5 GB per run; Pro is $9.99 once. As of November 22, 2026, no top search result offers an automated whole-library photo backup from an Android phone straight to an encrypted USB drive — oldest-first, one tap, background with progress, Pause and Stop, resume and per-file verification, writing plain files onto the drive — the results are the opposite direction, manual encrypt-first guides, vault apps, a Huawei-only archive, or fingerprint-encrypted drives sold as products.</p>
+
+  <h2>SnapDisk does not encrypt — say it first</h2>
+  <p>This is the fact the whole article turns on, so here it is with the evidence, not the claim. SnapDisk v0.1.2 copies files by reading them as a stream and writing the same bytes to the drive — the copy function is <code>copyWithResume</code> in BackupEngine.kt, and the only check after the copy is a size verification: the destination file exists and its size matches the source. A search of the whole app source for the words encrypt, cipher, AES, and decrypt returns zero matches — there is no encryption step to find, in any file. The app has no internet permission either, so nothing leaves the phone except over the cable to the drive you plugged in.</p>
+  <p>That means the copies on your drive are exactly as readable as the originals on your phone. Anyone who picks up the drive and plugs it into a computer sees your photos. If that matters to you — a drive that gets lost, stolen, or left in a hotel room — the encryption has to happen somewhere SnapDisk does not reach: in the drive's own hardware, in the files before they are copied, or in a vault app that owns the encryption end to end. The rest of this article is those three places, plus the one phone-maker archive that does it its own way. None of them is SnapDisk encrypting — because SnapDisk does not encrypt, and an article that implied otherwise would be lying about the product.</p>
+  <p>One more scope fact before the methods, because it decides which of them SnapDisk can help with at all. SnapDisk copies image and video files only. On the default run it reads the phone's MediaStore images and videos tables, with no folder filter — the whole library, oldest-first, whatever folder the photos sit in. On the From-picker route it walks the folder you picked and keeps only recognised photo and video extensions (.jpg, .png, .heic, .webp, .mp4, .mov, and the rest of the list). An encrypted archive — a .zip or .rar with a password — is neither an image nor a video, so SnapDisk skips it on both routes. A vault container file is skipped the same way. Keep that in mind through Methods 2 and 3: the encrypted thing is not something SnapDisk copies. It is something you carry to the drive yourself.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search for this job three ways and the results split into seven shapes, none of them the narrow job — an automated whole-library photo backup from an Android phone straight to a USB drive, oldest-first, one tap, background with progress, Pause and Stop, resume and verification, writing plain files onto an encrypted drive. The first shape is the opposite direction: a howtogeek guide about using the phone itself as an encrypted flash drive — your phone pretending to be the drive, not backing up to one. The second shape is the manual encrypt-first guide: the WITNESS blog from 2020, about offline backup, which says to password-protect the drive and to encrypt the files first with ZArchiver or RAR and then move them — a real route, but every step by hand, no automation, no one-tap copy. The third shape is the near-miss app: UltraVault, which encrypts photos in an on-phone AES-256-GCM vault and offers an encrypted backup to a folder you choose — cloud, USB, or SD card — restored with a recovery phrase. It is the closest thing to the job, and it is still not the job: the backup is a vault container, restored only inside UltraVault, not a whole-library one-tap copy of plain files you can open on any computer. A second near-miss app, MeBackup, advertises offline backup to USB with optional encryption, batch backup and progress tracking — but its listing claims no Pause and Stop, no resume, and no per-file verification, and its encryption is the app's own backup, not plain files on the drive. The fourth shape is the phone-maker archive: Huawei Backup writes an encrypted archive that only a Huawei phone can restore — protection, yes, and a USB step, no, and a restore anywhere else, no. The fifth shape is the on-phone encryption guide: AndroidAuthority's "how to encrypt your Android device" names DroidFS and Photok, which encrypt photos on the phone — and neither takes the USB backup step. The sixth shape is the product pitch: the EAGET FU80, a fingerprint-encrypted SSD sold as a drive, not a guide to backing anything up. A second product pitch, the LESOGE 128 GB drive sold by a retailer, pairs a Touch ID and passcode-encrypted drive with a one-click backup app — but the page is a product listing, not a guide, and its Android story contradicts itself: one-click backup through the dedicated app, yet 'no additional app is required for Android'. And behind all seven sit the generic OTG guides — plug the drive in, open the file manager, copy DCIM by hand — which copy plain files to a plain drive and never mention encryption at all. That is the gap: the one-tap automated copy, phone straight to USB, with the protection named honestly for what it is and where it comes from.</p>
+
+  <h2>What you need</h2>
+  <p>An Android phone (Android 7.0 or later for SnapDisk); a USB drive your phone can read — a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter (most modern Android phones support OTG; if the phone doesn't see the drive, try a different adapter); and enough space on the drive for the photos you want to keep. For the hardware-encrypted route, the drive itself: a PIN or fingerprint drive such as the datAshur PRO2 below, bought before you start — the protection is in the drive, so there is nothing to install. For the encrypt-first route, an app that makes the encrypted archive on the phone — ZArchiver for a password-protected archive, or DroidFS or Photok for an on-phone encrypted vault — plus the password itself, written down somewhere that is not the phone. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit, and hardware-encrypted drives are typically sold formatted exFAT or FAT32 — check before a big run.</p>
+
+  <h2>Method 1: a hardware-encrypted drive — the simplest protection</h2>
+  <p>This is the route to pick if you want the protection without thinking about it again. A hardware-encrypted drive does the encryption in the drive itself: the data on the flash chips is always encrypted, and the drive only lets anyone read or write it after the right PIN or fingerprint. Lose the drive, and whoever finds it holds an encrypted brick — no password, no photos. The example verified for this article is the iStorage datAshur PRO2, read from the maker's own product page: a PIN-authenticated, AES-XTS 256-bit hardware-encrypted flash drive, certified to FIPS 140-2 Level 3, in capacities from 4 GB to 512 GB. You type a 7–15 digit PIN on the keypad built into the drive, and — in the maker's own words — you then "use as a normal flash drive". No software is required, and the page lists Android among the compatible hosts, under "OS &amp; Host independent — works across any host and embedded systems". When the drive is unplugged, all data is encrypted again, and it auto-locks when unplugged or when power to the USB port is turned off. Enter the PIN wrong ten times in a row and the user PIN is deleted — the drive can then only be opened with the admin PIN or a one-time recovery PIN — so the PIN is not something to guess at.</p>
+  <p>The steps, with that drive: buy the drive and set your user PIN and admin PIN first, following the quick-start guide in the box — do this before any photos are on it, and write both PINs down somewhere that is not the phone and not the drive. Plug the drive into the phone — the datAshur PRO2 is a USB-A drive, so a USB-C phone needs a USB-C OTG adapter between them — and type the PIN on the drive's keypad. The drive unlocks and the phone should see it as ordinary USB storage. Then back up with SnapDisk, Method 5 below. When the copy finishes, unplug the drive: it locks itself the moment it loses power. Two warnings from the maker's own page. First, the auto-lock: the drive can also be set to lock after a predetermined time, so leave that setting off — or long — during a backup, or a long copy could find its destination locked halfway through. Second, the brute-force defence cuts both ways: ten wrong PINs deletes the user PIN, so if you are the kind of person who fumbles a PIN, the admin PIN and the recovery PIN are the things standing between you and a drive you can never open again. Keep them.</p>
+  <p>The honest limit of this route is the one stated in the TL;DR: the maker's page says the drive works on Android and behaves as a normal flash drive once unlocked, which is the reason to expect SnapDisk to write to it — but no one has run SnapDisk against an unlocked datAshur on a real phone, so that combination is unverified. If you buy the drive for this and the phone refuses it, the fallback is Method 2: encrypt first, copy by hand. And a hardware-encrypted drive is not the only hardware option — fingerprint drives like the EAGET FU80 exist, and Kingston's IronKey line is the same idea with a different badge — but the datAshur is the one whose page was read for this article, so it is the one named with specifics. Whatever drive you buy, check the same two lines on its page before you pay: no software required, and Android listed as a compatible host. If the unlock needs a Windows program, the phone cannot run it, and the drive is useless for a phone backup however strong its encryption is.</p>
+
+  <h2>Method 2: encrypt the files first, then copy them by hand</h2>
+  <p>This is the route the WITNESS guide describes, and it is the cheapest one: no special drive, just an app on the phone and a password in your head. The idea is simple — the files are encrypted before they ever leave the phone, so the drive they land on can be any plain drive, lost or stolen, and the photos on it are still unreadable without the password. ZArchiver, the app WITNESS names, packs the photos into an archive — a .zip or .rar file — and sets a password on it. DroidFS and Photok, the apps AndroidAuthority names, take a different shape: they keep the photos inside an encrypted vault on the phone, and the vault is the thing that gets protected. Either way, the encryption happens on the phone, by an app whose only job is encryption — SnapDisk is not that app, and it never touches this step.</p>
+  <p>The steps, with ZArchiver: open ZArchiver, select the photos and videos you want to protect, and create an archive with a password — a strong one, and one you will remember, because a password-protected archive has no "forgot password" link. Then copy the archive to the USB drive with the Files app: plug the drive in, find the archive in the phone's storage, copy it to the drive, and wait for the copy to finish before unplugging. Do not use SnapDisk for this step — an archive is not an image or a video file, so SnapDisk skips it on both routes, and a backup run that finishes green has copied your plain photos, not the archive. The archive and the plain photos are two different things on the drive, and only the archive is protected. If you want the photos protected and nothing else on the drive, delete the plain copies from the drive after the archive is verified — and verify it first, by opening the archive on another device and entering the password, before you delete anything.</p>
+  <p>The honest limits. First, the manual step: every new batch of photos needs a new archive and a new hand copy, because nothing here is automated and nothing resumes where it stopped. Second, the password: lose it and the archive is unreadable forever — there is no recovery, no reset, and no support desk that can open it for you. That is the protection working as designed, and it is also the way people lose their own photos. Third, the archive is a single file, so a very large photo library becomes a very large archive, and a FAT32 drive cannot hold a single file over 4 GB — format the drive exFAT first, or split the archive. Fourth, DroidFS and Photok do not even produce a file SnapDisk or the Files app would copy as a photo: the encrypted vault lives inside the app, and getting it onto a drive means exporting or backing up the vault itself, on the app's terms — AndroidAuthority's guide names them for encrypting on the phone, and takes no USB backup step at all. If you want the one-tap automated copy and the protection together, Method 2 is not it — Method 1 is.</p>
+
+  <h2>Method 3: an encrypted vault app that backs up to USB</h2>
+  <p>UltraVault is the nearest thing to a single app that does both halves of this job, and it deserves a fair hearing — including its limits. It keeps photos in an encrypted vault on the phone, using AES-256-GCM, and it offers an encrypted backup to a folder you choose: a cloud folder, a USB drive, or an SD card. The backup is restored with a recovery phrase, inside UltraVault. That is a genuine phone-to-USB encrypted backup, with no computer in between, and it is the only app in the search results that claims it.</p>
+  <p>What it is not is the job this article is about. The backup UltraVault writes is a vault container, not your photos as plain files — you cannot plug the drive into a computer and open the photos, because the photos are inside the container, and the container only opens inside UltraVault with the recovery phrase. Lose the recovery phrase and the backup is unreadable; lose the app — it leaves the store, the phone is wiped, the developer stops maintaining it — and the container is a file you cannot open anywhere. And it is not a whole-library one-tap copy of plain files: the photos have to be in the vault first, which means moving them there, and the backup is the vault's backup, not the library's. If your threat is "someone finds the drive", a vault container is excellent protection. If your threat is "I need my photos back on any device, in ten years, with nothing but the drive", plain files on the drive are the safer bet — and that is what SnapDisk copies, unencrypted, in Method 5. Choose the vault if the secrecy matters more than the portability; choose the plain copy on a hardware-encrypted drive if the portability matters more than the secrecy. Do not mistake one for the other.</p>
+
+  <h2>Method 4: Huawei Backup's encrypted archive (Huawei phones only)</h2>
+  <p>If your phone is a Huawei, the phone itself already has an encrypted backup route — and it is the only one in this article that comes from a phone maker. Huawei Backup writes an encrypted archive of the phone, photos included, and the archive restores only on a Huawei phone. That is real protection, and it is already on the device, with no app to install and no drive to buy. It is also the narrowest route in this article: the archive is Huawei's format, the restore is Huawei's restore, and a Samsung, a Pixel, or a computer cannot open it. There is no phone-to-USB step in it as a photo backup — the archive is a whole-phone backup, not a folder of photos on a drive you can browse — and if you switch away from Huawei, the archive does not follow you. Use it as a second copy if you are on Huawei and staying there. Do not use it as your only copy if you might leave Huawei, and do not confuse it with a USB photo backup: the photos inside it are not files on a drive, and the drive in this article's title is not where they live.</p>
+
+  <h2>Method 5: SnapDisk's one-tap copy to the unlocked drive</h2>
+  <p>This is the backup step itself — the part SnapDisk does — and it is the same whichever protection route you chose, with one difference: for the hardware-encrypted drive, the drive must already be unlocked before the copy starts. Install SnapDisk from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Unlock the drive first.</strong> For a hardware-encrypted drive, type the PIN on the drive's keypad before you plug it in, or immediately after — the phone should then see it as ordinary USB storage. If the phone shows nothing, unplug, re-lock, unlock again, and try a different OTG adapter. Do not start the backup until the drive appears in the Files app: a backup to a drive the phone cannot see fails before it starts, and the error will say so.</li>
+    <li><strong>Plug in the drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"</li>
+    <li><strong>Tap Backup.</strong> Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally. The default run reads the whole media library via MediaStore, not DCIM only, so every photo the gallery sees is covered, whatever folder it sits in. This was verified in the code, not assumed: with no From folder picked, the app queries the MediaStore images and videos tables with no folder filter.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. With no From folder picked, the default run copies the whole library, saved photos included.</figcaption>
+  </figure>
+
+  <p><strong>Copying only some photos?</strong> If you would rather copy just one folder than the whole library, use the From folder picker: tap it, navigate to the folder, and the run copies only that folder, recursively. The picker route keeps only recognised photo and video extensions, so an encrypted archive sitting in the folder is skipped either way — the archive goes to the drive by hand, Method 2. If the drive locks mid-copy — the PIN drive auto-locking, or the drive unplugged by accident — the backup pauses with the full error shown and resumes where it stopped when the drive is back and unlocked. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+  <p>And the combination, stated once more because it is the question this article exists to answer: the maker's page says the datAshur PRO2 works on Android and behaves as a normal flash drive once unlocked, which is the reason to expect SnapDisk to write to it — but no one has run SnapDisk against an unlocked hardware-encrypted drive on a real phone, so that combination is unverified. If you try it, check the copy before you trust it: open three or four photos from the drive on another device, confirm they render, and only then treat the drive as the backup. If the drive does not mount, or the copy fails, the drive is not proven broken and SnapDisk is not proven broken — the combination is unproven, and Method 2 is the fallback that needs no drive at all.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Assuming SnapDisk encrypts.</strong> It does not, and no setting turns it on. If the drive is a plain drive, the photos on it are plain files. The protection is the drive or the archive — never the backup app, unless the app is a vault app and you accept what that means for the restore.</li>
+    <li><strong>Buying a software-encrypted drive for a phone.</strong> Some encrypted drives unlock with a program that runs on Windows or macOS. A phone cannot run that program, so the drive never unlocks and the backup never starts. Before you pay, check the drive's page for two lines: no software required, and Android listed as a compatible host. The datAshur page carries both; a drive whose page carries neither is a drive for a computer, not a phone.</li>
+    <li><strong>Forgetting the PIN or the password.</strong> Encryption does not forgive. Ten wrong PINs on the datAshur deletes the user PIN; a forgotten archive password makes the archive unreadable forever; a lost UltraVault recovery phrase locks the vault. Write the PIN, the password, and the recovery phrase down somewhere that is not the phone and not the drive — and test the recovery once, before the photos are the only copy.</li>
+    <li><strong>Encrypting first and then running SnapDisk over the archive.</strong> SnapDisk copies image and video files only, so the archive is skipped and a green backup means the plain photos copied, not the archive. The archive goes to the drive by hand, in the Files app, and the check is opening it on another device with the password — not the backup notification.</li>
+    <li><strong>Treating a vault container as a photo backup.</strong> A vault backup restores only inside the vault app, with the recovery phrase. If the app is gone, the container is a file you cannot open. Keep a plain copy too — on a hardware-encrypted drive, or in an archive whose password you hold — if you want the photos back on any device.</li>
+    <li><strong>Treating Huawei Backup as a USB backup.</strong> The archive restores only on Huawei. If you switch phones, the archive stays behind. It is a second copy for a Huawei owner, not a portable photo backup.</li>
+    <li><strong>Assuming the copy keeps running with the screen off.</strong> Unverified — no wake lock, no battery-saver handling in the repo — so keep the phone awake for the run, or check it. Screen-off continuation under battery saver is unverified, and a run that stopped when the screen went dark is the expected failure, not a surprise.</li>
+    <li><strong>Deleting before verifying.</strong> A backup is only a backup once you've confirmed the copy. Copy, open a few photos on the drive, then delete from the phone — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check. For an encrypted archive, the check is opening it with the password on another device, not just seeing the file size.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight — and on a hardware-encrypted drive, unplugging locks it instantly. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> the backup app copies plain files — the protection is the drive or the archive, never the copy. Pick a hardware-encrypted drive if you want the protection without thinking about it, encrypt first if you want it for free, and never trust either until you have opened the copy on another device.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. The copy is plain files, so pair it with a hardware-encrypted drive — or encrypt first and carry the archive by hand. The direct rival, VaultDrive, charges $19.99 once for Pro (free up to 200 files or 2 GB per backup) and its own page says 2,000+ installs across the App Store and Google Play — SnapDisk's Pro is $9.99 once, with a 5 GB free run instead of 200 files. VaultDrive's App Lock is a lock on the app, not encryption of the files on the drive, so it does not change the comparison here. See also: <a href="transfer-photos-to-usb-automatically.html">Transfer photos to a USB drive automatically (no manual copy)</a>, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="backup-photos-offline.html">How to back up photos offline on Android — no cloud, no account</a>, <a href="restore-photos-from-usb-to-android.html">Restore photos from USB to Android</a>, and <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive: USB photo backup on Android, compared</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

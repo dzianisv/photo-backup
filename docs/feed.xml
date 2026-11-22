@@ -1210,5 +1210,12 @@
       <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
       <description>Your WeChat photos are not in your gallery until you save them there — WeChat keeps them inside the app. Save them first, then copy them straight to a USB drive, no computer, no upload.</description>
     </item>
+    <item>
+      <title>Back up photos to an encrypted USB drive from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/encrypted-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/encrypted-photos-to-usb.html</guid>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
+      <description>SnapDisk does not encrypt — it copies your photos exactly as they are. The protection has to come from the drive itself, or from encrypting the files before they leave the phone. Here are the routes that actually work.</description>
+    </item>
 </channel>
 </rss>
