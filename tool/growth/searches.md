@@ -19513,6 +19513,94 @@ demand is read off competitor install velocity instead (see
   and is not used in this article).
 
 
+### 172. "Back up photos from an Android phone to an encrypted / password-protected USB drive" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle, Medium on the protection step.
+  No guide in search covers an automated whole-library photo backup
+  from an Android phone straight to an encrypted USB drive — one tap,
+  background with progress, Pause and Stop, resume and verification,
+  writing plain files onto an encrypted drive. The generic OTG guides
+  copy plain files to a plain drive and never mention encryption; the
+  encrypt-first guides are manual; the vault apps back up containers,
+  not plain files; the phone-maker archive restores only on its own
+  phones; the encrypted-drive results are product pitches, not
+  backup guides. The gap stands ONLY on that narrow angle: the
+  one-tap automated copy, phone straight to USB, with the protection
+  named honestly for what it is and where it comes from (SnapDisk).
+  The TV angle was checked and rejected — phone-to-USB with a TV as
+  the destination is already covered by generic guides — and is not
+  written here.
+- Current top results (scored Nov 22, 2026, live web search):
+  Phrasing 1, "back up photos from Android phone to encrypted USB
+  flash drive password protected" (supervisor, verified this run, not
+  re-run): our own Huawei article (Huawei Backup encrypted archive,
+  Huawei-only restore), howtogeek (opposite direction — the phone AS
+  an encrypted flash drive), WITNESS blog 2020 (offline backup;
+  password-protect drives; encrypt files first with ZArchiver/RAR,
+  then move — manual, no automation), EAGET FU80 product page
+  (fingerprint-encrypted SSD, a product pitch); Phrasing 2, "encrypt
+  photos on USB drive from Android phone without computer one tap
+  backup app" (supervisor, verified this run, not re-run): same
+  Huawei + WITNESS results, plus UltraVault (NEAR-MISS — encrypts
+  photos in an on-phone AES-256-GCM vault and offers encrypted backup
+  to a folder you choose: cloud, USB or SD card, restore with
+  recovery phrase — a vault container, restore only in UltraVault,
+  NOT a whole-library one-tap copy of plain files), AndroidAuthority
+  "how to encrypt your Android device" (DroidFS, Photok — encrypt on
+  the phone, no USB backup step). No automated whole-library
+  phone-to-encrypted-USB guide in either phrasing; Phrasing 3 (lead,
+  this run): ATTEMPTED, not completed — the web-search tool failed
+  with a tool error on the lead's third phrasing ("backup photos
+  Android phone to password protected encrypted USB drive one tap
+  app") and the system instruction barred retrying it, through any
+  tool or endpoint, so it was not re-run. Phrasing 3 (supervisor, this run) — "backup photos Android phone to password protected encrypted USB drive one tap app" — returns the same Huawei article, plus two new near-misses the lead's scoring missed: MeBackup (Play listing — offline backup to USB with optional encryption, batch backup, real-time progress tracking; no Pause/Stop, resume or per-file verification claimed, encryption is the app's own backup, not plain files on the drive) and the LESOGE 128 GB encrypted drive (retailer product page — Touch ID/passcode encryption, one-click backup via its app; a product pitch, and its Android story contradicts itself: one-click backup through the dedicated app, yet 'no additional app is required for Android'). Also surfaced: PhotoSaver (one-click USB backup app, no encryption claim — generic, not a near-miss), Ente Photos (encrypted backup, cloud only — opposite direction, no USB step), Freedom.press (PC backups + manual Files-app copy — no automation). The gap stands ONLY on the narrowed angle: oldest-first, one tap, background with progress, Pause and Stop, resume and per-file verification, writing plain files onto an encrypted drive. The article, llms.txt and llms-full.txt were fixed before merge to name MeBackup and LESOGE and to state the narrowed angle. The hardware-encrypted drive route was
+  verified separately this run from the vendor's own page (see the
+  honest-centre paragraph below), not from the failed search.
+- Honest centre (verified from the code and live pages this run, not
+  assumed): SnapDisk v0.1.2 does NOT encrypt. The copy is a byte copy
+  (BackupEngine.copyWithResume, BackupEngine.kt:131) with a size
+  check only (verify, BackupEngine.kt:107), and a search of the whole
+  app source for encrypt, cipher, AES, and decrypt returns zero
+  matches. The protection comes from (a) a hardware-encrypted drive —
+  iStorage datAshur PRO2, read from the maker's own page this run
+  (istorage-uk.com): 7-15 digit PIN typed on the drive, AES-XTS
+  256-bit hardware encryption, FIPS 140-2 Level 3, "enter a 7-15
+  digit PIN to authenticate and use as a normal flash drive", "OS &
+  Host independent — works across any host", Android listed as a
+  compatible host, no software required, auto-locks when unplugged,
+  4 GB to 512 GB, USB-A so a USB-C phone needs an OTG adapter; (b)
+  encrypting files first on the phone — ZArchiver/RAR per WITNESS,
+  DroidFS/Photok per AndroidAuthority — with the archive copied to
+  the drive by hand in the Files app, because SnapDisk copies image
+  and video files only on both routes (default run: MediaStore
+  Images + Video tables, no folder filter, PhotoQuery.kt:23;
+  From-picker route: SAF tree walk keeping only recognised photo
+  and video extensions, PhotoQuery.kt:89-105, 124-135), so a .zip,
+  .rar, or vault container is skipped; (c) UltraVault encrypted
+  backup to USB — vault container, restore only in UltraVault (see
+  Phrasing 2 above); (d) Huawei Backup encrypted archive —
+  Huawei-only restore. Whether SnapDisk can write to a
+  hardware-encrypted drive's unlocked partition is UNVERIFIED: the
+  maker says it works on Android and behaves as a normal flash drive
+  once unlocked, but no real-device test of SnapDisk against one has
+  been run, so the article states the combination as expected-to-work,
+  not proven, and names the encrypt-first fallback. Default-run scope
+  verified in the code this run (PhotoQuery.queryMediaStoreOldestFirst,
+  BackupService.kt:634-641): with no From folder picked SnapDisk reads
+  the whole MediaStore library — images + videos, no folder filter,
+  oldest-first. Free 5 GB per run
+  (ProPrefs.FREE_BACKUP_BYTES_LIMIT = 5L*1024^3, ProPrefs.kt:43); Pro
+  $9.99 one-time (PRO_PRICE_LABEL, ProPrefs.kt:40). Screen-off
+  continuation under battery saver UNVERIFIED (no WakeLock/Doze code,
+  0 matches in app/src/main; no INTERNET permission, 0 occurrences
+  in the manifest). VaultDrive re-verified live this run from the full
+  vendor page (coticsy.com/vaultdrive.html): Pro $19.99 once, free up
+  to 200 files or 2 GB per backup, vendor page says "2,000+ installs
+  on the App Store and Google Play" (both stores combined — never
+  swapped with the AppBrain-only figure, which was not re-verified
+  this run and is not used in this article).
+
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
