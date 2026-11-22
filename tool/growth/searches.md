@@ -18974,6 +18974,207 @@ demand is read off competitor install velocity instead (see
   capitalised "Unverified" in What to avoid. Next article candidate
   after this one: unverified.
 
+### 168. "Back up Snapchat photos and videos to USB from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle, High on the export itself.
+  No guide in search covers backing up Snapchat's exported Memories
+  folders directly from the phone to a USB drive in one tap. The
+  guides that name the export save Memories to the phone or the
+  computer and stop there; the importer apps save to the gallery or
+  to Google Drive and never mention a USB drive; the guides that do
+  phone-to-USB copy by hand never name Snapchat. The gap stands ONLY
+  on that narrow angle: Snapchat Memories already exported to the
+  phone copied oldest-first in one background run to a USB drive,
+  with progress, resume and verification, no computer (SnapDisk).
+- Current top results (scored Nov 22, 2026, live web search):
+  Medium, "Want to Save Your Snapchat Memories? Here's How"
+  (https://medium.com/@projectsaversnap/want-to-save-your-snapchat-memories-heres-how-4ac128ce55c6
+  — Memories export guide: export individual Snaps directly from
+  Memories, or request a larger Memories export through My Data;
+  "download them outside Snapchat" means the gallery or the
+  computer, no USB step; search-index excerpt read this run);
+  YouTube OTG walkthroughs ("How to Connect USB Drive to Android
+  Phone to Move Photos & Videos (Best Method)" and "How to Transfer
+  Photos, Videos and any Files from Android Phone to USB Pendrive")
+  (https://www.youtube.com/watch?v=PYcbV25CczI and
+  https://www.youtube.com/watch?v=ch1evyu5PPM — generic OTG +
+  file manager guide, DCIM/Pictures/Movies, Snapchat never named;
+  search-index excerpts read this run);
+  our own SnapDisk articles ("Back up videos from Android to a USB
+  drive" and "USB photo backup on Android") — the same one-tap
+  copy, oldest-first in the background with progress, Pause and
+  Stop, and resume — but generic, Snapchat never named;
+  EyeFi forum, "What's the best way to move photos from my Android
+  to a USB drive?" — OTG + file manager, DCIM/Pictures/Downloads,
+  generic, Snapchat never named (named in the brief; the generic
+  shape matches the phrasing-1 results read this run);
+  itechguides, "How to Use Snapchat Memories to Download, Delete,
+  & Back Up Snaps"
+  (http://itechguides.com/how-to-use-snapchat-memories-to-download-delete-back-up-your-snaps/
+  — Export for one or a few Snaps, Memories-only My Data export
+  for the whole library, "Snapchat's own backup is not a permanent
+  independent backup"; 5 GB complimentary storage "for affected
+  accounts", rollout not universal; no USB step anywhere;
+  search-index excerpt read this run);
+  Memories Import
+  (https://play.google.com/store/apps/details?id=io.fortivus.memoriesimport&hl=en_US
+  — the strongest near-miss on the phone side: "save your entire
+  Snapchat photo and video library to your phone's gallery",
+  "Export your data from Snapchat, open the ZIP file in Memories
+  Import, tap Import — done!", $4.99 one-time, "original dates and
+  locations preserved", "Most users save 1000–10,000 Snapchat
+  photos in under 10 minutes" — saves to the gallery, NO USB step;
+  "Import within 7 days of export (Snapchat download links expire
+  after one week)"; search-index excerpt read this run);
+  Backup for Snapchat Memories
+  (https://www.appbrain.com/app/snapbackup-snapchat-memories/com.snapbackup.snapchatmemories
+  — imports media exports, "back up selected files to your own
+  Google Drive" — cloud, NOT USB; "does not provide direct access
+  to your social media account"; search-index excerpt read this
+  run);
+  getmemoriesout, "How to Back Up Snapchat Memories (Free, All of
+  Them)" (https://getmemoriesout.com/guides/back-up-memories —
+  check Backup Progress, My Data export with "Export your
+  Memories" + "Request Only Memories", email "usually between one
+  hour and 7 days", download every ZIP, multi-year accounts arrive
+  as several ZIPs of about 2 GB; "read what changes in January
+  2027 before Snapchat archives older Memories past 5 GB";
+  second-copy options are a computer, an external drive via its
+  own large-export guide, iCloud, or Google Photos — no one-tap
+  phone-to-USB step; search-index excerpt read this run);
+  backupmemories.com, "How to backup Snapchat Memories, and where
+  to keep them" (https://backupmemories.com/help/how-to-backup-snapchat-memories
+  — request the My Data export, download the ZIPs, fix
+  dates/places/captions, then keep the copy in Google Photos, the
+  phone gallery, Google Drive or Dropbox, or a computer or hard
+  drive — no one-tap phone-to-USB step; "from January 2027,
+  memories above your free 5GB in Snapchat get archived unless
+  you pay"; search-index excerpt read this run by the supervisor's
+  fourth phrasing);
+  Snapchat help, "How do I download my data from Snapchat?"
+  (https://help.snapchat.com/hc/en-gb/articles/7012305371156-How-do-I-download-my-data-from-Snapchat
+  — the official My Data route: accounts.snapchat.com, My Data,
+  "Export your Memories", "Request Only Memories", date range,
+  Submit, email link, "See exports", Download; "Your 'My Data'
+  download will arrive in the form of a zip file", "double-click
+  on the zip file to extract a folder", open index.html, Memories
+  in the navigation; "Try downloading your data from a computer
+  rather than a mobile device"; search-index excerpt read this
+  run);
+  Snapchat help, "How do I manage my Memories storage?"
+  (https://help.snapchat.com/hc/en-us/articles/41291271694228-How-do-I-manage-my-Memories-storage
+  — Snapchat's OWN page, quoted from the search index this run:
+  "You have up to 5GB of complimentary Snapchat Memories
+  storage"; "Snapchat will not automatically delete your Memories
+  because you do not upgrade"; "Starting in January 2027,
+  Memories that are more than one year old and are not part of
+  your oldest 5GB of Memories will be archived and remain stored
+  on Snapchat"; "No Memories will be archived before January
+  2027, and we will provide advance notice in the app before
+  anything changes for you"; 100 GB Memories-only plan $1.99/month
+  or $20/year in the US; search-index excerpt read this run);
+  macmyths, "How to save Snapchat Photos to Gallery?"
+  (https://macmyths.com/how-to-save-snapchat-photos-to-gallery/
+  — on Android, exported Snaps "may appear in Google Photos,
+  Samsung Gallery, OnePlus Gallery, or a folder such as Snapchat,
+  Pictures, or DCIM, depending on the device"; search-index
+  excerpt read this run);
+  thecondia, "Download Your Snapchat Memories: Working Methods
+  2026" (https://thecondia.com/download-snapchat-memories/ —
+  "On Android, they go to your gallery, sometimes in a Snapchat
+  folder depending on your phone's brand"; My Data export goes to
+  "your browser's Downloads folder"; "the in-app camera roll
+  option only handles about 100 Snaps at a time"; search-index
+  excerpt read this run);
+  watsspace, "How to download Snapchat Memories?"
+  (https://watsspace.com/blog/how-to-download-snapchat-memories/
+  — Export then "Save to Gallery"; "You'll typically find them in
+  the system Photos or Gallery app, often in a 'Snapchat' album";
+  "Snapchat caches are encrypted in app directories and are not
+  meant for manual copying. Use in-app export for readable
+  files"; My Eyes Only needs unlocking and manual export;
+  search-index excerpt read this run);
+  VaultDrive's product page (https://coticsy.com/vaultdrive.html
+  — full page read this run, not a search-index excerpt) has 0
+  "Snapchat" occurrences; its Snapchat-relevant features are
+  "Backs up the files and folders you pick, as well as photos and
+  videos" and "Back up Android photos to a USB drive with OTG";
+  free tier 200 files or 2 GB per backup; Pro $19.99 once;
+  Android 8 or later; "2,000+ installs on the App Store and
+  Google Play", unchanged since WL-194. The export-location facts
+  are verified from live sources this run, not from the brief —
+  and they DISAGREE, which is the article's distinguishing fact:
+  macmyths ("a folder such as Snapchat, Pictures, or DCIM,
+  depending on the device"), thecondia ("sometimes in a Snapchat
+  folder depending on your phone's brand"), watsspace ("often in
+  a 'Snapchat' album" in the gallery app) — no single export
+  folder can be asserted, so the article tells the reader to check
+  the gallery's Snapchat album first, then Pictures, DCIM, and
+  Downloads. The My Data export ZIP arrives on the phone
+  (Downloads) and must be unzipped before copying — the ZIP
+  itself is not an image or video file, so SnapDisk skips it
+  (Snapchat help: "double-click on the zip file to extract a
+  folder"; Memories Import: "Import within 7 days of export
+  (Snapchat download links expire after one week)").
+  SnapDisk behaviour re-verified from the repo by the lead:
+  default From /sdcard/DCIM label, To /disk/DCIM
+  (BackupPrefs.kt DEFAULT_FROM_LABEL, DEFAULT_TO_LABEL) — the
+  label is NOT the run scope: with no folder picked, the copy
+  enumerates the whole MediaStore library, images + videos
+  oldest-first (BackupService.kt:634-640 enumeratePhotos,
+  PhotoQuery.kt:23 queryMediaStoreOldestFirst, no folder filter),
+  so exported Snaps the gallery shows are covered whatever folder
+  they sit in; the From-picker SAF tree route
+  (PhotoQuery.kt:89-105, walkTree, recursive, mirrors structure)
+  is for copying only one folder, e.g. the Snapchat folder or the
+  unzipped export folder; From-picker OpenDocumentTree SAF
+  (MainActivity.kt:62, 71), oldest-first DATE_TAKEN (PhotoQuery /
+  BackupEngine), image extensions .jpg .jpeg .png .heic .heif
+  .webp .gif .bmp .dng .raw and video .mp4 .mov .mkv .webm .3gp
+  .m4v .avi (PhotoQuery.kt:131-137) — free 5 GB/run
+  (FREE_BACKUP_BYTES_LIMIT = 5 GiB, ProPrefs.kt:43), Pro $9.99
+  once (strings.xml "Upgrade to Pro — $9.99 once", product id
+  pro_unlock), no INTERNET permission (0 occurrences in the
+  manifest), no WakeLock/Doze code (0 matches, as in WL-203),
+  FAT32 >=4 GiB skip-and-continue (BackupService.kt:428-433),
+  dataSync foreground service (AndroidManifest.xml:38).
+  ANTI-DUPLICATE CHECK (first, before writing — the WL-189
+  lesson): grep of searches.md for "snapchat" finds 0 hits before
+  this row — and the brief's "one incidental mention at line
+  18851" was checked this run and is wrong: line 18851 on main is
+  in the Query 167 Facebook row (the All Media Downloader
+  "Facebook, Instagram, X..." list) and carries no "Snapchat"
+  string at all; git grep across the whole main tree finds 0
+  "snapchat" occurrences. A docs/ listing finds no snapchat slug;
+  no wl-207 branch existed before this run. No existing Snapchat article or row: the gap
+  is a new article, not a rewrite. The honest centre is the
+  export-then-copy route plus two corrections, and both are the
+  article's distinguishing facts, not footnotes. FIRST CORRECTION
+  — the default run scope: the brief said "the route is the
+  From-picker folder route unless the export lands in DCIM/Camera"
+  on the premise the default run is "DCIM only" — the code says
+  otherwise. The default run is the whole MediaStore library, so
+  exported Snaps in the gallery are covered by the default run
+  whatever folder they sit in, and the From-picker route is for
+  copying only the Snapchat folder or the unzipped export folder.
+  The article states the corrected scope in the TL;DR, in a
+  dedicated FAQ question ("Do exported Snapchat photos land in
+  DCIM?"), and in Method 1 — and the WL-205/WL-206 articles'
+  repeated "default run copies DCIM only" line is wrong in the
+  same way and should not be copied forward. SECOND — the folder
+  disagreement: the sources disagree on where an export lands, so
+  the article names the gallery album first and all three folders
+  second and tells the reader to check them. The January 2027
+  archiving claim is VERIFIED from Snapchat's own help page this
+  run (quoted above), not third-party — stated as fact with the
+  page named and the "no exact day" caveat kept. Screen-off
+  continuation under battery saver UNVERIFIED (no WakeLock/Doze
+  code), stated plainly in-article in the WL-182 form —
+  "screen-off continuation under battery saver is unverified" in
+  the TL;DR, plus a capitalised "Unverified" in What to avoid.
+  Next article candidate after this one: unverified.
+
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
