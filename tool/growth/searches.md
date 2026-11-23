@@ -20040,3 +20040,73 @@ unchanged (already "Back up photos & videos to a USB disk").
   blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md before writing;
   "work profile" returns 0 matches in docs/, tool/growth/searches.md, and
   tool/growth/WORKLOG.md at base — no existing coverage.
+### 178. "Back up photos from Android Private Space to a USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers a phone-direct backup of
+  Private Space photos onto a USB drive plugged into the phone — no computer, oldest-first,
+  one tap, background with progress, Pause and Stop, resume and verification. The generic
+  OTG guides never mention Private Space, and the phone-switch guides never take the USB
+  step. The gap stands ONLY on that narrow angle: the phone-direct USB-drive backup of
+  Private Space photos, with the copy, the manual fallbacks, and the honest statement
+  about what SnapDisk can and cannot do in one guide.
+- Current top results (scored Nov 23, 2026, live web search):
+  Phrasing 1, "back up photos from Android 15 Private Space to USB drive" (supervisor,
+  verified this run, not re-run): generic USB guides — Pixoneye, FotoSafe, groovypost,
+  our own transfer-photos-to-usb-automatically.html — NONE mentions Private Space.
+  Phrasing 2, "move photos out of Android Private Space backup transfer" (supervisor,
+  verified this run, not re-run): all results are phone-switch guides — Wondershare
+  MobileTrans, dobr.app, llcloud, calculatorlockerapp — NONE is a photo-backup-to-USB
+  guide; the USB leg appears only as a single export step, not a workflow. Key facts
+  they establish: Google says Private Space has no backup and restore and is not part
+  of device backup; apps inside it must be reinstalled; files stored only inside the
+  space stay on the old phone — move them out first.
+  Phrasing 3 (lead, this run), "Android Private Space photos to USB": top results are
+  generic OTG guides — a Samsung Community thread (copy via a PC), groovypost, two
+  YouTube OTG tutorials, cellularnews, Samsung Members — none mentions Private Space,
+  and none is a dedicated Private Space photo-backup-to-USB guide. No dedicated
+  phone-direct USB-drive guide for Private Space photos in any phrasing; the gap
+  stands on the narrow angle.
+- Honest centre (verified from Google's own help page and the code at base 249cf251,
+  live this run, Nov 23, 2026, not assumed): Private Space is a completely separate
+  space and profile — Google's help page (support.google.com/android/answer/15341885,
+  crawled Nov 23, 2026 15:30 UTC): "Since private space is a completely separate space
+  and profile on your device, it doesn't automatically read the accounts in your main
+  space." Delete/reset: "The app and its data are deleted with no backup. If the app
+  is syncing any data to its cloud servers, the data can be restored once you sign in
+  to the apps. However, when you restore the device from a device backup, private
+  space won't be restored. Any on-device data for private space isn't backed up."
+  Unsupported actions: "You can't: Backup and restore app data as part of device back
+  up." Lock: "If you forget your private space unlock factor, you won't be able to
+  access the space." Move files in: open the space, tap + Add, tap Add files, choose
+  Copy (the original stays) or Move (the original is deleted); files land in the
+  space's Downloads folder. Share out: unlock the space and the share sheet shows a
+  "Private" tab on the Sharesheet, Docs UI, and Photopicker. Install in the space:
+  touch and hold > Install app in Private space, or + Install inside, via Play or
+  other installers; the new instance is separate and app data does not move across.
+  Secondary guides (dobr.app, llcloud.app, privora.app, lockspeare.com, all checked
+  Nov 23, 2026) agree: apps and files inside do not come across in a normal phone
+  transfer; only data an app syncs to its own cloud returns after sign-in; files
+  stored only inside the space stay on the old phone — move them out first. Locked
+  Folder differs: it has had an optional backup since August 2023 (dobr). Secure
+  Folder differs: it moves with Samsung Smart Switch (llcloud). Private Space has
+  neither. Whether a USB drive appears in Private Space's Files app is UNVERIFIED
+  from documentation — no source found this run answers it either way; the article
+  says to try it and fall back to sharing out if it doesn't show up. SnapDisk facts
+  from the code at base: Pro $9.99 once (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"),
+  5 GB free per-run cap (ProPrefs.kt:43), oldest-first MediaStore DATE_TAKEN
+  (PhotoQuery.kt:47, :54, sort DATE_TAKEN ASC with DATE_MODIFIED fallback;
+  BackupEngine.kt:9-10), size verification after copy (BackupEngine.kt:104,108),
+  Pause/Stop in the notification (NotificationHelper.kt:128,138;
+  BackupService.kt:113,115), foreground-service dataSync (AndroidManifest.xml:38),
+  FAT32 files >=4 GiB skipped with their reason (BackupService.kt:428-433), no
+  INTERNET permission (0 occurrences in the manifest), no WakeLock/Doze code —
+  screen-off continuation under battery saver is unverified. "SnapDisk copies, it
+  never deletes" present — the only .delete() calls in the code are on SnapDisk's
+  own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). The article carries no install count for SnapDisk
+  (none exists) and no VaultDrive figure.
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/private-space-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md before writing;
+  "private space" returns 0 matches in docs/, tool/growth/searches.md, and
+  tool/growth/WORKLOG.md at base — no existing coverage.
