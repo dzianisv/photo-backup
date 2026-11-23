@@ -1231,5 +1231,12 @@
       <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
       <description>Most Android phones can't write to NTFS drives. Check the format, reformat to exFAT, or copy by hand with an NTFS app — then SnapDisk works.</description>
     </item>
+    <item>
+      <title>SnapDisk vs ThePhotoStick Omni: Android USB backup</title>
+      <link>https://dzianisv.github.io/photo-backup/snapdisk-vs-thephotostick.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/snapdisk-vs-thephotostick.html</guid>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
+      <description>One is a $9.99 app that copies to any USB drive; the other is a $69.99–$149.99 stick that only works with its own app. Here is how they actually differ, from the facts we could verify as of November 2026.</description>
+    </item>
 </channel>
 </rss>

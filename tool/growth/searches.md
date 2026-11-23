@@ -19818,3 +19818,87 @@ unchanged (already "Back up photos & videos to a USB disk").
   top apps) and the store title + short description are written from
   the winners. — DONE 2026-11-14. Title kept, full description
   updated from the winners; re-score after launch.
+
+### 175. "SnapDisk vs ThePhotoStick Omni" — COMPARISON GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low. No top result is a ThePhotoStick-vs-Android-USB-app
+  comparison at all, let alone a head-to-head against SnapDisk — the
+  top results are a rival USB-backup Play listing, our own SnapDisk
+  articles, and generic cloud-first "best backup software" roundups
+  that list ThePhotoStick as one entry among 25.
+- Current top results (scored Nov 22, 2026, live web search):
+  Phrasing 1, "ThePhotoStick Omni alternative Android app photo backup
+  USB" (lead, this run): Photos to USB: OTG Backup (Play listing —
+  one-tap whole-gallery copy to a pen drive, free with ads, updated
+  Oct 1, 2026); our own transfer-photos-to-usb-automatically article
+  (live 200); our own google-pixel article (live 200); our own
+  snapdisk-vs-vaultdrive article (live 200); our own samsung-galaxy
+  article (live 200). No dedicated ThePhotoStick-alternative guide
+  exists in the top results.
+  Phrasing 2, "alternative to ThePhotoStick for Android photo backup"
+  (lead, this run): mefmobile.org, "Best Photo Backup Software in
+  2026"
+  (https://mefmobile.org/best/photo-backup-software/ — 25 tools
+  ranked, checked 9 Oct 2026; ThePhotoStick #13, $44.99 one-time,
+  5.0; leaders are cloud-first: IDrive 6.6, PhoneCopy 6.6, Ente
+  Photos 6.5); samsungmobileuspress.com, "Best Photo Backup Software
+  in 2026"
+  (https://samsungmobileuspress.com/best/photo-backup-software/ —
+  ThePhotoStick #13, $44.99 one-time, 5.0; leaders Ente, PhotoSync,
+  IDrive, PhoneCopy); inferse.com, "Best Photo Backup Software in
+  2026" (https://www.inferse.com/best/photo-backup-software/ —
+  ThePhotoStick #24, 5.4, $44.99 one-time; leaders Ente 7.7,
+  PhoneCopy 6.7, PhotoSync 6.7); android.izzysoft.de F-Droid backup
+  list
+  (https://android.izzysoft.de/applists/category/named/file_backup/?lang=en
+  — Immich, PhotoSync, Ente, no ThePhotoStick comparison, no
+  SnapDisk); Restoid (http://interfaces.one/d/mobile-apps/dir_2qdBtb39YWPizYZ4qcTAWAeF
+  — restic-based Android backup, USB OTG among its backends, no
+  ThePhotoStick comparison). None is a ThePhotoStick-vs-Android-USB-
+  app comparison; none mentions SnapDisk. The gap stands ONLY on
+  the head-to-head comparison angle.
+- Honest centre (verified live this run, Nov 22, 2026, and from the
+  code at base 4c5e67d): ThePhotoStick Omni (com.prairieit.thephotostick,
+  by ThePhotoStick / PRAIRIE IT, Inc) is a USB stick with a three-way
+  adapter head (Lightning, USB-C, micro-USB) plus a free companion
+  app, for phones and computers. Play listing, read this run:
+  "Designed to work with only ThePhotoStick Omni devices"; updated
+  Nov 21, 2026; 3.9 from 1,689 ratings (1.62K reviews); backs up
+  photos, videos, music, documents, and contacts; sorts into
+  folders; restores files to the phone. AppBrain, read this run:
+  about 380,000 installs total, around 180 a day over the last 30
+  days, version 4.3.5, Android 8.0 or later, no ads, 187.2 MB, on
+  Play since June 2021. Price, resolved live this run: the offer
+  page charges $69.99 (32 GB), $89.99 (64 GB), $109.99 (128 GB),
+  $149.99 (256 GB), checked Nov 8 (thegadgetians) and Nov 11
+  (topcrate), 2026; the $44.99 in the roundups is the entry price on
+  the brand's own store page, which listed the same sizes at
+  $44.99, $59.99, $84.99, $138.99 on Nov 8, 2026, and the vendor's
+  own blog page shows "Price: $99.99 $44.99" — prices move between
+  the brand's pages and sales, so the article budgets on
+  $69.99–$149.99 and says to check the page before ordering. Newer
+  Omni X, launched April 2026, $59.99–$149.99 by size. Top
+  complaint, re-verified live from the Play listing this run: Doc
+  Cox, Oct 29, 2026 — "A total mess. I followed the tutorial
+  exactly, it ran for over 5 hours, saying it was downloading my
+  pix. I finally paused it to charge my phone. I put the stick in
+  my lap top, not one single photo was on it. I am NOT happy."
+  (1 person found this helpful.) The three-hour version of the same
+  failure is quoted in the competitor file from the Nov 14 Play
+  read: "It proceeds like it is saving my photos. Today it was
+  uploading for 3 hours … I plugged it into my laptop to see if
+  any pictures downloaded. Not one picture. Each folder says it
+  is empty." (182 people found this helpful.) SnapDisk v0.1.2, from
+  the code: not on Google Play yet, Android 7.0 or later; free
+  manual backup, 5 GB per run (ProPrefs.kt:42); Pro $9.99 once for
+  auto-backup on connect and unlimited size (ProPrefs.kt:40,
+  pro_unlock); default run reads the whole MediaStore library,
+  oldest-first, with no folder filter (PhotoQuery.kt:23-35,
+  selection null); every file size-verified after copying
+  (BackupEngine.kt:107, :147); Pause/Stop in the notification
+  (BackupService.kt:113-115); foreground service dataSync
+  (AndroidManifest.xml:38); no restore function; no WakeLock/Doze
+  code — screen-off continuation under battery saver is unverified.
+  The article carries no install count for SnapDisk (none exists)
+  and its ThePhotoStick install figure (380,000) is the AppBrain
+  total re-verified live this run.
