@@ -1273,5 +1273,12 @@
       <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
       <description>A personal-profile app can't see guest-profile photos. Copy them inside the guest profile or move them to the owner profile — then back up to USB, no computer.</description>
     </item>
+    <item>
+      <title>Back up restricted-profile photos to a USB drive — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/restricted-profile-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/restricted-profile-photos-to-usb.html</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>An owner-profile app can't see restricted-profile photos. Copy them inside the restricted profile or move them to the owner profile — then back up to USB.</description>
+    </item>
 </channel>
 </rss>

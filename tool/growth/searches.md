@@ -20248,3 +20248,75 @@ unchanged (already "Back up photos & videos to a USB disk").
   "guest profile" returns matches only as a lock-down tool in docs/lending-phone-photos-
   to-usb.html and docs/child-photos-to-usb.html — no existing photo-backup-from-guest-
   profile guide.
+
+### 181. "Back up photos from an Android restricted profile to a USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers a tablet-direct backup of
+  restricted-profile photos onto a USB drive plugged into the tablet — no computer, oldest-first,
+  one tap, background with progress, Pause and Stop, resume and verification. The generic
+  OTG guides never mention a restricted profile, and the restricted-profile explainers never take the
+  USB step. The gap stands ONLY on that narrow angle: the tablet-direct USB-drive backup of
+  restricted-profile photos, with the copy, the manual fallbacks, and the honest statement about
+  what SnapDisk can and cannot do in one guide.
+- Current top results (scored Nov 23, 2026, live web search):
+  Phrasing 1, "back up photos from Android restricted profile to USB drive" (supervisor,
+  verified this run, not re-run): Wondershare MobileTrans phone-to-USB, groovypost
+  Android-to-USB, FotoSafe back-up-to-USB, TechETips locked-Android, eyefi — all generic OTG,
+  none mentions a restricted profile.
+  Phrasing 2, "move photos out of Android restricted profile tablet export save before deleting"
+  (supervisor, verified this run, not re-run): TechETips locked-files guide (Secure Folder/vault
+  apps — an already-covered class), Google Photos Locked Folder community thread, SamMobile generic
+  move-off-phone, androidexperto library-to-folder, unitsvault lock-photos guide — none mentions
+  a restricted profile.
+  Phrasing 3 (lead, this run), "save photos from restricted profile Android tablet to USB":
+  TechETips locked-phone import, MobileTrans generic phone-to-USB, groovypost generic, Samsung
+  community generic, eyefi generic — none mentions a restricted profile, and none is a
+  dedicated restricted-profile photo-backup-to-USB guide. No dedicated tablet-direct USB-drive
+  guide for restricted-profile photos in any phrasing; the gap stands on the narrow angle.
+- Honest centre (verified from AOSP multi-user docs (source.android.com), appitika, androidayuda,
+  Internet Matters, laptopmag, lbq.org, techbone, and the code at base fdf74ae6, live this run,
+  Nov 23, 2026, not assumed): a restricted profile is a separate Android user profile type —
+  AOSP: it "uses accounts based off the parent user, who can control what apps are available on
+  the restricted profile" and is "available only on tablets and television devices". Underneath,
+  physical internal storage is partitioned into per-user directories, each user runs under a
+  distinct Linux UID range, and one user's apps cannot inspect another user's files — so SnapDisk
+  installed in the owner profile reads only the owner MediaStore library and cannot see
+  restricted-profile photos at all. The owner creates the profile (Settings > System > Multiple
+  users > Add user or profile > Restricted profile) and toggles which apps are visible; hidden
+  apps are not installed in the profile and cannot be launched. A restricted profile starts with
+  no Google account of its own; the profile's user can set one up when they first switch into it
+  (lbq.org), and older Android blocked Play and in-app purchases inside limited profiles
+  (androidayuda). A restricted profile is permanent until the owner deletes it — unlike a guest
+  session, which is wiped when it ends — but deleting it erases all of its local data: AOSP says
+  a profile does not exist beyond the lifetime of the user who created it, and removing a user
+  "wipes all of that profile's apps, accounts, and files immediately, with no way to bring them
+  back afterward" (techbone). There is no Keep-or-Remove prompt on the way out of a restricted
+  profile, as there is when leaving a guest session — Delete is the wipe. The restricted-profile
+  guides give no backup advice at all — not even the guest guides' one line about copying to a
+  shared folder or cloud before deleting — and they name no owner-visible shared folder, so the
+  workable crossings are a cloud account signed in inside the restricted profile or sending the
+  photos to yourself from inside the restricted profile. Restricted profiles are officially
+  supported on Android 5.0+ tablets and many phones hide the option entirely (appitika); if the
+  only option under Add user or profile is Guest, the device does not support restricted profiles.
+  Whether a USB drive appears in the restricted profile's Files app is UNVERIFIED from Android's
+  documentation or any guide found this run — no source answers it either way; the article says
+  to try it and fall back to moving the photos to the owner profile if it doesn't show up.
+  SnapDisk facts from the code at base: Pro $9.99 once (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"),
+  5 GB free per-run cap (ProPrefs.kt:43), oldest-first MediaStore DATE_TAKEN (PhotoQuery.kt:47, :54,
+  sort DATE_TAKEN ASC with DATE_MODIFIED fallback; BackupEngine.kt:9-10), size verification after
+  copy (BackupEngine.kt:106,114), Pause/Stop in the notification (NotificationHelper.kt:128,138;
+  BackupService.kt:113,115), foreground-service dataSync (AndroidManifest.xml:38), FAT32 files >=4
+  GiB skipped with their reason (BackupService.kt:428-433), no INTERNET permission (0 occurrences
+  in the manifest), no WakeLock/Doze code — screen-off continuation under battery saver is
+  unverified. "SnapDisk copies, it never deletes" present — the only .delete() calls in the code are
+  on SnapDisk's own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). The article carries no install count for SnapDisk (none
+  exists) and no VaultDrive figure (the one "VaultDrive" string is the comparison-article
+  link text).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/restricted-profile-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md before writing;
+  "restricted profile" returns 0 matches in WORKLOG.md, searches.md, and feed.xml — no existing
+  photo-backup-from-restricted-profile guide. The only near match is
+  docs/guest-profile-photos-to-usb.html (WL-224) — a different, already-live article about the
+  guest profile, untouched.
