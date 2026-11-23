@@ -19902,3 +19902,75 @@ unchanged (already "Back up photos & videos to a USB disk").
   The article carries no install count for SnapDisk (none exists)
   and its ThePhotoStick install figure (380,000) is the AppBrain
   total re-verified live this run.
+
+### 176. "Back up photos to a VeraCrypt or BitLocker USB drive from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers a whole-library photo backup
+  from an Android phone straight onto a software-encrypted USB drive — VeraCrypt, LUKS, or
+  BitLocker — one tap, background with progress, Pause and Stop, resume and verification,
+  writing plain files onto the mounted volume. The mounting apps copy by hand, the container
+  browsers open a few files, the BitLocker reader copies to internal storage, and the
+  encrypted-stick results are product pitches. The gap stands ONLY on that narrow angle: the
+  software-encrypted volume mounted on the phone, with the mount, the manual copy, and the
+  honest statement about SnapDisk in one guide. The hardware-encrypted-drive half of this
+  topic is already covered by our own WL-212 article (Query 172) and is NOT repeated here.
+- Current top results (scored Nov 23, 2026, live web search):
+  Phrasing 1, "back up photos to encrypted USB drive from Android phone OTG" (supervisor,
+  verified this run, not re-run): our own Huawei article (Huawei Backup encrypted archive,
+  Huawei-only restore), Dr.Fone generic OTG manual copy, a LESOGE encrypted-stick product
+  page, an alibaba generic whole-phone backup guide, and the OTG Master F-Droid page (a tool
+  page, not a photo-backup guide). No dedicated guide for whole-library photo backup to an
+  encrypted USB drive.
+  Phrasing 2, "transfer photos to VeraCrypt BitLocker encrypted USB drive Android phone"
+  (supervisor, verified this run, not re-run): OTG Master (interfaces.one +
+  moylali.github.io), rottenwifi EDS NG VeraCrypt-open guide (browse/copy a few files;
+  filesystem mount needs root), androidcrypt F-Droid page (container browsing), NTFS Reader
+  Softonic page (BitLocker decrypt + copy-to-internal; NTFS read-only). Again, no
+  whole-library photo-backup guide.
+  Phrasing 3 (lead, this run), "backup photos to BitLocker USB drive from Android without
+  computer": the top four results are all our own articles — Samsung, automatic transfer,
+  Pixel, Xiaomi — generic USB backup guides that never mention BitLocker at all. No dedicated
+  guide in any phrasing; the gap stands on the software-encrypted-volume angle.
+- Honest centre (verified from the code at base 048414c and live pages this run, Nov 23,
+  2026, not assumed): Android reads no VeraCrypt / LUKS / BitLocker volume natively. OTG
+  Master (app.fayaz.otgmaster, free, open source GPL-3.0, F-Droid + Google Play, v0.5.2,
+  updated Nov 17, 2026, Android 8.0+, no root) mounts VeraCrypt, LUKS1, LUKS2, and BitLocker
+  (password, 48-digit recovery key, .BEK key file from 0.5.4) and exposes the unlocked volume
+  via DocumentsProvider so Files and other apps can browse it; filesystems inside: FAT32,
+  exFAT, NTFS, ext4. No kernel mount on non-rooted Android — userspace USB mass storage
+  (libaums), verified from the project's own docs page this run. VeraCrypt limits: SHA-256,
+  Whirlpool, Streebog header KDFs not supported; LUKS2 other ciphers refused. SnapDisk
+  itself cannot unlock an encrypted drive: 0 matches for encrypt/cipher/AES/decrypt in
+  app/src/main, and the copy is a byte copy with a size check only
+  (BackupEngine.copyWithResume, BackupEngine.kt:130; verify, BackupEngine.kt:107; Copied
+  only after verify passes, BackupEngine.kt:126). Whether SnapDisk's To folder picker can
+  write to an OTG Master-mounted volume is UNVERIFIED: no real-device test has been run. The
+  code maps the picked SAF tree URI back to a raw /storage/<volume>/<path> path
+  (BackupService.destinationBaseDir, BackupService.kt:592-608) and writes plain files there,
+  so a DocumentsProvider volume with no such path is expected not to work — but that is a
+  reading of the code, not a test; what would prove it is picking a mounted VeraCrypt volume
+  as the To folder on a real phone and running a backup. NTFS-inside-encrypted: NTFS Reader
+  (Softonic, updated Nov 20, 2026) decrypts BitLocker To Go and copies to internal storage;
+  NTFS is read-only on the free tier, NTFS write is a one-time in-app purchase, exFAT/FAT32
+  inside BitLocker read+write free. EDS NG (Sovworks, AppBrain 2.55 from 326 ratings, 46
+  thousand installs, updated Sep 10, 2026, no ads): browse inside the app, filesystem mount
+  needs root. androidcrypt (F-Droid, MIT, free, Android 7.0+, v1.0.16, Aug 17, 2026): browse
+  + copy files between device and VeraCrypt containers, FAT32 only. LESOGE 128 GB encrypted
+  drive (retailer page + manual, read this run): Touch ID/passcode encryption, one-click
+  backup via its dedicated app — but on Android no app is required and the manual says to
+  copy by hand in the file manager; the one-click backup and encryption belong to the iOS
+  app. Huawei Backup encrypted archive: archive only a Huawei phone restores (our own Huawei
+  article). SnapDisk facts from the code at base: Pro $9.99 once (ProPrefs.kt:40, pro_unlock),
+  5 GB free per-run cap (ProPrefs.kt:43), oldest-first MediaStore DATE_TAKEN
+  (PhotoQuery.kt:23-35, :47, :56-58), size verification after copy (BackupEngine.kt:107,
+  :126), Pause/Stop in the notification (BackupService.kt:113-115), foreground-service
+  dataSync (AndroidManifest.xml:38), FAT32 >=4 GiB skip (BackupService.kt:428-433), no
+  restore function, no WakeLock/Doze code — screen-off continuation under battery saver is
+  unverified. "SnapDisk copies, it never deletes" present.
+- Anti-duplicate check (first, before writing — the WL-189 lesson): the brief's suggested
+  slug docs/encrypted-photos-to-usb.html COLLIDES with WL-212's live article (Query 172,
+  173rd how-to, commit debe191, datePublished 2026-11-22, live in feed/sitemap/blog/llms).
+  A grep of that article for veracrypt/bitlocker/luks/"otg master" returns 0 matches, so the
+  software-encrypted-volume angle is new and the two guides do not overlap. New slug
+  docs/veracrypt-bitlocker-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md before writing.
