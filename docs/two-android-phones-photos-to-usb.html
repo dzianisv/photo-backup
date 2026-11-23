@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up two phones' photos to one USB drive</title>
+<meta name="description" content="Back up photos from two Android phones onto one USB drive — one folder per phone, or same-named photos collide and SnapDisk skips the second copy.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/two-android-phones-photos-to-usb.html">
+<meta property="og:title" content="Back up two phones' photos to one USB drive (no computer)">
+<meta property="og:description" content="Back up photos from two Android phones onto one USB drive — one folder per phone, or same-named photos collide and SnapDisk skips the second copy.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/two-android-phones-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/two-android-phones-photos-to-usb.html#article",
+      "headline": "Back up two phones' photos to one USB drive (no computer)",
+      "description": "Back up photos from two Android phones onto one USB drive — one folder per phone, or same-named photos collide and SnapDisk skips the second copy.",
+      "datePublished": "2026-11-23",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/two-android-phones-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/two-android-phones-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can two Android phones back up to the same USB drive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — plug the drive into one phone, back it up, then plug the same drive into the second phone and back that one up. No computer is needed, and no app on either phone knows about the other phone. The one rule is the folders: give each phone its own folder on the drive (SnapDisk's To picker on each phone), because both phones name their photos the same way and the same destination folder would let the second phone's files collide with the first phone's."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if both phones have a photo with the same name?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on where the two copies land and how big they are. SnapDisk builds the destination path from the photo's folder and filename, so DCIM/Camera/IMG_0001.jpg from both phones lands on the same drive path. Its skip check is by path and size only — if the second phone's file has the same name and the same byte size as the file already on the drive, SnapDisk skips it as already copied, and the second phone's different photo is silently missing from the backup. If the sizes differ, the second copy overwrites the first. Different filenames never collide. One folder per phone removes the question entirely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does SnapDisk remove duplicates when two phones share one drive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SnapDisk has no deduplication: it never compares file contents, and its only skip is destination-path-plus-size. Two genuinely identical photos from two phones (the same file sent to both, for example) will be copied twice into two per-phone folders, taking twice the space. That is the honest trade for the per-phone-folder method: it is safe against collisions, but it does not merge identical files. ThePhotoStick's app claims to remove exact duplicates across devices, and VaultDrive gives each phone its own folder instead — neither is SnapDisk's route, and neither is free."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much space do I need on the drive for two phones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At least the two libraries added together, plus headroom — check each phone's photo storage first (Settings > Storage, or the Gallery's storage view) and add the two numbers. If the same photo exists on both phones it is copied twice with the per-phone-folder method, so the drive holds two copies of it. Format the drive exFAT: FAT32 cannot hold a single file over 4 GB, and SnapDisk skips those files instead of failing the whole backup, so a long 4K video on either phone would be silently absent from a FAT32 drive."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/two-android-phones-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up two phones' photos to one USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/two-android-phones-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up two phones' photos to one USB drive</h1>
+  <p class="dek">Two phones, one USB drive, and a trap nobody warns you about: both phones name their photos the same way, so the second phone's copy can silently overwrite — or be skipped as if it were already there. One folder per phone fixes it.</p>
+  <p class="meta">November 23, 2026 · 7 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> Yes, two Android phones can share one USB drive — plug it into the first phone, back it up, then plug the same drive into the second phone and back that one up. No computer, no cloud, no account. But do not point both phones at the same folder on the drive. Both phones name their photos the same way — <code>IMG_20261123_142442.jpg</code>, <code>Screenshot_2026-11-23-14-24-42.png</code>, <code>DSC_0001.jpg</code> — and SnapDisk builds the destination path from the photo's folder and filename, so <code>DCIM/Camera/IMG_0001.jpg</code> from both phones lands on the same drive path. Then its skip check decides by path and size only: if the second phone's file has the same name <em>and</em> the same byte size as the file already on the drive, SnapDisk skips it as already copied, and the second phone's different photo is silently missing from the backup — a green "Backup complete" that did not copy it. If the sizes differ, the second copy overwrites the first. The fix is one folder per phone: on the first phone set SnapDisk's To folder to something like <code>/disk/Phone-1</code>, on the second phone to <code>/disk/Phone-2</code>, and the collision never happens. The honest trade is that SnapDisk has no deduplication — a photo that genuinely exists on both phones is copied twice, taking twice the space — and the rival apps that do merge and dedupe (ThePhotoStick, VaultDrive) are separate paid products, not SnapDisk's route. As of November 23, 2026, no top search result offers a phone-direct, no-computer guide for backing up two Android phones onto one USB drive with the collision spelled out — the pages that exist are product pages for a backup stick or a rival app, a wireless-consolidation guide, or a computer-based sync tool.</p>
+
+  <h2>The trap: two phones, one folder, same names</h2>
+  <p>Start with the filenames, because they are the whole trap and they are easy to miss. Android cameras name photos by timestamp or by sequence, and every phone uses the same patterns: a Pixel or Samsung camera writes <code>IMG_20261123_142442.jpg</code>, a screenshot is <code>Screenshot_2026-11-23-14-24-42.png</code>, and some cameras still write sequential names like <code>DSC_0001.jpg</code>. Two phones in one household do the same things at the same times — the same holiday, the same birthday, both phones screenshotting the same boarding pass within the same second — so identical filenames across two phones are not a freak accident. They are the normal case. A sequential name is worse: two phones that both started counting at <code>DSC_0001</code> will collide on dozens of names, not one.</p>
+  <p>Now what SnapDisk does with those names. The default run reads the whole library from MediaStore, oldest-first, and for each photo it builds the destination from the photo's relative path and filename — the code is <code>File(File(base, item.relativePath), item.displayName)</code> in BackupService.kt:616-621 — so <code>DCIM/Camera/IMG_0001.jpg</code> from either phone lands at <code>/disk/DCIM/Camera/IMG_0001.jpg</code> when the To folder is the default <code>/disk/DCIM</code>. And the skip check is by destination path and size only: <code>destination.exists() &amp;&amp; destination.isFile &amp;&amp; destination.length() == expectedSizeBytes</code> (BackupEngine.kt:102-108) — "Skip only when the destination already holds a file of the same size." There is no content comparison, no hash, anywhere in the code. So when the second phone's run reaches a file whose name and size match a file the first phone already put there, it returns Skipped — correctly, from the engine's point of view, because for one phone re-running its own backup that is exactly the resume behaviour you want. For two phones sharing a folder, it is a silent loss: a different photo, never copied, with no error and no listing. If the sizes differ, the second copy overwrites the first phone's file instead — also silent, and the first phone's photo is gone from the drive. If the names differ, both copies land safely. The trap is narrow — same name, same folder — but it is exactly the case a family backup hits, and nothing in the run warns you about it.</p>
+  <p>Two scope facts before the methods. First, each phone runs its own SnapDisk: the app, its settings, and its From and To folders live on that phone alone, so the To folder you pick on phone 1 has nothing to do with the To folder on phone 2 — you set them separately, and that is what makes the per-phone-folder method work. Second, the free 5 GB per-run cap is per run, per phone: each phone's backup is its own run with its own 5 GB free allowance, and running it again past the cap picks up where it stopped, because files already copied are never copied twice. Pro is a one-time $9.99 purchase per phone, not per drive — each phone that wants auto-backup on connect and unlimited size needs its own Pro. This article is for two Android phones and one plain USB drive, no computer. If one of the two devices is an iPhone, the routes are different — an iPhone needs its own app and its own export — and if a computer is in the loop at all, the transfer-via-computer guides already cover it.</p>
+  <p>One more scope fact, because it decides which of the methods below SnapDisk can help with at all. SnapDisk copies image and video files only. On the default run it reads the phone's MediaStore images and videos tables, with no folder filter — the whole library, oldest-first, whatever folder the photos sit in. On the From-picker route it walks the folder you picked and keeps only recognised photo and video extensions. A backup run that finishes green has copied that phone's photos — it has not touched the other phone, and the count it reports is that phone's count. If the number looks too small for two phones' worth of photos, that is probably why: the second phone was never in the run. Keep that in mind through Methods 1 to 4: the question is never "can SnapDisk copy these photos" in the abstract. It is "which phone is plugged in right now, and which folder on the drive is it writing to."</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search for this job three ways and the results split into four shapes, none of them the narrow job — a phone-direct backup of two Android phones onto one plain USB drive plugged into each phone in turn, no computer, oldest-first, one tap, background with progress, Pause and Stop, resume and verification, with the same-name collision spelled out. The first shape is the backup-stick product page: Photo Backup Stick Omega, sold on Walmart and its own site, whose listing promises "Removes duplicate photos, even if backed up from different devices" and "Automatically identifies and removes exact duplicates, optimizing storage space". That is a product you buy, with its own app, not a guide for the drive you already own — and its dedupe claim is a vendor claim on a store listing, not a tested fact. The review sites that cover it for families say the same thing in plainer words — "Plug the stick into each phone in turn, and the copies are all on the stick" (wiseandwelltech) and "Do one device at a time. Find the charger, plug the stick in, let it run" (cheddarwise) — but they are reviewing the stick, not teaching the plain-drive route, and they never mention what happens when two phones produce the same filename.</p>
+  <p>The second shape is the rival-app page: VaultDrive's own site, which answers the exact question for its own app — "One drive for the family: Each phone gets its own folder, so several phones can share one drive" — and its FAQ repeats it: "Can several phones share one drive? Yes. Each phone gets its own folder on the drive." That is the right answer, and this article uses the same folder-per-phone method — but it is a product page for VaultDrive, whose Pro is $19.99 once, not a how-to for a plain drive and SnapDisk, and it says nothing about the collision that the folder separation exists to prevent. The third shape is wireless consolidation: Nero's DriveSpan, which backs up "several smartphones at the same time" over Wi-Fi into "one central storage location free of duplicates" — a different medium (wireless, not a USB drive in the phone's port) and a different product, and DAEMON Sync, which backs up multiple devices to a desktop computer over the local network — a computer in the loop, which this article excludes. The fourth shape is the cloud non-answer: a Google Photos community thread about syncing photos from multiple devices, where the answer is that Google Photos has no per-device folders and everything appears everywhere. So the gap stands, but only on the narrow angle: the phone-direct, no-computer, plain-drive backup of two Android phones onto one USB drive, with the collision trap stated from the code and the per-phone-folder method as the fix. That is the angle this article is written on.</p>
+
+  <h2>What you need</h2>
+  <p>Two Android phones (Android 7.0 or later for SnapDisk — minSdk 24 in the repo), each with SnapDisk installed from the v0.1.2 APK (it is not on Google Play yet), and one USB drive your phones can read — a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter (most modern Android phones support OTG; if a phone doesn't see the drive, try a different adapter) — with enough space for both libraries added together. Check the size first: look at each phone's photo storage (Settings &gt; Storage, or the Gallery's storage view) and add the two numbers, then add headroom — and remember the per-phone-folder method copies a photo that exists on both phones twice, so a shared library counts twice. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit, and exFAT is the format to use for a two-phone drive.</p>
+  <p>Before any method, decide the folder names. The method only works if the two folders are different, so name them for the phones, not for the dates: <code>Phone-1</code> and <code>Phone-2</code> work, but <code>Den-Pixel</code> and <code>Anya-Galaxy</code> — or whoever's phones they are — are better, because in a year you will not remember which number was which phone. Do the labelling on the drive itself, in the folder names, not on a sticker on the drive: the sticker says whose drive it is, the folders say whose photos are inside. And one warning up front, because it applies to every route below: back up one phone completely before starting the second. The drive is the only copy either phone has made, and a half-finished first phone plus a started second phone is the state where a collision is most likely to be missed.</p>
+
+  <h2>Method 1: SnapDisk, one folder per phone</h2>
+  <p>This is the route to use, because it is the only one that makes the collision impossible by construction. Each phone runs its own SnapDisk with its own To folder, so set a different To folder on each phone before either backup starts. On the first phone, open SnapDisk, tap the To folder picker, and choose — or create — a folder for that phone on the drive, for example <code>/disk/Den-Pixel</code>. On the second phone, do the same with a different folder, for example <code>/disk/Anya-Galaxy</code>. The picker is the Android system folder picker, and the app keeps access to the folder you picked. Then, on the first phone:</p>
+  <ol>
+    <li><strong>Plug in the drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"</li>
+    <li><strong>Tap Backup.</strong> Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally. The default run reads the whole library via MediaStore, not DCIM only, so every photo the gallery sees is covered, whatever folder it sits in. This was verified in the code, not assumed: with no From folder picked, the app queries the MediaStore images and videos tables with no folder filter.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+  <p>Then unplug the drive, plug it into the second phone, and repeat the same four steps there — with that phone's own To folder already set. The second phone's run cannot collide with the first phone's files, because it is writing into a different folder: the same filename on both phones lands on two different drive paths, and the skip check on each phone only ever sees its own folder. Two honest limits. First, the 5 GB free cap is per run, per phone — a phone with a 40 GB library needs eight free runs or one $9.99 Pro purchase on that phone, and the second phone needs the same again. Second, SnapDisk does not dedupe across phones: a photo that exists on both phones — the same file sent to both, or both phones photographing the same moment and producing different files — is copied twice, once per folder, taking twice the space. That is the price of the safe method, and it is stated here rather than discovered on a full drive. If the drive fills up mid-run on the second phone, the run stops with the full error shown; free space by deleting nothing from the drive — move the drive's contents to a bigger drive first, or back up the second phone to a second drive.</p>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. Tap the To picker on each phone and choose a different folder per phone — that one choice is what keeps the two libraries from colliding.</figcaption>
+  </figure>
+
+  <p><strong>Copying only some photos?</strong> If you would rather copy just one folder than the whole library, use the From folder picker: tap it, navigate to the folder, and the run copies only that folder, recursively. The picker route keeps only recognised photo and video extensions. If the drive is unplugged mid-copy, the backup pauses with the full error shown and resumes where it stopped when the drive is back. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+  <p>And the check that matters for this article: after each phone's run, compare the count against what you expected for that phone alone. A green backup that copied everything in the first phone's library has still copied zero of the second phone's photos — they were never in the run. If the second phone's number looks too small, the missing photos are probably still on the second phone, and the run needs to be re-done with that phone's To folder set — not re-run into the first phone's folder. SnapDisk copies, it never deletes — the only files it ever deletes are its own half-finished .part files — so deleting the originals after the check is always your step, never the app's.</p>
+
+  <h2>Method 2: by hand in the Files app, one folder per phone</h2>
+  <p>If you'd rather not install anything, Android's built-in Files app can do the same copy — with the same folder rule, and without any of the automation. On the first phone, plug the drive in, open Files, and create a folder for that phone on the drive — <code>Den-Pixel</code>, say. Then browse to Internal storage, select the photo folders (<code>DCIM</code> for camera photos, <code>Pictures</code> for screenshots and saved images, plus any messaging-app folders), tap Copy, navigate to the phone's folder on the drive, and paste. Wait for the copy to finish before unplugging, and then verify it: plug the drive into another device and open a few photos, and confirm they render. Then do the same on the second phone, into its own folder. The folder rule is the same as in Method 1 — two phones, two folders — and for the same reason: the Files app copy has no collision warning either, and pasting the second phone's <code>DCIM</code> into the first phone's folder overwrites same-named files with no prompt worth trusting.</p>
+  <p>The honest limits of this route are the ones SnapDisk exists to remove. There is no oldest-first order, no progress bar with speed and time left, no Pause and Stop, and no resume if you unplug mid-copy — a manual copy interrupted halfway has to be started again, and working out which files already landed is your job, by comparing counts. There is no per-file verification: the Files app does not check sizes after copying, so a file that copied short looks finished until you open it. And the folder walk is manual: DCIM, Pictures, Screenshots, WhatsApp, Telegram — every folder you forget is a set of photos that never left the phone, and there is no MediaStore whole-library run to catch them. Copy in batches small enough to finish, check the count against what you selected, and open a few files on another device before you trust the drive. And the files on the drive are plain files — anyone who picks up the drive can open them — so if the photos are sensitive, this route protects nothing except against losing the phones.</p>
+
+  <h2>Method 3: one shared folder — the merge, and what it costs</h2>
+  <p>Sometimes one folder is what you actually want: a single merged library on the drive, both phones' photos together, browsable as one collection rather than two. It can be done, but it costs the safety Method 1 buys, and the costs need stating before the steps. Point both phones at the same To folder — the default <code>/disk/DCIM</code>, or a folder you create for the merge — and run each phone in turn. What happens then is exactly the collision described at the top of this article, and it breaks three ways. If the two phones' files have different names, both land safely and the merge works. If they have the same name but different sizes, the second phone's copy overwrites the first phone's file — the first photo is gone from the drive, and nothing records that it was ever there. If they have the same name <em>and</em> the same size, SnapDisk skips the second file as already copied — the second phone's different photo is silently missing, and the run reports success. The merge is safe only when you know the two libraries share no filenames, and you cannot know that without comparing them first.</p>
+  <p>If you still want the merge, compare first, then merge. Before either backup, list the filenames on both phones — in the Files app, or on a computer — and look for overlaps. For the overlapping names, rename one phone's files first, or copy them into that phone's own folder and merge the folders on a computer later, where a rename on collision is a prompt instead of a silent loss. Then run each phone into the shared folder, and after both runs, check the merged folder's count against the two phones' counts added together: if the drive count is smaller, files were skipped or overwritten, and the missing ones are the same-named ones. The one case where the shared folder is genuinely safe is when the two phones never produce the same name — for example, if one phone's camera names are all timestamped and the two phones were never used in the same second, which is a claim about your own usage, not a guarantee from any app. And note what the merge does not do: it does not dedupe. Two genuinely identical files — the same photo sent to both phones — land as one file only if they share a name and a size, in which case one copy is skipped; if they have different names, both are kept, taking twice the space. A merge is not a dedupe. It is two libraries in one folder, collisions included.</p>
+
+  <h2>Method 4: the rival apps that do it for you</h2>
+  <p>Two products are built for exactly this job, and they deserve an honest hearing — because each one does something SnapDisk does not. ThePhotoStick Omni is a USB stick with its own app: plug it into each phone in turn, tap Backup, and the app finds the photos and copies them onto the stick, "leaving the originals in place" — and its store listing claims it "Removes duplicate photos, even if backed up from different devices" and "Automatically identifies and removes exact duplicates, optimizing storage space". The family review sites describe the workflow as one stick, each device in turn, ending with "a copy of everyone's pictures" on something you can hold. The honest limits: it is a product you buy, not a free app for a drive you already own — the stick itself is the purchase, in several capacities — it needs its own companion app on each phone, and the dedupe claim is the vendor's, untested here; the family reviews note it is not automatic (nothing copies until someone plugs it in and presses the button) and that not every phone works with it. If you want dedupe across phones and one object to hold, the stick is the purpose-built answer, and SnapDisk is not it.</p>
+  <p>VaultDrive is the closer rival: an Android and iPhone app that backs photos to a USB drive with no computer, Pro $19.99 once. Its own site gives each phone its own folder — "One drive for the family: Each phone gets its own folder, so several phones can share one drive" — which is the same folder-per-phone method this article recommends, built into the app rather than set by hand in a folder picker. It also checks each file after it lands and resumes where it stopped, like SnapDisk. The honest limits: it is $19.99 once for Pro against SnapDisk's $9.99 once, and the folder-per-phone behaviour is a feature claim on the vendor's own product page, not a tested fact — no independent guide verifies it — while SnapDisk's per-phone To folder is a setting you can see and check yourself on each phone. VaultDrive is the app to pick if you want the folder separation handled for you; SnapDisk is the app to pick if you want to set it yourself on a drive you already own, for half the Pro price, with the collision logic visible in the open code. Neither app deduplicates across phones: VaultDrive's folders keep the two libraries separate, which is the opposite of merging them.</p>
+
+  <h2>Do the two phones' photos get deduplicated?</h2>
+  <p>Short answer: no — not by SnapDisk, and not by the folder method either. Deduplication means recognising that two files are the same photo and keeping one copy. SnapDisk never does that: it has no hash, no content comparison, and no record of what any other phone copied. Its only skip is destination-path-plus-size, which is a resume check, not a dedupe check — it answers "is this file already at this path", not "is this photo already on this drive somewhere". So a photo that exists on both phones is copied twice under Method 1, once into each phone's folder, taking twice the space. Under Method 3, the same photo with the same name and size is skipped once — one copy kept — but that is a collision, not a dedupe: a different photo with the same name and size is skipped the same way, and there is no way to tell the two cases apart from the run's output.</p>
+  <p>The products that claim dedupe do it in their own apps, on their own terms. ThePhotoStick's listing claims it "removes exact duplicates" across devices — exact duplicates, meaning byte-identical files, found by its own app while it scans each device. Nero's DriveSpan promises consolidation "free of duplicates" over Wi-Fi to one central location. Neither claim is verified here, and neither applies to a plain USB drive with SnapDisk: there is no dedupe step in the SnapDisk route at all. If dedupe matters — if the two phones share most of their library, for example after a phone-to-phone transfer, and the drive is small — the honest options are the stick, a computer-side dedupe after the copy (a duplicate-finder on the merged folder, run on a computer, where the files can be compared safely), or accepting the double space. Do not mistake the skip for a dedupe: a skipped file is a file SnapDisk believes is already at that path, and when two phones share a folder, that belief is exactly what loses photos.</p>
+
+  <h2>Checking the drive after both phones</h2>
+  <p>The check is per phone, not per drive, and it has to happen twice — once after each phone's run, before the next phone starts. After the first phone finishes, open the drive on a computer or on the phone itself and count: the folder for phone 1 should hold the number of photos and videos that phone's Gallery shows, and a few opened at random should render fully, videos included. If the count is short, the run stopped early — the 5 GB free cap is the usual cause, and running it again picks up where it stopped. After the second phone finishes, check its folder the same way, against the second phone's count. The drive total should be the two folders added together. If you used the shared-folder merge instead, the check is harder: the merged folder's count should equal the two phones' counts added together, and any shortfall is a skipped or overwritten same-named file — compare the filenames on both phones to find which ones, and re-copy the missing ones into a per-phone folder.</p>
+  <p>Three checks that catch the failures this article is about. First, open a few photos from each phone's folder on a different device — a computer is best — and confirm they render; a file that copied short looks like a photo until you open it. Second, look for the same filename in both folders: if <code>IMG_0001.jpg</code> appears in both, the folders did their job, and each copy is that phone's own photo. Third, check the drive's free space before the second phone starts: the second run needs the second library's size in free space, and a run that stops halfway for lack of space leaves a half-copied folder that looks finished until you count it. And the check that matters most for a family drive: confirm the folders are labelled for the phones, not the dates. A folder called <code>2026-11-23</code> tells you when the backup happened; a folder called <code>Den-Pixel</code> tells you whose photos are inside it when you come back to the drive in a year.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Pointing both phones at the same To folder.</strong> The default <code>/disk/DCIM</code> on both phones is the collision. Same name and same size means the second phone's different photo is skipped as already copied; same name and different size means it overwrites the first phone's photo. Set a different To folder per phone before either backup starts.</li>
+    <li><strong>Trusting a green second run to have copied the second phone.</strong> A run that copied everything in the second phone's library copied zero of the first phone's — and a run into the first phone's folder that skipped same-named files copied fewer than the second phone holds. Check the count per phone, against that phone's Gallery.</li>
+    <li><strong>Mistaking the skip for a dedupe.</strong> SnapDisk's skip answers "is a file of this size already at this path" — it never compares contents. Two different photos with the same name and size are skipped the same way as two copies of the same photo. A merge is not a dedupe.</li>
+    <li><strong>Backing up the second phone before the first is finished and checked.</strong> A half-finished first phone plus a started second phone is the state where a collision is most likely to be missed. One phone completely, checked, then the second.</li>
+    <li><strong>Forgetting the folders outside DCIM on either phone.</strong> Screenshots live in Pictures/Screenshots, WhatsApp and Telegram media in their own folders. SnapDisk's default run covers the whole library via MediaStore, so it catches them — a manual Files-app copy does not, unless you select each folder.</li>
+    <li><strong>Using a FAT32 drive for two libraries.</strong> FAT32 cannot hold a single file over 4 GB, and with two phones the odds that one of them holds a long 4K video are doubled. SnapDisk skips those files and lists them — use exFAT.</li>
+    <li><strong>Buying a second drive when one would do.</strong> Two phones do not need two drives — they need two folders. A second drive is a second copy, which is a different job (the 3-2-1 kind), not a fix for the folder problem.</li>
+    <li><strong>Assuming the free 5 GB cap is per drive.</strong> It is per run, per phone. Each phone gets its own 5 GB free per run, and each phone that wants unlimited size needs its own $9.99 Pro — one purchase does not cover both phones.</li>
+    <li><strong>Assuming the copy keeps running with the screen off.</strong> Unverified — no wake lock, no battery-saver handling in the repo — so keep the phone awake for the run, or check it. Screen-off continuation under battery saver is unverified, and a run that stopped when the screen went dark is the expected failure, not a surprise.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this. With two phones sharing one drive, an unplug mid-run on phone 1 leaves a half-copied folder that phone 2's run cannot tell from a finished one.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> one phone, one folder — the drive is shared, the folders are not. Set the To folder per phone before either backup starts, and check the count per phone, not per drive.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy folders by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. It copies your photos — the ones in your Gallery — oldest-first, with Pause and Stop and a size check on every file. Two phones share one drive by giving each phone its own To folder; the same phone backed up twice never copies a file twice. See also: <a href="transfer-photos-to-usb-automatically.html">Transfer photos to a USB drive automatically (no manual copy)</a>, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="screenshots-to-usb.html">Back up screenshots to USB from Android</a>, <a href="switching-phones-photos-to-usb.html">Back up photos to USB when switching phones</a>, <a href="backup-photos-offline.html">How to back up photos offline on Android — no cloud, no account</a>, <a href="restore-photos-from-usb-to-android.html">Restore photos from USB to Android</a>, and <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive: USB photo backup on Android, compared</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

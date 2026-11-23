@@ -20399,3 +20399,79 @@ unchanged (already "Back up photos & videos to a USB disk").
   docs/guest-profile-photos-to-usb.html (WL-224) and
   docs/restricted-profile-photos-to-usb.html (WL-225) — different, already-live articles about
   the guest profile and the restricted profile, untouched.
+
+### 183. "Back up photos from two Android phones onto one USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers a phone-direct backup of
+  two Android phones onto one plain USB drive plugged into each phone in turn — no computer,
+  oldest-first, one tap, background with progress, Pause and Stop, resume and verification,
+  with the same-filename collision spelled out. The pages that exist are product pages for a
+  backup stick or a rival app, a wireless-consolidation guide, or a computer-based sync tool.
+  The gap stands ONLY on that narrow angle: the phone-direct, no-computer, plain-drive backup
+  of two Android phones onto one USB drive, with the collision trap stated from the code and
+  the per-phone-folder method as the fix.
+- Current top results (scored Nov 23, 2026, live web search):
+  Phrasing 1, "back up photos from two phones to one USB drive merge deduplicate Android"
+  (lead, this run): Photo Backup Stick Omega listings (Walmart, Android Authority deals) —
+  product pages whose vendor copy claims "Removes duplicate photos, even if backed up from
+  different devices"; Nero Knowhow "Backup several smartphones at the same time" — wireless
+  DriveSpan consolidation, not a USB drive; WITNESS "Backing Up Phone Media Without Internet
+  or a Computer" — OTG/wireless drive section, one phone at a time; DAEMON Sync (webupd8) —
+  multiple devices to a desktop computer, needs a computer; Google Photos community thread
+  about multi-device sync — cloud, no per-device folders. No dedicated how-to for two Android
+  phones onto one USB drive, no computer.
+  Phrasing 2, "two Android phones backup photos same USB flash drive one drive family photos"
+  (lead, this run): VaultDrive's own product page (coticsy.com) — "One drive for the family:
+  Each phone gets its own folder, so several phones can share one drive" and FAQ "Can several
+  phones share one drive? Yes. Each phone gets its own folder on the drive" — a rival-app
+  product page, not a how-to, and it says nothing about the collision the folders prevent;
+  jesave 4-in-1 USB flash drive buying guide — hardware, not a backup guide; cuiet "7 Best
+  Photo Storage Device (2026)" — roundup, ThePhotoStick Omni as the family pick; WITNESS
+  wireless-drive section again. No dedicated how-to for the plain-drive Android route.
+  Phrasing 3, "back up photos from multiple phones onto one USB drive without computer merge"
+  (lead, this run): wiseandwelltech PhotoStick family guide — "Plug the stick into each phone
+  in turn, and the copies are all on the stick"; cheddarwise "Where's the Second Copy of the
+  Family Photos?" — same stick, "Do one device at a time"; VaultDrive page again; cuiet
+  roundup again; photobackupstick.com — "Back up multiple devices with one stick", "No
+  duplicates! Remembers what you backed up and removes exact duplicates" (vendor claim).
+  All three phrasings: no independent how-to guide for two Android phones, one plain USB
+  drive, no computer, with SnapDisk — and none states the same-name collision.
+- Honest centre (verified from the code at base 6bdf8ed5 and the live sources above, this run,
+  Nov 23, 2026, not assumed): SnapDisk builds the destination path from the photo's relative
+  path and filename — File(File(base, item.relativePath), item.displayName)
+  (BackupService.kt:616-621) — so DCIM/Camera/IMG_0001.jpg from both phones lands on the same
+  drive path when the To folder is the default /disk/DCIM (BackupPrefs.kt:53). The skip check
+  is by destination path and size only — destination.exists() && destination.isFile &&
+  destination.length() == expectedSizeBytes (BackupEngine.kt:102-108), "Skip only when the
+  destination already holds a file of the same size" — no content comparison, no hash, anywhere
+  in the code. Same name and same size at the same path: the second phone's different photo is
+  silently skipped as already copied. Same name, different size: the second copy overwrites the
+  first. Different names never collide. The fix is one folder per phone via each phone's own To
+  folder picker — each phone runs its own SnapDisk with its own settings, so the To folder set
+  on phone 1 has nothing to do with the To folder on phone 2. Android cameras name photos by
+  timestamp (IMG_YYYYMMDD_HHMMSS.jpg, Screenshot_YYYY-MM-DD-HH-MM-SS.png) or sequence
+  (DSC_0001.jpg), so identical filenames across two phones are the normal case, not a freak
+  accident. SnapDisk has no deduplication: a photo that exists on both phones is copied twice
+  under the per-phone-folder method. ThePhotoStick's dedupe ("removes exact duplicates") and
+  Nero DriveSpan's "free of duplicates" are vendor claims, untested here. VaultDrive Pro is
+  $19.99 once (its own product page, live this run); SnapDisk Pro is $9.99 once
+  (ProPrefs.kt:40), 5 GB free per-run cap per phone (ProPrefs.kt:43), oldest-first MediaStore
+  DATE_TAKEN (PhotoQuery.kt:47, :54, sort DATE_TAKEN ASC with DATE_MODIFIED fallback;
+  BackupEngine.kt:9-10), size verification after copy (BackupEngine.kt:107,108), Pause/Stop in
+  the notification (NotificationHelper.kt:128,138; BackupService.kt:113,115),
+  foreground-service dataSync (AndroidManifest.xml:38), FAT32 files >=4 GiB skipped with their
+  reason (BackupService.kt:428-433), no INTERNET permission (0 occurrences in the manifest),
+  no WakeLock/Doze code — screen-off continuation under battery saver is unverified, no
+  encryption code in the app source (0 matches in the 16 main Kotlin files).
+  "SnapDisk copies, it never deletes" present — the only .delete() calls in the code are
+  on SnapDisk's own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). The article carries no install count for SnapDisk (none
+  exists) and no VaultDrive install figure.
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/two-android-phones-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md before writing;
+  "two phone" / "multiple phone" / "merge" / "dedupe" return 0 article matches in docs/ and
+  searches.md — no existing two-phones-to-one-drive guide. The near matches are
+  docs/switching-phones-photos-to-usb.html (transfer to a NEW phone, a different angle —
+  destination change, killed Nov 22 20:24) and docs/snapdisk-vs-vaultdrive.html (comparison
+  article, 0 multi-phone/family matches) — different, already-live articles, untouched.

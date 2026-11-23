@@ -1287,5 +1287,12 @@
       <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
       <description>A personal-profile app can't see secondary-user photos. Copy them inside the secondary user or move them to the owner profile — then back up to USB.</description>
     </item>
+    <item>
+      <title>Back up two phones' photos to one USB drive — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/two-android-phones-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/two-android-phones-photos-to-usb.html</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Back up photos from two Android phones onto one USB drive — one folder per phone, or same-named photos collide and SnapDisk skips the second copy.</description>
+    </item>
 </channel>
 </rss>
