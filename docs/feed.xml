@@ -1238,5 +1238,12 @@
       <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
       <description>One is a $9.99 app that copies to any USB drive; the other is a $69.99–$149.99 stick that only works with its own app. Here is how they actually differ, from the facts we could verify as of November 2026.</description>
     </item>
+    <item>
+      <title>Back up photos to a VeraCrypt or BitLocker USB drive from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/veracrypt-bitlocker-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/veracrypt-bitlocker-photos-to-usb.html</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Back up photos from Android to a VeraCrypt or BitLocker USB drive: mount it with OTG Master, then copy by hand. What works, and where SnapDisk fits.</description>
+    </item>
 </channel>
 </rss>

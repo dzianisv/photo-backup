@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up photos to a VeraCrypt or BitLocker USB drive</title>
+<meta name="description" content="Back up photos from Android to a VeraCrypt or BitLocker USB drive: mount it with OTG Master, then copy by hand. What works, and where SnapDisk fits.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/veracrypt-bitlocker-photos-to-usb.html">
+<meta property="og:title" content="Back up photos to a VeraCrypt or BitLocker USB drive from Android">
+<meta property="og:description" content="Back up photos from Android to a VeraCrypt or BitLocker USB drive: mount it with OTG Master, then copy by hand. What works, and where SnapDisk fits.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/veracrypt-bitlocker-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/veracrypt-bitlocker-photos-to-usb.html#article",
+      "headline": "Back up photos to a VeraCrypt or BitLocker USB drive from Android",
+      "description": "Back up photos from Android to a VeraCrypt or BitLocker USB drive: mount it with OTG Master, then copy by hand. What works, and where SnapDisk fits.",
+      "datePublished": "2026-11-23",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/veracrypt-bitlocker-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/veracrypt-bitlocker-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can Android open a VeraCrypt USB drive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not on its own. Android has no VeraCrypt, LUKS, or BitLocker support, so a plugged-in encrypted drive shows up as nothing at all. OTG Master (free, open source, Android 8.0 or later, no root) mounts VeraCrypt, LUKS, and BitLocker drives and exposes the unlocked volume through a DocumentsProvider, so the Files app can browse it — then you copy photos by hand."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can SnapDisk back up photos to a BitLocker USB drive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not verified. SnapDisk cannot unlock an encrypted drive — it has no encryption code at all — and whether its To folder picker can write to an OTG Master-mounted volume is unverified: no real-device test has been run. The code maps the picked folder back to a raw /storage path, and a DocumentsProvider volume has no such path, so the mounted-volume route is expected not to work — but that is a reading of the code, not a test."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I back up photos to a VeraCrypt drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, for the mount-and-copy route: plug the drive into the phone with an OTG adapter, unlock it in OTG Master, and copy photos in the Files app. What does not exist yet is a one-tap whole-library backup — oldest-first, background with progress, Pause and Stop, resume, and per-file verification — straight onto a VeraCrypt or BitLocker drive."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SnapDisk on Google Play yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — the Play listing is being prepared. Until then, install the v0.1.2 APK from the GitHub release page. It needs Android 7.0 or later."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/veracrypt-bitlocker-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up photos to a VeraCrypt or BitLocker USB drive from Android",
+          "item": "https://dzianisv.github.io/photo-backup/veracrypt-bitlocker-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up photos to a VeraCrypt or BitLocker USB drive from Android</h1>
+  <p class="dek">Android can't open a VeraCrypt, LUKS, or BitLocker drive at all — plug one in and the phone sees nothing. The drive has to be unlocked first, and the only route that does it without a computer or root is a mounting app.</p>
+  <p class="meta">November 23, 2026 · 4 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> Android reads no VeraCrypt, LUKS, or BitLocker volume natively — plug an encrypted drive into the phone and nothing mounts. OTG Master (free, open source, Android 8.0 or later, no root, version 0.5.2, updated November 17, 2026) unlocks all three and exposes the volume through a DocumentsProvider, so the Files app can browse it — then you copy photos by hand. That route is manual: no top result offers a one-tap whole-library backup — oldest-first, background with progress, Pause and Stop, resume, and verification — onto a VeraCrypt or BitLocker drive. SnapDisk itself cannot unlock an encrypted drive — it has no encryption code at all, verified by reading the code — and whether its To folder picker can write to an OTG Master-mounted volume is UNVERIFIED: no real-device test has been run, and the code maps the picked folder back to a raw /storage path no DocumentsProvider volume has. SnapDisk <strong>copies, it never deletes</strong> — free up to 5 GB per run, Pro $9.99 once.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search "back up photos to encrypted USB drive from Android phone OTG" and the top results are our own Huawei article (Huawei Backup's encrypted archive — an archive only a Huawei phone restores, not plain photo files), Dr.Fone's generic OTG manual copy, a LESOGE product page, and the OTG Master F-Droid page — a tool page, not a guide. Search "transfer photos to VeraCrypt BitLocker encrypted USB drive Android phone" and you get OTG Master (its project page and its directory listing), the rottenwifi EDS NG guide (browse and copy a few files; a filesystem mount needs root), the androidcrypt F-Droid page, and the NTFS Reader page (BitLocker decrypt, copy to internal storage). Search "backup photos to BitLocker USB drive from Android without computer" and the top four results are all our own articles — Samsung, automatic transfer, Pixel, and Xiaomi — generic USB backup guides that never mention BitLocker at all. No dedicated guide for whole-library photo backup to a VeraCrypt or BitLocker drive exists in any of the three phrasings. That is the gap this article fills, only on this narrow angle: the software-encrypted volume mounted on the phone, with the backup step named honestly. Our earlier guide, <a href="encrypted-photos-to-usb.html">Back up photos to an encrypted USB drive from Android</a>, covers the other half — hardware-encrypted drives, encrypting first, vault apps, and the Huawei archive — and says nothing about VeraCrypt, BitLocker, LUKS, or OTG Master.</p>
+
+  <h2>What you need</h2>
+  <p>An Android phone with OTG support (if the phone doesn't see a plain USB drive, it won't see an encrypted one either), a USB-C OTG adapter if the drive is USB-A, the encrypted drive itself — a VeraCrypt, LUKS, or BitLocker volume, made on a computer — and the password, recovery key, or key file. Without the unlock credential there is no route at all. OTG Master needs Android 8.0 or later; SnapDisk 7.0 or later. One format note: FAT32 can't hold a single file over 4 GB, so a very long video won't fit — SnapDisk skips those files and lists them instead of failing the whole backup. exFAT has no such limit, so pick exFAT inside if you are making the volume fresh.</p>
+
+  <h2>Why Android can't open an encrypted drive on its own</h2>
+  <p>Android mounts FAT32 and exFAT drives itself when you plug them in — that is why the plain-drive guides work with the Files app alone. VeraCrypt, LUKS, and BitLocker are different: the drive's contents are scrambled until something unlocks the volume header with your password or key, and Android ships no code that does that. Plug an encrypted drive into a phone and the phone sees an unrecognised partition, or nothing at all — no prompt, because there is nothing to open with. The mounting apps below do the unlocking: they read the drive's raw sectors, unlock the volume in userspace, and hand the decrypted files to Android through the Storage Access Framework, so the Files app can browse them. There is no official VeraCrypt app for Android, and VeraCrypt's own support page names EDS as a third-party option, not an endorsement. Two limits follow. First, the mount is not a kernel mount on a non-rooted phone — OTG Master's own documentation says so — so apps that need a real filesystem path, rather than a DocumentsProvider tree, may not be able to use the volume at all. Second, not every volume unlocks: OTG Master does not support VeraCrypt volumes whose header key derivation is SHA-256, Whirlpool, or Streebog, and it refuses LUKS2 volumes with another cipher or key size, dm-integrity, or an unfinished reencryption. Check your volume's settings on the computer first.</p>
+
+  <h2>Method 1: mount it with OTG Master, copy by hand in Files</h2>
+  <p>This is the route that works today, and it is manual. OTG Master (app.fayaz.otgmaster, free and open source under the GPL-3.0, on F-Droid and Google Play, version 0.5.2, updated November 17, 2026) mounts VeraCrypt, LUKS1, LUKS2, and BitLocker volumes — BitLocker with its password, 48-digit recovery key, or .BEK key file — and reads Mac APFS drives without root. The steps: plug the drive in through OTG, open OTG Master, grant it USB host permission, pick the volume, enter the password or recovery key, and the unlocked volume appears in Android's built-in Files app. Then copy by hand: open Files, pick the photos in DCIM, Copy, choose the drive, paste. It works, and it is the only route here that writes plain photo files onto a VeraCrypt or BitLocker drive with no computer and no root. Its limits are the ones that matter for a backup. The copy is by hand — select, copy, paste, repeat — with no whole-library run, no oldest-first order, no background progress with Pause and Stop, no resume if you unplug mid-copy, and no check that every file actually arrived. OTG Master 0.5.0 and later has its own folder-backup feature (plain dated copies or restic snapshots, on a schedule), but that copies a folder you point it at — not a photo library, oldest-first, with progress, Pause and Stop, and verification. For a few hundred photos, the manual route is fine. For a whole library you re-run every week, it is a chore — which is exactly the gap no current result fills.</p>
+
+  <h2>Method 2: SnapDisk and the mounted volume — what is verified, what is not</h2>
+  <p>SnapDisk is the one-tap half of this job, and on an encrypted volume it is the half that is not proven. First, what SnapDisk does not do: it cannot unlock an encrypted drive. The app has no encryption code at all — a search of the whole app source for encrypt, cipher, AES, and decrypt returns zero matches, verified in the code at the current release — and its copy is a byte copy with a size check only, so the protection has to come from the drive, never from the app. Second, the question that decides whether SnapDisk and OTG Master combine at all: whether SnapDisk's To folder picker can write to an OTG Master-mounted volume. Whether SnapDisk can write to an OTG Master-mounted volume is UNVERIFIED: no real-device test has been run. What the code says is discouraging. SnapDisk's To folder picker is the Android system folder picker — but the backup does not write through the picked SAF URI. It maps the tree URI back to a raw path, /storage/&lt;volume&gt;/&lt;path&gt;, and writes plain files there, with resume and a size check on every file. A volume OTG Master exposes through its DocumentsProvider has no such /storage path, so the mounted-volume route is expected not to work through SnapDisk's To picker — but that is a reading of the code, not a test. What would prove it: pick an OTG Master-mounted VeraCrypt volume as SnapDisk's To folder on a real phone and run a backup; if files land on the drive, the route works. Until then, do not plan a backup around the combination. What SnapDisk does do, once the drive is one Android itself can write to, is the one-tap copy: plug the drive in, tap Backup, and the whole photo library copies oldest-first in the background — images and videos from the MediaStore library, no folder filter — with progress, Pause and Stop, resume, and a size check on every file. Free: manual backup, 5 GB per run. Pro is $9.99 once for auto-backup on connect and unlimited size. SnapDisk v0.1.2 is not on Google Play yet; it needs Android 7.0 or later and has no internet permission or restore function. Screen-off continuation under battery saver is unverified (no wake lock or battery-saver code in the repo).</p>
+
+  <h2>Method 3: BitLocker drives and NTFS Reader — the read-only catch</h2>
+  <p>If the drive is BitLocker, the other named tool is NTFS Reader: USB+Bitlocker (dev.stephenkingston.ntfsreader). Its listing says it mounts NTFS and exFAT drives, decrypts BitLocker To Go volumes with the password or 48-digit recovery key, and offers file browsing, media streaming, and copy-to-internal storage with progress. Reading NTFS is free, read and write of exFAT and FAT32 is free including inside BitLocker, and NTFS write unlocks with a single one-time in-app purchase. Two catches, both worth stating before you buy anything. First, the free tier is read-only on NTFS: Softonic's page for the app, updated November 20, 2026, lists "NTFS volumes are read-only; no NTFS write support" among its cons, and the listing's own text agrees that NTFS write is the paid unlock. A BitLocker drive with NTFS inside is therefore read-only until you pay — you can pull photos off it, not back photos onto it. A BitLocker drive with exFAT or FAT32 inside is full read and write, free. Second, the copy direction the app is built for is drive-to-phone: backing photos onto the drive is a manual copy inside the app, one selection at a time — no whole-library run, no oldest-first, no Pause and Stop, no resume, no verification. The practical rule: if your BitLocker drive has NTFS inside, either pay the one-time NTFS unlock, or reformat the inside to exFAT on a computer first (copy the contents off — formatting erases it). If the drive is VeraCrypt or LUKS, NTFS Reader does not help at all — OTG Master is the one that covers all three.</p>
+
+  <h2>Method 4: EDS NG and androidcrypt for VeraCrypt containers</h2>
+  <p>Two more apps open VeraCrypt containers on Android, and both are container browsers, not backup apps. EDS NG, from Sovworks, is the practical third-party option the rottenwifi guide documents for an existing VeraCrypt container: install it, open the container inside the app, browse the contents, and copy or share only the files you need. On an unrooted phone that is the whole story — you browse inside EDS NG, and a filesystem mount needs root, which EDS NG documents as a requirement. EDS NG also supports TrueCrypt, LUKS, EncFS, CryFS, GoCryptFS, and BitLocker, and it is paid software with features sold as add-on modules. AppBrain, read this run, rates it 2.55 from 326 ratings, with 46 thousand installs, updated September 10, 2026, no ads. androidcrypt is the free, open-source alternative on F-Droid (MIT licence, Android 7.0 or later, version 1.0.16, August 17, 2026): it opens VeraCrypt containers made on Windows, Mac, or Linux and can create new ones on the phone; it browses files inside containers and copies files between the device and encrypted volumes. FAT32 only, and the copy is by hand — no whole-library run, no automation. A third F-Droid app, Vault Explorer, opens all three container types too — same shape, browse and copy by hand. None of them is a photo backup: none takes the whole library, oldest-first, in the background, with progress, Pause and Stop, resume, and verification.</p>
+
+  <h2>Method 5: encrypted sticks and hardware-encrypted drives</h2>
+  <p>There is a second family of "encrypted USB drive" that has nothing to do with VeraCrypt or BitLocker: sticks whose encryption lives in the stick and its companion app. The LESOGE 128 GB encrypted drive is the one the search results keep surfacing: Touch ID and passcode encryption, one-click backup through its dedicated app. The retailer's own page contradicts itself: it promises one-click backup through the dedicated app, and in the same listing says Android needs OTG enabled and "no additional app is required for Android". The manual resolves it: on Android there is no app — you plug the drive in and copy by hand in the file manager, while the one-click backup and encryption belong to the iOS app. On Android, the LESOGE is a manual-copy stick with an encryption story that mostly happens on iPhones. The other half of this family is the hardware-encrypted drive, which our earlier encrypted-USB guide covers in full: the iStorage datAshur PRO2, a PIN typed on the drive, AES-XTS 256-bit hardware encryption, FIPS 140-2 Level 3, behaving as a normal flash drive once unlocked — and the same caveat, that no real-device test of SnapDisk against one has been run. Huawei Backup is the contrast case: an encrypted archive only a Huawei phone can restore — covered in <a href="huawei-photos-to-usb.html">our Huawei guide</a>. If what you want is a folder of plain photos you can open on any computer, none of these three is it.</p>
+
+  <h2>How to check the backup actually worked</h2>
+  <p>Whichever method you used, the backup is only a backup once you have confirmed the copy. First, unmount the volume in the mounting app (OTG Master has an unmount action; EDS NG wants the container closed before you eject), unplug the drive, plug it back in, unlock it again, and open a few photos on it — not from the phone's gallery, which may be showing cached thumbnails, but from the drive itself, in the Files app. Second, count: compare the number of files in a folder on the drive with the number in the matching album on the phone — a manual Files copy gives you no count, so the count is your step. Third, check the sizes: a photo that copied halfway is a photo that looks fine as a thumbnail and fails when you open it. Open three or four full-size. Fourth, the encrypted-only check: plug the drive into a computer, open the volume there, and confirm the same files open. That proves the backup is a real copy you can open anywhere with the password. Only after all four checks should you delete anything from the phone — and keep the password somewhere safe, separate from the drive.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Assuming the phone will prompt for a password.</strong> Android has no VeraCrypt, LUKS, or BitLocker support. Plug an encrypted drive in with no mounting app installed and the phone sees nothing — that silence is not a broken drive, it is the missing unlock step.</li>
+    <li><strong>Planning a backup around SnapDisk plus a mounted volume.</strong> Whether SnapDisk can write to an OTG Master-mounted volume is UNVERIFIED, and the code reads against it: the backup maps the picked folder to a raw /storage path, which a DocumentsProvider volume does not have. Use the manual Files copy until a real-device test proves otherwise.</li>
+    <li><strong>Assuming a VeraCrypt volume will unlock.</strong> OTG Master refuses VeraCrypt volumes with SHA-256, Whirlpool, or Streebog header key derivation, and LUKS2 volumes with another cipher or key size, dm-integrity, or an unfinished reencryption.</li>
+    <li><strong>Backing up onto a BitLocker NTFS drive without checking the write.</strong> On NTFS Reader's free tier, NTFS is read-only — you can pull photos off but not put them on. NTFS write is a one-time purchase; exFAT or FAT32 inside BitLocker is read and write, free.</li>
+    <li><strong>Mistaking a container browser for a backup.</strong> EDS NG, androidcrypt, and Vault Explorer open encrypted containers and copy a few files by hand. None of them runs a whole-library backup with progress, Pause and Stop, resume, and verification.</li>
+    <li><strong>Deleting before verifying.</strong> Copy, unmount, replug, unlock, open a few photos from the drive, count, and check the volume on a computer — then delete from the phone, never the other way round. And keep the password somewhere safe: without it, the backup is unreadable.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> unlock first, copy second, verify third — and never plan the backup around a combination nobody has tested. The mount is proven; the manual copy is proven; SnapDisk onto a mounted volume is not.</p>
+  </div>
+
+  <p>If you already have a VeraCrypt or BitLocker drive, the route today is OTG Master plus the Files app: free, no root, no computer. If you don't have an encrypted drive yet and want the one-tap backup, start with a plain exFAT drive and <a href="./">SnapDisk</a> — free, no ads, no account, no cloud — and add the encryption later, once the mounted-volume route has been tested on a real phone. See also: <a href="encrypted-photos-to-usb.html">Back up photos to an encrypted USB drive from Android</a> and <a href="ntfs-photos-to-usb.html">Back up photos to an NTFS USB drive from Android</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
