@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up work-profile photos to a USB drive from Android</title>
+<meta name="description" content="A personal-profile app can't see work-profile photos. Copy them inside the work profile, share to personal, or use cloud — then back up to USB, no computer.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/work-profile-photos-to-usb.html">
+<meta property="og:title" content="Back up work-profile photos to a USB drive from Android (no computer)">
+<meta property="og:description" content="A personal-profile app can't see work-profile photos. Copy them inside the work profile, share to personal, or use cloud — then back up to USB, no computer.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/work-profile-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/work-profile-photos-to-usb.html#article",
+      "headline": "Back up work-profile photos to a USB drive from Android (no computer)",
+      "description": "A personal-profile app can't see work-profile photos. Copy them inside the work profile, share to personal, or use cloud — then back up to USB, no computer.",
+      "datePublished": "2026-11-23",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/work-profile-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/work-profile-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can SnapDisk back up photos from my work profile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SnapDisk installed in your personal profile can only see your personal-profile photos — Android keeps work and personal profiles in separate storage areas, and a file path that is valid in one profile is not valid in the other. SnapDisk's default run reads the personal profile's MediaStore library, oldest-first, so work-profile photos are simply not in it. The photos have to leave the work profile first — by copying inside the work profile, by sharing to a personal app if your IT policy allows it, or through a work-profile cloud account — and only then can SnapDisk back them up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I copy work-profile photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Try the work profile's own file manager first: plug the drive into the phone, open the Files app with the briefcase badge, and look for the USB drive. If it appears, select the photos and copy them to the drive by hand — no computer needed. Whether the drive appears in the work profile is unverified from Android's documentation, so if it does not show up, that route is closed on your phone and the fallback is sharing the photos to a personal app (if IT allows it) or uploading them through a work-profile cloud account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I move photos from a work profile to my personal profile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Share them from the work app: select the photos in the work Gallery or work Photos app, tap Share, and — if your IT policy allows it — the share sheet offers your personal apps under a Personal tab. Sharing from work to personal is blocked by default on personally-owned devices, and an admin can block it outright, so if the Personal tab is missing, the route is closed and you should ask IT what backup method is approved rather than trying to work around the management controls. Copy and paste from work to personal is blocked on many managed devices by the same policy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my work-profile photos when I leave my job?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Deleting the work profile deletes all of its local data — Android Enterprise warns that after the work profile is deleted, all local data on the device within that profile is deleted. That includes every photo stored in work-profile apps. Back the photos up and verify the copy on another device before the profile is removed; your work account data stays reachable from a computer or browser, but local files deleted with the profile do not come back."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/work-profile-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up work-profile photos to a USB drive from Android (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/work-profile-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up work-profile photos to a USB drive from Android</h1>
+  <p class="dek">A personal-profile app cannot see your work photos — Android keeps the two profiles in separate storage. The backup has to start inside the work profile, or the photos have to cross to personal first. Here are the routes that actually work, and the ones that don't.</p>
+  <p class="meta">November 23, 2026 · 6 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> SnapDisk installed in your personal profile <strong>cannot</strong> back up work-profile photos — Android gives the work and personal profiles separate storage areas, and a file path valid in one profile is not valid in the other, so your personal apps simply never see the work photos. There are four honest routes, each with its own limit. (1) Copy inside the work profile with the work profile's own file manager — the only route that needs no crossing and no cloud — but whether a USB drive even appears in the work profile's Files app is <strong>unverified</strong> from Android's documentation, so try it and fall back if it doesn't show up. (2) Share from the work Gallery to a personal app — the share sheet offers personal apps only if your IT policy allows it; sharing work to personal is blocked by default on personally-owned devices, and copy/paste work to personal is blocked on many managed devices. (3) A work-profile cloud account (OneDrive or Google Drive inside the work profile) as a bridge — a fallback, <strong>not</strong> a USB backup, and the copy dies with the work account if you lose access to it. (4) Installing SnapDisk inside the work profile — the work Play Store is managed and SnapDisk isn't on Google Play at all, and side-loading is usually IT-blocked, so do not plan on this route. The sharpest motive is leaving the job: deleting a work profile deletes all of its local data, so back the photos up and verify the copy <strong>before</strong> the profile is removed. SnapDisk's one-tap copy works once the photos are in the personal profile — free up to 5 GB per run, Pro $9.99 once — and SnapDisk copies, it never deletes. As of November 23, 2026, no top search result offers a phone-direct USB-drive backup of work-profile photos — the generic OTG guides never mention a work profile, the profile-sharing explainers never take the USB step, and the one guide about backing up before removing a work profile sends the USB copy through a cable to a computer.</p>
+
+  <h2>SnapDisk cannot see your work photos — say it first</h2>
+  <p>This is the fact the whole article turns on, so here it is with the evidence, not the claim. Android's own developer documentation on work profiles says it plainly: "Since the personal and work profiles have separate storage areas, a file URI that is valid on one profile is not valid on the other." A work profile is a separate, IT-controlled environment on the same phone — the apps in it, and the data in those apps, live apart from your personal apps and data. SnapDisk installed in your personal profile reads your personal profile's MediaStore library — the images and videos tables, oldest-first by date taken, verified in the code — and work-profile photos are not in that library. They are not hidden, or locked, or waiting for a permission: they are in a different storage area that your personal apps cannot reach.</p>
+  <p>So the first step is not a backup method at all. It is finding out which profile holds the photos. Work-profile apps carry a briefcase badge on their icon. Photos taken with the work camera app, saved inside a work app, or received as attachments in a work email or chat app live in the work profile. Photos taken with your personal camera, and everything in your personal Gallery, live in the personal profile — and those are the ones SnapDisk can already back up. If you are not sure, open both Galleries: the work one (briefcase badge) and the personal one, and see which shows the photos you care about. The rest of this article is about the photos that live in the work one.</p>
+  <p>One more scope fact before the methods, because it decides which of them SnapDisk can help with at all. SnapDisk copies image and video files only. On the default run it reads the phone's MediaStore images and videos tables, with no folder filter — the whole personal library, oldest-first, whatever folder the photos sit in. On the From-picker route it walks the folder you picked and keeps only recognised photo and video extensions. A backup run that finishes green has copied your personal photos — it has not touched the work profile, and the count it reports is the personal count. If the number looks too small for what you expected, that is probably why: the work photos were never in the run. Keep that in mind through Methods 1 to 4: the question is never "can SnapDisk copy these photos" in the abstract. It is "are these photos in the profile SnapDisk runs in."</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search for this job three ways and the results split into three shapes, none of them the narrow job — a phone-direct backup of work-profile photos onto a USB drive plugged into the phone, no computer, oldest-first, one tap, background with progress, Pause and Stop, resume and verification. The first shape is the generic OTG copy guide: Dr.Fone's "transfer photos from Android to a USB flash drive", Pixoneye, FotoSafe, and our own automatic-transfer article. They all describe the same steps — plug the drive in, open the file manager, copy DCIM by hand — and none of them mentions a work profile at all. They assume every photo on the phone is visible to the file manager doing the copying, which is exactly what is false on a phone with a work profile.</p>
+  <p>The second shape is the profile-sharing explainer: the Intune MDM manual on data sharing between work and personal profiles, the How-To Geek profiles explainer, the appitika work-profile setup guide, and a Maine IT migration document. These explain the boundary — what can and cannot cross between profiles, and how an admin controls it — but none of them is a photo-backup-to-USB guide. The USB leg is missing everywhere: they stop at "share the file to the other profile" and never take the step onto a drive. The Maine IT document does confirm the sharpest motive, in plain words: removing a work profile deletes all its data, so "ensure that any needed data is backed up before removing the work profile." It just doesn't say how to get that data onto a USB drive.</p>
+  <p>The third shape is the closest near-miss, and it is worth naming honestly: a guide titled "Back Up Galaxy Photos and Files Before Removing a Work Profile" (umatechnology.org), found on the third phrasing scored for this article. It is Samsung-specific, it is about exactly the right problem — copy and verify anything you need before removing the profile, because Android deletes the profile's local data when it is deleted — and its methods are a USB cable to a computer, Google Photos, another approved cloud service, or standard Android device backup. Its USB method needs a computer. There is no route in it for a drive plugged directly into the phone. So the gap stands, but only on the narrow angle: the phone-direct USB-drive backup of work-profile photos, with the copy, the manual fallback, and the honest statement about what SnapDisk can and cannot do in one guide. That is the angle this article is written on.</p>
+
+  <h2>What you need</h2>
+  <p>An Android phone with a work profile (look for the briefcase badge on some of your apps); a USB drive your phone can read — a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter (most modern Android phones support OTG; if the phone doesn't see the drive, try a different adapter); and enough space on the drive for the photos you want to keep. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+  <p>Before any method, check which profile holds the photos, as above — the work Gallery (briefcase badge) or the personal one. And one warning up front, because it applies to every route below: your IT policy may block any of them. If a step is missing — no USB drive in the work Files app, no Personal tab in the share sheet, no way to install an app in the work profile — that is policy, not a broken phone. Do not try to work around the management controls; ask IT what backup method is approved. The umatechnology guide says the same thing: if USB transfer is blocked or work data cannot be copied, stop and ask the administrator.</p>
+
+  <h2>Method 1: copy inside the work profile, by hand</h2>
+  <p>This is the route to try first, because it is the only one that needs no crossing between profiles and no cloud account. Everything happens inside the work profile: the photos start there, the copy happens there, and the drive is the destination. Plug the USB drive into the phone. Then open the work profile's Files app — the one with the briefcase badge, not your personal Files app — and look for the USB drive under storage. If it appears, browse to the work photos (in the work Gallery, or Internal storage → DCIM → Camera inside the work profile), select them, tap Copy to, and choose the USB drive as the destination. Wait for the copy to finish before unplugging, and then verify it: plug the drive into another device and open a few photos, and confirm they render.</p>
+  <p>The honest limit of this route is the one stated in the TL;DR, and it is worth spelling out because it is the difference between a guide and a guess. Whether a USB drive plugged into the phone appears in the work profile's Files app is <strong>unverified</strong> from Android's documentation: the developer docs confirm the profiles have separate storage areas, but they say nothing about whether a USB volume is visible per profile, and no source found for this article answers it either way. It may appear, and on many phones it will — USB storage is device-wide hardware, not a per-profile folder — but that is an expectation, not a verified fact. So treat this method as a test, not a promise: plug the drive in, open the work Files app, and look. If the drive is there, copy by hand and you are done. If it is not there, the route is closed on your phone — do not keep tapping around hoping it appears — and the fallback is Method 2 or Method 3. One more policy limit: an organisation can block USB file transfer entirely, so if the drive never appears anywhere on the phone, that may be the reason, and IT is the only source for the answer.</p>
+  <p>If the copy works, remember what it is: a manual copy. There is no oldest-first order, no progress bar with speed and time left, no Pause and Stop, and no resume if you unplug mid-copy. Copy in batches small enough to finish, check the count against what you selected, and open a few files on another device before you trust the drive. And the files on the drive are plain files — anyone who picks up the drive can open them — so if the photos are sensitive, this route protects nothing except against losing the phone.</p>
+
+  <h2>Method 2: share from the work app to a personal app</h2>
+  <p>If the drive doesn't appear in the work profile, the next route is to move the photos across the boundary into the personal profile, where your personal apps — and SnapDisk — can see them. In the work Gallery or work Photos app, select the photos, tap Share, and look for your personal apps in the share sheet. When cross-profile sharing is allowed, the share sheet offers a Personal tab (or lists personal apps alongside work ones): share to your personal Files app, or to your personal Gallery, and the photos are copied into the personal profile. Once they are personal-profile files, Method 4 below backs them up to the USB drive with one tap.</p>
+  <p>The honest limit: this route is the one your IT policy most often closes. By default on personally-owned devices, sharing from work to personal is blocked, while sharing from personal to work is allowed — the boundary is deliberately one-way. Microsoft's Intune documentation says the same thing about its "Device default" setting: on Android 6.0 and newer, sharing from the personally-owned work profile to the personal profile is blocked, and an admin has to change the setting to "No restrictions on sharing" to open it. On company-owned devices the admin has broader control and can lock down both directions. So if the share sheet shows no Personal tab and no personal apps, sharing is blocked — that is the policy working as designed, not a missing feature, and there is no setting on your side that opens it. Ask IT whether cross-profile sharing is allowed and, if it is not, what backup method they approve instead. Copy and paste from work to personal is blocked on many managed devices by the same policy family, so don't expect the clipboard to succeed where the share sheet failed.</p>
+  <p>Two things to know if sharing does work. First, sharing copies the file — the original stays in the work profile until the profile itself is removed, so you now have two copies, and the work one is still at risk. Second, check the shared copies before you rely on them: open a few in the personal Gallery and confirm they are the full photos, not thumbnails, and that videos play. A share that silently downscaled or truncated a file is worse than a share that failed loudly.</p>
+
+  <h2>Method 3: work-profile cloud as a bridge — not a USB backup</h2>
+  <p>The third route goes through a cloud account that lives inside the work profile — OneDrive or Google Drive signed in with your work account, in the work profile's instance of the app. Upload the photos from the work app to that account, wait for the upload to finish, and then check from another device or a browser that the photos are actually in the account — a pending upload is not a verified copy, and a backup setting alone proves nothing. This gets the photos off the phone, which is the urgent part when a profile removal is coming.</p>
+  <p>Label this honestly: it is a fallback, not a USB backup. The photos leave the phone to a work account, not to a drive you hold, and getting them back after the profile is removed depends on keeping access to that work account. Your work account data stays reachable from a computer or a browser after the profile is gone — but if the account itself is closed when you leave, the cloud copy closes with it. The umatechnology guide makes the same distinction: a cloud copy is useful only if you can sign in and retrieve it after removal, so keep the credentials available. And do not rely on standard Android device backup as the route: Google says it may be unavailable when a personal device has a work profile, when the device is set up for work only, or when it is company-owned.</p>
+  <p>If the cloud copy is verified and you can still reach the account, the photos can come back down to the personal profile — download them there, or open them on a computer and copy them to the USB drive directly — and then Method 4 handles the drive copy. But if the only copy of the photos is in a work account you are about to lose, that is not a backup. It is a countdown. The USB drive is the copy that survives the job ending; the cloud is the bridge that gets the photos there.</p>
+
+  <h2>Method 4: SnapDisk's one-tap copy, once the photos are personal</h2>
+  <p>This is the backup step itself — the part SnapDisk does — and it only starts once the photos are in the personal profile, through Method 2 or Method 3, or because they were personal all along. Install SnapDisk from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"</li>
+    <li><strong>Tap Backup.</strong> Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally. The default run reads the whole personal media library via MediaStore, not DCIM only, so every photo the personal gallery sees is covered, whatever folder it sits in. This was verified in the code, not assumed: with no From folder picked, the app queries the MediaStore images and videos tables with no folder filter.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. With no From folder picked, the default run copies the whole personal library, saved photos included.</figcaption>
+  </figure>
+
+  <p><strong>Copying only some photos?</strong> If you would rather copy just one folder than the whole library, use the From folder picker: tap it, navigate to the folder, and the run copies only that folder, recursively. The picker route keeps only recognised photo and video extensions. If the drive is unplugged mid-copy, the backup pauses with the full error shown and resumes where it stopped when the drive is back. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+  <p>And the check that matters for this article: after the run, compare the count against what you expected. A green backup that copied everything in the personal library has still copied zero work-profile photos — they were never in the run. If the number looks too small, the missing photos are probably still in the work profile, and Methods 1 to 3 are where they are. SnapDisk copies, it never deletes — the only files it ever deletes are its own half-finished .part files — so deleting the originals after the check is always your step, never the app's.</p>
+
+  <h2>Method 5: installing SnapDisk inside the work profile</h2>
+  <p>It sounds like the clean fix — put SnapDisk in the work profile, and it would see the work photos the same way it sees personal ones. Do not plan a backup around it. The work Play Store is a managed store: only the apps your IT admin approves appear in it, and an admin can push or block apps at will. SnapDisk is not on Google Play at all yet, so it cannot be installed from the managed Play Store in either profile — there is no listing for IT to approve. The other way in is side-loading the APK inside the work profile, and that needs the install-from-unknown-sources allowance, which an admin can block with the DISALLOW_INSTALL_UNKNOWN_SOURCES restriction — Android's Enterprise security documentation lists blocking apps from unknown sources as a standard profile-owner capability, and on most managed devices it is blocked. So the route needs two things you don't control — a Play listing that doesn't exist yet, and an IT decision to allow it — and neither is yours to make.</p>
+  <p>If IT does approve and install it one day, then SnapDisk inside the work profile would read the work profile's MediaStore and back up work photos the same way it backs up personal ones today — oldest-first, size-verified, Pause and Stop, 5 GB free per run, Pro $9.99 once. But that is a conditional, not a claim: no one has installed SnapDisk in a work profile, and no test has run there. Until the Play listing exists and IT says yes, Method 5 is a request to make, not a backup to rely on.</p>
+
+  <h2>Leaving the job? Back up before the profile is removed</h2>
+  <p>This is the sharpest motive for the whole article, and the one with the least room for error. Android Enterprise warns, in the words quoted by both the umatechnology guide and the Maine IT migration document: "After the Work Profile is deleted, all local data on the device within that profile is deleted." Every photo stored in a work-profile app — the work Gallery, the work camera roll, attachments inside work apps — goes with it. The removal itself is one menu away: on a Pixel it is Settings &gt; Passwords, Passkeys &amp; Accounts &gt; Remove work profile &gt; Delete, and on a Samsung the steps vary by model. Your organisation can also remove the profile remotely, without you tapping anything.</p>
+  <p>So the order matters, and it is not negotiable: back up first, verify the copy on another device second, remove the profile third. Open several photos from the drive on a computer and confirm they render; confirm the count matches what the work Gallery showed. Only then remove the profile. After removal, check that the work profile and its management app are gone as expected — and know what survives: your work account data is still available when you sign in with a computer, a web browser, or another authorised mobile device, but that refers to account data, not to local files deleted with the profile. The local photos do not come back. If you are leaving and the photos matter — site photos, whiteboard shots, the record of a project, pictures that happen to live in the work camera roll — the backup is the job, and the removal is the deadline.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Assuming SnapDisk backs up work photos.</strong> It cannot see them. A personal-profile app reads the personal profile's MediaStore, and the work photos are in a different storage area. If the photos matter and they live in the work profile, Methods 1 to 3 are the routes — SnapDisk is the last step, not the first.</li>
+    <li><strong>Trusting a green personal backup to have covered the work photos.</strong> A backup that copied everything in the personal library copied zero work-profile photos. Check the count against what the work Gallery shows before you call it done.</li>
+    <li><strong>Sharing work photos to personal when policy blocks it.</strong> If the Personal tab is missing from the share sheet, sharing is blocked by design. Trying to work around management controls is how people lose access or break policy — ask IT what method is approved instead.</li>
+    <li><strong>Assuming the drive appears in the work Files app.</strong> Unverified from Android's documentation. Plug it in, look, and if it isn't there, move to Method 2 or 3 instead of tapping around hoping it appears.</li>
+    <li><strong>Treating a cloud upload as a USB backup.</strong> A work-account cloud copy is a bridge, not a backup: it dies with the work account if you lose access to it. The USB drive is the copy that survives the job ending.</li>
+    <li><strong>Deleting the profile before verifying.</strong> Profile removal deletes all of its local data. Copy, open a few photos on the drive on another device, then remove the profile — never the other way round. SnapDisk only copies — it never deletes — so the delete step is always yours, and always after the check.</li>
+    <li><strong>Assuming the copy keeps running with the screen off.</strong> Unverified — no wake lock, no battery-saver handling in the repo — so keep the phone awake for the run, or check it. Screen-off continuation under battery saver is unverified, and a run that stopped when the screen went dark is the expected failure, not a surprise.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> the profile is the boundary — the backup has to start inside the work profile, or the photos have to cross to personal first. Check which profile holds the photos before you trust any backup, and back them up before the profile is removed, not after.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. It copies your personal photos — the ones in your personal Gallery — oldest-first, with Pause and Stop and a size check on every file. Work-profile photos need to cross to personal first, by the routes above, before SnapDisk can see them. See also: <a href="transfer-photos-to-usb-automatically.html">Transfer photos to a USB drive automatically (no manual copy)</a>, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="backup-photos-offline.html">How to back up photos offline on Android — no cloud, no account</a>, <a href="restore-photos-from-usb-to-android.html">Restore photos from USB to Android</a>, and <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive: USB photo backup on Android, compared</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

@@ -1245,5 +1245,12 @@
       <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
       <description>Back up photos from Android to a VeraCrypt or BitLocker USB drive: mount it with OTG Master, then copy by hand. What works, and where SnapDisk fits.</description>
     </item>
+    <item>
+      <title>Back up work-profile photos to a USB drive from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/work-profile-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/work-profile-photos-to-usb.html</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A personal-profile app can't see work-profile photos. Copy them inside the work profile, share to personal, or use cloud — then back up to USB, no computer.</description>
+    </item>
 </channel>
 </rss>
