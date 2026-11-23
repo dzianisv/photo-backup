@@ -9,6 +9,33 @@
   Next article candidate after this one: unverified.
   Skills loaded: growth-seo
 
+## 2026-11-23 WITA (2026-11-22 PST) — Weekly reflection, week Nov 16–22
+
+(1) Scoreboard — this week vs last week: last week (Nov 16 reflection, days 1–2): 6 articles, v0.1.2, 0 open issues/PRs, Stage 0. This week: downloads unknown — not on Play yet, never invent. Rating: none (no listing). Open GitHub issues: 0. Open PRs: 0. Latest release: v0.1.2 (Nov 14, no new release this week). How-to articles live: 175 (was 6, +169). Blog index: 175 BlogPosting entries; feed.xml 175 items; sitemap.xml 179 urls; searches.md 174 scored query rows. CI: green — latest main runs success (Android PR merge #408 + Pages deploy, Nov 22). Sentry: not installed. PostHog: not installed. Stage: 0, pre-launch.
+
+(2) What worked
+- 169 how-to articles shipped this week (6 → 175), every one verified live: feed 175 items, sitemap 179 urls, all JSON-LD parsing.
+- Play listing package completed: 5 ASO screenshot cards (WL-199, critic PASS), brand guide (WL-200, critic PASS), icon set + unification to the canonical vector (WL-201/202, 0 differing pixels at 512).
+- Correction chain WL-215–218: the default-run scope and format-split contradictions in 5 live articles were found and fixed from AOSP sources (.mov and .dng indexed universally, .heic inconclusive).
+- Board green all week: 0 open issues, 0 open PRs, 359 PR merges since Nov 16 (through #408), CI green on every merge.
+
+(3) What did not
+- Still Stage 0: 0 Play progress — WL-31 open, Console sign-in still the only real gate; week 1 ended Nov 21 with publish undone, so the plan is late on its week-2 publish step.
+- No new release: still v0.1.2, 8 days old, while 169 articles shipped.
+- 0 Medium cross-posts — WL-33 overdue (due Nov 19), needs the owner's publication.
+- 0 directory submissions — WL-32 PAUSED (Nov 16 sweep), awaiting the owner's decision.
+- 5 live articles contradicted themselves on default-run scope until WL-215 caught it (WL-216–218 fixed them) — the wrong claim shipped for days.
+- NTFS gap documented, not closed: the app has no NTFS detection (WL-214, 0 NTFS matches in code); read-only-drive behaviour unproven, real-disk test never attempted (Firebase Test Lab route open).
+- Sentry and PostHog still not installed; sandbox Pro purchase still gated on Console.
+
+(4) Support — top complaint: none. No users yet (Stage 0): 0 open issues, 0 reviews, no support queue. Nothing changed because of a complaint. No owner feedback recorded this week.
+
+(5) Next three actions
+1. Resolve Play Console sign-in and verify the claimed SnapDisk push (or upload the v0.1.2 AAB) — owner: Dzianis — Nov 23. (WL-31, carried over.)
+2. Create the Medium publication and cross-post the 175 articles (canonical back to GitHub Pages) — owner: Growth lead (publication: Dzianis) — Nov 25. (WL-33, overdue since Nov 19.)
+3. Run the Firebase Test Lab real-disk check for NTFS read-only detection (open follow-up from WL-214) — owner: Implementation lead — Nov 27.
+- Owner gates unchanged (WL-31 Play Console password, WL-32 AlternativeTo PAUSED, WL-33 Medium overdue, Sentry DSN, PostHog). No escalation. No PR opened — the supervisor merges after readback.
+
 ## WL-218 — Clear the last stale .mov "not promised" claim in the search log (correction follow-up to WL-216/WL-217, no new article)
 
 - Owner: SEO/GEO lane lead. State: fix branch wl-218-mov-stale (commit 416c6af, pushed) and worklog-row branch wl-218-worklog (this branch, pushed) created by the lead from base bc92dd53; no PRs opened — the supervisor merges after readback.
