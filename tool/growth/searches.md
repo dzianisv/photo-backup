@@ -20178,3 +20178,73 @@ unchanged (already "Back up photos & videos to a USB disk").
   blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md before writing;
   "second space" returns 0 matches in docs/, tool/growth/searches.md, and
   tool/growth/WORKLOG.md at base — no existing coverage.
+
+### 180. "Back up photos from an Android guest profile to a USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers a phone-direct backup of
+  guest-profile photos onto a USB drive plugged into the phone — no computer, oldest-first,
+  one tap, background with progress, Pause and Stop, resume and verification. The generic
+  OTG guides never mention a guest profile, and the guest-mode explainers never take the
+  USB step. The gap stands ONLY on that narrow angle: the phone-direct USB-drive backup of
+  guest-profile photos, with the copy, the manual fallbacks, and the honest statement about
+  what SnapDisk can and cannot do in one guide.
+- Current top results (scored Nov 23, 2026, live web search):
+  Phrasing 1, "back up photos from Android guest profile to USB drive" (supervisor,
+  verified this run, not re-run): groovypost, Google Photos community, FotoSafe, eyefi,
+  YouTube, our own auto-transfer article — all generic OTG, none mentions a guest profile.
+  Phrasing 2, "save photos from Android guest mode before switching user delete guest"
+  (supervisor, verified this run, not re-run): Motorola, appitika, mobiletracking,
+  simplytechtoday, altftool — guest-mode setup/removal explainers; the only backup advice
+  is "copy to a shared folder or cloud before deleting" — no USB-drive photo-backup guide.
+  Phrasing 3 (lead, this run), "Android guest profile photos to USB drive no computer":
+  top results are our own generic transfer article, cellularnews generic OTG, our own
+  Samsung article, FotoSafe generic — none mentions a guest profile, and none is a
+  dedicated guest-profile photo-backup-to-USB guide. No dedicated phone-direct USB-drive
+  guide for guest-profile photos in any phrasing; the gap stands on the narrow angle.
+- Honest centre (verified from appitika, techbone, altftool, techetips, groovypost, and
+  the code at base 51745f8, live this run, Nov 23, 2026, not assumed): a guest profile
+  is a temporary, sandboxed Android user profile with its own apps, settings, and files
+  — appitika: "a temporary, sandboxed user profile that isolates apps, settings, and
+  data from the primary account"; techbone (techbone.net/android/delete-user): every
+  added person lives "in a separate profile with its own apps, accounts, and files, kept
+  apart from your main account", and the guest "cannot see your messages, photos, or app
+  data" from the owner profile — the separation runs both ways, so an owner-profile app
+  cannot see guest photos either. A secondary user is permanent; a guest session is for
+  a one-time borrower and its data is wiped when the session ends. Deleting the guest
+  erases all of its local data: techbone — removing a user "wipes all of that profile's
+  apps, accounts, and files immediately, with no way to bring them back afterward";
+  altftool (altftool.com, "Share One Android Device with Multiple Users or Guest Mode"):
+  guest data "is erased immediately and can't be recovered"; appitika — any data the
+  guest creates "will be erased when you exit Guest mode, unless you manually copy it out
+  before switching back". Switching back asks whether to keep or remove the guest data;
+  tapping Remove wipes it, and the next guest login starts from a clean profile. The
+  only backup advice in the guest-mode guides is one line, appitika: "copy it to a shared
+  folder or cloud storage before deleting the profile" — but no guide names an
+  owner-visible shared folder on stock Android, so the workable crossings are a cloud
+  account signed in inside the guest profile or sending the photos to yourself from
+  inside the guest. Samsung Galaxy phones do not offer guest mode — only Galaxy tablets
+  do (groovypost). A guest can install apps from the Play Store by signing in with their
+  own Google account, but SnapDisk is not on Google Play at all, so there is no listing
+  to install from. Whether a USB drive appears in the guest profile's Files app is
+  UNVERIFIED from Android's documentation or any guide found this run — no source answers
+  it either way; the article says to try it and fall back to moving the photos to the
+  owner profile if it doesn't show up. SnapDisk facts from the code at base: Pro $9.99
+  once (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB free per-run cap (ProPrefs.kt:43),
+  oldest-first MediaStore DATE_TAKEN (PhotoQuery.kt:47, :54, sort DATE_TAKEN ASC with
+  DATE_MODIFIED fallback; BackupEngine.kt:9-10), size verification after copy
+  (BackupEngine.kt:104,108), Pause/Stop in the notification
+  (NotificationHelper.kt:128,138; BackupService.kt:113,115), foreground-service dataSync
+  (AndroidManifest.xml:38), FAT32 files >=4 GiB skipped with their reason
+  (BackupService.kt:428-433), no INTERNET permission (0 occurrences in the manifest), no
+  WakeLock/Doze code — screen-off continuation under battery saver is unverified.
+  "SnapDisk copies, it never deletes" present — the only .delete() calls in the code are
+  on SnapDisk's own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). The article carries no install count for SnapDisk (none
+  exists) and no VaultDrive figure (the one "VaultDrive" string is the comparison-article
+  link text).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/guest-profile-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md before writing;
+  "guest profile" returns matches only as a lock-down tool in docs/lending-phone-photos-
+  to-usb.html and docs/child-photos-to-usb.html — no existing photo-backup-from-guest-
+  profile guide.

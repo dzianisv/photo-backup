@@ -1266,5 +1266,12 @@
       <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
       <description>A First Space app can't see Second Space photos. Move them to First Space or copy inside the space — then back up to USB, no computer.</description>
     </item>
+    <item>
+      <title>Back up photos from an Android guest profile to a USB drive — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/guest-profile-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/guest-profile-photos-to-usb.html</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A personal-profile app can't see guest-profile photos. Copy them inside the guest profile or move them to the owner profile — then back up to USB, no computer.</description>
+    </item>
 </channel>
 </rss>

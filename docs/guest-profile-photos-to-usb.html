@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up photos from an Android guest profile to a USB drive</title>
+<meta name="description" content="A personal-profile app can't see guest-profile photos. Copy them inside the guest profile or move them to the owner profile — then back up to USB, no computer.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/guest-profile-photos-to-usb.html">
+<meta property="og:title" content="Back up photos from an Android guest profile to a USB drive (no computer)">
+<meta property="og:description" content="A personal-profile app can't see guest-profile photos. Copy them inside the guest profile or move them to the owner profile — then back up to USB, no computer.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/guest-profile-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/guest-profile-photos-to-usb.html#article",
+      "headline": "Back up photos from an Android guest profile to a USB drive (no computer)",
+      "description": "A personal-profile app can't see guest-profile photos. Copy them inside the guest profile or move them to the owner profile — then back up to USB, no computer.",
+      "datePublished": "2026-11-23",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/guest-profile-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/guest-profile-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can SnapDisk back up photos from my guest profile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SnapDisk installed in your owner (personal) profile can only see your owner-profile photos — Android gives the guest profile its own separate storage area, and a file path that is valid in one profile is not valid in the other. SnapDisk's default run reads the owner profile's MediaStore library, oldest-first, so guest-profile photos are simply not in it. The photos have to leave the guest profile first — by copying inside the guest profile, by moving them to the owner profile or a cloud account before the guest is deleted — and only then can SnapDisk back them up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I copy guest-profile photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Try the guest profile's own file manager first: switch into the guest profile, plug the drive into the phone, open the Files app inside the guest profile, and look for the USB drive. If it appears, select the photos and copy them to the drive by hand — no computer needed. Whether the drive appears in the guest profile is unverified from Android's documentation, so if it does not show up, that route is closed on your phone and the fallback is moving the photos to the owner profile or a cloud account before the guest is deleted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I move photos from a guest profile to my personal profile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Do it while you are still in the guest profile, before switching back: upload the photos to a cloud account signed in inside the guest profile, or send them to yourself by email or messaging from inside the guest profile, then open them in the owner profile and save them there. The guest-mode guides give only one piece of backup advice — copy the photos to a shared folder or cloud storage before deleting the profile — and they name no owner-visible shared folder on stock Android, so the cloud or send-to-yourself routes are the workable ones. Once the photos are in the owner profile, SnapDisk can back them up to the USB drive with one tap."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my guest-profile photos when I delete the guest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Deleting the guest profile deletes all of its local data — every photo taken or saved inside the guest profile, every app the guest installed, and every file the guest downloaded — with no built-in way to restore them. Switching back to the owner profile asks whether to keep or remove the guest data; tapping Remove wipes it, and the next guest login starts from a clean profile either way. Back the photos up and verify the copy on another device before the guest is removed."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/guest-profile-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up photos from an Android guest profile to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/guest-profile-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up photos from an Android guest profile to a USB drive</h1>
+  <p class="dek">A personal-profile app cannot see your guest photos — Android gives the guest profile its own separate storage, and it wipes that storage when the guest is done. The backup has to start inside the guest profile, or the photos have to cross to the owner profile first. Here are the routes that actually work, and the ones that don't.</p>
+  <p class="meta">November 23, 2026 · 6 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> SnapDisk installed in your owner (personal) profile <strong>cannot</strong> back up guest-profile photos — the guest profile is a separate, temporary Android user profile with its own storage area, and a file path valid in one profile is not valid in the other, so your personal apps simply never see the guest photos. There are four honest routes, each with its own limit. (1) Copy inside the guest profile with the guest profile's own file manager — the only route that needs no crossing and no cloud — but whether a USB drive even appears in the guest profile's Files app is <strong>unverified</strong> from Android's documentation, so try it and fall back if it doesn't show up. (2) Move the photos to the owner profile before the guest is deleted — upload them to a cloud account signed in inside the guest profile, or send them to yourself from inside the guest — because the only backup advice the guest-mode guides give is to "copy to a shared folder or cloud before deleting the profile", and they name no owner-visible shared folder on stock Android. (3) A guest-profile cloud account as a bridge — a fallback, <strong>not</strong> a USB backup, and the copy dies with the guest account if you lose access to it. (4) Installing SnapDisk inside the guest profile — SnapDisk isn't on Google Play at all, side-loading inside a guest is untested, and the guest is wiped when it ends, so do not plan on this route. The sharpest motive is the wipe itself: deleting the guest — or switching back and tapping Remove — erases all of its local data with no restore, so back the photos up and verify the copy <strong>before</strong> the guest is removed. SnapDisk's one-tap copy works once the photos are in the owner profile — free up to 5 GB per run, Pro $9.99 once — and SnapDisk copies, it never deletes. As of November 23, 2026, no top search result offers a phone-direct USB-drive backup of guest-profile photos — the generic OTG guides never mention a guest profile, and the guest-mode explainers never take the USB step.</p>
+
+  <h2>SnapDisk cannot see your guest photos — say it first</h2>
+  <p>This is the fact the whole article turns on, so here it is with the evidence, not the claim. Android's guest mode creates a temporary, sandboxed user profile: its own apps, its own settings, and its own files, kept apart from your owner account. The guest-mode guides say the same thing in different words — the guest profile is "a temporary, sandboxed user profile that isolates apps, settings, and data from the primary account", every added person lives "in a separate profile with its own apps, accounts, and files, kept apart from your main account", and the guest "cannot see your messages, photos, or app data" from the owner profile. The separation runs both ways: your owner-profile apps cannot see the guest's photos either. SnapDisk installed in your owner profile reads your owner profile's MediaStore library — the images and videos tables, oldest-first by date taken, verified in the code — and guest-profile photos are not in that library. They are not hidden, or locked, or waiting for a permission: they are in a different storage area that your personal apps cannot reach.</p>
+  <p>So the first step is not a backup method at all. It is finding out which profile holds the photos. Photos taken while the phone was in guest mode — with the guest camera app, or saved inside a guest app, or received as attachments in a guest email or chat app — live in the guest profile. Photos taken with your owner camera, and everything in your owner Gallery, live in the owner profile — and those are the ones SnapDisk can already back up. If you are not sure, switch into the guest profile and look: swipe down twice for Quick Settings, tap the user icon, tap Guest, and open the guest Gallery. If the photos are there, the rest of this article is about them.</p>
+  <p>One scope distinction before the methods, because it decides how urgent the backup is. A guest profile is temporary by design; a secondary user is permanent. A secondary user is a full profile for someone who uses the phone regularly — their data stays until the owner deletes that user. A guest session is for a one-time borrower, and its data is wiped when the session ends. If the person taking the photos uses your phone every week, give them a secondary user instead of a guest — the photos will still be separate from yours, but they will not be on a countdown. If the photos are already in a guest profile, the countdown is running, and the methods below are ordered by how little they need: copy inside the guest first, cross to the owner second, cloud third.</p>
+  <p>One more scope fact, because it decides which of them SnapDisk can help with at all. SnapDisk copies image and video files only. On the default run it reads the phone's MediaStore images and videos tables, with no folder filter — the whole owner library, oldest-first, whatever folder the photos sit in. On the From-picker route it walks the folder you picked and keeps only recognised photo and video extensions. A backup run that finishes green has copied your owner photos — it has not touched the guest profile, and the count it reports is the owner count. If the number looks too small for what you expected, that is probably why: the guest photos were never in the run. Keep that in mind through Methods 1 to 4: the question is never "can SnapDisk copy these photos" in the abstract. It is "are these photos in the profile SnapDisk runs in."</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search for this job three ways and the results split into three shapes, none of them the narrow job — a phone-direct backup of guest-profile photos onto a USB drive plugged into the phone, no computer, oldest-first, one tap, background with progress, Pause and Stop, resume and verification. The first shape is the generic OTG copy guide: groovypost's guest-mode guide, the Google Photos community, FotoSafe, eyefi, YouTube tutorials, and our own automatic-transfer article. They all describe the same steps — plug the drive in, open the file manager, copy DCIM by hand — and none of them mentions a guest profile at all. They assume every photo on the phone is visible to the file manager doing the copying, which is exactly what is false on a phone with a guest profile.</p>
+  <p>The second shape is the guest-mode setup and removal explainer: Motorola's support pages, appitika's guest-mode guide, mobiletracking, simplytechtoday, and altftool's multiple-users guide. These explain the boundary — how to enable the guest, what the guest can and cannot do, and how the data is wiped when the session ends — and the only backup advice in any of them is one line: copy anything you want to keep "to a shared folder or cloud storage before deleting the profile". None of them is a photo-backup-to-USB guide. The USB leg is missing everywhere: they stop at "copy it out before deleting" and never take the step onto a drive. The appitika guide does confirm the sharpest motive, in plain words: any data the guest creates inside an app "will be erased when you exit Guest mode, unless you manually copy it out before switching back". It just doesn't say how to get that data onto a USB drive.</p>
+  <p>The third shape is the closest near-miss, and it is worth naming honestly: the generic phone-direct USB guides that rank for the "no computer" angle — our own automatic-transfer article, cellularnews' Pixel-to-flash-drive guide, our own Samsung article, and FotoSafe's USB backup guide. They are about exactly the right copy — a drive plugged directly into the phone, no computer — but they are written for the owner profile's photos and never mention that a guest profile exists. So the gap stands, but only on the narrow angle: the phone-direct USB-drive backup of guest-profile photos, with the copy, the manual fallbacks, and the honest statement about what SnapDisk can and cannot do in one guide. That is the angle this article is written on.</p>
+
+  <h2>What you need</h2>
+  <p>An Android phone with guest mode — on stock Android it is Settings &gt; System &gt; Multiple users, then Add guest; on some phones the path is Settings &gt; Users &amp; accounts &gt; Users. One availability warning: not every phone offers it. Samsung Galaxy phones don't support guest mode — only Galaxy tablets do — so if the Multiple users menu is missing, the manufacturer has disabled it, and this article's guest routes do not apply to your phone. You also need a USB drive your phone can read — a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter (most modern Android phones support OTG; if the phone doesn't see the drive, try a different adapter) — and enough space on the drive for the photos you want to keep. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+  <p>Before any method, check which profile holds the photos, as above — the guest Gallery or the owner one. And one warning up front, because it applies to every route below: do the work while you are still in the guest profile. The moment you switch back to the owner profile, Android asks whether to keep or remove the guest data — and if you tap Remove, or if the next guest login starts fresh, the photos are gone. The move has to happen inside the guest session, not after it.</p>
+
+  <h2>Method 1: copy inside the guest profile, by hand</h2>
+  <p>This is the route to try first, because it is the only one that needs no crossing between profiles and no cloud account. Everything happens inside the guest profile: the photos start there, the copy happens there, and the drive is the destination. Switch into the guest profile first — swipe down twice, tap the user icon, tap Guest — then plug the USB drive into the phone. Open the guest profile's Files app and look for the USB drive under storage. If it appears, browse to the guest photos (in the guest Gallery, or Internal storage → DCIM → Camera inside the guest profile), select them, tap Copy to, and choose the USB drive as the destination. Wait for the copy to finish before unplugging, and then verify it: plug the drive into another device and open a few photos, and confirm they render.</p>
+  <p>The honest limit of this route is the one stated in the TL;DR, and it is worth spelling out because it is the difference between a guide and a guess. Whether a USB drive plugged into the phone appears in the guest profile's Files app is <strong>unverified</strong> from Android's documentation: the developer docs confirm the profiles have separate storage areas, but they say nothing about whether a USB volume is visible per profile, and no source found for this article answers it either way. It may appear, and on many phones it will — USB storage is device-wide hardware, not a per-profile folder — but that is an expectation, not a verified fact. So treat this method as a test, not a promise: plug the drive in, open the guest Files app, and look. If the drive is there, copy by hand and you are done. If it is not there, the route is closed on your phone — do not keep tapping around hoping it appears — and the fallback is Method 2 or Method 3.</p>
+  <p>If the copy works, remember what it is: a manual copy. There is no oldest-first order, no progress bar with speed and time left, no Pause and Stop, and no resume if you unplug mid-copy. Copy in batches small enough to finish, check the count against what you selected, and open a few files on another device before you trust the drive. And the files on the drive are plain files — anyone who picks up the drive can open them — so if the photos are sensitive, this route protects nothing except against losing the phone. Do the copy and the check before you switch back to the owner profile: once you leave the guest, the Keep-or-Remove prompt is the only thing standing between the photos and the wipe.</p>
+
+  <h2>Method 2: move the photos to the owner profile before the guest is deleted</h2>
+  <p>If the drive doesn't appear in the guest profile, the next route is to move the photos across the boundary into the owner profile, where your personal apps — and SnapDisk — can see them. Do this while you are still in the guest profile, before switching back. There are two workable crossings. The first is a cloud account signed in inside the guest profile: open Google Photos or Google Drive in the guest profile, sign in with the guest's own account — not yours, or the point of the guest profile is gone — upload the photos, wait for the upload to finish, and then check from another device or a browser that the photos are actually in the account. The second is sending the photos to yourself: from inside the guest profile, share the photos by email or messaging to your own address, then open them in the owner profile and save them there. Once the photos are owner-profile files, Method 4 below backs them up to the USB drive with one tap.</p>
+  <p>The honest limit: the guest-mode guides name a third crossing — "copy it to a shared folder or cloud storage before deleting the profile" — but they name no shared folder the owner profile can actually open on stock Android, and no source found for this article describes one. So treat the "shared folder" half of that advice as a phrase, not a route: the cloud upload and the send-to-yourself are the crossings with named steps. A second limit is the guest account itself. A guest who signs in with their own Google account can install apps and use cloud storage; a guest with no account signed in can still use the camera and the browser, but cannot upload to a cloud account that does not exist. If the guest never signed in anywhere, the send-to-yourself route needs an account too — an email app with no account cannot send mail. Check that before you count on either crossing.</p>
+  <p>Two things to know if the crossing works. First, the copy is a copy — the original stays in the guest profile until the guest itself is removed, so you now have two copies, and the guest one is still at risk until the owner copy is verified. Second, check the moved copies before you rely on them: open a few in the owner Gallery and confirm they are the full photos, not thumbnails, and that videos play. A share that silently downscaled or truncated a file is worse than a share that failed loudly. And do the crossing before you switch back: the Keep-or-Remove prompt appears when you switch to the owner profile, and tapping Remove wipes the guest originals whether or not the crossing finished.</p>
+
+  <h2>Method 3: guest-profile cloud as a bridge — not a USB backup</h2>
+  <p>The third route goes through a cloud account that lives inside the guest profile — Google Photos or Google Drive signed in with the guest's account, in the guest profile's instance of the app. Upload the photos from the guest app to that account, wait for the upload to finish, and then check from another device or a browser that the photos are actually in the account — a pending upload is not a verified copy, and a backup setting alone proves nothing. This gets the photos off the phone, which is the urgent part when a guest removal is coming.</p>
+  <p>Label this honestly: it is a fallback, not a USB backup. The photos leave the phone to a guest account, not to a drive you hold, and getting them back after the guest is removed depends on keeping access to that guest account. The guest account is often a throwaway sign-in — a borrowed account, or one created on the spot for the session — so keep the credentials available, because a cloud copy you cannot sign into is not a backup. And do not rely on standard Android device backup as the route: the guest profile's local data is not part of the owner profile's device backup, and restoring a device backup does not bring a deleted guest profile back.</p>
+  <p>If the cloud copy is verified and you can still reach the account, the photos can come back down to the owner profile — download them there, or open them on a computer and copy them to the USB drive directly — and then Method 4 handles the drive copy. But if the only copy of the photos is in a guest account you are about to lose, that is not a backup. It is a countdown. The USB drive is the copy that survives the guest ending; the cloud is the bridge that gets the photos there.</p>
+
+  <h2>Method 4: SnapDisk's one-tap copy, once the photos are personal</h2>
+  <p>This is the backup step itself — the part SnapDisk does — and it only starts once the photos are in the owner profile, through Method 2 or Method 3, or because they were personal all along. Install SnapDisk from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"</li>
+    <li><strong>Tap Backup.</strong> Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally. The default run reads the whole owner media library via MediaStore, not DCIM only, so every photo the owner gallery sees is covered, whatever folder it sits in. This was verified in the code, not assumed: with no From folder picked, the app queries the MediaStore images and videos tables with no folder filter.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. With no From folder picked, the default run copies the whole owner library, saved photos included.</figcaption>
+  </figure>
+
+  <p><strong>Copying only some photos?</strong> If you would rather copy just one folder than the whole library, use the From folder picker: tap it, navigate to the folder, and the run copies only that folder, recursively. The picker route keeps only recognised photo and video extensions. If the drive is unplugged mid-copy, the backup pauses with the full error shown and resumes where it stopped when the drive is back. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+  <p>And the check that matters for this article: after the run, compare the count against what you expected. A green backup that copied everything in the owner library has still copied zero guest-profile photos — they were never in the run. If the number looks too small, the missing photos are probably still in the guest profile, and Methods 1 to 3 are where they are. SnapDisk copies, it never deletes — the only files it ever deletes are its own half-finished .part files — so deleting the originals after the check is always your step, never the app's.</p>
+
+  <h2>Method 5: installing SnapDisk inside the guest profile</h2>
+  <p>It sounds like the clean fix — put SnapDisk in the guest profile, and it would see the guest photos the same way it sees owner ones. Do not plan a backup around it. SnapDisk is not on Google Play at all yet, so it cannot be installed from the Play Store in either profile — there is no listing for anyone to approve. A guest can install apps from the Play Store by signing in with their own Google account, but that only helps once there is a listing to install from. The other way in is side-loading the APK inside the guest profile, and that route is untested: no one has installed SnapDisk in a guest profile, and no test has run there. And even if it installed, the guest profile is wiped when it ends — the app, its settings, and anything it had not yet copied would go with it — so the backup would have to finish inside the same guest session, with no second chance.</p>
+  <p>If SnapDisk is on Play one day, then SnapDisk inside the guest profile would read the guest profile's MediaStore and back up guest photos the same way it backs up owner ones today — oldest-first, size-verified, Pause and Stop, 5 GB free per run, Pro $9.99 once. But that is a conditional, not a claim: no one has installed SnapDisk in a guest profile, and no test has run there. Until the Play listing exists, Method 5 is a request to make, not a backup to rely on.</p>
+
+  <h2>Switching users? Back up before the guest is deleted</h2>
+  <p>This is the sharpest motive for the whole article, and the one with the least room for error. When you switch back from the guest to the owner profile, Android asks whether to keep or remove the guest data. Tapping Remove wipes it: every photo the guest took, every file the guest downloaded, every app the guest installed — gone, with no built-in way to restore them. The guides agree on the permanence: removing a user "wipes all of that profile's apps, accounts, and files immediately, with no way to bring them back afterward", guest data "is erased immediately and can't be recovered", and the guest session "clears itself automatically once you switch away from it". Even tapping Keep is only a pause, not a save: the guest profile stays for next time, but the next guest login starts from a clean profile, and the previous guest's files are visible to whoever opens guest mode next.</p>
+  <p>So the order matters, and it is not negotiable: back up first, verify the copy on another device second, remove the guest third. Open several photos from the drive on a computer and confirm they render; confirm the count matches what the guest Gallery showed. Only then switch back and tap Remove — or leave the guest in place if you tapped Keep and the borrower is coming back. On a Samsung the same step is Settings &gt; Accounts and backup &gt; Users, then the gear icon beside Guest and Remove guest, which wipes any existing guest data. After removal, check that the guest is gone as expected — and know what survives: nothing local does. The cloud copy survives only if you can still sign into the guest account, and the USB copy survives because you hold the drive. If the photos matter — the guest's shots from a trip, a child's drawings on a borrowed phone, pictures that happen to live in the guest camera roll — the backup is the job, and the removal is the deadline.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Assuming SnapDisk backs up guest photos.</strong> It cannot see them. An owner-profile app reads the owner profile's MediaStore, and the guest photos are in a different storage area. If the photos matter and they live in the guest profile, Methods 1 to 3 are the routes — SnapDisk is the last step, not the first.</li>
+    <li><strong>Trusting a green owner backup to have covered the guest photos.</strong> A backup that copied everything in the owner library copied zero guest-profile photos. Check the count against what the guest Gallery shows before you call it done.</li>
+    <li><strong>Switching back before the crossing is done.</strong> The Keep-or-Remove prompt appears when you leave the guest. Tap Remove with the photos still inside and they are gone — copy or upload first, switch second, remove third.</li>
+    <li><strong>Assuming the drive appears in the guest Files app.</strong> Unverified from Android's documentation. Plug it in, look, and if it isn't there, move to Method 2 or 3 instead of tapping around hoping it appears.</li>
+    <li><strong>Counting on the "shared folder" advice without a folder.</strong> The guest-mode guides say to copy to a shared folder or cloud before deleting, but they name no owner-visible shared folder on stock Android. The cloud upload and the send-to-yourself are the crossings with named steps — use those.</li>
+    <li><strong>Treating a cloud upload as a USB backup.</strong> A guest-account cloud copy is a bridge, not a backup: it dies with the guest account if you lose access to it. The USB drive is the copy that survives the guest ending.</li>
+    <li><strong>Signing the guest in with your own account.</strong> The guest can install apps and use cloud storage by signing in — but signing in with your account gives the guest your photos, messages, and app data, which is the thing guest mode exists to prevent. Use the guest's own account, or no account and the send-to-yourself route.</li>
+    <li><strong>Assuming the copy keeps running with the screen off.</strong> Unverified — no wake lock, no battery-saver handling in the repo — so keep the phone awake for the run, or check it. Screen-off continuation under battery saver is unverified, and a run that stopped when the screen went dark is the expected failure, not a surprise.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> the profile is the boundary — the backup has to start inside the guest profile, or the photos have to cross to the owner profile first. Check which profile holds the photos before you trust any backup, and back them up before the guest is removed, not after.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. It copies your owner photos — the ones in your owner Gallery — oldest-first, with Pause and Stop and a size check on every file. Guest-profile photos need to cross to the owner profile first, by the routes above, before SnapDisk can see them. See also: <a href="transfer-photos-to-usb-automatically.html">Transfer photos to a USB drive automatically (no manual copy)</a>, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="backup-photos-offline.html">How to back up photos offline on Android — no cloud, no account</a>, <a href="restore-photos-from-usb-to-android.html">Restore photos from USB to Android</a>, and <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive: USB photo backup on Android, compared</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>
