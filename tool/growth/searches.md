@@ -20110,3 +20110,71 @@ unchanged (already "Back up photos & videos to a USB disk").
   blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md before writing;
   "private space" returns 0 matches in docs/, tool/growth/searches.md, and
   tool/growth/WORKLOG.md at base — no existing coverage.
+
+### 179. "Back up photos from Xiaomi Second Space to a USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers a phone-direct backup of
+  Second Space photos onto a USB drive plugged into the phone — no computer, oldest-first,
+  one tap, background with progress, Pause and Stop, resume and verification. The generic
+  Xiaomi USB guides never mention Second Space, and the Second Space guides back up only
+  via a linked account or the cloud. The gap stands ONLY on that narrow angle: the
+  phone-direct USB-drive backup of Second Space photos, with the copy, the manual
+  fallbacks, and the honest statement about what SnapDisk can and cannot do in one guide.
+- Current top results (scored Nov 23, 2026, live web search):
+  Phrasing 1, "back up photos from Xiaomi Second Space to USB drive Android" (supervisor,
+  verified this run, not re-run): our own generic Xiaomi article, tonfotos generic backup,
+  renick.io generic Xiaomi USB guide, Android Central forum, Wondershare generic — none
+  mentions Second Space.
+  Phrasing 2, "move photos out of Xiaomi Second Space export to USB" (supervisor,
+  verified this run, not re-run): our own Xiaomi + Redmi articles (generic), gadgetsnow
+  Second Space guide (backup only via linked Gmail/Xiaomi account or cloud like OneDrive;
+  move apps/contacts on delete; NO USB route), umatechnology MI Cloud export (cloud, no
+  USB), renick.io generic. No dedicated Second Space photos-to-USB guide.
+  Phrasing 3 (lead, this run), "back up photos from Xiaomi Second Space to USB drive no
+  computer": top results are our own generic Xiaomi article, our own automatic-transfer
+  article, Dr.Fone generic, Pixoneye generic — none mentions Second Space, and none is a
+  dedicated Second Space photo-backup-to-USB guide. No dedicated phone-direct USB-drive
+  guide for Second Space photos in any phrasing; the gap stands on the narrow angle.
+- Honest centre (verified from Gadgets Now, Xiaomi's MIUI 14 manual, Dr.Fone, androidguias,
+  and the code at base 770083ef, live this run, Nov 23, 2026, not assumed): Second Space
+  is a separate storage space with its own accounts — Gadgets Now
+  (gadgetsnow.indiatimes.com, "Second Space on Xiaomi smartphones: How to use, take backup
+  and erase data"): "the Second Space works like an entire separate storage space and can
+  be linked to Gmail or Xiaomi accounts different from the main one." Backup runs through
+  the linked email account, Xiaomi's cloud backup service, or a personal cloud platform
+  like OneDrive; deleting the space offers moving installed apps and contacts into First
+  Space ("Choose the option to move into the First Space and tap 'Continue' to delete the
+  Second Space"). Xiaomi's MIUI 14 manual (manualslib.com): "You can create a separate
+  space in your tablet where you can use different accounts and IDs and store data. The
+  data in the Second space does not affect the primary space." The two spaces must have
+  different passwords. The supported way to move photos out is the built-in "Transfer
+  data between spaces" option (androidguias, crawled Nov 23, 2026 17:30 UTC): "If you want
+  to exchange files or applications between spaces, you'll need to do it manually from the
+  'Transfer data between spaces' option in the settings, as by default data is not
+  automatically synchronized or shared." A forgotten Second Space password leaves deletion
+  as the only recovery (androidguias: "You can only recover it by deleting the space and
+  losing the data stored in it"). MI Cloud export (umatechnology.org, "3 Ways to Transfer
+  Files and Photos Out of MI Cloud") is a cloud download via the i.mi.com website or the
+  MI Cloud app — no USB route, and the web route needs a computer. Whether a USB drive
+  appears in Second Space's Files app is UNVERIFIED from Xiaomi's documentation or any
+  guide found this run — no source answers it either way; the article says to try it and
+  fall back to moving the photos to First Space if it doesn't show up. OTG is off by
+  default on many MIUI/HyperOS phones (our own Redmi guide: Settings > Additional settings
+  > OTG, switch turns itself off after about 10 minutes without a drive). SnapDisk facts
+  from the code at base: Pro $9.99 once (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB
+  free per-run cap (ProPrefs.kt:43), oldest-first MediaStore DATE_TAKEN (PhotoQuery.kt:47,
+  :54, sort DATE_TAKEN ASC with DATE_MODIFIED fallback; BackupEngine.kt:9-10), size
+  verification after copy (BackupEngine.kt:104,108), Pause/Stop in the notification
+  (NotificationHelper.kt:128,138; BackupService.kt:113,115), foreground-service dataSync
+  (AndroidManifest.xml:38), FAT32 files >=4 GiB skipped with their reason
+  (BackupService.kt:428-433), no INTERNET permission (0 occurrences in the manifest), no
+  WakeLock/Doze code — screen-off continuation under battery saver is unverified.
+  "SnapDisk copies, it never deletes" present — the only .delete() calls in the code are
+  on SnapDisk's own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). The article carries no install count for SnapDisk (none
+  exists) and no VaultDrive figure.
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/second-space-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md before writing;
+  "second space" returns 0 matches in docs/, tool/growth/searches.md, and
+  tool/growth/WORKLOG.md at base — no existing coverage.

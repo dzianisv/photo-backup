@@ -1259,5 +1259,12 @@
       <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
       <description>A personal-profile app can't see Private Space photos. Move them out to the personal profile or copy inside the space — then back up to USB, no computer.</description>
     </item>
+    <item>
+      <title>Back up photos from Xiaomi Second Space to a USB drive — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/second-space-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/second-space-photos-to-usb.html</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A First Space app can't see Second Space photos. Move them to First Space or copy inside the space — then back up to USB, no computer.</description>
+    </item>
 </channel>
 </rss>
