@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up secondary-user photos to a USB drive</title>
+<meta name="description" content="A personal-profile app can't see secondary-user photos. Copy them inside the secondary user or move them to the owner profile — then back up to USB.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/secondary-user-profile-photos-to-usb.html">
+<meta property="og:title" content="Back up secondary-user photos to a USB drive (no computer)">
+<meta property="og:description" content="A personal-profile app can't see secondary-user photos. Copy them inside the secondary user or move them to the owner profile — then back up to USB.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/secondary-user-profile-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/secondary-user-profile-photos-to-usb.html#article",
+      "headline": "Back up secondary-user photos to a USB drive (no computer)",
+      "description": "A personal-profile app can't see secondary-user photos. Copy them inside the secondary user or move them to the owner profile — then back up to USB.",
+      "datePublished": "2026-11-23",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/secondary-user-profile-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/secondary-user-profile-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can SnapDisk back up photos from my secondary user profile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SnapDisk installed in your owner profile can only see your owner-profile photos — Android gives the secondary user its own separate storage area, and a file path that is valid in one user is not valid in the other. SnapDisk's default run reads the owner profile's MediaStore library, oldest-first, so secondary-user photos are simply not in it. The photos have to leave the secondary user first — by copying inside the secondary user, by moving them to the owner profile or a cloud account before the user is deleted — and only then can SnapDisk back them up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I copy secondary-user photos to a USB drive without a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Try the secondary user's own file manager first: switch into the secondary user, plug the drive into the phone, open the Files app inside the secondary user, and look for the USB drive. If it appears, select the photos and copy them to the drive by hand — no computer needed. Whether the drive appears in the secondary user's Files app is unverified from Android's documentation, so if it does not show up, that route is closed on your device and the fallback is moving the photos to the owner profile or a cloud account before the user is deleted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I move photos from a secondary user to my owner profile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Do it while you are still in the secondary user, before deleting it: upload the photos to a cloud account signed in inside the secondary user, or share them to yourself by email or messaging from inside the secondary user, then open them in the owner profile and save them there. The secondary-user guides give no backup advice of their own — the closest line anywhere is the guest-mode advice to copy to a shared folder or cloud before deleting — and they name no owner-visible shared folder, so the cloud upload and the send-to-yourself are the crossings with named steps. Once the photos are in the owner profile, SnapDisk can back them up to the USB drive with one tap."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my secondary-user photos when I delete the user?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Deleting the secondary user deletes all of its local data — every photo taken or saved inside the secondary user, every app it installed, and every file it downloaded — with no built-in way to restore them. Removing a user wipes all of that profile's apps, accounts, and files immediately, and a secondary user does not exist beyond the lifetime of the owner who created it. Back the photos up and verify the copy on another device before the user is removed."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/secondary-user-profile-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up secondary-user photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/secondary-user-profile-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up secondary-user photos to a USB drive</h1>
+  <p class="dek">A personal-profile app cannot see your secondary-user photos — Android gives the secondary user its own separate storage, and it wipes that storage when the user is deleted. The backup has to start inside the secondary user, or the photos have to cross to the owner profile first. Here are the routes that actually work, and the ones that don't.</p>
+  <p class="meta">November 23, 2026 · 6 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> SnapDisk installed in your owner profile <strong>cannot</strong> back up secondary-user photos — the secondary user is a separate Android user with its own storage area, and a file path valid in one user is not valid in the other, so your owner-profile apps simply never see the secondary-user photos. There are four honest routes, each with its own limit. (1) Copy inside the secondary user with the secondary user's own file manager — the only route that needs no crossing and no cloud — but whether a USB drive even appears in the secondary user's Files app is <strong>unverified</strong> from Android's documentation, so try it and fall back if it doesn't show up. (2) Move the photos to the owner profile before the secondary user is deleted — upload them to a cloud account signed in inside the secondary user, or send them to yourself from inside the secondary user — because the secondary-user guides give no backup advice of their own, and name no owner-visible shared folder on stock Android. (3) A secondary-user cloud account as a bridge — a fallback, <strong>not</strong> a USB backup, and the copy dies with that account if you lose access to it. (4) Installing SnapDisk inside the secondary user — SnapDisk isn't on Google Play at all, and side-loading inside a secondary user is untested, so do not plan on this route. The sharpest motive is the deletion itself: removing the user erases all of its local data with no restore, so back the photos up and verify the copy <strong>before</strong> the user is removed. SnapDisk's one-tap copy works once the photos are in the owner profile — free up to 5 GB per run, Pro $9.99 once — and SnapDisk copies, it never deletes. As of November 23, 2026, no top search result offers a phone-direct USB-drive backup of secondary-user photos — the generic OTG guides never mention a secondary user, and the secondary-user explainers never take the USB step.</p>
+
+  <h2>SnapDisk cannot see your secondary-user photos — say it first</h2>
+  <p>This is the fact the whole article turns on, so here it is with the evidence, not the claim. Android's secondary user is a full user type in the multi-user system — AOSP names it <code>android.os.usertype.full.SECONDARY</code> — and Android's own multi-user documentation says the system supports multiple users "by separating user accounts and app data": each user "has distinct app data and some unique settings", and "an app's data exists within each associated user". A secondary user is any user added to the device other than the system user: it can be created from the settings user interface, it can run in the background while another user is active, and it "cannot impact other users on a device". Underneath, the separation is the same one that keeps every Android user apart: physical internal storage is partitioned into per-user directories, each user runs under a distinct Linux UID range, and one user's apps cannot inspect another user's files. The secondary-user guides say the same thing in plainer words — each profile has "its own home screen, apps, Google Account, and storage allocation, invisible to other profiles".</p>
+  <p>So the first step is not a backup method at all. It is finding out which user holds the photos. Photos taken while the phone was in the secondary user — with the secondary user's camera app, or saved inside a secondary-user app, or received as attachments in a secondary-user email or chat app — live in the secondary user. Photos taken with your owner camera, and everything in your owner Gallery, live in the owner profile — and those are the ones SnapDisk can already back up. If you are not sure, switch into the secondary user and look: swipe down twice for Quick Settings, tap the user icon, tap the secondary user, and open its Gallery. If the photos are there, the rest of this article is about them.</p>
+  <p>Two scope distinctions before the methods, because they decide which device and which situation this article even applies to. First, a secondary user is permanent until the owner deletes it — unlike a guest session, which is wiped when it ends. The secondary user's data stays until the owner deletes that user, while a guest's data is erased when you exit Guest mode. That makes the backup less urgent day to day — the photos are not on a countdown — but no safer in the end: deleting the user still erases everything in it. Second, a secondary user is a full user, not a restricted profile: it signs in with its own Google account and installs its own apps, where a restricted profile is tablet-only and the owner decides which apps it can see. If your situation is a guest profile, the routes are in our <a href="guest-profile-photos-to-usb.html">guest-profile guide</a>; if it is a restricted profile on a tablet, they are in our <a href="restricted-profile-photos-to-usb.html">restricted-profile guide</a>. This article is for the permanent second user on a phone or a tablet — a partner, a child, a second identity on one shared device.</p>
+  <p>One more scope fact, because it decides which of them SnapDisk can help with at all. SnapDisk copies image and video files only. On the default run it reads the phone's MediaStore images and videos tables, with no folder filter — the whole owner library, oldest-first, whatever folder the photos sit in. On the From-picker route it walks the folder you picked and keeps only recognised photo and video extensions. A backup run that finishes green has copied your owner photos — it has not touched the secondary user, and the count it reports is the owner count. If the number looks too small for what you expected, that is probably why: the secondary-user photos were never in the run. Keep that in mind through Methods 1 to 4: the question is never "can SnapDisk copy these photos" in the abstract. It is "are these photos in the user SnapDisk runs in."</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search for this job three ways and the results split into three shapes, none of them the narrow job — a phone-direct backup of secondary-user photos onto a USB drive plugged into the phone, no computer, oldest-first, one tap, background with progress, Pause and Stop, resume and verification. The first shape is the generic OTG copy guide: the Google Photos community thread, groovypost's Android-to-USB guide, eyefi's flash-drive thread, the Android Central forum, a YouTube OTG walkthrough, our own automatic-transfer article, and the AppBrain listing for the OTG backup apps. They all describe the same steps — plug the drive in, open the file manager, copy DCIM by hand — and none of them mentions a secondary user at all. They assume every photo on the device is visible to the file manager doing the copying, which is exactly what is false on a phone with a secondary user.</p>
+  <p>The second shape is the secondary-user setup explainer: appitika's guide to setting up guest and secondary user accounts, the Samsung Members community thread, and Pixoneye's multi-user guide. These explain the boundary — how to add the user, that each user has its own apps, accounts, and files, that a secondary user is permanent where a guest is temporary — and they give no backup advice of their own. Not one line about a USB drive. The guest-mode guides at least say to copy things out before deleting the profile; the secondary-user explainers never raise the question of what happens to the photos inside the user at all. The USB leg is missing everywhere: they stop at "each user is separate" and never take the step onto a drive.</p>
+  <p>The third shape is the closest near-miss, and it is worth naming honestly: the generic phone-direct USB guides that rank for the "save photos to USB" angle — our own automatic-transfer article, our own Samsung article, our own Pixel article, a YouTube OTG walkthrough, and FotoSafe's USB backup guide. They are about exactly the right copy — a drive plugged directly into the device, no computer — but they are written for the owner profile's photos and never mention that a secondary user exists. So the gap stands, but only on the narrow angle: the phone-direct USB-drive backup of secondary-user photos, with the copy, the manual fallbacks, and the honest statement about what SnapDisk can and cannot do in one guide. That is the angle this article is written on.</p>
+
+  <h2>What you need</h2>
+  <p>An Android phone or tablet with secondary users — on stock Android it is Settings &gt; System &gt; Multiple users, then Add user; on some devices the path is Settings &gt; Users &amp; accounts &gt; Users. One availability warning: not every maker ships the option. If the Multiple users menu is missing, or the only option under Add user is Guest, the manufacturer has disabled secondary users, and this article's routes do not apply to your device — Samsung Galaxy phones, for example, don't offer guest mode at all, only Galaxy tablets do, and the same multi-user menu is where a secondary user would be added. You also need a USB drive your phone can read — a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter (most modern Android phones support OTG; if the phone doesn't see the drive, try a different adapter) — and enough space on the drive for the photos you want to keep. One format note: drives formatted FAT32 can't hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit.</p>
+  <p>Before any method, check which user holds the photos, as above — the secondary-user Gallery or the owner one. And one warning up front, because it applies to every route below: do the work while you are still in the secondary user. The photos have to leave the user before it is deleted — there is no after. The move has to happen inside the secondary-user session, not after it is gone.</p>
+
+  <h2>Method 1: copy inside the secondary user, by hand</h2>
+  <p>This is the route to try first, because it is the only one that needs no crossing between users and no cloud account. Everything happens inside the secondary user: the photos start there, the copy happens there, and the drive is the destination. Switch into the secondary user first — swipe down twice, tap the user icon, tap the secondary user — then plug the USB drive into the phone. Open the secondary user's Files app and look for the USB drive under storage. If it appears, browse to the secondary-user photos (in the user's Gallery, or Internal storage → DCIM → Camera inside the secondary user), select them, tap Copy to, and choose the USB drive as the destination. Wait for the copy to finish before unplugging, and then verify it: plug the drive into another device and open a few photos, and confirm they render.</p>
+  <p>The honest limit of this route is the one stated in the TL;DR, and it is worth spelling out because it is the difference between a guide and a guess. Whether a USB drive plugged into the phone appears in the secondary user's Files app is <strong>unverified</strong> from Android's documentation: the developer docs confirm the users have separate storage areas, but they say nothing about whether a USB volume is visible per user, and no source found for this article answers it either way. It may appear, and on many phones it will — USB storage is device-wide hardware, not a per-user folder — but that is an expectation, not a verified fact. So treat this method as a test, not a promise: plug the drive in, open the user's Files app, and look. If the drive is there, copy by hand and you are done. If it is not there, the route is closed on your phone — do not keep tapping around hoping it appears — and the fallback is Method 2 or Method 3.</p>
+  <p>One more limit is worth naming, and it comes from how a secondary user differs from a restricted profile. The secondary user is a full user: it has its own file manager, its own Gallery, its own account — nothing for the owner to enable first. If the Files app is missing inside the secondary user, that is a device quirk, not a permission the owner forgot: try the Gallery's share-to-USB route, or install a file manager from the Play Store inside the secondary user with its own account. If the copy works, remember what it is: a manual copy. There is no oldest-first order, no progress bar with speed and time left, no Pause and Stop, and no resume if you unplug mid-copy. Copy in batches small enough to finish, check the count against what you selected, and open a few files on another device before you trust the drive. And the files on the drive are plain files — anyone who picks up the drive can open them — so if the photos are sensitive, this route protects nothing except against losing the phone. Do the copy and the check before the user is deleted: once it is gone, the photos are gone with it.</p>
+
+  <h2>Method 2: move the photos to the owner profile before the user is deleted</h2>
+  <p>If the drive doesn't appear in the secondary user, the next route is to move the photos across the boundary into the owner profile, where your personal apps — and SnapDisk — can see them. Do this while you are still in the secondary user, before deleting it. There are two workable crossings. The first is a cloud account signed in inside the secondary user: open Google Photos or Google Drive in the secondary user, sign in with an account that belongs to the secondary user's person — not the owner's, or the point of the separate user is gone — upload the photos, wait for the upload to finish, and then check from another device or a browser that the photos are actually in the account. The second is sending the photos to yourself: from inside the secondary user, share the photos by email or messaging to your own address, then open them in the owner profile and save them there. Once the photos are owner-profile files, Method 4 below backs them up to the USB drive with one tap.</p>
+  <p>The honest limit: the secondary-user guides name no crossing at all — no "shared folder", no cloud advice, nothing. The guest-mode guides at least give one line — copy to a shared folder or cloud before deleting — but they name no owner-visible shared folder on stock Android, and the secondary-user guides do not even go that far. So the cloud upload and the send-to-yourself are the crossings with named steps, because they are the only ones any guide describes with steps. A second limit is the account itself. A secondary user signs in with its own Google account — that is what makes it a full user — so a cloud app or an email app inside the user normally has an account to work with. But if the secondary user was set up without ever signing in, the send-to-yourself route needs an account first — an email app with no account cannot send mail. Check that before you count on either crossing.</p>
+  <p>Two things to know if the crossing works. First, the copy is a copy — the original stays in the secondary user until the user itself is removed, so you now have two copies, and the secondary-user one is still at risk until the owner copy is verified. Second, check the moved copies before you rely on them: open a few in the owner Gallery and confirm they are the full photos, not thumbnails, and that videos play. A share that silently downscaled or truncated a file is worse than a share that failed loudly. And do the crossing before you delete the user: there is no Keep-or-Remove prompt to save you, as there is when leaving a guest session — deleting the user is the wipe, and it happens the moment the owner taps Delete.</p>
+
+  <h2>Method 3: secondary-user cloud as a bridge — not a USB backup</h2>
+  <p>The third route goes through a cloud account that lives inside the secondary user — Google Photos or Google Drive signed in with the secondary user's account, in the secondary user's instance of the app. Upload the photos from the user's app to that account, wait for the upload to finish, and then check from another device or a browser that the photos are actually in the account — a pending upload is not a verified copy, and a backup setting alone proves nothing. This gets the photos off the phone, which is the urgent part when a user deletion is coming.</p>
+  <p>Label this honestly: it is a fallback, not a USB backup. The photos leave the phone to a secondary-user account, not to a drive you hold, and getting them back after the user is removed depends on keeping access to that account. The secondary-user account is often a partner's or a child's account, or one created on the spot for the user — so keep the credentials available, because a cloud copy you cannot sign into is not a backup. And do not rely on standard Android device backup as the route: the secondary user's local data is not part of the owner profile's device backup, and restoring a device backup does not bring a deleted secondary user back.</p>
+  <p>If the cloud copy is verified and you can still reach the account, the photos can come back down to the owner profile — download them there, or open them on a computer and copy them to the USB drive directly — and then Method 4 handles the drive copy. But if the only copy of the photos is in a secondary-user account you are about to lose, that is not a backup. It is a countdown. The USB drive is the copy that survives the user ending; the cloud is the bridge that gets the photos there.</p>
+
+  <h2>Method 4: SnapDisk's one-tap copy, once the photos are personal</h2>
+  <p>This is the backup step itself — the part SnapDisk does — and it only starts once the photos are in the owner profile, through Method 2 or Method 3, or because they were personal all along. Install SnapDisk from the v0.1.2 APK (it's not on Google Play yet), then:</p>
+  <ol>
+    <li><strong>Plug in the drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"</li>
+    <li><strong>Tap Backup.</strong> Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally. The default run reads the whole owner media library via MediaStore, not DCIM only, so every photo the owner gallery sees is covered, whatever folder it sits in. This was verified in the code, not assumed: with no From folder picked, the app queries the MediaStore images and videos tables with no folder filter.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it left off.</li>
+  </ol>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. With no From folder picked, the default run copies the whole owner library, saved photos included.</figcaption>
+  </figure>
+
+  <p><strong>Copying only some photos?</strong> If you would rather copy just one folder than the whole library, use the From folder picker: tap it, navigate to the folder, and the run copies only that folder, recursively. The picker route keeps only recognised photo and video extensions. If the drive is unplugged mid-copy, the backup pauses with the full error shown and resumes where it stopped when the drive is back. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+  <p>And the check that matters for this article: after the run, compare the count against what you expected. A green backup that copied everything in the owner library has still copied zero secondary-user photos — they were never in the run. If the number looks too small, the missing photos are probably still in the secondary user, and Methods 1 to 3 are where they are. SnapDisk copies, it never deletes — the only files it ever deletes are its own half-finished .part files — so deleting the originals after the check is always your step, never the app's.</p>
+
+  <h2>Method 5: installing SnapDisk inside the secondary user</h2>
+  <p>It sounds like the clean fix — put SnapDisk in the secondary user, and it would see the secondary-user photos the same way it sees owner ones. Do not plan a backup around it. SnapDisk is not on Google Play at all yet, so it cannot be installed from the Play Store in either user — there is no listing for anyone to install. The other way in is side-loading the APK inside the secondary user, and that route is untested: no one has installed SnapDisk in a secondary user, and no test has run there. A secondary user is a full user, so unlike a restricted profile there is no owner allow-list standing in the way — the user signs in with its own account and installs its own apps — but that only removes one obstacle, not the test. And even if it installed, the user is wiped when it is deleted — the app, its settings, and anything it had not yet copied would go with it — so the backup would have to finish before the deletion, with no second chance.</p>
+  <p>If SnapDisk is on Play one day, then SnapDisk inside the secondary user would read the secondary user's MediaStore and back up secondary-user photos the same way it backs up owner ones today — oldest-first, size-verified, Pause and Stop, 5 GB free per run, Pro $9.99 once. But that is a conditional, not a claim: no one has installed SnapDisk in a secondary user, and no test has run there. Until the Play listing exists, Method 5 is a request to make, not a backup to rely on.</p>
+
+  <h2>Deleting the user? Back up before it's removed</h2>
+  <p>This is the sharpest motive for the whole article, and the one with the least room for error. Deleting a secondary user deletes all of its local data: every photo the user took, every file it downloaded, every app it installed — gone, with no built-in way to restore them. The multi-user documentation is plain about the boundary: a user does not exist beyond the lifetime of the owner who created it, and removing a user "wipes all of that profile's apps, accounts, and files immediately, with no way to bring them back afterward". Unlike leaving a guest session, there is no Keep-or-Remove prompt on the way out — the owner opens Settings &gt; System &gt; Multiple users, taps the secondary user, taps Delete, and the wipe is the deletion itself.</p>
+  <p>So the order matters, and it is not negotiable: back up first, verify the copy on another device second, delete the user third. Open several photos from the drive on a computer and confirm they render; confirm the count matches what the secondary-user Gallery showed. Only then delete the user — or leave it in place if the person still uses the phone. After deletion, check that the user is gone as expected — and know what survives: nothing local does. The cloud copy survives only if you can still sign into the secondary-user account, and the USB copy survives because you hold the drive. If the photos matter — a partner's pictures on a shared phone, a child's photos in their own user — the backup is the job, and the deletion is the deadline.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Assuming SnapDisk backs up secondary-user photos.</strong> It cannot see them. A personal-profile app reads the owner profile's MediaStore, and the secondary-user photos are in a different storage area. If the photos matter and they live in the secondary user, Methods 1 to 3 are the routes — SnapDisk is the last step, not the first.</li>
+    <li><strong>Trusting a green owner backup to have covered the secondary-user photos.</strong> A backup that copied everything in the owner library copied zero secondary-user photos. Check the count against what the secondary-user Gallery shows before you call it done.</li>
+    <li><strong>Deleting the user before the crossing is done.</strong> There is no Keep-or-Remove prompt on the way out of a secondary user — Delete is the wipe. Copy or upload first, delete second.</li>
+    <li><strong>Assuming the drive appears in the secondary user's Files app.</strong> Unverified from Android's documentation. Plug it in, look, and if it isn't there, move to Method 2 or 3 instead of tapping around hoping it appears.</li>
+    <li><strong>Confusing a secondary user with a guest session.</strong> A guest is temporary and wiped when it ends; a secondary user is permanent until deleted. The guest-profile routes are the temporary-borrower equivalent — this article is for the permanent second user.</li>
+    <li><strong>Confusing a secondary user with a restricted profile.</strong> A restricted profile is tablet-only and the owner picks its apps; a secondary user is a full user on a phone or a tablet, with its own account and its own apps. The restricted-profile routes are the tablet equivalent.</li>
+    <li><strong>Counting on a "shared folder" that no guide names.</strong> The secondary-user guides give no backup advice at all. The cloud upload and the send-to-yourself are the crossings with named steps — use those.</li>
+    <li><strong>Treating a cloud upload as a USB backup.</strong> A secondary-user cloud copy is a bridge, not a backup: it dies with that account if you lose access to it. The USB drive is the copy that survives the user ending.</li>
+    <li><strong>Signing the secondary user in with your own account.</strong> The user can set up a Google account — but signing in with yours gives the user your photos, messages, and app data, which is the thing a separate user exists to prevent. Use the secondary user's own account.</li>
+    <li><strong>Assuming the copy keeps running with the screen off.</strong> Unverified — no wake lock, no battery-saver handling in the repo — so keep the phone awake for the run, or check it. Screen-off continuation under battery saver is unverified, and a run that stopped when the screen went dark is the expected failure, not a surprise.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> the user is the boundary — the backup has to start inside the secondary user, or the photos have to cross to the owner profile first. Check which user holds the photos before you trust any backup, and back them up before the user is removed, not after.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy a folder by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. It copies your owner photos — the ones in your owner Gallery — oldest-first, with Pause and Stop and a size check on every file. Secondary-user photos need to cross to the owner profile first, by the routes above, before SnapDisk can see them. See also: <a href="guest-profile-photos-to-usb.html">Back up photos from an Android guest profile to a USB drive</a>, <a href="restricted-profile-photos-to-usb.html">Back up photos from an Android restricted profile to a USB drive</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos to a USB drive automatically (no manual copy)</a>, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="backup-photos-offline.html">How to back up photos offline on Android — no cloud, no account</a>, <a href="restore-photos-from-usb-to-android.html">Restore photos from USB to Android</a>, and <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive: USB photo backup on Android, compared</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

@@ -20320,3 +20320,82 @@ unchanged (already "Back up photos & videos to a USB disk").
   photo-backup-from-restricted-profile guide. The only near match is
   docs/guest-profile-photos-to-usb.html (WL-224) — a different, already-live article about the
   guest profile, untouched.
+
+### 182. "Back up photos from an Android secondary user profile to a USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers a phone-direct backup of
+  secondary-user photos onto a USB drive plugged into the phone — no computer, oldest-first,
+  one tap, background with progress, Pause and Stop, resume and verification. The generic
+  OTG guides never mention a secondary user, and the secondary-user explainers never take the
+  USB step. The gap stands ONLY on that narrow angle: the phone-direct USB-drive backup of
+  secondary-user photos, with the copy, the manual fallbacks, and the honest statement about
+  what SnapDisk can and cannot do in one guide.
+- Current top results (scored Nov 23, 2026, live web search):
+  Phrasing 1, "back up photos from Android secondary user profile to USB drive" (supervisor,
+  verified this run, not re-run): Google Photos community thread, groovypost Android-to-USB,
+  eyefi flash-drive thread, Android Central forum, YouTube OTG walkthrough, our own
+  transfer-photos-to-usb-automatically.html, AppBrain listing — all generic OTG,
+  none mentions a secondary user profile.
+  Phrasing 2, "move photos out of Android secondary user profile before deleting export to USB"
+  (supervisor, verified this run, not re-run): Samsung Members community, Pixoneye, Google
+  Photos community, eyefi — all generic OTG, none mentions a secondary user profile.
+  Phrasing 3 (lead, this run), "Android secondary user profile photos to USB drive no computer":
+  our own transfer article, our own Samsung article, our own Pixel article, YouTube generic
+  OTG, FotoSafe generic — none mentions a secondary user profile, and none is a
+  dedicated secondary-user photo-backup-to-USB guide. No dedicated phone-direct USB-drive
+  guide for secondary-user photos in any phrasing; the gap stands on the narrow angle.
+- Honest centre (verified from AOSP multi-user docs (source.android.com, "Support multiple
+  users"), appitika, techbone, altftool, groovypost, and the code at base 3d36f62a, live this
+  run, Nov 23, 2026, not assumed): a secondary user is a permanent full Android user —
+  AOSP: android.os.usertype.full.SECONDARY; Android supports multiple users "by separating
+  user accounts and app data", each user "has distinct app data and some unique settings",
+  and "an app's data exists within each associated user". A secondary user is any user added
+  to the device other than the system user; it can be created from the settings user
+  interface, can run in the background while another user is active, and "cannot impact other
+  users on a device". Underneath, physical internal storage is partitioned into per-user
+  directories, each user runs under a distinct Linux UID range, and one user's apps cannot
+  inspect another user's files — so SnapDisk installed in the owner profile reads only the
+  owner MediaStore library and cannot see secondary-user photos at all. A secondary user is
+  permanent until the owner deletes it — unlike a guest session, which is wiped when it ends
+  (appitika: the secondary user is permanent, the guest is temporary and "resets to a clean
+  state every time you exit") — but deleting it erases all of its local data: removing a user
+  "wipes all of that profile's apps, accounts, and files immediately, with no way to bring
+  them back afterward" (techbone). There is no Keep-or-Remove prompt on the way out of a
+  secondary user, as there is when leaving a guest session — Delete is the wipe. A secondary
+  user is a full user, not a restricted profile: it signs in with its own Google account and
+  installs its own apps (altftool: each profile has "its own home screen, apps, Google
+  Account, and storage allocation, invisible to other profiles"), where a restricted profile
+  is tablet-only and the owner decides which apps it can see. Secondary users work on phones
+  and tablets — stock Android adds one at Settings > System > Multiple users > Add user — but
+  not every maker ships the option, and if the Multiple users menu is missing the device does
+  not offer secondary users (Samsung Galaxy phones don't offer guest mode — only Galaxy
+  tablets do — groovypost). The secondary-user guides give no backup advice at all — not
+  even the guest guides' one line about copying to a shared folder or cloud before deleting
+  — and they name no owner-visible shared folder, so the workable crossings are a cloud
+  account signed in inside the secondary user or sending the photos to yourself from inside
+  the secondary user. Whether a USB drive appears in the secondary user's Files app is
+  UNVERIFIED from Android's documentation or any guide found this run — no source answers it
+  either way; the article says to try it and fall back to moving the photos to the owner
+  profile if it doesn't show up.
+  SnapDisk facts from the code at base: Pro $9.99 once (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"),
+  5 GB free per-run cap (ProPrefs.kt:43), oldest-first MediaStore DATE_TAKEN (PhotoQuery.kt:47, :54,
+  sort DATE_TAKEN ASC with DATE_MODIFIED fallback; BackupEngine.kt:9-10), size verification after
+  copy (BackupEngine.kt:107,108), Pause/Stop in the notification (NotificationHelper.kt:128,138;
+  BackupService.kt:113,115), foreground-service dataSync (AndroidManifest.xml:38), FAT32 files >=4
+  GiB skipped with their reason (BackupService.kt:428-433), no INTERNET permission (0 occurrences
+  in the manifest), no WakeLock/Doze code — screen-off continuation under battery saver is
+  unverified, no encryption code in the app source (0 matches in the 16 main Kotlin files).
+  "SnapDisk copies, it never deletes" present — the only .delete() calls in the code are
+  on SnapDisk's own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). The article carries no install count for SnapDisk (none
+  exists) and no VaultDrive figure (the one "VaultDrive" string is the comparison-article
+  link text).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/secondary-user-profile-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md before writing;
+  "secondary user" (exact phrase) returns 0 matches in WORKLOG.md and feed.xml and 1 match in
+  searches.md — the Query 180 guest row contrasting the permanent secondary user with the
+  temporary guest — no existing photo-backup-from-secondary-user guide. The near matches are
+  docs/guest-profile-photos-to-usb.html (WL-224) and
+  docs/restricted-profile-photos-to-usb.html (WL-225) — different, already-live articles about
+  the guest profile and the restricted profile, untouched.

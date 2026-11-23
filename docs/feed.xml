@@ -5,7 +5,7 @@
   <link>https://dzianisv.github.io/photo-backup/blog/</link>
   <description>How to back up photos to a USB drive on Android — no cloud, no account, no upload.</description>
   <language>en</language>
-  <lastBuildDate>Sun, 22 Nov 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 23 Nov 2026 00:00:00 +0000</lastBuildDate>
   <item>
     <title>How to back up photos to a USB drive without uploading them</title>
     <link>https://dzianisv.github.io/photo-backup/backup-photos-to-usb.html</link>
@@ -1279,6 +1279,13 @@
       <guid>https://dzianisv.github.io/photo-backup/restricted-profile-photos-to-usb.html</guid>
       <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
       <description>An owner-profile app can't see restricted-profile photos. Copy them inside the restricted profile or move them to the owner profile — then back up to USB.</description>
+    </item>
+    <item>
+      <title>Back up secondary-user photos to a USB drive — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/secondary-user-profile-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/secondary-user-profile-photos-to-usb.html</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A personal-profile app can't see secondary-user photos. Copy them inside the secondary user or move them to the owner profile — then back up to USB.</description>
     </item>
 </channel>
 </rss>
