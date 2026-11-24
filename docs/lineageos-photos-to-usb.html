@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up photos from a LineageOS phone to a USB drive</title>
+<meta name="description" content="LineageOS ships without Google Photos, and Seedvault writes an encrypted archive — not plain files. Back up photos to a USB drive with SnapDisk, no computer.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/lineageos-photos-to-usb.html">
+<meta property="og:title" content="Back up photos from a LineageOS phone to a USB drive (no computer)">
+<meta property="og:description" content="LineageOS ships without Google Photos, and Seedvault writes an encrypted archive — not plain files. Back up photos to a USB drive with SnapDisk, no computer.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/lineageos-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/lineageos-photos-to-usb.html#article",
+      "headline": "Back up photos from a LineageOS phone to a USB drive (no computer)",
+      "description": "LineageOS ships without Google Photos, and Seedvault writes an encrypted archive — not plain files. Back up photos to a USB drive with SnapDisk, no computer.",
+      "datePublished": "2026-11-23",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/lineageos-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/lineageos-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does LineageOS back up photos to a USB drive by itself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only as an encrypted Seedvault archive, not as plain photo files. LineageOS ships without Google apps by default, so there is no Google Photos and no Google cloud backup, and its built-in backup, Seedvault, writes a whole-device backup encrypted with a 12-word recovery phrase to a USB drive, Nextcloud, or local storage. You can only get the photos back by restoring through Seedvault on a compatible ROM — you cannot plug the drive into a computer and open the pictures. For plain files you can open anywhere, copy them yourself with SnapDisk or the Files app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Seedvault give me plain photo files I can open on a computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Seedvault backups are encrypted client-side (AES/GCM) and unlocked with a 12-word recovery phrase; the contents can only be read by restoring through Seedvault itself. Its file backup is a beta feature, and the CalyxOS documentation warns it may not work as expected and recommends making a copy of your files by another means, such as by connecting to a PC. If you want a folder of .jpg files on the drive, use Method 1 or Method 2 in this article, not Seedvault."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does SnapDisk work on a LineageOS phone without Google Play services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free core does, by the code: SnapDisk has no Google Play Services dependency anywhere in its build (zero matches for com.google.android.gms or play-services), no INTERNET permission in its manifest, and its minimum Android version is 7.0, so the manual oldest-first backup to a USB drive runs on a de-Googled LineageOS build. The Pro purchase is unverified there: Pro is a Google Play Billing one-time purchase, and Play Billing needs Google Play services, which a de-Googled build does not have — do not assume the $9.99 purchase works on that build. The free 5 GB per-run cap still applies, and running it again picks up where it stopped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my LineageOS phone does not see the USB drive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unverified per device and build — USB OTG support varies by device and LineageOS build, and no guide tests it across builds. First check the drive mounted: open Settings > Connected devices or Settings > Storage and look for the drive. If it is not there, try a different USB-C OTG adapter, a different drive, and a powered hub for a spinning hard drive. Do not assume OTG works on every LineageOS device, and do not assume it fails either — the mount is the test, and it takes ten seconds."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/lineageos-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up photos from a LineageOS phone to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/lineageos-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up photos from a LineageOS phone to a USB drive</h1>
+  <p class="dek">LineageOS frees your photos from Google — but it gives you no plain-files backup in return. Seedvault writes an encrypted archive; the USB copy is yours to do.</p>
+  <p class="meta">November 23, 2026 · 7 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> LineageOS ships without Google apps by default, so there is no Google Photos and no Google cloud backup on the phone — your photos live only on the device until you copy them off. The backup LineageOS does ship, Seedvault, is not a photo backup: it writes a whole-device backup, encrypted with a 12-word recovery phrase, to a USB drive, Nextcloud, or local storage, and you can only get the photos back by restoring through Seedvault on a compatible ROM — you cannot plug the drive into a computer and open the pictures. Glimpse, the LineageOS gallery app, only shows your photos; it does not copy them anywhere. There is no locked container to move out of here — unlike a private space, the photos sit in the open, in DCIM and Pictures, visible to any app with media permission — so the job is the plain-files copy itself, and no guide covers that copy for LineageOS. The route is on the phone, no computer: plug in a USB drive and copy the library oldest-first with SnapDisk, whose free core needs no Google Play services (the code has no Play Services dependency and no internet permission), or copy the folders by hand in the Files app. Three things are unverified and are marked as such in this article: whether USB OTG works on your particular device and LineageOS build, whether SnapDisk's backup notification appears unchanged on LineageOS builds, and whether the $9.99 Pro purchase — a Google Play Billing purchase — works at all on a de-Googled build without Play services. The free core works either way, with a 5 GB cap per run, and running it again picks up where it stopped. As of November 23, 2026, no top search result offers a dedicated LineageOS-photos-to-USB how-to: the Seedvault guides cover the encrypted archive, the generic guides cover stock Android or need a computer, and none joins the plain-files copy to a LineageOS phone.</p>
+
+  <h2>The wall: no Google Photos — and Seedvault is an archive, not a photo copy</h2>
+  <p>Start with what LineageOS takes away, because it is the whole job and it is easy to underestimate. LineageOS is a de-Googled Android: it ships without Google apps by default, and without the Google services behind them. On a stock phone, Google Photos quietly copies your photos to the cloud the moment you are on Wi-Fi, and Google's backup quietly carries app data with it — you can argue about the privacy cost, but the copy exists. On LineageOS, neither exists. There is no Google Photos to open, no Google Drive backup to fall back on, and no cloud copy of anything unless you installed one yourself. Your photos live in one place: the phone's own storage, in DCIM and Pictures and the messaging-app folders. Lose the phone, break the screen, or flash a bad build, and the photos go with it — unless you copied them off first. That is the wall: not a locked space hiding the photos from backup apps, but the absence of any backup at all.</p>
+  <p>The backup LineageOS does ship is Seedvault, and it is worth understanding precisely, because it looks like the answer and it is not — not for photos. Seedvault has been LineageOS's built-in backup since LineageOS 18.1: go to Settings &gt; System &gt; Backup, change the backup provider to Seedvault, and you can back up to a USB drive, a Nextcloud instance, or local storage, on a schedule, including automatically when you plug the backup drive in. The backup is encrypted client-side with AES/GCM and unlocked with a 12-word recovery phrase. That is a good design for a device backup. It is the wrong shape for a photo backup. The output is an encrypted archive, not a folder of .jpg files: you cannot plug the drive into a computer and open the pictures, you cannot hand the drive to a family member and have them look at the photos, and you can only get the photos back by restoring through Seedvault on a compatible ROM. Lose the 12-word phrase and the archive is unreadable — there is no reset. And the file-backup part of Seedvault is a beta feature: the CalyxOS documentation says it "may not work as expected" and recommends making a copy of your files by another means, "such as by connecting to a PC." So Seedvault is a restore point for the device. It is not a copy of your photos.</p>
+  <p>Glimpse is the other half of the confusion, and it is worth naming because every LineageOS user meets it on day one. Glimpse is LineageOS's gallery app — fast, bare-bones by design, reading image folders without layering on extra metadata or any cloud. It is a genuinely good way to look at your photos. It is not a backup tool. It has no export, no copy-to-drive, and no backup of any kind: it shows the photos that are already on the phone, and that is all it does. The same is true of the camera app, which takes the photos, and of the Files app, which can move them — none of them backs anything up. So the LineageOS photo situation is this: the photos are fully visible and fully unprotected. There is no locked container to move out of, no second space to escape, and no hidden album to unlock — the photos sit in the open, in the standard folders, readable by any app with media permission. The job is not getting access to the photos. The job is the plain-files copy itself: getting the library onto a USB drive as files you can open anywhere, on the phone, with no computer — and no guide covers that copy for LineageOS.</p>
+  <p>One more scope fact, because it decides which of the methods below SnapDisk can help with at all. SnapDisk copies image and video files only. On the default run it reads the phone's MediaStore images and videos tables, with no folder filter — the whole library, oldest-first, whatever folder the photos sit in. That matters on LineageOS because there is no single folder to point at: photos live in DCIM/Camera, in Pictures/Screenshots, in the messaging-app folders, and wherever else the camera and the apps put them. A backup that only copied DCIM would miss them. SnapDisk's default run does not only copy DCIM — it reads the whole MediaStore library — so the whole library is covered by the same one-tap run, with no folder to pick and no setting to change. And the free core needs no Google Play services to do it: the code has zero matches for Google Play Services, no internet permission in the manifest, and a minimum Android version of 7.0 — so the manual oldest-first backup runs on a de-Googled build. What the code cannot prove is the device half of the job, and this article marks it as unverified rather than assuming it: whether your particular device and LineageOS build sees the USB drive at all, and whether the backup notification appears unchanged on LineageOS builds. Both are covered in their own sections below.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search for this job three ways and the results split into three shapes, none of them the narrow job — a LineageOS-photos-to-USB guide that starts on a de-Googled phone with no Google Photos, states the Seedvault distinction, and copies the photos to a plain USB drive plugged into the phone, no computer, as files you can open anywhere. The first shape is the Seedvault guide, and it is the most useful of the three — but only for the archive. The CalyxOS Seedvault documentation explains the backup itself: where the data goes (a USB device like a flash drive, a Nextcloud instance, or on-device storage), that the data is encrypted and needs the recovery code to read, and that file backup is a beta feature that "may not work as expected" — with the recommendation to make a copy of your files by another means, "such as by connecting to a PC." The LineageOS changelog that introduced Seedvault says the same thing from the ROM side: Seedvault is the built-in backup solution, configured under Settings &gt; System &gt; Backup, and backups can go to a Nextcloud instance, an external USB drive, or local storage. The XDA and Android Community pieces from the adoption announce the same facts — encrypted, 12-word key, USB or Nextcloud as the destination, restore through Seedvault. What none of these pages does is take the plain-files step: they stop at the archive. There is no folder of .jpg files at the end of any of them, and no mention of opening the photos on a computer.</p>
+  <p>The second shape is the LineageOS feature piece, and it is the other half of the confusion — but it never mentions a USB drive. The Android Police piece on LineageOS features covers both halves of the wall in one article: Glimpse, the gallery app that reads image folders without any cloud, and Seedvault, the encrypted backup to a USB-C flash drive, Nextcloud, or WebDAV, scheduled to run when the backup drive is plugged in. The LineageOS 24 review says the same thing with more enthusiasm: Seedvault writes complete, encrypted device snapshots secured with a 12-word mnemonic to an external USB-C drive or a Nextcloud instance. Both pieces describe the archive accurately. Neither of them tells you how to get plain photo files onto the drive, and neither of them mentions a file-manager copy or a backup app at all. The third shape is the generic Android-to-USB guide, and it is the method without the LineageOS half: How-To Geek's FolderSync guide is generic Android, not LineageOS; the plop.at ADB guide needs a computer and rooted debugging; Dr.Fone's guides are generic OTG copy with a PC tool behind them; and our own generic articles cover the stock-Android copy thoroughly. All of them start from a phone that has Google Photos or a stock file manager, and none of them says what changes when the phone is de-Googled — no Google Photos to fall back on, no Play services behind the purchase, and OTG that varies by build. So the gap stands, but only on the narrow angle: the plain-files photo copy on a LineageOS phone, no computer, with the Seedvault distinction stated and the de-Googled limits marked honestly. That is the angle this article is written on.</p>
+
+  <h2>What you need</h2>
+  <p>A LineageOS phone — any build on Android 7.0 or later, which is SnapDisk's minimum version, and in practice every LineageOS build still in use is far newer than that — and one USB drive your phone can read: a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter. SnapDisk itself is installed from the v0.1.2 APK — it is not on Google Play yet — so install it by allowing "install unknown apps" for the browser or Files app you download it with, which is standard Android and works on LineageOS. Check the drive's space first: look at how many photos are in Glimpse or Settings &gt; Storage, add headroom, and remember the drive holds a second copy of the library, not a replacement for it, until you delete the originals — which this article never asks you to do. One format note: drives formatted FAT32 cannot hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit, and exFAT is the format to use for a photo drive.</p>
+  <p>Before any method, settle the one question that decides whether the phone route works at all: does your device and build see the USB drive? Plug the drive in and open Settings &gt; Connected devices or Settings &gt; Storage — the drive should appear there. That check is the test, and it takes ten seconds, because OTG support varies by device and LineageOS build and no guide tests it across builds — this article marks it unverified rather than assuming your phone sees the drive. If the drive does not appear, try a different adapter first — cheap OTG adapters are the usual failure — then a different drive, and a powered hub if the drive is a spinning hard drive rather than a flash drive. And one warning up front, because it applies to every route below: do not delete the photos from the phone until the USB copy is done and verified. On a LineageOS phone there is no Google Photos copy to fall back on — the phone copy and the drive copy are the only two copies in the world, and deleting the phone copy before the drive copy is verified leaves you with one copy on a losable drive.</p>
+
+  <h2>Method 1: Back up with SnapDisk</h2>
+  <p>This is the route to use, because it is the only one that makes the whole job one tap after the drive is plugged in. The free core runs on a de-Googled build by the code, not by assumption: SnapDisk has no Google Play Services dependency anywhere in its build — zero matches for com.google.android.gms or play-services — and no INTERNET permission in its manifest, so nothing in the free backup phones home or needs Google to run. It reads the whole MediaStore library oldest-first, verifies every file by size after copying, and offers Pause and Stop in the notification. The install is the v0.1.2 APK from the GitHub releases page, sideloaded with "install unknown apps" allowed for the app you download it with.</p>
+  <ol>
+    <li><strong>Plug in the drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?" Whether that notification appears unchanged on LineageOS builds is unverified — the offer is a standard Android notification and nothing in the code is Play-specific, but no guide or test confirms it renders the same on LineageOS. If it does not appear, open SnapDisk and start the backup from the app; the run is the same.</li>
+    <li><strong>Tap Backup.</strong> Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally. The default run reads the whole library via MediaStore, not DCIM only, so photos in Pictures, Screenshots, and messaging-app folders are covered along with everything else, whatever folder they sit in. This was verified in the code, not assumed: with no From folder picked, the app queries the MediaStore images and videos tables with no folder filter.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it stopped, because files already copied are never copied twice.</li>
+  </ol>
+  <p>Two honest limits. First, the 5 GB free cap is per run — a big library needs several free runs or one $9.99 Pro purchase, and running it again past the cap picks up where it stopped. Second, the Pro purchase is unverified on a de-Googled build: Pro is a Google Play Billing one-time purchase, and Play Billing needs Google Play services, which a de-Googled LineageOS build does not have — do not assume the $9.99 purchase works on that build. The free runs are the fallback that always works, and they need no purchase at all. Third, SnapDisk copies, it never deletes: deleting the originals after the check is always your step, never the app's — and on a LineageOS phone, with no cloud copy anywhere, think twice before deleting the phone copy at all: the drive is now the only copy outside the phone, and a drive is losable.</p>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. The default run covers the whole library via MediaStore with no folder to pick — the run reads every photo folder, not DCIM only.</figcaption>
+  </figure>
+
+  <p><strong>Copying only some photos?</strong> If you would rather copy just one folder than the whole library, use the From folder picker: tap it, navigate to the folder, and the run copies only that folder, recursively. The picker route keeps only recognised photo and video extensions. If the drive is unplugged mid-copy, the backup pauses with the full error shown and resumes where it stopped when the drive is back. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit — on a build with Google Play services; on a de-Googled build the purchase is unverified, as above. The app has no internet permission, so your photos physically cannot leave your device.</p>
+  <p>And the check that matters for this article: after the run, compare the count against what Glimpse shows. A green backup that copied everything the MediaStore tables list has still copied zero photos that sit outside those tables — which on LineageOS is rare, but a photo in an app-private folder is invisible to MediaStore and to every backup that reads it. If the number looks too small, the missing photos are probably in a folder the library does not index, and the run needs the folder picked explicitly — not re-run into a different folder. SnapDisk copies, it never deletes — the only files it ever deletes are its own half-finished .part files — so deleting the originals after the check is always your step, never the app's.</p>
+
+  <h2>Method 2: Copy by hand in the Files app</h2>
+  <p>If you'd rather not install anything, the manual copy works — Glimpse cannot do it, but the Files app can. Plug the drive in, confirm it mounted in Settings &gt; Connected devices or Settings &gt; Storage, then open the Files app that ships with your build and confirm the drive shows up there too. Browse to Internal storage, find the photo folders — DCIM for the camera, Pictures for screenshots and downloads, and the messaging-app folders for the photos people sent you — select them (long-press the first, tap the rest, or tap Select all), tap Copy, navigate to the drive, and paste. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos — and on a LineageOS phone there is no cloud copy to fall back on. Wait for the copy to finish before unplugging, and then verify it: plug the drive into another device and open a few photos, and confirm they render.</p>
+  <p>The honest limits of this route are the ones SnapDisk exists to remove. There is no oldest-first order, no progress bar with speed and time left, no Pause and Stop, and no resume if you unplug mid-copy — a manual copy interrupted halfway has to be started again, and working out which files already landed is your job, by comparing counts. There is no per-file verification: the Files app does not check sizes after copying, so a file that copied short looks finished until you open it. And the folder walk is manual: the library lives in DCIM, Pictures, Screenshots, and messaging-app folders, and every folder you forget is a set of photos that never left the phone, and there is no MediaStore whole-library run to catch them. Copy in batches small enough to finish, check the count against what you selected, and open a few files on another device before you trust the drive. And the files on the drive are plain files — anyone who picks up the drive can open them — so if the photos matter enough to back up, this route protects them against losing the phone and nothing else.</p>
+
+  <h2>Method 3: Seedvault (the encrypted whole-device archive)</h2>
+  <p>If you want LineageOS's own route, Seedvault is already on the phone — but note what it writes and what it is for. Go to Settings, System, Backup, change the backup provider to Seedvault if it is not already the provider, and configure it: pick the storage — a USB drive, a Nextcloud instance, or local storage — and write down the 12-word recovery phrase it shows you. Then run the backup. The data is encrypted and written to the drive, and the phrase is required to restore it — through Seedvault, on a compatible ROM. This works fine as a device backup: it carries apps and their data along with files, and it can run automatically when you plug the backup drive in. Its limits, for photos specifically, are the ones this article is built around: the backup is an archive, not a folder of photos — you cannot plug the drive into a computer and open the pictures; you can only restore them through Seedvault, and only onto a compatible ROM; the file-backup part is beta and the documentation warns it may not work as expected; and if you lose the recovery phrase, the backup is unreadable.</p>
+  <p>So Seedvault and Method 1 are answers to different questions, and it is worth saying which question you are asking before you pick one. If what you want is a restore point for the whole device — apps, data, and files together, encrypted, on a drive you keep at home — Seedvault is the right tool, and the recovery phrase goes somewhere safe: without it the archive cannot be restored, and there is no reset. If what you want is a copy of your photos you can open anywhere — on any computer, on any phone, in ten years — Method 1 or 2 is the route, and the archive is the wrong shape. The two are not rivals: a LineageOS phone with no cloud backup at all is exactly the phone that benefits from both — the archive for the device, and the plain-files copy for the photos. Run Seedvault for the restore point, and run the plain copy for the pictures, and keep the 12-word phrase with the drive.</p>
+
+  <h2>Will the drive mount and the notification appear on your build?</h2>
+  <p>This is the question every LineageOS owner asks first, and the honest answer is that both halves of it are unverified — not because they are known to fail, but because nobody has tested them across LineageOS builds, and this article does not claim what it has not checked. The first half is the drive mount: does your device and LineageOS build see a USB drive plugged into the phone? OTG support varies by device and by build — the kernel and the device tree decide it, and a build for one phone can mount drives that a build for another phone cannot. No guide tests it across builds, and the search results for this job contain no report of anyone plugging a drive into a LineageOS phone and seeing — or not seeing — the drive mount there. The test takes ten seconds: plug the drive in, open Settings &gt; Connected devices or Settings &gt; Storage, and look for the drive. If it is there, the phone route works. If it is not, try a different adapter first, then a different drive, then a powered hub for a spinning hard drive — and if none of those works, the drive may simply not mount on that build, and the computer copy is the fallback.</p>
+  <p>The second half is the notification: does SnapDisk's "External storage is connected. Backup photos?" offer appear on a LineageOS build the way it does on stock Android? Unverified. The offer is a standard Android notification, posted by a foreground service, and nothing in the code is Play-specific — there is no Play Services call anywhere in the build, and no internet permission — so there is no code reason for it to fail. But LineageOS builds vary in their notification handling, and no guide or test confirms the offer renders unchanged there. Do not plan on the notification as the only way in: if it does not appear, open SnapDisk and start the backup from the app — the run is the same, with the same progress, Pause and Stop, and verification. And the same honesty applies to the install itself: SnapDisk is not on Google Play yet, so it arrives as an APK, and sideloading needs "install unknown apps" allowed for the app you download it with. That is standard Android and works on LineageOS — but if your build restricts it, that is a build setting to change, not a fault in the app.</p>
+
+  <h2>Can you buy Pro on a de-Googled build?</h2>
+  <p>Short answer: unverified — do not assume it works, and do not assume it fails. Pro is a Google Play Billing one-time purchase: the code names the product id "pro_unlock" and the price $9.99, and the build depends on Google's billing library, billing-ktx 7.1.1. Play Billing needs Google Play services — the Play Store and its services framework — to complete a purchase. A de-Googled LineageOS build does not have them. Whether the purchase flow works on such a build — through microG, through a Play services shim, or not at all — is unverified: no guide tests it, and this article does not claim any of those routes works. What is verified is the other side of the same coin: the free core has no Play dependency at all. The free backup is manual, up to 5 GB per run, with no ads, no account, and no cloud — and it runs on a de-Googled build because the code calls nothing Google. So the honest position is this: on a LineageOS build without Play services, plan on the free runs. They are the route that always works, and running it again picks up where it stopped, because files already copied are never copied twice. If you are on a LineageOS build with Play services installed — some users install them — the purchase may work, but that is untested too, and the free runs are still the safe plan until someone verifies it.</p>
+  <p>There is a second, quieter point here, and it is worth stating because it decides whether the Pro question even matters for a photo backup. Pro buys two things: auto-backup when a disk is connected, and no size limit. On a de-Googled build, the size limit is the only one that bites — and the free runs route around it by repeating the run, since the app never re-copies a file that is already on the drive. Auto-backup is a convenience, not a capability: the manual run copies the same files, oldest-first, with the same verification. So a LineageOS user who cannot buy Pro loses nothing the photos need — only the tap. Keep the free runs as the plan, and treat the Pro purchase as a question for a build with Play services, not as a gate on the backup.</p>
+
+  <h2>Checking the drive after the copy</h2>
+  <p>The check has two halves, and they have to happen in order: first that the drive mounted and the run covered the library, then that the files on the drive open. After the run finishes, open the drive on a computer or on the phone itself and count: the drive should hold the number of photos and videos Glimpse shows, and a few opened at random should render fully, videos included. Open at least one photo from each folder you care about — DCIM, Pictures, and the messaging-app folders — not just any photo on the drive, because a run that covered DCIM only would still look complete on a random check while the rest of the library was missing. If the count is short, the run stopped early — the 5 GB free cap is the usual cause, and running it again picks up where it stopped. If the drive's free space ran out mid-run, the run stops with the full error shown; free space by moving the drive's contents to a bigger drive first, or back up to a second drive. And the check that matters most for a phone with no cloud copy anywhere: confirm the drive copy before you delete anything from the phone. The drive is a plain folder of plain files. Anyone who picks up the drive can open them. That is the price of a copy you can open anywhere, and it is worth stating before the photos leave the phone.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Mistaking a Seedvault archive for a photo copy.</strong> Seedvault writes an encrypted whole-device backup that only Seedvault can restore — you cannot plug the drive into a computer and open the pictures. If you want plain files, you need Method 1 or 2, not Seedvault. And if you do use Seedvault, keep the 12-word recovery phrase somewhere safe: without it the archive cannot be restored.</li>
+    <li><strong>Assuming Google Photos exists on LineageOS.</strong> It does not, and neither does Google cloud backup. There is no cloud copy of your photos unless you installed one yourself — the phone copy and the drive copy are the only two copies in the world. Do not delete the phone copy before the drive copy is verified.</li>
+    <li><strong>Assuming the $9.99 Pro purchase works without Play services.</strong> Unverified — Pro is a Google Play Billing purchase, and a de-Googled build has no Play services. Plan on the free runs, which need no purchase and pick up where they stopped.</li>
+    <li><strong>Assuming the USB drive will mount on every LineageOS device.</strong> Unverified — OTG support varies by device and build. Plug the drive in and check Settings &gt; Connected devices or Settings &gt; Storage before you plan the backup around it.</li>
+    <li><strong>Assuming the backup notification appears on LineageOS.</strong> Unverified — the offer is a standard Android notification and nothing in the code is Play-specific, but no test confirms it renders unchanged on LineageOS builds. If it does not appear, open SnapDisk and start the backup from the app.</li>
+    <li><strong>Assuming Glimpse backs anything up.</strong> Glimpse is a gallery app — it reads image folders and shows your photos, and it does not copy them anywhere. Looking at a photo is not backing it up.</li>
+    <li><strong>Using an ADB backup guide when the point is no computer.</strong> The ADB backup guides need a computer and rooted debugging, and they write a backup archive, not plain photo files. They solve a different job — this article is the phone-direct route.</li>
+    <li><strong>Checking the drive by opening any photo.</strong> Open a photo from each folder you care about — DCIM, Pictures, and the messaging-app folders. A random check passes even when a whole folder was missed, because the photos that did copy render fine.</li>
+    <li><strong>Using a FAT32 drive for a library with long videos.</strong> FAT32 cannot hold a single file over 4 GB, and a library with long 4K clips will hold one. SnapDisk skips those files and lists them — use exFAT.</li>
+    <li><strong>Assuming the free 5 GB cap covers the whole library.</strong> It is per run. A library over 5 GB needs several free runs — run it again and it picks up where it stopped — or one $9.99 Pro purchase on a build where the purchase works.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this. An unplug mid-copy leaves a half-copied library that looks finished until you count it.</li>
+    <li><strong>Confusing Seedvault with a cloud backup.</strong> Seedvault is local and encrypted — it writes to a drive you hold, a Nextcloud you run, or local storage. It is not Google Photos, and it is not a cloud. The distinction is the point of running LineageOS.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> Seedvault is the restore point, the plain copy is the photo backup — LineageOS gives you the archive and no cloud, so the drive holds the only copy of your photos outside the phone. Copy them as plain files, verify the drive, and only then decide about deleting anything.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy folders by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. It copies your photos — the ones in your Gallery — oldest-first, with Pause and Stop and a size check on every file. On a LineageOS phone it is the plain-files copy Seedvault does not do: plug in the drive, tap Backup. See also: <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos to a USB drive automatically (no manual copy)</a>, <a href="backup-photos-offline.html">How to back up photos offline on Android — no cloud, no account</a>, <a href="screenshots-to-usb.html">Back up screenshots to USB from Android</a>, <a href="switching-phones-photos-to-usb.html">Back up photos to USB when switching phones</a>, <a href="restore-photos-from-usb-to-android.html">Restore photos from USB to Android</a>, and <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive: USB photo backup on Android, compared</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

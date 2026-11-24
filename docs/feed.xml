@@ -1301,5 +1301,12 @@
       <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
       <description>Move photos out of Huawei PrivateSpace to MainSpace, then back them up to a USB drive with SnapDisk — plain files you can open anywhere, no computer.</description>
     </item>
+    <item>
+      <title>Back up photos from a LineageOS phone to a USB drive — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/lineageos-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/lineageos-photos-to-usb.html</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>LineageOS ships without Google Photos, and Seedvault writes an encrypted archive — not plain files. Back up photos to a USB drive with SnapDisk, no computer.</description>
+    </item>
 </channel>
 </rss>
