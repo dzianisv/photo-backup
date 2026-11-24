@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up photos from a Huawei PrivateSpace to a USB drive</title>
+<meta name="description" content="Move photos out of Huawei PrivateSpace to MainSpace, then back them up to a USB drive with SnapDisk — plain files you can open anywhere, no computer.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/huawei-privatespace-photos-to-usb.html">
+<meta property="og:title" content="Back up photos from a Huawei PrivateSpace to a USB drive (no computer)">
+<meta property="og:description" content="Move photos out of Huawei PrivateSpace to MainSpace, then back them up to a USB drive with SnapDisk — plain files you can open anywhere, no computer.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/huawei-privatespace-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/huawei-privatespace-photos-to-usb.html#article",
+      "headline": "Back up photos from a Huawei PrivateSpace to a USB drive (no computer)",
+      "description": "Move photos out of Huawei PrivateSpace to MainSpace, then back them up to a USB drive with SnapDisk — plain files you can open anywhere, no computer.",
+      "datePublished": "2026-11-23",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/huawei-privatespace-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/huawei-privatespace-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can SnapDisk back up photos that are inside Huawei PrivateSpace directly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Huawei PrivateSpace is a separate space that is completely independent of MainSpace, entered with its own fingerprint or password, and photos inside it are invisible from MainSpace. A SnapDisk install in the personal or main profile cannot see PrivateSpace photos at all, so there is nothing for it to copy. Move the photos out to MainSpace first — inside PrivateSpace, Settings > Privacy > PrivateSpace > PrivateSpace to MainSpace — and then back them up from MainSpace with SnapDisk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I move photos out of PrivateSpace to a USB drive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In two steps, both on the phone, no computer. First, enter PrivateSpace with its fingerprint or password, open Settings > Privacy > PrivateSpace, tap PrivateSpace to MainSpace, select the photos and videos, and tap Move — they land in Gallery > Albums > SharedImages and SharedVideos in MainSpace. Second, plug in the USB drive and back them up from MainSpace: with SnapDisk, tap Backup and the whole library copies oldest-first with progress, Pause and Stop, and a size check on every file; or copy them by hand in the Files app. Only files stored locally on the device can move out — files on a memory card or in the cloud cannot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I plug the USB drive in while I am inside PrivateSpace and copy straight from there?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unverified. Huawei's own PrivateSpace documentation describes moving files between MainSpace and PrivateSpace, and cloning PrivateSpace to a new phone, but says nothing about whether a USB drive plugged in while inside PrivateSpace shows up in that space's Files app — and no independent guide tests it either. Do not assume the drive is visible inside PrivateSpace. The route this article uses is the documented one: move the photos out to MainSpace first, then copy them to the drive from MainSpace, where the drive is known to mount."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I delete PrivateSpace before backing up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Everything in it is gone, permanently. Huawei's own support page says: if you delete PrivateSpace, all apps and data stored in the space will be deleted and cannot be restored. There is no recycle bin and no undo — deleting the space deletes the photos with it. Move the photos out to MainSpace and back them up to the USB drive first, verify a few photos on the drive, and only then delete PrivateSpace."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/huawei-privatespace-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up photos from a Huawei PrivateSpace to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/huawei-privatespace-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up photos from a Huawei PrivateSpace to a USB drive</h1>
+  <p class="dek">PrivateSpace hides your photos from every app in MainSpace — including SnapDisk. The fix is a two-step move: out of PrivateSpace into MainSpace, then onto the drive.</p>
+  <p class="meta">November 23, 2026 · 7 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> Photos inside Huawei PrivateSpace cannot be backed up to a USB drive directly — not by SnapDisk, not by the Files app, not by Huawei Backup. PrivateSpace is a separate space, completely independent of MainSpace, entered with its own fingerprint or password, and a backup app installed in the main profile cannot see the photos inside it at all. The route is two steps, both on the phone, no computer: first move the photos out — inside PrivateSpace, Settings &gt; Privacy &gt; PrivateSpace &gt; PrivateSpace to MainSpace, select the photos and videos, tap Move — and they land in Gallery &gt; Albums &gt; SharedImages and SharedVideos in MainSpace. Then plug in the USB drive and back them up from MainSpace, where SnapDisk copies the whole library oldest-first with real progress, Pause and Stop, and a size check on every file. Two limits to know before you start: only files stored locally on the device can move out — files on a memory card or in the cloud cannot — and deleting PrivateSpace deletes everything in it, permanently, so move the photos out and verify the drive copy before you ever delete the space. Whether a USB drive plugged in while you are inside PrivateSpace shows up in that space's Files app is unverified — Huawei's docs do not say, and no guide tests it — so do not plan on it. As of November 23, 2026, no top search result offers a dedicated PrivateSpace-photos-to-USB how-to: Huawei's own pages explain PrivateSpace and the move-out to MainSpace, and the USB guides that exist cover the generic MainSpace copy or an encrypted Huawei Backup archive — none joins the two halves.</p>
+
+  <h2>The wall: a backup app in MainSpace cannot see PrivateSpace</h2>
+  <p>Start with what PrivateSpace is, because it is the whole job and it is easy to underestimate. Huawei's own support page puts it in one sentence: create a PrivateSpace that is "completely independent of MainSpace (the original space) on your phone, which can be accessed using your fingerprint or a password." Independent is doing real work in that sentence. PrivateSpace is not a locked folder inside your gallery, and it is not a hidden album. It is a second space on the phone with its own apps, its own files, and its own lock — you enter it from the lock screen with a different fingerprint or password, or from MainSpace by logging in — and what lives inside it does not exist as far as MainSpace is concerned. Photos you move into PrivateSpace disappear from the MainSpace gallery. Apps installed in MainSpace cannot open them, cannot list them, and cannot copy them. That includes SnapDisk, and it includes the Files app, and it includes Huawei Backup running in MainSpace. The wall is the feature: the photos are hidden from everyone who picks up the phone unlocked into MainSpace, including every app running there.</p>
+  <p>That is why the obvious first try fails silently. Plug a USB drive into the phone, open SnapDisk in MainSpace, tap Backup, and the run copies the whole library it can see — oldest-first, with progress and verification — and reports "Backup complete." It has copied everything in MainSpace. It has copied zero of the PrivateSpace photos, because from where it runs, those photos do not exist. There is no error, no skipped-files entry, and no warning, because nothing failed: the app did exactly what it was asked to do with the library it can read. The same is true of the manual route: open the Files app in MainSpace, browse to DCIM, and the PrivateSpace photos are not there to select. And the same is true in the other direction — a backup app installed inside PrivateSpace would see only PrivateSpace, not MainSpace — which is why "just install SnapDisk inside PrivateSpace" is not an answer either: an install inside the space runs inside the space, and the USB leg from there is the unverified part this article does not build on. If your photos are in PrivateSpace, the backup has to start with the move-out, and the move-out is Huawei's own feature, not SnapDisk's.</p>
+  <p>Two scope facts before the methods, because they decide what this article covers and what it does not. First, this is Huawei PrivateSpace on EMUI — the P, Mate, and nova phones — not to be confused with Android's Private Space, a separate Android 15 feature that hides apps in a locked section of the app drawer. The two share a name and a purpose, but they are different features on different layers, and the move-out path in this article is Huawei's, not Android's. Second, the move-out only works for files stored locally on the device. Huawei's own manual states it plainly: files stored on the device or a memory card can be transferred from MainSpace into PrivateSpace, but only files stored locally on the device can be transferred from PrivateSpace back to MainSpace, and files stored in the cloud cannot be transferred between the spaces at all. So a photo that lives on a memory card, or only in Huawei Cloud, cannot move out of PrivateSpace by this route — it has to be on the phone's own storage first. Keep that in mind through Methods 1 to 3: the question is never "can SnapDisk copy these photos" in the abstract. It is "are the photos in MainSpace yet, and on local storage, where a backup app can see them."</p>
+  <p>One more scope fact, because it decides which of the methods below SnapDisk can help with at all. SnapDisk copies image and video files only. On the default run it reads the phone's MediaStore images and videos tables, with no folder filter — the whole library, oldest-first, whatever folder the photos sit in. That matters here because the photos you move out of PrivateSpace do not land in DCIM/Camera: they land in Gallery &gt; Albums &gt; SharedImages and SharedVideos. A backup that only copied DCIM would miss them. SnapDisk's default run does not only copy DCIM — it reads the whole MediaStore library — so the moved-out photos are covered by the same one-tap run as everything else, with no folder to pick and no setting to change. The check is the same as always: after the run, compare the count against what the Gallery shows. If the number looks too small for a library that includes moved-out photos, the photos are probably still in PrivateSpace, and the run needs the move-out done first — not re-run into a different folder.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search for this job three ways and the results split into three shapes, none of them the narrow job — a PrivateSpace-photos-to-USB guide that starts inside PrivateSpace, moves the photos out, and copies them to a plain USB drive plugged into the phone, no computer, with the invisibility wall stated and the move-out path as the first step. The first shape is Huawei's own documentation, and it is the most useful of the three — but only half the job. Huawei's support page, "Create a PrivateSpace for Your Private Data," explains the space itself — how to enable it, how to enter it with a fingerprint or password, how to hide its entrance — and gives the transfer path: in PrivateSpace, go to Settings and touch MainSpace to PrivateSpace or PrivateSpace to MainSpace, select the files, and follow the prompts. The user manuals for the MatePad Pro, the Mate 20 lite, and the nova 9 say the same thing with the full path spelled out — Settings &gt; Privacy &gt; PrivateSpace, touch PrivateSpace to MainSpace — and add where the moved files land: Gallery &gt; Albums &gt; SharedImages and SharedVideos. What none of these pages does is take the second step: they stop at MainSpace. There is no USB drive in the PrivateSpace page, no OTG step, and no mention of backing the moved-out photos up anywhere.</p>
+  <p>The second shape is the generic Huawei-to-USB guide, and it is the other half of the job — but it never mentions PrivateSpace. Our own Huawei brand article, "Back up Huawei photos to a USB drive," is the top result for this query, and it covers the MainSpace copy thoroughly: Huawei Backup's encrypted archive, the manual Files-app copy, and SnapDisk's one-tap oldest-first copy. Huawei's own OTG tutorial covers the same manual copy: plug the drive in, open the Files manager, select the photos, Copy, then Paste to the drive. The third-party guides — AnExplorer, MobiKin, FoneLab — are the same manual select-copy-paste in different packaging, or PC tools that need a computer. All of them start from the MainSpace gallery, where the photos are visible. None of them says what to do when the photos are not in MainSpace at all, and none of them mentions PrivateSpace, even in passing. The third shape is the PrivateSpace explainer: phoneia, huaweiupdate, and the Huawei support page again, explaining what PrivateSpace is, how to set it up, and how to move files out to MainSpace — but again stopping at MainSpace, with no USB leg. So the gap stands, but only on the narrow angle: the joined job — PrivateSpace to MainSpace to USB drive, no computer — with the invisibility wall stated from Huawei's own words and the move-out as the first step. That is the angle this article is written on.</p>
+
+  <h2>What you need</h2>
+  <p>A Huawei phone (P, Mate, or nova) with PrivateSpace enabled and photos inside it, the PrivateSpace fingerprint or password — without it you cannot enter the space at all, and there is no way around that from MainSpace — and one USB drive your phone can read: a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter (most modern Huawei phones support OTG; if the phone does not see the drive, try a different adapter). SnapDisk itself is installed in MainSpace from the v0.1.2 APK — it is not on Google Play yet — and it is the MainSpace install that does the USB copy, after the move-out. Check the drive's space first: look at how many photos are inside PrivateSpace (open the Gallery there and count, or check Settings &gt; Storage inside the space) and add that to the MainSpace library's size, then add headroom — the moved-out photos are a second copy of the library, not a replacement for it, until you delete the originals, which this article never asks you to do. One format note: drives formatted FAT32 cannot hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit, and exFAT is the format to use for a PrivateSpace drive.</p>
+  <p>Before any method, settle the one question that decides whether the move-out works at all: are the photos stored locally on the phone? Open the Gallery inside PrivateSpace and check. Photos taken with the phone's camera are local by default, and those move out. Photos that live only in Huawei Cloud, or on a memory card, do not — Huawei's manual is explicit that cloud files cannot transfer between the spaces, and only files stored locally on the device can move out of PrivateSpace. If the photos you want are cloud-only, download them to the phone's storage inside PrivateSpace first, then move them out. And one warning up front, because it applies to every route below: do not delete PrivateSpace — or the photos inside it — until the USB copy is done and verified. Huawei's support page says deleting PrivateSpace deletes all apps and data stored in the space, and it cannot be restored. The move-out is a move, not a copy: the photos leave PrivateSpace when they arrive in MainSpace. The USB backup is the copy that protects you. Do the move, do the backup, check the drive — then, and only then, decide about deleting anything.</p>
+
+  <h2>Method 1: Move the photos out, then back up with SnapDisk</h2>
+  <p>This is the route to use, because it is the only one that makes the whole job one tap after the move-out. Step one is Huawei's feature, step two is SnapDisk's. First, the move-out. Enter PrivateSpace — from the lock screen with the fingerprint or password set for the space, or from MainSpace by logging in — and open Settings, then Privacy, then PrivateSpace. (On older EMUI the same screen sits under Security &amp; privacy instead of Privacy; the screen is the same, only the menu name changed.) Tap PrivateSpace to MainSpace, select the photos and videos you want to move, tap Move, and follow the onscreen prompts. The photos land in MainSpace in Gallery &gt; Albums &gt; SharedImages, and the videos in SharedVideos. Check they arrived before you go on: switch back to MainSpace, open Gallery &gt; Albums, and look for the SharedImages and SharedVideos albums — the count there should match what you selected. If the entrance to PrivateSpace is hidden in MainSpace, that changes nothing about the move: you still enter with the lock-screen fingerprint or password, and the Settings path inside the space is the same.</p>
+  <ol>
+    <li><strong>Plug in the drive.</strong> SnapDisk offers a backup in a notification: "External storage is connected. Backup photos?"</li>
+    <li><strong>Tap Backup.</strong> Photos and videos copy oldest-first — your earliest photos first — in the background, while you use the phone normally. The default run reads the whole library via MediaStore, not DCIM only, so the moved-out photos in SharedImages and SharedVideos are covered along with everything else, whatever folder they sit in. This was verified in the code, not assumed: with no From folder picked, the app queries the MediaStore images and videos tables with no folder filter.</li>
+    <li><strong>Watch the progress notification</strong> — real percent, copied / total size, speed, and time left — with Pause and Stop. You can pause and resume any time.</li>
+    <li><strong>Wait for "Backup complete."</strong> Every file is size-verified after copying, so the counts are proof, not a promise. Files that already copied are never copied twice — so if the free 5 GB per-run limit stops a big library partway, just run it again and it picks up where it stopped, because files already copied are never copied twice.</li>
+  </ol>
+  <p>Two honest limits. First, the 5 GB free cap is per run — a library swollen by moved-out photos needs several free runs or one $9.99 Pro purchase, and running it again past the cap picks up where it stopped. Second, SnapDisk copies, it never deletes: the move is a move, so the photos you moved are no longer in PrivateSpace once they land in MainSpace — and SnapDisk never deletes the MainSpace originals after copying them to the drive. Deleting the originals after the check is always your step, never the app's — and for photos that were private enough to live in PrivateSpace, think twice before deleting the phone copy at all: the drive is now the only copy outside the phone, and a drive is losable.</p>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. After the move-out, the default run covers the moved photos in SharedImages and SharedVideos with no folder to pick — the run reads the whole library, not DCIM only.</figcaption>
+  </figure>
+
+  <p><strong>Copying only the moved-out photos?</strong> If you would rather copy just the SharedImages and SharedVideos albums than the whole library, use the From folder picker: tap it, navigate to the folder, and the run copies only that folder, recursively. The picker route keeps only recognised photo and video extensions. If the drive is unplugged mid-copy, the backup pauses with the full error shown and resumes where it stopped when the drive is back. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+  <p>And the check that matters for this article: after the run, compare the count against what you expected for the moved-out photos plus the rest of the library. A green backup that copied everything in MainSpace has still copied zero photos that are still inside PrivateSpace — they were never in the run. If the number looks too small, the missing photos are probably still in PrivateSpace, and the run needs the move-out done first — not re-run into a different folder. SnapDisk copies, it never deletes — the only files it ever deletes are its own half-finished .part files — so deleting the originals after the check is always your step, never the app's.</p>
+
+  <h2>Method 2: Move them out, then copy by hand in the Files app</h2>
+  <p>If you'd rather not install anything, the move-out is the same and the USB leg is manual. Do step one exactly as in Method 1: inside PrivateSpace, Settings &gt; Privacy &gt; PrivateSpace &gt; PrivateSpace to MainSpace, select the photos and videos, Move, and confirm they arrived in Gallery &gt; Albums &gt; SharedImages and SharedVideos in MainSpace. Then, in MainSpace, plug the drive in, open Files, and confirm the drive mounted. Browse to Internal storage, find the moved photos — the Gallery albums point at them, but in the Files app you are looking for the folders the Gallery reads, which on Huawei phones sit under DCIM and Pictures — select them (long-press the first, tap the rest, or tap Select all), tap Copy, navigate to the drive, and paste. Use Copy, not Move: Move deletes the originals as it goes, so a bumped cable halfway through loses photos. Wait for the copy to finish before unplugging, and then verify it: plug the drive into another device and open a few photos, and confirm they render.</p>
+  <p>The honest limits of this route are the ones SnapDisk exists to remove. There is no oldest-first order, no progress bar with speed and time left, no Pause and Stop, and no resume if you unplug mid-copy — a manual copy interrupted halfway has to be started again, and working out which files already landed is your job, by comparing counts. There is no per-file verification: the Files app does not check sizes after copying, so a file that copied short looks finished until you open it. And the folder walk is manual: the moved-out photos sit in SharedImages and SharedVideos, the rest of the library in DCIM, Pictures, Screenshots, and messaging-app folders — every folder you forget is a set of photos that never left the phone, and there is no MediaStore whole-library run to catch them. Copy in batches small enough to finish, check the count against what you selected, and open a few files on another device before you trust the drive. And the files on the drive are plain files — anyone who picks up the drive can open them — so if the photos were private enough for PrivateSpace, this route protects them against losing the phone and nothing else.</p>
+
+  <h2>Method 3: Huawei Backup (the encrypted archive)</h2>
+  <p>If you want Huawei's own route, the Backup app is already on the phone — but note where it runs and what it writes. Connect the USB drive with an OTG cable, go to Settings, System &amp; updates, Backup &amp; restore, Data backup, External storage, touch USB storage, touch BACK UP, select the data you want, and follow the prompts to set a password. The data is encrypted and backed up to the drive, and the password is required to restore it — through Huawei Backup, on a Huawei phone. This works fine as a device backup. Its limits, for photos specifically, are the same as in the generic Huawei article, and they bite harder here: the backup is an archive, not a folder of photos — you cannot plug the drive into a computer and open the pictures; you can only restore them through Huawei Backup, and only onto a Huawei phone; and if you lose the password, the backup is unreadable.</p>
+  <p>And the PrivateSpace limit on top of that: Huawei Backup runs in MainSpace, and it backs up what MainSpace can see. Photos still inside PrivateSpace are not in MainSpace's backup set — the archive covers the MainSpace library, the moved-out photos included once they have landed in SharedImages and SharedVideos, and not the photos still behind the PrivateSpace lock. So this method needs the same move-out first, and after the move-out it gives you an encrypted archive where Method 1 gives you plain files. If what you want is a copy of your photos you can open anywhere — on any computer, on any phone, in ten years — Method 1 or 2 is the route, and the archive is the wrong shape. If what you want is a whole-device restore point on a Huawei phone, the archive is the right tool, and the password goes somewhere safe: without it the archive cannot be restored, and there is no reset.</p>
+
+  <h2>What about the USB drive inside PrivateSpace?</h2>
+  <p>This is the question every PrivateSpace owner asks first, and the honest answer is that it is unverified. Plug the USB drive into the phone while you are inside PrivateSpace: does the drive show up in that space's Files app, and can you copy photos from PrivateSpace straight to it, with no move-out at all? Huawei's own PrivateSpace documentation does not say. The support page describes moving files between MainSpace and PrivateSpace, and cloning PrivateSpace to a new phone — Space Clone, over a direct connection between two phones — but it says nothing about a USB drive inside PrivateSpace, and the user manuals are silent on it too. No independent guide tests it either: the search results for this job contain no report of anyone plugging a drive in inside PrivateSpace and seeing — or not seeing — the drive mount there.</p>
+  <p>Do not plan on it. The move-out route in Method 1 is the documented one, and it works on every EMUI version that has PrivateSpace, because the transfer feature is part of the space itself. The direct-USB route, if it works at all, would depend on details nobody has published — whether the space's Files app can see external storage, whether the drive mounts per-space or per-device, and whether the copy would be blocked the same way memory-card files are blocked from moving out. If you try it and the drive does appear inside PrivateSpace, treat the copy as unverified until you check it: open the drive on a computer, count the photos, and open a few. And if the drive does not appear, that is not a fault — it is the expected behaviour of a space designed to be independent of everything outside it, and the move-out is the way through. This article does not claim the direct route works, and it does not claim it fails. It says the move-out works, and uses it.</p>
+
+  <h2>Can SnapDisk run inside PrivateSpace?</h2>
+  <p>Short answer: it can be installed there, but that does not solve the USB leg, and it is not the route this article uses. PrivateSpace has its own apps: you can install apps inside the space, and they run inside the space, seeing only what the space can see. So a SnapDisk install inside PrivateSpace would see the PrivateSpace photos — the ones MainSpace SnapDisk cannot see — which sounds like the answer. The problem is the second half of the job: the copy has to land on the USB drive, and whether the drive is visible from inside PrivateSpace is the same unverified question as the section above. An app inside the space can only write where the space lets it write, and nobody has published whether that includes the OTG drive.</p>
+  <p>There is a second problem, quieter but just as real: two SnapDisk installs are two separate apps with two separate settings. The install in MainSpace and the install in PrivateSpace do not share a To folder, a From folder, or a Pro purchase — each space's install is its own copy, and the $9.99 Pro purchase in one space does not carry into the other. A backup run inside the space would also be a run you cannot see from MainSpace: its progress notification, its counts, and its errors live inside the space, and you would have to be inside the space to watch them. The MainSpace route avoids all of it: one install, one set of settings, one run that covers the moved-out photos along with the rest of the library, with the progress notification where you can see it. Move the photos out, back them up from MainSpace, and keep one install doing one job.</p>
+
+  <h2>Checking the drive after the move and the copy</h2>
+  <p>The check has two halves, and they have to happen in order: first that the move-out landed, then that the USB copy landed. After the move, before you plug the drive in, switch to MainSpace and open Gallery &gt; Albums &gt; SharedImages and SharedVideos. The count there should match the number of photos and videos you selected inside PrivateSpace. If an album is empty or short, the move did not complete — go back into PrivateSpace, check whether the photos are still there, and move the missing ones again. Do not start the USB copy on a half-moved set: a backup of an incomplete move is a backup that looks complete, and the missing photos are still behind the lock, invisible to every check you run from MainSpace.</p>
+  <p>After the USB copy finishes, check the drive the same way you would for any backup, but with the moved-out photos in mind. Open the drive on a computer or on the phone itself and count: the drive should hold the number of photos and videos the Gallery shows in MainSpace, including the SharedImages and SharedVideos albums, and a few opened at random should render fully, videos included. Open at least one photo that came out of PrivateSpace specifically — not just any photo on the drive — because the MainSpace library would have copied fine even if the move had failed, and a random check can pass while the private photos are missing. If the count is short, the run stopped early — the 5 GB free cap is the usual cause, and running it again picks up where it stopped. If the drive's free space ran out mid-run, the run stops with the full error shown; free space by moving the drive's contents to a bigger drive first, or back up to a second drive. And the check that matters most for photos that were private enough for PrivateSpace: confirm the drive copy before you delete anything, anywhere — not from MainSpace, and not by deleting PrivateSpace. The drive is a plain folder of plain files. Anyone who picks up the drive can open them. That is the price of a copy you can open anywhere, and it is worth stating before the photos leave the phone.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Backing up from MainSpace and assuming PrivateSpace came along.</strong> A green "Backup complete" in MainSpace copied zero PrivateSpace photos. The photos are invisible from MainSpace by design. Move them out first, then back them up.</li>
+    <li><strong>Deleting PrivateSpace before the USB copy is verified.</strong> Deleting the space deletes all apps and data in it, and it cannot be restored — Huawei's own words. Move out, back up, check the drive, and only then decide about deleting anything.</li>
+    <li><strong>Assuming a USB drive plugged in inside PrivateSpace will show up there.</strong> Unverified — Huawei's docs do not say, and no guide tests it. Use the documented move-out route instead of planning on a drive mount nobody has confirmed.</li>
+    <li><strong>Installing SnapDisk inside PrivateSpace to dodge the move-out.</strong> Two installs are two separate apps with separate settings and separate Pro purchases, and the USB leg from inside the space is the same unverified question. One install in MainSpace, after the move-out, is the route that works.</li>
+    <li><strong>Moving cloud-only or memory-card photos and expecting them to transfer.</strong> Only files stored locally on the device can move out of PrivateSpace — files in the cloud cannot transfer between the spaces at all. Download cloud photos to the phone's storage inside PrivateSpace first.</li>
+    <li><strong>Checking the drive by opening any photo.</strong> Open a photo that came out of PrivateSpace specifically. A random check passes even when the move failed, because the MainSpace library copied fine.</li>
+    <li><strong>Mistaking an encrypted Huawei Backup archive for a photo copy.</strong> Huawei Backup writes a backup file to the drive, not your photos as files — and it runs in MainSpace, so it cannot see PrivateSpace either. If you want to plug the drive into a computer and open the pictures, you need a plain copy — that is Method 1 or 2, not Huawei Backup. And if you do use Huawei Backup, keep the password somewhere safe: without it the archive cannot be restored.</li>
+    <li><strong>Forgetting the photos outside SharedImages after the move.</strong> The moved-out photos land in SharedImages and SharedVideos, not DCIM/Camera. SnapDisk's default run covers the whole library via MediaStore, so it catches them — a manual Files-app copy does not, unless you select those folders too.</li>
+    <li><strong>Using a FAT32 drive for a library swollen by moved-out photos.</strong> FAT32 cannot hold a single file over 4 GB, and a library that just gained a set of moved-out videos is more likely to hold a long 4K clip. SnapDisk skips those files and lists them — use exFAT.</li>
+    <li><strong>Assuming the free 5 GB cap covers the moved-out photos too.</strong> It is per run, and the moved-out photos add to the run's size. A library that fitted in one free run before the move may need two after it — run it again and it picks up where it stopped, or one $9.99 Pro purchase removes the limit.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this. With moved-out photos in the run, an unplug mid-copy leaves a half-copied library that looks finished until you count it.</li>
+    <li><strong>Confusing Huawei PrivateSpace with Android Private Space.</strong> Different features: Huawei's is a separate space on EMUI phones with its own fingerprint or password; Android's is a locked section of the app drawer on Android 15. The move-out path in this article is Huawei's.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> move out first, back up second — MainSpace is the only place a backup app can see your photos, so PrivateSpace photos do not exist to any backup until they land in SharedImages and SharedVideos. Verify the drive before you delete anything, anywhere.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy folders by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. It copies your photos — the ones in your Gallery — oldest-first, with Pause and Stop and a size check on every file. PrivateSpace photos join the run the moment they land in MainSpace: move them out, plug in the drive, tap Backup. See also: <a href="huawei-photos-to-usb.html">Back up Huawei photos to a USB drive</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos to a USB drive automatically (no manual copy)</a>, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="screenshots-to-usb.html">Back up screenshots to USB from Android</a>, <a href="switching-phones-photos-to-usb.html">Back up photos to USB when switching phones</a>, <a href="backup-photos-offline.html">How to back up photos offline on Android — no cloud, no account</a>, <a href="restore-photos-from-usb-to-android.html">Restore photos from USB to Android</a>, and <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive: USB photo backup on Android, compared</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

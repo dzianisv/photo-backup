@@ -1294,5 +1294,12 @@
       <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
       <description>Back up photos from two Android phones onto one USB drive — one folder per phone, or same-named photos collide and SnapDisk skips the second copy.</description>
     </item>
+    <item>
+      <title>Back up photos from a Huawei PrivateSpace to a USB drive — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/huawei-privatespace-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/huawei-privatespace-photos-to-usb.html</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Move photos out of Huawei PrivateSpace to MainSpace, then back them up to a USB drive with SnapDisk — plain files you can open anywhere, no computer.</description>
+    </item>
 </channel>
 </rss>

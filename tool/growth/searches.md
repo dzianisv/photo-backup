@@ -20475,3 +20475,86 @@ unchanged (already "Back up photos & videos to a USB disk").
   docs/switching-phones-photos-to-usb.html (transfer to a NEW phone, a different angle —
   destination change, killed Nov 22 20:24) and docs/snapdisk-vs-vaultdrive.html (comparison
   article, 0 multi-phone/family matches) — different, already-live articles, untouched.
+
+### 184. "Back up photos from a Huawei PrivateSpace to a USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  PrivateSpace to MainSpace to USB drive, no computer — with the invisibility wall
+  stated and Huawei's move-out path as the first step. Huawei's own pages explain
+  PrivateSpace and the move-out to MainSpace and stop there; the USB guides that exist
+  cover the generic MainSpace copy or an encrypted Huawei Backup archive and never
+  mention PrivateSpace. The gap stands ONLY on that narrow angle: the two-step
+  move-out-then-USB-copy, with the wall stated from Huawei's own words and the
+  unverified USB-inside-PrivateSpace question marked as such.
+- Current top results (scored Nov 23, 2026, live web search):
+  Phrasing 1, "back up photos from Huawei PrivateSpace to USB drive" (supervisor,
+  this run): our own Huawei brand article (huawei-photos-to-usb.html) is the top
+  result — it covers the generic MainSpace USB copy and never mentions PrivateSpace;
+  Huawei's own support page covers generic USB backup as an encrypted Huawei Backup
+  archive (restore only on a Huawei phone, password required), plus generic OTG
+  manual copy (AnExplorer, MobiKin, FoneLab). No dedicated PrivateSpace-to-USB
+  how-to.
+  Phrasing 2, "move photos out of Huawei PrivateSpace to USB drive export"
+  (supervisor, this run): phoneia.com, huaweiupdate.com, Huawei support all explain
+  PrivateSpace itself and the move-out to MainSpace (Settings > Privacy >
+  PrivateSpace > PrivateSpace to MainSpace, photos land in Gallery > Albums >
+  SharedImages/SharedVideos); none covers the USB leg. No dedicated how-to.
+  Phrasing 3, "Huawei PrivateSpace photos copy to USB OTG drive export" (lead,
+  this run): our own Huawei brand article again top; ManualsLib MatePad Pro manual
+  (move-out path, SharedImages/SharedVideos landing) and Mate 20 lite manual
+  (PrivateSpace features, Security & privacy path); Huawei support "Create a
+  PrivateSpace for Your Private Data" (independent space, fingerprint/password,
+  move-out path, Space Clone to a new phone, delete warning); Huawei user-guide PDF
+  (local-only move-out rule, NM-card and cloud limits). No dedicated
+  PrivateSpace-photos-to-USB how-to — the USB leg is never joined to the move-out.
+- Honest centre (verified from the code at base 2cdaff4 and the live sources above,
+  this run, Nov 23, 2026, not assumed): Huawei PrivateSpace (EMUI) is a separate
+  independent space, entered by fingerprint or password; photos inside it are
+  invisible from MainSpace. A SnapDisk install in the personal/main profile cannot
+  see PrivateSpace photos — a green MainSpace backup copies zero of them, with no
+  error, because nothing failed. The move-out path: inside PrivateSpace, Settings >
+  Privacy > PrivateSpace > PrivateSpace to MainSpace (older EMUI: Security &
+  privacy), select photos/videos, Move; they land in Gallery > Albums >
+  SharedImages / SharedVideos in MainSpace. Only files stored locally on the device
+  can move out (Huawei manual: files on a device or NM card can move MainSpace to
+  PrivateSpace, but only locally stored files can move PrivateSpace to MainSpace;
+  cloud files cannot transfer between the spaces at all). After the move, the USB
+  leg is the generic OTG copy our Huawei article already covers; SnapDisk backs up
+  from MainSpace after the move — its default MediaStore run covers SharedImages /
+  SharedVideos with no folder filter. Do not claim SnapDisk runs inside
+  PrivateSpace: a second install inside the space is a separate app with separate
+  settings and a separate Pro purchase, and the USB leg from inside the space is
+  unverified. Deleting PrivateSpace deletes all apps and data in it and cannot be
+  restored (Huawei support page, verbatim) — back up before deleting. UNVERIFIED,
+  marked as such in the article: whether a USB drive plugged in while inside
+  PrivateSpace shows up in that space's Files app. Do not claim it either way.
+  Contrast honestly with Huawei Backup (encrypted archive, Huawei-only restore,
+  password required, runs in MainSpace so it cannot see PrivateSpace either) and
+  the manual Files-app copy (select-copy-paste, no progress detail, no resume, no
+  verification), as the Huawei brand article does. SnapDisk facts re-verified from
+  the code at base 2cdaff4: destination path built from relative path + filename
+  (BackupService.kt:616-621, File(File(base, item.relativePath), item.displayName))
+  and skip by path + size only, no hash (BackupEngine.kt:102-108, "Skip only when
+  the destination already holds a file of the same size"); Pro $9.99 once
+  (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB free per-run cap (ProPrefs.kt:43,
+  5L * 1024 * 1024 * 1024), oldest-first MediaStore DATE_TAKEN (PhotoQuery.kt:47,
+  :54, sort DATE_TAKEN ASC with DATE_MODIFIED fallback; BackupEngine.kt:9-10), size
+  verification after copy (BackupEngine.kt:107,108), Pause/Stop in the notification
+  (NotificationHelper.kt:128,138; BackupService.kt:113,115), FAT32 files >=4 GiB
+  skipped with their reason (BackupService.kt:428-433), default To /disk/DCIM
+  (BackupPrefs.kt:53), no INTERNET permission (0 occurrences in the manifest), no
+  WakeLock/Doze code — screen-off continuation under battery saver is unverified,
+  no encryption code in the app source (0 matches).
+  "SnapDisk copies, it never deletes" present — the only .delete() calls in the code
+  are on SnapDisk's own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). The article carries no install count for SnapDisk
+  (none exists) and no VaultDrive install figure.
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/huawei-privatespace-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md before
+  writing; "privatespace" returns 0 matches in WORKLOG.md and feed.xml, and the
+  "private space" matches in WORKLOG are AOSP Private Space (WL-222), a different
+  feature — do not confuse them. The near match is
+  docs/huawei-photos-to-usb.html (the generic Huawei brand article — the MainSpace
+  copy, no PrivateSpace) — a different, already-live article, untouched, and linked
+  from the new article as the MainSpace companion.
