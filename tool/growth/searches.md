@@ -20842,3 +20842,122 @@ unchanged (already "Back up photos & videos to a USB disk").
   tiktok-photos-videos-to-usb.html, wechat-photos-videos-to-usb.html) — all
   different, already-live articles, untouched, and the WhatsApp and Telegram
   ones linked from the new article as the series companions.
+
+### 188. "Back up WhatsApp Business photos to a USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a WhatsApp Business photo, out of the Business chat and into the gallery via
+  Media visibility, onto a USB drive plugged into the phone, no computer — with
+  the com.whatsapp.w4b folder stated (Android/media/com.whatsapp.w4b/WhatsApp
+  Business/Media/WhatsApp Business Images), the regular-WhatsApp paths named
+  as the wrong folder, and the Private-subfolder question marked honestly. Our
+  own regular-WhatsApp article ranks top and never mentions WhatsApp Business;
+  the folder guides stop at finding the folder; the OTG guides never mention
+  Business. The gap stands ONLY on that narrow angle: the Business photo, out
+  of the Business folder, onto a USB drive, no computer, with the default run
+  proven to cover gallery-saved Business photos and the folder pick marked
+  untested.
+- Current top results (scored Nov 24, 2026, live web search):
+  Phrasing 1, "back up WhatsApp Business photos to USB drive Android no
+  computer" (lead, this run): our own whatsapp-photos-to-usb.html ranks top
+  and contains 0 "WhatsApp Business" mentions (verified by grep); the rest
+  are a VaultDrive promo (Facebook Coticsy post), a generic OTG backup app
+  (Photos to USB, AppBrain), and generic external-drive guides (evezone,
+  YouTube) — plug the drive in, copy the folders in the file manager — none
+  mentions WhatsApp Business, the com.whatsapp.w4b folder, or Media
+  visibility. No dedicated WhatsApp-Business-photos-to-USB how-to.
+  Phrasing 2, "WhatsApp Business media folder path Android com.whatsapp.w4b
+  WhatsApp Business Images location" (lead, fact check, this run):
+  AnExplorer states the Business path outright —
+  "Android/media/com.whatsapp.w4b/WhatsApp Business/Media/" — with the
+  Media/WhatsApp Images/Sent/Private structure; a status-saver development
+  guide (computerandmobile.com) gives the same package and folder for
+  Business statuses; the Samsung community confirms com.whatsapp.w4b;
+  screen-recorded walkthroughs drill down through com.whatsapp.w4b >
+  WhatsApp Business > Media into "WhatsApp Business Images" with Private
+  and Sent subfolders; an older-installs guide (blog.usro.net) gives the
+  legacy Internal storage/WhatsApp Business path. None takes the USB step.
+  Phrasing 3, "WhatsApp Business media visibility on by default photos saved
+  gallery" (lead, fact check, this run): WhatsApp's own help pages
+  (faq.whatsapp.com) say Media visibility is turned on by default and media
+  is automatically saved to the device; a Business-focused guide
+  (yourbusinessnumber.com) confirms WhatsApp Business behaves the same —
+  auto-download on by default, media saved to the gallery — with the same
+  Settings/Chats/Media visibility switch and per-chat override. None joins
+  the setting to a USB backup.
+- Honest centre (verified from the code at base 9940a03 and the live sources
+  above, this run, Nov 24, 2026, not assumed): WhatsApp Business photos save
+  to the gallery automatically when Media visibility is on — which is the
+  default, per WhatsApp's own help pages — and they land in "WhatsApp
+  Business Images" at Android/media/com.whatsapp.w4b/WhatsApp Business/Media/
+  WhatsApp Business Images on Android 11 and later (older installs: Internal
+  storage/WhatsApp Business/Media/WhatsApp Business Images); videos go to a
+  sibling WhatsApp Business Video folder. That is a different folder from
+  regular WhatsApp, which uses com.whatsapp — the regular WhatsApp article's
+  paths do not work for Business users, and our own regular-WhatsApp article
+  contains zero "WhatsApp Business" matches (verified by grep). SnapDisk's
+  default run covers the saved photos with no folder to pick — proven, not
+  assumed: it reads MediaStore images + videos with no folder filter
+  (PhotoQuery.kt:23-36), and a Business-saved photo shows in the gallery as
+  the "WhatsApp Business Images" album, and gallery apps read the media
+  index, so a photo the gallery shows is a photo the default run sees. The
+  album's existence in the gallery is the evidence the folder is indexed: if
+  WhatsApp Business placed a .nomedia file in WhatsApp Business Images, the
+  media scanner would skip it and the album would not appear in the gallery
+  at all; it does appear, in every guide, so there is no such file. Photos
+  from a chat with Media visibility off sit in the Private subfolder inside
+  WhatsApp Business Images, hidden from the gallery by a .nomedia file, and
+  the default run cannot see them at all — turning the setting on does not
+  move them out; save those by hand from inside the chat (open the photo,
+  three-dot menu, Save). UNTESTED, marked as such in the article: whether
+  SnapDisk's From folder picker reaches the WhatsApp Business Images folder
+  end to end on a real phone — the picker is the system folder picker
+  (MainActivity.kt:61-62, OpenDocumentTree) opening with no folder
+  pre-selected, no initial-folder hint anywhere in the code, no WhatsApp
+  path handling anywhere in the app (0 matches for "whatsapp" in the source)
+  — but the navigation chain is ordinary folders (com.whatsapp.w4b,
+  WhatsApp Business, Media, WhatsApp Business Images), none dot-prefixed,
+  and the folder walk recurses into every subfolder it can list
+  (PhotoQuery.kt:90-97, listTreeFiles/walkTree), so picking the parent Media
+  folder should reach the Private subfolder too, because .nomedia means
+  nothing to a folder walk. The honest Method 1 is the joined workflow:
+  check Media visibility first, check the album appeared, then run SnapDisk's
+  default backup or point the From picker at the Business folder. Contrast
+  honestly with WhatsApp Business's own Google Drive backup (a restore point
+  for the app, not plain photo files on a drive — the files sit in the
+  backup, not as pictures you can open from a USB stick) and PC
+  phone-transfer tools (move chats between phones through a computer — a
+  different job). SnapDisk facts re-verified from the code at base 9940a03:
+  Pro $9.99 once (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB free per-run
+  cap (ProPrefs.kt:43, 5L * 1024 * 1024 * 1024), oldest-first MediaStore
+  DATE_TAKEN (PhotoQuery.kt:47, :56-59, sort DATE_TAKEN ASC with
+  DATE_MODIFIED fallback), size verification after copy (BackupEngine.kt:107,
+  108), Pause/Stop in the notification (NotificationHelper.kt:128,138;
+  BackupService.kt:113,115), FAT32 files >=4 GiB skipped with their reason
+  (BackupService.kt:428-433), default From /sdcard/DCIM and To /disk/DCIM
+  (BackupPrefs.kt:50,53), no INTERNET permission (0 occurrences in the
+  manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms / play-services in the build; only Play Billing,
+  billing-ktx 7.1.1, libs.versions.toml:50), no all-files access (no
+  MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24 (Android 7.0). "SnapDisk
+  copies, it never deletes" present — the only .delete() calls in the code
+  are on SnapDisk's own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). The article carries no install count for
+  SnapDisk (none exists) and no VaultDrive install figure.
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/whatsapp-business-photos-to-usb.html verified 0 collisions in
+  feed.xml, blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and
+  searches.md before writing; "whatsapp-business-photos-to-usb" returns 0
+  matches in WORKLOG.md, feed.xml, sitemap.xml, blog index, llms.txt,
+  llms-full.txt, and searches.md. The "WhatsApp Business" phrase matches in
+  the base files are all from the WhatsApp-status article (Query 186 row in
+  searches.md, its llms.txt line, its llms-full.txt passage, and the WL-233
+  worklog row) — which names com.whatsapp.w4b for statuses only — no Business
+  photos-to-USB article exists anywhere on the site. The near matches are
+  the other messaging-app articles (whatsapp-photos-to-usb.html,
+  whatsapp-status-photos-to-usb.html, telegram-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html,
+  wechat-photos-videos-to-usb.html, viber-photos-to-usb.html) — all
+  different, already-live articles, untouched, and the WhatsApp one linked
+  from the new article as the series companion.

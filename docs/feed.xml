@@ -1322,5 +1322,12 @@
       <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
       <description>Viber photos save to the gallery when “Save to gallery” is on — then they sit in the Viber Images folder. Turn it on, then back them up to USB with SnapDisk.</description>
     </item>
+    <item>
+      <title>Back up WhatsApp Business photos to a USB drive — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/whatsapp-business-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/whatsapp-business-photos-to-usb.html</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+      <description>WhatsApp Business photos save to the gallery when Media visibility is on — in the WhatsApp Business Images folder. Then back them up to USB with SnapDisk.</description>
+    </item>
 </channel>
 </rss>
