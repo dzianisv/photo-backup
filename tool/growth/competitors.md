@@ -10,7 +10,7 @@ but not the rating/install header, so rating and install band come from
 AppBrain/androidrank snapshots of the same Play data — labelled as
 such per app. This is search evidence, not a live Play Console check.
 
-## Top 6
+## Top 7
 
 ### 1. Photos to USB: OTG Backup — the closest direct competitor
 - Developer: Akshay C P · Package: com.arzdrz.photos_to_usb
@@ -209,7 +209,60 @@ such per app. This is search evidence, not a live Play Console check.
   order, Pause/Stop in the notification, and the free-up-space
   story it cannot tell yet.
 
-## Also noted (not top 6)
+### 7. FotoSafe — the guided-preview direct rival (added Nov 24, 2026)
+- Developer: not named in the fetched Play listing text (vendor
+  site fotosafe.weidisoft.net) · Package: at.weidi.fotobackup
+- Rating: **not verifiable** — the fetched Play listing text shows
+  no rating/install header, and no AppBrain mirror surfaced for
+  this package (searched Nov 24, 2026) · Installs: **unknown, same
+  reason** · Launched / last update: **unknown** — no dates in the
+  fetched listing text or vendor site.
+- Price: free; **one successful trial run of up to 100 media files
+  free, then further runs require a one-time FotoSafe Pro purchase
+  (Google Play in-app purchase, no subscription)** — verified Nov
+  24, 2026 from the vendor site (fotosafe.weidisoft.net/en/: "one
+  successful backup run with up to 100 photos or videos is free.
+  FotoSafe Pro then unlocks further runs with a one-time Google Play
+  purchase — no subscription") and the Play listing ("Includes one
+  successful free trial backup of up to 100 photos/videos. A
+  one-time FotoSafe Pro purchase unlocks unlimited backup runs. No
+  subscription."). **The Pro dollar price is NOT verified** — the
+  vendor site says "Google Play shows the current price" and the
+  fetched Play listing text shows no amount; do not quote a FotoSafe
+  Pro price until a Play price is read.
+- What it does: guided Android-to-USB photo/video backup without a
+  computer; Android 9+ with USB host/OTG; connect the drive, pick
+  the destination through Android's system picker, review the media
+  preview (destination, new files, already-backed-up files,
+  required space), start copying; backups land in a /FotoSafe/
+  folder; already-backed-up files are skipped on later runs; a
+  visible progress notification shows during longer backups;
+  originals stay on the phone; no cloud, no account, no ads, no
+  tracking.
+- Weakness to beat: **its free tier is one run of 100 files — a
+  stricter free tier than ours (5 GB per run, every run)** — and it
+  is a guided manual-start flow with no oldest-first order, no
+  Pause/Stop in the notification, and no stated resume of an
+  interrupted run (only skip-if-already-backed-up on the next run).
+  Our edge: unlimited free runs up to 5 GB each, oldest-first order
+  shown in the notification, Pause/Stop in the notification, resume
+  where it stopped. The price comparison against FotoSafe stays
+  unmade until its Pro price is verified — the $9.99-vs-$19.99
+  undercut is against VaultDrive only.
+- 1-star complaints: none verifiable — no reviews surfaced in the
+  fetched Play listing text or search (Nov 24, 2026). Watch this
+  listing — it is the rival whose free tier is closest to ours in
+  shape (one free run) and whose guided-preview story is the most
+  polished of the new entrants. Already cited as a rival guide in
+  our own articles (secondary-user, restricted-profile, guest,
+  Private Space, work-profile, Ulefone, Karbonn, Intex) — this row
+  closes the gap that it was never in this file.
+- Screenshots bar: guided three-step story (connect → review →
+  copy-and-verify) with a preview screen. Beat it with:
+  oldest-first order, Pause/Stop + resume in the notification, and
+  a free tier measured in gigabytes per run, not one 100-file run.
+
+## Also noted (not top 7)
 - **FolderSync** (Tacit Dynamics, dk.tacit.android.foldersync.lite):
   4.2★, ~33k ratings, 1M+ installs, updated Oct 22, 2026. Generic
   folder sync (cloud/SMB/SFTP), not photo-to-USB-first; newest
@@ -233,7 +286,7 @@ such per app. This is search evidence, not a live Play Console check.
   "endless ads … spam … freezes up constantly."
 
 ## The repeated complaint = the feature list
-Across all six, the same 1-star themes recur:
+Across all seven, the same 1-star themes recur:
 1. **Copy says done but copied nothing / partial copy** (PhotoStick:
    3h → empty folders; 118 asked → 50 copied). → Verify every
    file, report real counts.
@@ -255,6 +308,8 @@ Across all six, the same 1-star themes recur:
 - SanDisk: brand-polished, auto-backup story, 10M installs badge.
 - Photos to USB: clearest one-tap copy story; month folders.
 - Buffalo: hardware trust + auto-start on connect.
+- FotoSafe: guided three-step story (connect → review →
+  copy-and-verify) with a preview screen.
 - Our bar: a real notification screenshot (offer → progress with
   %/GB/speed/ETA → done with counts), a real settings screenshot
   (From/To pickers), and a real completion proof — all real
@@ -273,6 +328,14 @@ Across all six, the same 1-star themes recur:
   /foldersync/
 - androidrank.org: SanDisk Memory Zone, FolderSync, IDrive Photo Backup
 - USB Vault site: usbvault.filotimocreations.com
+- FotoSafe (Nov 24, 2026): Play listing
+  play.google.com/store/apps/details?id=at.weidi.fotobackup
+  (fetched live; title "FotoSafe — Photo Backup to USB", free,
+  $0 USD; no rating/install header in the fetched text) and vendor
+  site fotosafe.weidisoft.net/en/ + /en/guides/back-up-android-photos-to-usb/
+  (free trial = one successful run, up to 100 media files; Pro =
+  one-time Google Play purchase, no subscription; Pro dollar price
+  not shown on either page)
 - Review quotes are verbatim from Play listing review excerpts
   surfaced by search on Nov 14, 2026; newest-1-star sampling is
   limited to what Play/search surfaced — re-sample after launch
