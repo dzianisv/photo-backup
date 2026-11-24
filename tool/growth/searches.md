@@ -20558,3 +20558,88 @@ unchanged (already "Back up photos & videos to a USB disk").
   docs/huawei-photos-to-usb.html (the generic Huawei brand article — the MainSpace
   copy, no PrivateSpace) — a different, already-live article, untouched, and linked
   from the new article as the MainSpace companion.
+
+### 185. "Back up photos from a LineageOS phone to a USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  plain-files photo backup from a de-Googled LineageOS phone to a USB drive, no
+  computer — with the Seedvault distinction stated (encrypted whole-device archive,
+  restore-only, not plain photo files) and the de-Googled limits marked honestly.
+  The Seedvault guides cover the encrypted archive and stop there; the LineageOS
+  feature pieces describe Glimpse and Seedvault and never mention a USB photo copy;
+  the generic Android-to-USB guides cover stock Android or need a computer. The gap
+  stands ONLY on that narrow angle: the phone-direct, no-computer, plain-files
+  photo copy on LineageOS, with OTG-per-build, notification-on-LineageOS, and
+  Pro-purchase-without-Play-services all marked unverified.
+- Current top results (scored Nov 23, 2026, live web search):
+  Phrasing 1, "back up photos from LineageOS phone to USB drive without computer"
+  (supervisor, this run): Android Police — LineageOS Seedvault backs up the whole
+  device as an encrypted archive to a USB-C drive (restore-only, not plain photo
+  files); HowToGeek FolderSync is generic Android, not LineageOS; the rest are our
+  own generic articles or Dr.Fone generic OTG. No dedicated LineageOS-photos-to-USB
+  how-to.
+  Phrasing 2, "LineageOS photos to USB OTG drive backup no Google Photos"
+  (supervisor, this run): plop.at is an ADB backup guide needing a computer +
+  rooted debugging; Dr.Fone generic; our own articles. No dedicated how-to.
+  Phrasing 3, "LineageOS backup photos USB drive no computer Seedvault plain files"
+  (lead, this run): CalyxOS Seedvault docs (encrypted, restore-only, file backup
+  beta — "make a copy of your files via another means, such as by connecting to a
+  PC"); Android Police (Glimpse gallery reading image folders, no backup; Seedvault
+  encrypted whole-device backup to a USB-C drive, scheduled when the drive is
+  plugged in); ByteTechLab LineageOS 24 review (Seedvault encrypted device
+  snapshots, 12-word mnemonic, USB-C drive / Nextcloud / WebDAV); LineageOS
+  Changelog 25 (Seedvault built-in since 18.1, Settings > System > Backup,
+  backups to Nextcloud, an external USB drive, or local storage); XDA + Android
+  Community (Seedvault adoption, encrypted AES/GCM, 12-word BIP39 key);
+  androidmobiles.org (Seedvault vs Titanium vs manual — a custom-ROM data-migration
+  guide, not a LineageOS-photos-to-USB how-to). No dedicated
+  LineageOS-photos-to-USB how-to — the plain-files copy is never joined to the
+  LineageOS phone.
+- Honest centre (verified from the code at base 6d3b561 and the live sources above,
+  this run, Nov 23, 2026, not assumed): LineageOS ships without Google apps by
+  default, so there is no Google Photos and no Google cloud backup; photos live
+  only on the phone until copied off. Seedvault is LineageOS's built-in backup
+  (Settings > System > Backup, since 18.1): whole-device backup, encrypted
+  client-side with a 12-word recovery phrase, to a USB drive, Nextcloud, or local
+  storage — restore-only through Seedvault on a compatible ROM, and its file
+  backup is beta. Glimpse is LineageOS's gallery app — it reads image folders and
+  shows photos; it has no export and no backup. There is no locked container to
+  move out of — the photos sit in the open in DCIM and Pictures, visible to any
+  app with media permission — so the job is the plain-files copy itself, which no
+  guide covers for LineageOS. SnapDisk's free core needs no Google Play services:
+  zero matches for com.google.android.gms / play-services in the build, no
+  INTERNET permission in the manifest (0 occurrences), minSdk 24 (Android 7.0).
+  UNVERIFIED, marked as such in the article: whether USB OTG works on a given
+  device and LineageOS build; whether SnapDisk's backup notification appears
+  unchanged on LineageOS builds; whether the $9.99 Pro purchase — a Google Play
+  Billing purchase (billing-ktx 7.1.1, product id "pro_unlock") — works at all on
+  a de-Googled build without Play services. Do not claim any of the three either
+  way. Contrast honestly with Seedvault (encrypted archive, restore-only, phrase
+  required, file backup beta) and the manual Files-app copy (select-copy-paste,
+  no progress detail, no resume, no verification). SnapDisk facts re-verified
+  from the code at base 6d3b561: Pro $9.99 once (ProPrefs.kt:40, PRO_PRICE_LABEL
+  "$9.99"), 5 GB free per-run cap (ProPrefs.kt:43, 5L * 1024 * 1024 * 1024),
+  oldest-first MediaStore DATE_TAKEN (PhotoQuery.kt:47, :56-59, sort DATE_TAKEN
+  ASC with DATE_MODIFIED fallback), size verification after copy
+  (BackupEngine.kt:107,108), Pause/Stop in the notification
+  (NotificationHelper.kt:127,128,137,138; BackupService.kt:113,115), FAT32 files
+  >=4 GiB skipped with their reason (BackupService.kt:430-433), default From
+  /sdcard/DCIM and To /disk/DCIM (BackupPrefs.kt:50,53), no INTERNET permission
+  (0 occurrences in the manifest), no encryption code in the app source
+  (0 matches), no WakeLock/Doze code (0 matches).
+  "SnapDisk copies, it never deletes" present — the only .delete() calls in the
+  code are on SnapDisk's own half-finished .part files (BackupEngine.kt:176,
+  :207; BackupService.kt:385, :477). The article carries no install count for
+  SnapDisk (none exists) and no VaultDrive install figure.
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/lineageos-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md before
+  writing; "lineageos-photos-to-usb" returns 0 matches in WORKLOG.md, feed.xml,
+  sitemap.xml, blog index, llms.txt, llms-full.txt, and searches.md. The
+  "LineageOS" mentions in the repo are ROM mentions inside the LeEco, Wileyfox,
+  and generic articles (a custom firmware, not a photo-backup guide) — a
+  different subject, not confused with this article anywhere. The near matches
+  are docs/backup-photos-offline.html (the generic no-cloud copy, no LineageOS)
+  and docs/backup-photos-to-usb.html (the generic USB copy, no LineageOS) —
+  different, already-live articles, untouched, and linked from the new article
+  as the generic companions.
