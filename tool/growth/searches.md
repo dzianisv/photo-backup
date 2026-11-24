@@ -20739,3 +20739,106 @@ unchanged (already "Back up photos & videos to a USB disk").
   (the generic WhatsApp-photos-to-USB article, 0 "status" mentions, verified
   by grep) — a different, already-live article, untouched, and linked from the
   new article as the generic companion.
+
+### 187. "Back up Viber photos to a USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a Viber photo, out of the chat and into the gallery via "Save to gallery",
+  onto a USB drive plugged into the phone, no computer — with the Viber Images
+  folder stated (sdcard/Viber/media/Viber Images), the setting's non-retroactivity
+  stated, and the hidden-cache direct-pick question marked honestly. Our own
+  generic USB articles rank top and never mention Viber; the Viber guides stop
+  at the gallery or at Google Drive cloud backup; the OTG guides never mention
+  Viber. The gap stands ONLY on that narrow angle: the Viber photo, out of the
+  chat, onto a USB drive, no computer, with the default run proven to cover
+  gallery-saved Viber photos and the cache pick marked unverified.
+- Current top results (scored Nov 24, 2026, live web search):
+  Phrasing 1, "back up Viber photos to USB drive Android no computer"
+  (lead, this run): our own usb-photo-backup.html and
+  transfer-photos-to-usb-automatically.html rank top and contain 0 "Viber"
+  mentions (verified by grep); the rest are Viber's Google Drive cloud backup
+  (tehnoblog guide, Facebook walkthrough) and a PC phone-transfer tool
+  (MobileTrans, moves Viber chats between phones through a computer). No
+  dedicated Viber-photos-to-USB how-to.
+  Phrasing 2, "transfer Viber photos to USB stick OTG Android"
+  (lead, this run): generic OTG copy guides only (YouTube, Wondershare,
+  Coolmuster, EyeFi forum) — plug the drive in, select the photos in the
+  file manager, copy them to the drive — none mentions Viber, the "Save to
+  gallery" setting, or the Viber Images folder. No dedicated guide.
+  Phrasing 3, "Viber save photos to gallery Android folder location Viber
+  Images" (lead, fact check, this run): bestim, itoolab, Coolmuster, ik4
+  agree — "Save to gallery" under More, Settings, Media (older: Media and
+  Storage); received photos save to the gallery in the "Viber Images" album
+  at sdcard/Viber/media/Viber Images; manual save is tap the photo, Share,
+  "Save to Gallery"; with the setting off, photos sit temporarily in a
+  hidden cache folder reported as .viber or .viber media; videos go to
+  Viber Videos. No dedicated Viber-photos-to-USB how-to.
+- Honest centre (verified from the code at base ead10c4 and the live sources
+  above, this run, Nov 24, 2026, not assumed): a photo someone sends you on
+  Viber is not in your gallery until you put it there. Turn on "Save to
+  gallery" (More, Settings, Media; older: Media and Storage) and every photo
+  you receive is saved to the gallery automatically, in the "Viber Images"
+  album at sdcard/Viber/media/Viber Images; videos go to a sibling Viber
+  Videos folder. The setting is NOT retroactive — photos received before you
+  turned it on stay in the chat until you save them one by one (tap the
+  photo, Share, "Save to Gallery"). SnapDisk's default run covers the saved
+  photos with no folder to pick — proven, not assumed: it reads MediaStore
+  images + videos with no folder filter (PhotoQuery.kt:28-44), and a
+  Viber-saved photo shows in the gallery as the "Viber Images" album, and
+  gallery apps read the media index, so a photo the gallery shows is a photo
+  the default run sees. The album's existence in the gallery is the evidence
+  the folder is indexed: if Viber placed a .nomedia file in Viber Images,
+  the media scanner would skip it and the album would not appear in the
+  gallery at all; it does appear, in every guide, so there is no such file.
+  When "Save to gallery" is off, received photos sit only in Viber's
+  temporary cache, in a hidden folder reported as .viber or .viber media —
+  the exact path is UNVERIFIED, the guides disagree on the name — and the
+  default run cannot see it at all, because a dot-prefixed folder never
+  enters the media index. UNVERIFIED, marked as such in the article: whether
+  SnapDisk's From folder picker can open that hidden cache folder directly —
+  the picker is the system folder picker (MainActivity.kt:62, OpenDocumentTree)
+  opening with no folder pre-selected, no initial-folder hint anywhere in the
+  code, no Viber path handling anywhere in the app (0 matches for
+  Viber/.viber in the source), and the system picker hides dot-folders — and
+  whether the cached photo survives long enough to copy. The honest Method 1
+  is the joined workflow: turn on "Save to gallery" first (restart Viber
+  after turning it on — one guide says the setting needs the restart), check
+  the "Viber Images" album appeared, then run SnapDisk's default backup or
+  point the From picker at the Viber folder. Contrast honestly with Viber's
+  own Google Drive backup (a restore point for Viber, not plain photo files
+  on a drive — the files sit in Viber's backup, not as pictures you can open
+  from a USB stick) and PC phone-transfer tools (move chats between phones
+  through a computer — a different job). SnapDisk facts re-verified from the
+  code at base ead10c4: Pro $9.99 once (ProPrefs.kt:40, PRO_PRICE_LABEL
+  "$9.99"), 5 GB free per-run cap (ProPrefs.kt:43, 5L * 1024 * 1024 * 1024),
+  oldest-first MediaStore DATE_TAKEN (PhotoQuery.kt:47, :56-59, sort
+  DATE_TAKEN ASC with DATE_MODIFIED fallback), size verification after copy
+  (BackupEngine.kt:107,108), Pause/Stop in the notification
+  (NotificationHelper.kt:126,128,136,138; BackupService.kt:113,115), FAT32
+  files >=4 GiB skipped with their reason (BackupService.kt:428-433),
+  default From /sdcard/DCIM and To /disk/DCIM (BackupPrefs.kt:50,53), no
+  INTERNET permission (0 occurrences in the manifest), no Google Play
+  Services dependency (0 matches for com.google.android.gms / play-services
+  in the build; only Play Billing, billing-ktx 7.1.1, libs.versions.toml:50),
+  no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24
+  (Android 7.0). "SnapDisk copies, it never deletes" present — the only
+  .delete() calls in the code are on SnapDisk's own half-finished .part files
+  (BackupEngine.kt:176, :207; BackupService.kt:385, :477). The article carries
+  no install count for SnapDisk (none exists) and no VaultDrive install
+  figure.
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/viber-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md before
+  writing; "viber-photos-to-usb" returns 0 matches in WORKLOG.md,
+  feed.xml, sitemap.xml, blog index, llms.txt, llms-full.txt, and searches.md.
+  The "viber" matches in WORKLOG.md, feed.xml, sitemap.xml, blog index,
+  llms.txt, llms-full.txt, and searches.md are 0 — the word "Viber" appears
+  nowhere on the site before this article. The "signal" matches in
+  searches.md are 3 incidental uses of the word "signal" (Play volume signal,
+  video signals, skipped-list signal) — none about the Signal app. The near
+  matches are the other messaging-app articles (whatsapp-photos-to-usb.html,
+  telegram-photos-to-usb.html, instagram-photos-to-usb.html,
+  facebook-photos-to-usb.html, snapchat-photos-to-usb.html,
+  tiktok-photos-videos-to-usb.html, wechat-photos-videos-to-usb.html) — all
+  different, already-live articles, untouched, and the WhatsApp and Telegram
+  ones linked from the new article as the series companions.
