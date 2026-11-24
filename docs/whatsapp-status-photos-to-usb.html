@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up WhatsApp status photos to a USB drive</title>
+<meta name="description" content="WhatsApp statuses cache in a hidden .Statuses folder and vanish in 24 hours. Copy them out first, then back them up to USB with SnapDisk, no computer.">
+<link rel="canonical" href="https://dzianisv.github.io/photo-backup/whatsapp-status-photos-to-usb.html">
+<meta property="og:title" content="Back up WhatsApp status photos to a USB drive (no computer)">
+<meta property="og:description" content="WhatsApp statuses cache in a hidden .Statuses folder and vanish in 24 hours. Copy them out first, then back them up to USB with SnapDisk, no computer.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dzianisv.github.io/photo-backup/whatsapp-status-photos-to-usb.html">
+<meta property="og:image" content="https://dzianisv.github.io/photo-backup/feature-graphic-1024x500.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://dzianisv.github.io/photo-backup/whatsapp-status-photos-to-usb.html#article",
+      "headline": "Back up WhatsApp status photos to a USB drive (no computer)",
+      "description": "WhatsApp statuses cache in a hidden .Statuses folder and vanish in 24 hours. Copy them out first, then back them up to USB with SnapDisk, no computer.",
+      "datePublished": "2026-11-24",
+      "author": {
+        "@type": "Person",
+        "name": "Dzianis Vashchuk",
+        "sameAs": ["https://github.com/dzianisv"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SnapDisk",
+        "url": "https://dzianisv.github.io/photo-backup/"
+      },
+      "mainEntityOfPage": "https://dzianisv.github.io/photo-backup/whatsapp-status-photos-to-usb.html",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "SnapDisk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dzianisv.github.io/photo-backup/whatsapp-status-photos-to-usb.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where are viewed WhatsApp statuses stored on Android?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A status you have viewed is cached on the phone in a hidden folder: Android/media/com.whatsapp/WhatsApp/Media/.Statuses on Android 11 and later (WhatsApp Business: Android/media/com.whatsapp.w4b/WhatsApp Business/Media/.Statuses; older installs: WhatsApp/Media/.Statuses at the top of internal storage). Only statuses you have actually opened are cached — an unviewed status leaves no file — and the cached file is temporary: it can vanish when the status expires after 24 hours or when WhatsApp clears its cache. Your own statuses are cached there too. The folder's name starts with a dot, so it is hidden in most file managers until you turn on show hidden files."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can SnapDisk back up WhatsApp statuses directly from the .Statuses folder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not with the default run, proven from the code: SnapDisk's default backup reads Android's media index (MediaStore), and .Statuses is hidden from that index twice over — its name starts with a dot, and it contains a .nomedia file, and Android's media scanner skips both. So a one-tap whole-library backup copies zero statuses. Whether SnapDisk's From folder picker can open .Statuses directly is unverified: the picker opens with no folder pre-selected, the system picker hides dot-folders, and the code has no WhatsApp path handling. The route this article gives is the joined workflow that is proven to work: copy the cached file out of .Statuses into a normal folder with a file manager first, then point SnapDisk at that folder."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why can't I see the .Statuses folder in my file manager?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because the folder is hidden twice over: its name starts with a dot, which hides it in most file managers until you turn on show hidden files (in Files by Google: menu, Settings, Show hidden files; Samsung My Files has the same option in its menu), and it sits under Android/media, which Android 11 and later guards with scoped storage. Check three things: you viewed the status first (unviewed statuses leave no file), you are on the exact path Android/media/com.whatsapp/WhatsApp/Media/.Statuses and not Android/data, and hidden files are shown. Some guides report that on Android 15 and later WhatsApp may store statuses under an accounts subfolder — if the standard path is empty, check for one. If your file manager still cannot show the folder, try a different file manager; some cannot display hidden folders at all."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a status-saver app to save a WhatsApp status?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The file-manager route in Method 1 needs no extra app: view the status, open a file manager with hidden files shown, copy the cached file out of .Statuses into a normal folder, and back that folder up with SnapDisk. A status-saver app does the same read for you — it opens the .Statuses folder through the system picker and saves the status to your gallery — but it saves to the gallery, not to a USB drive, so the USB leg is still SnapDisk's job either way. If you do use a saver app, pick one that works offline and asks for no account, and only save statuses you have permission to keep. A screenshot (for a photo) or a screen recording (for a video) is the fallback that always works, at lower quality."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dzianisv.github.io/photo-backup/whatsapp-status-photos-to-usb.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SnapDisk",
+          "item": "https://dzianisv.github.io/photo-backup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back up WhatsApp status photos to a USB drive (no computer)",
+          "item": "https://dzianisv.github.io/photo-backup/whatsapp-status-photos-to-usb.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --navy:#0f172a; --navy2:#1e293b; --cyan:#22d3ee; --purple:#8b5cf6; --grey:#94a3b8; --white:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--white); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  a { color:var(--cyan); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header { padding:48px 0 8px; }
+  header a.back { font-size:14px; color:var(--grey); text-decoration:none; }
+  h1 { font-size:36px; line-height:1.2; margin:16px 0 12px; }
+  .dek { font-size:18px; color:var(--grey); max-width:640px; }
+  .meta { font-size:14px; color:var(--grey); margin:16px 0 32px; }
+  article h2 { font-size:24px; margin:40px 0 12px; }
+  article p, article li { color:#cbd5e1; font-size:16px; margin-bottom:12px; }
+  article ul, article ol { padding-left:22px; }
+  article strong { color:var(--white); }
+  .callout { background:var(--navy2); border-left:3px solid var(--cyan); border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0; }
+  .callout p { margin-bottom:0; }
+  figure.shot { max-width:320px; margin:24px auto; }
+  figure.shot img { width:100%; border-radius:16px; border:1px solid #334155; display:block; }
+  figure.shot figcaption { font-size:14px; color:var(--grey); margin-top:8px; text-align:center; }
+  footer { border-top:1px solid #1e293b; padding:32px 0 48px; color:var(--grey); font-size:14px; text-align:center; margin-top:48px; }
+  footer a { margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="./">← SnapDisk</a> · <a class="back" href="blog/">← Blog</a>
+  <h1>Back up WhatsApp status photos to a USB drive</h1>
+  <p class="dek">Statuses vanish in 24 hours and WhatsApp gives you no Save button — but the photo you viewed is already on your phone, in a hidden folder. Get it out before it disappears.</p>
+  <p class="meta">November 24, 2026 · 8 min read</p>
+</header>
+<article>
+  <p><strong>TL;DR:</strong> A WhatsApp status is gone in 24 hours, and WhatsApp gives you no Save button for a status you viewed — not yours, not a friend's. But the photo or video you viewed is already on your phone: viewing a status caches it in a hidden folder, Android/media/com.whatsapp/WhatsApp/Media/.Statuses on Android 11 and later (WhatsApp Business: Android/media/com.whatsapp.w4b/WhatsApp Business/Media/.Statuses), and your own statuses land there too. The catch is that the cached file is temporary — it can vanish when the status expires or WhatsApp clears its cache — so the job is two steps, not one: first copy the file out of .Statuses into a normal folder with a file manager, then back that folder up to a USB drive with SnapDisk, no computer. The honest limits, up front: SnapDisk's default run cannot see status files at all — the .Statuses folder is hidden from Android's media index twice over, by its dot-prefixed name and by the .nomedia file inside it — so the one-tap whole-library backup will copy zero statuses until you move them out. Whether SnapDisk's From folder picker can open .Statuses directly is unverified — the picker opens with no folder pre-selected, the system picker hides dot-folders, and the code has no WhatsApp path handling — so this article does not claim it; the joined workflow is the route that is proven to work. Whether the cached file survives long enough to copy is unverified too — it is a cache, not a save, and no source guarantees how long it stays. As of November 24, 2026, no top search result offers a dedicated status-photos-to-USB how-to: our own WhatsApp-photos-to-USB article ranks first and covers the WhatsApp Images folder with zero mentions of status, the status-saver guides save to the gallery and stop there, and the PC tools need a computer.</p>
+
+  <h2>The wall: statuses vanish in 24 hours — and there is no Save button</h2>
+  <p>Start with what a status is, because it decides everything else about this job. A WhatsApp status is a photo, video, or text update that disappears 24 hours after it is posted. It is not a chat message: it lives on the Updates tab, it has no download arrow, and WhatsApp gives you no Save button for it — not for a friend's status, and not for your own. The guides agree on this point without exception: there is no built-in option to download a status, and the fallbacks they name are screenshots or screen recordings. That is the wall — not a locked folder hiding the photo from backup apps, but the absence of any save at all, plus a clock. In 24 hours the status is gone from WhatsApp, and if you did nothing, it is gone from everywhere.</p>
+  <p>But viewing a status leaves a trace, and the trace is the whole job. When you open a status in WhatsApp — tap it on the Updates tab and let it play — WhatsApp caches the photo or video on the phone, in a hidden folder called .Statuses. On Android 11 and later the path is Android/media/com.whatsapp/WhatsApp/Media/.Statuses; on older installs it was WhatsApp/Media/.Statuses at the top of internal storage; WhatsApp Business keeps its own at Android/media/com.whatsapp.w4b/WhatsApp Business/Media/.Statuses. The folder's name starts with a dot, which is what makes it hidden: most file managers will not show it until you turn on show hidden files. Two conditions decide whether the file is there at all. First, you must have viewed the status — an unviewed status leaves no file, and the guides are explicit that the video must be opened in WhatsApp first or it may not have been placed in the folder. Second, the file is temporary: it can vanish when the status expires after 24 hours, or when WhatsApp clears its cache, and how long it actually stays is unverified — no source guarantees it, and this article marks it as such rather than promising a window. Your own statuses are cached there too, so the same route covers a status you posted yourself. The practical consequence is a deadline inside a deadline: the status expires in 24 hours, and the cached copy may go sooner, so the copy-out step below should happen as soon as you decide you want to keep the photo — not tonight, not tomorrow, now.</p>
+  <p>One more scope fact, because it decides what SnapDisk can and cannot do here. SnapDisk copies image and video files only — and its default run reads the phone's media index, MediaStore, with no folder filter. That is the right shape for ordinary WhatsApp photos, which sit in the WhatsApp Images folder as ordinary indexed files. It is the wrong shape for statuses, because .Statuses is hidden from that index twice over: its name starts with a dot, which Android's media provider treats as hidden, and it contains a .nomedia file, which tells the media scanner to skip the folder and its subfolders. A status file therefore never appears in the media index, never appears in the gallery, and never appears in SnapDisk's default run — a one-tap backup that copies the whole library will copy zero statuses, and it will do so silently, because from the index's point of view there is nothing there to miss. The rest of this article is built around that fact: the status has to be copied out of .Statuses into a normal folder first, by hand, before any backup app can see it. That is not a workaround for a SnapDisk limitation — it is the shape of the job, and the status-saver apps do the same read in their own way, as Method 2 shows.</p>
+  <p>And a word on whose status this is, because it matters before any method below. Saving a status you viewed for yourself — keeping a photo a friend posted because you want it on your drive — is the job this article covers. Re-posting someone else's status, or sharing it onward as if it were yours, is a different act, and the status-saver listings themselves carry the same warning: take permission before re-uploading or reusing someone's status. This article's methods copy the file to your drive; what you do with it afterwards is yours to decide, and asking the person who posted it is the honest step before anything leaves your phone.</p>
+
+  <h2>What the search results actually offer</h2>
+  <p>Search for this job three ways and the results split into three shapes, none of them the narrow job — a status-photos-to-USB guide that starts from a viewed status on an Android phone, states the .Statuses cache and the 24-hour clock, and copies the photo to a plain USB drive plugged into the phone, no computer. The first shape is our own article, and it is the closest of the three — but only for ordinary WhatsApp photos. Search "back up WhatsApp status photos to USB drive Android" and the top result is our own whatsapp-photos-to-usb.html, which covers the WhatsApp Images folder thoroughly — and contains zero mentions of the word "status" anywhere in the file, verified by grep this run. It tells you how to back up the photos WhatsApp saves to your chats. It says nothing about the statuses WhatsApp caches and deletes. The rest of that first search is generic WhatsApp-media guides: PC-based tools such as Coolmuster, which need a computer, and local-backup guides such as geekchamp and pcnmobile, which back up chats and media on the phone but never mention the .Statuses folder or a USB drive. None of them joins the status to the drive.</p>
+  <p>The second shape is the status-saver app, and it is the other half of the job — but it stops at the gallery. Search "save WhatsApp status photo video to USB drive no computer Android" and the results are Play Store status-saver listings — Save &amp; Share, Status Saver, Save Status — each promising one-tap save of a viewed status to your gallery, plus an Xender social downloader that saves statuses and a Wondershare status-saver guide that recommends its WeLastseen app. Every one of them ends the same way: the status lands in your gallery, on the phone. None of them mentions a USB drive, a copy to external storage, or a backup of any kind. They solve the save; they do not solve the backup. The third shape is the fact-check result, and it is where the path itself is confirmed: bestforandroid, macmyths, Wondershare, and itechguides all agree that viewed statuses cache at Android/media/com.whatsapp/WhatsApp/Media/.Statuses, that the folder is hidden by its dot prefix, that WhatsApp Business uses com.whatsapp.w4b, that Android 13 and later scoped storage may restrict access, that the files are temporary and may vanish on expiry or cache clear, and that a friend's status has no Save button. What none of those pages does is take the USB step: they stop at the copy-out. So the gap stands, but only on the narrow angle: the viewed-status photo, out of .Statuses, onto a USB drive plugged into the phone, no computer, with the MediaStore invisibility stated and the direct-pick question marked honestly. That is the angle this article is written on.</p>
+
+  <h2>What you need</h2>
+  <p>An Android phone — Android 7.0 or later, which is SnapDisk's minimum version — with WhatsApp installed and the status already viewed, plus one USB drive your phone can read: a USB-C flash drive, or a regular USB drive with a USB-C OTG adapter. SnapDisk itself is installed from the v0.1.2 APK — it is not on Google Play yet — so install it by allowing "install unknown apps" for the browser or Files app you download it with, which is standard Android. You also need a file manager that can show hidden files, because the .Statuses folder is hidden by its dot-prefixed name: Files by Google has the option under its menu, Settings, Show hidden files; Samsung My Files has the same option in its menu; and most third-party file managers have one too. If your file manager has no such option, it cannot show the folder at all, and you need a different file manager before Method 1 can start. Check the drive's space first: statuses are small — a photo is a few megabytes, a video rarely more — so space is almost never the problem here, but look anyway. One format note: drives formatted FAT32 cannot hold a single file over 4 GB. That only matters for very long videos — SnapDisk skips those files and lists them instead of failing the whole backup. A drive formatted exFAT has no such limit, and exFAT is the format to use for a photo drive.</p>
+  <p>Before any method, settle the one question that decides whether the phone route works at all: does your phone see the USB drive? Plug the drive in and open Settings &gt; Connected devices or Settings &gt; Storage — the drive should appear there. That check is the test, and it takes ten seconds. If the drive does not appear, try a different adapter first — cheap OTG adapters are the usual failure — then a different drive, and a powered hub if the drive is a spinning hard drive rather than a flash drive. And one warning up front, because it applies to every route below: do not delete anything from the phone until the USB copy is done and verified. The status file in .Statuses is a cache, not a save — it can vanish on its own — so the copy-out step is the save, and the USB copy is the backup, and neither step is done until the drive copy is checked.</p>
+
+  <h2>Method 1: Copy the status out of .Statuses, then back it up with SnapDisk</h2>
+  <p>This is the route to use, because it is the only one that joins the whole job — the viewed status, out of its hidden cache, onto a USB drive plugged into the phone, no computer — using only the apps already on the phone plus SnapDisk. It has two halves, and they have to happen in order: the file-manager copy-out, which makes the status visible to every backup that reads the media index, and the SnapDisk copy, which puts it on the drive. The first half is the save. The second half is the backup. Skipping the first half is the mistake this article exists to prevent: pointing SnapDisk at .Statuses, or running its default backup and assuming the statuses came along, copies zero status files, because the default run reads the media index and .Statuses is hidden from it.</p>
+  <ol>
+    <li><strong>View the status in WhatsApp.</strong> Open WhatsApp, tap Updates, and play the status you want to keep, all the way through. Only statuses you have actually opened are cached — an unviewed status leaves no file — so if the folder looks empty later, this is the first thing to re-check. Do this first, and do the rest now: the cached file can vanish when the status expires or WhatsApp clears its cache, and how long it stays is unverified.</li>
+    <li><strong>Open your file manager and turn on hidden files.</strong> In Files by Google: menu, Settings, Show hidden files. In Samsung My Files: the three-dot menu, then the show-hidden-files option. The .Statuses folder starts with a dot, which is what hides it — without this setting, the folder is invisible and the path below looks like a dead end. If your file manager has no such option, install one that does before going on.</li>
+    <li><strong>Navigate to the .Statuses folder.</strong> Starting in internal storage, go to Android, then media, then com.whatsapp, then WhatsApp, then Media, then .Statuses. The full path is Android/media/com.whatsapp/WhatsApp/Media/.Statuses. If you use WhatsApp Business, the path is Android/media/com.whatsapp.w4b/WhatsApp Business/Media/.Statuses instead. On older installs the folder was at the top of internal storage, WhatsApp/Media/.Statuses — check there if the newer path does not exist. One caution: do not go into Android/data by mistake. That is a different folder, guarded by scoped storage, and the statuses are not there. Some guides report that on Android 15 and later WhatsApp may store statuses under an accounts subfolder — if the standard path is empty after viewing the status, check for one.</li>
+    <li><strong>Copy the status file out — copy, not move.</strong> Inside .Statuses you should see the photo or video you just viewed, usually under a plain name with no recognisable label. Touch and hold it, choose Copy, and paste it into a normal folder — for example a new folder called Statuses inside DCIM or Pictures. Use Copy, not Move: Move deletes the cached original as it goes, and the cache is the only copy in the world until the USB backup is verified. If you want several statuses, select them all and copy them together.</li>
+    <li><strong>Check the copied file opens.</strong> Open the copy in your gallery or file manager and confirm it renders — a photo shows, a video plays. This is also the moment to catch the one quirk of cached status files: some arrive with no file extension, just a bare name. SnapDisk's folder route only copies recognised photo and video extensions (.jpg, .png, .mp4, .mov, and the rest), so a file with no extension would be skipped. If the copied file has no extension, rename it and add .jpg for a photo or .mp4 for a video, then check it opens. A file that opens in the gallery is a file SnapDisk can copy.</li>
+    <li><strong>Plug in the drive and back the folder up with SnapDisk.</strong> Open SnapDisk, tap the From folder picker, and navigate to the folder you copied the statuses into — DCIM/Statuses, or wherever you put them — and tap Backup. The run copies oldest-first, verifies every file by size after copying, and shows progress with Pause and Stop in the notification. The free run covers up to 5 GB, and statuses are small, so one run is almost always enough. If you would rather not pick a folder, the default run covers it too: once the status sits in a normal folder, the media index sees it, and the whole-library backup picks it up along with everything else.</li>
+  </ol>
+  <p>Two honest limits. First, the 5 GB free cap is per run — a library of statuses will never reach it, but a whole-library default run might, and running it again picks up where it stopped, because files already copied are never copied twice. Second, SnapDisk copies, it never deletes: deleting the cached original in .Statuses, or the copy in your Statuses folder, after the check is always your step, never the app's — and the cached file may vanish on its own anyway, which is why the USB copy matters. Third, the direct route you might expect — pointing SnapDisk's From picker straight at .Statuses and skipping the copy-out — is unverified, and the next section says why in full. Do not plan on it.</p>
+
+  <figure class="shot">
+    <img src="screenshots-01-settings-defaults.png" alt="SnapDisk Settings — From /sdcard/DCIM and To /disk/DCIM, each with a folder picker" loading="lazy">
+    <figcaption>SnapDisk's Settings — the From folder (your photos) and the To folder (the drive), each with a folder picker. For statuses, point From at the normal folder you copied them into — DCIM/Statuses, for example — not at .Statuses itself.</figcaption>
+  </figure>
+
+  <p><strong>Copying only some statuses?</strong> If you would rather copy just one status than a whole folder, the From folder picker still takes a folder, not a single file — so copy the one status into its own folder first, then point the picker at that folder. The picker route keeps only recognised photo and video extensions. If the drive is unplugged mid-copy, the backup pauses with the full error shown and resumes where it stopped when the drive is back. If a file is corrupt or too big for FAT32, it's retried once, then skipped with its reason listed — it never stalls the whole backup. The free version backs up manually, up to 5 GB per backup run, with no ads, no account, and no cloud. SnapDisk Pro is a one-time $9.99 purchase (no subscription) that starts the backup automatically when you plug in a disk and removes the size limit. The app has no internet permission, so your photos physically cannot leave your device.</p>
+  <p>And the check that matters for this article: after the run, compare the count against what you copied out. A green backup that copied everything in the Statuses folder has still copied zero statuses if the folder was empty — which is exactly what happens when the status was never viewed, or the cached file had already vanished, or the file had no extension and was skipped. If the number looks too small, the missing status is probably still in .Statuses, or gone from it — and the run needs the copy-out repeated, not re-run into a different folder. SnapDisk copies, it never deletes — the only files it ever deletes are its own half-finished .part files — so deleting the originals after the check is always your step, never the app's.</p>
+
+  <h2>Method 2: A status-saver app to the gallery, then SnapDisk</h2>
+  <p>If you'd rather not dig through hidden folders by hand, a status-saver app does the same read for you. These are small Play Store apps — Save &amp; Share, Status Saver, Save Status, and others — and they all work the same way: view the status in WhatsApp first, open the saver app, and it shows you the statuses you have viewed; tap one and it saves it to your gallery. Under the hood they are doing Method 1's read with the system's folder picker: they ask you to authorise the .Statuses folder once, keep that access, and list the files inside it — which is exactly the access the platform allows when an app asks for the folder directly. That is also why they work where a generic backup cannot: they are built for this one folder, and they ask for it by name.</p>
+  <p>The honest limits of this route are the ones that decide whether it is worth installing another app at all. First, the saver app saves to the gallery, not to a USB drive — the status lands on the phone, in Pictures or a saver folder, and the USB leg is still SnapDisk's job, exactly as in Method 1 step 6. Installing the app does not back anything up; it only moves the copy-out step into an app. Second, you are giving a third-party app access to a folder full of other people's photos — pick one that works offline and asks for no account, and check its listing before installing, because a saver app that wants an account or an internet connection for a job that needs neither is asking for more than the job requires. Third, some saver listings claim they can save statuses from the last 7 days — that is unverified, and it contradicts the 24-hour expiry the status itself carries, so do not plan a backup around a week-old status still being there. And the same clock applies here as in Method 1: the saver can only show you statuses whose cached file is still present, so view the status and save it promptly. Once the status is in your gallery as an ordinary file, the rest is Method 1's second half: point SnapDisk at the folder it landed in, or let the default run pick it up, and tap Backup.</p>
+
+  <h2>Method 3: Screenshot or screen recording</h2>
+  <p>If the folder route fails — the .Statuses folder does not appear, the file manager cannot show hidden files, or the cached file has already vanished — the screenshot is the fallback that always works, because it needs nothing from the phone's storage at all. Open the status in WhatsApp, take a screenshot for a photo status, or start a screen recording and play the status through for a video. The result is an ordinary file in your Screenshots folder or your recordings folder, visible to the media index, and SnapDisk's default run copies it along with everything else — or point the From picker at the Screenshots folder and copy just that. This is also the route the status guides themselves name when there is no built-in download: screenshots or screen recordings are the fallback every guide agrees on.</p>
+  <p>The honest limits are the ones you can see in the result. A screenshot is a picture of the screen, not the photo: it carries the phone's status bar, the WhatsApp chrome, and whatever else was on screen, at screen resolution rather than the photo's original resolution, and a screen recording carries the same, plus compression. For a photo you want to keep, crop the screenshot to the photo itself before backing it up — the crop is a tap in the gallery app — and for a video, accept that the recording is a copy of a playback, not the file. The screenshot also sidesteps the whole .Statuses question: it works whether or not the cache is still there, and it works on any Android version, because it never touches the hidden folder. If the status matters enough to keep at full quality, Method 1 is the route; if the status is already gone from the cache, the screenshot — taken while it is still on screen — is the only route left, and it is worth taking before the 24 hours run out.</p>
+
+  <h2>Can SnapDisk read .Statuses directly?</h2>
+  <p>This is the question the whole article turns on, and it deserves a straight answer in three parts — what the code proves it cannot do, what is unverified, and what would prove the rest. The first part is proven, from the code at the current base and from how Android's media index works. SnapDisk's default run reads the phone's media index — it queries the MediaStore images and videos tables, oldest-first by date taken, with no folder filter. The .Statuses folder is hidden from that index twice over: its name starts with a dot, which Android's media provider treats as a hidden folder, and it contains a .nomedia file, which is the documented signal telling the media scanner to ignore the folder and its subfolders. A status file therefore never enters the index, and the default run never sees it. That is not an assumption: the query is in PhotoQuery.kt, the .nomedia exclusion is Android's documented behaviour, and the .nomedia file inside .Statuses is visible in the status-saver source code itself, which filters it out when listing the folder. So the default run copies zero statuses, and it does so silently — there is no warning, because from the index's point of view there is nothing there to miss.</p>
+  <p>The second part is unverified, and this article marks it as such rather than guessing in either direction: whether SnapDisk's From folder picker can open .Statuses directly. The picker is the system's folder picker — ActivityResultContracts.OpenDocumentTree, in MainActivity.kt — and it opens with no folder pre-selected: there is no initial-folder hint anywhere in the code, and no WhatsApp path handling anywhere in the app — zero matches for WhatsApp, .Statuses, or .nomedia in the whole source tree. The system picker hides dot-folders in its navigation, so a user tapping through to Android, media, com.whatsapp, WhatsApp, Media would not see .Statuses to tap into. And whether picking the parent Media folder and relying on SnapDisk's recursive folder walk to descend into .Statuses would work is untested too — the walk recurses into every subfolder it can list, but whether the system's document provider returns a hidden dot-folder as a child is not something any test has checked. Note the contrast, because it is instructive: status-saver apps prove the platform allows this access — they build the folder address directly and ask the user to authorise .Statuses itself, then list it with the same document-file calls SnapDisk uses. SnapDisk simply does not do that: it opens a generic picker and lets the user navigate. Adding a direct .Statuses route would be a product decision, not something this article can claim exists. So the honest position is this: the direct pick is unverified — do not plan a backup around it, and do not assume it fails either. The joined workflow in Method 1 is the route that is proven to work, and it is the route this article gives.</p>
+  <p>The third part is what the code does prove about the rest of the job, so the limits above are not mistaken for a wider doubt. The manifest requests the media-read permissions (READ_MEDIA_IMAGES and READ_MEDIA_VIDEO, plus the older READ_EXTERNAL_STORAGE capped at Android 12), the notification permission, and foreground-service permissions — and no INTERNET permission at all, zero occurrences, so the photos physically cannot leave the device. It does not request all-files access — no MANAGE_EXTERNAL_STORAGE anywhere — which is the permission a file manager uses to browse Android/media freely, and the absence is the reason SnapDisk cannot simply walk into another app's folder the way a file manager can. The backup itself is the verified core: oldest-first by date taken with a date-modified fallback (PhotoQuery.kt), every file size-verified after copying (BackupEngine.kt), Pause and Stop in the notification (NotificationHelper.kt, BackupService.kt), files of 4 GB or more on a FAT32 drive skipped with their reason instead of stalling the job (BackupService.kt), and the free run capped at 5 GB with Pro a one-time $9.99 purchase (ProPrefs.kt). None of that changes the .Statuses verdict — it bounds it. The backup engine is proven; the hidden folder is not its to read.</p>
+
+  <h2>Your own status vs a friend's status</h2>
+  <p>The route is the same for both, but the starting point is not, and it is worth saying which one you are saving before you start. Your own status — one you posted — is cached in .Statuses just like anyone else's, so Method 1 works for it exactly as written: view it, copy it out, back it up. But you usually have a better original: the photo or video you posted is almost certainly still in your camera roll, in DCIM/Camera, at full quality, as an ordinary indexed file that SnapDisk's default run already covers. Back that up instead. The cached copy in .Statuses is a re-encoded version WhatsApp made for viewing — smaller, compressed — and the original on your camera roll is the one worth keeping. The .Statuses route for your own status is only needed when the original is gone — you deleted it from the camera roll, or it was a photo you took inside WhatsApp and never saved — and then the cache is the only copy left, and the 24-hour clock applies to it just the same.</p>
+  <p>A friend's status is the case this article is really about, and the only difference is the clock and the courtesy. There is no Save button on a friend's status — WhatsApp never built one — so the cache copy is the only way to keep it, and it only exists because you viewed it. View it, copy it out promptly, and back it up as in Method 1. And before the file leaves your phone for anywhere else — a re-post, a share, a message to someone else — ask the person who posted it. A status is a 24-hour post to a chosen audience, not a photo handed to you to keep and pass on, and the status-saver listings say the same thing in their own disclaimers. Saving it to your own drive for yourself is the job; sharing it onward is a separate decision, and it is theirs to make, not yours to assume.</p>
+
+  <h2>Checking the drive after the copy</h2>
+  <p>The check has two halves, and they have to happen in order: first that the copy-out actually produced a file, then that the drive holds it. After the SnapDisk run finishes, open the drive on a computer or on the phone itself and count: the drive should hold the status files you copied out, and a few opened at random should render fully, videos included. Open the status itself — not just any photo on the drive — because a run that covered the rest of the library would still look complete on a random check while the one status you cared about was missing. If the count is short, the run is not the first suspect — the copy-out is. Check the folder you copied into: is the status file actually there, does it open in the gallery, and does it have a file extension? A file with no extension is skipped by SnapDisk's folder route, which only copies recognised photo and video extensions — rename it with .jpg or .mp4 and run again. If the folder is empty, the status was never viewed, or the cached file had already vanished — view it again in WhatsApp while it is still live, and copy it out immediately.</p>
+  <p>If the drive's free space ran out mid-run, the run stops with the full error shown; free space by moving the drive's contents to a bigger drive first, or back up to a second drive. If the run stopped at the 5 GB free cap — unlikely for statuses alone, possible on a whole-library default run — run it again and it picks up where it stopped, because files already copied are never copied twice. And the check that matters most for a file that only existed as a cache: confirm the drive copy before you delete anything from the phone. The copy in your Statuses folder is an ordinary file and will survive; the cached original in .Statuses may vanish on its own. The drive is a plain folder of plain files. Anyone who picks up the drive can open them. That is the price of a copy you can open anywhere, and it is worth stating before the photos leave the phone.</p>
+
+  <h2>What to avoid</h2>
+  <ul>
+    <li><strong>Assuming the default SnapDisk run covers statuses.</strong> It cannot — proven from the code and the platform: the default run reads the media index, and .Statuses is hidden from it by its dot-prefixed name and by the .nomedia file inside it. A one-tap backup copies zero statuses until you copy them out first.</li>
+    <li><strong>Assuming the From picker can open .Statuses directly.</strong> Unverified — the picker opens with no folder pre-selected, the system picker hides dot-folders, and the code has no WhatsApp path handling. Do not plan a backup around it; use the joined workflow in Method 1.</li>
+    <li><strong>Assuming the cached file will still be there later.</strong> Unverified — the file is a cache, not a save, and it can vanish when the status expires after 24 hours or when WhatsApp clears its cache. Copy it out as soon as you decide you want it.</li>
+    <li><strong>Waiting until the status is nearly expired.</strong> The 24-hour clock is the status's, and the cache may go sooner. View it and copy it out now — tonight may be too late, and tomorrow certainly is.</li>
+    <li><strong>Moving instead of copying out of .Statuses.</strong> Move deletes the cached original as it goes, and the cache is the only copy in the world until the USB backup is verified. Copy, check the copy opens, and only then think about deleting anything.</li>
+    <li><strong>Looking in Android/data instead of Android/media.</strong> The statuses are under Android/media/com.whatsapp — not Android/data, which scoped storage guards and which holds no status files. The wrong folder looks empty for a reason that has nothing to do with your status.</li>
+    <li><strong>Forgetting to turn on show hidden files.</strong> Without it the .Statuses folder is invisible and the path looks like a dead end. The setting is the difference between an empty folder and the file you are looking for.</li>
+    <li><strong>Copying out a file with no extension and wondering why SnapDisk skipped it.</strong> Cached status files sometimes arrive with no extension, and SnapDisk's folder route only copies recognised photo and video extensions. Rename it with .jpg or .mp4, check it opens, and run again.</li>
+    <li><strong>Using a status-saver app and thinking the backup is done.</strong> Saver apps save to the gallery, not to a USB drive. The USB leg is still SnapDisk's job — the app only replaces the copy-out step, not the backup.</li>
+    <li><strong>Re-sharing someone else's status without asking.</strong> A status is a 24-hour post to a chosen audience. Saving it for yourself is the job; passing it on is the poster's decision.</li>
+    <li><strong>Using a FAT32 drive for a library with long videos.</strong> FAT32 cannot hold a single file over 4 GB, and a library with long 4K clips will hold one. SnapDisk skips those files and lists them — use exFAT.</li>
+    <li><strong>Assuming the free 5 GB cap covers the whole library.</strong> It is per run. A library over 5 GB needs several free runs — run it again and it picks up where it stopped — or one $9.99 Pro purchase.</li>
+    <li><strong>Unplugging mid-copy.</strong> Pulling a USB drive out while files are still writing can corrupt the file in flight. Wait for the copy to finish, or pause it first — SnapDisk's Stop button exists for exactly this. An unplug mid-copy leaves a half-copied library that looks finished until you count it.</li>
+    <li><strong>Checking the drive by opening any photo.</strong> Open the status itself — not just any photo on the drive. A random check passes even when the one file you cared about was never copied, because the photos that did copy render fine.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> View it, copy it out, then back it up — the status lives in a hidden folder for a day, and the USB copy is the only copy that survives it. The default backup cannot see the cache, so the copy-out is the save, and the drive is the backup.</p>
+  </div>
+
+  <h2>On your phone instead</h2>
+  <p>If you'd rather tap once than copy folders by hand, <a href="./">SnapDisk</a> copies your photos to a USB drive — free, no ads, no account, no cloud, and your photos never leave the phone. You delete the originals yourself, after you check the copy. It copies your photos — the ones in your Gallery — oldest-first, with Pause and Stop and a size check on every file. For statuses it is the second half of the job: copy the status out of its hidden folder first, then plug in the drive and tap Backup. See also: <a href="whatsapp-photos-to-usb.html">Back up WhatsApp photos to USB on Android</a>, <a href="backup-photos-to-usb.html">How to back up photos to a USB drive without uploading them</a>, <a href="transfer-photos-to-usb-automatically.html">Transfer photos to a USB drive automatically (no manual copy)</a>, <a href="backup-photos-offline.html">How to back up photos offline on Android — no cloud, no account</a>, <a href="screenshots-to-usb.html">Back up screenshots to USB from Android</a>, <a href="restore-photos-from-usb-to-android.html">Restore photos from USB to Android</a>, and <a href="snapdisk-vs-vaultdrive.html">SnapDisk vs VaultDrive: USB photo backup on Android, compared</a>.</p>
+</article>
+<footer>
+  <a href="./">SnapDisk</a> ·
+  <a href="blog/">Blog</a> ·
+  <a href="https://github.com/dzianisv/photo-backup/releases">Download</a> ·
+  <a href="privacy.html">Privacy</a>
+</footer>
+</div>
+</body>
+</html>

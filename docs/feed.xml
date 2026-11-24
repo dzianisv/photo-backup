@@ -1308,5 +1308,12 @@
       <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
       <description>LineageOS ships without Google Photos, and Seedvault writes an encrypted archive — not plain files. Back up photos to a USB drive with SnapDisk, no computer.</description>
     </item>
+    <item>
+      <title>Back up WhatsApp status photos to a USB drive — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/whatsapp-status-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/whatsapp-status-photos-to-usb.html</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+      <description>WhatsApp statuses cache in a hidden .Statuses folder and vanish in 24 hours. Copy them out first, then back them up to USB with SnapDisk, no computer.</description>
+    </item>
 </channel>
 </rss>

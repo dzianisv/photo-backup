@@ -20643,3 +20643,99 @@ unchanged (already "Back up photos & videos to a USB disk").
   and docs/backup-photos-to-usb.html (the generic USB copy, no LineageOS) —
   different, already-live articles, untouched, and linked from the new article
   as the generic companions.
+
+### 186. "Back up WhatsApp status photos to a USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a viewed WhatsApp status photo, out of the hidden .Statuses cache, onto a USB
+  drive plugged into the phone, no computer — with the MediaStore invisibility
+  stated (dot-prefixed name + .nomedia file hide it from the media index) and
+  the direct-pick question marked honestly. Our own WhatsApp-photos-to-USB
+  article ranks first and covers the WhatsApp Images folder with zero mentions
+  of status; the status-saver guides save to the gallery and stop there; the
+  PC tools need a computer. The gap stands ONLY on that narrow angle: the
+  viewed-status photo, out of .Statuses, onto a USB drive, no computer, with
+  the default run proven unable to see statuses and the direct From-picker
+  pick of .Statuses marked unverified.
+- Current top results (scored Nov 24, 2026, live web search):
+  Phrasing 1, "back up WhatsApp status photos to USB drive Android"
+  (supervisor, this run): our own whatsapp-photos-to-usb.html ranks #0 but
+  contains 0 "status" mentions (18,408 B, verified by grep); the other results
+  are generic WhatsApp-media guides (Coolmuster PC-based, geekchamp/pcnmobile
+  local backup) and status-saver apps (save to gallery, not USB). No dedicated
+  status-to-USB how-to.
+  Phrasing 2, "save WhatsApp status photo video to USB drive no computer
+  Android" (supervisor, this run): same — own WhatsApp article #0,
+  status-saver Play apps, Xender social downloader (saves status, no USB leg).
+  No dedicated guide.
+  Phrasing 3, "WhatsApp .Statuses folder viewed status saved phone storage
+  location" (lead, fact check, this run): bestforandroid, macmyths,
+  Wondershare, itechguides agree — viewed statuses cache at
+  Android/media/com.whatsapp/WhatsApp/Media/.Statuses (hidden folder, dot
+  prefix); your own statuses are also there; WhatsApp Business at
+  com.whatsapp.w4b; Android 13+ scoped storage may restrict access; files are
+  temporary and may vanish on expiry/cache clear; a friend's status has no
+  Save button. Lead re-check of phrasing 2 this run: own WhatsApp article #0,
+  status-saver Play listings (Save & Share, Status Saver, Save Status — save
+  to gallery, no USB leg), Wondershare WeLastseen guide (no USB leg, "no
+  built-in option to download status updates"). No dedicated status-to-USB
+  how-to.
+- Honest centre (verified from the code at base fcf821b and the live sources
+  above, this run, Nov 24, 2026, not assumed): a WhatsApp status disappears
+  24 hours after it is posted, and WhatsApp gives you no Save button for a
+  status you viewed. Viewing a status caches it at
+  Android/media/com.whatsapp/WhatsApp/Media/.Statuses on Android 11 and later
+  (WhatsApp Business: Android/media/com.whatsapp.w4b/WhatsApp Business/Media/
+  .Statuses; older installs: WhatsApp/Media/.Statuses at the top of internal
+  storage); only viewed statuses are cached, and your own statuses land there
+  too. The cached file is temporary and can vanish on expiry or cache clear.
+  SnapDisk's default run CANNOT see status files — proven, not assumed: it
+  reads MediaStore, and .Statuses is hidden from the media index twice over
+  (dot-prefixed name, which Android's media provider treats as hidden, and a
+  .nomedia file inside, which tells the media scanner to skip the folder and
+  its subfolders). UNVERIFIED, marked as such in the article: whether
+  SnapDisk's From folder picker can open .Statuses directly — the picker is
+  the system folder picker (MainActivity.kt:62, OpenDocumentTree) opening
+  with no folder pre-selected, no initial-folder hint anywhere in the code,
+  no WhatsApp path handling anywhere in the app (0 matches for
+  WhatsApp/.Statuses/.nomedia in the source), and the system picker hides
+  dot-folders — and whether the cached file survives long enough to copy.
+  Status-saver apps prove the platform allows the access when an app builds
+  the folder address directly; SnapDisk does not. The honest Method 1 is the
+  joined workflow: copy the cached file out of .Statuses into a normal folder
+  with a file manager first (copy, not move; turn on show hidden files), then
+  point SnapDisk at that folder. A cached status file with no extension is
+  skipped by SnapDisk's folder route, which only copies recognised photo and
+  video extensions (PhotoQuery.kt isMediaName) — rename it with .jpg or .mp4
+  first. Contrast honestly with status-saver apps (save to the gallery, not to
+  a USB drive — the USB leg is still SnapDisk's job) and screenshots/screen
+  recordings (the fallback that always works, at lower quality). SnapDisk
+  facts re-verified from the code at base fcf821b: Pro $9.99 once
+  (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB free per-run cap
+  (ProPrefs.kt:43, 5L * 1024 * 1024 * 1024), oldest-first MediaStore
+  DATE_TAKEN (PhotoQuery.kt:47, :56-59, sort DATE_TAKEN ASC with
+  DATE_MODIFIED fallback), size verification after copy
+  (BackupEngine.kt:107,108), Pause/Stop in the notification
+  (NotificationHelper.kt:126,128,136,138; BackupService.kt:113,115), FAT32
+  files >=4 GiB skipped with their reason (BackupService.kt:428-433),
+  default From /sdcard/DCIM and To /disk/DCIM (BackupPrefs.kt:50,53), no
+  INTERNET permission (0 occurrences in the manifest), no Google Play
+  Services dependency (0 matches for com.google.android.gms / play-services
+  in the build; only Play Billing, billing-ktx 7.1.1, libs.versions.toml:50),
+  no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24
+  (Android 7.0). "SnapDisk copies, it never deletes" present — the only
+  .delete() calls in the code are on SnapDisk's own half-finished .part files
+  (BackupEngine.kt:176, :207; BackupService.kt:385, :477). The article carries
+  no install count for SnapDisk (none exists) and no VaultDrive install
+  figure.
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/whatsapp-status-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md before
+  writing; "whatsapp-status-photos-to-usb" returns 0 matches in WORKLOG.md,
+  feed.xml, sitemap.xml, blog index, llms.txt, llms-full.txt, and searches.md.
+  The "status" matches in WORKLOG.md are 4 incidental uses of the word
+  (phone-spec "Status Information", "Play status", "status table") — none
+  about WhatsApp status. The near match is docs/whatsapp-photos-to-usb.html
+  (the generic WhatsApp-photos-to-USB article, 0 "status" mentions, verified
+  by grep) — a different, already-live article, untouched, and linked from the
+  new article as the generic companion.
