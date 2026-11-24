@@ -20585,7 +20585,7 @@ unchanged (already "Back up photos & videos to a USB disk").
   (lead, this run): CalyxOS Seedvault docs (encrypted, restore-only, file backup
   beta — "make a copy of your files via another means, such as by connecting to a
   PC"); Android Police (Glimpse gallery reading image folders, no backup; Seedvault
-  encrypted whole-device backup to a USB-C drive, scheduled when the drive is
+  encrypted backup of apps and data to a USB-C drive, scheduled when the drive is
   plugged in); ByteTechLab LineageOS 24 review (Seedvault encrypted device
   snapshots, 12-word mnemonic, USB-C drive / Nextcloud / WebDAV); LineageOS
   Changelog 25 (Seedvault built-in since 18.1, Settings > System > Backup,
@@ -20599,7 +20599,7 @@ unchanged (already "Back up photos & videos to a USB disk").
   this run, Nov 23, 2026, not assumed): LineageOS ships without Google apps by
   default, so there is no Google Photos and no Google cloud backup; photos live
   only on the phone until copied off. Seedvault is LineageOS's built-in backup
-  (Settings > System > Backup, since 18.1): whole-device backup, encrypted
+  (Settings > System > Backup, since 18.1): encrypted backup of apps and data
   client-side with a 12-word recovery phrase, to a USB drive, Nextcloud, or local
   storage — restore-only through Seedvault on a compatible ROM, and its file
   backup is beta. Glimpse is LineageOS's gallery app — it reads image folders and
