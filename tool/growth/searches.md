@@ -21618,3 +21618,176 @@ unchanged (already "Back up photos & videos to a USB disk").
   linked from the new article as series companions. A docs/ listing this run
   confirms Threema is the last major messaging app with no article — the
   series is otherwise complete.
+
+### 193. "Save GIFs to a USB drive from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a .gif file, saved on an Android phone, onto a USB drive plugged into the
+  phone, no computer — with the animation verified by playing it back, the
+  chat-app conversion stated (WhatsApp turns GIFs into MP4 video, Telegram
+  keeps them as MPEG-4 video in its account panel), the share-flattening
+  trap marked (sharing a GIF can flatten it to a still), and the file hunt
+  given before the copy (Downloads, the gallery's GIFs album, Pictures).
+  Our own generic USB articles rank top and never mention GIFs; the generic
+  OTG guides never name GIFs at all. The gap stands ONLY on
+  that narrow angle: the .gif file, saved on the phone, onto a USB drive, no
+  computer, with the default run proven to cover saved .gif files, the hunt
+  condition on that coverage stated plainly, and the folder pick marked
+  untested.
+- Current top results (scored Nov 25, 2026, live web search):
+  Phrasing 1, "back up animated GIFs from Android phone to USB flash drive"
+  (dispatcher, this run): generic OTG copy guides only — Samsung community
+  walkthrough, Instagram reel, YouTube PYcbV25CczI, umatechnology,
+  ireashare, freedom251 — plug the drive in, copy the folders in the file
+  manager, no GIF folder, no .gif extension, no animation check.
+  No GIF-specific guide exists.
+  Phrasing 2, "save GIFs from Android phone to flash drive no computer"
+  (dispatcher, this run): our own videos article ranks first and never
+  mentions GIFs; then generic OTG guides (MobileTrans, iReaShare,
+  HowToGeek, YouTube) that never name GIFs. No GIF-specific guide exists.
+  Phrasing 3, "transfer animated GIF images Android phone to USB drive keep
+  animation" (lead, this run): the same Samsung community guide, the same
+  Instagram reel, the same YouTube walkthroughs, and the same iReaShare and
+  freedom251 generic guides — every one a photos-and-videos guide that never
+  says the word GIF except in passing, if at all. No GIF-specific guide
+  exists on any phrasing.
+- Honest centre (verified from the code at base 9fd267b and the live sources
+  above, this run, Nov 25, 2026, not assumed): a GIF is an ordinary .gif
+  file, and the animation lives inside the file itself — frames stored one
+  after another, no playback metadata, no sidecar file, nothing like the
+  slow-motion case where the speed lives in a note attached to the video.
+  Copy the .gif and the animation comes with it, byte-for-byte. The trap is
+  getting the file. WhatsApp converts a GIF you send into a short looping
+  MP4 video behind the scenes — the guides agree: WhatsApp stores GIFs as
+  short MP4 clips, an MP4 is its native format, the conversion is automatic
+  and cannot be opted out of — so a GIF saved from WhatsApp lands as an
+  .mp4 in the WhatsApp Video folder, not as a .gif. Telegram treats GIFs as
+  silent MPEG-4 video: its Save to GIFs keeps the GIF in your account's GIF
+  panel rather than writing a file, and Save As writes an MP4. A GIF picked
+  from the keyboard's GIPHY search is served from a library and never
+  touches your storage. Sharing a GIF out of the Gallery or a chat can
+  flatten it to a still image — some share targets take only the first
+  frame — and the guides that measured this put the blame on the format
+  itself, a 1987 format that stores every frame in full, which is why the
+  platforms re-encode it to MP4 behind the scenes. So the certain route
+  copies the saved .gif file, never a re-shared copy. The saved .gif files
+  live in Downloads — Chrome on Android saves every download to the shared
+  Downloads folder by default, Internal Storage/Download, and the guides
+  agree on the path across manufacturers — in the gallery's GIFs album —
+  Samsung Gallery's Create GIF tool (open a video, three-dot menu, open in
+  video player, tap GIF, adjust, save) and Google Photos' Create GIF save
+  there — or in Pictures; a GIF sent as a document, not as a chat GIF, is
+  sent as-is and lands in Downloads as a .gif. The check is the file
+  extension, not the app that showed it to you: a file that ends in .gif is
+  a GIF, and a file that ends in .mp4 is a video, even if it plays exactly
+  like a GIF. The check after the copy is playing one GIF back from the
+  drive and watching it animate — a GIF that lost its animation still looks
+  like a photo in every other check.
+  SnapDisk's default run covers the saved .gif files with no folder to pick
+  — proven, not assumed: it reads MediaStore images + videos with no folder
+  filter (PhotoQuery.kt:23-36, the query call passes no selection at all),
+  oldest-first by date taken with a date-modified fallback (PhotoQuery.kt:47,
+  :56-59; BackupEngine.kt:95-100), .gif is a recognised image extension
+  (PhotoQuery.kt:130-133, line 132), and Android indexes image/gif files in
+  the MediaStore Images table exactly the way it indexes JPEGs — Android's
+  own developer documentation states each collection is organised by the
+  primary MIME type of the content and image/* content is indexed under
+  Images, and a GIF's MIME type is image/gif. The default run copies the
+  WHOLE MediaStore library, not DCIM only — the query reads every indexed
+  image and video on the phone, whatever folder it sits in (WL-207
+  correction, stated correctly throughout the article) — and it reads both
+  the images table and the videos table, so it covers Downloads' .gif files
+  and the WhatsApp Video folder's .mp4 versions together. The From picker
+  route does NOT read the media index — it walks the folder tree directly
+  (PhotoQuery.kt:90-97, listTreeFiles/walkTree) — and it walks one folder
+  tree, so Downloads gives the .gif files and the WhatsApp Video folder
+  needs a second pick for the MP4 versions; that split is the chat apps'
+  own conversion, which turns GIFs into MP4 video before the files ever
+  reach a folder. UNTESTED, marked as such in the article: whether
+  SnapDisk's From folder picker reaches the Downloads or GIFs-album folders
+  end to end on a real phone — the picker is the system folder picker
+  (MainActivity.kt:62, OpenDocumentTree) opening with no folder
+  pre-selected, no initial-folder hint anywhere in the code, no GIF path
+  handling anywhere in the app (the only "gif" in the source is the .gif
+  extension in the recognised-extensions list) — but the navigation chain is
+  ordinary folders (Downloads, the gallery's GIFs album folder, Pictures),
+  none dot-prefixed, the folders sit in shared storage outside Android/data,
+  so the scoped-storage wall that blocks the Telegram folder does not apply
+  here, and the folder walk recurses into every subfolder it can list
+  (PhotoQuery.kt:90-97, listTreeFiles/walkTree). The honest Method 1 is the
+  joined workflow: hunt the .gif files first in check order, make the file
+  before backing it up if the hunt comes up empty, never re-share a GIF to
+  get it onto the drive, check the GIFs album appeared, then run SnapDisk's
+  default backup or point the From picker at the folder. Contrast honestly
+  with the chat apps' conversions, named without endorsing: WhatsApp (GIF to
+  MP4, automatic, cannot be opted out of), Telegram (GIF as MPEG-4 video,
+  Save to GIFs writes no file, Save As writes MP4), the keyboard GIPHY
+  search (served from a library, never a file) — all three put the animation
+  somewhere other than a .gif file, and the USB leg is still SnapDisk's job.
+  Only save GIFs you have permission to keep; the article makes no claim
+  about recovering GIFs from a deleted chat, because the chat apps keep no
+  .gif file to recover from, and a GIF served from a library was never yours
+  to recover.
+  SnapDisk facts re-verified from the code at base 9fd267b: Pro $9.99 once
+  (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB free per-run cap
+  (ProPrefs.kt:43, 5L * 1024 * 1024 * 1024), oldest-first MediaStore
+  DATE_TAKEN (PhotoQuery.kt:47, :56-59, sort DATE_TAKEN ASC with
+  DATE_MODIFIED fallback), size verification after copy
+  (BackupEngine.kt:107, 108), Pause/Stop in the notification
+  (NotificationHelper.kt:126, :128, :136, :138; BackupService.kt:113,115),
+  FAT32 files >=4 GiB skipped with their reason (BackupService.kt:428-433),
+  default From /sdcard/DCIM and To /disk/DCIM (BackupPrefs.kt:50,53), no
+  INTERNET permission (0 occurrences in the manifest), no Google Play
+  Services dependency (0 matches for com.google.android.gms / play-services
+  in the build; only Play Billing, billing-ktx 7.1.1, libs.versions.toml:50),
+  no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24
+  (Android 7.0). "SnapDisk copies, it never deletes" present — the only
+  .delete() calls in the code are on SnapDisk's own half-finished .part
+  files (BackupEngine.kt:176, :207; BackupService.kt:385, :477). Screen-off
+  continuation under battery saver is UNVERIFIED — the repo holds no wake
+  lock and no battery-saver handling (grep across all fetched main-source
+  .kt files: none) — stated in the TL;DR and in "What to avoid" (WL-182
+  form). VaultDrive, named fairly from its live pages this run: choose your
+  whole library, chosen albums, or single photos ("Choose what to back up",
+  coticsy.com/vaultdrive.html), "Original quality, byte for byte" (same
+  page), free 200 files or 2 GB per backup (same page), Pro Lifetime $29.99
+  once on the App Store as of November 25, 2026 — with a $19.99 one-time
+  "VaultDrive: USB Backup" purchase also listed and no dollar price on the
+  vendor's own page ("See plans") — against SnapDisk Pro $9.99 once and 5
+  GB free per run with no file count. FLAG: the $19.99 Pro Lifetime figure
+  from November 16 no longer matches the store list (VaultDrive 2.0, v10.0);
+  the article states the $29.99 with the date and names the $19.99 listing,
+  and does not present $19.99 as the current Pro Lifetime price — the
+  comparison article's $19.99 is now stale and needs a re-check by the
+  supervisor. The article carries no install count for SnapDisk (none
+  exists) and no VaultDrive install figure. The 88
+  "installs/downloads/rating/stars" regex matches in the article are benign
+  (57 × "Downloads" folder name, 22 × lowercase "download" verb forms, 5 ×
+  singular "Download", 3 × "install" wording — installed from the v0.1.2 APK,
+  install unknown apps — 1 × "rating" inside "operatingSystem" in the
+  JSON-LD — no counts claimed). The 1 "Google Play" mention is
+  the factual "it is not on Google Play yet", same as WL-233/WL-234/WL-235/
+  WL-236/WL-238/WL-239/WL-240. The 4 "VaultDrive" mentions are the fair
+  comparison in "On your phone instead" plus the comparison-article link,
+  carrying the re-verified prices above. Read time 13 min from the word
+  count (9,971 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/gif-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, searches.md, and
+  WORKLOG.md before writing; "gif" returns 0 matches in feed.xml,
+  sitemap.xml, blog index, and llms.txt, 2 incidental matches in
+  llms-full.txt (burst-article and Telegram-article lines, no slug), 4
+  extension-list matches in searches.md (.gif in the IMAGE_EXTENSIONS
+  citations), and 3 extension-list matches in WORKLOG.md — and no
+  docs/gif-photos-to-usb.html exists (docs/ listing this run: 198 html
+  files, none with "gif"). There are no near matches from other articles —
+  no earlier article is a GIF article — and the near matches are the other
+  format articles (raw-photos-to-usb, heic-photos-to-usb, burst-photos-to-
+  usb, slow-motion-videos-to-usb, timelapse-videos-to-usb) and the messaging-
+  app articles (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html,
+  messenger-photos-to-usb.html, viber-photos-to-usb.html,
+  kik-photos-to-usb.html) — all different, already-live articles,
+  untouched, and the WhatsApp, Telegram, Kik, Messenger, and Viber ones
+  linked from the new article as series companions. A docs/ listing this run
+  confirms GIFs are the last format in our series with no article — RAW,
+  HEIC, burst, slow-motion, and timelapse all have theirs already.

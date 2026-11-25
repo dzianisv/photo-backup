@@ -1357,5 +1357,12 @@
       <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
       <description>Threema photos stay inside the app until you save them — auto-save is off by default. Turn it on, and they land in Pictures/Threema. Then back them up to USB.</description>
     </item>
+    <item>
+      <title>Save GIFs to a USB drive from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/gif-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/gif-photos-to-usb.html</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A GIF is an ordinary .gif file — the animation lives inside it. The trap is sharing first: WhatsApp turns GIFs into MP4, so copy the .gif, never a re-share.</description>
+    </item>
 </channel>
 </rss>
