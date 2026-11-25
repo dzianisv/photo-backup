@@ -1,3 +1,172 @@
+## WL-241 — Save GIFs to a USB drive from Android, no computer article, 194th how-to
+
+- Owner: SEO/GEO lane lead. State: DONE — article PR #454 MERGED (0124a4a, 2026-11-25T17:52:11Z; build pass 54s run 45669049131); post-merge main CI Android PR 45669264082 + pages 45669262677 success on 0124a4a; live verified article 200 (66,360 B, correct title), feed.xml 194 items, sitemap.xml 198 urls. Supervisor settle: staged payload re-verified independently before applying — article structure + JSON-LD parsed (title 37, meta 156, 1 H1, 12 H2s, FAQPage 4 Qs, 13 min read), slug 0 collisions in all 7 files, site-file edits re-simulated on scratch copies with counts exact (feed 193→194, sitemap 197→198, blog 193→194, llms 229→230, llms-full 2463→2470, searches 192→193), applied files byte-identical to the simulation, code citations spot-checked at base 9fd267b (PhotoQuery.kt:132 .gif, ProPrefs.kt:40 $9.99, manifest 0 INTERNET, minSdk 24), WhatsApp GIF→MP4 re-confirmed live from three sources, VaultDrive Pro Lifetime $29.99 re-verified independently from the App Store page (crawled 16 min before the read) — the $19.99 figure in the snapdisk-vs-vaultdrive comparison article is now stale, queued as the next candidate for the 10:24 run.
+  Evidence: base origin/main 9fd267b verified by readback (HEAD
+  9fd267bb4e54fa8904f7c38b2acb0f464504820b, 2026-11-25T16:56:58Z). Article
+  66,360 B, title 37 chars, og:title/headline 51 chars, meta 156 chars
+  (identical in meta, og:description, and JSON-LD), 1 H1, 12 H2s, 1 script
+  tag, TL;DR present, JSON-LD parses (Article + FAQPage 4 Qs +
+  BreadcrumbList, datePublished 2026-11-25), read time 13 min (9,971
+  article-body words — rounds to 13 at /750).
+
+  New docs/gif-photos-to-usb.html ("Save GIFs to a USB drive from Android"),
+  following the threema-photos-to-usb (WL-240) model and the
+  lineageos-photos-to-usb template head/CSS/footer with 12-H2 body structure
+  (same 12 as Threema — the extra H2 over Messenger's 11 is the dedicated
+  "Where .gif files live" section the scattered save folders require).
+  Site-file edits staged and verified by simulation on scratch copies of the
+  live base files (see BEFORE → AFTER, projected): blog index (JSON-LD + post
+  block, 194 BlogPosting entries, all URLs unique, new entry last), sitemap.xml
+  (198 urls), llms.txt (230 lines), llms-full.txt (131 bare-URL passages,
+  2,463 → 2,470 lines — 7 lines added), feed.xml (193 → 194 items);
+  searches.md Query 193 row staged (anchored "^### " count 192 → 193 in
+  simulation).
+
+  GIF READABILITY VERDICT (the critical question, verified from code at base
+  9fd267b + live sources this run): (1) DEFAULT RUN COVERS SAVED .GIF FILES —
+  proven shape, with a stated condition. SnapDisk's default run queries the
+  MediaStore images + videos tables only, with no folder filter
+  (PhotoQuery.kt:23-36, the query call passes no selection at all); .gif is a
+  recognised image extension (PhotoQuery.kt:130-133, line 132); and Android
+  indexes image/gif files in the MediaStore Images table exactly the way it
+  indexes JPEGs — Android's own developer documentation states each
+  collection is organised by primary MIME type and image/* content is indexed
+  under Images. A GIF the gallery shows is a GIF the default run sees. This
+  is the same shape as the WL-234 Viber, WL-236 Messenger, WL-238 Pinterest,
+  WL-239 Kik, and WL-240 Threema verdicts. The default run copies the WHOLE
+  MediaStore library, not DCIM only (WL-207 correction, stated correctly
+  throughout the article). (2) THE HUNT IS THE JOB — GIFs are the one format
+  in this series where there is no save switch and no single save folder.
+  The save is scattered: browser downloads land in Downloads (Chrome on
+  Android saves every download to the shared Downloads folder by default,
+  Internal Storage/Download — verified this run from three guides that agree
+  on the path), Gallery-made GIFs land in the gallery's GIFs album (Samsung
+  Gallery Create GIF, Google Photos Create GIF — verified this run from two
+  video walkthroughs), app-saved GIFs land in Pictures or Downloads. And the
+  chat apps that show GIFs do not keep .gif files at all — WhatsApp converts
+  a sent GIF into a short looping MP4 video behind the scenes (verified this
+  run: ezyimg, wildandfreetools, convertico all agree, conversion automatic
+  and cannot be opted out of), Telegram treats GIFs as silent MPEG-4 video
+  and its Save to GIFs writes nothing to the phone (verified this run:
+  itechguides, notesread, copyprogramming), and a keyboard GIPHY GIF is
+  served from a library and never touches storage (wildandfreetools). So a
+  GIF only watched in a chat was never a file, and the default run copies
+  zero GIFs from it — stated as the condition in the TL;DR, the wall section,
+  Method 1 steps 1 and 2, the readability section, FAQ Q1 and Q2, and "What
+  to avoid". (3) THE SHARE TRAP — sharing a GIF out of the Gallery or a chat
+  can flatten it to a still image: some share targets take only the first
+  frame (verified this run: dev.to "Why Your GIF Turns Into a Still Image in
+  Chats", which puts the blame on the format itself, a 1987 format storing
+  every frame in full). The certain route copies the saved .gif file, never a
+  re-shared copy — stated in the TL;DR, Method 1 step 3, FAQ Q3, and "What to
+  avoid". (4) THE FILE IS SIMPLE — a GIF is an ordinary .gif file and the
+  animation lives inside the file itself, no playback metadata, no sidecar,
+  nothing like the slow-motion case; a byte-for-byte copy carries the whole
+  animation. The check is playing one GIF back from the drive and watching it
+  animate — stated in the TL;DR, the checking section, FAQ Q4, and "What to
+  avoid". (5) DIRECT SAF PICK OF THE GIF FOLDERS: CODE-SUPPORTED BUT UNTESTED
+  — stated as such in the article (TL;DR + Method 2 + "Can SnapDisk read the
+  GIF folder directly?" + FAQ Q2 + "What to avoid", WL-221–240 form). The
+  picker is the generic system folder picker (MainActivity.kt:62,
+  OpenDocumentTree) opening with no folder pre-selected — no EXTRA_INITIAL_URI
+  / initialUri anywhere in the code, no GIF path handling anywhere in the app
+  (the only "gif" in the source is the .gif extension in the
+  recognised-extensions list) — but the navigation chain is ordinary folders
+  (Downloads, the gallery's GIFs album folder, Pictures), none dot-prefixed,
+  in shared storage outside Android/data, so the scoped-storage wall that
+  blocks the Telegram folder does not apply here, and the folder walk recurses
+  into every subfolder it can list (PhotoQuery.kt:90-97, listTreeFiles/
+  walkTree). The picker has one GIF-specific limit the default run does not:
+  it walks one folder tree, so Downloads gives the .gif files and the
+  WhatsApp Video folder needs a second pick for the MP4 versions, while the
+  default run reads both MediaStore tables and covers both — stated as
+  code-grounded but end-to-end untested. The article gives Method 1 first and
+  Method 2 second, and does not claim the pick as proven. One code-grounded
+  quirk carried in the article: the folder route only copies recognised
+  photo/video extensions (PhotoQuery.kt:124, isMediaName) — a document in the
+  folder is simply skipped, and a chat is never copied, because a chat is not
+  a photo or a video.
+
+  LIVE VERIFICATIONS (all this run, Nov 25, 2026): GAP scored live this run,
+  three phrasings. (a) "back up animated GIFs from Android phone to USB flash
+  drive" (dispatcher): generic OTG copy guides only (Samsung community,
+  Instagram reel, YouTube PYcbV25CczI, umatechnology, ireashare, freedom251)
+  — plug the drive in, copy the folders, no GIF folder, no .gif extension, no
+  animation check. No GIF-specific guide exists. (b) "save GIFs from Android
+  phone to flash drive no computer" (dispatcher): our own videos article
+  ranks first and never mentions GIFs; then generic OTG guides (MobileTrans,
+  iReaShare, HowToGeek, YouTube) that never name GIFs. No GIF-specific guide
+  exists. (c) "transfer animated GIF images Android phone to USB drive keep
+  animation" (lead, this run): the same Samsung community guide, the same
+  Instagram reel, the same YouTube walkthroughs, and the same iReaShare and
+  freedom251 generic guides — every one a photos-and-videos guide that never
+  says the word GIF except in passing, if at all. No GIF-specific guide exists
+  on any phrasing. The gap stands ONLY on the narrow angle. GIFs are the last
+  format in our series missing its own article (RAW/HEIC/burst/slow-motion/
+  timelapse live — verified by docs/ listing this run: 198 html files, none
+  with "gif"). SnapDisk facts re-verified from the code at base 9fd267b: Pro
+  $9.99 once (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB free per-run cap
+  (ProPrefs.kt:43, 5L * 1024 * 1024 * 1024), oldest-first MediaStore
+  DATE_TAKEN (PhotoQuery.kt:47, :56-59, sort DATE_TAKEN ASC with
+  DATE_MODIFIED fallback), size verification after copy
+  (BackupEngine.kt:107, 108), Pause/Stop in the notification
+  (NotificationHelper.kt:126, :128, :136, :138; BackupService.kt:113,115),
+  FAT32 files >=4 GiB skipped with their reason (BackupService.kt:428-433),
+  default From /sdcard/DCIM and To /disk/DCIM (BackupPrefs.kt:50,53), no
+  INTERNET permission (0 occurrences in the manifest), no Google Play
+  Services dependency (0 matches for com.google.android.gms / play-services
+  in the build; only Play Billing, billing-ktx 7.1.1, libs.versions.toml:50),
+  no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24
+  (Android 7.0). "SnapDisk copies, it never deletes" present — the only
+  .delete() calls in the code are on SnapDisk's own half-finished .part
+  files (BackupEngine.kt:176, :207; BackupService.kt:385, :477). Screen-off
+  continuation under battery saver is UNVERIFIED — the repo holds no wake
+  lock and no battery-saver handling (grep across all fetched main-source
+  .kt files: none) — stated in the TL;DR and in "What to avoid" (WL-182
+  form). VaultDrive, named fairly from its live pages this run:
+  choose-photos ("Choose what to back up", coticsy.com/vaultdrive.html),
+  "Original quality, byte for byte" (same page), free 200 files or 2 GB per
+  backup (same page), Pro Lifetime $29.99 once on the App Store as of
+  November 25, 2026 — with a $19.99 one-time "VaultDrive: USB Backup"
+  purchase also listed and no dollar price on the vendor's own page ("See
+  plans") — against SnapDisk Pro $9.99 once and 5 GB free per run with no
+  file count. FLAG: the $19.99 Pro Lifetime figure from November 16 no longer
+  matches the store list (VaultDrive 2.0, v10.0, App Store page opened this
+  run: VaultDrive Pro Lifetime $29.99, VaultDrive: USB Backup $19.99,
+  VaultDrive Pro Monthly $7.99, Pro Annual/Yearly $19.99); the article states
+  the $29.99 with the date and names the $19.99 listing, and does not present
+  $19.99 as the current Pro Lifetime price. The dispatch's prescribed $19.99
+  comparison figure therefore does NOT verify this run — the supervisor should
+  re-check the snapdisk-vs-vaultdrive comparison article, whose $19.99 Pro
+  Lifetime is now stale. The article carries "$9.99" four times, "$19.99"
+  once, "$29.99" once, and "5 GB" ten times, matching the verified figures;
+  it carries no install count for SnapDisk (none exists) and no VaultDrive
+  install figure. The 88 "installs/downloads/rating/stars" regex matches in
+  the article are benign (57 × "Downloads" folder name, 22 × lowercase
+  "download" verb forms, 5 × singular "Download", 3 × "install" wording —
+  installed from the v0.1.2 APK, install unknown apps — 1 × "rating" inside
+  "operatingSystem" in the JSON-LD — no counts claimed). The 1 "Google Play"
+  mention is the factual "it is not on Google Play yet", same as
+  WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240. The 4 "VaultDrive"
+  mentions are the fair comparison in "On your phone instead" plus the
+  comparison-article link, carrying the re-verified prices above. Read time
+  13 min from the word count (9,971 words at /750).
+
+  Skills loaded: growth-seo (read this run) — the article follows the WL-240
+  staged template and its verified structure (12-H2 body, TL;DR, JSON-LD
+  Article + FAQPage 4 Qs + BreadcrumbList), and the gap was scored live with
+  three search phrasings. product-manager was NOT loaded this run — the
+  dispatch pointed at growth-seo only. External skills app-store-optimization
+  / app-store-screenshots / product-hunt-launch / mobile-app-release were NOT
+  loaded for this article row — they are not lane skills for a how-to article,
+  and no store cards, screenshots, Product Hunt launch, or store submission is
+  part of this work. Recorded explicitly per the dispatch.
+
+- Owner gates unchanged (WL-31 Play Console password, WL-32 AlternativeTo
+  PAUSED, WL-33 Medium overdue, Sentry DSN, PostHog). No escalation. No PRs
+  opened by the lead — the supervisor applies the staged payload and merges
+  after readback.
+
 ## WL-240 — Back up Threema photos to a USB drive, no computer article, 193rd how-to
 
 - Owner: SEO/GEO lane lead. State: DONE — article PR #452 MERGED (b12513b, 2026-11-25T16:52:10Z; build pass 1m14s run 45658166116); post-merge main CI Android PR 45658570541 + pages 45658569278 success on b12513b; live verified article 200 (65,187 B, correct title), feed.xml 193 items, sitemap.xml 197 urls. Supervisor settle: staged payload re-verified independently before applying — article structure + JSON-LD parsed (title 37, meta 158, 1 H1, 12 H2s, FAQPage 4 Qs), slug 0 collisions in all 7 files, counts re-simulated exact on scratch copies from the pristine HEAD base (feed 192→193, sitemap 196→197, blog 192→193, llms 228→229, llms-full 2456→2463, searches 191→192), all 7 applied files byte-identical to the simulation, code citations spot-checked at base 1de6c1b, save-folder finding re-confirmed from Threema's own source (FileServiceImpl.kt copyMediaFileIntoPublicDirectory: images → DIRECTORY_PICTURES, videos → DIRECTORY_MOVIES, RELATIVE_PATH + MEDIA_PATH; build.gradle.kts:99 MEDIA_PATH "Threema"; legacy /Threema/Threema Pictures + /Threema/Threema Videos via getPublicDirectory on Android 9 and older). Two verify-script bugs of mine, both caught before the merge: the blog simulation added one extra blank line after the new post block (simulation artifact, apply was correct per the base form), and two checks had wrong match strings (minSdk "minSdk = 24", .delete() sites are part.delete()/partFileFor) — the worktree payload was correct in both cases. Two execs in the lead's run exited 2 with no identified command in the handoff; merges and contents all verified, so no observed effect.
