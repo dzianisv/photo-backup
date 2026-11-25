@@ -20961,3 +20961,155 @@ unchanged (already "Back up photos & videos to a USB disk").
   wechat-photos-videos-to-usb.html, viber-photos-to-usb.html) — all
   different, already-live articles, untouched, and the WhatsApp one linked
   from the new article as the series companion.
+
+### 189. "Back up Facebook Messenger photos to a USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a Messenger photo, saved from the chat into the gallery, onto a USB drive
+  plugged into the phone, no computer — with the Pictures/Messenger folder
+  stated (Internal storage/Pictures/Messenger), the save-first step named
+  as the step that creates the file, and the auto-save question for received
+  photos marked honestly. Our own generic USB articles rank top and never
+  mention Messenger; the folder guides stop at finding the photo in the
+  gallery; the OTG guides name "messaging-media folders" only in passing.
+  The gap stands ONLY on that narrow angle: the Messenger photo, saved from
+  the chat into Pictures/Messenger, onto a USB drive, no computer, with the
+  default run proven to cover gallery-saved Messenger photos and the folder
+  pick marked untested.
+- Current top results (scored Nov 24, 2026, live web search):
+  Phrasing 1, "back up Facebook Messenger photos to USB drive Android no
+  computer" (dispatcher, this run): our own generic articles
+  (usb-photo-backup, backup-photos-to-external-drive,
+  transfer-photos-to-usb-automatically) rank top and never mention
+  Messenger; the rest are generic OTG guides (a Facebook reel, a YouTube
+  walkthrough, AppBrain "Photos to USB") — plug the drive in, copy the
+  folders in the file manager — none names the Messenger folder, the
+  save-first step, or the auto-save question. No dedicated
+  Messenger-photos-to-USB how-to.
+  Phrasing 2, "save Messenger photos to USB flash drive Android OTG"
+  (dispatcher, this run): Wondershare's generic phone-to-USB guide copies
+  "DCIM, Pictures, Movies, Music, Download, Documents, and messaging-media
+  folders" by hand in the Files app — Messenger never named, no Messenger
+  folder path given, manual copy with no progress, no resume, and no
+  verification; topselect's generic guide lists "WhatsApp / Messenger
+  media" as one bullet and stops there; YouTube, Dr.Fone, and FoneLab are
+  the same shape — a computer-first transfer tool or a manual file-manager
+  copy, Messenger as a word in a list rather than a job with steps. No
+  dedicated guide.
+  Phrasing 3, "Facebook Messenger saved photos location Android gallery
+  Pictures Messenger folder" (lead, fact check, this run): five guides
+  agree a saved Messenger photo lands in Internal storage/Pictures/
+  Messenger and shows in the gallery as a "Messenger" album — nerdtechy
+  ("Internal Storage → Pictures → Messenger"), hetmanrecovery (Pictures /
+  Messenger, Save Image), mundobytes (Pictures > Messenger), itgeared
+  (camera roll / "Messenger Pictures" folder), foreva (three dots/download
+  icon, Save — "goes to your gallery, usually in a Messenger folder") —
+  and agree by default Messenger saves nothing to the phone: hetmanrecovery
+  ("By default, all photos and pictures sent via Messenger are not saved
+  to the smartphone's memory. They are just shown in the application"),
+  mundobytes ("these photos aren't stored in your Gallery or local storage
+  unless you choose to save them"), nerdtechy ("Messenger photos don't save
+  automatically unless you've enabled auto-save"). None takes the USB step.
+  A fourth search this run pinned the auto-save question: "Messenger
+  Android automatically save incoming photos gallery setting Photos & media
+  save photos" — the guides disagree, and the most detailed recent one
+  (androidexperto, Save on capture) says the switch covers only photos and
+  videos you capture inside Messenger, not photos other people sent you
+  ("Photo received from another person in a chat: No — requires manual
+  saving"); nerdtechy, umatechnology, and techbloat describe a Save Photos
+  / Save incoming photos to your Gallery toggle that saves received photos
+  automatically, and techsith says the incoming-media save exists only on
+  some Android builds. The toggle's name and presence vary by app version —
+  marked UNVERIFIED in the article, not promised either way.
+- Honest centre (verified from the code at base 280d5ea and the live sources
+  above, this run, Nov 24, 2026, not assumed): Messenger photos are not on
+  the phone until you save them. By default Messenger saves nothing to the
+  device — a photo you only viewed lives on Meta's servers, not in any
+  folder — so the backup starts inside the chat: long-press the photo and
+  tap Save photo, or open it and tap the three-dot menu or the download
+  icon, then Save. A saved photo lands in Internal storage/Pictures/
+  Messenger and shows in the gallery as a "Messenger" album; five
+  independent guides agree on that path (see phrasing 3). There is no
+  save-all button — foreva confirms Messenger offers no save-all for a
+  chat, every photo is saved one at a time from View media. Photos you only
+  viewed leave no usable file on the phone — the same class as the
+  view-once photos this site does not pretend to back up — and vanish-mode
+  photos are gone once the chat closes (itgeared: vanish-mode content is
+  end-to-end encrypted and not stored on the servers). Whether Messenger
+  auto-saves received photos is UNVERIFIED — the guides disagree (see the
+  fourth search above); the article gives the manual save as the route that
+  works on every version and marks the toggle unverified in the TL;DR, in
+  Method 1, in the dedicated section, in FAQ Q3, and in "What to avoid".
+  SnapDisk's default run covers the saved photos with no folder to pick —
+  proven, not assumed: it reads MediaStore images + videos with no folder
+  filter (PhotoQuery.kt:23-36), and a Messenger-saved photo shows in the
+  gallery as the "Messenger" album, and gallery apps read the media index,
+  so a photo the gallery shows is a photo the default run sees. The album's
+  existence in the gallery is the evidence the folder is indexed: if
+  Messenger placed a .nomedia file in Pictures/Messenger, the media scanner
+  would skip it and the album would not appear in the gallery at all; it
+  does appear, in every guide, so there is no such file. UNTESTED, marked
+  as such in the article: whether SnapDisk's From folder picker reaches the
+  Pictures/Messenger folder end to end on a real phone — the picker is the
+  system folder picker (MainActivity.kt:62, OpenDocumentTree) opening with
+  no folder pre-selected, no initial-folder hint anywhere in the code, no
+  Messenger path handling anywhere in the app (0 matches for "messenger" in
+  the source) — but the navigation chain is ordinary folders (Pictures,
+  Messenger), neither dot-prefixed, the folder sits at the top of internal
+  storage outside Android/data, so the scoped-storage wall that blocks the
+  Telegram folder does not apply here, and the folder walk recurses into
+  every subfolder it can list (PhotoQuery.kt:90-97, listTreeFiles/walkTree).
+  The honest Method 1 is the joined workflow: save the photos from the chat
+  first, check the album appeared, then run SnapDisk's default backup or
+  point the From picker at the Messenger folder. Contrast honestly with
+  Meta's Download your information export (Accounts Center → Your
+  information and permissions → Export your information, Export to device —
+  a zip archive, not plain photo files on a drive; unzip in the Files app
+  first; the download link expires after four days, the same Meta export
+  the Facebook article uses) and PC phone-transfer tools (Dr.Fone, FoneLab
+  — move chats between phones through a computer, a different job). SnapDisk
+  facts re-verified from the code at base 280d5ea: Pro $9.99 once
+  (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB free per-run cap
+  (ProPrefs.kt:43, 5L * 1024 * 1024 * 1024), oldest-first MediaStore
+  DATE_TAKEN (PhotoQuery.kt:47, :56-59, sort DATE_TAKEN ASC with
+  DATE_MODIFIED fallback), size verification after copy (BackupEngine.kt:107,
+  108), Pause/Stop in the notification (NotificationHelper.kt:128,138;
+  BackupService.kt:113,115), FAT32 files >=4 GiB skipped with their reason
+  (BackupService.kt:428-433), default From /sdcard/DCIM and To /disk/DCIM
+  (BackupPrefs.kt:50,53), no INTERNET permission (0 occurrences in the
+  manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms / play-services in the build; only Play Billing,
+  billing-ktx 7.1.1, libs.versions.toml:50), no all-files access (no
+  MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24 (Android 7.0). "SnapDisk
+  copies, it never deletes" present — the only .delete() calls in the code
+  are on SnapDisk's own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). The article carries no install count for
+  SnapDisk (none exists) and no VaultDrive install figure. The 2
+  "installs/downloads/rating/stars" regex matches in the article are benign
+  ("installation" ×2, "installed", "install unknown apps", "download icon",
+  "Download your information" — no counts claimed). The 1 "Google Play"
+  mention is the factual "it is not on Google Play yet", same as WL-233/
+  WL-234/WL-235. Meta description was 164 chars on first write — caught by
+  the length check and shortened to 150 before staging (all three copies:
+  meta, og:description, JSON-LD description). Read time corrected 8 → 9
+  min from the word count (6,834 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/messenger-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md
+  before writing; "messenger-photos-to-usb" returns 0 matches in WORKLOG.md,
+  feed.xml, sitemap.xml, blog index, llms.txt, llms-full.txt, and
+  searches.md. The "messenger" matches in the base files are all from the
+  Telegram passages (org.telegram.messenger) or the Facebook article's single
+  line — "Messenger messages and comments are text in Facebook's database,
+  not files in a Facebook folder" — which is the only Messenger mention on
+  the site before this article; feed.xml holds 0 "messenger" matches. The
+  near matches are the other messaging-app articles
+  (whatsapp-photos-to-usb.html, whatsapp-status-photos-to-usb.html,
+  whatsapp-business-photos-to-usb.html, telegram-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html,
+  wechat-photos-videos-to-usb.html, viber-photos-to-usb.html) — all
+  different, already-live articles, untouched, and the Facebook one linked
+  from the new article as the series companion. A docs/ listing this run
+  confirms Messenger is the one major messaging app with no article — the
+  series is otherwise complete.

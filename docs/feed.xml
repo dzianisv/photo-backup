@@ -1329,5 +1329,12 @@
       <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
       <description>WhatsApp Business photos save to the gallery when Media visibility is on — in the WhatsApp Business Images folder. Then back them up to USB with SnapDisk.</description>
     </item>
+    <item>
+      <title>Back up Facebook Messenger photos to a USB drive — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/messenger-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/messenger-photos-to-usb.html</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Messenger photos are not on your phone until you save them — long-press a photo, tap Save, and it lands in Pictures/Messenger. Then back it up to USB.</description>
+    </item>
 </channel>
 </rss>
