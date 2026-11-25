@@ -5882,6 +5882,31 @@ demand is read off competitor install velocity instead (see
   size-verified after copy) but is not the only app that does,
   and the article says so. The Galaxy query above is the
   closest real gap found, per the WL-40 brief's fallback.
+- "back up Signal photos to a USB drive, no computer"
+  (briefed as Query 189, Nov 24, 2026): NOT a gap — KILLED
+  Nov 24, 2026 (WL-237). No dedicated Signal-photos-to-USB
+  how-to exists, but the joined workflow adds nothing our
+  site does not already rank on: (1) the 10:24 kill stands —
+  Signal media lives in private app storage, there is no
+  on-disk photo file, and the only export is Signal's own
+  encrypted local backup, which the sod-calculator.com guide
+  already documents moving to an external drive; (2) the
+  11:24 LINE/KakaoTalk kill class — save-one-by-one, then the
+  generic copy: a saved Signal photo is an ordinary
+  MediaStore-indexed gallery file, and the USB leg is the
+  generic copy our usb-photo-backup and
+  transfer-photos-to-usb-automatically articles already rank
+  top on; (3) the folder path is genuinely disputed across
+  sources (/Android/media/org.thoughtcrime.securesms/ "if
+  visible" vs /Signal/Media), so no verifiable path could be
+  stated. The Signal article was fully staged (branch
+  wl-236-signal, commit 75bf90f, never pushed) and killed on
+  supervisor readback; the branch was deleted, the payload
+  quarantined in hidden_files/wl-237/. Do not re-dispatch.
+  Process note: the 17:48 growth-sweep dispatch itself
+  violated the 10:24 kill ("do not re-dispatch it") — a gap
+  check must grep the supervisor runs logs for the candidate
+  name before dispatching, not just the repo files.
 
 ### 59. "back up Evolveo photos to USB drive without computer" — HOW-TO GAP
 - Volume: unknown (Play publishes no volume).
