@@ -21440,3 +21440,181 @@ unchanged (already "Back up photos & videos to a USB disk").
   from the new article as series companions. A docs/ listing this run
   confirms Kik is the one major messaging app with no article — the series
   is otherwise complete.
+
+### 192. "Back up Threema photos to a USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a Threema photo, saved from a chat into the gallery, onto a USB drive
+  plugged into the phone, no computer — with the auto-save switch stated
+  (Save media, off by default — the preference ships with defaultValue false
+  in Threema's own open-source code), the save folder named from Threema's
+  own code (Pictures/Threema for photos, Movies/Threema for videos on
+  Android 10 and newer), the encrypted Data Backup file untangled from the
+  photo backup, and the one-year auto-delete clock marked honestly. Our own
+  generic USB articles rank top and never mention Threema; Threema's own
+  backup manual covers only the encrypted Data Backup file and Threema Safe;
+  RESQ Toolbox is a PC program; the generic OTG guides never name Threema.
+  The gap stands ONLY on
+  that narrow angle: the Threema photo, saved from the chat into the gallery,
+  onto a USB drive, no computer, with the default run proven to cover
+  gallery-showing saved Threema photos, the auto-save condition on that
+  coverage stated plainly, and the folder pick marked untested.
+- Current top results (scored Nov 25, 2026, live web search):
+  Phrasing 1, "Threema photos to USB drive Android backup"
+  (dispatcher, this run): Threema's own support FAQ on backups covers only
+  the encrypted Data Backup file and Threema Safe — a data backup moves
+  chats, groups, contacts, and ID to a new or reset phone, and it restores
+  only on the same operating system — and after it come generic OTG copy
+  guides (YouTube, Dr.Fone) that never name Threema at all.
+  No Threema-specific-to-USB guide exists.
+  Phrasing 2, "back up Threema photos to a USB drive"
+  (dispatcher, this run): the same Threema FAQ, the same generic OTG guides,
+  and the RESQ Toolbox page — a free Windows app that backs up an Android
+  phone's internal storage, including the Threema backup, over a USB cable
+  to a PC, with USB debugging switched on. No phone-to-USB guide exists.
+  Phrasing 3, "Threema photos save to USB flash drive Android transfer without
+  computer" (lead, this run): our own generic
+  transfer-photos-to-usb-automatically article ranks first and never
+  mentions Threema; then generic OTG guides (Facebook reel, YouTube,
+  unanswered.io, Dr.Fone) that never name Threema. No Threema-to-USB guide
+  exists on any phrasing.
+- Honest centre (verified from the code at base 1de6c1b and the live sources
+  above, this run, Nov 25, 2026, not assumed): a Threema photo is not on
+  the phone until you save it. Threema keeps received photos in encrypted
+  private app storage — data on the device encrypted with AES-256, app files
+  neither world-readable nor world-writable (2019 independent audit) — and
+  nothing saves them by default: the auto-save switch, Settings, Media, Save
+  media, ships turned off, and Threema's own open-source code carries that
+  default in plain text (preference_media.xml, defaultValue "false"). The
+  switch is named "Automatically Save Media" in Threema's own First Steps
+  guide and "Auto-save to gallery" in its app-configuration docs ("whether
+  media can be auto-saved to the device's local gallery or camera roll"),
+  and the independent guides agree it is a switch you turn on, not a
+  behaviour you get. Messages are deleted from Threema's servers immediately
+  after delivery, so there is no server copy to fall back on. Turn the
+  switch on once and every photo and video you receive from then on saves
+  itself. The manual save takes a list of selected messages (SaveMediaAsyncTask
+  in Threema's own code), so long-press one photo, tap the others, and save
+  the selection together — better than Kik's one tap per photo. Threema
+  deletes messages and media older than a year by default (Settings, Storage
+  management — a tips guide states it plainly), so a photo left unsaved in an
+  old chat is on a clock. The exact folder the saved photo lands in is EXACT,
+  from Threema's own open-source code, not from a guide guessing at it:
+  FileServiceImpl.copyMediaFileIntoPublicDirectory writes images to
+  DIRECTORY_PICTURES plus "/Threema" and videos to DIRECTORY_MOVIES plus
+  "/Threema", with the consumer app's MEDIA_PATH set to "Threema"
+  (app/build.gradle.kts:99); audio goes to Music/Threema, PDFs to
+  Documents/Threema, other files to Downloads/Threema. On Android 9 and
+  older the save went to a folder at the top of internal storage instead:
+  /Threema/Threema Pictures for photos, /Threema/Threema Videos for videos
+  (the same code file carries both branches). The generic guides name no
+  path at all — only "the gallery" or "the phone folder" — so the article
+  gives the check order, not a single path: gallery first (Threema album),
+  then Pictures/Threema, then Movies/Threema for videos, then the legacy
+  Threema/Threema Pictures folder on an old phone; a photo sent as a file
+  lands in Downloads/Threema. The encrypted Data Backup file is a restore
+  file, not viewable photos: one password-protected encrypted file holding
+  chats, groups, contacts, ID, and media if "Include large media files" is
+  on (Threema's own FAQ recommends a second backup without large media,
+  because restoring one with large media can cause problems), restorable only
+  on the same operating system; Threema Safe holds only ID, contacts,
+  groups, and some settings — no chat histories and no media files at all
+  (app-configuration docs). The backup file itself can be copied to USB as a
+  file, but a drive holding only that file holds no photos you can open.
+  RESQ Toolbox, a free Windows app, backs up an Android phone's internal
+  storage including the Threema backup over a USB cable to a PC, needing USB
+  debugging switched on — named without endorsement, no USB leg from the
+  phone. Threema can block screenshots in a conversation when configured to
+  do so, which may block the screen-record fallback. Threema caps a single
+  file at 50 MB, and the sender can choose Original image quality instead of
+  the default Average compression. The article states the auto-save
+  condition on default-run coverage in the TL;DR, the wall section, Method 1
+  steps 1 and 2, the "Can SnapDisk read the Threema folder directly?"
+  section, FAQ Q1 and Q3, and "What to avoid".
+  SnapDisk's default run covers the saved Threema photos that show in the
+  gallery with no folder to pick — proven, not assumed: it reads MediaStore
+  images + videos with no folder filter (PhotoQuery.kt:23-36, the query call
+  passes no selection at all), oldest-first by date taken with a
+  date-modified fallback (PhotoQuery.kt:47, :56-59; BackupEngine.kt:95-100),
+  and a saved Threema photo that shows in the gallery as a "Threema" album
+  is an ordinary indexed file, and gallery apps read the media index, so a
+  photo the gallery shows is a photo the default run sees. The album's
+  existence in the gallery is the evidence the folder is indexed — and the
+  folder itself is proven by Threema's own code, which writes saved images
+  to Pictures/Threema and saved videos to Movies/Threema through the
+  MediaStore, so the files arrive already indexed. The default run copies
+  the WHOLE MediaStore library, not DCIM only — the query reads every
+  indexed image and video on the phone, whatever folder it sits in (WL-207
+  correction, stated correctly throughout the article) — and it reads both
+  the images table and the videos table, so it covers Pictures/Threema and
+  Movies/Threema together. The From picker route does NOT read the media
+  index — it walks the folder tree directly (PhotoQuery.kt:90-97,
+  listTreeFiles/walkTree) — and it walks one folder tree, so
+  Pictures/Threema gives the photos and Movies/Threema needs a second pick;
+  that split is Threema's own save code, which sends images and videos to
+  different top-level directories. UNTESTED, marked as such in the
+  article: whether SnapDisk's From folder picker reaches the Threema folder
+  end to end on a real phone — the picker is the system folder picker
+  (MainActivity.kt:62, OpenDocumentTree) opening with no folder
+  pre-selected, no initial-folder hint anywhere in the code, no Threema path
+  handling anywhere in the app (0 matches for "threema" in the source) — and
+  the exact folder depends on the Android version — but the navigation
+  chain is ordinary folders (the gallery album, Pictures/Threema,
+  Movies/Threema, or the legacy Threema/Threema Pictures), none
+  dot-prefixed, the folder sits in shared storage outside Android/data, so
+  the scoped-storage wall that blocks the Telegram folder does not apply
+  here, and the folder walk recurses into every subfolder it can list
+  (PhotoQuery.kt:90-97, listTreeFiles/walkTree). The
+  honest Method 1 is the joined workflow: turn on auto-save, save the
+  backlog by hand, check the album appeared, then run SnapDisk's default
+  backup or point the From picker at the folder. Contrast honestly with the
+  bulk routes, named without endorsing: Threema's own Data Backup (one
+  encrypted file, same OS only) and RESQ Toolbox (PC program, USB debugging
+  required) — both put the Threema data on a computer or in a locked file,
+  not plain photos on a drive, and the USB leg is still SnapDisk's job. Only
+  save photos you have permission to keep; the article makes no claim about
+  recovering photos from a deleted chat, because Threema keeps no server copy
+  to recover from, and its storage management may already have deleted them.
+  SnapDisk facts re-verified from the code at base 1de6c1b: Pro $9.99 once
+  (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB free per-run cap
+  (ProPrefs.kt:43, 5L * 1024 * 1024 * 1024), oldest-first MediaStore
+  DATE_TAKEN (PhotoQuery.kt:47, :56-59, sort DATE_TAKEN ASC with
+  DATE_MODIFIED fallback), size verification after copy
+  (BackupEngine.kt:107, 108), Pause/Stop in the notification
+  (NotificationHelper.kt:126, :128, :136, :138; BackupService.kt:113,115),
+  FAT32 files >=4 GiB skipped with their reason (BackupService.kt:428-433),
+  default From /sdcard/DCIM and To /disk/DCIM (BackupPrefs.kt:50,53), no
+  INTERNET permission (0 occurrences in the manifest), no Google Play
+  Services dependency (0 matches for com.google.android.gms / play-services
+  in the build; only Play Billing, billing-ktx 7.1.1, libs.versions.toml:50),
+  no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24
+  (Android 7.0). "SnapDisk copies, it never deletes" present — the only
+  .delete() calls in the code are on SnapDisk's own half-finished .part
+  files (BackupEngine.kt:176, :207; BackupService.kt:385, :477). Screen-off
+  continuation under battery saver is UNVERIFIED — the repo holds no wake
+  lock and no battery-saver handling — stated in the TL;DR and in "What to
+  avoid" (WL-182 form). The article carries no install count for SnapDisk
+  (none exists) and no VaultDrive install figure. The 13
+  "installs/downloads/rating/stars" regex matches in the article are benign
+  (5 × "Downloads/Threema" folder names, 1 × "Downloads" as a folder, 1 ×
+  "downloads" in the RESQ Toolbox description, 5 × "operating system" in body
+  text, 1 × "operatingSystem" in the JSON-LD — no counts claimed). The 1 "Google Play" mention is the factual
+  "it is not on Google Play yet", same as WL-233/WL-234/WL-235/WL-236/WL-238/WL-239.
+  Read time 13 min from the word count (9,464 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/threema-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md
+  before writing; "threema" returns 0 matches in WORKLOG.md, feed.xml,
+  sitemap.xml, blog index, llms.txt, llms-full.txt, and searches.md, and no
+  docs/threema-photos-to-usb.html exists. There are no near matches from
+  other articles — no earlier article mentions Threema at all — and the near
+  matches are the other messaging-app articles
+  (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html,
+  messenger-photos-to-usb.html, viber-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html,
+  kik-photos-to-usb.html) — all different, already-live articles,
+  untouched, and the Kik, Messenger, WhatsApp, Telegram, and Viber ones
+  linked from the new article as series companions. A docs/ listing this run
+  confirms Threema is the last major messaging app with no article — the
+  series is otherwise complete.
