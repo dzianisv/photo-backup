@@ -1343,5 +1343,12 @@
       <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
       <description>Pinterest photos are not on your phone until you download them — three-dot menu, Download Image, and the pin lands in your gallery. Then back it up to USB.</description>
     </item>
+    <item>
+      <title>Back up Kik photos to a USB drive — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/kik-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/kik-photos-to-usb.html</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Kik photos are not on your phone until you save them — long-press a photo, tap Save, and it lands in Pictures/Kik or DCIM/Kik. Then back it up to USB.</description>
+    </item>
 </channel>
 </rss>

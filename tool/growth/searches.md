@@ -21284,3 +21284,159 @@ unchanged (already "Back up photos & videos to a USB disk").
   new article as series companions. A docs/ listing this run confirms
   Pinterest is the one major social app with no article — the series is
   otherwise complete.
+
+### 191. "Back up Kik photos to a USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a Kik photo, saved from a chat into the gallery, onto a USB drive
+  plugged into the phone, no computer — with the no-auto-save wall stated
+  (Kik never saves received photos; a viewed-only photo lives in the chat,
+  not in any folder), the save step named as the step that creates the file,
+  and the save-folder disagreement marked honestly, including the .nomedia
+  wrinkle. Our own generic USB articles rank top and never mention Kik; the
+  save guides stop at the gallery; the computer-backup tools name Kik as a
+  data type in a list. The gap stands ONLY on
+  that narrow angle: the Kik photo, saved from the chat into the gallery,
+  onto a USB drive, no computer, with the default run proven to cover
+  gallery-showing saved Kik photos, the .nomedia condition on that coverage
+  stated plainly, and the folder pick marked untested.
+- Current top results (scored Nov 25, 2026, live web search):
+  Phrasing 1, "back up Kik photos to USB drive from Android phone"
+  (dispatcher, this run): Dr.Fone's computer-backup guide names Kik only as
+  a data type in a list of things its PC software can back up, MobileTrans's
+  computer backup names Kik in a list the same way, our own generic
+  backup-photos-to-usb article ranks and never mentions Kik, and the rest is
+  generic OTG copy guides (YouTube, groovypost) that never name Kik at all.
+  No Kik-specific-to-USB guide exists.
+  Phrasing 2, "save Kik photos to USB flash drive Android OTG"
+  (dispatcher, this run): only generic OTG guides (YouTube ×2, Dr.Fone,
+  askfilo, eyefi). No Kik-specific guide at all.
+  Phrasing 3, "Kik photos save to USB flash drive Android transfer without
+  computer" (lead, this run): our own generic
+  transfer-photos-to-usb-automatically article ranks first and never
+  mentions Kik; then generic OTG guides (YouTube, Facebook reel, mefmobile,
+  Dr.Fone) that never name Kik. No Kik-to-USB guide exists on any phrasing.
+- Honest centre (verified from the code at base d15e385 and the live sources
+  above, this run, Nov 25, 2026, not assumed): a Kik photo is not on
+  the phone until you save it. Kik does not automatically save photos or
+  videos you receive — the dedicated 2026 save guide states it plainly
+  ("You must manually tap on the image or video and then select the 'Save'
+  or download icon for it to be saved to your device"), and Wondershare's
+  guides agree the photos and videos you get in a chat "will stay there,
+  and you can't get open outside the application" unless you save them; a
+  photo you only viewed "remains on Kik's servers and is not on your
+  phone's local storage". The save is one photo at a time — open the photo
+  full-screen, long-press it, tap Save (MobileTrans: "Press and hold the
+  Kik photo you want to save. A pop up will appear on the screen, after
+  which you have to click Save"), or tap the download arrow in the
+  top-right corner — and there is no save-all button for a chat. Kik has no
+  native cloud chat backup (2026 guide, contrasting Kik with WhatsApp), so
+  a photo you never saved is lost if you log out, delete the app, or sign
+  in on another device (MobileTrans lists all three, plus the app data
+  folder getting full, deactivation, and full internal storage); a photo
+  already saved to the gallery is an ordinary file and survives. The exact
+  folder the saved photo lands in is DISPUTED between sources, and the
+  article names the disagreement honestly rather than picking one path:
+  the 2026 guide (eathealthy365, published 2026-02-28) says the primary
+  location is Internal Storage > Pictures > Kik and the alternative is
+  Internal Storage > DCIM > Kik; MobileTrans says "you can find your
+  images in the DCIM folder or Gallery" and the downloaded picture can be
+  viewed "in the gallery section of your phone"; Recoverit's FAQ says the
+  pictures "are stored in the DCIM folder" and can be found "in your
+  device's gallery"; a recovery walkthrough says saved photos appear in the
+  gallery "under an album likely called Kik" and can also be reached
+  through the file manager or the DCIM folder. The article gives the check
+  order — gallery first (Kik album), then Pictures/Kik, then DCIM/Kik,
+  then DCIM — not a single path. The folder name varies by device, Android
+  version, and Kik version.
+  The Kik-specific wrinkle is a stray .nomedia file: the 2026 guide says a
+  ".nomedia" file in the Kik folder tells Android to ignore all media in
+  that folder, so the gallery hides the saved photos from view even though
+  the files are on the disk — and therefore the media index, and SnapDisk's
+  default run, cannot see them either. The guide does not claim Kik puts
+  the file there itself ("If one somehow ends up in your Kik folder"), and
+  the article keeps that care. The fix is the guide's own: show hidden
+  files in the file manager, delete the .nomedia file, restart the phone to
+  force a rescan. The article states this condition on default-run coverage
+  in the TL;DR, the folder section, Method 1 step 2, the "Can SnapDisk read
+  the Kik folder directly?" section, FAQ Q1 and Q3, and "What to avoid".
+  SnapDisk's default run covers the saved Kik photos that show in the
+  gallery with no folder to pick — proven, not assumed: it reads MediaStore
+  images + videos with no folder filter (PhotoQuery.kt:23-36, the query call
+  passes no selection at all), oldest-first by date taken with a
+  date-modified fallback (PhotoQuery.kt:47, :56-59; BackupEngine.kt:95-100),
+  and a saved Kik photo that shows in the gallery as a "Kik" album is an
+  ordinary indexed file, and gallery apps read the media index, so a photo
+  the gallery shows is a photo the default run sees. The album's existence
+  in the gallery is the evidence the folder is indexed: if a .nomedia file
+  sat in the folder, the media scanner would skip it and the album would
+  not appear in the gallery at all. The default run copies the WHOLE
+  MediaStore library, not DCIM only — the query reads every indexed image
+  and video on the phone, whatever folder it sits in (WL-207 correction,
+  stated correctly throughout the article). The From picker route does NOT
+  read the media index — it walks the folder tree directly
+  (PhotoQuery.kt:90-97, listTreeFiles/walkTree) — so a .nomedia file does
+  not hide the photos from it, which makes the picker the fallback when the
+  gallery will not show the Kik album; that advantage is code-grounded but
+  the end-to-end pick is still untested. UNTESTED, marked as such in the
+  article: whether SnapDisk's From folder picker reaches the Kik folder end
+  to end on a real phone — the picker is the system folder picker
+  (MainActivity.kt:62, OpenDocumentTree) opening with no folder
+  pre-selected, no initial-folder hint anywhere in the code, no Kik path
+  handling anywhere in the app (0 matches for "kik" in the source) — and
+  the exact folder name is disputed between sources — but the navigation
+  chain is ordinary folders (the gallery album, Pictures/Kik, DCIM/Kik, or
+  DCIM), none dot-prefixed, the folder sits at the top of internal storage
+  outside Android/data, so the scoped-storage wall that blocks the Telegram
+  folder does not apply here, and the folder walk recurses into every
+  subfolder it can list (PhotoQuery.kt:90-97, listTreeFiles/walkTree). The
+  honest Method 1 is the joined workflow: save the photos from the chat
+  first, check the album appeared, then run SnapDisk's default backup or
+  point the From picker at the folder. Contrast honestly with the bulk
+  route, named without endorsing: MobileTrans (Wondershare) backs up Kik
+  data, including messages, photos, and videos, to a Windows or Mac
+  computer, and Dr.Fone's computer-backup guide names Kik as a data type in
+  a list — both put the Kik data on a computer, not on a drive, and the USB
+  leg is still SnapDisk's job. Only save photos you have permission to
+  keep; the article makes no claim about recovering photos from a deleted
+  chat, because Kik keeps no server copy to recover from. SnapDisk facts
+  re-verified from the code at base d15e385: Pro $9.99 once (ProPrefs.kt:40,
+  PRO_PRICE_LABEL "$9.99"), 5 GB free per-run cap (ProPrefs.kt:43, 5L *
+  1024 * 1024 * 1024), oldest-first MediaStore DATE_TAKEN (PhotoQuery.kt:47,
+  :56-59, sort DATE_TAKEN ASC with DATE_MODIFIED fallback), size
+  verification after copy (BackupEngine.kt:107, 108), Pause/Stop in the
+  notification (NotificationHelper.kt:127,128, :137; BackupService.kt:113,115),
+  FAT32 files >=4 GiB skipped with their reason (BackupService.kt:428-433),
+  default From /sdcard/DCIM and To /disk/DCIM (BackupPrefs.kt:50,53), no
+  INTERNET permission (0 occurrences in the manifest), no Google Play
+  Services dependency (0 matches for com.google.android.gms / play-services
+  in the build; only Play Billing, billing-ktx 7.1.1, libs.versions.toml:50),
+  no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24
+  (Android 7.0). "SnapDisk copies, it never deletes" present — the only
+  .delete() calls in the code are on SnapDisk's own half-finished .part
+  files (BackupEngine.kt:176, :207; BackupService.kt:385, :477). Screen-off
+  continuation under battery saver is UNVERIFIED — the repo holds no wake
+  lock and no battery-saver handling — stated in the TL;DR and in "What to
+  avoid" (WL-182 form). The article carries no install count for SnapDisk
+  (none exists) and no VaultDrive install figure. The 1
+  "installs/downloads/rating/stars" regex match in the article is benign
+  (1 × "operatingSystem" in the JSON-LD — no counts claimed). The 1 "Google
+  Play" mention is the factual "it is not on Google Play yet", same as
+  WL-233/WL-234/WL-235/WL-236/WL-238. Read time 12 min from the word
+  count (8,647 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/kik-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md
+  before writing; "kik" returns 0 matches in WORKLOG.md, feed.xml,
+  sitemap.xml, blog index, llms.txt, llms-full.txt, and searches.md, and no
+  docs/kik-photos-to-usb.html exists. There are no near matches from other
+  articles — no earlier article mentions Kik at all — and the near matches
+  are the other messaging-app articles (whatsapp-photos-to-usb.html,
+  telegram-photos-to-usb.html, messenger-photos-to-usb.html,
+  viber-photos-to-usb.html, instagram-photos-to-usb.html,
+  facebook-photos-to-usb.html, snapchat-photos-to-usb.html,
+  tiktok-photos-videos-to-usb.html) — all different, already-live articles,
+  untouched, and the Messenger, WhatsApp, Telegram, and Viber ones linked
+  from the new article as series companions. A docs/ listing this run
+  confirms Kik is the one major messaging app with no article — the series
+  is otherwise complete.
