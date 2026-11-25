@@ -1364,5 +1364,12 @@
       <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
       <description>A GIF is an ordinary .gif file — the animation lives inside it. The trap is sharing first: WhatsApp turns GIFs into MP4, so copy the .gif, never a re-share.</description>
     </item>
+    <item>
+      <title>Save WebP photos to a USB drive from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/webp-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/webp-photos-to-usb.html</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A WebP is an ordinary .webp file — smaller than a JPEG, transparent like a PNG. The trap is stickers: WhatsApp keeps them in a folder the backup never sees.</description>
+    </item>
 </channel>
 </rss>
