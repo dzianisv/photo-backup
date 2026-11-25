@@ -21138,3 +21138,149 @@ unchanged (already "Back up photos & videos to a USB disk").
   from the new article as the series companion. A docs/ listing this run
   confirms Messenger is the one major messaging app with no article — the
   series is otherwise complete.
+
+### 190. "Save Pinterest photos to a USB drive, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a Pinterest photo, downloaded from a pin into the gallery, onto a USB drive
+  plugged into the phone, no computer — with the Save-vs-Download distinction
+  stated (Save pins to a board inside Pinterest; Download image creates the
+  local file), the download step named as the step that creates the file, and
+  the save-folder disagreement marked honestly. Our own generic USB articles
+  rank top and never mention Pinterest; the save guides stop at the gallery;
+  the bulk-board guides end on a PC or in the cloud. The gap stands ONLY on
+  that narrow angle: the Pinterest photo, downloaded from the pin into the
+  gallery, onto a USB drive, no computer, with the default run proven to
+  cover gallery-downloaded Pinterest photos and the folder pick marked
+  untested.
+- Current top results (scored Nov 25, 2026, live web search):
+  Phrasing 1, "save Pinterest photos to USB flash drive from Android phone"
+  (dispatcher, this run): MakeUseOf's dedicated save guide is the top
+  result — three-dot menu, Download Image, and the file saves under "Pins"
+  in the phone's gallery — a real save guide, with the folder named, and it
+  stops there. Everything else is generic OTG copy guides that never mention
+  Pinterest at all: plug the drive in, copy the folders in the file manager.
+  No Pinterest-specific-to-USB guide exists.
+  Phrasing 2, "Pinterest board photos download to USB drive Android backup
+  app" (dispatcher, this run): MultCloud's bulk-board guides offer the board
+  download three ways — save to the phone one by one, through the MultCloud
+  cloud service, or on a PC — and none of the three takes the USB leg. The
+  downloader apps PSaver and Downloader for Pinterest save pins to the
+  gallery, and stop there. The Chrome extension PinDownCloud runs on a PC
+  and saves to the cloud. No guide joins Pinterest → USB.
+  Phrasing 3, "download Pinterest pins directly to USB flash drive Android
+  OTG backup" (lead, this run): Pinterest's own help page says the image is
+  saved in the Gallery folder on Android and that it is not possible to
+  download video Pins, including your own video Pins; MakeUseOf says the
+  download saves under "Pins" in the gallery; HowToGeek says the download
+  covers images only — no videos, Stories, or carousels; the PinSave Chrome
+  extension downloads a whole board on a PC with no USB leg; the generic OTG
+  copy guides (Windows Noticias, EyeFi forum) never name Pinterest. No
+  Pinterest-to-USB guide exists on any phrasing.
+- Honest centre (verified from the code at base a499442 and the live sources
+  above, this run, Nov 25, 2026, not assumed): a Pinterest photo is not on
+  the phone until you download it. Pinterest's Save button stores a Pin on
+  one of your boards, so you can find it inside Pinterest later — it does
+  not put a file on the phone (itechguides: Save "stores a Pin on a
+  Pinterest board", while "Download image creates a local image file on your
+  computer or mobile device"; FetchPins: "Saving a pin to a board is not the
+  same thing. Pinterest's Save button keeps the pin inside Pinterest.
+  Downloading puts the image file on your phone"). The download is one pin
+  at a time — open the pin, tap the three-dot menu, tap Download image —
+  and there is no save-all button for a board. Videos, Stories, and Carousel
+  Pins cannot be downloaded through the built-in feature: Pinterest's help
+  says it is not possible to download video Pins, including your own video
+  Pins, and HowToGeek and MultCloud agree the built-in download covers
+  image Pins only. Not every image Pin can be downloaded either — Pinterest
+  says you can download some Pins, and the Download image option is missing
+  on some of them; Pinterest's own advice then is to try downloading from
+  the home feed instead, or from a desktop or mobile browser instead of the
+  app. The downloaded file is the pin as Pinterest serves it, not
+  necessarily the original upload — Pinterest offers no higher-quality or
+  original-resolution download option. The exact folder the downloaded pin
+  lands in is DISPUTED between sources, and the article names the
+  disagreement honestly rather than picking one path: MakeUseOf says the
+  image saves under "Pins" in the phone's gallery; Pinterest's own help says
+  the Gallery folder; itechguides says it usually appears in Gallery or
+  Files and to check Gallery, Google Photos, Files, Downloads, and any
+  Pinterest-specific album; FetchPins says Pinterest app downloads go to the
+  gallery and browser downloads go to the Downloads folder, and in Google
+  Photos to look under Collections, then On this device. The article gives
+  the check order — gallery first (Pins album), then Downloads, DCIM, and
+  Pictures — not a single path. The folder name varies by device, Android
+  version, Pinterest version, and gallery app.
+  SnapDisk's default run covers the downloaded pins with no folder to pick —
+  proven, not assumed: it reads MediaStore images + videos with no folder
+  filter (PhotoQuery.kt:23-36, the query call passes no selection at all),
+  oldest-first by date taken with a date-modified fallback (PhotoQuery.kt:47,
+  :56-59; BackupEngine.kt:95-100), and a downloaded pin that shows in the
+  gallery as a "Pins" album is an ordinary indexed file, and gallery apps
+  read the media index, so a photo the gallery shows is a photo the default
+  run sees. The album's existence in the gallery is the evidence the folder
+  is indexed: if Pinterest placed a .nomedia file in the folder, the media
+  scanner would skip it and the album would not appear in the gallery at
+  all; it does appear, in every guide, so there is no such file. The default
+  run copies the WHOLE MediaStore library, not DCIM only — the query reads
+  every indexed image and video on the phone, whatever folder it sits in
+  (WL-207 correction, stated correctly throughout the article). UNTESTED,
+  marked as such in the article: whether SnapDisk's From folder picker
+  reaches the folder that holds the downloaded pins end to end on a real
+  phone — the picker is the system folder picker (MainActivity.kt:62,
+  OpenDocumentTree) opening with no folder pre-selected, no initial-folder
+  hint anywhere in the code, no Pinterest path handling anywhere in the app
+  (0 matches for "pinterest" in the source) — and the exact folder name is
+  disputed between sources — but the navigation chain is ordinary folders
+  (the gallery album, Downloads, DCIM, or Pictures), none dot-prefixed, the
+  folder sits at the top of internal storage outside Android/data, so the
+  scoped-storage wall that blocks the Telegram folder does not apply here,
+  and the folder walk recurses into every subfolder it can list
+  (PhotoQuery.kt:90-97, listTreeFiles/walkTree). The honest Method 1 is the
+  joined workflow: download the pins from the app first, check the album
+  appeared, then run SnapDisk's default backup or point the From picker at
+  the folder. Contrast honestly with the bulk routes, named without
+  endorsing: PC Chrome extensions (PinSave, Image Downloader) download a
+  whole board to a computer's Downloads folder, MultCloud through its cloud
+  service, downloader apps (PSaver, Downloader for Pinterest) save pins to
+  the gallery — none of them takes the USB leg, so the USB copy is still
+  SnapDisk's job. Only download content you have permission to keep; the
+  article makes no watermark-removal claim, and SnapDisk copies the file
+  exactly as Pinterest saved it. SnapDisk facts re-verified from the code at
+  base a499442: Pro $9.99 once (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"),
+  5 GB free per-run cap (ProPrefs.kt:43, 5L * 1024 * 1024 * 1024),
+  oldest-first MediaStore DATE_TAKEN (PhotoQuery.kt:47, :56-59, sort
+  DATE_TAKEN ASC with DATE_MODIFIED fallback), size verification after copy
+  (BackupEngine.kt:107, 108), Pause/Stop in the notification
+  (NotificationHelper.kt:127,128, :137; BackupService.kt:113,115), FAT32
+  files >=4 GiB skipped with their reason (BackupService.kt:428-433),
+  default From /sdcard/DCIM and To /disk/DCIM (BackupPrefs.kt:50,53), no
+  INTERNET permission (0 occurrences in the manifest), no Google Play
+  Services dependency (0 matches for com.google.android.gms / play-services
+  in the build; only Play Billing, billing-ktx 7.1.1, libs.versions.toml:50),
+  no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24
+  (Android 7.0). "SnapDisk copies, it never deletes" present — the only
+  .delete() calls in the code are on SnapDisk's own half-finished .part
+  files (BackupEngine.kt:176, :207; BackupService.kt:385, :477). Screen-off
+  continuation under battery saver is UNVERIFIED — the repo holds no wake
+  lock and no battery-saver handling — stated in the TL;DR and in "What to
+  avoid" (WL-182 form). The article carries no install count for SnapDisk
+  (none exists) and no VaultDrive install figure. The 23
+  "installs/downloads/rating/stars" regex matches in the article are benign
+  (22 × "Downloads" folder, 1 × "operatingSystem" — no counts claimed). The 1 "Google
+  Play" mention is the factual "it is not on Google Play yet", same as
+  WL-233/WL-234/WL-235/WL-236. Read time corrected 9 → 10 min from the word
+  count (7,540 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/pinterest-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, and searches.md
+  before writing; "pinterest-photos-to-usb" returns 0 matches in WORKLOG.md, feed.xml,
+  sitemap.xml, blog index, llms.txt, llms-full.txt, and searches.md. There
+  are no near matches from other articles — no earlier article mentions
+  Pinterest at all — and the near matches are the other social-app articles
+  (instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  tiktok-photos-videos-to-usb.html, snapchat-photos-to-usb.html,
+  whatsapp-photos-to-usb.html, telegram-photos-to-usb.html,
+  messenger-photos-to-usb.html) — all different, already-live articles,
+  untouched, and the Facebook, Instagram, and Messenger ones linked from the
+  new article as series companions. A docs/ listing this run confirms
+  Pinterest is the one major social app with no article — the series is
+  otherwise complete.
