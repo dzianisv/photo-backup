@@ -21791,3 +21791,189 @@ unchanged (already "Back up photos & videos to a USB disk").
   linked from the new article as series companions. A docs/ listing this run
   confirms GIFs are the last format in our series with no article — RAW,
   HEIC, burst, slow-motion, and timelapse all have theirs already.
+
+### 194. "Save WebP photos to a USB drive from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a .webp file, saved on an Android phone, onto a USB drive plugged into the
+  phone, no computer — with the sticker exception stated (WhatsApp stickers
+  are .webp files in a .nomedia folder the default run never sees), the
+  .nomedia trap marked, the transparency/animation check given (open one WebP
+  back from the drive and watch it move, if animated, with no white box
+  behind it, if transparent), and the file hunt given before the copy
+  (Downloads, Pictures, the WhatsApp Stickers folder). Our own
+  encrypted-photos article ranks top and never mentions WebP; the generic
+  OTG guides never name WebP at all. The gap stands ONLY on
+  that narrow angle: the .webp file, saved on the phone, onto a USB drive, no
+  computer, with the default run proven to cover saved .webp files, the
+  sticker condition on that coverage stated plainly, and the folder pick
+  marked untested.
+- Current top results (scored Nov 25, 2026, live web search):
+  Phrasing 1, "save WebP photos to USB drive from Android"
+  (lead, this run): our own encrypted-photos article ranks first and never
+  mentions WebP; then generic OTG copy guides (Pixoneye, EyeFi forum, our
+  own transfer-photos article, YouTube ch1evyu5PPM) — plug the drive in,
+  copy the folders in the file manager, no WebP folder, no .webp extension,
+  no sticker folder, no .nomedia note. No WebP-specific guide exists.
+  Phrasing 2, "copy WebP images Android phone to USB flash drive OTG"
+  (lead, this run): generic OTG copy guides only — thedroidguy, Facebook
+  reel, YouTube ch1evyu5PPM, iReaShare, EyeFi forum — plug the drive in,
+  copy the folders in the file manager, no WebP folder, no .webp extension,
+  no sticker folder. No WebP-specific guide exists on either phrasing.
+- Honest centre (verified from the code at base 0550b2a and the live sources
+  above, this run, Nov 25, 2026, not assumed): a WebP is an ordinary .webp
+  file, and everything worth keeping lives inside the file itself — the
+  smaller size is the compression, the transparency is an alpha channel in
+  the file, and the animation, for an animated WebP, is a sequence of frames,
+  exactly like a GIF. Copy the .webp and all of it comes with it,
+  byte-for-byte. The trap is getting the file. Most images saved from the web
+  are WebPs already, because the sites serve them that way — a long-press
+  save in Chrome keeps the site's format — and they land in Downloads as
+  .webp files with no fanfare; Chrome on Android saves every download to the
+  shared Downloads folder by default, Internal Storage/Download, and the
+  guides agree on the path across manufacturers. WhatsApp keeps every sticker
+  as a .webp file in its Stickers folder — Internal storage/Android/media/
+  com.whatsapp/WhatsApp/Media/WhatsApp Stickers (WhatsApp Business uses
+  com.whatsapp.w4b instead) — the guides that walked it report finding a
+  large number of WebP files there, the personal collection and every sticker
+  ever received; a still sticker is no more than 1024 pixels on its long
+  side and under 400 KB, an animated sticker a 512x512 WebP. That folder
+  carries a .nomedia marker, which tells Android's media scanner not to
+  index it — the sticker guides state it directly, and WhatsApp places
+  .nomedia files in its Media directory and subfolders for the same reason —
+  so the stickers never show in the gallery, and the default run, which reads
+  the same index the gallery reads, copies zero stickers while copying every
+  photo in the library. Telegram's static stickers are WebP too, but they
+  live in Telegram's app-private cache under Android/data, and the guides
+  state the access plainly, that root may be needed on Android 11 and later
+  to reach them — so there is no Telegram sticker folder to back up; the
+  animated Telegram stickers are .webm video, not WebP. A sticker picked from
+  the keyboard's search is served from a library and never touches your
+  storage. Renaming a file does not convert it — a file called photo.webp
+  holds WebP data, and renaming it to photo.png leaves WebP data inside a
+  file called .png. The check is the file extension, not the app that showed
+  it to you: a file that ends in .webp is a WebP, and a file that ends in
+  .jpg is a JPEG, even if it looks identical on screen. The check after the
+  copy is opening one WebP back from the drive and looking at it — an
+  animated WebP should move for a full loop, and a transparent sticker
+  should show no white box behind it — because a WebP that lost its
+  animation or its transparency still looks like a photo in every other
+  check.
+  SnapDisk's default run covers the saved .webp files with no folder to pick
+  — proven, not assumed: it reads MediaStore images + videos with no folder
+  filter (PhotoQuery.kt:23-36, the query call passes no selection at all),
+  oldest-first by date taken with a date-modified fallback (PhotoQuery.kt:56-59; BackupEngine.kt:95-100), .webp is a recognised image extension
+  (PhotoQuery.kt:130-133, line 131), and Android indexes image/webp files in
+  the MediaStore Images table exactly the way it indexes JPEGs — Android's
+  own developer documentation states each collection is organised by the
+  primary MIME type of the content and image/* content is indexed under
+  Images, and a WebP's MIME type is image/webp. The .webp entry in the
+  extension list gates only the From-picker route (PhotoQuery.kt:124-127,
+  isMediaName) — the MediaStore route has no extension filter at all, so any
+  image the index holds is copied. The default run copies the WHOLE
+  MediaStore library, not DCIM only — the query reads every indexed image
+  and video on the phone, whatever folder it sits in (WL-207 correction,
+  stated correctly throughout the article) — and it reads both the images
+  table and the videos table, so it covers Downloads' .webp files and
+  Pictures' .webp files together. It does NOT cover the WhatsApp stickers:
+  the .nomedia marker keeps the Stickers folder out of the index, so the
+  default run copies zero stickers — the condition is stated in the TL;DR,
+  the wall section, Method 1, and the code section. The From picker route
+  does NOT read the media index — it walks the folder tree directly
+  (PhotoQuery.kt:90-97, listTreeFiles/walkTree) — so the .nomedia marker
+  means nothing to it, and pointing it at the Stickers folder reaches the
+  stickers; it walks one folder tree, so Downloads gives the indexed WebPs
+  and the Stickers folder needs a second pick for the stickers. UNTESTED,
+  marked as such in the article: whether SnapDisk's From folder picker
+  reaches the Downloads, Pictures, or WhatsApp Stickers folders end to end
+  on a real phone — the picker is the system folder picker
+  (MainActivity.kt:62, 71, OpenDocumentTree) opening with no folder
+  pre-selected, no initial-folder hint anywhere in the code, no WebP path
+  handling anywhere in the app (the only "webp" in the source is the .webp
+  extension in the recognised-extensions list) — but the navigation chain is
+  ordinary folders (Downloads, Pictures, the WhatsApp Stickers folder),
+  none dot-prefixed, the folders sit in shared storage outside Android/data,
+  so the scoped-storage wall that blocks the Telegram folder does not apply
+  here, the sticker guides report the system's folder picker does show the
+  WebP files in the Stickers folder, and the folder walk recurses into every
+  subfolder it can list (PhotoQuery.kt:90-97, listTreeFiles/walkTree). The
+  honest Method 1 is the joined workflow: hunt the .webp files first in
+  check order, make the file before backing it up if the hunt comes up
+  empty, never re-share a WebP to get it onto the drive, check the files are
+  in Downloads or the stickers are in their folder, then run SnapDisk's
+  default backup for the indexed WebPs and point the From picker at the
+  Stickers folder for the stickers. Contrast honestly with the chat apps'
+  conversions, named without endorsing: WhatsApp (stickers are .webp files
+  in a public folder, hidden from the index by .nomedia), Telegram (stickers
+  are WebP in app-private cache, animated ones are .webm, no phone-side
+  route), the keyboard search (served from a library, never a file) — all
+  three put the WebP somewhere other than an indexed .webp file, and the USB
+  leg is still SnapDisk's job. Only save WebPs you have permission to keep;
+  the article makes no claim about recovering WebPs from a deleted chat,
+  because WhatsApp keeps no second copy of a sticker outside its Stickers
+  folder, and a WebP served from a library was never yours to recover.
+  SnapDisk facts re-verified from the code at base 0550b2a: Pro $9.99 once
+  (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB free per-run cap
+  (ProPrefs.kt:43, 5L * 1024 * 1024 * 1024), oldest-first MediaStore
+  DATE_TAKEN (PhotoQuery.kt:56-59, sort DATE_TAKEN ASC with DATE_MODIFIED
+  fallback; BackupEngine.kt:95-100), size verification after copy
+  (BackupEngine.kt:103-108, shouldSkip; :145, part size check), Pause/Stop
+  in the notification (NotificationHelper.kt:126-138; BackupService.kt:113,
+  115), FAT32 files >=4 GiB skipped with their reason
+  (BackupService.kt:428-433), default From /sdcard/DCIM and To /disk/DCIM
+  (BackupPrefs.kt:50,53), no INTERNET permission (0 occurrences in the
+  manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms / play-services in the build; only Play Billing,
+  billing-ktx 7.1.1, gradle/libs.versions.toml:21,50), no all-files access
+  (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24 (app/build.gradle.kts:12,
+  Android 7.0). "SnapDisk copies, it never deletes" present — the only
+  .delete() calls in the code are on SnapDisk's own half-finished .part
+  files (BackupEngine.kt:176, :207; BackupService.kt:385, :477). Screen-off
+  continuation under battery saver is UNVERIFIED — the repo holds no wake
+  lock and no battery-saver handling (grep across all fetched main-source
+  .kt files: none) — stated in the TL;DR and in "What to avoid" (WL-182
+  form). VaultDrive, named fairly from its live pages this run: choose your
+  whole library, chosen albums, or single photos ("Choose what to back up",
+  coticsy.com/vaultdrive.html), "Original quality, byte for byte" (same
+  page), free 200 files or 2 GB per backup (same page), Pro Lifetime $29.99
+  once on the App Store as of November 25, 2026 — with a $19.99 one-time
+  "VaultDrive: USB Backup" purchase also listed and no dollar price on the
+  vendor's own page ("See plans") — against SnapDisk Pro $9.99 once and 5
+  GB free per run with no file count. No FLAG: the $29.99 figure matches the
+  WL-244 sweep that fixed 106 articles this run, and the article states the
+  $29.99 with the date and names the $19.99 listing, and does not present
+  $19.99 as the current Pro Lifetime price. The article carries no install
+  count for SnapDisk (none exists) and no VaultDrive install figure. The 89
+  "installs/downloads/rating/stars" regex matches in the article are benign
+  (57 × "Downloads" folder name, 16 × lowercase "download" verb forms, 5 ×
+  singular "Download", 3 × "install" wording — installed from the v0.1.2 APK,
+  install unknown apps — 1 × "rating" inside "operatingSystem" in the
+  JSON-LD, 7 × "star" inside the verb "start"/"starts"/"starting" — no counts
+  claimed). The 1 "Google Play" mention is
+  the factual "it is not on Google Play yet", same as WL-233/WL-234/WL-235/
+  WL-236/WL-238/WL-239/WL-240 and WL-193. The 4 "VaultDrive" mentions are the
+  fair comparison in "On your phone instead" plus the comparison-article
+  link, carrying the re-verified prices above. Read time 13 min from the word
+  count (9,794 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/webp-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, searches.md, and
+  WORKLOG.md before writing; "webp" returns 0 matches in feed.xml,
+  sitemap.xml, blog index, and llms.txt, 1 incidental match in
+  llms-full.txt (Telegram-article line, no slug), 4 extension-list matches in
+  searches.md (.webp in the IMAGE_EXTENSIONS citations), and 3
+  extension-list matches in WORKLOG.md plus the queue note at line 7
+  ("Queued next: WebP photos to USB (proven gap)") — and no
+  docs/webp-photos-to-usb.html exists (docs/ listing this run: 198 html
+  files before writing, none with "webp"). There are no near matches from other articles —
+  no earlier article is a WebP article — and the near matches are the other
+  format articles (raw-photos-to-usb, heic-photos-to-usb, burst-photos-to-
+  usb, slow-motion-videos-to-usb, timelapse-videos-to-usb,
+  gif-photos-to-usb) and the messaging-app articles
+  (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html,
+  messenger-photos-to-usb.html, viber-photos-to-usb.html,
+  kik-photos-to-usb.html) — all different, already-live articles,
+  untouched, and the WhatsApp, Telegram, Kik, Messenger, Viber, and GIF ones
+  linked from the new article as series companions. A docs/ listing this run
+  confirms WebP is the last format in our series with no article — RAW,
+  HEIC, burst, slow-motion, timelapse, and GIF all have theirs already.
