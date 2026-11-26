@@ -24033,3 +24033,190 @@ unchanged (already "Back up photos & videos to a USB disk").
   the no-bulk-in-app wall, the web-only Camera Roll and album batch routes, the
   whole-account data request, the owner-restriction, the save-date problem, and
   the served-copy-versus-Original quality question are all real things to add.
+### 206. "Save SmugMug photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 208, Nov 26, 2026 (WL-261).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already on SmugMug, saved on the Android phone itself, onto a USB
+  drive plugged into the phone, no computer — with the save step stated (open
+  the photo, tap the three-dot overflow menu, tap Save to Device, lands in the
+  Pictures folder in the Gallery), the no-auto-save wall stated (SmugMug saves
+  nothing by itself; the app's automatic feature runs the other way — auto
+  upload sends phone photos up to SmugMug, not gallery photos down to the
+  phone; a bookmark keeps the gallery inside your account, not a file — if the
+  photographer deletes the gallery, the bookmark points at nothing), the
+  gallery batch route stated (Save Gallery to Device in the app, or the
+  download-all button on the web, which zips the gallery and emails the link —
+  tap the link with the app installed and it unzips to the photos roll,
+  because .zip files are not supported on most Android devices), the
+  no-whole-account-export wall stated (the export unit is the gallery; a
+  visitor link expires after two weeks, an owner link does not), the
+  owner-restriction stated (an owner can switch Allow Downloads off, and then
+  there is no Save to Device to tap), and the lost-taken-date and served-copy
+  quality limits stated (a saved photo shows the save date; the owner always
+  receives the original size when logged in, a visitor the size the owner
+  chose, which defaults to Original).
+  Our own generic articles rank top on both phrasings and never mention
+  SmugMug; the generic OTG guides never name SmugMug at all; the SmugMug
+  guides that exist stop at the phone or are transfer apps with no USB step.
+  The gap stands ONLY on that narrow angle: the SmugMug photo, saved on the
+  phone into the Pictures folder, onto a USB drive, no computer, with the save
+  step stated, the folder stated, the no-auto-save wall stated, and the
+  bookmark-versus-save untangling stated plainly.
+- Current top results (scored Nov 26, 2026, live web search):
+  Phrasing 1, "save SmugMug photos to USB drive from Android phone no
+  computer" (supervisor, this run): only our own generic usb-photo-backup and
+  transfer-photos-to-usb-automatically articles, which rank top and never mention
+  SmugMug, the PhotoSync app listing on Google Play (SmugMug as one supported
+  service among many, no SmugMug-to-USB guide), a generic cellularnews OTG
+  guide, and a Facebook reel — no SmugMug-specific guide on this phrasing.
+  Phrasing 2, "transfer SmugMug photos to USB flash drive Android no computer"
+  (supervisor, this run): only PhotoSync listings — Google Play, apkbog,
+  appbrain — a transfer app that supports SmugMug among other services, with no
+  guide joining SmugMug to the phone to the USB drive — no SmugMug-to-phone-to-
+  USB guide with no computer exists on either phrasing.
+  Corroboration (lead, this run): SmugMug's own help, read first-hand, gives
+  the Android save verbatim — "SmugMug's Android app" (smugmughelp.com, last
+  updated 79 days ago, fetched Nov 26, 2026): "To download, navigate to a photo
+  or video you want to save and tap the overflow menu icon. You'll see an option
+  to Save to Device if you're logged in and have download rights. If you're
+  browsing a gallery instead of a single photo, you'll see an option to Save
+  Gallery to Device instead." The same page gives the bookmark-versus-save
+  distinction ("Bookmark: To add any SmugMug site, folder, or gallery to your
+  favorites, tap the overflow menu icon and toggle on Bookmark Gallery. This
+  will save it to your app's Bookmarks screen."), the offline-viewing
+  distinction (mark a gallery for offline viewing — the gallery stays available
+  in the app with no Wi-Fi, still the app's own storage, not a file), and the
+  download-location choice ("If your Android phone supports SD cards, you can
+  change the SmugMug app's download location to the SD card" — Settings,
+  Storage Location, SD Card). The folder is picbackman, read first-hand
+  ("Photos will save to your device's Pictures folder."), a guide last updated
+  1,168 days ago, so the folder claim is carried by that dated guide, not by
+  SmugMug's own help, "Download several images in a gallery" (smugmughelp.com,
+  last updated 164 days ago, fetched Nov 26, 2026): visitor downloads need Allow
+  Downloads ON in the gallery settings (Photo Protection tab), the download size
+  defaults to Original, "As the account owner, when you're logged in, you'll
+  always receive the original size of your files", the gallery needs three or
+  more photos for the download button to appear, the visitor link expires after
+  two weeks while the owner link from Site Organizer "will not expire", and the
+  mobile trap in full: the links "aren't supported on ... most Android devices.
+  To open .zip files on your mobile device, first grab our iOS or Android app,
+  then tap your download link. Your photos will automatically unzip to your
+  camera roll (iOS) or photos roll (Android)." The owner route is the same page
+  ("Click My Site > Site Organizer ... Click the Select All button to select
+  every image in the gallery, then click the download icon."; hidden photos and
+  SmugMug Source RAW files with .xmp sidecars are included for the owner, not
+  the guest). The desktop download
+  options are picbackman ("Choose to download original or edited version of
+  photos. Select the download size and quality. Decide file format to save
+  photos as (JPG, TIF, PNG)."). The auto-upload direction is SmugMug's own help
+  (auto uploading sends phone photos up to SmugMug — upload, not download). No
+  article — only the comparison-article link in "On your phone instead" — and
+  no install count for SnapDisk (none exists) and no VaultDrive install figure.
+- Honest centre (verified from the code at base 7b72eba and the live sources
+  above, this run, Nov 26, 2026, not assumed): a photo on SmugMug is not on
+  your phone until you save it — SmugMug is a photo library on someone else's
+  server, not a folder on your phone, and the file appears only when you save
+  it. The save is open the photo, tap the three-dot overflow menu, and tap Save
+  to Device — SmugMug's own help states it verbatim, and PicBackMan gives the
+  same destination — and the file lands in the Pictures folder, visible in your
+  Gallery. From a gallery view the same menu offers Save Gallery to Device
+  instead — the whole gallery, in one tap, the one bulk step the app offers.
+  SmugMug saves nothing by itself: there is no auto-save and no setting that
+  turns one on, and the app's automatic feature runs the other way — auto upload
+  sends your phone photos up to SmugMug — while a bookmark keeps the gallery
+  inside your account, not a file. A whole gallery goes through Save Gallery to
+  Device in the app, or the download-all button on the web as a ZIP, emailed as
+  a link — tap the link with the app installed and it unzips to the photos roll,
+  because .zip files are not supported on most Android devices. There is no
+  whole-account export: the export unit is the gallery, and a visitor link
+  expires after two weeks while an owner link does not. The date problem is a
+  save problem for SmugMug, not a
+  cloud problem: the file is written when you save it, so it sorts by its save
+  date (DATE_MODIFIED fallback), and the taken date does not survive SmugMug's
+  copy — stated as the expected case, not as a certainty, because no source this
+  run tested the taken date after an in-app save — unlike OneDrive, where the
+  taken date can already be replaced at upload. The quality problem is a copy
+  problem: the app save is SmugMug's served copy with no size choice, and the
+  original lives behind the download-size setting the gallery owner chose —
+  the owner always receives the original size when logged in, a visitor receives
+  the size the owner chose, which defaults to Original. An owner can switch
+  Allow Downloads off, and then there is no Save to Device to tap, and there
+  is no bulk route for someone else's photos beyond what the owner enabled —
+  the series does not endorse third-party downloaders, several of which ask for
+  a SmugMug login they do not need. The default run covers a saved SmugMug
+  photo that shows in the gallery: it reads the media index with no folder
+  filter (queryMediaStoreOldestFirst :23-36; queryMediaTable :38, the query call
+  passes selection null :60; Images + Videos tables :23-36; DATE_TAKEN with
+  DATE_MODIFIED fallback :47-48, :56-58, oldest-first via
+  BackupEngine.sortOldestFirst), so a .jpg in the Pictures folder copies like
+  any other photo — the route is conditional on the photo being saved as a file
+  at all, stated WL-246 form, not asserted outright. One honest limit inside
+  that coverage: a saved photo shows the save date, so it sorts by its save
+  date (DATE_MODIFIED fallback) rather than the date the photo was taken unless
+  the EXIF taken date survived — stated in the TL;DR and in "The date problem".
+  The From picker route is code-supported but UNTESTED end to end on this exact
+  folder: listTreeFiles walks the folder directly (:90-97) and does not depend
+  on the media index, isMediaName (:125-128) keeps only IMAGE_EXTENSIONS
+  (:131-134) and VIDEO_EXTENSIONS (:135-137), the picker is
+  ActivityResultContracts.OpenDocumentTree with no folder pre-selected
+  (MainActivity.kt:62, :71), and the code holds zero "smugmug" matches in the
+  whole source tree. Screen-off continuation under battery saver is UNVERIFIED
+  — the repo holds no wake lock and no battery-saver handling (grep across all
+  main-source .kt files: none) — stated in the TL;DR and in "What to avoid"
+  (WL-182 form). Android 15 dataSync 6-hour budget: BackupService.onTimeout
+  pauses cleanly with a message (service/BackupService.kt:134, WL-34). Every
+  file is size-verified after copying (BackupEngine.kt:103-108 shouldSkip/
+  verify; CopyResult.Copied only after verify passes, :126). FAT32 files >=4
+  GiB skipped with their reason (service/BackupService.kt:428-435). Default
+  From /sdcard/DCIM and To /disk/DCIM (BackupPrefs.kt:50,53), no INTERNET
+  permission (0 occurrences in the manifest), no Google Play Services
+  dependency (0 matches for com.google.android.gms / play-services in the
+  build — re-checked this run), no all-files access (no
+  MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24 (app/build.gradle.kts:12,
+  Android 7.0), applicationId dev.dzianisv.snapdisk (app/build.gradle.kts:11).
+  Pro $9.99 once (ProPrefs.kt:40), 5 GB free per run (:43). "SnapDisk copies,
+  it never deletes" present — the only .delete() calls in the code are on
+  SnapDisk's own half-finished .part files (BackupEngine.kt:176, :207;
+  service/BackupService.kt:385, :477). No VaultDrive price is stated in this
+  article — only the comparison-article link text once. The 1 "install" form
+  in the article is benign ("with the SmugMug app installed"); 1 "rating"
+  inside "operatingSystem"; the "download" forms are benign (Downloads folder,
+  Download menu wording, downloaded photos — no counts claimed). The 2
+  "Google Play" mentions are factual (the PhotoSync app listing in the
+  search-results section, and "no Google Play Services dependency"), same
+  form as WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240 and WL-193. Read
+  time 14 min from the word count (10,140 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/smugmug-photos-to-usb.html verified 0 collisions in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt before writing;
+  "smugmug" returns 0 matches in feed.xml, sitemap.xml, blog index, llms.txt,
+  llms-full.txt, searches.md, and WORKLOG.md pre-write, and 0 "smugmug" slugs
+  in docs/ pre-write; the code holds 0 "smugmug" matches in the whole source
+  tree. There are no near matches from other articles — no earlier article is
+  a SmugMug article — and the near matches are the other social-app articles
+  (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html,
+  messenger-photos-to-usb.html, viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html, imo-photos-to-usb.html,
+  pinterest-photos-to-usb.html, reddit-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html,
+  x-twitter-photos-to-usb.html, tumblr-photos-to-usb.html,
+  flickr-photos-to-usb.html) and the other cloud articles
+  (google-drive-photos-to-usb.html, dropbox-photos-to-usb.html,
+  onedrive-photos-to-usb.html, icloud-photos-to-usb.html) — all different,
+  already-live articles, untouched, and the WhatsApp, Telegram, Messenger,
+  Viber, Kik, WeChat, IMO, Pinterest, Reddit, Instagram, Facebook, Snapchat,
+  TikTok, X, Tumblr, Flickr, Google Drive, Dropbox, OneDrive, and iCloud ones
+  linked as series companions. A docs/ listing this run
+  confirms SmugMug is the next subject in our series with no article —
+  WhatsApp, Telegram, Instagram, Facebook, Snapchat, TikTok, WeChat,
+  Messenger, Viber, Kik, IMO, Pinterest, Reddit, X, Tumblr, Flickr, Google
+  Drive, Dropbox, OneDrive, and iCloud all have theirs already; the Signal
+  (WL-237), Discord, LINE, and KakaoTalk rows were killed, not written,
+  because those apps offer only the one-by-one save with nothing else to add,
+  while SmugMug survives the same test because the no-auto-save wall, the
+  Pictures-folder landing, the bookmark-versus-save untangling, the
+  Save-Gallery-to-Device bulk step, the web-only download-all ZIP route with
+  its link-expiry and ZIP-on-Android traps, the no-whole-account-export wall,
+  the owner-restriction, the save-date problem, and the served-copy-versus-
+  Original quality question are all real things to add.

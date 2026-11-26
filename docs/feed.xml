@@ -1448,5 +1448,12 @@
       <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
       <description>A Flickr photo isn't on your phone until you save it. Tap Share, and then Save — it lands in the Flickr folder — then back it up to USB, no computer.</description>
     </item>
+    <item>
+      <title>Save SmugMug photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/smugmug-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/smugmug-photos-to-usb.html</guid>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A SmugMug photo isn't on your phone until you save it. Tap the three dots, then Save to Device — it lands in Pictures — then back it up to USB, no computer.</description>
+    </item>
 </channel>
 </rss>
