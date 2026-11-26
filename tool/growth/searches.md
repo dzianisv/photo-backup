@@ -24840,3 +24840,224 @@ unchanged (already "Back up photos & videos to a USB disk").
   the web-download ZIP trap, the no-whole-account-export wall, the no-quota
   answer, the Crypto-folder separate case, the download-date problem, and the
   original-file quality question are all real things to add.
+### 210. "Save Nextcloud photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 213, Nov 26, 2026 (WL-266).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already on Nextcloud, downloaded on the Android phone itself, onto a USB
+  drive plugged into the phone, no computer — with the download step stated (navigate
+  to the file's directory, open the three-dot menu on the file, select Download — a
+  green checkmark marks it available offline), the folder named (Nextcloud's own
+  manual and its users name Android/media/com.nextcloud.client, under the account —
+  check the Gallery first, then the app folder in the Files app), the
+  Download-versus-Export-versus-viewing untangling stated (Download writes a real
+  file to the app folder and marks it available offline; Export saves a purely local
+  copy to the Downloads folder with no green checkmark and no sync; opening a photo
+  leaves no file at all; Auto Upload runs the other way, phone photos up to the
+  server), the folder batch route stated (Synchronize a folder in the app, or
+  multi-select Download, or the web download, which arrives as a ZIP to unzip
+  first), the no-whole-account-export wall stated (the export unit is a file or
+  a folder; a whole account goes through folder-by-folder downloads or the desktop
+  client on a computer), the account-removal warning stated (removing the Nextcloud
+  account from the app deletes the files the app had downloaded to the phone), the
+  no-quota answer stated (Nextcloud publishes no download quota — the files live on
+  your own server), and the lost-taken-date and original-file quality limits
+  stated (a downloaded photo shows the download date; the download is the file as
+  uploaded, not a re-encoded copy).
+  Our own generic articles rank top on both phrasings and never mention Nextcloud;
+  the generic OTG guides never name Nextcloud at all; the Nextcloud guides that exist
+  stop at the phone or are about getting photos into Nextcloud.
+  The gap stands ONLY on that narrow angle: the Nextcloud photo, downloaded on the
+  phone into the app folder, onto a USB drive, no computer, with the download step
+  stated, the folder named, the Download-versus-Export untangling stated, and the
+  account-removal warning stated plainly.
+- Current top results (scored Nov 26, 2026, live web search):
+  Phrasing 1, "save Nextcloud photos to USB drive from Android phone no
+  computer" (supervisor, this run): only our own generic usb-photo-backup and
+  transfer-photos-to-usb-automatically articles, plus a YouTube OTG guide, a
+  Gandi article about backing files up to Nextcloud (the opposite direction —
+  phone photos up to the server), and a Nextcloud forum thread about upload
+  settings that never touches a USB drive — no Nextcloud-specific guide on this
+  phrasing.
+  Phrasing 2, "transfer Nextcloud photos to USB flash drive Android no computer"
+  (supervisor, this run): the same own articles and the same generic OTG guides
+  (YouTube, pixoneye), plus a Facebook reel and PhotoSync — a transfer app that
+  moves photos between phones, computers, NAS, and cloud services over Wi-Fi,
+  with no USB-drive step at all — no Nextcloud-specific guide, and no guide that
+  puts the download and the USB copy in the same place — no
+  Nextcloud-to-phone-to-USB guide with no computer exists on either phrasing.
+  Corroboration (lead, this run): Nextcloud's own user manual, "Synchronizing
+  with Android", read first-hand as quoted verbatim in full by a guide that links
+  the manual page (alexandre.deverteuil.net, "Configuring the Nextcloud client
+  for Android", updated 2022-09-03, fetched Nov 26, 2026): "To download a remote
+  file to your phone and make it accessible to other applications via the media
+  gallery: 1. Navigate to the file's directory. 2. Open the '⋮' menu on the file
+  you want to download. 3. Select 'Download' from the menu. 4. A green check
+  mark will appear on the file's icon. This marks the file as 'available
+  offline'." The same guide quotes the manual's gallery line ("Local and
+  downloaded Nextcloud files are directly accessible from the phone's media
+  gallery") and names the folder ("Files downloaded from Nextcloud,
+  synchronized folders, and files 'moved to app folder' in the instant upload
+  settings go to this directory: /Android/media/com.nextcloud.client"). The
+  manual's old "latest" HTML address for that page
+  (docs.nextcloud.com/server/latest/user_manual/en/pim/sync_android.html) 404s
+  as of this run — Nextcloud restructured its docs — so the article cites the
+  steps as the manual's, quoted via the guide, and corroborates them from
+  Nextcloud's own forum, not from the dead URL. Nextcloud's own user manual,
+  "Accessing your files using the Nextcloud Web interface" (docs.nextcloud.com,
+  latest, fetched Nov 26, 2026), gives the web route verbatim: the overflow
+  menu "displays file details, and allows you to rename, download, or delete
+  files", and "When you select multiple files, you can delete all of them, or
+  download them as a ZIP file by using the Delete or Download buttons that
+  appear at the top" — plus "If the Download button is not visible, the
+  administrator has disabled this feature." Nextcloud's own forum
+  (help.nextcloud.com, fetched Nov 26, 2026) corroborates the app behaviour:
+  "Where does it download to?" — users find their synced data at
+  "/storage/emulated/0/Android/media/com.nextcloud.client", visible in a file
+  browser ("When I do that on my phone, I can see the downloaded files
+  there"); "Difference between download, set as available offline, and
+  synchronize" — "When I mark one or several files, I have the options to
+  download or set as available offline" (multi-select Download confirmed) and
+  "all of them are available in a file browser on the Android device";
+  "Is there any way of editing ODT docs locally, on Android?" (last updated
+  286 days ago) — "There's an option to 'Export' a file instead of 'Download'
+  or 'Synchronize' it. If I do that with an .xlsx or .docx file, it gets saved
+  to the local Downloads folder on my phone, and no green checkmark appears in
+  the Nextcloud app. So as far as I can tell, that downloads the file and
+  creates a purely local copy."; "What does `Sync` do?" (566 days ago) —
+  confirms the current menu (three dots per row showing Sync; a Sync checkbox
+  in details; "there's an export option"). A Nextcloud manual mirror
+  (weboke.si, "The Nextcloud app on Android", fetched Nov 26, 2026) confirms
+  the On device view ("what you've made available offline") and the
+  account-removal warning verbatim: "removing an account from the app also
+  deletes the files the app had downloaded to your phone. Everything stays in
+  place in your Nextcloud." The Disroot howto (Nextcloud app v3.28.0, Mar 2024)
+  confirms the Data storage folder setting ("the folder where our cloud data
+  will be stored in our device") and Auto Upload ("to set and manage folders
+  in which when we save/add any file inside them, it is automatically uploaded
+  to our cloud"). The app is current: Nextcloud 34.0.1 on Google Play, updated
+  Jun 24, 2026, and 35.0.1, Oct 5, 2026 (APKMirror). No article — only the
+  comparison-article link in "On your phone instead" — and no install count for
+  SnapDisk (none exists) and no VaultDrive install figure.
+- Honest centre (verified from the code at base 4920d8a and the live sources
+  above, this run, Nov 26, 2026, not assumed): a photo on Nextcloud is not on your
+  phone until you download it — Nextcloud is file storage on a server, not a folder
+  on your phone, and the file appears only when you download it. The download is
+  navigate to the file, open the three-dot menu, select Download — Nextcloud's own
+  user manual states it verbatim, and the file lands in the app folder
+  Android/media/com.nextcloud.client, under the account. Nextcloud names the folder
+  outright — the manual and its own users agree on the path — so the article states
+  the folder as a named destination plus a short search (Gallery first, then the
+  app folder), never as a claimed fixed path, and never as the Downloads folder,
+  which is where Export lands instead. Download and available-offline are the same
+  tap in Nextcloud, and — unlike Box, pCloud, and MEGA, where offline keeps a copy
+  inside the app — the downloaded file is a real file in shared storage, visible
+  in the Gallery and in a file manager, per the manual itself. Nextcloud downloads
+  nothing by itself: there is no auto-download and no setting that turns one on,
+  and the app's automatic feature runs the other way — Auto Upload copies phone
+  photos up to the server. A whole folder downloads by Synchronize in the app, or
+  on the web as a ZIP to unzip first; there is no whole-account export in the app,
+  and a whole account goes through folder-by-folder downloads or the desktop client
+  on a computer. Removing the Nextcloud account from the app deletes the files the
+  app had downloaded to the phone — stated as a warning, with the copy-first rule.
+  The date problem is a download problem for Nextcloud: the file is written when
+  you download it, so it sorts by its download date (DATE_MODIFIED fallback), and
+  the taken date inside the file may or may not be picked up by the media index —
+  stated as the expected case, not as a certainty, because no source this run tested
+  the taken date after an in-app download. The quality problem is the opposite of
+  the photo services: the download is the file as uploaded, not a re-encoded copy,
+  because Nextcloud stores files and does not re-encode photos — and the limit is
+  the tapping, not a quota: Nextcloud publishes no download quota on your own
+  files, because the files live on your own server. The default run covers a
+  downloaded Nextcloud photo that shows in the gallery: it reads the media index
+  with no folder filter (queryMediaStoreOldestFirst, app/src/main/java/dev/dzianisv/snapdisk/backup/
+  PhotoQuery.kt:23-36; queryMediaTable :38, the query call passes selection null
+  :60; Images + Videos tables :23-36; DATE_TAKEN with DATE_MODIFIED fallback
+  :47-48, :56-58, oldest-first via BackupEngine.sortOldestFirst,
+  app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:95), so a .jpg
+  in the Nextcloud app folder copies like any other photo — the route is conditional
+  on the photo being downloaded as a file at all, stated WL-246 form, not asserted
+  outright. One honest limit inside that coverage: a downloaded photo shows the
+  download date, so it sorts by its download date (DATE_MODIFIED fallback) rather
+  than the date the photo was taken unless the media index picks up the taken date
+  inside the file — stated in the TL;DR and in "The date problem". The From picker
+  route is code-supported but UNTESTED end to end on this exact folder: listTreeFiles
+  walks the folder directly (app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:90-95) and does
+  not depend on the media index, isMediaName (:125-128) keeps only
+  IMAGE_EXTENSIONS (:131-134) and VIDEO_EXTENSIONS (:135-137), the picker is
+  ActivityResultContracts.OpenDocumentTree with no folder pre-selected
+  (app/src/main/java/dev/dzianisv/snapdisk/MainActivity.kt:62, :71), and the code
+  holds zero "nextcloud" matches in the whole source tree. Screen-off continuation
+  under battery saver is UNVERIFIED — the repo holds no wake lock and no
+  battery-saver handling (grep across all main-source .kt files: none) — stated
+  in the TL;DR and in "What to avoid" (WL-182 form). Android 15 dataSync 6-hour
+  budget: BackupService.onTimeout pauses cleanly with a message
+  (app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:134, WL-34).
+  Every file is size-verified after copying
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:103-108
+  shouldSkip/verify; CopyResult.Copied only after verify passes, :126). FAT32
+  files >=4 GiB skipped with their reason
+  (app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:430). Default
+  From /sdcard/DCIM and To /disk/DCIM
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupPrefs.kt:50,53), no
+  INTERNET permission (0 occurrences in the manifest), no Google Play Services
+  dependency (0 matches for com.google.android.gms / play-services in the
+  build — re-checked this run), no all-files access (no MANAGE_EXTERNAL_STORAGE
+  anywhere), minSdk 24 (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11).
+  Pro $9.99 once (app/src/main/java/dev/dzianisv/snapdisk/backup/ProPrefs.kt:40), 5 GB free per
+  run (:43). "SnapDisk copies, it never deletes" present — the only .delete()
+  calls in the code are on SnapDisk's own half-finished .part files
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:176, :207;
+  app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:385, :477). No
+  VaultDrive price is stated in this article — only the comparison-article link
+  text once. The 3 "install" forms in the article are benign ("with the
+  Nextcloud app installed", "install it" for the desktop client on a computer,
+  "uninstalling it" for clearing app data — no counts claimed). The 2 "Google
+  Play" mentions are factual ("free, on Google Play and on F-Droid", "no Google
+  Play Services dependency"), same form as WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240
+  and WL-193. Read time 14 min from the word count (10,859 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/nextcloud-photos-to-usb.html verified 0 collisions in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt before writing;
+  "nextcloud-photos-to-usb" returns 0 matches in feed.xml, sitemap.xml, blog
+  index, llms.txt, llms-full.txt, searches.md, and WORKLOG.md pre-write, and 0
+  "nextcloud-photos-to-usb" slugs in docs/ pre-write; the code holds 0
+  "nextcloud" matches in the whole source tree. The incidental "nextcloud"
+  matches pre-write are one llms.txt line (the LineageOS article naming
+  Nextcloud as a Seedvault backup destination) and four searches.md lines
+  (a darktable/Syncthing laptop route, two LineageOS backup-option lines, one
+  recovery-phrase line) — never a Nextcloud article, never scored, never
+  killed. There are no near matches from other articles — no earlier article is
+  a Nextcloud article — and the near matches are the other social-app articles
+  (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html,
+  messenger-photos-to-usb.html, viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html, imo-photos-to-usb.html,
+  pinterest-photos-to-usb.html, reddit-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html,
+  x-twitter-photos-to-usb.html, tumblr-photos-to-usb.html,
+  flickr-photos-to-usb.html, smugmug-photos-to-usb.html,
+  amazon-photos-to-usb.html, mega-photos-to-usb.html,
+  pcloud-photos-to-usb.html) and the other cloud articles
+  (google-drive-photos-to-usb.html, dropbox-photos-to-usb.html,
+  onedrive-photos-to-usb.html, icloud-photos-to-usb.html) — all different,
+  already-live articles, untouched, and the WhatsApp, Telegram, Messenger,
+  Viber, Kik, WeChat, IMO, Pinterest, Reddit, Instagram, Facebook, Snapchat,
+  TikTok, X, Tumblr, Flickr, SmugMug, Amazon Photos, MEGA, pCloud, Google
+  Drive, Dropbox, OneDrive, and iCloud ones linked as series companions. A
+  docs/ listing this run confirms Nextcloud is the next subject in our series
+  with no article — WhatsApp, Telegram, Instagram, Facebook, Snapchat, TikTok,
+  WeChat, Messenger, Viber, Kik, IMO, Pinterest, Reddit, X, Tumblr, Flickr,
+  SmugMug, Amazon Photos, MEGA, pCloud, Google Drive, Dropbox, OneDrive, and
+  iCloud all have theirs already; the Signal (WL-237), Discord, LINE, and
+  KakaoTalk rows were killed, not written, because those apps offer only the
+  one-by-one save with nothing else to add, while Nextcloud survives the same
+  test because the no-auto-download wall, the named app folder, the
+  Download-versus-Export-versus-viewing untangling, the folder batch route, the
+  web-download ZIP trap, the no-whole-account-export wall, the account-removal
+  warning, the no-quota answer, the download-date problem, and the
+  original-file quality question are all real things to add. Nextcloud also
+  survives the WL-265 Box kill test where Box failed: Box's own help documents
+  no Download control for photos and names no on-disk folder, while Nextcloud's
+  own manual documents the Download control verbatim, names the on-disk folder,
+  and states gallery visibility — a real file, not a cache.
