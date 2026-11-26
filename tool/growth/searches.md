@@ -24599,3 +24599,191 @@ unchanged (already "Back up photos & videos to a USB disk").
   web-download ZIP trap, the no-whole-account-export wall, the transfer-quota
   wall, the download-date problem, and the original-file quality question are
   all real things to add.
+### 209. "Save pCloud photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 211, Nov 26, 2026 (WL-264).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already on pCloud, downloaded on the Android phone itself, onto a USB
+  drive plugged into the phone, no computer — with the download step stated (locate
+  the file, tap the three-dot icon at the bottom right corner of the file, scroll
+  down and select Download), the folder named (pCloud's own help: the file is
+  downloaded to your device's default Download folder — check the Gallery first,
+  then Downloads, then Pictures), the offline trap stated (marking a file available
+  offline keeps it inside the pCloud app — pCloud itself says the offline folder
+  on Android is hidden within the app — and streaming a photo leaves no file at
+  all), the Download-versus-Offline-versus-streaming untangling stated (Automatic
+  Upload runs the other way, phone photos up to pCloud), the folder batch route
+  stated (tap and hold a file or folder, then choose Download, or the web
+  download, which arrives as a ZIP to unzip first), the no-whole-account-export
+  wall stated (the export unit is a file or a folder; a whole account goes through
+  folder-by-folder downloads or pCloud Drive on a computer), the no-quota answer
+  stated (pCloud describes no transfer meter on downloading your own files in the
+  app — the traffic limit it does describe is on shared download links), the
+  Crypto-folder separate case stated (client-side encrypted, passphrase-held,
+  cannot be made available offline on a phone), and the lost-taken-date and
+  original-file quality limits stated (a downloaded photo shows the download date;
+  the download is the original file as uploaded, not a re-encoded copy).
+  Our own generic articles rank top on both phrasings and never mention pCloud;
+  the generic OTG guides never name pCloud at all; the pCloud guides that exist
+  stop at the phone or are transfer apps with no USB step.
+  The gap stands ONLY on that narrow angle: the pCloud photo, downloaded on the
+  phone into the Downloads folder, onto a USB drive, no computer, with the
+  download step stated, the folder named, the offline trap stated, and the
+  no-quota answer stated plainly.
+- Current top results (scored Nov 26, 2026, live web search):
+  Phrasing 1, "save pCloud photos to USB drive from Android phone no
+  computer" (supervisor, this run): only our own generic
+  transfer-photos-to-usb-automatically and storage-full articles, plus generic
+  OTG guides from pixoneye and cellularnews that never mention pCloud — no
+  pCloud-specific guide on this phrasing.
+  Phrasing 2, "transfer pCloud photos to USB flash drive Android no computer"
+  (supervisor, this run): the same own articles and the same generic OTG guides,
+  plus a Facebook reel and an unanswered question page — no pCloud-specific
+  guide, and no guide that puts the download and the USB copy in the same place
+  — no pCloud-to-phone-to-USB guide with no computer exists on either phrasing.
+  Corroboration (lead, this run): pCloud's own help centre, read first-hand,
+  gives the Android download verbatim — "Downloading Files to Android"
+  (help.pcloud.com, fetched Nov 26, 2026): "To download a file from the pCloud
+  app to your Android device: 1. Locate the file in your pCloud account 2. Tap
+  on the three-dot icon at the bottom right corner of the file 3. Scroll down
+  and select Download 4. The file will be downloaded to your device's default
+  Download folder". The same help centre's "Audio and Video Player" page
+  (help.pcloud.com, fetched Nov 26, 2026) gives the original-quality line
+  ("Original files remain available for download in full quality") and the
+  streaming distinction ("stream and enjoy your media files directly from your
+  cloud storage without downloading them first"). The multi-select and folder
+  route is a current independent guide, MultCloud ("Tap and hold the file or
+  folder you wish to download, then choose 'Download'. The download will start
+  after you select where to save it on your device."), which also gives the web
+  route (select files, right-click, Download; a folder downloads as a ZIP) and
+  the shared-link route ("When they click on it, the file or folder will
+  automatically begin downloading to their device."). pCloud's own Android
+  release notes (fetched Nov 26, 2026) say "You can now download multiple files
+  at once." The offline trap is pCloud itself, in its own account's reply to a
+  user asking where offline files live on Android: the offline folder is hidden
+  within the app; an independent guide (Toolnavia, fetched Nov 26, 2026) agrees
+  that mobile offline files are app-only downloads, accessible through the
+  pCloud app. Automatic Upload runs the other way, per pCloud's own blog
+  ("Once you switch it on, it copies photos and videos from your camera roll to
+  your pCloud account."). The free plan is up to 10 GB free storage, with up to
+  2 TB on paid plans (the app's store listing, fetched Nov 26, 2026). The Crypto
+  folder is a paid add-on — $3.99 per month with a 14-day free trial (pCloud's
+  own blog) — and its files cannot be made available offline in the mobile app
+  (Toolnavia, citing pCloud). The computer route is pCloud Drive, which creates
+  a virtual drive on a computer where files copy like any other folder (pCloud's
+  own help; MultCloud Way 2). No article — only the comparison-article link in
+  "On your phone instead" — and no install count for SnapDisk (none exists) and
+  no VaultDrive install figure.
+- Honest centre (verified from the code at base 929a4d8 and the live sources
+  above, this run, Nov 26, 2026, not assumed): a photo on pCloud is not on your
+  phone until you download it — pCloud is cloud storage on pCloud's servers, not
+  a folder on your phone, and the file appears only when you download it. The
+  download is locate the file, tap the three-dot icon at the bottom right corner
+  of the file, scroll down and select Download — pCloud's own help states it
+  verbatim, and the file lands in your device's default Download folder. pCloud
+  names the folder outright — the independent guides agree the download lands in
+  Downloads — so the article states the folder as a named destination plus a
+  short search (Gallery first, then Downloads, then Pictures), never as a
+  claimed fixed path. Marking a file available offline is not downloading it:
+  pCloud itself says the offline folder on Android is hidden within the app, and
+  streaming a photo leaves no file at all — neither is a file in shared storage.
+  pCloud downloads nothing by itself: there is no auto-download and no setting
+  that turns one on, and the app's automatic feature runs the other way —
+  Automatic Upload copies phone photos up to pCloud. A whole folder downloads by
+  tap-and-hold in the app, or on the web as a ZIP to unzip first; there is no
+  whole-account export in the app, and a whole account goes through
+  folder-by-folder downloads or pCloud Drive on a computer. The date problem is
+  a download problem for pCloud: the file is written when you download it, so it
+  sorts by its download date (DATE_MODIFIED fallback), and the taken date inside
+  the file may or may not be picked up by the media index — stated as the
+  expected case, not as a certainty, because no source this run tested the taken
+  date after an in-app download. The quality problem is the opposite of the
+  other clouds: the download is the original file as uploaded, not a re-encoded
+  copy, because pCloud stores files and does not re-encode photos — and the
+  limit is the tapping, not a quota: pCloud describes no transfer meter on
+  downloading your own files in the app, and the traffic limit it does describe
+  is on shared download links. The default run covers a downloaded pCloud photo
+  that shows in the gallery: it reads the media index with no folder filter
+  (queryMediaStoreOldestFirst, app/src/main/java/dev/dzianisv/snapdisk/backup/
+  PhotoQuery.kt:23-36; queryMediaTable :38, the query call passes selection null
+  :60; Images + Videos tables :23-36; DATE_TAKEN with DATE_MODIFIED fallback
+  :47-48, :56-58, oldest-first via BackupEngine.sortOldestFirst,
+  app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:95), so a .jpg
+  in the Downloads folder copies like any other photo — the route is conditional
+  on the photo being downloaded as a file at all, stated WL-246 form, not
+  asserted outright. One honest limit inside that coverage: a downloaded photo
+  shows the download date, so it sorts by its download date (DATE_MODIFIED
+  fallback) rather than the date the photo was taken unless the media index picks
+  up the taken date inside the file — stated in the TL;DR and in "The date
+  problem". The From picker route is code-supported but UNTESTED end to end on
+  this exact folder: listTreeFiles walks the folder directly
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:90-95) and does
+  not depend on the media index, isMediaName (:125-128) keeps only
+  IMAGE_EXTENSIONS (:131-134) and VIDEO_EXTENSIONS (:135-137), the picker is
+  ActivityResultContracts.OpenDocumentTree with no folder pre-selected
+  (app/src/main/java/dev/dzianisv/snapdisk/MainActivity.kt:62, :71), and the code
+  holds zero "pcloud" matches in the whole source tree. Screen-off continuation
+  under battery saver is UNVERIFIED — the repo holds no wake lock and no
+  battery-saver handling (grep across all main-source .kt files: none) — stated
+  in the TL;DR and in "What to avoid" (WL-182 form). Android 15 dataSync 6-hour
+  budget: BackupService.onTimeout pauses cleanly with a message
+  (app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:134, WL-34).
+  Every file is size-verified after copying
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:103-108
+  shouldSkip/verify; CopyResult.Copied only after verify passes, :126). FAT32
+  files >=4 GiB skipped with their reason
+  (app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:430). Default
+  From /sdcard/DCIM and To /disk/DCIM
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupPrefs.kt:50,53), no
+  INTERNET permission (0 occurrences in the manifest), no Google Play Services
+  dependency (0 matches for com.google.android.gms / play-services in the
+  build — re-checked this run), no all-files access (no MANAGE_EXTERNAL_STORAGE
+  anywhere), minSdk 24 (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11). Pro $9.99 once
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/ProPrefs.kt:40), 5 GB free per
+  run (:43). "SnapDisk copies, it never deletes" present — the only .delete()
+  calls in the code are on SnapDisk's own half-finished .part files
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:176, :207;
+  app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:385, :477). No
+  VaultDrive price is stated in this article — only the comparison-article link
+  text once. The 3 "install" forms in the article are benign ("uninstall it" for
+  clearing app data, "with the pCloud app installed", "install it" for pCloud
+  Drive on a computer — no counts claimed). The 1 "Google Play" mention is
+  factual ("no Google Play Services dependency"), same form as
+  WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240 and WL-193. Read time 14 min
+  from the word count (10,565 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/pcloud-photos-to-usb.html verified 0 collisions in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt before writing;
+  "pcloud" returns 0 matches in feed.xml, sitemap.xml, blog index,
+  llms.txt, llms-full.txt, searches.md, and WORKLOG.md pre-write, and 0
+  "pcloud" slugs in docs/ pre-write; the code holds 0 "pcloud" matches in
+  the whole source tree. There are no near matches from other articles — no
+  earlier article is a pCloud article — and the near matches are the other
+  social-app articles (whatsapp-photos-to-usb.html,
+  telegram-photos-to-usb.html, messenger-photos-to-usb.html,
+  viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html, imo-photos-to-usb.html,
+  pinterest-photos-to-usb.html, reddit-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html,
+  x-twitter-photos-to-usb.html, tumblr-photos-to-usb.html,
+  flickr-photos-to-usb.html, smugmug-photos-to-usb.html,
+  amazon-photos-to-usb.html, mega-photos-to-usb.html) and the other cloud
+  articles (google-drive-photos-to-usb.html, dropbox-photos-to-usb.html,
+  onedrive-photos-to-usb.html, icloud-photos-to-usb.html) — all different,
+  already-live articles, untouched, and the WhatsApp, Telegram, Messenger,
+  Viber, Kik, WeChat, IMO, Pinterest, Reddit, Instagram, Facebook, Snapchat,
+  TikTok, X, Tumblr, Flickr, SmugMug, Amazon Photos, MEGA, Google Drive,
+  Dropbox, OneDrive, and iCloud ones linked as series companions. A docs/
+  listing this run confirms pCloud is the next subject in our series with no
+  article — WhatsApp, Telegram, Instagram, Facebook, Snapchat, TikTok, WeChat,
+  Messenger, Viber, Kik, IMO, Pinterest, Reddit, X, Tumblr, Flickr, SmugMug,
+  Amazon Photos, MEGA, Google Drive, Dropbox, OneDrive, and iCloud all have
+  theirs already; the Signal (WL-237), Discord, LINE, and KakaoTalk rows were
+  killed, not written, because those apps offer only the one-by-one save with
+  nothing else to add, while pCloud survives the same test because the
+  no-auto-download wall, the named Download folder, the offline trap, the
+  Download-versus-Offline-versus-streaming untangling, the folder batch route,
+  the web-download ZIP trap, the no-whole-account-export wall, the no-quota
+  answer, the Crypto-folder separate case, the download-date problem, and the
+  original-file quality question are all real things to add.
