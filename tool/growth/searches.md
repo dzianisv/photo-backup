@@ -22989,3 +22989,208 @@ unchanged (already "Back up photos & videos to a USB disk").
   select-all workaround, the Camera Uploads folder, the no-export-all
   limit, the direct-pick route, and the lost-taken-date limit are all real
   things to add.
+### 201. "Save OneDrive photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already stored as a file in OneDrive, saved on the Android
+  phone itself, onto a USB drive plugged into the phone, no computer — with the
+  save step stated (open the folder in List view, three-dot More menu, Save,
+  arrow at Save to this location, pick a folder, Save again, Microsoft's own
+  support page), the landing folder stated (Downloads), the offline trap stated
+  (Keep offline keeps the file inside the OneDrive app and writes no file),
+  the OneDrive-versus-Photos-versus-Drive untangling stated (OneDrive is a file
+  store, Photos is a photo library, Drive is a file store too but a different
+  account with different menu words — Drive says Download, OneDrive says
+  Save), the folder route stated (no download-all button, select-all
+  workaround, one pass per subfolder), the Camera roll folder stated (one
+  folder, one pass), the direct-pick route stated (Save-to screen lists
+  storage locations — SD card documented, USB untested), and the lost-taken-date
+  limit stated (a saved photo shows the download date — Microsoft's own support
+  forum reproduced it — and the taken date may already have been replaced by
+  the upload date). Our own generic articles rank top on one phrasing and never
+  mention OneDrive; the generic OTG guides never name OneDrive at all; the
+  OneDrive guides that exist stop at the phone or route through a computer.
+  The gap stands ONLY on that narrow angle: the OneDrive photo, saved on the
+  phone into Downloads, onto a USB drive, no computer, with the save step
+  stated, the folder stated, the offline trap stated, and the
+  OneDrive-versus-Photos-versus-Drive untangling stated plainly.
+- Current top results (scored Nov 25, 2026, live web search):
+  Phrasing 1, "save OneDrive photos to USB drive from Android phone no
+  computer" (supervisor, this run): only download-to-phone guides — Microsoft
+  support "How to download OneDrive files to your mobile" (Android: folder in
+  List view, More, Save, pick a device folder), the seedofyou OneDrive
+  photo-library and data guides (the phone app saves selected media; a computer
+  is needed for folder archives and ZIP files), the thedroidguy guide (the same
+  More-then-Save steps) — plus the Sync by Miciniti generic Android-to-USB
+  guides, which never mention OneDrive at all. No guide joins photos already
+  in OneDrive to a save on the phone to a copy to USB with no computer.
+  Phrasing 2, "transfer OneDrive photos to USB flash drive Android no
+  computer" (supervisor, this run): the itechguides guide, which routes "large
+  library or cloud-only photos" through a computer ("Download or import to a
+  computer, then copy to the stick"), the Sync Miciniti generic USB guide, the
+  PhotoSync guide (a computer and NAS route), the Microsoft Q&A thread (the
+  OneDrive leg is the same app on the computer, then download locally, then
+  copy to the flash drive), and our own transfer-photos-to-usb-automatically
+  article, which never mentions OneDrive. No OneDrive-to-phone-to-USB guide
+  with no computer exists on either phrasing. Corroboration (lead, this run):
+  a live search for the Microsoft support page returned "Use OneDrive on
+  Android" with the download steps quoted verbatim — List view, More, Save,
+  multi-select by long-press, "Save to this location" folder picker — and the
+  seedofyou OneDrive page ("The Android app can save selected files ... Use a
+  computer for a folder archive" and "Make available offline is app access, not
+  a separate archive"), the mobikin guide ("The files will be saved in the
+  Download folder on your Android phone"), and the WPS guide ("The OneDrive
+  Android app lacks a one-click option to download the entire account at
+  once").
+- Honest centre (verified from the code at base 364e63c and the live sources
+  above, this run, Nov 25, 2026, not assumed): a photo in OneDrive is not
+  on your phone until you save it — OneDrive is a cloud file store, and the
+  file appears only when you save it. Microsoft's own support page
+  (support.microsoft.com/en-us/onedrive/use-onedrive-on-android, "Use OneDrive
+  on Android", read live this run) gives the whole procedure: open the folder
+  that has the files you want to download, ensure the folder contents appear
+  in List view, not as thumbnails, tap More next to the file you want to save,
+  and then tap Save — and for several files, press and hold one photo or video,
+  tap the circle next to additional file names to check them, tap More in the
+  upper right corner, and then tap Save — and then tap the arrow at Save to
+  this location to see folders on your device, pick a folder for the downloaded
+  files, and tap Save. Two independent guides agree on where the file goes:
+  mobikin (the files are saved in the Download folder on your Android phone;
+  its FAQ: downloaded files are generally stored in your device's Downloads
+  folder or another folder selected during the saving process) and seedofyou
+  (the Android app can save selected files; copy those saved items to
+  independent storage). The trap is the second menu item: Keep offline keeps
+  the file inside the OneDrive app so you can open it without a connection —
+  Microsoft's own page, under "Read a file or folder offline": mark files or
+  folders offline to read them anytime, even when you are not connected, and
+  files marked for offline reading have the Keep offline icon in the List view
+  — and seedofyou states it in one line, that "Make available offline is app
+  access, not a separate archive", while mobikin's FAQ says files marked for
+  offline use may remain accessible through the OneDrive app instead of
+  appearing as ordinary local files — so it will not appear in the Files app,
+  the gallery, or SnapDisk's run. The direct-pick route: the Save-to screen
+  lets you pick a storage location, and mobikin's FAQ says you may be able to
+  choose an SD-card folder as the download destination on devices that support
+  expandable storage, depending on Android version, OneDrive app version, and
+  phone manufacturer — so a mounted USB drive may appear in the same list;
+  stated as try-first, reported for SD cards, UNTESTED for USB-OTG on this
+  phone, with Downloads as the road that always works. The folder route:
+  OneDrive has no download-all button (WPS, quoted above; seedofyou: use a
+  computer for a folder archive; the Microsoft Q&A answer: downloading an
+  entire folder from OneDrive to your device at once is not directly supported
+  within the OneDrive app), and the workaround is long-press one file, tap the
+  circles next to the others to add them, More in the upper right corner, Save,
+  pick a folder, Save again; a folder with subfolders needs one pass per
+  subfolder. The multi-select ZIP question is UNREPORTED for the app route —
+  no source this run says the app zips a multi-select save — so the article
+  states it as unreported, not as tested, and tells the reader to check
+  Downloads for separate .jpg files or one .zip (unzip first, SnapDisk copies
+  photos, not ZIP archives); the computer route definitely produces a ZIP (the
+  OneDrive website, select the folder, choose Download, "Compress files"), and
+  the article says so. The OneDrive-versus-Photos-versus-Drive untangling:
+  OneDrive is a file store — photos you put there are files in folders; Photos
+  is a photo library — photos backed up there live in a library organised by
+  date and album; Drive is a file store too, but a different account in a
+  different app, and the menu words differ — Drive says Download, OneDrive
+  says Save. A photo saved from OneDrive is the same file uploaded — same
+  pixels, same resolution — because OneDrive stores files, it does not
+  recompress them. Camera roll: photos the phone uploads by itself land in one
+  folder, Camera roll, at original size when on Wi-Fi (Microsoft support page:
+  "pictures you take with your device go to the OneDrive Camera roll folder"),
+  and that folder empties in a single select-all pass; the toggle is per
+  account, and for a work or school account the route is Me, then Photos.
+  Shared folders save the same way (Shared view, then the sharer's name for a
+  personal account), but the owner can revoke access, so save promptly. The
+  date problem is worse for OneDrive than for the other clouds, because the
+  date can be lost twice: Microsoft's support forum reproduced that photos
+  downloaded from OneDrive only show the date of download, on different
+  devices and different operating systems — and on the upload side, the same
+  forum says OneDrive is aware that it overwrites the "Date taken" metadata
+  with the upload date, especially when using the mobile app for photo backup,
+  most commonly when uploading in bulk, when using the Camera Upload feature,
+  and when uploading from apps like WhatsApp or Signal — so a camera-uploaded
+  photo may already carry the upload date in OneDrive itself before you ever
+  tap Save. The article states the download-date order as the expected case
+  (DATE_MODIFIED fallback) and tells the reader to save one photo and check
+  the gallery's date order before saving a thousand; the WPS note that if the
+  internal EXIF Date Taken is still intact the gallery can usually read it is
+  stated as the conditional it is, not as the expected case.
+  The default run covers a saved OneDrive photo that shows in the gallery: it
+  reads the media index with no folder filter (queryMediaTable :38, the query
+  call passes selection null :60; Images + Videos tables :23-36; DATE_TAKEN
+  with DATE_MODIFIED fallback :47-48, :56-58, oldest-first via
+  BackupEngine.sortOldestFirst :95-100), so a .jpg in Downloads copies like
+  any other photo — the route is conditional on the photo being saved as a file
+  at all, stated WL-246 form, not asserted outright. One honest limit inside
+  that coverage: a saved photo shows the download date, so it sorts by its
+  download date (DATE_MODIFIED fallback) rather than the date the photo was
+  taken — stated in the TL;DR and in "The date problem". The From picker route
+  is code-supported but UNTESTED end to end on this exact folder:
+  listTreeFiles walks the folder directly (:90-97) and does not depend on
+  the media index, isMediaName (:125-128) keeps only IMAGE_EXTENSIONS
+  (:131-134: .jpg .jpeg .png .heic .heif .webp .gif .bmp .dng .raw .avif
+  .jxl), the picker is ActivityResultContracts.OpenDocumentTree with no
+  folder pre-selected (MainActivity.kt:62, :71), and the code holds zero
+  "onedrive" matches in the whole source tree. Screen-off continuation under
+  battery saver is UNVERIFIED — the repo holds no wake lock and no
+  battery-saver handling (grep across all main-source .kt files: none) —
+  stated in the TL;DR and in "What to avoid" (WL-182 form). Android 15
+  dataSync 6-hour budget: BackupService.onTimeout pauses cleanly with a
+  message (BackupService.kt:134, WL-34). Every file is size-verified
+  after copying (BackupEngine.kt:103-107 shouldSkip/verify; CopyResult.Copied
+  only after verify passes). FAT32 files >=4 GiB skipped with their
+  reason (BackupService.kt:428-433). Default From /sdcard/DCIM and To
+  /disk/DCIM (BackupPrefs.kt:50,53), no INTERNET permission (0 occurrences
+  in the manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms / play-services in the build — re-checked this
+  run), no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk
+  24 (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11). Pro $9.99 once
+  (ProPrefs.kt:40), 5 GB free per run (:43). "SnapDisk copies, it never
+  deletes" present — the only .delete() calls in the code are on SnapDisk's
+  own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). No VaultDrive price is stated in this
+  article — only the comparison-article link in "On your phone instead" —
+  and no install count for SnapDisk (none exists) and no VaultDrive
+  install figure. The "install" forms in the article are benign (OneDrive
+  app installed, app installed); 1 "rating" inside "operatingSystem"; the
+  "download" forms are benign (Downloads folder, Save/Download menu wording,
+  downloaded photos — no counts claimed). The 1 "Google Play" mention is
+  factual ("no Google Play Services dependency"), same as WL-233/WL-234/
+  WL-235/WL-236/WL-238/WL-239/WL-240 and WL-193. The 1 "VaultDrive" mention
+  is the comparison-article link text only, carrying no price. Read time 14
+  min from the word count (10,345 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/onedrive-photos-to-usb.html verified 0 collisions in feed.xml,
+  sitemap.xml, blog index, llms.txt, llms-full.txt, searches.md, and
+  WORKLOG.md before writing; "onedrive" returns 0 matches in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt, and "OneDrive"
+  returns 0 matches in feed.xml, sitemap.xml, blog index, llms.txt, and
+  llms-full.txt; the only "OneDrive" matches in searches.md are incidental
+  lines inside other queries' rows (a cloud list mention in the Blackview and
+  Hammer rows, a Takeout line, a repair row, a CMF Phone row, the Facebook and
+  Snapchat rows — no dedicated OneDrive query row); and no
+  docs/onedrive-photos-to-usb.html exists (docs/ listing this run: no file
+  with "onedrive" — the nearest are the Google Drive and Dropbox articles,
+  both different). There are no near matches from other articles — no earlier
+  article is a OneDrive article — and the near matches are the other cloud
+  articles (google-drive-photos-to-usb.html, the 200th how-to, and
+  dropbox-photos-to-usb.html, the 201st how-to, both linked as sibling cloud
+  articles) and the other social-app articles (whatsapp-photos-to-usb.html,
+  telegram-photos-to-usb.html, messenger-photos-to-usb.html,
+  viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html, imo-photos-to-usb.html,
+  pinterest-photos-to-usb.html, reddit-photos-to-usb.html) — all different,
+  already-live articles, untouched, and the WhatsApp, Telegram, Messenger,
+  Viber, Kik, WeChat, IMO, Pinterest, Reddit, Google Drive, and Dropbox ones
+  linked from the new article as series companions. A docs/ listing this run
+  confirms OneDrive is the next subject in our series with no article —
+  WhatsApp, Telegram, Instagram, Facebook, Snapchat, TikTok, WeChat,
+  Messenger, Viber, Kik, IMO, Pinterest, Reddit, Google Drive, and Dropbox
+  all have theirs already; the LINE and KakaoTalk rows were killed, not
+  written, because those apps offer only the one-by-one save with nothing else
+  to add, while OneDrive survives the same test because the offline trap, the
+  folder landing, the OneDrive-versus-Photos-versus-Drive untangling, the
+  select-all workaround, the Camera roll folder, the no-download-all limit,
+  the direct-pick route, and the lost-taken-date limit — lost twice, at upload
+  and at download — are all real things to add.
