@@ -22158,3 +22158,170 @@ unchanged (already "Back up photos & videos to a USB disk").
   as series companions. A docs/ listing this run confirms AVIF is the last
   format in our series with no article — RAW, HEIC, burst, slow-motion,
   timelapse, GIF, and WebP all have theirs already.
+### 196. "Save JPEG XL photos to USB from Android" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a .jxl file, saved on an Android phone, onto a USB drive plugged into the
+  phone, no computer — with the route split stated (the default run covers a
+  .jxl only if the phone's media scanner indexed it, which is unverified and
+  leans against it, since Android's own supported-formats document lists no
+  JXL row at all; the From picker skips .jxl files entirely, proven from the
+  code), the manual copy given as the certain route, the Chrome-155 check
+  given (open one JXL back from the drive in Chrome 155 or later — the
+  gallery cannot decode JXL on any Android version), and the file hunt given
+  before the copy (Downloads, Pictures, the transfer folder — never
+  DCIM/Camera, because no camera shoots JXL). Our own transfer-photos
+  article ranks top on one phrasing and never mentions JXL; the generic
+  OTG guides never name JXL at all. The gap stands ONLY on
+  that narrow angle: the .jxl file, saved on the phone, onto a USB drive, no
+  computer, with the default run's coverage hedged honestly, the picker skip
+  proven from the code, the Android decode gap stated plainly, and the folder
+  pick NOT offered as a route for JXL.
+- Current top results (scored Nov 25, 2026, live web search):
+  Phrasing 1, "save JPEG XL photos from Android phone to USB flash drive"
+  (supervisor, this run): generic OTG copy guides only (groovypost,
+  Pixoneye, sekin.in, itechfaqs, Samsung community thread, YouTube
+  walkthrough) — plug the drive in, copy the folders in the file manager, no
+  JXL folder, no .jxl extension, no Downloads check, no Chrome check. No
+  JXL-specific guide exists.
+  Phrasing 2, "transfer JXL images Android to USB drive"
+  (supervisor, this run): generic OTG copy guides only — Samsung community
+  thread, YouTube walkthrough, DroidGuy copy guide — plug the drive in, copy
+  the folders in the file manager, no JXL folder, no .jxl extension, no
+  picker warning. No JXL-specific guide exists on either phrasing.
+  Phrasing 3, "copy JXL files from Android phone to USB OTG flash drive"
+  (lead, this run — the third-phrasing gate): generic OTG copy guides only
+  (Samsung Members thread, thedroidguy, How-To Geek, Informer, YouTube
+  ch1evyu5PPM, Tom's Guide) — plug the drive in, copy the files in the file
+  manager, no JXL folder, no .jxl extension, no Chrome version, no picker
+  warning. No JXL-specific guide exists on any of the three phrasings.
+- Honest centre (verified from the code at base 019e751 and the live sources
+  above, this run, Nov 25, 2026, not assumed): a JXL is an ordinary .jxl
+  file, and everything worth keeping lives inside the file itself — the
+  smaller size is the compression (30–50% smaller than a JPEG at the same
+  quality, by the Chrome team's numbers), the HDR is a wide gamut in the
+  file, the transparency is an alpha channel in the file, and the lossless
+  JPEG reconstruction data, for a JXL made from a JPEG, is stored inside the
+  file too, so the original JPEG can be restored bit for bit from it. Copy
+  the .jxl and all of it comes with it, byte-for-byte. The trap is the route,
+  and it bites in opposite directions — plus a third fact no other format
+  article in this series has had to state. Most images saved from the web
+  are JXLs now, because Chrome 155 turned JXL decoding on by default on
+  October 6, 2026, on desktop and on Android, and puts image/jxl first in
+  the Accept header it sends for images — Firefox 158 followed on October
+  13, Safari has decoded it since version 17 — so a site that picks a format
+  from that header now replies with JXL, and a long-press save in Chrome
+  lands in Downloads as a .jxl with no fanfare; Chrome on Android saves
+  every download to the shared Downloads folder by default, Internal
+  Storage/Download, and the guides agree on the path across manufacturers.
+  A JXL converted from a JPEG or a PNG lands in Downloads or Pictures,
+  depending on the tool — cjxl recompresses a JPEG losslessly, about 20%
+  smaller, and fully reversibly — and a library converted on a computer
+  lands wherever the conversion tool wrote it. A JXL shared from another
+  device — a Mac or an iPhone, which handle JXL natively since macOS 14 and
+  iOS 17, or a Windows computer with the free JPEG XL image extension, or a
+  photo library converted after Immich 3.4.0 added JXL support in November
+  2026 — lands as a file when it is sent as a document, and as a converted
+  JPEG when it is sent as a chat picture. No mainstream Android camera
+  shoots JXL: there is no JXL capture setting in any stock camera app, so
+  DCIM/Camera holds no .jxl files unless you moved them there yourself. And
+  Android itself cannot open a JXL file — the operating system has no JXL
+  decoder, the gallery shows a blank thumbnail on every Android version, and
+  the only viewer on the phone that decodes it is Chrome 155 or later. The
+  check is the file extension, not the app that showed it to you: a file
+  that ends in .jxl is a JXL, and a file that ends in .jpg is a JPEG, even
+  if it looks identical on screen. The check after the copy is opening one
+  JXL back from the drive in Chrome 155 or later and looking at it — it
+  should open, and on a screen that shows HDR it should show the bright
+  range — because a JXL that lost its quality still looks like a photo in
+  every other check, and the gallery cannot do the check at all. Renaming a
+  file does not convert it — a file called photo.jxl holds JXL data, and
+  renaming it to photo.jpg leaves JXL data inside a file called .jpg.
+  Two corrections to the dispatch brief, both found by the lead's own
+  verification this run and recorded here so they are not carried forward:
+  (1) the brief's premise "Android 14+ decodes JXL" is WRONG — Android has
+  no JXL decoder at all (quppa.net: "Android is the outlier, but if we're
+  lucky we could see it included in Android 18 in 2027"; convertico.com:
+  "Most Android gallery apps can not open JXL yet"; filemorph.app: "most of
+  Android ... still do not recognize the format at all"; Android's own
+  supported-media-formats document lists AVIF with Android 14 and no JXL
+  row at all). The decode that exists on the phone lives in Chrome 155+,
+  not in the OS, and the article states that, never the brief's version.
+  (2) the brief's "both SnapDisk routes skip .jxl files entirely" is only
+  half code-proven: the From picker skip IS proven — isMediaName
+  (PhotoQuery.kt:125-128) keeps only IMAGE_EXTENSIONS (:131-134: .jpg
+  .jpeg .png .heic .heif .webp .gif .bmp .dng .raw .avif — no .jxl), and
+  the folder walk gates every file on it (:110) — but the default run is
+  HEDGED, WL-246 form, not asserted: the default run reads the media index
+  with no extension filter (queryMediaTable :38, the query call passes
+  selection null :60; Images + Videos tables :23-36; DATE_TAKEN with
+  DATE_MODIFIED fallback :47-48, :56-59, oldest-first), so a .jxl the index
+  holds copies like any other photo — but whether the index holds a .jxl
+  at all is not settled by the public Android sources (the Debian MIME
+  table the framework's map is drawn from did gain an image/jxl entry, but
+  the Android copy was only updated in a commit that, by its own message,
+  affects future versions of Android). The article states the picker skip
+  as proven and the default run as conditional, and names the manual copy
+  as the certain route. Screen-off continuation under battery saver is
+  UNVERIFIED — the repo holds no wake lock and no battery-saver handling
+  (grep across all main-source .kt files: none) — stated in the TL;DR and
+  in "What to avoid" (WL-182 form). Android 15 dataSync 6-hour budget:
+  BackupService.onTimeout pauses cleanly with a message
+  (BackupService.kt:134, WL-34). Every file is size-verified after copying
+  (BackupEngine.kt:104-108, :126). FAT32 files >=4 GiB skipped with their
+  reason (BackupService.kt:428-433). Default From /sdcard/DCIM and To
+  /disk/DCIM (BackupPrefs.kt:50,53), no INTERNET permission (0 occurrences
+  in the manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms / play-services in the build), no all-files access
+  (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24
+  (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11). Pro $9.99 once
+  (ProPrefs.kt:40), 5 GB free per run (:43). "SnapDisk copies, it never
+  deletes" present — the only .delete() calls in the code are on SnapDisk's
+  own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). VaultDrive, named fairly from its live pages
+  this run: choose your whole library, chosen albums, or single photos
+  ("Choose what to back up", coticsy.com/vaultdrive.html), "Original
+  quality, byte for byte" (same page), free 200 files or 2 GB per backup
+  (same page), Pro Lifetime $29.99 once on the App Store RE-VERIFIED live
+  this run (App Store page https://apps.apple.com/us/app/vaultdrive-usb-photo-backup/id6772883827,
+  crawled Nov 26, 2026 01:32 UTC — Nov 25, 2026 17:32 PST: "VaultDrive Pro
+  Lifetime $29.99" in the In-App Purchases list; VaultDrive 2.0, version
+  10.0, 18h old at crawl), with Pro Monthly $7.99 and Pro Annual $19.99,
+  and $19.99 / $9.99 one-time "VaultDrive: USB Backup" purchases also
+  listed (separate legacy items, not Pro Lifetime) and no dollar price on
+  the vendor's own page ("See plans") — against SnapDisk Pro $9.99 once
+  and 5 GB free per run with no file count. FotoSafe Pro price is UNKNOWN
+  — never stated. The article carries no install count for SnapDisk (none
+  exists) and no VaultDrive install figure. The 90
+  "installs/downloads/rating/stars" regex matches in the article are benign
+  (73 × "download" forms — 53 × "Downloads" folder name, 5 × "Download",
+  9 × "downloaded", 6 × "download" — 3 × "install" wording — installed from
+  the v0.1.2 APK, install unknown apps — 5 × "rating" inside "operating
+  system"/"operatingSystem" — 9 × lowercase "star" inside the verbs
+  "start"/"starts"/"starting"/"restart" — no counts claimed). The 2
+  "Google Play" mentions are factual ("it is not on Google Play yet";
+  "update it from Google Play", for Chrome), same as WL-233/WL-234/WL-235/
+  WL-236/WL-238/WL-239/WL-240 and WL-193. The 4 "VaultDrive" mentions are
+  the fair comparison in "On your phone instead" plus the
+  comparison-article link, carrying the re-verified prices above. Read time
+  14 min from the word count (10,831 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/jxl-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, searches.md, and
+  WORKLOG.md before writing; "jxl" (lowercase) returns 0 matches in
+  feed.xml, sitemap.xml, blog index, llms.txt, llms-full.txt, searches.md,
+  and WORKLOG.md; "JXL" (uppercase) returns 0 matches in all seven files;
+  "JPEG XL" returns 0 matches in all seven files — and no
+  docs/jxl-photos-to-usb.html exists (docs/ listing this run: no file with
+  "jxl"). There are no near matches from other articles — no earlier
+  article is a JXL article — and the near matches are the other format
+  articles (raw-photos-to-usb, heic-photos-to-usb, burst-photos-to-usb,
+  slow-motion-videos-to-usb, timelapse-videos-to-usb, gif-photos-to-usb,
+  webp-photos-to-usb, avif-photos-to-usb) and the messaging-app articles
+  (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html) — all
+  different, already-live articles, untouched, and the AVIF, WebP, HEIC,
+  Motion Photo, RAW, GIF, WhatsApp, and Telegram ones linked from the new
+  article as series companions. A docs/ listing this run confirms JXL is
+  the last format in our series with no article — RAW, HEIC, burst,
+  slow-motion, timelapse, GIF, WebP, and AVIF all have theirs already.

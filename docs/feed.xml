@@ -1378,5 +1378,12 @@
       <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
       <description>An AVIF is an ordinary .avif file — smaller than a JPEG, with HDR inside. The catch: the From picker skips .avif files and the default run may not see them.</description>
     </item>
+    <item>
+      <title>Save JPEG XL photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/jxl-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/jxl-photos-to-usb.html</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A JXL is an ordinary .jxl file — smaller than a JPEG. The catch: no camera shoots it, Android can't open it, and the From picker skips .jxl files.</description>
+    </item>
 </channel>
 </rss>
