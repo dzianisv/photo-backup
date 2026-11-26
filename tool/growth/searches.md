@@ -25123,3 +25123,221 @@ unchanged (already "Back up photos & videos to a USB disk").
   no Download control for photos and names no on-disk folder, while Nextcloud's
   own manual documents the Download control verbatim, names the on-disk folder,
   and states gallery visibility — a real file, not a cache.
+
+### 211. "Save Immich photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 215, Nov 26, 2026 (WL-268).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already on Immich, downloaded on the Android phone itself, onto a USB
+  drive plugged into the phone, no computer — with the download step stated (open
+  the photo, open the action menu, tap Download — the app's own download action,
+  labelled Download, offered only for photos that live on the server and are not
+  already on the phone), the folder named (the app's own code names DCIM/Immich
+  on Android — check the Gallery first, then DCIM/Immich in the Files app), the
+  Download-versus-offline-versus-viewing untangling stated (Download writes a
+  real file to DCIM/Immich; offline viewing keeps a copy inside the app; opening
+  a photo leaves no file at all; Auto Backup runs the other way, phone photos up
+  to the server; Free Up Space removes local copies of backed-up photos), the
+  album batch route stated (long-press to select in the app and Download, or the
+  web download, which arrives as an archive to unzip first, with Download
+  Original the untouched file on the web), the no-whole-library-export wall
+  stated (the export unit is a photo, a selection, or an album; a whole library
+  goes through album-by-album downloads, while the server administrator has the
+  originals on the server's own disk), the no-quota answer stated (Immich
+  publishes no download quota — the files live on your own server), and the
+  lost-taken-date and original-file quality limits stated (a downloaded photo
+  shows the download date; the download is the original file as uploaded, not a
+  re-encoded copy).
+  Our own generic articles rank top on both phrasings and never mention Immich;
+  the generic OTG guides never name Immich at all; the Immich listing that
+  ranks is the Play store page, which describes backup, not downloading to USB.
+  The gap stands ONLY on that narrow angle: the Immich photo, downloaded on the
+  phone into DCIM/Immich, onto a USB drive, no computer, with the download step
+  stated, the folder named, the Download-versus-offline untangling stated, and
+  the Free Up Space warning stated plainly.
+- Current top results (scored Nov 26, 2026, live web search):
+  Phrasing 1, "save Immich photos to USB drive from Android phone no
+  computer" (supervisor, this run): only the Immich Play listing, our own
+  generic transfer-photos-to-usb-automatically article, a generic YouTube OTG
+  guide, our own VeraCrypt-and-BitLocker article, and a generic pixoneye guide
+  about transferring photos from a phone to a USB stick that never mentions
+  Immich — no Immich-specific guide on this phrasing.
+  Phrasing 2, "transfer Immich photos to USB flash drive Android no computer"
+  (supervisor, this run): our own generic transfer article, the Immich Play
+  listing, the same generic YouTube guide, the same pixoneye guide, a Sync by
+  Miciniti guide about copying files to a USB drive that never mentions Immich,
+  and a second generic YouTube guide — no Immich-specific guide, and no guide
+  that puts the download and the USB copy in the same place — no
+  Immich-to-phone-to-USB guide with no computer exists on either phrasing.
+  Corroboration (lead, this run): the Immich app's own source code, read
+  first-hand from the immich-app/immich repository at tag v3.4.1 (the version on
+  Google Play) via the GitHub API, Nov 26, 2026. mobile/lib/presentation/
+  actions/download.action.dart: a DownloadAction with Icons.download and the
+  label context.t.download ("Download" in i18n/en.json), offered for remote
+  assets and downloading them via downloadAllAssets. mobile/lib/utils/
+  action_button.utils.dart: the Download action shows only when the photo
+  hasRemote and not hasLocal — a server-only photo — in the action menu.
+  mobile/lib/presentation/widgets/bottom_sheet/general_bottom_sheet.widget.dart:
+  DownloadAction in the bottom-sheet action menu, for a timeline selection as
+  well as a single photo. mobile/lib/services/download.service.dart:
+  _saveImageWithPath and _saveVideo save the downloaded file to the device
+  gallery with relativePath 'DCIM/Immich' on Android (lines 82 and 103 at
+  v3.4.1), via PhotoManager.editor.saveImageWithPath / saveVideo — the public
+  gallery, not app-private storage. mobile/lib/repositories/
+  download.repository.dart: the download fetches the original
+  (getOriginalUrlForRemoteId). The web route is verified from the same tag:
+  web/src/lib/services/asset.service.ts gives the viewer Download (edited) and
+  Download Original actions, and the web test web/test/medium/specs/
+  asset-viewer/download.spec.ts confirms the download "saves the original under
+  its file name", with a live photo also saving its motion video with a
+  -motion suffix; web/src/lib/components/timeline/actions/DownloadAction.svelte
+  downloads one selected asset as its own file and several as one archive
+  (downloadArchive, default name "immich" with the date and time), and a shared
+  link allows downloading only when the owner turned it on. Immich's own
+  documentation, read live this run (docs.immich.app, crawled Nov 26, 2026):
+  the Mobile App page (docs.immich.app/features/mobile-app/) walks through
+  backup, free-up-space, and album sync and says nothing about downloading to
+  the phone — the download flow is verified from the app's code, not from the
+  docs page, and the article says so; the FAQ (docs.immich.app/FAQ) confirms
+  the cloud-icon meanings (one icon means the asset is only available on the
+  server), that "Immich does not modify the original files", and that videos
+  "look normal after download" — download as a concept, with no control and no
+  folder named. The app is current: Immich 3.4.1 on Google Play, updated Nov
+  17, 2026 (Play listing mirror). No article — only the comparison-article link
+  in "On your phone instead" — and no install count for SnapDisk (none exists)
+  and no VaultDrive install figure.
+- Honest centre (verified from the code at base 50b34a0 and the live sources
+  above, this run, Nov 26, 2026, not assumed): a photo on Immich is not on your
+  phone until you download it — Immich is a photo library on a server you run,
+  not a folder on your phone, and the file appears only when you download it.
+  The download is open the photo, open the action menu, tap Download — the
+  app's own download action, verified from its code at v3.4.1 — and the file
+  lands in the Gallery at DCIM/Immich on Android. Immich names the folder in
+  its own code — the download service saves with the relative path DCIM/Immich
+  — so the article states the folder as a named destination plus a short search
+  (Gallery first, then DCIM/Immich), never as a claimed fixed path, and never
+  as the Downloads folder, which is where the web download lands instead. The
+  Download button appears only for server-only photos (hasRemote, not
+  hasLocal): a photo already on the phone shows no Download, and needs none —
+  the file is already in DCIM. Download and offline viewing are different
+  things in Immich: the download writes a real file to shared storage, visible
+  in the Gallery and in a file manager, while offline viewing keeps a copy
+  inside the app. Immich downloads nothing by itself: there is no auto-download
+  and no setting that turns one on, and the app's automatic feature runs the
+  other way — Auto Backup copies phone photos up to the server. Free Up Space
+  removes local copies of backed-up photos — a photo you freed up is
+  server-only until you download it back — stated as a warning, with the
+  copy-first rule. A whole album downloads by selecting the photos in the app
+  and tapping Download, or on the web as an archive to unzip first (use
+  Download Original on the web for the untouched file); there is no
+  whole-library export in the app, and a whole library goes through
+  album-by-album downloads, while the server administrator has the originals
+  on the server's own disk. The date problem is a download problem for Immich:
+  the file is written when you download it, so it sorts by its download date
+  (DATE_MODIFIED fallback), and the taken date inside the file may or may not
+  be picked up by the media index — stated as the expected case, not as a
+  certainty, because no source this run tested the taken date after an in-app
+  download. The quality problem is the opposite of the photo services: the
+  download is the original file as uploaded, not a re-encoded copy, because the
+  app fetches the original and Immich does not modify original files — and the
+  limit is the tapping, not a quota: Immich publishes no download quota on your
+  own files, because the files live on your own server. The default run covers
+  a downloaded Immich photo that shows in the gallery: it reads the media index
+  with no folder filter (queryMediaStoreOldestFirst, app/src/main/java/dev/dzianisv/snapdisk/backup/
+  PhotoQuery.kt:23-36; queryMediaTable :38, the query call passes selection null
+  :60; Images + Videos tables :23-36; DATE_TAKEN with DATE_MODIFIED fallback
+  :47-48, :56-58, oldest-first via BackupEngine.sortOldestFirst,
+  app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:95), so a .jpg
+  in DCIM/Immich copies like any other photo — the route is conditional on the
+  photo being downloaded as a file at all, stated WL-246 form, not asserted
+  outright. One honest limit inside that coverage: a downloaded photo shows the
+  download date, so it sorts by its download date (DATE_MODIFIED fallback)
+  rather than the date the photo was taken unless the media index picks up the
+  taken date inside the file — stated in the TL;DR and in "The date problem".
+  The From picker route is code-supported but UNTESTED end to end on this exact
+  folder: listTreeFiles walks the folder directly
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:90-95) and does
+  not depend on the media index, isMediaName (:125-128) keeps only
+  IMAGE_EXTENSIONS (:131-134) and VIDEO_EXTENSIONS (:135-137), the picker is
+  ActivityResultContracts.OpenDocumentTree with no folder pre-selected
+  (app/src/main/java/dev/dzianisv/snapdisk/MainActivity.kt:62, :71), and the code
+  holds zero "immich" matches in the whole source tree. Screen-off continuation
+  under battery saver is UNVERIFIED — the repo holds no wake lock and no
+  battery-saver handling (grep across all main-source .kt files: none) — stated
+  in the TL;DR and in "What to avoid" (WL-182 form). Android 15 dataSync 6-hour
+  budget: BackupService.onTimeout pauses cleanly with a message
+  (app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:134, WL-34).
+  Every file is size-verified after copying
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:103-108
+  shouldSkip/verify; CopyResult.Copied only after verify passes, :126). FAT32
+  files >=4 GiB skipped with their reason
+  (app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:430). Default
+  From /sdcard/DCIM and To /disk/DCIM
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupPrefs.kt:50,53), no
+  INTERNET permission (0 occurrences in the manifest), no Google Play Services
+  dependency (0 matches for com.google.android.gms / play-services in the
+  build — re-checked this run), no all-files access (no MANAGE_EXTERNAL_STORAGE
+  anywhere), minSdk 24 (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11).
+  Pro $9.99 once (app/src/main/java/dev/dzianisv/snapdisk/backup/ProPrefs.kt:40), 5 GB free per
+  run (:43). "SnapDisk copies, it never deletes" present — the only .delete()
+  calls in the code are on SnapDisk's own half-finished .part files
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:176, :207;
+  app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:385, :477). No
+  VaultDrive price is stated in this article — only the comparison-article link
+  text once. The 2 "install" forms in the article are benign ("with the Immich
+  app installed", "uninstalling it" for clearing app data — no counts claimed).
+  The 5 "Google Play" mentions are factual (the Play listing and the version on
+  Play, "free, on Google Play and on F-Droid", "no Google Play Services
+  dependency"), same form as WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240
+  and WL-193. VaultDrive Pro Lifetime $29.99 once re-verified live from the App
+  Store In-App Purchases list (crawled 2026-11-26 01:32 UTC — Nov 25, 2026
+  17:32 PST; Pro Monthly $7.99, Pro Annual $19.99, legacy $19.99/$9.99
+  "VaultDrive: USB Backup" items separate; VaultDrive 2.0, version 10.0, 18h
+  old at crawl). FotoSafe Pro price is UNKNOWN — never stated. Read time 15
+  min from the word count (11,065 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/immich-photos-to-usb.html verified 0 collisions in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt before writing;
+  "immich-photos-to-usb" returns 0 matches in feed.xml, sitemap.xml, blog
+  index, llms.txt, llms-full.txt, searches.md, and WORKLOG.md pre-write, and 0
+  "immich-photos-to-usb" slugs in docs/ pre-write; the code holds 0
+  "immich" matches in the whole source tree. The incidental "immich"
+  matches pre-write are one llms.txt line and one llms-full.txt line (the JXL
+  article naming Immich 3.4.0 JXL support), two searches.md lines (a "no
+  comparison" list line and the JXL article line naming Immich 3.4.0 JXL
+  support), and one WORKLOG.md line (the JXL row) — never an Immich article,
+  never scored, never killed. There are no near matches from other articles —
+  no earlier article is an Immich article — and the near matches are the other
+  social-app articles (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html,
+  messenger-photos-to-usb.html, viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html, imo-photos-to-usb.html,
+  pinterest-photos-to-usb.html, reddit-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html,
+  x-twitter-photos-to-usb.html, tumblr-photos-to-usb.html,
+  flickr-photos-to-usb.html, smugmug-photos-to-usb.html,
+  amazon-photos-to-usb.html, mega-photos-to-usb.html,
+  pcloud-photos-to-usb.html, nextcloud-photos-to-usb.html) and the other cloud
+  articles (google-drive-photos-to-usb.html, dropbox-photos-to-usb.html,
+  onedrive-photos-to-usb.html, icloud-photos-to-usb.html) — all different,
+  already-live articles, untouched, and the WhatsApp, Telegram, Messenger,
+  Viber, Kik, WeChat, IMO, Pinterest, Reddit, Instagram, Facebook, Snapchat,
+  TikTok, X, Tumblr, Flickr, SmugMug, Amazon Photos, MEGA, pCloud, Nextcloud,
+  Google Drive, Dropbox, OneDrive, and iCloud ones linked as series companions.
+  A docs/ listing this run confirms Immich is the next subject in our series
+  with no article — WhatsApp, Telegram, Instagram, Facebook, Snapchat, TikTok,
+  WeChat, Messenger, Viber, Kik, IMO, Pinterest, Reddit, X, Tumblr, Flickr,
+  SmugMug, Amazon Photos, MEGA, pCloud, Nextcloud, Google Drive, Dropbox,
+  OneDrive, and iCloud all have theirs already; the Signal (WL-237), Discord,
+  LINE, and KakaoTalk rows were killed, not written, because those apps offer
+  only the one-by-one save with nothing else to add, while Immich survives the
+  same test because the no-auto-download wall, the named DCIM/Immich folder,
+  the Download-versus-offline-versus-viewing untangling, the album batch route,
+  the web-download archive trap, the Download-versus-Download-Original
+  distinction, the no-whole-library-export wall, the Free Up Space warning, the
+  no-quota answer, the download-date problem, and the original-file quality
+  question are all real things to add. Immich also survives the WL-265 Box kill
+  test where Box failed: Box's own help documents no Download control for
+  photos and names no on-disk folder, while Immich's own code documents the
+  Download control verbatim, names the on-disk folder, and saves a real file
+  to the public gallery — a real file, not a cache.
