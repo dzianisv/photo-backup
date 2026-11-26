@@ -22645,3 +22645,167 @@ unchanged (already "Back up photos & videos to a USB disk").
   with nothing else to add, while Reddit survives the same test because
   the bookmark trap, the removed long-press, the Pictures/Reddit folder,
   and the gallery and video limits are all real things to add.
+
+### 199. "Save Google Drive photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already stored as a file in Google Drive, downloaded on the Android
+  phone itself, onto a USB drive plugged into the phone, no computer — with the
+  download step stated (three-dot More menu, Download, Google's own help page),
+  the landing folder stated (Downloads), the offline trap stated (Make available
+  offline keeps the file inside the Drive app and writes no file), the
+  Drive-versus-Photos untangling stated (Drive is a file store, Photos is a
+  photo library; uploading to Drive does not put a photo in Photos), the folder
+  route stated (no download-a-folder button, select-all workaround, one pass
+  per subfolder), and the ZIP catch stated (multi-select may arrive as one ZIP,
+  unzip first). Our own generic articles rank top on one phrasing and never
+  mention Drive; the generic OTG guides never name Drive at all; the Drive
+  guides that exist route through a computer. The gap stands ONLY on that
+  narrow angle: the Drive photo, downloaded on the phone into Downloads, onto
+  a USB drive, no computer, with the download step stated, the folder stated,
+  the offline trap stated, and the Drive-versus-Photos untangling stated
+  plainly.
+- Current top results (scored Nov 25, 2026, live web search):
+  Phrasing 1, "download Google Drive photos to USB drive from Android phone"
+  (supervisor, this run): generic Android-to-USB guides only, where Drive is
+  a phone-to-Drive-to-computer-to-USB leg (Dr.Fone Part 2, coolmuster
+  Method 4, safewiper Method 2 — all route through a computer) plus Google
+  Photos guides (live2tech — Photos, already a killed angle, do not reuse).
+  No guide joins photos already in Google Drive to a download on the phone
+  to a copy to USB with no computer.
+  Phrasing 2, "save Google Drive photos to USB flash drive no computer
+  Android" (supervisor, this run): the same Dr.Fone guide, the same live2tech
+  Google Photos guide, a cellularnews generic OTG guide, a Google Photos
+  community thread, and a tecnobits Google Photos guide — no guide joins
+  photos already in Google Drive to a download on the phone to a copy to
+  USB with no computer.
+  Phrasing 3, "download photos Google Drive to USB OTG Android phone no
+  computer flash drive" (lead, this run — the third-phrasing gate): a pixoneye
+  generic phone-to-USB guide and a sekin.in generic OTG guide — plug the
+  drive in, copy the folders in the file manager, no Drive step at all; the
+  live2tech Google Photos guide again, which says plainly that Google Photos
+  has no button that saves straight to a USB drive and that moving photos is
+  always two jobs; the tecnobits Google Photos guide again, a Photos guide
+  from start to finish; and our own Google Pixel article, which starts from
+  photos already on the phone. No Google-Drive-photos-to-USB guide exists on
+  any of the three phrasings.
+- Honest centre (verified from the code at base 6302359 and the live sources
+  above, this run, Nov 25, 2026, not assumed): a photo in Google Drive is not
+  on your phone until you download it — Drive is a cloud file store, and the
+  file appears only when you download it. Google's own help page
+  (support.google.com/drive/answer/2423534) gives the whole procedure in two
+  steps: open the Google Drive app, then next to the file's name tap More and
+  then Download — and carries the tip that when Data Saver is turned on, the
+  download option is not available. Three independent guides agree on where
+  the file goes: technologydots (saved to the phone's storage, check Downloads
+  or recent files in the Files app), multcloud (check Downloads and Recent in
+  the Files app), and Android Authority (the file may ask where to save; if
+  you do not know where to access it, read the guide on finding downloaded
+  files on Android). The trap is the second menu item: Make available offline
+  keeps the file inside the Drive app so you can open it without a connection
+  — Google's own offline help page (support.google.com/drive/answer/2375012)
+  describes it exactly that way, and multcloud says it directly, that a file
+  marked available offline "stays accessible through Google Drive and may not
+  appear as a regular file in Downloads" — so it will not appear in the Files
+  app, the gallery, or SnapDisk's run. There is a second save route in the
+  same menu: More, Send a copy, Save image lands the photo in the camera roll
+  instead of in Downloads (Android Authority, technologydots) — a real file
+  too, but a share-sheet route whose wording varies by version, so Download
+  is the recommended default. The folder route: the Drive Android app has no
+  download-a-folder button — a Google Drive community thread asks exactly
+  this and the answer is that there is no way to select a folder and download
+  all its contents — and the workaround is long-press one file, tap the
+  select-all button at the top, three-dot menu, Download; a folder with
+  subfolders needs one pass per subfolder. The ZIP catch: selecting several
+  photos at once may hand you one ZIP file instead of separate photos
+  (gbtimes: Google Drive "will automatically compress the selected photos
+  into a single ZIP file") — stated as reported, not as tested on every
+  phone, because the app's behaviour varies by version — and SnapDisk copies
+  photos, not ZIP archives, so unzip in Files first. The Drive-versus-Photos
+  untangling: Drive is a file store — photos you uploaded there are files in
+  folders; Photos is a photo library — photos backed up there live in a
+  library organised by date and album. They share the same 15 GB Google
+  account storage, but uploading a photo to Drive does not put it in Google
+  Photos, and backing up in Photos does not put a file in Drive. A photo
+  downloaded from Drive is the same file uploaded — same pixels, same EXIF,
+  same resolution — because Drive stores files, it does not recompress them.
+  The default run covers a downloaded Drive photo that shows in the gallery:
+  it reads the media index with no folder filter (queryMediaTable :38, the
+  query call passes selection null :60; Images + Videos tables :23-36;
+  DATE_TAKEN with DATE_MODIFIED fallback :47-48, :56-58, oldest-first via
+  BackupEngine.sortOldestFirst :95-100), so a .jpg in Downloads copies like
+  any other photo — the route is conditional on the photo being downloaded as
+  a file at all, stated WL-246 form, not asserted outright. One honest limit
+  inside that coverage: a downloaded photo often has no original taken date,
+  so it sorts by its download date (DATE_MODIFIED fallback) rather than the
+  date the photo was taken — stated in the TL;DR and in "The date problem".
+  The From picker route is code-supported but UNTESTED end to end on this
+  exact folder: listTreeFiles walks the folder directly (:90-97) and does
+  not depend on the media index, isMediaName (:125-128) keeps only
+  IMAGE_EXTENSIONS (:131-134: .jpg .jpeg .png .heic .heif .webp .gif .bmp
+  .dng .raw .avif .jxl), the picker is ActivityResultContracts.OpenDocumentTree
+  with no folder pre-selected (MainActivity.kt:62, :71), and the code holds
+  zero "google-drive" matches in the whole source tree. Screen-off
+  continuation under battery saver is UNVERIFIED — the repo holds no wake
+  lock and no battery-saver handling (grep across all main-source .kt files:
+  none) — stated in the TL;DR and in "What to avoid" (WL-182 form). Android 15
+  dataSync 6-hour budget: BackupService.onTimeout pauses cleanly with a
+  message (BackupService.kt:134, WL-34). Every file is size-verified
+  after copying (BackupEngine.kt:103-107 shouldSkip/verify; CopyResult.Copied
+  only after verify passes). FAT32 files >=4 GiB skipped with their
+  reason (BackupService.kt:428-433). Default From /sdcard/DCIM and To
+  /disk/DCIM (BackupPrefs.kt:50,53), no INTERNET permission (0 occurrences
+  in the manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms / play-services in the build — re-checked this
+  run), no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk
+  24 (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11). Pro $9.99 once
+  (ProPrefs.kt:40), 5 GB free per run (:43). "SnapDisk copies, it never
+  deletes" present — the only .delete() calls in the code are on SnapDisk's
+  own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). No VaultDrive price is stated in this
+  article — only the comparison-article link in "On your phone instead" —
+  and no install count for SnapDisk (none exists) and no VaultDrive
+  install figure. The 204 "download" forms in the article are benign
+  (Downloads folder, Download menu wording, downloaded photos, browser
+  downloads — no counts claimed); the 2 "install" forms are benign
+  (Drive app installed, apps installed on the phone); 1 "rating" inside
+  "operatingSystem"; 13 lowercase "star" inside the verbs
+  "start"/"starts"/"starting" — no counts claimed. The 1 "Google Play"
+  mention is factual ("no Google Play Services dependency"), same as
+  WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240 and WL-193. The 2
+  "VaultDrive" mentions are the comparison-article link only (link text +
+  slug), carrying no price. Read time 13 min from the word count
+  (9,888 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/google-drive-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, searches.md, and
+  WORKLOG.md before writing; "google-drive" returns 0 matches in feed.xml,
+  sitemap.xml, blog index, and llms.txt, and the only match in llms-full.txt
+  is the single incidental line 642 inside the Nothing Phone row (a cloud
+  list mention — "Google Drive" as one of several cloud routes — NOT a Drive
+  article); "google drive" word matches in searches.md are incidental only
+  (a Viber cloud-backup line, a Takeout line, Dr.Fone route mentions — no
+  dedicated Drive query row); "Google Drive" returns 0 matches in feed.xml,
+  sitemap.xml, blog index, and llms.txt; and no
+  docs/google-drive-photos-to-usb.html exists (docs/ listing this run: no file
+  with "google-drive" — the nearest are google-pixel-photos-to-usb.html and
+  backup-photos-to-external-drive.html, both different articles). There are
+  no near matches from other articles — no earlier article is a Google Drive
+  article — and the near matches are the other social-app articles
+  (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html,
+  messenger-photos-to-usb.html, viber-photos-to-usb.html,
+  kik-photos-to-usb.html, wechat-photos-videos-to-usb.html,
+  imo-photos-to-usb.html, pinterest-photos-to-usb.html,
+  reddit-photos-to-usb.html) — all different, already-live articles,
+  untouched, and the WhatsApp, Telegram, Messenger, Viber, Kik, WeChat, IMO,
+  Pinterest, and Reddit ones linked from the new article as series
+  companions. A docs/ listing this run confirms Google Drive is the next
+  subject in our series with no article — WhatsApp, Telegram, Instagram,
+  Facebook, Snapchat, TikTok, WeChat, Messenger, Viber, Kik, IMO, Pinterest,
+  and Reddit all have theirs already; the LINE and KakaoTalk rows were
+  killed, not written, because those apps offer only the one-by-one save
+  with nothing else to add, while Google Drive survives the same test because
+  the offline trap, the folder landing, the Drive-versus-Photos untangling,
+  the select-all workaround, the ZIP catch, and the lost-taken-date limit are
+  all real things to add.
