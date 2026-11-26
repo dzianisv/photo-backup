@@ -24220,3 +24220,196 @@ unchanged (already "Back up photos & videos to a USB disk").
   its link-expiry and ZIP-on-Android traps, the no-whole-account-export wall,
   the owner-restriction, the save-date problem, and the served-copy-versus-
   Original quality question are all real things to add.
+### 207. "Save Amazon Photos photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 209, Nov 26, 2026 (WL-262).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already on Amazon Photos, downloaded on the Android phone itself,
+  onto a USB drive plugged into the phone, no computer — with the download step
+  stated (press and hold the photo until a check mark appears, tap the
+  three-dot menu, tap Download), the folder search stated (Amazon names no
+  folder: check Downloads first, then Pictures, then the Gallery's recent view),
+  the no-auto-download wall stated (Amazon Photos downloads nothing by itself;
+  the app's automatic feature runs the other way — Auto-Save uploads phone
+  photos up to Amazon Photos, not account photos down to the phone; a Family
+  Vault share keeps the photo inside the account, not a file), the album batch
+  route stated (no download-an-entire-album button — open the album and select
+  all the pictures you want — or the web download at amazon.com/photos, which
+  may arrive as a ZIP to unzip first), the no-whole-account-export wall stated
+  (the export unit is the selection; a whole account goes through the web
+  download or the privacy centre's Request My Data export), the
+  already-on-device note stated (if Download does not appear, the photo may
+  already be on the device), and the lost-taken-date and served-copy quality
+  limits stated (a downloaded photo shows the download date; the app download
+  offers no size choice, and Unmodified Originals lives on the web).
+  Our own generic articles rank top on both phrasings and never mention Amazon
+  Photos; the generic OTG guides never name Amazon Photos at all; the Amazon
+  Photos guides that exist stop at the phone or are about getting photos into
+  Amazon Photos, not out again onto a drive. The gap stands ONLY on that narrow
+  angle: the Amazon Photos photo, downloaded on the phone, onto a USB drive, no
+  computer, with the download step stated, the folder search stated, the
+  no-auto-download wall stated, and the Auto-Save-versus-Download untangling
+  stated plainly.
+- Current top results (scored Nov 26, 2026, live web search):
+  Phrasing 1, "save Amazon Photos to USB drive from Android phone no
+  computer" (supervisor, this run): only a Threads post that mentions Amazon
+  Photos as an upload destination, generic OTG guides from pcnmobile and
+  YouTube that never mention Amazon Photos, and our own transfer and
+  storage-full articles — no Amazon Photos-specific guide on this phrasing.
+  Phrasing 2, "transfer Amazon Photos to USB flash drive Android no computer"
+  (supervisor, this run): the same Threads post, the same YouTube OTG guide,
+  and our own factory-reset, storage-full, and transfer articles — no
+  Amazon-Photos-to-phone-to-USB guide with no computer exists on either
+  phrasing.
+  Corroboration (lead, this run): Amazon's own help, read first-hand, gives
+  the Android download verbatim — "Download Photos and Videos Using the
+  Android App" (digprjsurvey.amazon.com, Amazon help, fetched Nov 26, 2026,
+  crawled less than a minute before the read): "Download photos and videos to
+  your device for offline use." "Open Amazon Photos." "Press and hold a photo
+  or video until a check mark appears." "It's not possible to download entire
+  albums. Open the album, and select all the pictures you want to download."
+  "Select the ... icon." "Select Download. If a photo is already on the
+  device, the Download option may not display." The same help page names no
+  folder for the download — the folder claim is therefore a search, not a
+  fact: Android Central says only that downloaded photos and videos "will be
+  stored in Files", itechguides and robots.net say Gallery or Downloads or a
+  dedicated Amazon Photos folder, and the Android folder guides agree only
+  that Downloads (Internal storage/Download) and Pictures are the first
+  places to check, with the exact folder varying by device, Android version,
+  permissions, and app build. The Auto-Save direction is Android Central
+  (Profile, Photo Settings, Auto-Save — toggle on Photos, Videos, or both —
+  uploads camera photos to Amazon Photos, not the other way). The storage
+  numbers are Amazon's own description via itechguides and makeuseof: Prime
+  members get unlimited full-resolution photo storage, 5 GB for videos and
+  other files; non-Prime Amazon customers get 5 GB for photos and videos
+  combined; videos always count against the limit, Prime included. Family
+  Vault is up to six members on a Prime account, each with their own account
+  (seniortechadvisor, makeuseof); shared and Family Vault downloads need an
+  ownership and access check per item (seedofyou). The web route is
+  amazon.com/photos, select, Download, browser Downloads folder (robots.net,
+  itechguides), with several files possibly arriving as one ZIP (robots.net);
+  the whole-account data export is privacy.amazon.com, Request My Data, days
+  to prepare (ditchthemega, reported, not tested this run). The quality
+  warning is itechguides: a download should be checked for metadata, edits,
+  Live Photo data, and motion-photo packaging before the cloud copy is
+  deleted, and Amazon Photos lists Google Motion Photos and Samsung Motion
+  Photos as unsupported. The web download options (Unmodified Originals,
+  Highest Resolution, Most Compatible) are itechguides and robots.net. No
+  article — only the comparison-article link in "On your phone instead" — and
+  no install count for SnapDisk (none exists) and no VaultDrive install figure.
+- Honest centre (verified from the code at base e0f943a and the live sources
+  above, this run, Nov 26, 2026, not assumed): a photo on Amazon Photos is not
+  on your phone until you download it — Amazon Photos is a photo library on
+  Amazon's servers, not a folder on your phone, and the file appears only when
+  you download it. The download is press and hold the photo until a check mark
+  appears, tap the three-dot menu, and tap Download — Amazon's own help states
+  it verbatim — and the file lands in shared storage, visible in your Gallery
+  and in Files. Amazon names no folder: check Downloads first (Internal
+  storage/Download), then Pictures, then the Gallery's recent view — the folder
+  is a search, stated as such, and no fixed folder is claimed anywhere in the
+  article. From a gallery view there is no Save Gallery equivalent: Amazon's
+  help says entire albums cannot be downloaded, so open the album and select
+  all the pictures you want, or use the web download, which may arrive as a ZIP
+  to unzip first. Amazon Photos downloads nothing by itself: there is no
+  auto-download and no setting that turns one on, and the app's automatic
+  feature runs the other way — Auto-Save uploads your phone photos up to
+  Amazon Photos — while a Family Vault share keeps the photo inside the
+  account, not a file. There is no whole-account export in the app: the export
+  unit is the selection, and a whole account goes through the web download
+  album by album or the privacy centre's Request My Data export. The date
+  problem is a download problem for Amazon Photos, not a cloud problem: the
+  file is written when you download it, so it sorts by its download date
+  (DATE_MODIFIED fallback), and the taken date may not survive Amazon's copy —
+  stated as the expected case, not as a certainty, because no source this run
+  tested the taken date after an in-app download — unlike OneDrive, where the
+  taken date can already be replaced at upload. The quality problem is a copy
+  problem: the app download is Amazon's served copy with no size choice, and
+  Unmodified Originals lives on the web download options. If the Download
+  option does not appear, the photo may already be on the device — Amazon says
+  so — so check the Gallery before assuming the download failed, and there is
+  no bulk route for someone else's photos beyond what the owner shared — the
+  series does not endorse third-party downloaders, several of which ask for an
+  Amazon login they do not need. The default run covers a downloaded Amazon
+  Photos photo that shows in the gallery: it reads the media index with no
+  folder filter (queryMediaStoreOldestFirst :23-36; queryMediaTable :38, the
+  query call passes selection null :60; Images + Videos tables :23-36;
+  DATE_TAKEN with DATE_MODIFIED fallback :47-48, :56-58, oldest-first via
+  BackupEngine.sortOldestFirst), so a .jpg in Downloads or Pictures copies like
+  any other photo — the route is conditional on the photo being downloaded as a
+  file at all, stated WL-246 form, not asserted outright. One honest limit inside
+  that coverage: a downloaded photo shows the download date, so it sorts by its
+  download date (DATE_MODIFIED fallback) rather than the date the photo was
+  taken unless the EXIF taken date survived — stated in the TL;DR and in "The
+  date problem". The From picker route is code-supported but UNTESTED end to end
+  on these exact folders: listTreeFiles walks the folder directly (:90-97) and
+  does not depend on the media index, isMediaName (:125-128) keeps only
+  IMAGE_EXTENSIONS (:131-134) and VIDEO_EXTENSIONS (:135-137), the picker is
+  ActivityResultContracts.OpenDocumentTree with no folder pre-selected
+  (MainActivity.kt:62, :71), and the code holds zero "amazon" matches in the
+  whole source tree. Screen-off continuation under battery saver is UNVERIFIED
+  — the repo holds no wake lock and no battery-saver handling (grep across all
+  main-source .kt files: none) — stated in the TL;DR and in "What to avoid"
+  (WL-182 form). Android 15 dataSync 6-hour budget: BackupService.onTimeout
+  pauses cleanly with a message (service/BackupService.kt:134, WL-34). Every
+  file is size-verified after copying (BackupEngine.kt:103-108 shouldSkip/
+  verify; CopyResult.Copied only after verify passes, :126). FAT32 files >=4
+  GiB skipped with their reason (service/BackupService.kt:428-435). Default
+  From /sdcard/DCIM and To /disk/DCIM (BackupPrefs.kt:50,53), no INTERNET
+  permission (0 occurrences in the manifest), no Google Play Services
+  dependency (0 matches for com.google.android.gms / play-services in the
+  build — re-checked this run), no all-files access (no
+  MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24 (app/build.gradle.kts:12,
+  Android 7.0), applicationId dev.dzianisv.snapdisk (app/build.gradle.kts:11).
+  Pro $9.99 once (ProPrefs.kt:40), 5 GB free per run (:43). "SnapDisk copies,
+  it never deletes" present — the only .delete() calls in the code are on
+  SnapDisk's own half-finished .part files (BackupEngine.kt:176, :207;
+  service/BackupService.kt:385, :477). No VaultDrive price is stated in this
+  article — only the comparison-article link text once. The 1 "install" form
+  in the article is benign ("with the Amazon Photos app installed"); 1 "rating"
+  inside "operatingSystem"; the "download" forms are benign (Downloads folder,
+  Download menu wording, downloaded photos — no counts claimed). The 1
+  "Google Play" mention is factual ("no Google Play Services dependency"),
+  same form as
+  WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240 and WL-193. Read
+  time 14 min from the word count (10,417 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/amazon-photos-to-usb.html verified 0 collisions in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt before writing;
+  "amazon-photos" returns 0 matches in feed.xml, sitemap.xml, blog index,
+  llms.txt, llms-full.txt, searches.md, and WORKLOG.md pre-write, and 0
+  "amazon-photos" slugs in docs/ pre-write; the code holds 0 "amazon" matches
+  in the whole source tree. The incidental "amazon" mentions are not articles:
+  the feed, blog index, and llms.txt each hold one "Amazon" inside the Doro
+  article's description; llms-full.txt holds four (Hammer and Doro search rows,
+  a child-phone row); searches.md holds eight — an Amazon Drive FAQ line, an
+  amazonaws.com link, Amazon-derived product listings, and two lines that list
+  Amazon Photos among other cloud services ("Google One, Amazon Photos,
+  OneDrive, and a computer") — never scored, never killed; WORKLOG.md holds
+  two (an amazonaws.com link and the same Amazon Drive FAQ line). There are no
+  near matches from other articles — no earlier article is an Amazon Photos
+  article — and the near matches are the other cloud articles
+  (google-drive-photos-to-usb.html, dropbox-photos-to-usb.html,
+  onedrive-photos-to-usb.html, icloud-photos-to-usb.html) and the other
+  social-app articles (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html,
+  messenger-photos-to-usb.html, viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html, imo-photos-to-usb.html,
+  pinterest-photos-to-usb.html, reddit-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html,
+  x-twitter-photos-to-usb.html, tumblr-photos-to-usb.html,
+  flickr-photos-to-usb.html, smugmug-photos-to-usb.html) — all different,
+  already-live articles, untouched, and the Google Drive, Dropbox, OneDrive,
+  iCloud, WhatsApp, Telegram, Messenger, Viber, Kik, WeChat, IMO, Pinterest,
+  Reddit, Instagram, Facebook, Snapchat, TikTok, X, Tumblr, Flickr, and SmugMug
+  ones linked as series companions. A docs/ listing this run
+  confirms Amazon Photos is the next subject in our series with no article —
+  WhatsApp, Telegram, Instagram, Facebook, Snapchat, TikTok, WeChat,
+  Messenger, Viber, Kik, IMO, Pinterest, Reddit, X, Tumblr, Flickr, SmugMug,
+  Google Drive, Dropbox, OneDrive, and iCloud all have theirs already; the
+  Signal (WL-237), Discord, LINE, and KakaoTalk rows were killed, not written,
+  because those apps offer only the one-by-one save with nothing else to add,
+  while Amazon Photos survives the same test because the no-auto-download wall,
+  the unnamed-folder search, the Auto-Save-versus-Download untangling, the
+  no-album-download wall, the web-download ZIP trap, the no-whole-account-export
+  wall, the already-on-device note, the Prime storage limits, the Family Vault
+  sharing check, the download-date problem, and the served-copy-versus-
+  Unmodified-Originals quality question are all real things to add.
