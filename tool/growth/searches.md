@@ -23194,3 +23194,225 @@ unchanged (already "Back up photos & videos to a USB disk").
   select-all workaround, the Camera roll folder, the no-download-all limit,
   the direct-pick route, and the lost-taken-date limit — lost twice, at upload
   and at download — are all real things to add.
+### 202. "Save iCloud photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already stored in iCloud Photos, downloaded on the Android
+  phone itself, onto a USB drive plugged into the phone, no computer — with the
+  browser route stated (no iCloud app for Android, iCloud.com/photos in Chrome,
+  sign in with the Apple Account, Apple's own download page), the landing folder
+  stated (Downloads), the format choice stated (default is the most compatible
+  format for the device; Unmodified Originals in More Download Options keeps
+  the file as captured), the Live Photo split stated (a Live Photo downloads as
+  two files, a still and a .MOV), the iCloud-versus-Photos-versus-Drive
+  untangling stated (iCloud is a photo library, Photos is a photo library too
+  but a different account, Drive is a file store with different menu words),
+  the album route stated (no download-the-whole-library button, up to 1,000
+  photos at a time, one select-all pass per album), the direct-pick route
+  stated (Chrome's Ask-where-to-save-files picker — SD card documented, USB
+  untested), and the lost-taken-date limit stated (a downloaded photo may show
+  the download date, and whether it does depends on the format picked before
+  the download). Our own generic articles rank top on one phrasing and never
+  mention iCloud; the generic OTG guides never name iCloud at all; the
+  iCloud guides that exist stop at the phone or route through a computer.
+  The gap stands ONLY on that narrow angle: the iCloud photo, downloaded on the
+  phone into Downloads, onto a USB drive, no computer, with the browser route
+  stated, the folder stated, the format choice stated, the Live Photo split
+  stated, and the iCloud-versus-Photos-versus-Drive untangling stated plainly.
+- Current top results (scored Nov 25, 2026, live web search):
+  Phrasing 1, "save iCloud photos to USB drive from Android phone no
+  computer" (supervisor, this run): only generic phone-to-USB guides — the
+  VaultDrive page on coticsy.com (a rival app page, not a guide, and it says
+  nothing about iCloud), the pixoneye guide, the itechguides guide, and the
+  mefmobile guide, all of which start from photos already on the phone and
+  never mention iCloud — plus the rottenwifi guide, which does mention iCloud
+  and routes it through a computer explicitly. No guide joins photos already
+  in iCloud to a download on the phone to a copy to USB with no computer.
+  Phrasing 2, "transfer iCloud photos to USB flash drive Android no
+  computer" (supervisor, this run): the same generic guides, the same
+  VaultDrive page, and the same rottenwifi computer route. No
+  iCloud-to-phone-to-USB guide with no computer exists on either phrasing.
+  Corroboration (lead, this run): Apple's own download page
+  (support.apple.com/en-us/111762, "Download iCloud photos and videos",
+  published April 10, 2026, read live this run) gives the phone flow verbatim
+  — go to iCloud.com/photos, sign in, tap Select, tap one or more photos or
+  videos, you can select up to 1,000 at a time, tap the More button, choose
+  Download [number] Items, or tap More Download Options for Unmodified
+  Originals (format as captured or imported), Highest Resolution (typically
+  HEIC or H.265), or Most Compatible (JPEG or MP4/H.264) — and its opening
+  line, "In a web browser on any device, you can find your iCloud Photos at
+  iCloud.com/photos after you sign in with your Apple Account"; the iCloud
+  user guide (support.apple.com/en-nz/guide/icloud/mmb5dbaf376f, read live
+  this run) adds that photos and videos are downloaded in the most compatible
+  format for the device you are currently using, and that on a phone or
+  tablet you tap the icon in the bottom-right corner, tap Download, then tap
+  Download again. Android Authority ("How to use iCloud for Android",
+  tested on a Pixel 8a running Android 15 with Chrome 134) states the wall in
+  one line — "There is no iCloud app for Android. You need to access it from a
+  browser." — and that viewing, downloading, and sharing photos from iCloud
+  works from the browser; SlashGear and MacPaw give the same Select, More,
+  Download steps with the two-factor sign-in. Apple's system-requirements page
+  (support.apple.com/118308, published November 12, 2026) lists browsers for
+  Mac and PC only — Android is not on it — and the web-only access page
+  (support.apple.com/en-us/102447) says iCloud.com supports the latest
+  versions of Safari, Firefox, Chrome, Edge, and Opera, and that web-only
+  iCloud accounts have a 1 GB storage limit. The Live Photo split is agreed
+  by three independent guides — tinygrab ("Live Photos will be downloaded as
+  a still image and a .MOV video file"), thewindowsclub (the iCloud.com
+  download saves both JPEG and MOV files), windowsreport (the same) — while
+  Apple's download page does not spell it out. Chrome on Android saves
+  downloads to the device's Downloads folder (howtogeek; unstuckguide: with
+  the prompt off, all Chrome downloads land in the shared Download folder).
+  VaultDrive's price, re-verified from the App Store page live this run
+  (apps.apple.com/us/app/vaultdrive-usb-photo-backup/id6772883827, crawled
+  under a minute before reading): the In-App Purchases list shows
+  "VaultDrive Pro Lifetime $29.99" — the current Pro Lifetime price — and the
+  legacy "VaultDrive: USB Backup $19.99" alongside it, plus "$9.99". No
+  VaultDrive price is stated in this article — only the comparison-article
+  link in "On your phone instead" — and the $19.99 figure is never presented
+  as the current Pro Lifetime price anywhere in the row or the article.
+- Honest centre (verified from the code at base a0a5086 and the live sources
+  above, this run, Nov 25, 2026, not assumed): a photo in iCloud is not
+  on your phone until you download it — iCloud Photos is Apple's cloud photo
+  library, and the file appears only when you download it. There is no iCloud
+  app for Android: Apple makes none, and its system-requirements page lists
+  browsers for Mac and PC only — Android is not on it — so the route is the
+  browser, and in practice Chrome on Android works (Android Authority, Pixel
+  8a, Android 15, Chrome 134), stated as tested, not supported, with the
+  Desktop-site switch as the first fix if sign-in stalls. The download lands
+  in the phone's Downloads folder (Chrome's default; the Ask-where-to-save
+  setting can change it per file). The format choice is the step that decides
+  what file you get: the default is the most compatible format for the device
+  (iCloud user guide, quoted above), so a HEIC photo arrives as a JPEG and a
+  video as MP4 unless you pick Unmodified Originals in More Download Options
+  first — and the choice is per download, not a setting. A Live Photo
+  downloads as two files, a still and a .MOV (three guides, quoted above;
+  Apple's page does not spell it out), and the pairing does not survive: on
+  the drive they are two files, and no phone gallery plays them back as one
+  Live Photo. The multi-select ZIP question is UNREPORTED for the phone web
+  route — Apple's phone-flow page says "Download [number] Items" and says
+  nothing about the package, and one independent guide says individual files
+  or a ZIP archive — so the article states it as unreported, not as tested,
+  and tells the reader to check Downloads for separate files or one .zip
+  (unzip first, SnapDisk copies photos, not ZIP archives); the computer route
+  definitely produces a ZIP, and the article says so. The
+  iCloud-versus-Photos-versus-Drive untangling: iCloud Photos is a photo
+  library — photos backed up there live in a library organised by date and
+  album; Google Photos is a photo library too, a different account in a
+  different app; Drive is a file store — photos you put there are files in
+  folders — and the menu words differ, Drive says Download from a file's
+  menu, iCloud says Download from the Photos web app's More button after
+  Select. A photo downloaded with Unmodified Originals is the same file
+  captured — same pixels, same resolution, same format — because that option
+  is the format as captured or imported; a photo downloaded with the default
+  is the same picture re-encoded. The date problem is a format problem for
+  iCloud, not a cloud problem: no source this run says iCloud rewrites the
+  taken date at upload — iCloud Photos stores the original file — unlike
+  OneDrive, where Microsoft's own forum says the taken date can be replaced
+  by the upload date before you ever tap Save. At download, Unmodified
+  Originals keeps the file's EXIF Date Taken intact inside the file — that is
+  the expected case, stated as expected, not as a certainty, because Apple
+  does not say what the re-encode does to EXIF — while the default Most
+  Compatible re-encode is the step most likely to rewrite the metadata; and
+  the file's modified date will be the download date either way. The article
+  states the download-date order as the possible case (DATE_MODIFIED
+  fallback) and tells the reader to download one photo and check the
+  gallery's date order before downloading a thousand. The direct-pick route:
+  Chrome's Ask-where-to-save-files setting opens a per-download picker, and
+  a mounted USB drive may appear in the same list; stated as try-first,
+  reported for SD cards, UNTESTED for USB-OTG on this phone, with Downloads
+  as the road that always works. The album route: no download-the-whole-
+  library button (Apple gives a 1,000-at-a-time limit instead), the workaround
+  is Select, tap the photos, More, Download [number] Items; a folder with
+  subfolders does not apply here — albums are flat — but a library of ten
+  thousand is ten passes, so the whole-library job is the computer route.
+  Shared albums download the same way, but the owner can revoke access, so
+  download promptly.
+  The default run covers a downloaded iCloud photo that shows in the gallery:
+  it reads the media index with no folder filter (queryMediaStoreOldestFirst
+  :23-36; queryMediaTable :38, the query call passes selection null :60;
+  Images + Videos tables :23-36; DATE_TAKEN with DATE_MODIFIED fallback
+  :47-48, :56-58, oldest-first via BackupEngine.sortOldestFirst), so a .jpg,
+  .heic, or .png in Downloads copies like any other photo — the route is
+  conditional on the photo being downloaded as a file at all, stated WL-246
+  form, not asserted outright. One honest limit inside that coverage: a
+  downloaded photo may show the download date, so it sorts by its download
+  date (DATE_MODIFIED fallback) rather than the date the photo was taken
+  unless the EXIF taken date survived — stated in the TL;DR and in "The date
+  problem". A Live Photo's still and .mov both copy: .heic is in
+  IMAGE_EXTENSIONS (:131-134: .jpg .jpeg .png .heic .heif .webp .gif .bmp
+  .dng .raw .avif .jxl) and .mov is in VIDEO_EXTENSIONS (:135-137: .mp4 .mov
+  .mkv .webm .3gp .m4v .avi). The From picker route is code-supported but
+  UNTESTED end to end on this exact folder: listTreeFiles walks the folder
+  directly (:90-97) and does not depend on the media index, isMediaName
+  (:125-128) keeps only IMAGE_EXTENSIONS (:131-134) and VIDEO_EXTENSIONS
+  (:135-137), the picker is ActivityResultContracts.OpenDocumentTree with no
+  folder pre-selected (MainActivity.kt:62, :71), and the code holds zero
+  "icloud" matches in the whole source tree. Screen-off continuation under
+  battery saver is UNVERIFIED — the repo holds no wake lock and no
+  battery-saver handling (grep across all main-source .kt files: none) —
+  stated in the TL;DR and in "What to avoid" (WL-182 form). Android 15
+  dataSync 6-hour budget: BackupService.onTimeout pauses cleanly with a
+  message (service/BackupService.kt:134, WL-34). Every file is size-verified
+  after copying (BackupEngine.kt:103-107 shouldSkip/verify; CopyResult.Copied
+  only after verify passes). FAT32 files >=4 GiB skipped with their
+  reason (service/BackupService.kt:428-433). Default From /sdcard/DCIM and To
+  /disk/DCIM (BackupPrefs.kt:50,53), no INTERNET permission (0 occurrences
+  in the manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms / play-services in the build — re-checked this
+  run), no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk
+  24 (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11). Pro $9.99 once
+  (ProPrefs.kt:40), 5 GB free per run (:43). "SnapDisk copies, it never
+  deletes" present — the only .delete() calls in the code are on SnapDisk's
+  own half-finished .part files (BackupEngine.kt:176, :207;
+  service/BackupService.kt:385, :477). No VaultDrive price is stated in this
+  article — only the comparison-article link in "On your phone instead" —
+  and no install count for SnapDisk (none exists) and no VaultDrive
+  install figure. The article's VaultDrive mentions are 3: the VaultDrive
+  page named as a search result twice (a rival app page, not a guide, no
+  price) and the comparison-article link text once. The 2 "install" forms in
+  the article are benign (Chrome installed; "Do not install a third-party
+  iCloud app"); 1 "rating" inside "operatingSystem"; the "download" forms
+  are benign (Downloads folder, Download menu wording, downloaded photos —
+  no counts claimed). The 1 "Google Play" mention is factual ("no Google
+  Play Services dependency"), same as WL-233/WL-234/WL-235/WL-236/WL-238/
+  WL-239/WL-240 and WL-193. Read time 13 min from the word count (9,748
+  words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/icloud-photos-to-usb.html verified 0 collisions in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt before writing;
+  "icloud" returns 0 matches in sitemap.xml and 0 icloud slugs in docs/
+  pre-write, and the only pre-write "icloud" matches are incidental lines
+  inside other articles — 1 in feed.xml (the switching-phones description),
+  1 in blog index (the switching-phones card excerpt), 1 in llms.txt (the
+  switching-phones line), 11 in llms-full.txt (inside the WhatsApp, Hammer,
+  switching-phones, and other articles' full text) — none of them a
+  dedicated iCloud article or an iCloud slug; the only "iCloud" matches in
+  searches.md are incidental lines inside other queries' rows (a cloud list
+  mention, a Takeout line, iPhone-transfer rows, the "without iCloud" and
+  "iCloud Photos Optimize iPhone Storage" rows — no dedicated iCloud query
+  row); and no docs/icloud-photos-to-usb.html exists pre-write (docs/
+  listing this run: no file with "icloud" — the nearest are the Google Drive,
+  Dropbox, and OneDrive articles, all different). There are no near matches
+  from other articles — no earlier article is an iCloud article — and the
+  near matches are the other cloud articles (google-drive-photos-to-usb.html,
+  the 200th how-to, dropbox-photos-to-usb.html, the 201st how-to, and
+  onedrive-photos-to-usb.html, the 202nd how-to, all linked as sibling cloud
+  articles) and the other social-app articles (whatsapp-photos-to-usb.html,
+  telegram-photos-to-usb.html, messenger-photos-to-usb.html,
+  viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html, imo-photos-to-usb.html,
+  pinterest-photos-to-usb.html, reddit-photos-to-usb.html) — all different,
+  already-live articles, untouched, and the WhatsApp, Telegram, Messenger,
+  Viber, Kik, WeChat, IMO, Pinterest, Reddit, Google Drive, Dropbox, and
+  OneDrive ones linked from the new article as series companions. A docs/
+  listing this run confirms iCloud is the next subject in our series with no
+  article — WhatsApp, Telegram, Instagram, Facebook, Snapchat, TikTok, WeChat,
+  Messenger, Viber, Kik, IMO, Pinterest, Reddit, Google Drive, Dropbox, and
+  OneDrive all have theirs already; the LINE and KakaoTalk rows were killed,
+  not written, because those apps offer only the one-by-one save with nothing
+  else to add, while iCloud survives the same test because the no-app wall,
+  the browser route, the format choice, the Live Photo split, the 1,000-at-a-
+  time limit, the unreported multi-select ZIP, the date-as-format-problem,
+  and the direct-pick route are all real things to add.
