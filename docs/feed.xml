@@ -1406,5 +1406,12 @@
       <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
       <description>Your Drive photos are files in the cloud, not files on your phone. Download them from the Drive app — they land in Downloads — then back them up to USB.</description>
     </item>
+    <item>
+      <title>Save Dropbox photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/dropbox-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/dropbox-photos-to-usb.html</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Dropbox photos are files in the cloud, not files on your phone. Export them from the Dropbox app — they land in Downloads — then back them up to USB.</description>
+    </item>
 </channel>
 </rss>
