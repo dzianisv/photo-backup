@@ -23774,7 +23774,7 @@ unchanged (already "Back up photos & videos to a USB disk").
   Download menu wording, downloaded photos — no counts claimed). The 1
   "Google Play" mention is factual ("no Google Play Services dependency"),
   same as WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240 and WL-193. Read
-  time 13 min from the word count (9,350 words at /750).
+  time 12 min from the word count (9,350 words at /750).
 - Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
   docs/tumblr-photos-to-usb.html verified 0 collisions in feed.xml,
   sitemap.xml, blog index, llms.txt, and llms-full.txt before writing;
