@@ -21977,3 +21977,184 @@ unchanged (already "Back up photos & videos to a USB disk").
   linked from the new article as series companions. A docs/ listing this run
   confirms WebP is the last format in our series with no article — RAW,
   HEIC, burst, slow-motion, timelapse, and GIF all have theirs already.
+
+### 195. "Save AVIF photos to a USB drive from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a .avif file, saved on an Android phone, onto a USB drive plugged into the
+  phone, no computer — with the route split stated (the default run covers a
+  .avif only if the phone's media scanner indexed it, which is unverified;
+  the From picker skips .avif files entirely, proven from the code), the
+  manual copy given as the certain route, the HDR/transparency check given
+  (open one AVIF back from the drive and watch it open), and the file hunt
+  given before the copy (Downloads, Pictures, DCIM/Camera). Our own
+  transfer-photos article ranks top and never mentions AVIF; the generic
+  OTG guides never name AVIF at all. The gap stands ONLY on
+  that narrow angle: the .avif file, saved on the phone, onto a USB drive, no
+  computer, with the default run's coverage hedged honestly, the picker skip
+  proven from the code, and the folder pick NOT offered as a route for AVIF.
+- Current top results (scored Nov 25, 2026, live web search):
+  Phrasing 1, "save AVIF photos to USB drive from Android"
+  (lead, this run): our own transfer-photos article ranks first and never
+  mentions AVIF; then generic OTG copy guides (groovypost, Pixoneye, YouTube
+  ch1evyu5PPM, Google Photos community thread) — plug the drive in,
+  copy the folders in the file manager, no AVIF folder, no .avif extension,
+  no HDR check. No AVIF-specific guide exists.
+  Phrasing 2, "copy AVIF images Android phone to USB flash drive OTG"
+  (supervisor, this run): generic OTG copy guides only — Samsung community
+  thread, Facebook reel, thedroidguy, itechguides, Coolmuster, Wondershare
+  MobileTrans — plug the drive in, copy the folders in the file manager, no
+  AVIF folder, no .avif extension, no picker warning. No AVIF-specific guide
+  exists on either phrasing.
+- Honest centre (verified from the code at base 3cb3bb8 and the live sources
+  above, this run, Nov 25, 2026, not assumed): an AVIF is an ordinary .avif
+  file, and everything worth keeping lives inside the file itself — the
+  smaller size is the compression (roughly half a JPEG at the same quality),
+  the HDR is 10-bit colour and a wide gamut in the file, the transparency is
+  an alpha channel in the file, and the animation, for an animated AVIF, is a
+  sequence of frames, exactly like a GIF. Copy the .avif and all of it comes
+  with it, byte-for-byte. The trap is the route, and it bites in opposite
+  directions. Most images saved from the web are AVIFs or WebPs already,
+  because the sites serve them that way — Chrome saves the exact bytes the
+  server sent, and the server picks the format, so a long-press save in
+  Chrome lands in Downloads as a .avif with no fanfare; Chrome on Android
+  saves every download to the shared Downloads folder by default, Internal
+  Storage/Download, and the guides agree on the path across manufacturers.
+  A few recent phones save camera photos as AVIF now that Android 14 made
+  AVIF encoding part of the platform — the encoder is mandatory from Android
+  14 for the format's baseline profile — so a phone that saves in AVIF is a
+  recent one, and the files land in DCIM/Camera. A Motion Photo whose primary
+  image is AVIF ends in .avif — Google's Motion Photo format 1.0 says the
+  primary still can be a JPEG, a HEIC, or an AVIF, with the video appended,
+  filename pattern ending MP then .avif — and it sits in DCIM/Camera with
+  both parts inside the one file. Android 12 and later decode AVIF (8-bit;
+  10-bit optional, check ImageDecoder.isMimeTypeSupported); on Android 11
+  and earlier the gallery cannot decode AVIF at all, and the check has to
+  happen in Chrome, which has shown AVIF since version 89. Renaming a file
+  does not convert it — a file called photo.avif holds AVIF data, and
+  renaming it to photo.jpg leaves AVIF data inside a file called .jpg. The
+  check is the file extension, not the app that showed it to you: a file
+  that ends in .avif is an AVIF, and a file that ends in .jpg is a JPEG,
+  even if it looks identical on screen. The check after the copy is opening
+  one AVIF back from the drive and looking at it — it should open, and on a
+  screen that shows HDR it should show the bright range — because an AVIF
+  that lost its HDR or its transparency still looks like a photo in every
+  other check.
+  SnapDisk's default run covers the saved .avif files the index holds, with
+  no folder to pick — proven, not assumed, for the query shape: it reads
+  MediaStore images + videos with no folder filter (PhotoQuery.kt:23-36, the
+  query call passes no selection at all), oldest-first by date taken with a
+  date-modified fallback (PhotoQuery.kt:56-59; BackupEngine.kt:95-100), and
+  the query carries no extension filter, so a .avif the Images table holds
+  is returned the same way a JPEG is. But whether the table holds a .avif at
+  all is NOT proven — the hedge, stated in the TL;DR, the wall section,
+  Method 1, and the code section: the scanner resolves a file's MIME type
+  from its extension (current MediaProvider code: ModernMediaScanner
+  resolveMimeType calls MimeTypeMap.getMimeTypeFromExtension, and a null
+  result means unknown type, not image), Android's own developer
+  documentation states each collection is organised by the primary MIME
+  type and image/* content is indexed under Images, and an AVIF's MIME type
+  is image/avif — but the map itself is where the proof runs out: the old
+  extension table in MediaFile is a deprecated no-op stub in current AOSP
+  (fetched this run from aosp-mirror master), libcore's built-in default
+  MimeMap is a 6-entry fallback (pdf, jpg, bmp, html, text, java) with the
+  note that framework code is expected to replace it at runtime, and the
+  format-code table lists HEIF but has no AVIF entry (MtpConstants, fetched
+  this run). So the default run covers a .avif on a phone whose scanner
+  indexed it and copies zero of them on a phone whose scanner did not, and
+  the article does not guess which phone the reader has. The From picker
+  route is certain in the other direction — proven from the code, not a
+  hedge: it walks the folder tree directly (PhotoQuery.kt:90-97,
+  listTreeFiles/walkTree) and keeps only the extensions in the recognised
+  list (PhotoQuery.kt:124-127, isMediaName), and .avif is NOT in that list
+  (PhotoQuery.kt:131-134: .jpg .jpeg .png .heic .heif .webp .gif .bmp .dng
+  .raw) — so the picker copies every photo in the folder except the AVIFs.
+  The certain route for a .avif is the file manager's manual copy (Method
+  2), and the default run is the try-first route. The one-line app fix —
+  adding ".avif" to IMAGE_EXTENSIONS — would make the picker route work for
+  AVIF the way it already does for HEIC and WebP; flagged to the supervisor
+  as a finding, not done in this task. The default run copies the WHOLE
+  MediaStore library, not DCIM only — the query reads every indexed image
+  and video on the phone, whatever folder it sits in (WL-207 correction,
+  stated correctly throughout the article) — and it reads both the images
+  table and the videos table, so it covers Downloads' AVIFs and Pictures'
+  AVIFs together, when the index holds them. The honest Method 1 is the
+  joined workflow: hunt the .avif files first in check order, make the file
+  before backing it up if the hunt comes up empty, never re-share an AVIF
+  to get it onto the drive, check the files are in Downloads, Pictures, or
+  DCIM/Camera, then run SnapDisk's default backup for the indexed AVIFs and
+  copy the rest by hand. Contrast honestly with the chat apps' conversions,
+  named without endorsing: an AVIF sent as a document lands as a .avif,
+  while an AVIF sent as a chat image can be re-encoded as a JPEG — and a
+  keyboard picture was served from a library and never touched storage. Only
+  save AVIFs you have permission to keep; the article makes no claim about
+  recovering AVIFs from a deleted chat, because the chat apps keep no .avif
+  file to recover once the chat is gone, and an AVIF served from a library
+  was never yours to recover.
+  SnapDisk facts re-verified from the code at base 3cb3bb8: Pro $9.99 once
+  (ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB free per-run cap
+  (ProPrefs.kt:43, 5L * 1024 * 1024 * 1024), oldest-first MediaStore
+  DATE_TAKEN (PhotoQuery.kt:56-59, sort DATE_TAKEN ASC with DATE_MODIFIED
+  fallback; BackupEngine.kt:95-100), size verification after copy
+  (BackupEngine.kt:103-108, shouldSkip/verify), Pause/Stop in the
+  notification (BackupService.kt:113, 115; NotificationHelper.kt:126-133),
+  FAT32 files >=4 GiB skipped with their reason
+  (BackupService.kt:428-433), default From /sdcard/DCIM and To /disk/DCIM
+  (BackupPrefs.kt:50,53), no INTERNET permission (0 occurrences in the
+  manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms / play-services in the build; only Play Billing,
+  billing-ktx 7.1.1, gradle/libs.versions.toml:21,50), no all-files access
+  (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24 (app/build.gradle.kts:12,
+  Android 7.0), applicationId dev.dzianisv.snapdisk (app/build.gradle.kts:11).
+  "SnapDisk copies, it never deletes" present — the only .delete() calls in
+  the code are on SnapDisk's own half-finished .part files
+  (BackupEngine.kt:176, :207; BackupService.kt:385, :477). Screen-off
+  continuation under battery saver is UNVERIFIED — the repo holds no wake
+  lock and no battery-saver handling (grep across all fetched main-source
+  .kt files: none) — stated in the TL;DR and in "What to avoid" (WL-182
+  form). Android 15 dataSync 6-hour budget: BackupService.onTimeout pauses
+  cleanly with a message (BackupService.kt:121-140, WL-34). VaultDrive,
+  named fairly from its live pages this run: choose your whole library,
+  chosen albums, or single photos ("Choose what to back up",
+  coticsy.com/vaultdrive.html), "Original quality, byte for byte" (same
+  page), free 200 files or 2 GB per backup (same page), Pro Lifetime $29.99
+  once on the App Store RE-VERIFIED live this run (App Store page, crawled
+  Nov 25, 2026 23:41 UTC: "VaultDrive Pro Lifetime $29.99" in the In-App
+  Purchases list), with Pro Monthly $7.99 and Pro Annual $19.99, and
+  $19.99 / $9.99 one-time "VaultDrive: USB Backup" purchases also listed
+  (separate legacy items, not Pro Lifetime) and no dollar price on the
+  vendor's own page ("See plans") — against SnapDisk Pro $9.99 once and 5
+  GB free per run with no file count. The article carries no install count
+  for SnapDisk (none exists) and no VaultDrive install figure. The 82
+  "installs/downloads/rating/stars" regex matches in the article are benign
+  (69 × "download" forms — 48 × "Downloads" folder name, 10 × "downloaded",
+  6 × "download", 5 × "Download" — 3 × "install" wording — installed from
+  the v0.1.2 APK, install unknown apps — 1 × "rating" inside
+  "operatingSystem" in the JSON-LD, 9 × "star" inside the verb "start"/
+  "starts"/"starting"/"Start" — no counts claimed). The 1 "Google Play"
+  mention is the factual "it is not on Google Play yet", same as
+  WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240 and WL-193. The 4
+  "VaultDrive" mentions are the fair comparison in "On your phone instead"
+  plus the comparison-article link, carrying the re-verified prices above.
+  Read time 14 min from the word count (10,467 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/avif-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, searches.md, and
+  WORKLOG.md before writing; "avif" (lowercase) returns 0 matches in
+  feed.xml, sitemap.xml, blog index, llms.txt, llms-full.txt, searches.md,
+  and WORKLOG.md; "AVIF" (uppercase) returns 1 incidental match in each of
+  llms-full.txt (Motion Photo article line, no slug), searches.md (:17184,
+  Motion Photo row passing mention), and WORKLOG.md (:844, Motion Photo row
+  passing reference) — and no docs/avif-photos-to-usb.html exists (docs/
+  listing this run: 199 html files before writing, none with "avif"). There
+  are no near matches from other articles — no earlier article is an AVIF
+  article — and the near matches are the other format articles
+  (raw-photos-to-usb, heic-photos-to-usb, burst-photos-to-usb,
+  slow-motion-videos-to-usb, timelapse-videos-to-usb, gif-photos-to-usb,
+  webp-photos-to-usb) and the messaging-app articles
+  (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html) — all
+  different, already-live articles, untouched, and the WebP, HEIC, Motion
+  Photo, RAW, GIF, WhatsApp, and Telegram ones linked from the new article
+  as series companions. A docs/ listing this run confirms AVIF is the last
+  format in our series with no article — RAW, HEIC, burst, slow-motion,
+  timelapse, GIF, and WebP all have theirs already.

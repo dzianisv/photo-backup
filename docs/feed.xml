@@ -1371,5 +1371,12 @@
       <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
       <description>A WebP is an ordinary .webp file — smaller than a JPEG, transparent like a PNG. The trap is stickers: WhatsApp keeps them in a folder the backup never sees.</description>
     </item>
+    <item>
+      <title>Save AVIF photos to a USB drive from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/avif-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/avif-photos-to-usb.html</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>An AVIF is an ordinary .avif file — smaller than a JPEG, with HDR inside. The catch: the From picker skips .avif files and the default run may not see them.</description>
+    </item>
 </channel>
 </rss>
