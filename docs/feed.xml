@@ -1392,5 +1392,12 @@
       <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
       <description>IMO photos are not on your phone until you save them — turn on Auto-Save in Settings, Chats, or long-press a photo to save it. Then back them up to USB.</description>
     </item>
+    <item>
+      <title>Save Reddit photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/reddit-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/reddit-photos-to-usb.html</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Reddit's Save button only bookmarks the post — tap the photo, use the three-dot menu, and the file lands in Pictures/Reddit. Then back it up to USB.</description>
+    </item>
 </channel>
 </rss>

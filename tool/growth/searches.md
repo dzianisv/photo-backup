@@ -22487,3 +22487,161 @@ unchanged (already "Back up photos & videos to a USB disk").
   theirs already; the LINE and KakaoTalk rows were killed, not written,
   because those apps offer only the one-by-one save with nothing else to
   add, while IMO has the Auto-Save switch.
+### 198. "Save Reddit photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a Reddit photo, saved from the app on an Android phone, onto a USB drive
+  plugged into the phone, no computer — with the menu save stated (tap the
+  photo full-screen, three-dot menu, Save — long-press removed in a 2025
+  update), the bookmark trap stated (the Save under a post only bookmarks
+  to reddit.com/user/<you>/saved/ and writes no file), the folder stated
+  (Pictures/Reddit, two independent sources), the gallery and v.redd.it
+  limits stated, and the bulk route named as a browser tool rather than an
+  app button that does not exist. Our own generic articles rank top on one
+  phrasing and never mention Reddit; the generic OTG guides never name
+  Reddit at all; the desktop tools need a computer. The gap stands ONLY
+  on that narrow angle: the Reddit photo, saved from the app into
+  Pictures/Reddit, onto a USB drive, no computer, with the menu save
+  stated, the bookmark trap stated, the folder stated, and the gallery
+  and v.redd.it limits stated plainly.
+- Current top results (scored Nov 25, 2026, live web search):
+  Phrasing 1, "save Reddit photos to USB drive from Android phone"
+  (supervisor, this run): generic Android-to-USB guides only (a YouTube
+  OTG tutorial, groovypost, an eyefi forum thread) plus our own
+  encrypted-photos article — plug the drive in, copy the folders, no
+  Reddit folder, no save step, no menu, no bookmark trap. No
+  Reddit-specific guide exists.
+  Phrasing 2, "download Reddit images to USB drive no computer"
+  (supervisor, this run): desktop tools only (Chrome extensions, Python
+  packages) — downloaders that need a computer to run, the opposite of
+  the job as stated. No phone-to-USB guide exists at all.
+  Phrasing 3, "how to save photos from Reddit app Android gallery
+  download location" (lead, this run — the third-phrasing gate): genuine
+  save guides (itechguides, gbtimes, hdstockimages) that name the
+  three-dot menu and the Downloads folder, the long-press-removal
+  reports (techissuestoday, pupuweb), and browser tools that unpack
+  galleries and v.redd.it videos (Gallerypad, ReditGrab, getindevice) —
+  all stop at the gallery or the browser download, none names
+  Pictures/Reddit, none warns the bookmark Save writes no file, none
+  gives the USB step. No Reddit-photos-to-USB guide exists on any of
+  the three phrasings.
+- Honest centre (verified from the code at base 50c328e and the live sources
+  above, this run, Nov 25, 2026, not assumed): a Reddit photo is an ordinary
+  image file once it is saved, and everything worth keeping lives inside
+  the file itself — copy the file and all of it comes with it,
+  byte-for-byte. The trap is the save, and it has two faces. First, the
+  button with the right name does the wrong thing: the bookmark-shaped Save
+  under a post adds the post to your personal Saved list at
+  reddit.com/user/<you>/saved/ — a bookmark tied to your Reddit account,
+  not a file written to your device: nothing appears in your camera roll,
+  your Photos app, or your Downloads folder (getindevice, verified live
+  this run). The file save lives somewhere else entirely: tap the photo to
+  open it full-screen, tap the three-dot menu in the top-right corner, and
+  choose Save — the wording varies by version, Save Image or Download
+  (gbtimes, hdstockimages, itechguides agree on the menu; pupuweb names
+  the option "Save"). Second, the gesture that used to work is gone:
+  Reddit removed the familiar long-press save from the mobile app in a
+  2025 update — a press-and-hold used to bring up "Copy Image" or "Save
+  Image", and two separate spring-2025 reports (techissuestoday, pupuweb)
+  describe the same removal, with the save moving behind the three-dot
+  menu. A pre-2025 guide that tells you to long-press describes an app
+  that no longer exists. The folder is pinned down, unusually for this
+  series, by two independent sources that agree exactly: a file-manager
+  guide lists "Reddit: Pictures/Reddit/" among the folders apps create
+  for themselves, and a sync guide gives "/Pictures/Reddit" as the folder
+  for images saved from social media apps — so the article states
+  Internal storage, Pictures, Reddit as verified, not as a check order.
+  Photos saved through the browser fallback land in Downloads instead,
+  which is the tell for which route saved them. The gallery limit: a
+  native Gallery post holds up to twenty images or GIFs (getindevice),
+  and the app does not natively support downloading entire albums
+  (gbtimes), so a gallery is one save per slide, or a browser tool that
+  unpacks the post — Gallerypad and ReditGrab, named without endorsement
+  and not tested, whose downloads land in Downloads. The video limit:
+  Reddit has never shipped a first-party way to export a native v.redd.it
+  video as a file, because it stores a native video's picture and its
+  sound as two separate DASH streams (getindevice) — the three-dot menu
+  offers no download that produces a file with sound, and the phone
+  fallback is a screen recording. A GIF-looking post may save as an MP4,
+  because it was a video all along (itechguides: "If Reddit saves an
+  MP4, the post probably contains a video rather than a true GIF").
+  Reddit does not host every image — Imgur and other hosts need the
+  browser fallback (Share, Copy Link, open in a browser, long-press,
+  Download image; itechguides). Reddit photos are ordinary .jpg / .png /
+  .gif files (gbtimes: "the most common being JPEG, PNG, and GIF"), all
+  in IMAGE_EXTENSIONS, so the extension list is not the trap here. The
+  default run covers a saved Reddit photo that shows in the gallery: it
+  reads the media index with no folder filter (queryMediaTable :38, the
+  query call passes selection null :60; Images + Videos tables :23-36;
+  DATE_TAKEN with DATE_MODIFIED fallback :47-48, :56-59, oldest-first via
+  BackupEngine.sortOldestFirst :95-100), so a .jpg the index holds copies
+  like any other photo — the route is conditional on the photo being
+  saved as a file at all, stated WL-246 form, not asserted outright. The
+  From picker route is code-supported but UNTESTED end to end on this
+  exact folder: listTreeFiles walks the folder directly (:90-97) and does
+  not depend on the media index, isMediaName (:125-128) keeps only
+  IMAGE_EXTENSIONS (:131-134: .jpg .jpeg .png .heic .heif .webp .gif .bmp
+  .dng .raw .avif .jxl — the .jxl WL-250 added is in the list now), the
+  picker is ActivityResultContracts.OpenDocumentTree with no folder
+  pre-selected (MainActivity.kt:62, :71), and the code holds zero
+  "reddit" matches in the whole source tree. Screen-off continuation
+  under battery saver is UNVERIFIED — the repo holds no wake lock and no
+  battery-saver handling (grep across all main-source .kt files: none) —
+  stated in the TL;DR and in "What to avoid" (WL-182 form). Android 15
+  dataSync 6-hour budget: BackupService.onTimeout pauses cleanly with a
+  message (BackupService.kt:134, WL-34). Every file is size-verified
+  after copying (BackupEngine.kt:103-107 shouldSkip/verify; CopyResult.Copied
+  only after verify passes). FAT32 files >=4 GiB skipped with their
+  reason (BackupService.kt:428-433). Default From /sdcard/DCIM and To
+  /disk/DCIM (BackupPrefs.kt:50,53), no INTERNET permission (0 occurrences
+  in the manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms / play-services in the build — re-checked this
+  run), no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk
+  24 (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11). Pro $9.99 once
+  (ProPrefs.kt:40), 5 GB free per run (:43). "SnapDisk copies, it never
+  deletes" present — the only .delete() calls in the code are on SnapDisk's
+  own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). No VaultDrive price is stated in this
+  article — only the comparison-article link in "On your phone instead" —
+  and no install count for SnapDisk (none exists) and no VaultDrive
+  install figure. The 22 "download" forms in the article are benign
+  (Downloads folder, Download image wording, browser downloaders, the
+  footer Download link — no counts claimed); the 7 "install" forms are
+  benign (installed from the v0.1.2 APK, install unknown apps, nothing
+  to install, installation); 1 "rating" inside "operatingSystem"; 10
+  lowercase "star" inside the verbs "start"/"starts"/"starting"/"restart"
+  — no counts claimed. The 1 "Google Play" mention is factual ("it is not
+  on Google Play yet"), same as WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/
+  WL-240 and WL-193. The 1 "VaultDrive" mention is the comparison-article
+  link only, carrying no price. Read time 12 min from the word count
+  (9,144 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/reddit-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, searches.md, and
+  WORKLOG.md before writing; "reddit" word-boundary returns 0 matches in
+  feed.xml, sitemap.xml, blog index, llms.txt, and llms-full.txt, and the
+  only match in searches.md is the single incidental mention at line 18877
+  (a platform list inside the Query 167 Facebook row — "Facebook,
+  Instagram, X, DailyMotion, Vimeo, TikTok, Reddit" — NOT a Reddit query
+  row); "Reddit" (uppercase) returns 0 matches in feed.xml, sitemap.xml,
+  blog index, llms.txt, and llms-full.txt, and the only WORKLOG.md match
+  is the WL-209 TikTok row's incidental list mention; and no
+  docs/reddit-photos-to-usb.html exists (docs/ listing this run: no file
+  with "reddit"). There are no near matches from other articles — no
+  earlier article is a Reddit article — and the near matches are the other
+  social-app articles (whatsapp-photos-to-usb.html,
+  telegram-photos-to-usb.html, messenger-photos-to-usb.html,
+  viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html, imo-photos-to-usb.html,
+  pinterest-photos-to-usb.html) — all different, already-live articles,
+  untouched, and the WhatsApp, Telegram, Messenger, Viber, Kik, WeChat,
+  IMO, and Pinterest ones linked from the new article as series
+  companions. A docs/ listing this run confirms Reddit is the next social
+  app in our series with no article — WhatsApp, Telegram, Instagram,
+  Facebook, Snapchat, TikTok, WeChat, Messenger, Viber, Kik, IMO, and
+  Pinterest all have theirs already; the LINE and KakaoTalk rows were
+  killed, not written, because those apps offer only the one-by-one save
+  with nothing else to add, while Reddit survives the same test because
+  the bookmark trap, the removed long-press, the Pictures/Reddit folder,
+  and the gallery and video limits are all real things to add.
