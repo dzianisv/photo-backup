@@ -5937,6 +5937,54 @@ demand is read off competitor install velocity instead (see
   Android photo viewer, or a LinkedIn Help page documenting
   it. Query 204 stays unassigned.
 
+- "save Threads photos to a USB drive, no computer"
+  (briefed as Query 206, Nov 26, 2026): NOT a gap — KILLED
+  Nov 26, 2026 (WL-259). No dedicated Threads-photos-to-USB
+  how-to exists, but the joined workflow has no honest centre:
+  (1) the Threads Android app offers no native photo save —
+  gHacks (updated Nov 8, 2026): "Threads has no download
+  button for photos or videos in posts, on iPhone or Android"
+  and "No, Threads cannot download photos or videos to your
+  phone directly. The post menu lets you save a post inside
+  the app, copy its link or share it, but the media file stays
+  on Meta's servers"; Threadster (published Nov 24, 2026):
+  "Threads does not provide a native option to download or
+  save videos, GIFs, and photos to a local device"; 2A Magazine
+  agrees — "the platform doesn't offer native functionality to
+  save media directly to your device"; GuidingTech's native
+  long-press save is iOS-only ("Long-Press and Save Threads
+  Photos (iOS)") and its Android routes are screenshot, the
+  third-party TVD app, or a web downloader tool; (2) the only
+  two sources claiming an Android save (reveriepage: three-dot
+  menu → "Download"; freedom251: ⋮ menu → "Save image") name
+  no on-disk folder and are contradicted by the Nov 2026
+  gHacks update; (3) the only first-party route for your own
+  media is the Accounts Center export — an archive of your own
+  posts, not a per-photo save, not instant, and it lands no
+  Gallery folder a backup could pick. Gap verified with the
+  supervisor's two phrasings — "save Threads photos to USB
+  drive from Android phone no computer": only our own generic
+  articles (transfer-photos-to-usb-automatically,
+  backup-photos-to-usb) plus generic OTG guides (mefmobile,
+  YouTube OTG) and the Threadster tool; "transfer Threads
+  photos to USB flash drive Android no computer": the same
+  generic guides (our own transfer article, mefmobile,
+  Facebook reel, YouTube OTG, thedroidguy, pcnmobile) — no
+  Threads-specific phone→USB guide on either phrasing. Own
+  site: 0 "threads" slugs in docs/, no Threads-topic mentions
+  in feed.xml, sitemap.xml, blog index, llms.txt, llms-full.txt,
+  searches.md, or WORKLOG.md pre-write (the grep hits are
+  incidental "forum threads" mentions); never scored before,
+  never killed. The only live routes are screenshot/screen
+  recording, in-app Save (a bookmark, not a file), or
+  third-party downloader tools/apps — none is a Threads
+  on-device save, and the series does not endorse third-party
+  scrapers. Do not re-dispatch. Un-kill only on a current
+  first-hand source (dated 2026, with a screenshot or a named
+  folder) showing a Download / Save image control in the
+  Threads Android photo viewer, or a Threads Help page
+  documenting it. Query 204 stays unassigned.
+
 ### 59. "back up Evolveo photos to USB drive without computer" — HOW-TO GAP
 - Volume: unknown (Play publishes no volume).
 - Difficulty: Low. No top result is an Evolveo-specific
