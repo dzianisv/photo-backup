@@ -23630,3 +23630,179 @@ unchanged (already "Back up photos & videos to a USB disk").
   bookmark-versus-save untangling, the DM route with its no-notification fact
   and video limit, the archive route, the save-date problem, and the
   resized-copy quality question are all real things to add.
+
+### 204. "Save Tumblr photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 205, Nov 26, 2026 (WL-258).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already on Tumblr, saved on the Android phone itself, onto a USB
+  drive plugged into the phone, no computer — with the save step stated (press
+  and hold the photo, tap Download photo, lands in the Tumblr folder in the
+  Gallery), the no-auto-save wall stated (Tumblr saves nothing by itself; a
+  data-saving mode and media autoplay are the only media-adjacent settings;
+  viewed photos sit in the app's cache, not the Gallery), the
+  bookmark-versus-save untangling stated (a bookmark keeps the post inside your
+  account, not a file — if the author deletes the post, the bookmark points at
+  nothing), the whole-post route stated (Share, Save as Image — a rendered
+  picture of the post, not the original media), the export route stated
+  (web-only, Settings, the blog, Export — ZIP with Posts and Media folders,
+  three days to download, four exports per blog per month, liked posts not
+  included, someone else's blog not exportable), the GIF-versus-video trap
+  stated (an animated post that is really a looping MP4 may save as a video
+  file or offer no save at all; no download control for videos in other
+  people's posts), and the lost-taken-date and larger-version limits stated (a
+  saved photo shows the save date; the saved copy is Tumblr's copy, not the
+  original — larger versions may reach 2048 by 3072). Our own generic articles
+  rank top on both phrasings and never mention Tumblr; the generic OTG guides
+  never name Tumblr at all; the Tumblr guides that exist stop at the phone or
+  are downloader sites with no USB step.
+  The gap stands ONLY on that narrow angle: the Tumblr photo, saved on the phone
+  into the Tumblr folder, onto a USB drive, no computer, with the save step
+  stated, the folder stated, the no-auto-save wall stated, and the
+  bookmark-versus-save untangling stated plainly.
+- Current top results (scored Nov 26, 2026, live web search):
+  Phrasing 1, "save Tumblr photos to USB drive from Android phone no
+  computer" (supervisor, this run): only our own generic usb-photo-backup and
+  transfer-photos-to-usb-automatically articles, the thedroidguy generic OTG
+  guide, and a third-party Tumblr downloader web tool, pintergrab.com/tumblr/
+  — no Tumblr-specific phone-to-USB guide exists on this phrasing.
+  Phrasing 2, "transfer Tumblr photos to USB flash drive Android no computer"
+  (supervisor, this run): our own transfer article, the thedroidguy generic
+  guide, YouTube OTG tutorials, a Facebook reel, and the pcnmobile generic
+  guide — no Tumblr-to-phone-to-USB guide with no computer exists on either
+  phrasing.
+  Corroboration (lead, this run): four independent guides give the Android save
+  in the same words — EaseUS ("tap, and hold it until a pop-up shows. Choose
+  'Download photo' for Android phone"), gbtimes (long-press, then "Save Image"
+  or "Download Image"; "Check Your Photo Gallery"), rottenwifi ("Open the post
+  or photo on the dashboard. Press and hold the photo. Choose the available
+  download or sharing action" — citing Tumblr's Android shortcuts and tips Help
+  page), and llccars ("On the Tumblr app: tap image > three dots > Save"). The
+  folder is a first-hand account in the Android Central forums ("when I'm on
+  the tumblr app... I'll long press it and click save photo. Then when I go to
+  my gallery app there's automatically a folder created called Tumblr" — path
+  "images/tumblr"), corroborated by the Pictures/[app] pattern (itechguides,
+  Nov 2026, citing Motorola support). The Save as Image route is rottenwifi
+  ("Open the post in the Tumblr app. Tap the Share icon. Choose Save as Image,
+  when available" — "a clean image of the post without the phone's status bar,
+  navigation, or Tumblr interface", citing Tumblr's post-sharing instructions).
+  The export route is rottenwifi and seedofyou (web-only, not in the apps;
+  Settings, the blog, Export; ZIP with Posts HTML and a Media folder of JPG,
+  GIF, PNG, MP4; retained three days; four exports per blog per month; liked
+  posts not included). The GIF-versus-video trap is gbtimes FAQ #3
+  ("Increasingly, Tumblr users embed short video clips (MP4s) that loop like
+  GIFs... If it's a video, save it as an MP4") and FAQ #8 (multi-image posts:
+  save the one image directly), plus getindevice ("Tumblr still doesn't give
+  you a native save button for video, GIF, or photoset posts"). The
+  larger-version ceiling is rottenwifi, citing Tumblr's image troubleshooting
+  guidance ("larger versions may be available up to 2048 pixels wide and 3072
+  pixels tall"). The bookmark-versus-file distinction is unlimiteds.app ("The
+  usual alternative is to save a Tumblr post inside Tumblr itself, assuming
+  the platform's own bookmarking tools meet your needs... A dedicated
+  downloader is more useful when you want a local copy"). The no-bulk wall is
+  the absence of any batch save in every guide above plus rottenwifi
+  ("Tumblr's official export is available on the web, not in its apps") and
+  seedofyou ("Tumblr's native apps do not provide blog export"). No VaultDrive
+  price is stated in this article — only the comparison-article link in "On
+  your phone instead" — and no install count for SnapDisk (none exists) and no
+  VaultDrive install figure.
+- Honest centre (verified from the code at base 0167080 and the live sources
+  above, this run, Nov 26, 2026, not assumed): a photo on Tumblr is not on your
+  phone until you save it — Tumblr is a social feed, not a photo library, and
+  the file appears only when you save it, one photo at a time. The save is
+  press and hold the photo, tap Download photo — four guides agree in the same
+  words, with Save image / Download image as the version wordings — and the
+  file lands in a folder called Tumblr, visible in your Gallery; the three-dot
+  menu's Save is the other route. Tumblr saves nothing by itself: there is no
+  auto-save and no setting that turns one on, and a bookmark keeps the post
+  inside your account, not a file. The Share menu's Save as Image keeps a
+  clean picture of the whole post — a rendered image, not the original media —
+  and a blog you own exports on the web as a ZIP with Posts and Media folders,
+  three days to download, four exports a month, liked posts not included,
+  someone else's blog not exportable. The date problem is a save problem for
+  Tumblr, not a cloud problem: the file is written when you save it, so it
+  sorts by its save date (DATE_MODIFIED fallback), and the taken date does not
+  survive Tumblr's copy — stated as the expected case, not as a certainty,
+  because no source this run tested the taken date after an in-app save —
+  unlike OneDrive, where the taken date can already be replaced at upload. The
+  quality problem is a copy problem: the saved file is Tumblr's dashboard
+  rendition, not the original, and larger versions may reach 2048 by 3072. An
+  animated post that is really a looping MP4 may save as a video file or offer
+  no save at all, and there is no download control for videos in other people's
+  posts. For a whole blog you own there is the export; for someone else's blog
+  there is no bulk route — the series does not endorse third-party downloaders.
+  The default run covers a saved Tumblr photo that shows in the gallery: it
+  reads the media index with no folder filter (queryMediaStoreOldestFirst
+  :23-36; queryMediaTable :38, the query call passes selection null :60; Images
+  + Videos tables :23-36; DATE_TAKEN with DATE_MODIFIED fallback :47-48, :56-58,
+  oldest-first via BackupEngine.sortOldestFirst), so a .jpg in the Tumblr
+  folder copies like any other photo — the route is conditional on the photo
+  being saved as a file at all, stated WL-246 form, not asserted outright. One
+  honest limit inside that coverage: a saved photo shows the save date, so it
+  sorts by its save date (DATE_MODIFIED fallback) rather than the date the
+  photo was posted unless the EXIF taken date survived — stated in the TL;DR
+  and in "The date problem". The From picker route is code-supported but
+  UNTESTED end to end on this exact folder: listTreeFiles walks the folder
+  directly (:90-97) and does not depend on the media index, isMediaName
+  (:125-128) keeps only IMAGE_EXTENSIONS (:131-134) and VIDEO_EXTENSIONS
+  (:135-137), the picker is ActivityResultContracts.OpenDocumentTree with no
+  folder pre-selected (MainActivity.kt:62, :71), and the code holds zero
+  "tumblr" matches in the whole source tree. Screen-off continuation under
+  battery saver is UNVERIFIED — the repo holds no wake lock and no
+  battery-saver handling (grep across all main-source .kt files: none) —
+  stated in the TL;DR and in "What to avoid" (WL-182 form). Android 15
+  dataSync 6-hour budget: BackupService.onTimeout pauses cleanly with a
+  message (service/BackupService.kt:134, WL-34). Every file is size-verified
+  after copying (BackupEngine.kt:102-108 shouldSkip/verify; CopyResult.Copied
+  only after verify passes, :126). FAT32 files >=4 GiB skipped with their
+  reason (service/BackupService.kt:428-435). Default From /sdcard/DCIM and To
+  /disk/DCIM (BackupPrefs.kt:50,53), no INTERNET permission (0 occurrences
+  in the manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms / play-services in the build — re-checked this
+  run), no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk
+  24 (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11). Pro $9.99 once
+  (ProPrefs.kt:40), 5 GB free per run (:43). "SnapDisk copies, it never
+  deletes" present — the only .delete() calls in the code are on SnapDisk's
+  own half-finished .part files (BackupEngine.kt:176, :207;
+  service/BackupService.kt:385, :477). No VaultDrive price is stated in this
+  article — only the comparison-article link in "On your phone instead" —
+  and no install count for SnapDisk (none exists) and no VaultDrive
+  install figure. The article's VaultDrive mentions are 1: the
+  comparison-article link text once. The 1 "install" form in the article is
+  benign ("with the Tumblr app installed"); 1 "rating" inside
+  "operatingSystem"; the "download" forms are benign (Downloads folder,
+  Download menu wording, downloaded photos — no counts claimed). The 1
+  "Google Play" mention is factual ("no Google Play Services dependency"),
+  same as WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240 and WL-193. Read
+  time 13 min from the word count (9,350 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/tumblr-photos-to-usb.html verified 0 collisions in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt before writing;
+  "tumblr" returns 0 matches in feed.xml, sitemap.xml, blog index, llms.txt,
+  llms-full.txt, searches.md, and WORKLOG.md pre-write, and 0 "tumblr" slugs
+  in docs/ pre-write; the code holds 0 "tumblr" matches in the whole source
+  tree. There are no near matches from other articles — no earlier article is
+  a Tumblr article — and the near matches are the other social-app articles
+  (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html,
+  messenger-photos-to-usb.html, viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html, imo-photos-to-usb.html,
+  pinterest-photos-to-usb.html, reddit-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html,
+  x-twitter-photos-to-usb.html) and the other cloud articles
+  (google-drive-photos-to-usb.html, dropbox-photos-to-usb.html,
+  onedrive-photos-to-usb.html, icloud-photos-to-usb.html) — all different,
+  already-live articles, untouched, and the WhatsApp, Telegram, Messenger,
+  Viber, Kik, WeChat, IMO, Pinterest, Reddit, Instagram, Facebook, Snapchat,
+  TikTok, X, Google Drive, Dropbox, OneDrive, and iCloud ones linked from the
+  new article as series companions. A docs/ listing this run confirms Tumblr is
+  the next subject in our series with no article — WhatsApp, Telegram,
+  Instagram, Facebook, Snapchat, TikTok, WeChat, Messenger, Viber, Kik, IMO,
+  Pinterest, Reddit, X, Google Drive, Dropbox, OneDrive, and iCloud all have
+  theirs already; the Signal (WL-237), Discord, LINE, and KakaoTalk rows were
+  killed, not written, because those apps offer only the one-by-one save with
+  nothing else to add, while Tumblr survives the same test because the
+  no-auto-save wall, the Tumblr-folder landing, the bookmark-versus-save
+  untangling, the Save as Image whole-post route, the web-only blog export
+  route, the GIF-versus-video trap, the save-date problem, and the
+  larger-version quality question are all real things to add.
