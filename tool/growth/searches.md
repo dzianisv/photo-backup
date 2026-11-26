@@ -24413,3 +24413,189 @@ unchanged (already "Back up photos & videos to a USB disk").
   wall, the already-on-device note, the Prime storage limits, the Family Vault
   sharing check, the download-date problem, and the served-copy-versus-
   Unmodified-Originals quality question are all real things to add.
+### 208. "Save MEGA photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 210, Nov 26, 2026 (WL-263).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already on MEGA, downloaded on the Android phone itself, onto a USB
+  drive plugged into the phone, no computer — with the download step stated (tap
+  Drive on the bottom navigation menu, tap the three-dot icon to the right of a
+  file or folder, tap Download), the folder search stated (MEGA names no single
+  default folder: check Menu, Settings, Download location, Default download
+  location, then Downloads first, then Pictures, then the Gallery's recent view),
+  the preview trap stated (previewing a file writes it to the app-private folder
+  /Android/data/mega.privacy.android.app, where no file manager or backup app
+  can reach it — always use the Download menu option), the Download-versus-
+  Offline-versus-preview untangling stated (making a file available offline keeps
+  a copy inside the MEGA app, not a file in shared storage; Camera Uploads and
+  sync run the other way, phone photos up to MEGA), the folder batch route stated
+  (multi-select in the app, or the web download, which arrives as a ZIP to unzip
+  first), the no-whole-account-export wall stated (the export unit is a file or
+  a folder; a whole account goes through folder-by-folder downloads or MEGAsync
+  on a computer), the transfer-quota wall stated (MEGA meters downloads on free
+  accounts and publishes no fixed number, commonly reported around 5 GB per
+  six-hour window), and the lost-taken-date and original-file quality limits
+  stated (a downloaded photo shows the download date; the download is the
+  original file as uploaded, not a re-encoded copy).
+  Our own generic articles rank top on both phrasings and never mention MEGA;
+  the generic OTG guides never name MEGA at all; the MEGA guides that exist
+  stop at the phone or are transfer apps with no USB step.
+  The gap stands ONLY on that narrow angle: the MEGA photo, downloaded on the
+  phone into the Downloads folder, onto a USB drive, no computer, with the
+  download step stated, the folder search stated, the preview trap stated, and
+  the quota wall stated plainly.
+- Current top results (scored Nov 26, 2026, live web search):
+  Phrasing 1, "save MEGA photos to USB drive from Android phone no
+  computer" (supervisor, this run): only our own generic
+  transfer-photos-to-usb-automatically, storage-full, selling-phone, and repair
+  articles, plus generic OTG guides from pixoneye and a Facebook reel that never
+  mention MEGA — no MEGA-specific guide on this phrasing.
+  Phrasing 2, "transfer MEGA photos to USB flash drive Android no computer"
+  (supervisor, this run): the same own articles and the same generic OTG guides
+  — no MEGA-specific guide, and no guide that puts the download and the USB copy
+  in the same place — no MEGA-to-phone-to-USB guide with no computer exists on
+  either phrasing.
+  Corroboration (lead, this run): MEGA's own help centre, read first-hand,
+  gives the Android download verbatim — "How do I download a file or folder
+  from MEGA?" (help.mega.io, updated 3 November 2026, fetched Nov 26, 2026):
+  "In the Android app: 1. Tap Drive on the bottom navigation menu. 2. Tap the
+  three-dot icon to the right of a file or folder. 3. Tap Download." The same
+  help centre's "Where are my downloads?" page (help.mega.io, updated 3 November
+  2026, fetched Nov 26, 2026) gives the download-location setting ("In the
+  Android app: 1. Tap Menu at the bottom right. 2. Scroll down and tap
+  Settings. 3. Tap Download location. 4. Tap Default download location.") and
+  the preview trap verbatim ("Previewing unsupported file types will download
+  them to the folder /Android/data/mega.privacy.android.app. To download them
+  to the default destination, use the Download menu option instead."). The
+  download page also lists the download sources (own Cloud drive, incoming
+  shared folders, file and folder links, files shared within chats) and the
+  third-party warning verbatim ("We are aware that there is third-party software
+  available on the Internet that may be used to download from MEGA. It's
+  important to note that these tools are not secure and do not fully implement
+  our cryptographic protocols, which can cause you issues with accessing your
+  account – even to the point of locking up your account. ... we do not
+  recommend you use any third-party tools."). The multi-select route is a
+  current first-hand guide, sopriza ("Press and hold a file or folder to select
+  it, then tap others to build a selection. Use the download option in the
+  toolbar to save them together."), which also gives the Download-versus-offline
+  distinction ("Downloading copies the file to a folder on your phone that other
+  apps can open. Making a file available offline keeps a copy inside the MEGA
+  app, so you can view it later without a connection.") and the Downloads-folder
+  landing ("Downloaded files normally appear in the folder you selected, often
+  inside your phone's Downloads folder."). The free plan is 20 GB of storage
+  (privacytools.io, savedelete, cloudslinker); the transfer quota is metered and
+  unpublished by MEGA — based on IP downloads over the past six hours, varying
+  with location and load — commonly reported around 5 GB per six-hour window
+  (robots.net, savedelete, cloudslinker, ricedrive). MEGA's terms allow it to
+  suspend a free account or remove its data after a long stretch of inactivity,
+  and its help centre says the process takes at least 10 months from the last
+  activity (savedelete summary of MEGA sources). No article — only the
+  comparison-article link in "On your phone instead" — and no install count for
+  SnapDisk (none exists) and no VaultDrive install figure.
+- Honest centre (verified from the code at base c58a5aa and the live sources
+  above, this run, Nov 26, 2026, not assumed): a photo on MEGA is not on your
+  phone until you download it — MEGA is encrypted file storage on MEGA's
+  servers, not a folder on your phone, and the file appears only when you
+  download it. The download is tap Drive on the bottom navigation menu, tap the
+  three-dot icon to the right of a file or folder, and tap Download — MEGA's own
+  help states it verbatim, and the file lands in the default download location
+  set under Menu, Settings, Download location, Default download location. MEGA
+  names no single default folder — the independent guides report the Downloads
+  folder — so the article states the folder as a setting to check plus a search
+  (Downloads first, then Pictures, then the Gallery's recent view), never as a
+  claimed fixed path. Previewing a file is not downloading it: MEGA's own help
+  says a previewed file lands in /Android/data/mega.privacy.android.app, and
+  making a file available offline keeps it inside the app — neither is a file in
+  shared storage. MEGA downloads nothing by itself: there is no auto-download
+  and no setting that turns one on, and the app's automatic features run the
+  other way — Camera Uploads and sync send phone photos up to MEGA. A whole
+  folder downloads in one tap on the folder itself, or on the web as a ZIP to
+  unzip first; there is no whole-account export in the app, and a whole account
+  goes through folder-by-folder downloads or MEGAsync on a computer. The date
+  problem is a download problem for MEGA: the file is written when you download
+  it, so it sorts by its download date (DATE_MODIFIED fallback), and the taken
+  date inside the file may or may not be picked up by the media index — stated
+  as the expected case, not as a certainty, because no source this run tested
+  the taken date after an in-app download. The quality problem is the opposite
+  of the other clouds: the download is the original file as uploaded, not a
+  re-encoded copy, because MEGA stores files and does not re-encode photos — and
+  the limit is the transfer quota, not the quality. The default run covers a
+  downloaded MEGA photo that shows in the gallery: it reads the media index
+  with no folder filter (queryMediaStoreOldestFirst :23-36; queryMediaTable :38,
+  the query call passes selection null :60; Images + Videos tables :23-36;
+  DATE_TAKEN with DATE_MODIFIED fallback :47-48, :56-58, oldest-first via
+  BackupEngine.sortOldestFirst), so a .jpg in the Downloads folder copies like
+  any other photo — the route is conditional on the photo being downloaded as a
+  file at all, stated WL-246 form, not asserted outright. One honest limit inside
+  that coverage: a downloaded photo shows the download date, so it sorts by its
+  download date (DATE_MODIFIED fallback) rather than the date the photo was
+  taken unless the media index picks up the taken date inside the file — stated
+  in the TL;DR and in "The date problem". The From picker route is
+  code-supported but UNTESTED end to end on this exact folder: listTreeFiles
+  walks the folder directly (:90-97) and does not depend on the media index,
+  isMediaName (:125-128) keeps only IMAGE_EXTENSIONS (:131-134) and
+  VIDEO_EXTENSIONS (:135-137), the picker is
+  ActivityResultContracts.OpenDocumentTree with no folder pre-selected
+  (MainActivity.kt:62, :71), and the code holds zero "mega" matches in the
+  whole source tree. Screen-off continuation under battery saver is UNVERIFIED
+  — the repo holds no wake lock and no battery-saver handling (grep across all
+  main-source .kt files: none) — stated in the TL;DR and in "What to avoid"
+  (WL-182 form). Android 15 dataSync 6-hour budget: BackupService.onTimeout
+  pauses cleanly with a message (service/BackupService.kt:134, WL-34). Every
+  file is size-verified after copying (BackupEngine.kt:103-108 shouldSkip/
+  verify; CopyResult.Copied only after verify passes, :126). FAT32 files >=4
+  GiB skipped with their reason (service/BackupService.kt:428-435). Default
+  From /sdcard/DCIM and To /disk/DCIM (BackupPrefs.kt:50,53), no INTERNET
+  permission (0 occurrences in the manifest), no Google Play Services
+  dependency (0 matches for com.google.android.gms / play-services in the
+  build — re-checked this run), no all-files access (no
+  MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24 (app/build.gradle.kts:12,
+  Android 7.0), applicationId dev.dzianisv.snapdisk (app/build.gradle.kts:11).
+  Pro $9.99 once (ProPrefs.kt:40), 5 GB free per run (:43). "SnapDisk copies,
+  it never deletes" present — the only .delete() calls in the code are on
+  SnapDisk's own half-finished .part files (BackupEngine.kt:176, :207;
+  service/BackupService.kt:385, :477). No VaultDrive price is stated in this
+  article — only the comparison-article link text once. The 3 "install"
+  forms in the article are benign ("uninstall it" for clearing app data, "with
+  the MEGA app installed", "install it" for MEGAsync on a computer — no counts
+  claimed). The 1 "Google Play" mention is factual ("no Google Play Services
+  dependency"), same form as WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240
+  and WL-193. Read time 14 min from the word count (10,691 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/mega-photos-to-usb.html verified 0 collisions in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt before writing;
+  "mega-photos" returns 0 matches in feed.xml, sitemap.xml, blog index,
+  llms.txt, llms-full.txt, searches.md, and WORKLOG.md pre-write, and 0
+  "mega-photos" slugs in docs/ pre-write; the code holds 0 "mega" matches in
+  the whole source tree. The incidental "mega" matches pre-write are "Megattera"
+  device names, "megapixel" counts, a "Mega 5" phone model, and two lines listing
+  MEGA among third-party backup apps in the Blackview article — never a MEGA
+  article, never scored, never killed. There are no near matches from other
+  articles — no earlier article is a MEGA article — and the near matches are the
+  other social-app articles (whatsapp-photos-to-usb.html,
+  telegram-photos-to-usb.html, messenger-photos-to-usb.html,
+  viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html, imo-photos-to-usb.html,
+  pinterest-photos-to-usb.html, reddit-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html,
+  x-twitter-photos-to-usb.html, tumblr-photos-to-usb.html,
+  flickr-photos-to-usb.html, smugmug-photos-to-usb.html,
+  amazon-photos-to-usb.html) and the other cloud articles
+  (google-drive-photos-to-usb.html, dropbox-photos-to-usb.html,
+  onedrive-photos-to-usb.html, icloud-photos-to-usb.html) — all different,
+  already-live articles, untouched, and the WhatsApp, Telegram, Messenger,
+  Viber, Kik, WeChat, IMO, Pinterest, Reddit, Instagram, Facebook, Snapchat,
+  TikTok, X, Tumblr, Flickr, SmugMug, Amazon Photos, Google Drive, Dropbox,
+  OneDrive, and iCloud ones linked as series companions. A docs/ listing this
+  run confirms MEGA is the next subject in our series with no article —
+  WhatsApp, Telegram, Instagram, Facebook, Snapchat, TikTok, WeChat,
+  Messenger, Viber, Kik, IMO, Pinterest, Reddit, X, Tumblr, Flickr, SmugMug,
+  Amazon Photos, Google Drive, Dropbox, OneDrive, and iCloud all have theirs
+  already; the Signal (WL-237), Discord, LINE, and KakaoTalk rows were killed,
+  not written, because those apps offer only the one-by-one save with nothing
+  else to add, while MEGA survives the same test because the no-auto-download
+  wall, the download-location setting plus folder search, the preview trap, the
+  Download-versus-Offline-versus-preview untangling, the folder batch route, the
+  web-download ZIP trap, the no-whole-account-export wall, the transfer-quota
+  wall, the download-date problem, and the original-file quality question are
+  all real things to add.
