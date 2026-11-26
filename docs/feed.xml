@@ -1434,5 +1434,12 @@
       <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
       <description>X photos live on X's servers, not on your phone. Save them in the app — they land in the Twitter folder — then back them up to USB, no computer.</description>
     </item>
+    <item>
+      <title>Save Tumblr photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/tumblr-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/tumblr-photos-to-usb.html</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A Tumblr photo isn't on your phone until you save it. Long-press it in the app — it lands in the Tumblr folder — then back it up to USB, no computer.</description>
+    </item>
 </channel>
 </rss>
