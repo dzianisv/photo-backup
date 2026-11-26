@@ -1385,5 +1385,12 @@
       <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
       <description>A JXL is an ordinary .jxl file — smaller than a JPEG. The catch: no camera shoots it, Android can't open it, and the From picker skips .jxl files.</description>
     </item>
+    <item>
+      <title>Back up IMO photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/imo-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/imo-photos-to-usb.html</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>IMO photos are not on your phone until you save them — turn on Auto-Save in Settings, Chats, or long-press a photo to save it. Then back them up to USB.</description>
+    </item>
 </channel>
 </rss>

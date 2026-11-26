@@ -22325,3 +22325,165 @@ unchanged (already "Back up photos & videos to a USB disk").
   article as series companions. A docs/ listing this run confirms JXL is
   the last format in our series with no article — RAW, HEIC, burst,
   slow-motion, timelapse, GIF, WebP, and AVIF all have theirs already.
+### 197. "Back up IMO photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  an IMO photo, saved from a chat on an Android phone, onto a USB drive
+  plugged into the phone, no computer — with the Auto-Save switch stated
+  (Settings, Chats, Auto-Save After Receive, Photos + Videos toggles that
+  ship off), the one-by-one save stated for the photos already in the chats
+  (press and hold any file to save it, no save-all button), the folder
+  question answered honestly as a check order rather than a guessed path
+  (the exact on-disk folder is not pinned down by any public source), the
+  cloud-only and Privacy Chat limits stated, and the bulk route named as the
+  switch rather than a save-all button that does not exist. Our own generic
+  articles rank top on one phrasing and never mention IMO; the generic OTG
+  guides never name IMO at all. The gap stands ONLY on that narrow angle:
+  the IMO photo, saved from the chat into the gallery, onto a USB drive, no
+  computer, with the switch stated, the one-by-one save stated, the folder
+  NOT asserted, and the cloud-only and Privacy Chat limits stated plainly.
+- Current top results (scored Nov 25, 2026, live web search):
+  Phrasing 1, "back up IMO photos to USB drive from Android no computer"
+  (supervisor, this run): our own generic articles
+  (transfer-photos-to-usb-automatically, encrypted-photos-to-usb,
+  backup-photos-to-usb) that never mention IMO, a generic Pixoneye guide,
+  and a generic Facebook reel — plug the drive in, copy the folders, no IMO
+  folder, no save step, no switch. No IMO-specific guide exists.
+  Phrasing 2, "save IMO photos from Android phone to USB flash drive"
+  (lead, this run — the third-phrasing gate): generic OTG copy guides only
+  (groovypost, notesintheleftmargin, Samsung community thread, YouTube
+  walkthrough, Pixoneye, two Facebook reels) — plug the drive in, copy the
+  folders in the file manager, no IMO folder, no save step, no switch. No
+  IMO-specific guide exists.
+  Phrasing 3, "copy IMO images Android to USB OTG" (lead, this run):
+  generic OTG copy guides only (Facebook reel, Samsung community thread,
+  askfilo, Dr.Fone, Facebook reel, Instagram reel, MobiKin) — plug the
+  drive in, copy the folders, no IMO folder, no save step, no switch. No
+  IMO-specific guide exists on any of the three phrasings.
+- Honest centre (verified from the code at base ca9ec31 and the live sources
+  above, this run, Nov 25, 2026, not assumed): an IMO photo is an ordinary
+  image file once it is saved, and everything worth keeping lives inside
+  the file itself — copy the file and all of it comes with it,
+  byte-for-byte. The trap is the save, and it has two faces. IMO does not
+  save the photos you receive unless you switch it on: Me, Settings,
+  Chats, Auto-Save After Receive, with separate Photos and Videos toggles
+  that ship off — an August 2026 walkthrough (Facebook reel by Ayyuu Tech,
+  posted Aug 17, 2026) shows both toggles switched from off to on, with
+  on-screen text explaining that received media will save to the phone's
+  gallery automatically — so until you turn both on, a photo you only
+  viewed lives inside IMO, not in any folder on the phone. The switch only
+  covers what you receive after you turn it on, never the photos already in
+  your chats: those still need the one-by-one save, press and hold any file
+  to save it (IMO's own Play listing: "Simply press and hold any file to
+  save it"), with no save-all button, no select-all, no export
+  conversation. That switch is what keeps this row out of the LINE /
+  KakaoTalk kill class: those apps offer only the one-by-one save with
+  nothing else to add, while IMO has a switch that changes the job from an
+  evening of tapping into a setting you flip once — for everything that
+  arrives after today. The exact on-disk folder for the saved copies is NOT
+  pinned down by any public source — no guide, no forum thread, and no IMO
+  help page found this run names it — so the article gives a check order,
+  not a single path: the gallery first (IMO's own history, a 2014 TruTower
+  report on the beta, says photos shared in one-to-one chats are saved in
+  a photo gallery; the August 2026 walkthrough says the same in the
+  present tense), then Pictures (the phone makers' own help pages describe
+  the pattern as Pictures/[app] for photos saved from a messaging app — a
+  pattern, not a confirmed IMO path), then a file-manager search. A photo
+  that lives only in imo Cloud must be downloaded and saved first: IMO's
+  own listing says message history and files sync in imo Cloud to free up
+  phone storage, and the cloud copy is a sync, not a file on the phone. A
+  photo in a Privacy Chat may not be saveable at all: the same listing says
+  Privacy Chat can block screenshot, copy, share, and download. IMO's
+  listing also says files share in their original quality; the saved copy
+  is the file as IMO delivered it, and SnapDisk copies it byte-for-byte.
+  Two corrections to the dispatch brief, both found by the lead's own
+  verification this run and recorded here so they are not carried forward:
+  (1) the brief's base 019e751 is STALE — WL-248 merged while this row was
+  being dispatched: origin/main is now ca9ec31 ("WL-248: Work Log row
+  (Save JPEG XL photos to USB) (#473)"), whose tree is identical to the
+  local checkout HEAD 1bf959f (WL-248 article, same content, PR #472
+  c7bf903). All counts in this row are measured at ca9ec31, not 019e751:
+  feed 197 items, sitemap 201 urls, blog 197 BlogPosting, llms.txt 202
+  link lines, llms-full.txt 2491 lines, searches.md 22327 lines / 196
+  rows. The brief's counts (feed 196, sitemap 200, llms.txt 201, and so
+  on) were the pre-WL-248 base and are wrong for this row; the supervisor
+  re-simulates counts at settle time if the base moves again. (2) the
+  brief's "198th how-to, Query 197" stands — WL-248 was the 197th — but
+  the "counts vs base 019e751" line in the brief is superseded by the
+  ca9ec31 counts above. The default run covers a saved IMO photo that
+  shows in the gallery: it reads the media index with no folder filter
+  (queryMediaTable :38, the query call passes selection null :60; Images +
+  Videos tables :23-36; DATE_TAKEN with DATE_MODIFIED fallback :47-48,
+  :56-59, oldest-first via BackupEngine.sortOldestFirst :95-100), so a
+  .jpg the index holds copies like any other photo — the route is
+  conditional on the photo showing in the gallery, stated WL-246 form,
+  not asserted outright. The From picker route is code-supported but
+  UNTESTED end to end on this exact folder: listTreeFiles walks the folder
+  directly (:90-97) and does not depend on the media index, isMediaName
+  (:125-128) keeps only IMAGE_EXTENSIONS (:131-134: .jpg .jpeg .png .heic
+  .heif .webp .gif .bmp .dng .raw .avif — IMO photos are ordinary .jpg
+  files, so the extension list is not the trap here), the picker is
+  ActivityResultContracts.OpenDocumentTree with no folder pre-selected
+  (MainActivity.kt:61-62, :71), and the code holds zero "imo" matches in
+  the whole source tree. Screen-off continuation under battery saver is
+  UNVERIFIED — the repo holds no wake lock and no battery-saver handling
+  (grep across all main-source .kt files: none) — stated in the TL;DR and
+  in "What to avoid" (WL-182 form). Android 15 dataSync 6-hour budget:
+  BackupService.onTimeout pauses cleanly with a message
+  (BackupService.kt:134, WL-34). Every file is size-verified after copying
+  (BackupEngine.kt:104-112 shouldSkip/verify; CopyResult.Copied only after
+  verify passes). FAT32 files >=4 GiB skipped with their reason
+  (BackupService.kt:428-433). Default From /sdcard/DCIM and To /disk/DCIM
+  (BackupPrefs.kt:50,53), no INTERNET permission (0 occurrences in the
+  manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms / play-services in the build — re-checked this
+  run), no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk
+  24 (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11). Pro $9.99 once
+  (ProPrefs.kt:40), 5 GB free per run (:43). "SnapDisk copies, it never
+  deletes" present — the only .delete() calls in the code are on SnapDisk's
+  own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). VaultDrive, named fairly from its live
+  pages this run: Pro Lifetime $29.99 once on the App Store RE-VERIFIED
+  live this run (App Store page
+  https://apps.apple.com/us/app/vaultdrive-usb-photo-backup/id6772883827,
+  crawled Nov 26, 2026 01:32 UTC — Nov 25, 2026 17:32 PST: "VaultDrive Pro
+  Lifetime $29.99" in the In-App Purchases list; VaultDrive 2.0, version
+  10.0, 18h old at crawl), with Pro Monthly $7.99 and Pro Annual $19.99,
+  and $19.99 / $9.99 one-time "VaultDrive: USB Backup" purchases also
+  listed (separate legacy items, not Pro Lifetime). This article itself
+  carries no VaultDrive price — only the comparison-article link in "On
+  your phone instead" — so the re-verification is recorded here and in
+  the verify log, not in the article. FotoSafe Pro price is UNKNOWN —
+  never stated. The article carries no install count for SnapDisk (none
+  exists) and no VaultDrive install figure. The 35
+  "installs/downloads/rating/stars" regex matches in the article are benign
+  (14 × "download" forms — cloud-download wording, "block download(s)",
+  auto-download, the footer Download link — 5 × "install" wording —
+  installed from the v0.1.2 APK, install unknown apps, installation — 1 ×
+  "rating" inside "operatingSystem" — 15 × lowercase "star" inside the
+  verbs "start"/"starts"/"starting"/"restart" — no counts claimed). The 1
+  "Google Play" mention is factual ("it is not on Google Play yet"), same
+  as WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240 and WL-193. The 1
+  "VaultDrive" mention is the comparison-article link only, carrying no
+  price. Read time 12 min from the word count (9,051 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/imo-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, searches.md, and
+  WORKLOG.md before writing; "imo" word-boundary returns 0 matches in
+  feed.xml, sitemap.xml, blog index, llms.txt, llms-full.txt, searches.md,
+  and WORKLOG.md; "IMO" (uppercase) returns 0 matches in all seven files;
+  and no docs/imo-photos-to-usb.html exists (docs/ listing this run: no
+  file with "imo"). There are no near matches from other articles — no
+  earlier article is an IMO article — and the near matches are the other
+  messaging-app articles (whatsapp-photos-to-usb.html,
+  telegram-photos-to-usb.html, messenger-photos-to-usb.html,
+  viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html) — all different, already-live articles,
+  untouched, and the WhatsApp, Telegram, Messenger, Viber, Kik, and WeChat
+  ones linked from the new article as series companions. A docs/ listing
+  this run confirms IMO is the next messaging app in our series with no
+  article — WhatsApp, Telegram, Messenger, Viber, Kik, and WeChat all have
+  theirs already; the LINE and KakaoTalk rows were killed, not written,
+  because those apps offer only the one-by-one save with nothing else to
+  add, while IMO has the Auto-Save switch.
