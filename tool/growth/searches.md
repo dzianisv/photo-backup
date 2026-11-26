@@ -25341,3 +25341,221 @@ unchanged (already "Back up photos & videos to a USB disk").
   photos and names no on-disk folder, while Immich's own code documents the
   Download control verbatim, names the on-disk folder, and saves a real file
   to the public gallery — a real file, not a cache.
+
+### 212. "Save Ente Photos photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 216, Nov 26, 2026 (WL-269).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already on Ente, downloaded on the Android phone itself, onto a USB
+  drive plugged into the phone, no computer — with the download step stated (open
+  the photo, open the menu, tap Download — the app's own download action,
+  labelled Download, offered only for photos that live in your Ente account and
+  are not already on the phone), the folder named (the app's own code names no
+  folder — the save passes no folder, so Android's media store puts a photo in
+  Pictures and a video in Movies — check the Gallery first, then Pictures in the
+  Files app), the Download-versus-offline-versus-viewing untangling stated
+  (Download writes a real file to Pictures; offline viewing keeps a copy inside
+  the app; opening a photo leaves no file at all; Auto Backup runs the other way,
+  phone photos up to the account; Free Up Space removes local copies of backed-up
+  photos), the album batch route stated (long-press to select in the app and
+  Download, or the web download, which lands in Downloads), the
+  no-whole-library-export wall stated (the export unit is a photo, a selection,
+  or an album; a whole library goes through album-by-album downloads, while the
+  computer route is Ente's own desktop export or CLI photos export), the no-quota
+  answer stated (Ente publishes no download quota on your own files — the only
+  meter in sight is the storage plan, with 10 GB free), and the lost-taken-date
+  and original-file quality limits stated (a downloaded photo shows the download
+  date; the download is the original file as uploaded, decrypted on the phone,
+  not a re-encoded copy).
+  Our own generic articles rank top on both phrasings and never mention Ente;
+  the generic OTG guides never name Ente at all; no Ente listing ranks on either
+  phrasing. The gap stands ONLY on that narrow angle: the Ente photo, downloaded
+  on the phone into Pictures, onto a USB drive, no computer, with the download
+  step stated, the folder named, the Download-versus-offline untangling stated,
+  and the Free Up Space warning stated plainly.
+- Current top results (scored Nov 26, 2026, live web search):
+  Phrasing 1, "save Ente Photos photos to USB drive from Android phone no
+  computer" (supervisor, this run): only our own SnapDisk-vs-Photos-to-USB
+  comparison, our own generic transfer-photos-to-usb-automatically article, a
+  generic pixoneye guide about transferring photos from a phone to a USB stick
+  that never mentions Ente, and a generic cellularnews guide about moving
+  pictures to a flash drive from a Google phone that never mentions Ente — no
+  Ente-specific guide on this phrasing.
+  Phrasing 2, "transfer Ente photos to USB flash drive Android no computer"
+  (supervisor, this run): our own generic transfer article, our own
+  storage-full and factory-reset articles, and a Dr.Fone guide about
+  transferring photos from Android to a USB flash drive that never mentions
+  Ente — no Ente-specific guide, and no guide that puts the download and the
+  USB copy in the same place — no Ente-to-phone-to-USB guide with no computer
+  exists on either phrasing.
+  Corroboration (lead, this run): the Ente Photos app's own source code, read
+  first-hand from the ente-io/ente repository at tag photos-v1.3.70 (the latest
+  release, Nov 13, 2026) via the GitHub API, Nov 26, 2026. mobile/apps/photos/
+  lib/ui/viewer/file/file_app_bar.dart: the photo menu offers Download
+  (context.strings.download, "Download" in mobile/packages/strings/lib/l10n/arb/
+  strings_en.arb) when the file is uploaded, calling _download (:610) which
+  calls downloadToGallery (:659). mobile/apps/photos/lib/ui/viewer/actions/
+  file_selection_actions_widget.dart: the selection sheet offers Download
+  (:376-382) when the selection has uploaded file IDs (:162), calling _download
+  (:1183) which calls downloadToGallery (:1248). mobile/apps/photos/lib/module/
+  download/gallery.dart: downloadToGallery (:78) fetches the file — the download
+  decrypts it on the device (module/download/decrypt.dart, downloadAndDecrypt)
+  — and saves it with PhotoManager.editor.saveImageWithPath (:102) / saveVideo
+  (:107), passing no relativePath, so Android's media store puts the file in its
+  default place for the file type — Pictures for a photo, Movies for a video
+  (Android MediaStore docs: a null RELATIVE_PATH on insert places the item "in a
+  relevant default location based on the type of media being inserted", e.g.
+  image/jpeg under DIRECTORY_PICTURES). Files already on the device are skipped
+  with a toast naming the folder (getExistingLocalFolderNameForDownloadSkipToast).
+  The web route is verified from the same repository: web/apps/photos/src/
+  components/gallery/media/use-selected-file-operations.ts gives a download file
+  operation for selections (:204), and it applies to shared files as well as
+  owned ones. Ente's own help, read live this run (ente.com/help, Nov 26, 2026):
+  the Backup and Sync FAQ (ente.com/help/photos/faq/backup-and-sync) walks
+  through automatic backup and backed-up folders and says nothing about
+  downloading to the phone — the download flow is verified from the app's code,
+  not from the help pages, and the article says so; the Advanced Features FAQ
+  (ente.com/help/photos/faq/advanced-features) documents the computer export
+  routes — the desktop app's Settings, Export data, with Continuous export, and
+  the CLI's photos export command — and the CLI help page
+  (ente.com/help/cli/photos) gives the export layout, album selection, and the
+  single-file download command. The app is current: Ente Photos 1.3.70, released
+  Nov 13, 2026 (GitHub releases, latest photos release); on Google Play as
+  io.ente.photos with 10 GB free, and on F-Droid. No article — only the
+  comparison-article link in "On your phone instead" — and no install count for
+  SnapDisk (none exists) and no VaultDrive install figure.
+- Honest centre (verified from the code at base 46fa58c and the live sources
+  above, this run, Nov 26, 2026, not assumed): a photo on Ente is not on your
+  phone until you download it — Ente is an end-to-end encrypted photo library in
+  your account, on Ente's hosted service or a server you run yourself, not a
+  folder on your phone, and the file appears only when you download it. The
+  download is open the photo, open the menu, tap Download — the app's own
+  download action, verified from its code at v1.3.70 — and the file lands in the
+  Gallery at Pictures on Android. Ente names no folder in its own code — the
+  download saves with no folder given, so Android's media store puts the file in
+  its default place for the file type, Pictures for a photo and Movies for a
+  video — so the article states the folder as a named destination plus a short
+  search (Gallery first, then Pictures), never as a claimed fixed path, and never
+  as the Downloads folder, which is where the web download lands instead. The
+  Download button appears only for account photos (isFileUploaded): a photo
+  already on the phone shows no Download, and needs none — the file is already
+  in the Gallery. Download and offline viewing are different things in Ente: the
+  download writes a real file to shared storage, visible in the Gallery and in a
+  file manager, while offline viewing keeps a copy inside the app. Ente downloads
+  nothing by itself: there is no auto-download and no setting that turns one on,
+  and the app's automatic feature runs the other way — Auto Backup copies phone
+  photos up to the account. Free Up Space removes local copies of backed-up
+  photos — a photo you freed up is account-only until you download it back —
+  stated as a warning, with the copy-first rule. A whole album downloads by
+  selecting the photos in the app and tapping Download, or on the web, where the
+  download lands in Downloads; there is no whole-library export in the app, and
+  a whole library goes through album-by-album downloads, while the computer route
+  is Ente's own desktop export or CLI photos export. The date problem is a
+  download problem for Ente: the file is written when you download it, so it
+  sorts by its download date (DATE_MODIFIED fallback), and the taken date inside
+  the file may or may not be picked up by the media index — stated as the
+  expected case, not as a certainty, because no source this run tested the taken
+  date after an in-app download. The quality problem is the opposite of the photo
+  services: the download is the original file as uploaded, decrypted on the phone,
+  not a re-encoded copy, because the app fetches the encrypted file and decrypts
+  it on the device and Ente stores originals with no compression — and the limit
+  is the tapping, not a quota: Ente publishes no download quota on your own
+  files, because the files live in your account and the only meter in sight is
+  the storage plan, with 10 GB free. The default run covers a downloaded Ente
+  photo that shows in the gallery: it reads the media index with no folder filter
+  (queryMediaStoreOldestFirst, app/src/main/java/dev/dzianisv/snapdisk/backup/
+  PhotoQuery.kt:23-36; queryMediaTable :38, the query call passes selection null
+  :60; Images + Videos tables :23-36; DATE_TAKEN with DATE_MODIFIED fallback
+  :47-48, :56-58, oldest-first via BackupEngine.sortOldestFirst,
+  app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:95), so a .jpg
+  in Pictures copies like any other photo — the route is conditional on the
+  photo being downloaded as a file at all, stated WL-246 form, not asserted
+  outright. One honest limit inside that coverage: a downloaded photo shows the
+  download date, so it sorts by its download date (DATE_MODIFIED fallback)
+  rather than the date the photo was taken unless the media index picks up the
+  taken date inside the file — stated in the TL;DR and in "The date problem".
+  The From picker route is code-supported but UNTESTED end to end on this exact
+  folder: listTreeFiles walks the folder directly
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:90-95) and does
+  not depend on the media index, isMediaName (:125-128) keeps only
+  IMAGE_EXTENSIONS (:131-134) and VIDEO_EXTENSIONS (:135-137), the picker is
+  ActivityResultContracts.OpenDocumentTree with no folder pre-selected
+  (app/src/main/java/dev/dzianisv/snapdisk/MainActivity.kt:62, :71), and the code
+  holds zero "ente" matches in the whole source tree. Screen-off continuation
+  under battery saver is UNVERIFIED — the repo holds no wake lock and no
+  battery-saver handling (grep across all main-source .kt files: none) — stated
+  in the TL;DR and in "What to avoid" (WL-182 form). Android 15 dataSync 6-hour
+  budget: BackupService.onTimeout pauses cleanly with a message
+  (app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:134, WL-34).
+  Every file is size-verified after copying
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:103-108
+  shouldSkip/verify; CopyResult.Copied only after verify passes, :126). FAT32
+  files >=4 GiB skipped with their reason
+  (app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:430). Default
+  From /sdcard/DCIM and To /disk/DCIM
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupPrefs.kt:50,53), no
+  INTERNET permission (0 occurrences in the manifest), no Google Play Services
+  dependency (0 matches for com.google.android.gms / play-services in the
+  build — re-checked this run), no all-files access (no MANAGE_EXTERNAL_STORAGE
+  anywhere), minSdk 24 (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11).
+  Pro $9.99 once (app/src/main/java/dev/dzianisv/snapdisk/backup/ProPrefs.kt:40), 5 GB free per
+  run (:43). "SnapDisk copies, it never deletes" present — the only .delete()
+  calls in the code are on SnapDisk's own half-finished .part files
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:176, :207;
+  app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:385, :477). No
+  VaultDrive price is stated in this article — only the comparison-article link
+  text once. The 3 "install" forms in the article are benign ("with the Ente
+  app installed", "free to install", "uninstalling it" for clearing app data — no counts claimed).
+  The 3 "Google Play" mentions are factual (the Play listing and the version on
+  Play, "free, on Google Play and on F-Droid", "no Google Play Services
+  dependency"), same form as WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240
+  and WL-193. Read time 15
+  min from the word count (11,138 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/ente-photos-to-usb.html verified 0 collisions in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt before writing;
+  "ente-photos-to-usb" returns 0 matches in feed.xml, sitemap.xml, blog
+  index, llms.txt, llms-full.txt, searches.md, and WORKLOG.md pre-write, and 0
+  "ente-photos-to-usb" slugs in docs/ pre-write; the code holds 0
+  "ente" matches in the whole source tree (GitHub code search, this run). The
+  incidental "Ente" matches pre-write are one llms-full.txt line (the WL-212
+  encrypted-drive row naming Ente Photos as an encrypted backup with no USB step),
+  five searches.md lines (the same WL-212 row and roundup lines naming Ente
+  among cloud-first leaders), and one WORKLOG.md line (the same WL-212 row) —
+  never an Ente article, never scored, never killed. There are no near matches
+  from other articles — no earlier article is an Ente article — and the near
+  matches are the other social-app articles (whatsapp-photos-to-usb.html,
+  telegram-photos-to-usb.html, messenger-photos-to-usb.html,
+  viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html, imo-photos-to-usb.html,
+  pinterest-photos-to-usb.html, reddit-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html,
+  x-twitter-photos-to-usb.html, tumblr-photos-to-usb.html,
+  flickr-photos-to-usb.html, smugmug-photos-to-usb.html,
+  amazon-photos-to-usb.html, mega-photos-to-usb.html,
+  pcloud-photos-to-usb.html, nextcloud-photos-to-usb.html,
+  immich-photos-to-usb.html) and the other cloud
+  articles (google-drive-photos-to-usb.html, dropbox-photos-to-usb.html,
+  onedrive-photos-to-usb.html, icloud-photos-to-usb.html) — all different,
+  already-live articles, untouched, and the WhatsApp, Telegram, Messenger,
+  Viber, Kik, WeChat, IMO, Pinterest, Reddit, Instagram, Facebook, Snapchat,
+  TikTok, X, Tumblr, Flickr, SmugMug, Amazon Photos, MEGA, pCloud, Nextcloud,
+  Immich, Google Drive, Dropbox, OneDrive, and iCloud ones linked as series companions.
+  A docs/ listing this run confirms Ente is the next subject in our series
+  with no article — WhatsApp, Telegram, Instagram, Facebook, Snapchat, TikTok,
+  WeChat, Messenger, Viber, Kik, IMO, Pinterest, Reddit, X, Tumblr, Flickr,
+  SmugMug, Amazon Photos, MEGA, pCloud, Nextcloud, Immich, Google Drive, Dropbox,
+  OneDrive, and iCloud all have theirs already; the Signal (WL-237), Discord,
+  LINE, and KakaoTalk rows were killed, not written, because those apps offer
+  only the one-by-one save with nothing else to add, while Ente survives the
+  same test because the no-auto-download wall, the Pictures folder named by
+  Android's default, the Download-versus-offline-versus-viewing untangling, the
+  album batch route, the web-download Downloads-folder trap, the
+  no-whole-library-export wall, the Free Up Space warning, the no-quota answer,
+  the download-date problem, and the original-file quality question are all
+  real things to add. Ente also survives the WL-265 Box kill test where Box
+  failed: Box's own help documents no Download control for photos and names no
+  on-disk folder, while Ente's own code documents the Download control verbatim,
+  names the on-disk folder by Android's default, and saves a real file to the
+  public gallery — a real file, not a cache.
