@@ -6038,6 +6038,68 @@ demand is read off competitor install velocity instead (see
   the Box Android app and the folder it writes to, or a Box Help
   page naming that folder. Query 212 stays unassigned.
 
+- "save Synology Photos photos to USB from Android, no computer"
+  (briefed as Query 214, Nov 26, 2026): NOT a gap — KILLED
+  Nov 26, 2026 (WL-267). No dedicated Synology-Photos-to-USB
+  how-to exists, but the joined workflow has no honest centre:
+  (1) Synology's own Android help (kb.synology.com, "Synology
+  Photos | Android", Version 2.4, read live Nov 26, 2026)
+  documents the auto-backup direction — phone → NAS — in
+  detail (More > Enable Photo Backup; Personal Space
+  /home/Photos/MobileBackup, Shared Space /photo/MobileBackup)
+  but its fetched text contains no Download / save-to-device
+  step at all: the "Upload and Manage Photos", "View Photos
+  and Albums" and "Share Folders, Photos, and Albums" sections
+  are headings only, and the page contains no "Download"
+  text; (2) Synology's own product page describes offline
+  access as in-app cache — "Viewed photos are cached and can
+  be browsed even without internet connection" — a cache, not
+  a file; (3) no source names the on-disk folder a Synology
+  Photos Android download lands in — Synology's help never
+  names one, and no forum thread or review fetched this run
+  names one either; (4) the only Synology-documented
+  download-to-gallery flow belongs to the retired DS photo
+  app (kb.synology.com, "DS photo (Android) Version 3.12"):
+  select photos, tap the menu, tap Download, to the gallery
+  of the Android device, with a Download Quality setting —
+  DS photo serves Photo Station on DSM 6.2, and Synology
+  Photos replaced Moments and Photo Station on DSM 7, so
+  that flow cannot be carried over to the Synology Photos
+  app; (5) the only evidence a download action exists in the
+  Synology Photos app at all is two old third-party reviews —
+  tech-critter.com (2021): "either download them or tag those
+  images"; StorageReview: "you can play upload/download" —
+  neither gives a tap path or a folder. Gap verified with the
+  supervisor's two phrasings — "save Synology Photos to USB
+  drive from Android phone no computer": only the PhotoSync
+  NAS Add-On Play listing (a transfer app, phone → NAS
+  direction, no USB step), a Facebook reel generic
+  Android → USB guide, Seed of You "How to download your NAS
+  and external drives data" (Oct 28, 2026 — generic, says
+  "for a NAS, use its manufacturer's documented
+  download/export function", no Synology-specific joined
+  guide), 01s.tech "Back up your phone's photos to your NAS"
+  (the opposite direction, phone → NAS), and our own
+  transfer + usb-photo-backup articles — no Synology-specific
+  guide; "transfer Synology Photos to USB flash drive Android
+  no computer": the same PhotoSync listing, our own transfer
+  article, the same Facebook reel, the same Seed of You
+  generic, and our own storage-full article — no
+  Synology-specific guide. Own site: 0 synology mentions in
+  feed.xml and in tool/growth/ + docs/ on origin/main; 0
+  synology-photos-to-usb slug anywhere; the live slug
+  synology-photos-to-usb.html 404s; never scored, never
+  killed. The only live routes are screenshot/screen-recording,
+  the app's cached offline viewing (not a file), or a
+  third-party downloader — none is a Synology Photos on-device
+  save, and the series does not endorse third-party scrapers.
+  Do not re-dispatch. Un-kill only on a current first-hand
+  source (dated 2026, with a screenshot or a named folder)
+  showing a Download / Save control for photos in the Synology
+  Photos Android app and the folder it writes to, or a
+  Synology Help page naming that folder. Query 214 stays
+  unassigned.
+
 ### 59. "back up Evolveo photos to USB drive without computer" — HOW-TO GAP
 - Volume: unknown (Play publishes no volume).
 - Difficulty: Low. No top result is an Evolveo-specific
