@@ -5908,6 +5908,35 @@ demand is read off competitor install velocity instead (see
   check must grep the supervisor runs logs for the candidate
   name before dispatching, not just the repo files.
 
+- "back up LinkedIn photos to a USB drive, no computer"
+  (briefed as Query 204, Nov 26, 2026): NOT a gap — KILLED
+  Nov 26, 2026 (WL-257). No dedicated LinkedIn-photos-to-USB
+  how-to exists, but the joined workflow has no honest centre:
+  (1) the LinkedIn Android app offers no direct save/download
+  button for post photos — TheGeekInsights (published Sep 27,
+  updated Oct 4, 2025): "offers no direct save button…
+  tapping and holding an image rarely opens a save menu…
+  A built-in preview appears but no download"; TrackMedia
+  (Nov 2026): "LinkedIn does not offer a Save image option
+  on other people's posts"; Commenti (Nov 7, 2026) and
+  mefmobile agree — screenshot-and-crop is the practical
+  option in the mobile app; (2) the only two sources claiming
+  a Download button (Gadgetswright, 360mag, both ~Mar 2024)
+  carry word-for-word identical steps, name no on-disk folder,
+  and 360mag contradicts itself in the same article ("you can
+  only download your LinkedIn images on your personal
+  computer… not available on mobile devices"); (3) LinkedIn
+  Help documents only one save — post ⋮ → Save → Saved items,
+  a bookmark, not a file. The only live routes are
+  screenshot-and-crop, desktop-browser right-click save, or
+  third-party downloader sites — none is a LinkedIn on-device
+  save, and the series does not endorse third-party scrapers.
+  Do not re-dispatch. Un-kill only on a current first-hand
+  source (dated 2026, with a screenshot or a named folder)
+  showing a Download / Save image control in the LinkedIn
+  Android photo viewer, or a LinkedIn Help page documenting
+  it. Query 204 stays unassigned.
+
 ### 59. "back up Evolveo photos to USB drive without computer" — HOW-TO GAP
 - Volume: unknown (Play publishes no volume).
 - Difficulty: Low. No top result is an Evolveo-specific
