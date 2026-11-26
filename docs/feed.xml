@@ -1497,5 +1497,12 @@
       <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
       <description>An Ente photo isn't on your phone until you download it. Select it, tap Download — it lands in Pictures. Then back it up to USB, no computer.</description>
     </item>
+    <item>
+      <title>Save Seafile photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/seafile-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/seafile-photos-to-usb.html</guid>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A Seafile photo isn't on your phone until you download it. Long-press it, tap Download — it lands in the Seafile folder. Then back it up to USB, no computer.</description>
+    </item>
 </channel>
 </rss>
