@@ -1441,5 +1441,12 @@
       <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
       <description>A Tumblr photo isn't on your phone until you save it. Long-press it in the app — it lands in the Tumblr folder — then back it up to USB, no computer.</description>
     </item>
+    <item>
+      <title>Save Flickr photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/flickr-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/flickr-photos-to-usb.html</guid>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A Flickr photo isn't on your phone until you save it. Tap Share, and then Save — it lands in the Flickr folder — then back it up to USB, no computer.</description>
+    </item>
 </channel>
 </rss>
