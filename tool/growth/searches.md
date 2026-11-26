@@ -5985,6 +5985,59 @@ demand is read off competitor install velocity instead (see
   Threads Android photo viewer, or a Threads Help page
   documenting it. Query 204 stays unassigned.
 
+- "save Box photos to USB from Android, no computer"
+  (briefed as Query 212, Nov 26, 2026): NOT a gap — KILLED
+  Nov 26, 2026 (WL-265). No dedicated Box-photos-to-USB
+  how-to exists, but the joined workflow has no honest centre:
+  (1) Box's own Android help documents no Download control for
+  photos — the file-list More Options menu (support.box.com,
+  "Managing Content with Box for Android") lists Make Available
+  Offline, File Information, Rename this File, Move or Copy,
+  Open with…, View Containing Folder, Print, Delete — no
+  Download; the image-preview menu (support.box.com, "Box for
+  Android Preview") lists the same, no Download — only the
+  video-preview menu lists Download; (2) no source names the
+  on-disk folder a Box download lands in — Box's own help never
+  names one, and Google Play reviews of the Box app report
+  downloads that "say successful" but the file is "not on my
+  phone" ("My biggest gripe is downloading images on Android.
+  I download. Box says its successful. Except it's not on my
+  phone."); (3) the only documented in-app save for photos,
+  Make Available Offline, keeps content inside the Box app —
+  Seed of You (Oct 28, 2026): "Box's Make Available Offline
+  control keeps content in the app. It is useful for viewing
+  but does not by itself create an independent archive... For
+  a durable folder archive, continue on a computer"; (4)
+  Box's own web Download doc (docs.box.com, last modified
+  Sep 3, 2026) describes a desktop UI — click, Shift+click,
+  Ctrl+A — and names no mobile folder, and no first-hand source
+  confirms the mobile web UI offers Download or where it lands;
+  (5) the one counter-claim — a 2013 Android Central forum post
+  describing a download arrow in preview opening a "save file
+  here" dialog — is 13 years stale and contradicted by Box's
+  current help, which lists no Download in the image-preview
+  menu. Gap verified with the supervisor's two phrasings —
+  "save Box photos to USB drive from Android phone no computer":
+  only our own transfer/storage-full/selling/traveling
+  articles — no Box-specific guide; "transfer Box photos to
+  USB flash drive Android no computer": our own
+  transfer/storage-full/selling articles, a generic
+  Sync-by-Miciniti USB-copy guide (no Box), and a Facebook
+  reel generic — no Box-specific guide. Own site: 0
+  box-photos-to-usb slug (the live URL 404s; the
+  "box-photos-to-usb" hits in feed.xml/sitemap.xml are
+  "dropbox-photos-to-usb" substrings); searches.md Box mentions
+  are incidental (Dropbox, "in the box"); never scored, never
+  killed. The only live routes are screenshot/screen-recording,
+  in-app Make Available Offline (a cache, not a file), or a
+  third-party downloader (downloader.org Box page) — none is a
+  Box on-device save, and the series does not endorse
+  third-party scrapers. Do not re-dispatch. Un-kill only on a
+  current first-hand source (dated 2026, with a screenshot or a
+  named folder) showing a Download / Save control for photos in
+  the Box Android app and the folder it writes to, or a Box Help
+  page naming that folder. Query 212 stays unassigned.
+
 ### 59. "back up Evolveo photos to USB drive without computer" — HOW-TO GAP
 - Volume: unknown (Play publishes no volume).
 - Difficulty: Low. No top result is an Evolveo-specific
