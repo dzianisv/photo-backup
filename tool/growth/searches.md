@@ -22809,3 +22809,183 @@ unchanged (already "Back up photos & videos to a USB disk").
   the offline trap, the folder landing, the Drive-versus-Photos untangling,
   the select-all workaround, the ZIP catch, and the lost-taken-date limit are
   all real things to add.
+### 200. "Save Dropbox photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already stored as a file in Dropbox, exported on the Android
+  phone itself, onto a USB drive plugged into the phone, no computer — with the
+  export step stated (Files tab, three-dot More menu, Share, chevron beside
+  Link for viewing, Export, Save to Device, Dropbox's own help page), the
+  landing folder stated (Downloads), the offline trap stated (Make available
+  offline keeps the file inside the Dropbox app and writes no file), the
+  Dropbox-versus-Photos-versus-Drive untangling stated (Dropbox is a file
+  store, Photos is a photo library, Drive is a file store too but a different
+  account with different menu words — Drive says Download, Dropbox says
+  Export), the folder route stated (no export-all button, select-all
+  workaround, one pass per subfolder), the Camera Uploads folder stated (one
+  folder, one pass), and the direct-pick route stated (Save-to screen lists
+  storage locations — SD card documented, USB untested). Our own generic
+  articles rank top on one phrasing and never mention Dropbox; the generic
+  OTG guides never name Dropbox at all; the Dropbox guides that exist stop
+  at the phone. The gap stands ONLY on that narrow angle: the Dropbox photo,
+  exported on the phone into Downloads, onto a USB drive, no computer, with
+  the export step stated, the folder stated, the offline trap stated, and the
+  Dropbox-versus-Photos-versus-Drive untangling stated plainly.
+- Current top results (scored Nov 25, 2026, live web search):
+  Phrasing 1, "save Dropbox photos to USB drive from Android phone no
+  computer" (supervisor, this run): only download-to-phone guides — the
+  umatechnology guide "How to Download Files from Dropbox to Phone Storage"
+  (walks the Dropbox app's download steps, ends with the file in the
+  Downloads folder) and Dropbox's own help page "Save or share files with
+  other mobile apps" (export steps, stops at Save to Device) — plus a 2014
+  Dropbox blog post about exporting files to an SD card, and generic
+  USB-copy guides (sync.miciniti) where Dropbox never appears at all. No
+  guide joins photos already in Dropbox to an export on the phone to a copy
+  to USB with no computer.
+  Phrasing 2, "Dropbox Help save files to device Android export" (lead,
+  this run — the second-phrasing gate): the same Dropbox help page at the
+  top, the same 2014 blog post, the itechguides download guide (swipe up to
+  reveal Export, then Save to device), the multcloud computer-transfer
+  guide, the Coupler export guide (Dropbox "doesn't have a separate button
+  to export all items stored in it"), and the Dropbox community thread on
+  offline versus export ("When you make a file offline ... it's still
+  placed within your Dropbox mobile app. When you export a file, it's
+  separate from your Dropbox account and it's stored in your device as
+  well"). Every one of them stops at the phone, or routes through a
+  computer.
+  Phrasing 3, "Dropbox Camera Uploads folder Android photos automatically
+  uploaded" (lead, this run — the third-phrasing gate): the How-To Geek
+  camera-uploads setup guide, Dropbox's own photos page, and the 2012
+  Dropbox blog post announcing automatic uploads to the Camera Uploads
+  folder at original size and full quality — all of them about getting
+  photos into Dropbox, not about getting them out again onto a drive. No
+  Dropbox-photos-to-USB guide exists on any of the three phrasings.
+- Honest centre (verified from the code at base 6838fba and the live sources
+  above, this run, Nov 25, 2026, not assumed): a photo in Dropbox is not
+  on your phone until you export it — Dropbox is a cloud file store, and the
+  file appears only when you export it. Dropbox's own help page
+  (help.dropbox.com/installs/export-files-mobile, updated Sep 14, 2023,
+  applies to all Dropbox users) gives the whole procedure in seven steps:
+  open the Dropbox mobile app, tap the Files tab, tap more options next to
+  the file, tap Share, tap the chevron up beside Link for viewing, tap
+  Export, then save the file locally by tapping Save to Device, Save image,
+  or Save video, depending on the file type — and carries the note that once
+  you export the file to another app, changes may not be saved back to your
+  Dropbox unless the app specifically integrates with Dropbox. Two
+  independent guides agree on where the file goes: umatechnology (downloaded
+  to the phone's storage, check the Downloads folder in the file manager)
+  and itechguides (Save to device saves the file to your phone). The trap
+  is the second menu item: Make available offline keeps the file inside the
+  Dropbox app so you can open it without a connection — the Dropbox
+  community states it directly, that a file made offline is "still placed
+  within your Dropbox mobile app", while an exported file is "separate from
+  your Dropbox account and it's stored in your device as well (internally or
+  SD)" — so it will not appear in the Files app, the gallery, or SnapDisk's
+  run. The direct-pick route: the Save-to screen lets you pick a storage
+  location, and Dropbox's own 2014 blog post shows an external SD card as a
+  pickable destination there, with the fix if it is not listed — menu in the
+  Save-to screen, Settings, Display advanced devices — so a mounted USB
+  drive may appear in the same list; stated as try-first, reported for SD
+  cards, UNTESTED for USB-OTG on this phone, with Downloads as the road
+  that always works. The folder route: Dropbox has no export-all button
+  (Coupler, quoted above), and the workaround is long-press one file, tap
+  the others to add them, three-dot menu, Export, Save to Device; a folder
+  with subfolders needs one pass per subfolder. The multi-select ZIP
+  question is UNREPORTED for Dropbox — no source this run says the app zips
+  a multi-select export — so the article states it as unreported, not as
+  tested, and tells the reader to check Downloads for separate .jpg files
+  or one .zip (unzip first, SnapDisk copies photos, not ZIP archives). The
+  Dropbox-versus-Photos-versus-Drive untangling: Dropbox is a file store —
+  photos you put there are files in folders; Photos is a photo library —
+  photos backed up there live in a library organised by date and album;
+  Drive is a file store too, but a different account in a different app,
+  and the menu words differ — Drive says Download, Dropbox says Export,
+  then Save to Device. A photo exported from Dropbox is the same file
+  uploaded — same pixels, same EXIF, same resolution — because Dropbox
+  stores files, it does not recompress them. Camera Uploads: photos the
+  phone uploads by itself land in one folder, Camera Uploads, at original
+  size and full quality (Dropbox blog 2012, How-To Geek, Dropbox photos
+  page), and that folder empties in a single select-all pass. Shared
+  folders export the same way, but the owner can revoke access, so export
+  promptly.
+  The default run covers an exported Dropbox photo that shows in the
+  gallery: it reads the media index with no folder filter (queryMediaTable
+  :38, the query call passes selection null :64; Images + Videos tables
+  :23-36; DATE_TAKEN with DATE_MODIFIED fallback :47-48, :56-58,
+  oldest-first via BackupEngine.sortOldestFirst :95-100), so a .jpg in
+  Downloads copies like any other photo — the route is conditional on the
+  photo being exported as a file at all, stated WL-246 form, not asserted
+  outright. One honest limit inside that coverage: an exported photo often
+  has no original taken date, so it sorts by its export date
+  (DATE_MODIFIED fallback) rather than the date the photo was taken —
+  stated in the TL;DR and in "The date problem". The From picker route is
+  code-supported but UNTESTED end to end on this exact folder:
+  listTreeFiles walks the folder directly (:90-97) and does not depend on
+  the media index, isMediaName (:125-128) keeps only IMAGE_EXTENSIONS
+  (:131-134: .jpg .jpeg .png .heic .heif .webp .gif .bmp .dng .raw .avif
+  .jxl), the picker is ActivityResultContracts.OpenDocumentTree with no
+  folder pre-selected (MainActivity.kt:62, :71), and the code holds zero
+  "dropbox" matches in the whole source tree. Screen-off continuation under
+  battery saver is UNVERIFIED — the repo holds no wake lock and no
+  battery-saver handling (grep across all main-source .kt files: none) —
+  stated in the TL;DR and in "What to avoid" (WL-182 form). Android 15
+  dataSync 6-hour budget: BackupService.onTimeout pauses cleanly with a
+  message (BackupService.kt:134, WL-34). Every file is size-verified
+  after copying (BackupEngine.kt:103-107 shouldSkip/verify; CopyResult.Copied
+  only after verify passes). FAT32 files >=4 GiB skipped with their
+  reason (BackupService.kt:428-433). Default From /sdcard/DCIM and To
+  /disk/DCIM (BackupPrefs.kt:50,53), no INTERNET permission (0 occurrences
+  in the manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms / play-services in the build — re-checked this
+  run), no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk
+  24 (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11). Pro $9.99 once
+  (ProPrefs.kt:40), 5 GB free per run (:43). "SnapDisk copies, it never
+  deletes" present — the only .delete() calls in the code are on SnapDisk's
+  own half-finished .part files (BackupEngine.kt:176, :207;
+  BackupService.kt:385, :477). No VaultDrive price is stated in this
+  article — only the comparison-article link in "On your phone instead" —
+  and no install count for SnapDisk (none exists) and no VaultDrive
+  install figure. The 81 "download" forms in the article are benign
+  (Downloads folder, Download menu wording, downloaded photos, browser
+  downloads — no counts claimed); the 1 "install" form is benign
+  (Dropbox app installed); 1 "rating" inside "operatingSystem"; 12
+  lowercase "star" inside the verbs "start"/"starts"/"starting" — no
+  counts claimed. The 1 "Google Play" mention is factual ("no Google Play
+  Services dependency"), same as WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/
+  WL-240 and WL-193. The 1 "VaultDrive" mention is the comparison-article
+  link text only, carrying no price. Read time 13 min from the word count
+  (9,907 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/dropbox-photos-to-usb.html verified 0 collisions in feed.xml,
+  blog/index.html, sitemap.xml, llms.txt, llms-full.txt, searches.md, and
+  WORKLOG.md before writing; "dropbox" returns 0 matches in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt, and "Dropbox"
+  returns 0 matches in feed.xml, sitemap.xml, blog index, llms.txt, and
+  llms-full.txt; the only "Dropbox" matches in searches.md are incidental
+  lines inside other queries' rows (a cloud list mention, a Takeout line,
+  Dr.Fone route mentions — no dedicated Dropbox query row); and no
+  docs/dropbox-photos-to-usb.html exists (docs/ listing this run: no file
+  with "dropbox" — the nearest are the Google Drive article and the
+  social-app articles, all different). There are no near matches from
+  other articles — no earlier article is a Dropbox article — and the near
+  matches are the other cloud article (google-drive-photos-to-usb.html, the
+  200th how-to, linked as the sibling cloud article) and the other
+  social-app articles (whatsapp-photos-to-usb.html,
+  telegram-photos-to-usb.html, messenger-photos-to-usb.html,
+  viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html, imo-photos-to-usb.html,
+  pinterest-photos-to-usb.html, reddit-photos-to-usb.html) — all different,
+  already-live articles, untouched, and the WhatsApp, Telegram, Messenger,
+  Viber, Kik, WeChat, IMO, Pinterest, Reddit, and Google Drive ones linked
+  from the new article as series companions. A docs/ listing this run
+  confirms Dropbox is the next subject in our series with no article —
+  WhatsApp, Telegram, Instagram, Facebook, Snapchat, TikTok, WeChat,
+  Messenger, Viber, Kik, IMO, Pinterest, Reddit, and Google Drive all have
+  theirs already; the LINE and KakaoTalk rows were killed, not written,
+  because those apps offer only the one-by-one save with nothing else to
+  add, while Dropbox survives the same test because the offline trap, the
+  folder landing, the Dropbox-versus-Photos-versus-Drive untangling, the
+  select-all workaround, the Camera Uploads folder, the no-export-all
+  limit, the direct-pick route, and the lost-taken-date limit are all real
+  things to add.
