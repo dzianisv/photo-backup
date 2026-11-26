@@ -121,7 +121,8 @@ object PhotoQuery {
         }
     }
 
-    private fun isMediaName(name: String): Boolean {
+    // internal (not private) so the unit test can call it directly.
+    internal fun isMediaName(name: String): Boolean {
         val lower = name.lowercase()
         return IMAGE_EXTENSIONS.any { lower.endsWith(it) } ||
             VIDEO_EXTENSIONS.any { lower.endsWith(it) }
@@ -129,7 +130,7 @@ object PhotoQuery {
 
     private val IMAGE_EXTENSIONS = listOf(
         ".jpg", ".jpeg", ".png", ".heic", ".heif", ".webp",
-        ".gif", ".bmp", ".dng", ".raw",
+        ".gif", ".bmp", ".dng", ".raw", ".avif",
     )
     private val VIDEO_EXTENSIONS = listOf(
         ".mp4", ".mov", ".mkv", ".webm", ".3gp", ".m4v", ".avi",
