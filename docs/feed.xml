@@ -1455,5 +1455,12 @@
       <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
       <description>A SmugMug photo isn't on your phone until you save it. Tap the three dots, then Save to Device — it lands in Pictures — then back it up to USB, no computer.</description>
     </item>
+    <item>
+      <title>Save Amazon Photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/amazon-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/amazon-photos-to-usb.html</guid>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
+      <description>An Amazon Photos photo isn't on your phone until you download it. Press and hold, tap the three dots, tap Download — then back it up to USB, no computer.</description>
+    </item>
 </channel>
 </rss>
