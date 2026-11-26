@@ -23854,3 +23854,182 @@ unchanged (already "Back up photos & videos to a USB disk").
   untangling, the Save as Image whole-post route, the web-only blog export
   route, the GIF-versus-video trap, the save-date problem, and the
   larger-version quality question are all real things to add.
+### 205. "Save Flickr photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 207, Nov 26, 2026 (WL-260).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already on Flickr, saved on the Android phone itself, onto a USB
+  drive plugged into the phone, no computer — with the save step stated (open
+  the photo, tap the share icon — or the three dots, depending on the version —
+  tap Save, lands in the Flickr folder in the Gallery), the no-auto-save wall
+  stated (Flickr saves nothing by itself; a fave keeps the photo inside your
+  account, not a file — if the photographer deletes the photo, the fave points
+  at nothing), the no-bulk wall stated (the app saves one photo at a time and
+  offers no bulk download), the web batch routes stated (Camera Roll on the web,
+  select, Download, ZIP via FlickrMail, around 500 photos per batch; albums on
+  the web as a ZIP; the whole account through the data request, which preserves
+  the originals and can take days), the owner-restriction stated (an owner can
+  switch downloads off, and then there is no Save to tap), and the lost-taken-date
+  and served-copy quality limits stated (a saved photo shows the save date; the
+  app save is a JPG with no size choice, and Original lives behind the size menu
+  on the web). Our own generic articles rank top on both phrasings and never
+  mention Flickr; the generic OTG guides never name Flickr at all; the Flickr
+  guides that exist stop at the phone or are transfer apps with no USB step.
+  The gap stands ONLY on that narrow angle: the Flickr photo, saved on the phone
+  into the Flickr folder, onto a USB drive, no computer, with the save step
+  stated, the folder stated, the no-auto-save wall stated, and the
+  fave-versus-save untangling stated plainly.
+- Current top results (scored Nov 26, 2026, live web search):
+  Phrasing 1, "save Flickr photos to USB drive from Android phone no
+  computer" (supervisor, this run): only our own generic usb-photo-backup and
+  transfer-photos-to-usb-automatically articles, which rank top and never mention
+  Flickr, and one generic pixoneye guide — no Flickr-specific phone-to-USB guide
+  exists on this phrasing.
+  Phrasing 2, "transfer Flickr photos to USB flash drive Android no computer"
+  (supervisor, this run): our own transfer and usb-photo-backup articles, the
+  PhotoSync app listing on Google Play, the pixoneye generic guide, and an eyefi
+  forum thread — no Flickr-to-phone-to-USB guide with no computer exists on either
+  phrasing.
+  Corroboration (lead, this run): three independent guides give the Android save
+  in the same words — seedofyou, updated 28 October 2026, read first-hand
+  ("The phone app can save individual items, but does not offer bulk downloads...
+  On a phone: 1. Open an image or video in the Flickr app. 2. Use Share and Save,
+  or the item's three-dot menu and download option where shown."), techsith, read
+  first-hand ("Open the photo, tap the three dots in the upper corner (or the share
+  icon depending on the version), and select "Save." The image lands in a specific
+  "Flickr" folder in your device's gallery or file manager."), and multcloud
+  ("Open the Flickr app on your phone and select the photo. Click the share icon
+  and choose "Save" to download this photo to your phone." — with the Android
+  permission note: Settings, Applications, Flickr, Permissions, Storage). The
+  owner restriction is techsith ("If the arrow is missing, the owner has disabled
+  downloading. This often happens with "All Rights Reserved" images.") and
+  multcloud ("The owner of the photo may have restricted downloading by enabling
+  privacy settings."). The fave-versus-file distinction is the IFTTT applets that
+  save new Flickr favourites to Dropbox or Drive — they exist because the fave
+  alone writes no file locally; the download is the separate step. The Camera Roll
+  batch is techsith ("Go to "You" in the top menu and select "Camera Roll."...
+  Once you have your group, click the "Download" button... Flickr will create a
+  zip file."; "Flickr places a cap on how many photos you can zip at once from the
+  Camera Roll. The limit usually stands around 500 images per batch.") and
+  multcloud (same route, FlickrMail delivery). The album route is techsith
+  ("Hover over the album thumbnail... A download icon appears on the cover image.
+  Clicking this prompts Flickr to zip the entire album."; "If you download someone
+  else's album, the system only includes photos that have download permissions
+  enabled."). The data request is seedofyou, read first-hand ("In Flickr's web
+  account settings, find Your Flickr Data. Request My Flickr Data and wait for the
+  ready notification."; "Flickr says full-data preparation can range from a few
+  hours to a few weeks."; "Can Free members request their full Flickr data? Yes.
+  The full account-data request is separate from ordinary single-item, Camera Roll
+  and album download limits.") and techsith ("Go to your account settings and find
+  the "Your Flickr Data" section. Click "Request My Data."... It can take days for
+  a large account."). The quality ceiling is techsith (web sizes "ranging from
+  Square (75×75) up to Original (often 4000+ pixels wide)"; "Always choose
+  "Original" if you plan to print or edit the file later, as smaller sizes lose
+  detail."; comparison table: "Mobile App Save | Saving to phone gallery | JPG").
+  The video save is seedofyou ("Open an image or video in the Flickr app. Use
+  Share and Save"). Flickr's own Help pages returned HTTP 403 to this run's fetch
+  (help.flickr.com, Nov 26, 2026) — a fetch block, not evidence of absence — so
+  the gate is carried by the current 2026 guides above, read first-hand this run.
+  No VaultDrive price is stated in this article — only the comparison-article link
+  in "On your phone instead" — and no install count for SnapDisk (none exists) and
+  no VaultDrive install figure.
+- Honest centre (verified from the code at base fefdee2 and the live sources
+  above, this run, Nov 26, 2026, not assumed): a photo on Flickr is not on your
+  phone until you save it — Flickr is a photo library on someone else's server,
+  not a folder on your phone, and the file appears only when you save it, one
+  photo at a time. The save is open the photo, tap the share icon — or the three
+  dots, depending on the version — and tap Save — three guides agree in the same
+  words, with the same destination — and the file lands in a folder called Flickr,
+  visible in your Gallery. Flickr saves nothing by itself: there is no auto-save
+  and no setting that turns one on, and a fave keeps the photo inside your
+  account, not a file. The app saves one photo at a time and offers no bulk
+  download — seedofyou states it outright — so a batch goes through Camera Roll
+  on the web as a ZIP, around 500 photos per batch via FlickrMail, and a whole
+  account goes through the data request, which preserves the originals and can
+  take from a few hours to a few weeks. The date problem is a save problem for
+  Flickr, not a cloud problem: the file is written when you save it, so it
+  sorts by its save date (DATE_MODIFIED fallback), and the taken date does not
+  survive Flickr's copy — stated as the expected case, not as a certainty,
+  because no source this run tested the taken date after an in-app save — unlike
+  OneDrive, where the taken date can already be replaced at upload. The quality
+  problem is a copy problem: the app save is a JPG with no size choice, and
+  Original lives behind the size menu on the web, often 4,000 or more pixels
+  wide. An owner can switch downloads off, and then there is no Save to tap, and
+  there is no bulk route for someone else's photos — the series does not endorse
+  third-party downloaders, several of which ask for a Flickr login they do not
+  need. The default run covers a saved Flickr photo that shows in the gallery: it
+  reads the media index with no folder filter (queryMediaStoreOldestFirst
+  :23-36; queryMediaTable :38, the query call passes selection null :60; Images
+  + Videos tables :23-36; DATE_TAKEN with DATE_MODIFIED fallback :47-48, :56-58,
+  oldest-first via BackupEngine.sortOldestFirst), so a .jpg in the Flickr
+  folder copies like any other photo — the route is conditional on the photo
+  being saved as a file at all, stated WL-246 form, not asserted outright. One
+  honest limit inside that coverage: a saved photo shows the save date, so it
+  sorts by its save date (DATE_MODIFIED fallback) rather than the date the
+  photo was taken unless the EXIF taken date survived — stated in the TL;DR
+  and in "The date problem". The From picker route is code-supported but
+  UNTESTED end to end on this exact folder: listTreeFiles walks the folder
+  directly (:90-97) and does not depend on the media index, isMediaName
+  (:125-128) keeps only IMAGE_EXTENSIONS (:131-134) and VIDEO_EXTENSIONS
+  (:135-137), the picker is ActivityResultContracts.OpenDocumentTree with no
+  folder pre-selected (MainActivity.kt:62, :71), and the code holds zero
+  "flickr" matches in the whole source tree. Screen-off continuation under
+  battery saver is UNVERIFIED — the repo holds no wake lock and no
+  battery-saver handling (grep across all main-source .kt files: none) —
+  stated in the TL;DR and in "What to avoid" (WL-182 form). Android 15
+  dataSync 6-hour budget: BackupService.onTimeout pauses cleanly with a
+  message (service/BackupService.kt:134, WL-34). Every file is size-verified
+  after copying (BackupEngine.kt:103-108 shouldSkip/verify; CopyResult.Copied
+  only after verify passes, :126). FAT32 files >=4 GiB skipped with their
+  reason (service/BackupService.kt:428-435). Default From /sdcard/DCIM and To
+  /disk/DCIM (BackupPrefs.kt:50,53), no INTERNET permission (0 occurrences
+  in the manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms / play-services in the build — re-checked this
+  run), no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk
+  24 (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11). Pro $9.99 once
+  (ProPrefs.kt:40), 5 GB free per run (:43). "SnapDisk copies, it never
+  deletes" present — the only .delete() calls in the code are on SnapDisk's
+  own half-finished .part files (BackupEngine.kt:176, :207;
+  service/BackupService.kt:385, :477). No VaultDrive price is stated in this
+  article — only the comparison-article link in "On your phone instead" —
+  and no install count for SnapDisk (none exists) and no VaultDrive
+  install figure. The article's VaultDrive mentions are 1: the
+  comparison-article link text once. The 1 "install" form in the article is
+  benign ("with the Flickr app installed"); 1 "rating" inside
+  "operatingSystem"; the "download" forms are benign (Downloads folder,
+  Download menu wording, downloaded photos — no counts claimed). The 2
+  "Google Play" mentions are factual (the PhotoSync app listing in the
+  search-results section, and "no Google Play Services dependency"), same
+  form as WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240 and WL-193. Read
+  time 13 min from the word count (9,413 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/flickr-photos-to-usb.html verified 0 collisions in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt before writing;
+  "flickr" returns 0 matches in feed.xml, sitemap.xml, blog index, llms.txt,
+  llms-full.txt, searches.md, and WORKLOG.md pre-write, and 0 "flickr" slugs
+  in docs/ pre-write; the code holds 0 "flickr" matches in the whole source
+  tree. There are no near matches from other articles — no earlier article is
+  a Flickr article — and the near matches are the other social-app articles
+  (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html,
+  messenger-photos-to-usb.html, viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html, imo-photos-to-usb.html,
+  pinterest-photos-to-usb.html, reddit-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html,
+  x-twitter-photos-to-usb.html, tumblr-photos-to-usb.html) and the other cloud
+  articles (google-drive-photos-to-usb.html, dropbox-photos-to-usb.html,
+  onedrive-photos-to-usb.html, icloud-photos-to-usb.html) — all different,
+  already-live articles, untouched, and the WhatsApp, Telegram, Messenger,
+  Viber, Kik, WeChat, IMO, Pinterest, Reddit, Instagram, Facebook, Snapchat,
+  TikTok, X, Tumblr, Google Drive, Dropbox, OneDrive, and iCloud ones linked
+  from the new article as series companions. A docs/ listing this run confirms
+  Flickr is the next subject in our series with no article — WhatsApp, Telegram,
+  Instagram, Facebook, Snapchat, TikTok, WeChat, Messenger, Viber, Kik, IMO,
+  Pinterest, Reddit, X, Tumblr, Google Drive, Dropbox, OneDrive, and iCloud all
+  have theirs already; the Signal (WL-237), Discord, LINE, and KakaoTalk rows
+  were killed, not written, because those apps offer only the one-by-one save
+  with nothing else to add, while Flickr survives the same test because the
+  no-auto-save wall, the Flickr-folder landing, the fave-versus-save untangling,
+  the no-bulk-in-app wall, the web-only Camera Roll and album batch routes, the
+  whole-account data request, the owner-restriction, the save-date problem, and
+  the served-copy-versus-Original quality question are all real things to add.
