@@ -1427,5 +1427,12 @@
       <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
       <description>iCloud photos live in Apple's cloud, not on your phone. Download them at iCloud.com in a browser — they land in Downloads — then back them up to USB.</description>
     </item>
+    <item>
+      <title>Save X (Twitter) photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/x-twitter-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/x-twitter-photos-to-usb.html</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>X photos live on X's servers, not on your phone. Save them in the app — they land in the Twitter folder — then back them up to USB, no computer.</description>
+    </item>
 </channel>
 </rss>
