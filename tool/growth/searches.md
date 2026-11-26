@@ -23416,3 +23416,188 @@ unchanged (already "Back up photos & videos to a USB disk").
   the browser route, the format choice, the Live Photo split, the 1,000-at-a-
   time limit, the unreported multi-select ZIP, the date-as-format-problem,
   and the direct-pick route are all real things to add.
+### 203. "Save X (Twitter) photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already on X (Twitter), saved on the Android phone itself, onto a USB
+  drive plugged into the phone, no computer — with the save step stated (tap
+  the photo full-screen, three-dot menu, Save, "Image saved", lands in the
+  Twitter folder in the Gallery), the no-auto-save wall stated (X saves nothing
+  by itself; Data Saver, autoplay, and image quality are the only media
+  settings; viewed photos sit in the app's cache, not the Gallery), the
+  bookmark-versus-save untangling stated (a bookmark is a link inside your
+  account, not a file — if the author deletes the post, the bookmark points at
+  nothing), the no-custom-location limit stated (on Android the app saves to its
+  default folder only, unlike the iPhone app's save-to-files choice), the DM
+  route stated (same gesture in a DM; X does not notify the sender; no official
+  save for videos in DMs), the archive route stated (Settings and privacy, Your
+  account, Download an archive of your data — can include DMs and attached
+  media, your own account only), and the lost-taken-date and resized-copy limits
+  stated (a saved photo shows the save date; the saved copy is X's resized
+  copy, not the original — one guide measured 1200 by 675 saved against 1920
+  by 1080 original). Our own generic articles rank top on both phrasings and
+  never mention X; the generic OTG guides never name X at all; the X guides
+  that exist stop at the phone or are downloader sites with no USB step.
+  The gap stands ONLY on that narrow angle: the X photo, saved on the phone
+  into the Twitter folder, onto a USB drive, no computer, with the save step
+  stated, the folder stated, the no-auto-save wall stated, and the
+  bookmark-versus-save untangling stated plainly.
+- Current top results (scored Nov 26, 2026, live web search):
+  Phrasing 1, "save X Twitter photos to USB drive from Android phone no
+  computer" (supervisor, this run): only generic phone-to-USB guides — our own
+  usb-photo-backup and transfer-photos-to-usb-automatically articles, a YouTube
+  OTG guide, the howtogeek guide, the mefmobile and pcnmobile guides, and the
+  thedroidguy guide — all of which start from photos already on the phone and
+  never mention X. No guide joins photos already on X to a save on the phone to
+  a copy to USB with no computer.
+  Phrasing 2, "transfer Twitter photos to USB flash drive Android no computer"
+  (supervisor, this run): the same generic guides, the same own-site articles,
+  the same OTG and how-to pages. No X-to-phone-to-USB guide with no computer
+  exists on either phrasing.
+  Corroboration (lead, this run): five independent guides give the Android save
+  in the same words — candid.technology ("Tap on the photo attached with a
+  tweet that you want to save. On the image preview page, tap on the vertical
+  ellipsis menu icon at the top-right corner of the screen. From the options
+  that appear at the top-right of the screen, tap on Save. You'll see a
+  notification at the bottom of the screen that reads 'Image saved'"), dignited
+  ("You'll then need to tap on the three dots on the top right corner of the
+  display and tap on Save" — "You should find your saved photo in your Gallery
+  under the Twitter folder"), itgeared (tap the picture, tap the three dots,
+  tap "Save", "Your picture will get saved in your gallery under the Twitter
+  folder"), useqwitter ("By default, a new folder 'Twitter' will be created
+  for specifically storing images from the platform"), and sekin.in (touch and
+  hold the full-screen image; if the app blocks a long press, open the post in
+  Chrome and save from the browser). Candid.technology states the
+  no-custom-location limit verbatim: "you can only save a picture from
+  Twitter's Android app to the default folder assigned to the app in your
+  device storage" — and that saved images "are also accessible via the Photos
+  app". The DM save is gadgetstouse ("Tap on the image in the DM that you wish
+  to download. On the top right corner, tap on the three-dotted icon. Now,
+  click on Save. The image will be successfully saved to your phone gallery")
+  with the video limit stated ("this trick will not work for videos"); the
+  no-notification fact is lilachbullock ("X (formerly Twitter) does not notify
+  anyone when you save, download or screenshot a picture sent in a DM").
+  The bookmark-versus-save untangling is mimfold ("Bookmarks keep a link,
+  which breaks if the post is deleted") and vidbrowser ("a Bookmark on X saves
+  the post, not a separate copy of the video attached to it" — "it doesn't
+  create a file on your phone"). The quality measurement is xautopilot (one
+  file checked October 6, 2026: default copy 1200 by 675, original 1920 by
+  1080; the ?format=jpg&name=orig trick on the pbs.twimg.com address gets the
+  original; "If your build still has a save item in the three dot menu, that
+  works too" and "If the three dot menu looks bare, go back to the image and
+  hold your finger on it instead"). The video gate is X's own video help as
+  quoted by vidbrowser and airmore: Premium subscribers can download videos
+  from certain posts (eligible paid subscription, posted on or after July 25,
+  2023, uploader allowed downloads); GIFs behave as short looping video files
+  (xautopilot). The archive route is sekin.in (Settings and privacy, Your
+  account, Download an archive of your data; "X says an archive can include
+  media attached to posts, Direct Messages, and Moments") and howpremium ("X
+  confirms that recipients may download or reshare DM media"). The no-auto-save
+  wall is the absence of any auto-save in every guide above plus the settings
+  themselves: Data Saver, autoplay, and image quality under Settings and
+  privacy, then Data usage (sekin.in; twittervenezuela — "X keeps a cache of
+  images and videos on your phone, which avoids downloading them twice but can
+  grow large over time"). The Media tab is useqwitter ("check under the
+  'Media' tab"). No VaultDrive price is stated in this article — only the
+  comparison-article link in "On your phone instead" — and no install count
+  for SnapDisk (none exists) and no VaultDrive install figure.
+- Honest centre (verified from the code at base cc91860 and the live sources
+  above, this run, Nov 26, 2026, not assumed): a photo on X is not on your
+  phone until you save it — X is a social feed, not a photo library, and the
+  file appears only when you save it, one photo at a time. The save is tap the
+  photo full-screen, three-dot menu, Save, "Image saved" — five guides agree
+  in the same words — and the file lands in a folder called Twitter, visible
+  in your Gallery. X saves nothing by itself: there is no auto-save and no
+  setting that turns one on, and a bookmark is a link inside your account, not
+  a file. On Android you cannot pick where the photo lands — the app saves to
+  its default folder only — and the long press is the fallback when the menu
+  looks bare. A photo in a DM saves with the same gesture, X does not notify
+  the sender, and there is no official save for a video in a DM. The date
+  problem is a save problem for X, not a cloud problem: the file is written
+  when you save it, so it sorts by its save date (DATE_MODIFIED fallback), and
+  the taken date does not survive X's copy — stated as the expected case, not
+  as a certainty, because no source this run tested the taken date after an
+  in-app save — unlike OneDrive, where the taken date can already be replaced
+  at upload. The quality problem is a copy problem: the saved file is X's
+  resized rendition, not the original (measured 1200 by 675 against 1920 by
+  1080 on one file), and the browser ?format=jpg&name=orig trick gets the
+  original when it is bigger. GIFs are looping videos, so the photo save does
+  not apply to them, and video download is a Premium feature for certain posts
+  only. For a whole account there is no save-them-all button — the Media tab
+  makes finding fast, and the archive is the bulk route (your own account
+  only; it will not contain every deleted or unavailable item).
+  The default run covers a saved X photo that shows in the gallery: it reads
+  the media index with no folder filter (queryMediaStoreOldestFirst :23-36;
+  queryMediaTable :38, the query call passes selection null :60; Images +
+  Videos tables :23-36; DATE_TAKEN with DATE_MODIFIED fallback :47-48, :56-58,
+  oldest-first via BackupEngine.sortOldestFirst), so a .jpg in the Twitter
+  folder copies like any other photo — the route is conditional on the photo
+  being saved as a file at all, stated WL-246 form, not asserted outright. One
+  honest limit inside that coverage: a saved photo shows the save date, so it
+  sorts by its save date (DATE_MODIFIED fallback) rather than the date the
+  photo was posted unless the EXIF taken date survived — stated in the TL;DR
+  and in "The date problem". The From picker route is code-supported but
+  UNTESTED end to end on this exact folder: listTreeFiles walks the folder
+  directly (:90-97) and does not depend on the media index, isMediaName
+  (:125-128) keeps only IMAGE_EXTENSIONS (:131-134) and VIDEO_EXTENSIONS
+  (:135-137), the picker is ActivityResultContracts.OpenDocumentTree with no
+  folder pre-selected (MainActivity.kt:62, :71), and the code holds zero
+  "twitter" matches in the whole source tree. Screen-off continuation under
+  battery saver is UNVERIFIED — the repo holds no wake lock and no
+  battery-saver handling (grep across all main-source .kt files: none) —
+  stated in the TL;DR and in "What to avoid" (WL-182 form). Android 15
+  dataSync 6-hour budget: BackupService.onTimeout pauses cleanly with a
+  message (service/BackupService.kt:134, WL-34). Every file is size-verified
+  after copying (BackupEngine.kt:103-108 shouldSkip/verify; CopyResult.Copied
+  only after verify passes, :147). FAT32 files >=4 GiB skipped with their
+  reason (service/BackupService.kt:428-433). Default From /sdcard/DCIM and To
+  /disk/DCIM (BackupPrefs.kt:50,53), no INTERNET permission (0 occurrences
+  in the manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms / play-services in the build — re-checked this
+  run), no all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk
+  24 (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11). Pro $9.99 once
+  (ProPrefs.kt:40), 5 GB free per run (:43). "SnapDisk copies, it never
+  deletes" present — the only .delete() calls in the code are on SnapDisk's
+  own half-finished .part files (BackupEngine.kt:176, :207;
+  service/BackupService.kt:385, :477). No VaultDrive price is stated in this
+  article — only the comparison-article link in "On your phone instead" —
+  and no install count for SnapDisk (none exists) and no VaultDrive
+  install figure. The article's VaultDrive mentions are 1: the
+  comparison-article link text once. The 1 "install" form in the article is
+  benign ("with the X app installed"); 1 "rating" inside "operatingSystem";
+  the "download" forms are benign (Downloads folder, Download menu wording,
+  downloaded photos — no counts claimed). The 1 "Google Play" mention is
+  factual ("no Google Play Services dependency"), same as WL-233/WL-234/
+  WL-235/WL-236/WL-238/WL-239/WL-240 and WL-193. Read time 13 min from the
+  word count (9,001 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/x-twitter-photos-to-usb.html verified 0 collisions in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt before writing;
+  "twitter" returns 0 matches in feed.xml, sitemap.xml, blog index, llms.txt,
+  llms-full.txt, searches.md, and WORKLOG.md pre-write, and 0 "twitter" or
+  "x-twitter" slugs in docs/ pre-write; the code holds 0 "twitter" matches in
+  the whole source tree. There are no near matches from other articles — no
+  earlier article is an X article — and the near matches are the other
+  social-app articles (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html,
+  messenger-photos-to-usb.html, viber-photos-to-usb.html, kik-photos-to-usb.html,
+  wechat-photos-videos-to-usb.html, imo-photos-to-usb.html,
+  pinterest-photos-to-usb.html, reddit-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html) and the other
+  cloud articles (google-drive-photos-to-usb.html, dropbox-photos-to-usb.html,
+  onedrive-photos-to-usb.html, icloud-photos-to-usb.html) — all different,
+  already-live articles, untouched, and the WhatsApp, Telegram, Messenger,
+  Viber, Kik, WeChat, IMO, Pinterest, Reddit, Instagram, Facebook, Snapchat,
+  TikTok, Google Drive, Dropbox, OneDrive, and iCloud ones linked from the new
+  article as series companions. A docs/ listing this run confirms X is the
+  next subject in our series with no article — WhatsApp, Telegram, Instagram,
+  Facebook, Snapchat, TikTok, WeChat, Messenger, Viber, Kik, IMO, Pinterest,
+  Reddit, Google Drive, Dropbox, OneDrive, and iCloud all have theirs already;
+  the Signal (WL-237), Discord, LINE, and KakaoTalk rows were killed, not
+  written, because those apps offer only the one-by-one save with nothing else
+  to add, while X survives the same test because the no-auto-save wall, the
+  Twitter-folder landing, the no-custom-location limit, the
+  bookmark-versus-save untangling, the DM route with its no-notification fact
+  and video limit, the archive route, the save-date problem, and the
+  resized-copy quality question are all real things to add.
