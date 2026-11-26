@@ -130,7 +130,7 @@ object PhotoQuery {
 
     private val IMAGE_EXTENSIONS = listOf(
         ".jpg", ".jpeg", ".png", ".heic", ".heif", ".webp",
-        ".gif", ".bmp", ".dng", ".raw", ".avif",
+        ".gif", ".bmp", ".dng", ".raw", ".avif", ".jxl",
     )
     private val VIDEO_EXTENSIONS = listOf(
         ".mp4", ".mov", ".mkv", ".webm", ".3gp", ".m4v", ".avi",

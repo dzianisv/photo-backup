@@ -23,6 +23,16 @@ class PhotoQueryTest {
     }
 
     @Test
+    fun jxlNameIsMedia() {
+        assertTrue(PhotoQuery.isMediaName("photo.jxl"))
+    }
+
+    @Test
+    fun jxlNameMatchesCaseInsensitively() {
+        assertTrue(PhotoQuery.isMediaName("PHOTO.JXL"))
+    }
+
+    @Test
     fun existingImageNamesStillMedia() {
         assertTrue(PhotoQuery.isMediaName("photo.jpg"))
         assertTrue(PhotoQuery.isMediaName("photo.webp"))
@@ -33,5 +43,6 @@ class PhotoQueryTest {
     fun nonMediaNameIsNotMedia() {
         assertFalse(PhotoQuery.isMediaName("notes.txt"))
         assertFalse(PhotoQuery.isMediaName("photo.avif.bak"))
+        assertFalse(PhotoQuery.isMediaName("photo.jxl.bak"))
     }
 }
