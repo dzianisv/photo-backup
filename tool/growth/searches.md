@@ -6173,6 +6173,87 @@ demand is read off competitor install velocity instead (see
   OPPO support page naming that folder. Query 219 stays
   unassigned.
 
+- "save vivo Cloud photos to USB from Android, no computer"
+  (briefed as Query 220, Nov 26, 2026): NOT a gap — KILLED
+  Nov 26, 2026 (WL-273). No dedicated vivo-Cloud-photos-to-USB
+  how-to exists, but the joined workflow has no honest centre:
+  (1) no per-photo Download / Save control for photos in the
+  current vivo Cloud / Albums sync is documented by any
+  first-hand source — vivo's own support FAQ (vivo.com, read
+  live Nov 27, 2026) documents only the backup direction:
+  "You can go to vivoCloud -- log in to your vivo account --
+  select the content you want to backup such as contacts, SMS,
+  notes, etc. -- click on the \"Backup\" option to backup your
+  data." — and its backup list does not even name photos; the
+  album sync is described only as sync ("After Data Sync is
+  enabled, cloud and local data will remain consistent") with
+  no download control named;
+  (2) no source names the on-disk folder a vivo Cloud download
+  lands in — vivo's FAQ never names one, and no forum thread
+  or review fetched this run names one either;
+  (3) the closest thing to a download is My Cloud Drive —
+  "[Cloud Service - My Cloud Drive - Long press to select a
+  file - Download]" — but that comes from Baidu Baike, a wiki,
+  not a vivo first-hand source; it covers manually uploaded
+  files in My Cloud Drive, not the synced album photos the
+  query is about; and it names no folder;
+  (4) third-party restore claims conflict and name no folder
+  — Wondershare's Dr.Fone and MobileTrans guides list restore
+  types as Contacts / SMS / Notes only (photos are backed up
+  via Google Photos "Back Up and Sync", not vivo Cloud), while
+  Wondershare's Recoverit guide claims Settings > vivoCloud >
+  Restore data > Photos > Restore downloads them
+  "automatically restored to your Vivo phone's gallery app" —
+  a third-party claim, contradicted by the same vendor's own
+  guides, naming no on-disk folder; MobiKin's File Safe guide
+  ("Choose the photos you wish to recover. Click on the
+  \"Download\" sign") is third-party, two years old, about
+  File Safe recovery, and names no folder;
+  (5) the web route is unverified first-hand — Baike says the
+  vivo Cloud website lets users "view and manage cloud data",
+  but the site is login-walled and no first-hand source
+  confirms a Download control in the mobile web UI or where it
+  lands, the same discount as Box's desktop web doc; the only
+  PC route described (iMyFone) needs a computer, which the
+  query excludes;
+  (6) the only other live route is a third-party downloader —
+  PicFerry signs into the official vivo site from its own app
+  and saves to its own folders — the series does not endorse
+  third-party scrapers;
+  (7) trap avoided: the Google Play "Vivo Cloud" listing
+  (br.com.vivo.cloud, updated May 13, 2026) is Telefonica
+  Brasil's carrier cloud (developer TELEFONICA BRASIL S/A),
+  not the phone maker vivo's cloud — it says nothing about
+  the phone maker vivo Cloud's download flow.
+  Gap verified this run with three phrasings — "save vivo
+  Cloud photos to USB drive from Android phone no computer":
+  only our own vivo-photos-to-usb brand article (vivo Cloud
+  named only as cloud backup, not the download leg), our own
+  iqoo-photos-to-usb brand article, the pixoneye generic, our
+  own usb-photo-backup generic, and a YouTube generic — no
+  vivo-Cloud-specific joined guide; "transfer vivo Cloud photos
+  to USB flash drive Android no computer": our own vivo brand
+  article, the pixoneye generic, our own factory-reset article,
+  a YouTube generic, and our own storage-full article;
+  MobiKin's vivo Cloud guide covers vivo Cloud + Google backup
+  + a PC tool, no USB anywhere; third phrasing "how to
+  download photos from vivo Cloud to phone gallery without
+  computer": PicFerry, Baidu Baike, Dr.Fone, MobileTrans, and
+  the Telefonica Play listing — no dedicated
+  vivo-Cloud-to-USB guide. Own site: 0 "vivo-cloud" in
+  feed.xml; live slug vivo-cloud-photos-to-usb.html 404s
+  (verified this run); searches.md "vivo cloud" 4 incidental
+  lines and WORKLOG 6 incidental lines only (inside the
+  vivo / iQOO brand rows' contrast text, never scored);
+  never scored, never killed. Our vivo brand article covers
+  on-device photos and names vivo Cloud only as cloud backup
+  — not the cloud-download leg. Do not re-dispatch. Un-kill
+  only on a current first-hand source (dated 2026, with a
+  screenshot or a named folder) showing a Download / Save
+  control for photos in the current vivo Cloud / Albums app
+  and the folder it writes to, or a vivo support page naming
+  that folder. Query 220 stays unassigned.
+
 ### 59. "back up Evolveo photos to USB drive without computer" — HOW-TO GAP
 - Volume: unknown (Play publishes no volume).
 - Difficulty: Low. No top result is an Evolveo-specific
