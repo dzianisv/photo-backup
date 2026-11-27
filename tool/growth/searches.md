@@ -20469,6 +20469,39 @@ demand is read off competitor install velocity instead (see
   Do not re-dispatch. Un-kill only if all five roundups go stale (no
   update in 12+ months) or disappear and no current dedicated roundup
   joins the query. Query 230 stays unassigned.
+- "back up photos from Android phone to external SSD" (briefed as
+  Query 232, Nov 27, 2026): NOT a gap — KILLED Nov 27, 2026
+  (WL-283). Four dedicated, current guides already join both
+  phrasings: thedroidguy.com, "How To Copy Files From Android To A
+  USB Drive (2026)" (updated 5 days ago) — "An Android phone can
+  copy files straight to a USB flash drive or a portable SSD, with
+  no computer involved", with a dedicated "Using a portable SSD
+  instead of a flash drive" section, Samsung + Pixel steps;
+  mefmobile.org, "How to Transfer Files From Android to an External
+  Hard Drive" (updated 65 days ago) — portable SSD named in the
+  lede, drive choice, OTG adapter, powered hub for high-power
+  drives, Files by Google + Samsung My Files methods;
+  robots.net, "How To Move Pictures From Android To External Hard
+  Drive" (updated 71 days ago) — OTG cable, power, NTFS/exFAT,
+  eject; alibaba.com, "Step By Step Guide To Backing Up Photos
+  From Android To External Drive" — portable SSD/HDD/USB, OTG,
+  DCIM, copy, eject. Our own usb-photo-backup.html ranks #3 on
+  phrasing 1 and covers the same workflow (external hard drive,
+  power note, exFAT/FAT32 limit) — but names no SSD: 0 'ssd'
+  mentions in the article file. Own site: 0 SSD slugs (candidate
+  slugs android-photos-to-external-ssd.html,
+  transfer-photos-to-external-ssd.html,
+  back-up-photos-to-external-ssd.html, photos-to-external-ssd.html
+  all 404; feed.xml 10 'ssd' hits are passing text in other
+  articles; sitemap 0); no WORKLOG topic row (30 'ssd' hits are
+  passing text in other rows). No SnapDisk-specific honest centre:
+  an SSD is a device variant of the USB-drive backup our generic
+  article already owns, and the SSD-specific notes (powered hub for
+  high-draw drives, exFAT vs NTFS) are already joined by the
+  dedicated guides above and already in our articles and on the
+  WL-214 row. Do not re-dispatch. Un-kill only if the guides go
+  stale (no update in 12+ months) or disappear and no current
+  dedicated guide joins the query. Query 232 stays unassigned.
 
 
 ## Winners and what changed
