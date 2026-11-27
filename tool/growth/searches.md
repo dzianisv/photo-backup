@@ -6100,6 +6100,79 @@ demand is read off competitor install velocity instead (see
   Synology Help page naming that folder. Query 214 stays
   unassigned.
 
+- "save OPPO Cloud photos to USB from Android, no computer"
+  (briefed as Query 219, Nov 26, 2026): NOT a gap — KILLED
+  Nov 26, 2026 (WL-272). No dedicated OPPO-Cloud-photos-to-USB
+  how-to exists, but the joined workflow has no honest centre:
+  (1) no Download / Save control for photos in the current
+  OPPO Photos / HeyTap Cloud app is documented by any
+  first-hand source — OPPO's own ColorOS 12 User Manual
+  (read live Nov 27, 2026) documents only the sync direction
+  and the Optimize-storage toggle, and the OPPO Photos Play
+  listing says only "Automatically sync your photos to the
+  cloud so that you can view and manage them on any device";
+  (2) no source names the on-disk folder a HeyTap Cloud
+  download lands in — OPPO's manual never names one, and no
+  forum thread or review fetched this run names one either;
+  (3) the only documented phone-side download is the
+  Optimize-storage toggle — "When this feature is turned off,
+  ColorOS will automatically download the original photos back
+  to your phone" (OPPO's ColorOS 12 User Manual, Photos -
+  Settings - Auto sync - Optimize storage) — an
+  all-or-nothing auto-download via a toggle, not a per-photo
+  Download control, naming no folder, and every citation of
+  it found this run comes from ColorOS 11/12-era manuals
+  (2021 phones: Reno 6 Lite, A55, A93, K10 5G, Find X3,
+  Find X5 Lite, A17k, A57s) — no ColorOS 15/16/17 manual or
+  OPPO support page confirms the toggle still exists in the
+  current Photos app, so the flow cannot be carried over to
+  it, the same bar as WL-267's retired-DS-photo dismissal;
+  (4) OPPO's November 2026 ColorOS 17 update (official
+  ColorOS Instagram carousel + GSMDome, Nov 23, 2026) adds
+  Flexible Image Export — resolution/compression choice
+  before saving or sharing — and customisable deletion, but
+  no cloud-download control, and the rollout covers nine
+  flagship models only; (5) the web route is unverified
+  first-hand — OPPO's manual points to cloud.heytap.com for
+  HeyTap Cloud services, but the site is login-walled and no
+  first-hand source confirms a Download control in the
+  mobile web UI or where it lands, the same discount as
+  Box's desktop web doc; (6) the only other live routes are
+  screenshot, the smaller optimized copies that stay on the
+  phone when Optimize storage is on (not originals), cloud
+  backup and restore to a new OPPO (Settings - System
+  settings - Back up & migrate - HeyTap Cloud - Restore —
+  a restore to a phone, not files to a drive), Clone Phone
+  (phone-to-phone), or a third-party downloader (PicFerry
+  signs into the official site from its own app) — none is
+  an OPPO Cloud on-device save, and the series does not
+  endorse third-party scrapers. Gap verified with the
+  supervisor's two phrasings — "save OPPO Cloud photos to
+  USB drive from Android phone no computer": only our own
+  oppo-photos-to-usb brand article, Coolmuster's manual File
+  Manager guide, a Facebook manual infographic, the pixoneye
+  generic, and our own usb-photo-backup article — no
+  OPPO-Cloud-specific guide; "transfer OPPO Cloud photos to
+  USB flash drive Android no computer": the same own brand
+  article, the same Coolmuster manual guide, the same
+  Facebook manual, the same pixoneye generic, and our own
+  factory-reset article — no OPPO-Cloud-specific guide. Own
+  site: 0 "oppo-cloud" slugs in feed.xml, 0 "heytap" mentions
+  in feed.xml; the live slugs oppo-cloud-photos-to-usb.html
+  and heytap-cloud-photos-to-usb.html both 404 (verified
+  this run); searches.md "oppo cloud" 1 incidental line and
+  "heytap" 4 incidental lines only (inside other articles'
+  contrast text, never scored); WORKLOG "heytap" 9 incidental
+  lines, "oppo cloud" 0; never scored, never killed. Our
+  Oppo brand article covers on-device photos and names
+  HeyTap Cloud only as cloud backup — not the cloud-download
+  leg. Do not re-dispatch. Un-kill only on a current
+  first-hand source (dated 2026, with a screenshot or a named
+  folder) showing a Download / Save control for photos in the
+  current OPPO Photos app and the folder it writes to, or an
+  OPPO support page naming that folder. Query 219 stays
+  unassigned.
+
 ### 59. "back up Evolveo photos to USB drive without computer" — HOW-TO GAP
 - Volume: unknown (Play publishes no volume).
 - Difficulty: Low. No top result is an Evolveo-specific
