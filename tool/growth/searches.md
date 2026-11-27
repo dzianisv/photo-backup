@@ -6085,6 +6085,66 @@ demand is read off competitor install velocity instead (see
   the Box Android app and the folder it writes to, or a Box Help
   page naming that folder. Query 212 stays unassigned.
 
+- "save Box photos to USB from Android, no computer"
+  (briefed as Query 223, Nov 26, 2026): NOT a gap — KILLED
+  Nov 26, 2026 (WL-276) as a re-dispatch of the Query 212
+  kill (WL-265, same question under the wording "save Box
+  photos to USB from Android, no computer"). The brief's
+  "0 Box kills in searches.md" is wrong: the WL-265 kill
+  entry sits directly above this one, with a "Do not
+  re-dispatch" line the Nov 26 supervisor dispatch violated
+  by re-briefing the same question under a new query number
+  (223). The gate was re-verified fresh this run and still
+  fails on the same evidence, read live from Box's own docs
+  (docs.box.com, updated Sep 3, 2026): (1) the file-list
+  More Options menu ("Managing Content with Box for
+  Android") lists Make Available Offline, File Information,
+  Rename this File, Move or Copy, Open with…, View
+  Containing Folder, Print, Delete — no Download; (2) the
+  image-preview menu ("Box for Android Preview") lists the
+  same, no Download — only the video-preview menu lists
+  Download, and no on-disk folder is named anywhere in
+  either doc; (3) the only documented in-app save for
+  photos, Make Available Offline, keeps content inside the
+  Box app — files "saved for offline access" are reached
+  only via the Offline tab in the app, and Box's own "About
+  Box Mobile" page says the app works "without storing a
+  separate copy of your data outside Box"; Box's mobile
+  security settings add that on Android "app data is private
+  for that app's use only"; (4) Seed of You (Oct 28, 2026)
+  agrees: "Box's Make Available Offline control keeps
+  content in the app. It is useful for viewing but does not
+  by itself create an independent archive... For a durable
+  folder archive, continue on a computer"; (5) Box's web
+  Download doc describes a desktop UI — click, Shift+click,
+  Ctrl+A — and names no mobile folder, and no first-hand
+  source confirms the mobile web UI offers Download or
+  where it lands. The one counter-claim — a 2013 Android
+  Central forum post describing a download arrow in preview
+  opening a "save file here" dialog — is 13 years stale and
+  contradicted by Box's current help, which lists no
+  Download in the image-preview menu. Gap re-verified with
+  the supervisor's two phrasings, same results the WL-265
+  entry records — "save Box photos to USB drive from
+  Android phone no computer": only our own generic
+  transfer/storage-full/selling/traveling articles, no
+  Box-specific guide; "transfer Box photos to USB flash
+  drive Android no computer": our own
+  transfer/storage-full/selling articles, a generic
+  Sync-by-Miciniti USB-copy guide (no Box), and a Facebook
+  reel generic — no Box-specific guide — plus a third
+  phrasing this run, "download Box photos to USB from
+  Android phone": a Facebook reel, groovypost, YouTube,
+  Dr.Fone, a Google Photos support thread, and Coolmuster —
+  all generic phone-to-USB guides, no Box-specific guide.
+  Own site (verified this run, base f4d9bdb): live slug
+  box-photos-to-usb.html 404s (curl, this run); 0
+  Box-titled rows in WORKLOG.md at base (only Dropbox
+  WL-253); the feed.xml/sitemap.xml "box-photos-to-usb"
+  hits are "dropbox-photos-to-usb" substrings. No article
+  was written; no counts change. Do not re-dispatch.
+  Query 223 stays unassigned.
+
 - "save Synology Photos photos to USB from Android, no computer"
   (briefed as Query 214, Nov 26, 2026): NOT a gap — KILLED
   Nov 26, 2026 (WL-267). No dedicated Synology-Photos-to-USB
