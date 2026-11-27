@@ -20442,6 +20442,34 @@ demand is read off competitor install velocity instead (see
   and has no recovery function (WL-210 row: no restore/import function in v0.1.2).
   Do not re-dispatch. Un-kill only if all three guides go stale (no update in 12+
   months) or disappear and no current dedicated guide joins the query. Query 229 stays unassigned.
+- "best USB flash drive for Android photo backup" (briefed as
+  Query 230, Nov 27, 2026): NOT a gap — KILLED Nov 27, 2026
+  (WL-281). Five dedicated, current roundups already join the exact
+  query: Android Tech Zone, "The Best Photo Stick for Android Phones"
+  (androidtechzone.com/best-photo-stick-for-android-phones/, updated 4
+  days ago) — five USB-C drives compared (SanDisk Ultra Dual Drive Luxe
+  best all-rounder, Samsung Type-C, Lexar D500 fastest, Kingston
+  microDuo 3C, Lexar D400); PhotoWorkout, "Best Photo Sticks for Android
+  Phones in 2026: 10 Compared" (photoworkout.com/best-photo-sticks-android-phones/,
+  updated 9 days ago) — 10 drives compared on speed, build, price/GB;
+  Practical Review Hub, "10 Best Flash Drives for Android Phone
+  (November 2026)" (practicalreviewhub.com/best-flash-drives-for-android-phone/,
+  updated 15 hours ago); Gizmosum, "Best Photo Sticks for Android and
+  iPhone (2026)" (gizmosum.com/photo-stick-for-android-phones/, updated
+  5 days ago); Android Central, "Best USB-C thumb drives"
+  (androidcentral.com/best-usb-c-thumb-drives) — the established
+  roundup. Own site: 0 best-USB slug (candidate slug
+  best-usb-flash-drive-for-android-photo-backup.html 404; 0 hits in
+  searches.md); no WORKLOG row; the searches.md "best" hits are passing
+  text, not kills. No SnapDisk-specific honest centre: a drive roundup
+  is a hardware-buying job, not a backup-app job — SnapDisk works with
+  any USB-C drive, and the one app-specific note (exFAT/FAT32 work,
+  NTFS unreadable, WL-214) is already in our articles and on the WL-214
+  row; a roundup would need current prices/specs we do not verify.
+  Do not re-dispatch. Un-kill only if all five roundups go stale (no
+  update in 12+ months) or disappear and no current dedicated roundup
+  joins the query. Query 230 stays unassigned.
+
 
 ## Winners and what changed
 
