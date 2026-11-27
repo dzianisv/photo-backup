@@ -20312,6 +20312,55 @@ demand is read off competitor install velocity instead (see
   query. Query 224 stays unassigned.
 
 
+- "Android phone not detecting USB flash drive fix transfer photos"
+  (briefed as Query 225, Nov 27, 2026): NOT a gap — KILLED
+  Nov 27, 2026 (WL-278). Three dedicated, current troubleshooting
+  guides already join the exact query: gadgetsfocus, "Phone Not
+  Reading USB Drive or SSD? 7 OTG Fixes (2026)"
+  (gadgetsfocus.com/phone-not-reading-usb-flash-drive-ssd-otg-fixes/,
+  updated ~Oct 2026, read via the search index this run) — symptom
+  table with NTFS / multi-partition, the 4.5 W (5 V / 0.9 A) phone
+  power limit, the OPPO / realme / OnePlus / vivo OTG toggle that
+  auto-disables after 10 minutes idle, and USB-C dual-role-power
+  host mode; anexplorer, "Android Can't Access USB Drive — 7 Fixes"
+  (anexplorer.io/solve/cant-access-usb, updated 18 days ago) —
+  charge-only adapters, NTFS unreadable by stock Android file
+  managers, Android 11+ storage-permission grants; driveforge,
+  "USB OTG Not Working on Android? How to Check and Fix It"
+  (driveforge.bytehavenstudios.com/guides/usb-otg-not-detected-android/,
+  updated 10 days ago) — OTG check, real adapter, OTG toggle, power,
+  permission prompt, unreadable format. Second phrasing, "USB drive
+  not showing up on Android phone when connected OTG fix": the same
+  three guides at #0-#2, plus gadgetsfeed's external-hard-drive
+  OTG guide. Own site: 0 not-detected slug (no article; 0 hits in
+  feed.xml and sitemap.xml); no WORKLOG row; the searches.md
+  mentions of "not detected" are passing text inside brand rows,
+  not kills. No SnapDisk-specific honest centre: if the system does
+  not detect the drive, no app can back up to it, and the one
+  app-specific note — NTFS drives unreadable (WL-214) — is a single
+  paragraph already documented on the WL-214 row, not a 15-minute
+  article. Do not re-dispatch. Un-kill only if all three guides go
+  stale (no update in 12+ months) or disappear and no current
+  dedicated guide joins the query. Query 225 stays unassigned.
+
+- "back up edited photos (Lightroom / Snapseed exports) to USB from
+  Android" (killed Nov 23, 2026 in the WL-221 WORKLOG row; recorded
+  here Nov 27, 2026 as Query 226, WL-278, per the WL-277 lesson
+  that kills live in searches.md, not as WORKLOG asides): NOT a gap
+  — KILLED. itigic's dedicated Snapseed guide ("For an edited image,
+  export a finished copy... an editing project or original photo may
+  not include the changes you expect") and Pixoneye's
+  edited-versions section ("Decide whether you need original
+  captures, edited versions or both... export those separately")
+  already cover the edited-export leg; and the workflow is not new
+  — an export is an ordinary image file SnapDisk's default
+  MediaStore run already copies. Own site: 0 lightroom slug (0 hits
+  in feed.xml; the live URL 404s); no dedicated WORKLOG row — the
+  kill lived only as an aside in the WL-221 row until this entry.
+  Do not re-dispatch. Un-kill only on a current first-hand source
+  showing an export step SnapDisk's default run does not already
+  cover. Query 226 stays unassigned.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
