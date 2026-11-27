@@ -26666,3 +26666,167 @@ unchanged (already "Back up photos & videos to a USB disk").
   control for photos and names no on-disk folder, while Bluesky's own code
   documents the Save image control verbatim, names the on-disk album exactly,
   and saves a real full-size file to shared storage — a real file, not a cache.
+
+### 216. "Save Gmail photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 231, Nov 27, 2026 (WL-282).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already in Gmail, downloaded on the Android phone itself, onto a USB
+  drive plugged into the phone, no computer — with the download step stated (open
+  the message, tap the attachment, tap Download — Gmail's own download, in
+  Google's own Gmail help), the folder named (the file lands in the Downloads
+  folder — Google's own help says the browser saves attachments to a download
+  folder, and every independent guide agrees), the looking-versus-downloading
+  untangling stated (opening the message shows the photo from Google's server;
+  only Download writes a file), the Save-to-Drive trap stated (Save to Drive
+  puts a copy in Google Drive, which is the cloud, not a file on the phone),
+  the one-at-a-time limit stated (the Gmail app has no download-all button),
+  the inline-photo wall stated (a photo sent inside the message body has no
+  attachment card and needs the touch-and-hold save), the Drive-link wall stated
+  (attachments over 25 MB arrive as a Drive link and have to be downloaded from
+  Drive), the confidential-mode wall stated (Google's own help says you won't be
+  able to copy or download), and the original-file and full-size quality limits
+  stated (the download is the file exactly as attached, byte-for-byte; if it
+  looks small, the sender sent the small file). Our own generic factory-reset
+  and traveling articles rank top on the first phrasing and never open Gmail;
+  the generic phone-to-USB guides never name the Gmail download leg; no Gmail
+  listing ranks on either phrasing. The gap stands ONLY on that narrow angle:
+  the Gmail photo, downloaded on the phone into Downloads, onto a USB drive, no
+  computer, with the download step stated, the folder named, the
+  looking-versus-downloading untangling stated, and the Save-to-Drive trap stated
+  plainly.
+- Gate evidence (verified live this run, Nov 27, 2026): Google's own Gmail Help,
+  "Open & download attachments in Gmail" (support.google.com/mail/answer/30719,
+  crawled 2026-11-27 16:34 UTC) — "When you get an email with an attachment, you
+  can download the attachment to your device." Download an attachment: hover
+  over the attachment, click Download. Tips: "Your browser saves attachments to
+  a download folder." Confidential mode: "If the sender turned on confidential
+  mode, you won't be able to copy or download the message text and attachments."
+  Inline photos: "Some photos are sent inside an email message, and not as
+  attachments." The Android step itself is agreed across the independent guides
+  (techetips.com, "Can Download Attachments From Gmail"; itechguides.com, "How
+  to Download or Save Attachments from Gmail"; gbtimes.com, "How to Download a
+  Gmail File on Android"; clean.email, "Download All Attachments In Gmail In One
+  Go"; itechfaqs.com): open the message in the Gmail app, tap the attachment, tap
+  Download (down arrow), and the file lands in the Downloads folder, visible in
+  the Files app. One at a time — clean.email: "There isn't currently a 'download
+  all attachments' button like in Gmail's web application" on Android, and "To
+  find attachments you've saved with the Download button, open your phone's Files
+  app and choose Downloads." Auto-download: Gmail Settings, account, "Download
+  attachments" (auto-download recent messages via Wi-Fi). Inline photo on Android:
+  touch and hold, tap View image, tap the image again, then More, then Save
+  (itechfaqs.com). Drive link: Gmail replaces attachments over 25 MB with a Drive
+  link (itechguides.com). No screenshot-only, cache-only, cloud-only, or
+  third-party-downloader condition: Gmail's own Download is a real file download,
+  so the gate PASSES — write the article, do not kill the row.
+- Search phrasings, scored live: phrasing 1, "save Gmail attachment photos to USB
+  drive from Android phone no computer" (lead, this run, first-hand): the 2013
+  Android Authority review of the third-party "Gmail Attachment Download" plugin
+  (androidauthority.com/gmail-attachment-download-app-review-75666/ — "The Gmail
+  Android app doesn't even let you save attachments to a custom location on your
+  phone, whether in the internal memory or external SD card", a workaround from
+  the era before Gmail's own Download did the job), the sekin.in generic
+  phone-to-USB guide, our own factory-reset article, our own traveling article,
+  and the thedroidguy.com generic copy guide — no Gmail-specific-to-USB guide.
+  Phrasing 2, "transfer Gmail photos to USB flash drive Android no computer"
+  (supervisor, verified this run, not re-run): our own generic articles
+  (factory-reset, selling-phone, traveling), generic phone-to-USB guides
+  (sekin.in, ireashare, cellularnews, eyefi), and the same 2013 Android Authority
+  plugin review — no Gmail-specific-to-USB guide exists on either phrasing.
+- Honest centre (verified from Google's own Gmail Help + the code at base
+  2ed4960 this run): a Gmail photo is not on the phone until you download it —
+  opening the message shows the photo from Google's server, while Download is
+  the step that creates a local file. The download is open the message, tap the
+  attachment, tap Download; the on-disk folder is the Downloads folder
+  (/sdcard/Download), named by Google's own help and agreed by every independent
+  guide — so the article states the folder as a named destination plus the gallery
+  check (a downloaded photo that shows in the gallery is an ordinary indexed
+  file), never as a claimed loose folder, never as DCIM/Camera, which is where
+  the camera puts its own photos, not where Gmail puts downloads. Save to Drive
+  is not Download — it puts a copy in Google Drive, which is the cloud, not a
+  file on the phone. The download is one attachment at a time; the Gmail app has
+  no download-all button, and the bulk routes run on a computer (one message's
+  Download all attachments ZIP on Gmail on the web; Google Takeout's whole-account
+  MBOX export). A photo sent inside the message body has no attachment card and
+  needs the touch-and-hold save; a Drive link is a Drive file and has to be
+  downloaded from Drive; confidential-mode messages cannot be downloaded at all.
+  The download is the file exactly as attached, byte-for-byte, so it sorts by the
+  date taken when the file carries one, falling back to the download date when it
+  does not. The default run covers a downloaded Gmail photo that shows in the
+  gallery (no folder filter, selection null,
+  app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:60); the From
+  picker route is code-supported but UNTESTED on the Downloads folder — and the
+  picker must point at the folder the download landed in (Downloads), not at
+  DCIM, which is where only camera photos live.
+- SnapDisk facts re-verified from the code at base 2ed4960 (do not copy from
+  memory): Pro $9.99 once (app/src/main/java/dev/dzianisv/snapdisk/backup/
+  ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB free per-run cap (:43, 5L *
+  1024 * 1024 * 1024), oldest-first MediaStore DATE_TAKEN
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:23-36, sort
+  DATE_TAKEN ASC with DATE_MODIFIED fallback; :60, selection null, no folder
+  filter; app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:95,
+  sortOldestFirst), size verification after copy (BackupEngine.kt:107, verify;
+  :147, :230, CopyResult.Copied only after verify passes), Pause/Stop in the
+  notification (app/src/main/java/dev/dzianisv/snapdisk/service/
+  NotificationHelper.kt:128,138; BackupService.kt:113,115), foreground-service
+  dataSync (app/src/main/AndroidManifest.xml:38), FAT32 files >=4 GiB skipped
+  with their reason (app/src/main/java/dev/dzianisv/snapdisk/service/
+  BackupService.kt:430-433), no INTERNET permission (0 occurrences in the
+  manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms in the repo, this run), no all-files access (no
+  MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24 (app/build.gradle.kts:12,
+  Android 7.0), applicationId dev.dzianisv.snapdisk (app/build.gradle.kts:11).
+  Pro $9.99 once (app/src/main/java/dev/dzianisv/snapdisk/backup/ProPrefs.kt:40),
+  5 GB free per run (:43). "SnapDisk copies, it never deletes" present — the only
+  .delete() calls in the code are on SnapDisk's own half-finished .part files
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:176, :207;
+  app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:385, :477). No
+  VaultDrive price is stated in this article — only the comparison-article link
+  text once. The 6 "install" forms in the article are benign (the Gmail app
+  installed; SnapDisk installed from the v0.1.2 APK; "install it by allowing
+  'install unknown apps'"; Gmail's "installation"; "Installing a third-party
+  Gmail downloader plugin" as a what-to-avoid item). The 1 "Google Play" mention
+  is factual (not on Google Play yet), same form as WL-233/WL-234/WL-235/WL-236/
+  WL-238/WL-239/WL-240 and WL-193. Read time 10 min from the word count
+  (7,747 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/gmail-photos-to-usb.html verified 0 collisions in feed.xml, sitemap.xml,
+  blog index, llms.txt, and llms-full.txt before writing; "gmail" returns 0
+  matches in feed.xml, sitemap.xml, blog index, and llms.txt pre-write, 2
+  incidental lines in llms-full.txt (both inside the Second Space block: "linked
+  to Gmail or Xiaomi accounts"), 3 incidental lines in searches.md (1 inside the
+  Elo M50 entry, 2 inside the Second Space entry — both passing mentions, read,
+  not kills), and 1 incidental line in WORKLOG.md (the Second Space row); 0
+  "gmail-photos-to-usb" slugs in docs/ pre-write (git ls-tree at base 2ed4960);
+  the live URL 404s (verified this run). There are no near matches from other
+  articles that cover the Gmail download leg — the near matches are our own
+  generic factory-reset and traveling articles — all different, already-live
+  articles, untouched — plus the other social articles (whatsapp-photos-to-usb.html,
+  telegram-photos-to-usb.html, instagram-photos-to-usb.html,
+  facebook-photos-to-usb.html, snapchat-photos-to-usb.html,
+  tiktok-photos-videos-to-usb.html, x-twitter-photos-to-usb.html,
+  kik-photos-to-usb.html, pinterest-photos-to-usb.html, messenger-photos-to-usb.html)
+  and the other cloud articles (google-drive-photos-to-usb.html,
+  dropbox-photos-to-usb.html, onedrive-photos-to-usb.html,
+  icloud-photos-to-usb.html, amazon-photos-to-usb.html, mega-photos-to-usb.html,
+  pcloud-photos-to-usb.html, nextcloud-photos-to-usb.html,
+  immich-photos-to-usb.html, ente-photos-to-usb.html, seafile-photos-to-usb.html,
+  huawei-cloud-photos-to-usb.html, bluesky-photos-to-usb.html) — all different,
+  already-live articles, untouched, and linked as series companions. A docs/
+  listing this run confirms Gmail is the next subject in our series with no
+  article — WhatsApp, Telegram, Instagram, Facebook, Snapchat, TikTok, WeChat,
+  Messenger, Viber, Kik, Pinterest, Reddit, X, Tumblr, Flickr, SmugMug, Amazon
+  Photos, MEGA, pCloud, Nextcloud, Immich, Ente, Google Drive, Dropbox, OneDrive,
+  iCloud, Seafile, Huawei Cloud, and Bluesky all have theirs already; the Signal
+  (WL-237), LinkedIn (WL-257), and Threads (WL-259) rows were killed, not written,
+  because those apps offer no native save, and the Discord, LINE, and KakaoTalk
+  rows were killed because those apps offer only the one-by-one save with nothing
+  else to add, while Gmail survives the same test because the no-auto-save wall,
+  the Downloads folder named by Google's own help, the looking-versus-downloading
+  untangling, the Save-to-Drive trap, the per-attachment save limit, the
+  inline-photo wall, the Drive-link wall, the confidential-mode wall, and the
+  full-size quality question are all real things to add. Gmail also survives the
+  WL-265 Box kill test where Box failed: Box's own help documents no Download
+  control for photos and names no on-disk folder, while Google's own Gmail help
+  documents the Download control verbatim, the independent guides name the
+  on-disk folder exactly, and the download saves a real full-size file to shared
+  storage — a real file, not a cache.

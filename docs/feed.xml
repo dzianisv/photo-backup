@@ -1518,5 +1518,12 @@
       <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
       <description>A Bluesky photo isn't on your phone until you save it. Tap the photo, choose Save image — it lands in the Bluesky album. Then back it up to USB.</description>
     </item>
+    <item>
+      <title>Save Gmail photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/gmail-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/gmail-photos-to-usb.html</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A Gmail photo isn't on your phone until you download it. Open the message, tap the attachment, tap Download — it lands in Downloads. Then back it up to USB.</description>
+    </item>
 </channel>
 </rss>
