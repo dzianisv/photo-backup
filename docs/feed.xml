@@ -1525,5 +1525,12 @@
       <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
       <description>A Gmail photo isn't on your phone until you download it. Open the message, tap the attachment, tap Download — it lands in Downloads. Then back it up to USB.</description>
     </item>
+    <item>
+      <title>Save Outlook photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/outlook-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/outlook-photos-to-usb.html</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>An Outlook photo isn't on your phone until you save it. Tap the attachment, Save to Device — it lands in Downloads. Then back it up to USB.</description>
+    </item>
 </channel>
 </rss>

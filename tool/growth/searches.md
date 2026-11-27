@@ -26863,3 +26863,200 @@ unchanged (already "Back up photos & videos to a USB disk").
   documents the Download control verbatim, the independent guides name the
   on-disk folder exactly, and the download saves a real full-size file to shared
   storage — a real file, not a cache.
+
+### 217. "Save Outlook photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 233, Nov 27, 2026 (WL-284).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already in Outlook, saved on the Android phone itself, onto a USB
+  drive plugged into the phone, no computer — with the save step stated (open
+  the message, tap the attachment, tap the download icon or the three-dot menu,
+  then Save, then Save to Device — Outlook's own save, with Microsoft's own
+  support naming the Downloads folder), the folder named (the file lands in the
+  Downloads folder — Microsoft's own support says to look in the Files app under
+  Downloads — or in the Gallery for a photo saved with Save image to Gallery),
+  the opening-versus-saving untangling stated (tapping an attachment to open it
+  downloads a preview into Outlook's private temporary storage, invisible to the
+  Gallery and the Files app; only Save writes a real file), the Save-to-OneDrive
+  trap stated (Save to OneDrive puts a copy in OneDrive, which is the cloud, not
+  a file on the phone), the one-at-a-time limit stated (no bulk save in Outlook
+  for Android — Microsoft's own Q&A: "not yet available" — and no auto-download
+  at all), the inline-photo wall stated (Outlook embeds attached images in the
+  body automatically, so a photo often shows inline and needs the tap-and-Share
+  route), the OneDrive-link wall stated (a bigger file arrives as a OneDrive link
+  and has to be downloaded from OneDrive), the same-name wall stated (Android
+  limits same-name saves; rename or remove the old copy in Downloads first), and
+  the original-file and full-size quality limits stated (the save is the file
+  exactly as attached, byte-for-byte; if it looks small, the sender sent the
+  small file). Our own generic VeraCrypt, storage-full, and
+  transfer-automatically articles rank top on the first phrasing and never open
+  Outlook; the generic phone-to-USB guides never name the Outlook save leg; no
+  Outlook listing ranks on any phrasing. The gap stands ONLY on that narrow
+  angle: the Outlook photo, saved on the phone into Downloads or the Gallery,
+  onto a USB drive, no computer, with the save step stated, the folder named, the
+  opening-versus-saving untangling stated, and the Save-to-OneDrive trap stated
+  plainly.
+- Gate evidence (verified live this run, Nov 27, 2026): Microsoft's own support,
+  "Too many downloads with the same file name"
+  (support.microsoft.com/en-us/outlook/too-many-downloads-with-the-same-file-name,
+  crawled 2026-11-27 18:31 UTC) — "From the Files app on your Android device
+  select the section called Downloads. Once in the Downloads folder, search for
+  the name of the file you want to save. Rename or remove one or more copies of
+  the file. Return to Outlook Mobile and save the file." Microsoft's own Q&A
+  (learn.microsoft.com, PDF attachments, 2025): "In the email, tap the download
+  icon next to the PDF. Open it from your Downloads folder"; "long-press the PDF
+  attachment > Save to device." Microsoft's own Q&A on bulk download:
+  "Currently, the feature to download or save multiple attachments at once in
+  Outlook app for Android is not yet available." Microsoft's own Q&A on
+  auto-download: the feature "doesn't seem feasible at the moment". Microsoft's
+  own Q&A on embedded images: tap the image to open it full-screen, tap the
+  download icon at the top, or the three-dot menu for Save/Download; the save
+  lands "typically the 'Downloads' folder or 'Gallery'". Microsoft's own forum
+  (2015 thread, still the documented behaviour): the open-tap download lands
+  under \data\data\com.Microsoft.Outlook in a .tmp folder — "not really
+  downloading the file completely... to avoid eating up storage" — with the
+  workaround "open the file, hamburger logo, Save as, save it on your desired
+  location"; downloaded pictures "do not show up" in the Gallery because "the
+  folder is hidden so Android phone cannot see it or it's content". Microsoft's
+  own Q&A (2020): press and hold the attachment "and you'll get prompted where
+  to save it to". Microsoft's own Q&A (Dec 2025, Galaxy S23): turn off "Open
+  attachments with link" in Settings > Attachments — "Outlook on Android often
+  fails to open attachments because it tries to hand them off to OneDrive".
+  Microsoft's own "Send attachments and images in Outlook mobile" page:
+  "Attached images automatically embed in messages"; "Other account types — Max
+  attachment size: 33 MB"; an image over 1 MB offers compress/resize on send.
+  The Android step itself is agreed across the independent guides
+  (usecarly.com, "How to Save Attachments in Outlook (Every Version, 2026)",
+  Apr 30, 2026; gbtimes.com, "How to download attachments from Outlook?";
+  umatechnology.org, "How to Save Multiple Pictures from Outlook Email"): open
+  the message in the Outlook app, tap the attachment to preview it, tap the
+  download icon (or the three-dot menu > Save, or Share), choose Save to Device
+  for a local download or Save to OneDrive to upload; for images, Save image to
+  Gallery. Default location: "Outlook mobile: the OS default (Files app on iOS,
+  Downloads on Android), unless you explicitly choose OneDrive" (usecarly).
+  Outlook.com caps attachments at 20 MB by default (gbtimes). No
+  screenshot-only, cache-only, cloud-only, or third-party-downloader condition:
+  Outlook's own Save to Device is a real file download, and the preview-cache
+  trap is documented and untangled rather than hidden, so the gate PASSES —
+  write the article, do not kill the row.
+- Search phrasings, scored live: phrasing 1, "save Outlook photos to USB drive
+  from Android phone no computer" (supervisor, this run): our own VeraCrypt,
+  storage-full, and transfer-automatically articles, a generic YouTube OTG
+  guide, and a WITNESS blog post — no Outlook-specific guide. Phrasing 2,
+  "transfer Outlook attachment photos to USB flash drive Android no computer"
+  (supervisor, this run): the asapguide.com generic email-to-USB guide, last
+  updated about 1,399 days ago (generic email, computer + smartphone, never
+  names Outlook), the thedroidguy.com, Samsung community, and thegadgetians
+  generic phone-to-USB guides — no Outlook-specific guide exists on either
+  phrasing. Phrasing 3, "Outlook email photos save to USB stick Android phone
+  without computer" (lead, this run, first-hand): the same asapguide guide
+  again, the mefmobile generic phone-to-USB guide, Microsoft's own Q&A on
+  downloading an embedded image from the Outlook app (a save guide, not a USB
+  guide), our own storage-full article, and the usecarly save guide (save only,
+  no USB leg) — no Outlook-specific-to-USB guide exists on any phrasing.
+- Honest centre (verified from Microsoft's own support pages + the code at base
+  5b48006 this run): an Outlook photo is not on the phone until you save it —
+  opening the message shows the photo from Microsoft's server, and tapping the
+  attachment to open it only downloads a preview into Outlook's private
+  temporary storage, while Save to Device is the step that writes a real file.
+  The save is open the message, tap the attachment, tap the download icon or
+  the three-dot menu, then Save, then Save to Device (or Save image to Gallery
+  for a photo); the on-disk folder is the Downloads folder (/sdcard/Download),
+  named by Microsoft's own support and agreed by every independent guide — so
+  the article states the folder as a named destination plus the gallery check (a
+  saved photo that shows in the gallery is an ordinary indexed file), never as a
+  claimed loose folder, never as DCIM/Camera, which is where the camera puts its
+  own photos, not where Outlook puts saved files. Save to OneDrive is not Save
+  to Device — it puts a copy in OneDrive, which is the cloud, not a file on the
+  phone. The save is one attachment at a time; Outlook for Android has no bulk
+  save and no auto-download, and the bulk routes run on a computer (one
+  message's Download all ZIP on Outlook on the web; classic Outlook's Save All
+  Attachments; Power Automate's whole-mailbox flow to OneDrive/SharePoint). A
+  photo attached to a message shows inline in the body and needs the
+  tap-and-Share save; a OneDrive link is a OneDrive file and has to be
+  downloaded from OneDrive; two photos sharing a file name hit Android's
+  same-name save limit and need the old copy renamed or removed in Downloads
+  first. The save is the file exactly as attached, byte-for-byte, so it sorts by
+  the date taken when the file carries one, falling back to the download date
+  when it does not. The default run covers a saved Outlook photo that shows in
+  the gallery (no folder filter, selection null,
+  app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:60); the From
+  picker route is code-supported but UNTESTED on the Downloads folder — and the
+  picker must point at the folder the save landed in (Downloads, or the Gallery
+  for a Save-image-to-Gallery photo), not at DCIM, which is where only camera
+  photos live.
+- SnapDisk facts re-verified from the code at base 5b48006 (do not copy from
+  memory): Pro $9.99 once (app/src/main/java/dev/dzianisv/snapdisk/backup/
+  ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB free per-run cap (:43, 5L *
+  1024 * 1024 * 1024), oldest-first MediaStore DATE_TAKEN
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:23-36, sort
+  DATE_TAKEN ASC with DATE_MODIFIED fallback; :60, selection null, no folder
+  filter; app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:95,
+  sortOldestFirst), size verification after copy (BackupEngine.kt:107, verify;
+  :147, :230, CopyResult.Copied only after verify passes), Pause/Stop in the
+  notification (app/src/main/java/dev/dzianisv/snapdisk/service/
+  NotificationHelper.kt:126,136; BackupService.kt:113,115), foreground-service
+  dataSync (app/src/main/AndroidManifest.xml:38), FAT32 files >=4 GiB skipped
+  with their reason (app/src/main/java/dev/dzianisv/snapdisk/service/
+  BackupService.kt:428-433), no INTERNET permission (0 occurrences in the
+  manifest), no Google Play Services dependency (0 matches for
+  com.google.android.gms in the repo, this run), no all-files access (no
+  MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24 (app/build.gradle.kts:12,
+  Android 7.0), applicationId dev.dzianisv.snapdisk (app/build.gradle.kts:11).
+  Pro $9.99 once (app/src/main/java/dev/dzianisv/snapdisk/backup/ProPrefs.kt:40),
+  5 GB free per run (:43). "SnapDisk copies, it never deletes" present — the only
+  .delete() calls in the code are on SnapDisk's own half-finished .part files
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:176, :207;
+  app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:385, :477). No
+  VaultDrive price is stated in this article — only the comparison-article link
+  text once. The 5 "install" forms in the article are benign (the Outlook app
+  installed; SnapDisk installed from the v0.1.2 APK; "install it by allowing
+  'install unknown apps'"; Outlook's "installation"). The 1 "Google Play" mention
+  is factual (not on Google Play yet), same form as WL-233/WL-234/WL-235/WL-236/
+  WL-238/WL-239/WL-240 and WL-193. Read time 11 min from the word count
+  (8,516 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/outlook-photos-to-usb.html verified 0 collisions in feed.xml, sitemap.xml,
+  blog index, llms.txt, and llms-full.txt before writing; "outlook" returns 0
+  matches in feed.xml, sitemap.xml, blog index, llms.txt, and llms-full.txt
+  pre-write, 0 matches in searches.md (whole file, including the "Not a gap"
+  section — read, no kill), and 0 matches in WORKLOG.md pre-write; 0
+  "outlook-photos-to-usb" slugs in docs/ pre-write (git ls-tree at base 5b48006);
+  the live URLs 404 (outlook-photos-to-usb.html and outlook-attachments-to-usb.html,
+  verified this run); 0 "outlook" hits in live feed.xml and sitemap.xml
+  (verified this run); never scored before, never killed. Query 233 stays
+  assigned to this row.
+- There are no near matches from other articles that cover the Outlook save leg —
+  the near matches are our own generic VeraCrypt, storage-full, and
+  transfer-automatically articles — all different, already-live articles,
+  untouched — plus the other social articles (whatsapp-photos-to-usb.html,
+  telegram-photos-to-usb.html, instagram-photos-to-usb.html,
+  facebook-photos-to-usb.html, snapchat-photos-to-usb.html,
+  tiktok-photos-videos-to-usb.html, x-twitter-photos-to-usb.html,
+  kik-photos-to-usb.html, pinterest-photos-to-usb.html, messenger-photos-to-usb.html)
+  and the other cloud articles (google-drive-photos-to-usb.html,
+  dropbox-photos-to-usb.html, onedrive-photos-to-usb.html,
+  icloud-photos-to-usb.html, amazon-photos-to-usb.html, mega-photos-to-usb.html,
+  pcloud-photos-to-usb.html, nextcloud-photos-to-usb.html,
+  immich-photos-to-usb.html, ente-photos-to-usb.html, seafile-photos-to-usb.html,
+  huawei-cloud-photos-to-usb.html, bluesky-photos-to-usb.html,
+  gmail-photos-to-usb.html) — all different, already-live articles, untouched,
+  and linked as series companions. A docs/ listing this run confirms Outlook is
+  the next subject in our series with no article — WhatsApp, Telegram, Instagram,
+  Facebook, Snapchat, TikTok, WeChat, Messenger, Viber, Kik, Pinterest, Reddit,
+  X, Tumblr, Flickr, SmugMug, Amazon Photos, MEGA, pCloud, Nextcloud, Immich,
+  Ente, Google Drive, Dropbox, OneDrive, iCloud, Seafile, Huawei Cloud, Bluesky,
+  and Gmail all have theirs already; the Signal (WL-237), LinkedIn (WL-257), and
+  Threads (WL-259) rows were killed, not written, because those apps offer no
+  native save, and the Discord, LINE, and KakaoTalk rows were killed because
+  those apps offer only the one-by-one save with nothing else to add, while
+  Outlook survives the same test because the no-auto-save wall, the preview-cache
+  trap documented on Microsoft's own forum, the Downloads folder named by
+  Microsoft's own support, the opening-versus-saving untangling, the
+  Save-to-OneDrive trap, the per-attachment save limit, the inline-photo wall,
+  the OneDrive-link wall, the same-name wall, and the full-size quality question
+  are all real things to add. Outlook also survives the WL-265 Box kill test
+  where Box failed: Box's own help documents no Download control for photos and
+  names no on-disk folder, while Microsoft's own support documents the Save step
+  and names the Downloads folder exactly, the independent guides name the
+  on-disk folder exactly, and the save writes a real full-size file to shared
+  storage — a real file, not a cache.
