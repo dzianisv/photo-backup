@@ -1504,5 +1504,12 @@
       <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
       <description>A Seafile photo isn't on your phone until you download it. Long-press it, tap Download — it lands in the Seafile folder. Then back it up to USB, no computer.</description>
     </item>
+    <item>
+      <title>Save Huawei Cloud photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/huawei-cloud-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/huawei-cloud-photos-to-usb.html</guid>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A Huawei Cloud photo isn't on your phone until you download it. Switch the album to Cloud, download it — it lands in DCIM/Camera. Then back it up to USB.</description>
+    </item>
 </channel>
 </rss>
