@@ -20279,6 +20279,38 @@ demand is read off competitor install velocity instead (see
   recommends exFAT and warns about FAT32 before you start, so the
   format gate applies to it exactly as it applies to SnapDisk.
 
+- "save Google Photos photos to USB drive from Android phone no computer"
+  (briefed as Query 224, Nov 26, 2026): NOT a gap — KILLED
+  Nov 26, 2026 (WL-277). A dedicated Google-Photos-to-USB how-to
+  already exists and is current: live2tech, "How to Move Google Photos
+  to a Flash Drive" (live2tech.com/move-google-photos-flash-drive/,
+  published 2024-05-17, updated 2026-11-15, read first-hand this run)
+  joins the exact query — Google Photos app, select a photo, More >
+  Download; connect the drive; Files by Google, Copy to under Storage
+  devices; no computer — plus the computer route (photos.google.com,
+  More > Download) and the whole-library Google Takeout route, with
+  FAT32 4 GiB, Takeout 7-day expiry / 5-download limit, and
+  download-date timestamps stated. Gap verified with the supervisor's
+  two phrasings — "save Google Photos photos to USB drive from Android
+  phone no computer": live2tech #0, mefmobile / sekin.in / eyefi /
+  cellularnews generic phone-to-USB guides; "transfer Google Photos
+  photos to USB flash drive Android no computer": live2tech #0,
+  cellularnews, gizchina ("How to Transfer Your Google Photos to a
+  Flash Drive", read first-hand this run — a second dedicated guide
+  by title, though its phone leg assumes the photos are already local
+  in DCIM and never states the Photos-app Download step), sekin.in,
+  eyefi, and a Google Photos community thread giving the same More >
+  Download + Files by Google flow — the joined job is already covered.
+  Own site: 0 google-photos-to-usb slug (the live URL 404s; 0 hits in
+  feed.xml and sitemap.xml); no WORKLOG row on Google Photos; the
+  WL-252 row's "already a killed angle" aside named this live2tech
+  guide but no searches.md kill entry existed until this one; the only
+  Google Photos kills on record before this one are Locked Folder
+  (hidden-photo-store class), a different query. Do not re-dispatch.
+  Un-kill only if the live2tech guide disappears or goes stale (no
+  update in 12+ months) and no current dedicated guide joins the
+  query. Query 224 stays unassigned.
+
 
 ## Winners and what changed
 
