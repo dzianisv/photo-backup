@@ -5983,7 +5983,54 @@ demand is read off competitor install velocity instead (see
   first-hand source (dated 2026, with a screenshot or a named
   folder) showing a Download / Save image control in the
   Threads Android photo viewer, or a Threads Help page
-  documenting it. Query 204 stays unassigned.
+  documenting it. Query 206 stays unassigned.
+
+- "back up Threads photos to a USB drive, no computer"
+  (briefed as Query 221, Nov 26, 2026): NOT a gap — KILLED
+  Nov 26, 2026 (WL-274) as a re-dispatch of the Query 206
+  kill (WL-259, same question under the wording "save
+  Threads photos to a USB drive, no computer"). The brief's
+  "never scored before, never killed" is wrong: the WL-259
+  kill entry sits directly above this one, with a "Do not
+  re-dispatch" line the Nov 26 supervisor dispatch violated
+  by re-briefing the same question under a new query number.
+  The gate was re-verified fresh this run and still fails on
+  the same evidence: gHacks (updated Nov 8, 2026, re-read
+  live Nov 27, 2026): "Threads has no download button for
+  photos or videos in posts, on iPhone or Android" and "No,
+  Threads cannot download photos or videos to your phone
+  directly. The post menu lets you save a post inside the
+  app, copy its link or share it, but the media file stays
+  on Meta's servers"; Threadster (Nov 24, 2026): "Threads
+  does not provide a native option to download or save
+  videos, GIFs, and photos to a local device". The two
+  counter-claims (reveriepage three-dot menu → "Download";
+  freedom251 menu → "Save image", re-read live Nov 27,
+  2026) name no on-disk folder — freedom251 says only
+  "Check your Gallery/Photos app afterward" — and are
+  contradicted by the Nov 2026 gHacks update. The only
+  first-party route for your own media is the Accounts
+  Center export, an archive, not a per-photo save, landing
+  no Gallery folder. Gap re-verified with the supervisor's
+  two phrasings — "save Threads photos to USB drive from
+  Android phone no computer": only our own generic articles
+  (transfer-photos-to-usb-automatically, backup-photos-to-usb)
+  plus generic OTG guides (mefmobile, YouTube OTG);
+  "transfer Threads app photos to USB flash drive Android no
+  computer": our own transfer article, thedroidguy, YouTube
+  OTG, mefmobile, pixoneye, and a Facebook reel — no
+  Threads-specific phone→USB guide on either phrasing — plus
+  a third phrasing this run, "how to download Threads photos
+  to USB drive Android without computer": third-party
+  downloader tools only (savethr.com, grabnode, Threadster,
+  TVD app), landing in generic Downloads, plus gHacks. Own
+  site: 0 "threads" slugs in docs/ (the grep hits are
+  Android Central forum-URL false positives); live slug
+  threads-photos-to-usb.html 404s (curl, this run). No
+  article was written; no counts change. Do not re-dispatch.
+  Query 221 stays unassigned. Pre-existing typo fixed in
+  this PR: the WL-259 entry above now reads "Query 206 stays
+  unassigned".
 
 - "save Box photos to USB from Android, no computer"
   (briefed as Query 212, Nov 26, 2026): NOT a gap — KILLED
