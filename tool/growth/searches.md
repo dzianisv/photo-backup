@@ -20418,6 +20418,31 @@ demand is read off competitor install velocity instead (see
   guide goes stale (no update in 12+ months) or disappears and no
   current dedicated guide joins the query. Query 228 stays unassigned.
 
+- "recover deleted photos from USB flash drive Android phone no computer" (briefed as
+  Query 229, Nov 27, 2026): NOT a gap — KILLED Nov 27, 2026
+  (WL-280). Three dedicated, current guides already join the exact
+  query: Unerased, "Recover Deleted Files From a USB Flash Drive on an Android Phone"
+  (unerased.bytehavenstudios.com/guides/recover-deleted-files-usb-flash-drive-android/,
+  updated Oct 28, 2026, guide text read via search results this run) — Android phone
+  + OTG adapter, no computer: stop using the drive, plug it in, scan read-only,
+  save to the phone or another drive; mixapplications, "Recover deleted files from
+  a USB drive on Android" (mixapplications.com/tools/recover-files.html, updated
+  2026-11-16) — Ultimate USB / USB Tools, Smart scan, 8 file systems, 201 file types,
+  save to Downloads; bestforandroid, "How to Recover Deleted Files From a USB Flash
+  Drive (Windows, Mac, Android)"
+  (bestforandroid.com/how-to-recover-deleted-files-from-usb-flash-drive/) — dedicated
+  guide with an Android section (DiskDigger / Recuva, root limits named). A second
+  phrasing, "restore deleted photos from USB drive Android phone app OTG scan",
+  returns the same three guides plus Unerased's "How to Use Unerased" step-by-step.
+  Own site: 0 recover-deleted slug (candidate slug 404; 0 hits in feed.xml and
+  sitemap.xml); no WORKLOG row; the searches.md "recover"/"deleted" hits are passing
+  TWRP Recovery mentions in brand rows, not kills. No SnapDisk-specific honest centre:
+  recovery is a different job from backup — an undelete/deep-scan read of the drive's
+  deleted records, which needs a recovery app — and SnapDisk copies, it never deletes
+  and has no recovery function (WL-210 row: no restore/import function in v0.1.2).
+  Do not re-dispatch. Un-kill only if all three guides go stale (no update in 12+
+  months) or disappear and no current dedicated guide joins the query. Query 229 stays unassigned.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
