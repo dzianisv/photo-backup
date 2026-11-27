@@ -25802,3 +25802,207 @@ unchanged (already "Back up photos & videos to a USB disk").
   no Download control for photos and names no on-disk folder, while Seafile's
   own code documents the Download control verbatim, names the on-disk folder
   exactly, and saves a real file to shared storage — a real file, not a cache.
+
+### 214. "Save Huawei Cloud photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 218, Nov 26, 2026 (WL-271).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already in Huawei Cloud, downloaded on the Android phone itself, onto a USB
+  drive plugged into the phone, no computer — with the download step stated (open
+  Gallery, open the album, touch the triangle icon at the top to switch to Cloud,
+  select an item or multiple items to download — Huawei's own download, documented
+  on Huawei's own support page), the folder named (the photo returns to its album
+  on the phone — a Camera photo returns to the Camera album, whose files live in
+  Internal storage, DCIM, Camera, per Huawei's own support page — check the file
+  manager at that path first, then the Gallery), the thumbnail trap stated
+  (Optimise device storage leaves only thumbnails of photos older than 30 days on
+  the phone while the originals stay in Cloud — a thumbnail is not a file you can
+  back up, so download the original first), the two-way-sync warning stated
+  (deleting a photo from Cloud deletes it from the phone too, and vice versa),
+  the album batch route stated (select several photos in the Cloud view and
+  download them together, or the web download, which arrives as a package in
+  Downloads), the no-whole-library-export wall stated (the export unit is a photo
+  or a selection; a whole cloud goes through album-by-album downloads, while the
+  computer route is cloud.huawei.com Select All or the Cloud desktop application),
+  the 5 GB free-tier answer stated (each Huawei ID gets 5 GB of free cloud storage
+  — a library bigger than the plan was never fully uploaded), and the lost-taken-date
+  and original-file quality limits stated (a downloaded photo shows the download
+  date; the download is the original file from Cloud, not a re-encoded copy).
+  Our own Huawei brand article ranks top on both phrasings and never downloads
+  anything from Huawei Cloud; the generic Honor guide never names the Huawei Cloud
+  download leg; no Huawei Cloud listing ranks on either phrasing. The gap stands
+  ONLY on that narrow angle: the Huawei Cloud photo, downloaded on the phone back
+  into its album, onto a USB drive, no computer, with the download step stated,
+  the folder named, the thumbnail trap stated, and the two-way-sync warning stated
+  plainly.
+- Current top results (scored Nov 26, 2026, live web search):
+  Phrasing 1, "save Huawei Cloud photos to USB drive from Android phone no
+  computer" (supervisor, this run): only our own
+  huawei-photos-to-usb article, our own huawei-privatespace-photos-to-usb article,
+  our own factory-reset article, our own encrypted-drive article, and a generic
+  howtos.video Honor phone-to-USB guide — manual Files-app copy plus a cloud upload
+  as a separate direction, with no Huawei Cloud download leg — no Huawei-Cloud-specific
+  guide on this phrasing.
+  Phrasing 2, "transfer Huawei Cloud photos to USB flash drive Android no computer"
+  (supervisor, this run): our own Huawei brand article, our own PrivateSpace
+  article, our own factory-reset article, our own selling-phone article, and the
+  same howtos.video generic — again no Huawei-Cloud-specific guide, and no guide
+  that puts the download and the USB copy in the same place — no Huawei-Cloud-to-phone-to-USB
+  guide with no computer exists on either phrasing.
+  Corroboration (lead, this run): Huawei's own support pages, read first-hand
+  Nov 26–27, 2026. consumer.huawei.com/uk/support/content/en-gb00724108,
+  "Syncing images and videos to Cloud or my device": "How to download
+  images/videos from Cloud to my phone/tablet — On your phone/tablet: Go to
+  [Settings], enable Sync Gallery, touch Albums to sync, and toggle on the syncing
+  switch for the corresponding albums. Open Gallery. On the Albums tab, open an
+  album, touch the triangle icon at the top to switch to Cloud, and select an item
+  or multiple items to download." "If you touch Optimise device storage on your
+  phone/tablet, Gallery will compress local images and videos from more than 30
+  days ago to free up space on your device, while retaining the original images
+  and videos in Cloud. The thumbnails of these images and videos will remain saved
+  on your phone/tablet. To download the original file of an image or video from
+  Cloud, touch and hold the item, and go to [the download control]" — the page
+  renders that control as an icon, so its exact menu label is not visible in the
+  page text and this article invents none; the download action itself is documented
+  in the first passage. "For EMUI 5.0 or later, two-way syncing between Cloud and
+  your phone/tablet will take effect, which means that when you enable Sync Gallery,
+  any data that you delete from Cloud will also be deleted from your phone/tablet,
+  and vice versa." Version floor for sync over mobile data: Gallery app 10.1.1.331
+  or later, Cloud app 10.6.0.303 or later. consumer.huawei.com/uk/support/content/
+  en-gb15888595, "Unable to find images or videos on my HUAWEI phone/tablet":
+  "Open the directory based on the image source: Taken using Camera: Files >
+  Browse > Phone/My tablet (Internal storage) > DCIM > Camera." consumer.huawei.com
+  support, "How to manage the gallery on Cloud" (en-us00724103): on the official
+  website, "Log in to cloud.huawei.com and access Gallery. Select a photo/video, or
+  press and hold the Shift or Ctrl key to select multiple photos/videos. Then click
+  Download or Delete." "Considering the network restrictions of computer browsers,
+  network instability, and resumable download, the cloud space official website only
+  provides small-batch upload and download." "To select all images, click Select All
+  or press Shift to select multiple images, and then click the first and last images
+  to be downloaded. Currently, multiple images are downloaded in packages and will
+  be automatically downloaded. You can decompress the package to view it."
+  consumer.huawei.com support, "Introduction to Cloud" (en-gb00724138): "When you
+  enable Cloud, you will get 5 GB of Cloud storage for free." "Cloud is available on
+  HUAWEI and HONOR devices as long as it has been pre-installed in the Account center
+  before delivery. Cloud is not available on non-HUAWEI and non-HONOR devices."
+  The Huawei Backup encrypted-archive flow is the archive class, already covered in
+  our brand article — it is not the centre of this article and is named only as a
+  near-miss. The Mi Cloud kill is not re-used: different service, different
+  evidence; Huawei Cloud passes the gate on its own sources.
+  No article — only the comparison-article link in "On your phone instead" — and no install count for
+  SnapDisk (none exists) and no VaultDrive install figure.
+- Honest centre (verified from Huawei's own support pages and the code at base b3bfb3d,
+  this run, Nov 26, 2026, not assumed): a photo in Huawei Cloud is not on your
+  phone until you download it — Huawei Cloud is Huawei's own cloud storage, your
+  photos live on Huawei's servers under your Huawei ID, not a folder on your phone,
+  and the file appears only when you download it. The download is open Gallery,
+  open the album, touch the triangle icon at the top to switch to Cloud, select
+  the photo or several photos, and download them — Huawei's own download, documented
+  on Huawei's own support page — and the file lands back in its album on the phone,
+  a Camera photo in Internal storage, DCIM, Camera, per Huawei's own support page,
+  so the article states the folder as a named destination plus a short search (file
+  manager at the path first, then the Gallery), never as a claimed loose folder, and
+  never as the Downloads folder, which is where the web download lands instead. A
+  re-download replaces the local copy under the same file name: no duplicate piles up
+  under a new name. Download and looking are different things in Gallery: the
+  download writes a real file to shared storage, visible in the Gallery and in a file
+  manager, while opening a cloud photo only shows it — and with Optimise device
+  storage on, what you are looking at may be a thumbnail whose original still sits
+  in Cloud. Huawei Cloud downloads nothing by itself: there is no auto-download and
+  no setting that turns one on, and the automatic feature runs the other way — Sync
+  Gallery and Cloud Backup send phone photos up to the cloud. A whole album downloads
+  by selecting its photos in the Cloud view and downloading them together, or on the
+  web, where the download arrives as a package in Downloads; there is no
+  whole-library export in the app, and a whole cloud goes through album-by-album
+  downloads, while the computer route is cloud.huawei.com Select All or the Cloud
+  desktop application. The date problem is a download problem for Huawei Cloud: the
+  file is written when you download it, so it sorts by its download date
+  (DATE_MODIFIED fallback), and the taken date inside the file may or may not be
+  picked up by the media index — stated as the expected case, not as a certainty,
+  because no source this run tested the taken date after a Gallery download. The
+  quality problem is the opposite of the photo services: the download is the original
+  file as stored in Cloud, not a re-encoded copy, because Huawei's own page calls it
+  "the original file of an image or video from Cloud" — and the limit is the storage
+  tier, not a quota: each Huawei ID gets 5 GB of free cloud storage, so a library
+  bigger than the plan was never fully uploaded. The default run covers a downloaded
+  Huawei Cloud photo that shows in the gallery: it reads the media index with no
+  folder filter (queryMediaStoreOldestFirst, app/src/main/java/dev/dzianisv/snapdisk/
+  backup/PhotoQuery.kt:23-36; queryMediaTable :38, the query call passes selection
+  null :60; Images + Videos tables :23-36; DATE_TAKEN with DATE_MODIFIED fallback
+  :47-48, :56-58, oldest-first via BackupEngine.sortOldestFirst,
+  app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:95), so a .jpg in
+  DCIM/Camera copies like any other photo — the route is conditional on the photo
+  being downloaded as a file at all, stated WL-246 form, not asserted outright. One
+  honest limit inside that coverage: a downloaded photo shows the download date, so
+  it sorts by its download date (DATE_MODIFIED fallback) rather than the date the
+  photo was taken unless the media index picks up the taken date inside the file —
+  stated in the TL;DR and in "The date problem". The From picker route is
+  code-supported but UNTESTED end to end on this exact job: listTreeFiles walks the
+  folder directly (app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:90-95)
+  and does not depend on the media index, isMediaName (:125-128) keeps only
+  IMAGE_EXTENSIONS (:131-134) and VIDEO_EXTENSIONS (:135-137), the picker is
+  ActivityResultContracts.OpenDocumentTree with no folder pre-selected
+  (app/src/main/java/dev/dzianisv/snapdisk/MainActivity.kt:62, :71), and for Huawei
+  Cloud the picker adds nothing the default run does not already cover, because the
+  default From folder already is /sdcard/DCIM. Screen-off continuation under battery
+  saver is UNVERIFIED — the repo holds no wake lock and no battery-saver handling
+  (grep across the app source at base b3bfb3d: 0 WAKE_LOCK matches, this run) — stated
+  in the TL;DR and in "What to avoid" (WL-182 form). Android 15 dataSync 6-hour
+  budget: BackupService.onTimeout pauses cleanly with a message
+  (app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:134, WL-34).
+  Every file is size-verified after copying
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:107 verify;
+  CopyResult.Copied only after verify passes, :126). FAT32 files >=4 GiB skipped
+  with their reason (app/src/main/java/dev/dzianisv/snapdisk/service/
+  BackupService.kt:48-50). Default From /sdcard/DCIM and To /disk/DCIM
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupPrefs.kt:50,53), no
+  INTERNET permission (0 occurrences in the manifest), no Google Play Services
+  dependency (0 matches for com.google.android.gms / play-services in the app source
+  and build file, this run), no all-files access (no MANAGE_EXTERNAL_STORAGE
+  anywhere), minSdk 24 (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11). Pro $9.99 once
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/ProPrefs.kt:40), 5 GB free per run
+  (:43). "SnapDisk copies, it never deletes" present — the only .delete() calls in
+  the code are on SnapDisk's own half-finished .part files
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:176, :207;
+  app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:385, :477). No
+  VaultDrive price is stated in this article — only the comparison-article link
+  text once. The 2 "install" forms in the article are both the benign "pre-installed
+  in the Account centre" (no counts claimed). The 1 "Google Play" mention is factual
+  (no Google Play Services dependency), same form as WL-233/WL-234/WL-235/WL-236/
+  WL-238/WL-239/WL-240 and WL-193. Read time 16 min from the word count
+  (11,779 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/huawei-cloud-photos-to-usb.html verified 0 collisions in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt before writing;
+  "huawei-cloud" returns 0 matches in feed.xml, sitemap.xml, blog index, llms.txt,
+  llms-full.txt, searches.md, and WORKLOG.md pre-write, and 0 "huawei-cloud-photos-to-usb"
+  slugs in docs/ pre-write (git ls-tree at base b3bfb3d); the live URL 404s
+  (verified this run). There are no near matches from other articles that cover the
+  Huawei Cloud download leg — the near matches are our own huawei-photos-to-usb.html
+  (on-device photos plus the encrypted Huawei Backup archive — NOT the cloud-download
+  leg), huawei-privatespace-photos-to-usb.html (a separate space, and cloud photos
+  cannot move between the spaces at all), factory-reset-photos-to-usb.html,
+  selling-phone-photos-to-usb.html, and encrypted-photos-to-usb.html — all different,
+  already-live articles, untouched, and the Huawei brand and PrivateSpace ones linked
+  as series companions — plus the other cloud articles (google-drive-photos-to-usb.html,
+  dropbox-photos-to-usb.html, onedrive-photos-to-usb.html, icloud-photos-to-usb.html,
+  amazon-photos-to-usb.html, mega-photos-to-usb.html, pcloud-photos-to-usb.html,
+  nextcloud-photos-to-usb.html, immich-photos-to-usb.html, ente-photos-to-usb.html,
+  seafile-photos-to-usb.html) — all different, already-live articles, untouched, and
+  linked as series companions. A docs/ listing this run confirms Huawei Cloud is the
+  next subject in our series with no article — WhatsApp, Telegram, Instagram, Facebook,
+  Snapchat, TikTok, WeChat, Messenger, Viber, Kik, IMO, Pinterest, Reddit, X, Tumblr,
+  Flickr, SmugMug, Amazon Photos, MEGA, pCloud, Nextcloud, Immich, Ente, Google Drive,
+  Dropbox, OneDrive, iCloud, and Seafile all have theirs already; the Signal (WL-237),
+  Discord, LINE, and KakaoTalk rows were killed, not written, because those apps
+  offer only the one-by-one save with nothing else to add, while Huawei Cloud survives
+  the same test because the no-auto-download wall, the DCIM/Camera folder named by
+  Huawei's own support page, the thumbnail-versus-original untangling, the
+  Optimise-device-storage trap, the two-way-sync deletion warning, the album batch
+  route, the web-download package trap, the no-whole-library-export wall, the 5 GB
+  free-tier answer, the download-date problem, and the original-file quality question
+  are all real things to add. Huawei Cloud also survives the WL-265 Box kill test
+  where Box failed: Box's own help documents no Download control for photos and names
+  no on-disk folder, while Huawei's own support page documents the Download control
+  verbatim, names the on-disk folder exactly, and saves a real original file to shared
+  storage — a real file, not a cache.
