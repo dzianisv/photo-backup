@@ -20361,6 +20361,63 @@ demand is read off competitor install velocity instead (see
   showing an export step SnapDisk's default run does not already
   cover. Query 226 stays unassigned.
 
+- "format USB flash drive for Android phone to transfer photos"
+  (briefed as Query 227, Nov 27, 2026): NOT a gap — KILLED
+  Nov 27, 2026 (WL-279). Two dedicated, current guides already join
+  the exact query: driveforge, "How to Format a USB Drive on Android
+  (No Computer Needed)"
+  (driveforge.bytehavenstudios.com/guides/format-usb-drive-on-android/,
+  published 2026-11-17, read first-hand this run) — Settings →
+  Storage → Format, the DriveForge filesystem-choice method, the
+  exFAT / FAT32 / NTFS / ext4 pick table, and the erase warning;
+  anexplorer, "How to Transfer Files from Android to USB Drive (OTG,
+  No Root)" (anexplorer.io/transfer/phone-to-usb, updated 18 days
+  ago) — the FAT32 / exFAT / NTFS read-write table, the 4 GB FAT32
+  limit, and reformat-to-exFAT steps on Windows, Mac, and Android.
+  Second phrasing, "format USB drive exFAT FAT32 Android photo
+  backup which format to choose": driveforge's "exFAT vs FAT32 vs
+  NTFS" comparison (driveforge.bytehavenstudios.com/guides/exfat-vs-fat32-vs-ntfs/,
+  updated 10 days ago) — Android phone/tablet row (exFAT or FAT32),
+  the 4 GB per-file rule — plus engadget's Windows format guide and
+  itechfaqs' Android filesystem guide. Own site: 0 format-usb slug
+  (both candidate slugs 404; the feed.xml and sitemap.xml
+  "format-usb" hits are the Blackview article slug substring, not a
+  formatting article); no WORKLOG row; the searches.md "format"
+  hits are passing FAT32-limit mentions inside brand and format
+  rows, not kills. No SnapDisk-specific honest centre: formatting
+  is a system/file-manager job, and the one app-specific
+  consequence — FAT32 drives cannot hold a single file over 4 GB,
+  so SnapDisk skips those files — is already stated in our own
+  articles (tablet, NTFS) and in the code (BackupService.kt:428-433).
+  Do not re-dispatch. Un-kill only if the driveforge guide goes
+  stale (no update in 12+ months) or disappears and no current
+  dedicated guide joins the query. Query 227 stays unassigned.
+
+- "view photos on USB flash drive Android phone OTG" (briefed as
+  Query 228, Nov 27, 2026): NOT a gap — KILLED Nov 27, 2026
+  (WL-279). A dedicated, current guide already joins the exact
+  query: itechguides, "How to Use a USB Drive With Your Android
+  Phone" (itechguides.com/how-to-use-a-usb-drive-with-your-android-phone/,
+  updated 101 days ago, read first-hand this run) — connect the
+  drive, Files by Google → Browse → Storage devices → tap the
+  drive, "browse folders, open supported files, copy or move photos
+  and videos in either direction", and "Can you open files directly
+  from a USB drive? Yes, Android can often open photos, videos,
+  PDFs, Office documents, and audio files directly from a connected
+  USB drive when a compatible app is installed". itechguides'
+  transfer guide and itechfaqs' "How to Transfer Photos from
+  Android to a USB Drive" join the same job from the copy side.
+  Own site: 0 view-photos slug (both candidate slugs 404; the
+  feed.xml and sitemap.xml "view-photos" hits are the Blackview
+  article slug substring); no WORKLOG row; the searches.md "view
+  photos" hits are passing text inside the BQ brand row, not kills.
+  No SnapDisk-specific honest centre: viewing is a file-manager
+  job, not a backup job — SnapDisk copies, it does not view — and
+  our own transfer articles already cover the Files-by-Google
+  browse step. Do not re-dispatch. Un-kill only if the itechguides
+  guide goes stale (no update in 12+ months) or disappears and no
+  current dedicated guide joins the query. Query 228 stays unassigned.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
