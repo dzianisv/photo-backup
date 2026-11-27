@@ -26207,3 +26207,211 @@ unchanged (already "Back up photos & videos to a USB disk").
   no on-disk folder, while Huawei's own support page documents the Download control
   verbatim, names the on-disk folder exactly, and saves a real original file to shared
   storage — a real file, not a cache.
+
+### 215. "Save Bluesky photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 222, Nov 26, 2026 (WL-275).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already on Bluesky, saved on the Android phone itself, onto a USB
+  drive plugged into the phone, no computer — with the save step stated (open
+  the post, tap the photo to open it full-screen, tap the three-dot "Image
+  options" button, tap "Save image" — Bluesky's own save, in Bluesky's own
+  open-source app code), the folder named (the file lands in an album named
+  Bluesky in the Gallery — Bluesky's own code names the album, and if the
+  album cannot be created it falls back to putting the file straight in DCIM —
+  check the Gallery album first, then DCIM in a file manager), the
+  looking-versus-saving untangling stated (a photo you opened is a photo you
+  looked at, and liking or reposting writes no file at all — only Save image
+  writes a file), the no-auto-save wall stated (Bluesky saves nothing by
+  itself, no setting turns one on), the per-photo limit stated (the save unit
+  is one photo, and a post holds at most four photos), the web-download trap
+  stated (a download from bsky.app lands in the browser's Downloads folder,
+  not in the Bluesky album), the no-whole-library-export wall stated (the
+  save unit is one photo; a whole account goes through post-by-post saves,
+  while the protocol route serves the files from public addresses on a
+  computer), and the lost-taken-date and full-size quality limits stated (a
+  saved photo shows the save date; the save is the full-size copy Bluesky
+  serves, saved as a JPEG, not a shrunken one). Our own generic transfer,
+  storage-full, and 3-2-1 articles rank top on both phrasings and never save
+  anything from Bluesky; the generic phone-to-USB guides never name the
+  Bluesky save leg; no Bluesky listing ranks on either phrasing. The gap
+  stands ONLY on that narrow angle: the Bluesky photo, saved on the phone
+  into the Bluesky album, onto a USB drive, no computer, with the save step
+  stated, the folder named, the looking-versus-saving untangling stated, and
+  the no-auto-save wall stated plainly.
+- Current top results (scored Nov 26, 2026, live web search):
+  Phrasing 1, "save Bluesky photos to USB drive from Android phone no
+  computer" (supervisor, this run): only our own
+  transfer-photos-to-usb-automatically article, our own usb-photo-backup
+  article, our own storage-full article, and our own 3-2-1 article — all
+  generic phone-to-USB guides that never save anything from Bluesky — no
+  Bluesky-specific guide on this phrasing.
+  Phrasing 2, "transfer Bluesky photos to USB flash drive Android no computer"
+  (supervisor, this run): the same own articles, plus the pixoneye and
+  pcnmobile generic phone-to-USB guides — manual file-manager copy, no Bluesky
+  save leg — again no Bluesky-specific guide, and no guide that puts the save
+  and the USB copy in the same place — no Bluesky-to-phone-to-USB guide with
+  no computer exists on either phrasing.
+  Corroboration (lead, this run): Bluesky's own open-source app code, read
+  first-hand Nov 26, 2026 via the GitHub API (bluesky-social/social-app,
+  main). src/components/Lightbox/chrome/ImageMenu.tsx — the photo viewer's
+  three-dot button opens an "Image options" menu with two items, "Share
+  image" and "Save image" (Download icon), calling onPressSave.
+  src/components/Lightbox/Lightbox.tsx — wires onPressSave to
+  useSaveImageToMediaLibrary (saveImageToAlbum). src/lib/media/save-image.ts
+  — useSaveImageToMediaLibrary: native save via saveImageToMediaLibrary,
+  toast "Image saved" on success, "Failed to save image: ..." on failure,
+  and a photo-library permission flow ("Images cannot be saved unless
+  permission is granted to access your photo library" / "Permission to access
+  your photo library was denied. Please enable it in your system settings.").
+  src/lib/media/manip.ts, saveImageToMediaLibrary (:104-144) — downloads the
+  image via convertCdnPreset(uri, 'download'), moves it to a permanent path
+  as a .jpg (:111), and on Android looks up an album named Bluesky
+  (ALBUM_NAME = 'Bluesky', :96) — put the image straight in the album if it
+  exists, create the album with the image if it does not, and if even that
+  fails, "just put it in DCIM" (plain Asset.create, :134-135). The long-press
+  route, src/components/Post/Embed/ImageContextMenu.tsx — the feed menu
+  offers "Save image" (:68-70), calling saveImage(fullsizeUri) (:47-48), so
+  the long-press save is the same full-size save from a different tap. The
+  web route, src/components/Lightbox/Lightbox.web.tsx — the viewer menu
+  offers "Download image" (:318), calling the same saveImageToMediaLibrary
+  (:320-322). The AT Protocol image lexicon
+  (bluesky-social/atproto, packages/api/lexicons/app/bsky/embed/images.json:13)
+  caps a post's image list at four ("maxLength": 4). Third-party downloader
+  guides agree the app saves per photo and disagree with each other on
+  whether any save exists at all — bskysuite claims "no dedicated save button
+  built into the app" while bskydownloads claims a Save button appears — so
+  the article trusts Bluesky's own code over both, and names no third-party
+  downloader: the app's own Save image does the job, and a tool that asks for
+  your Bluesky login to fetch what the app saves for free is asking for
+  something it does not need. The Threads kill is not re-used (different app,
+  different evidence — Threads offers no native save; Bluesky's own code
+  documents one verbatim and names the on-disk album). The LinkedIn kill is
+  not re-used either: LinkedIn documents no save, while Bluesky's code
+  documents the Save image control and the album by name.
+  No article — only the comparison-article link in "On your phone instead" — and no install count for
+  SnapDisk (none exists) and no VaultDrive install figure.
+- Honest centre (verified from Bluesky's own app code and the code at base 4015bba,
+  this run, Nov 26, 2026, not assumed): a photo on Bluesky is not on your
+  phone until you save it — Bluesky is a social network built on the AT
+  Protocol, a post lives on the poster's server and the photos in it are
+  served from Bluesky's image CDN, not stored on your phone, and the file
+  appears only when you save it. The save is open the post, tap the photo to
+  open it full-screen, tap the three-dot "Image options" button, tap "Save
+  image" — Bluesky's own save, in Bluesky's own open-source app code — and
+  the file lands in an album named Bluesky in the Gallery, per Bluesky's own
+  code, with DCIM as the fallback if the album cannot be created, so the
+  article states the folder as a named destination plus a short search
+  (Gallery album first, then DCIM in a file manager), never as a claimed
+  loose folder, never as a DCIM/Bluesky path (the physical location of the
+  album folder was not verified this run), and never as the Downloads folder,
+  which is where the web download lands instead. A re-save replaces the local
+  copy under the same file name: no duplicate piles up under a new name.
+  Saving and looking are different things in Bluesky: the save writes a real
+  file to shared storage, visible in the Gallery and in a file manager, while
+  opening a photo only shows it — and liking or reposting writes no file at
+  all. Bluesky saves nothing by itself: there is no auto-save and no setting
+  that turns one on, and the automatic features run the other way — nothing
+  downloads photos to the phone on its own. A whole post saves one photo at
+  a time in the app, or on the web, where the download lands in Downloads;
+  there is no whole-library export in the app, and a whole account goes
+  through post-by-post saves, while the protocol route serves the files from
+  public addresses on a computer. The date problem is a save problem for
+  Bluesky: the file is written when you save it, so it sorts by its save date
+  (DATE_MODIFIED fallback), and the taken date inside the file may or may not
+  be picked up by the media index — stated as the expected case, not as a
+  certainty, because no source this run tested the taken date after a Bluesky
+  save. The quality problem is the opposite of the photo services: the save is
+  the full-size copy Bluesky serves, saved as a JPEG, not a shrunken one,
+  because the save downloads the full-size copy and the long-press route
+  passes the full-size address outright — and the limit is the tapping, not a
+  quota: Bluesky publishes no transfer meter on saving your own photos. The
+  default run covers a saved Bluesky photo that shows in the gallery: it
+  reads the media index with no folder filter (queryMediaStoreOldestFirst,
+  app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:23-36; the
+  query call passes selection null :60; Images + Videos tables :23-36;
+  DATE_TAKEN with DATE_MODIFIED fallback :47-48, :56-58, oldest-first via
+  BackupEngine.sortOldestFirst,
+  app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:95), so a
+  .jpg in the Bluesky album copies like any other photo — the route is
+  conditional on the photo being saved as a file at all, stated WL-246 form,
+  not asserted outright. One honest limit inside that coverage: a saved photo
+  shows the save date, so it sorts by its save date (DATE_MODIFIED fallback)
+  rather than the date the photo was taken unless the media index picks up
+  the taken date inside the file — stated in the TL;DR and in "The date
+  problem". The From picker route is code-supported but UNTESTED end to end
+  on this exact job: listTreeFiles walks the folder directly
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:90-95) and
+  does not depend on the media index, isMediaName (:125-128) keeps only
+  IMAGE_EXTENSIONS (:131-134) and VIDEO_EXTENSIONS (:135-137), the picker is
+  ActivityResultContracts.OpenDocumentTree with no folder pre-selected
+  (app/src/main/java/dev/dzianisv/snapdisk/MainActivity.kt:62, :71), and for
+  Bluesky the picker must point at the folder the save landed in (the
+  Bluesky album, or DCIM), not at Downloads, which is where only a web batch
+  lands. Screen-off continuation under battery saver is UNVERIFIED — the repo
+  holds no wake lock and no battery-saver handling (GitHub code search across
+  the repo at base 4015bba: 0 WAKE_LOCK matches, this run) — stated in the
+  TL;DR and in "What to avoid" (WL-182 form). Android 15 dataSync 6-hour
+  budget: BackupService.onTimeout pauses cleanly with a message
+  (app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:134, WL-34).
+  Every file is size-verified after copying
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:107 verify;
+  CopyResult.Copied only after verify passes, :126). FAT32 files >=4 GiB skipped
+  with their reason (app/src/main/java/dev/dzianisv/snapdisk/service/
+  BackupService.kt:48-50). Default From /sdcard/DCIM and To /disk/DCIM
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupPrefs.kt:50,53), no
+  INTERNET permission (0 occurrences in the manifest), no Google Play Services
+  dependency (0 matches for com.google.android.gms in the repo, this run), no
+  all-files access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24
+  (app/build.gradle.kts:12, Android 7.0), applicationId dev.dzianisv.snapdisk
+  (app/build.gradle.kts:11). Pro $9.99 once
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/ProPrefs.kt:40), 5 GB free per run
+  (:43). "SnapDisk copies, it never deletes" present — the only .delete() calls in
+  the code are on SnapDisk's own half-finished .part files
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:176, :207;
+  app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:385, :477). No
+  VaultDrive price is stated in this article — only the comparison-article link
+  text once. The 1 "install" form in the article is the benign "the app will not
+  install" (a phone without the app). The 1 "Google Play" mention is factual
+  (no Google Play Services dependency), same form as WL-233/WL-234/WL-235/WL-236/
+  WL-238/WL-239/WL-240 and WL-193. Read time 15 min from the word count
+  (11,187 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/bluesky-photos-to-usb.html verified 0 collisions in feed.xml,
+  sitemap.xml, blog index, llms.txt, and llms-full.txt before writing;
+  "bluesky" returns 0 matches in feed.xml, sitemap.xml, blog index, llms.txt,
+  llms-full.txt, searches.md, and WORKLOG.md pre-write, and 0 "bluesky-photos-to-usb"
+  slugs in docs/ pre-write (git ls-tree at base 4015bba); the live URL 404s
+  (verified this run). There are no near matches from other articles that cover the
+  Bluesky save leg — the near matches are our own generic transfer,
+  storage-full, and 3-2-1 articles — all different, already-live articles,
+  untouched — plus the other social articles (whatsapp-photos-to-usb.html,
+  telegram-photos-to-usb.html, instagram-photos-to-usb.html,
+  facebook-photos-to-usb.html, snapchat-photos-to-usb.html,
+  tiktok-photos-videos-to-usb.html, x-twitter-photos-to-usb.html,
+  tumblr-photos-to-usb.html, flickr-photos-to-usb.html,
+  smugmug-photos-to-usb.html) and the other cloud articles
+  (google-drive-photos-to-usb.html, dropbox-photos-to-usb.html,
+  onedrive-photos-to-usb.html, icloud-photos-to-usb.html,
+  amazon-photos-to-usb.html, mega-photos-to-usb.html, pcloud-photos-to-usb.html,
+  nextcloud-photos-to-usb.html, immich-photos-to-usb.html,
+  ente-photos-to-usb.html, seafile-photos-to-usb.html,
+  huawei-cloud-photos-to-usb.html) — all different, already-live articles,
+  untouched, and linked as series companions. A docs/ listing this run confirms
+  Bluesky is the next subject in our series with no article — WhatsApp, Telegram,
+  Instagram, Facebook, Snapchat, TikTok, WeChat, Messenger, Viber, Kik, IMO,
+  Pinterest, Reddit, X, Tumblr, Flickr, SmugMug, Amazon Photos, MEGA, pCloud,
+  Nextcloud, Immich, Ente, Google Drive, Dropbox, OneDrive, iCloud, Seafile,
+  and Huawei Cloud all have theirs already; the Signal (WL-237), LinkedIn
+  (WL-257), and Threads (WL-259) rows were killed, not written, because those
+  apps offer no native save, and the Discord, LINE, and KakaoTalk rows were
+  killed because those apps offer only the one-by-one save with nothing else
+  to add, while Bluesky survives
+  the same test because the no-auto-save wall, the Bluesky album named by
+  Bluesky's own code, the looking-versus-saving untangling, the per-photo
+  save limit, the four-photos-per-post cap, the web-download trap, the
+  no-whole-library-export wall, the save-date problem, and the full-size
+  quality question are all real things to add. Bluesky also survives the
+  WL-265 Box kill test where Box failed: Box's own help documents no Download
+  control for photos and names no on-disk folder, while Bluesky's own code
+  documents the Save image control verbatim, names the on-disk album exactly,
+  and saves a real full-size file to shared storage — a real file, not a cache.
