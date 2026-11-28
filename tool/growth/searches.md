@@ -20571,6 +20571,64 @@ demand is read off competitor install velocity instead (see
   12+ months) or disappear and no current dedicated guide joins the
   query. Query 235 stays unassigned.
 
+- "save Samsung Cloud photos to USB" / "transfer Samsung Cloud photos to USB flash drive" (briefed as
+  Query 236, Nov 27, 2026): NOT a photo flow — KILLED Nov 27, 2026
+  (WL-287). Samsung Cloud holds no photos in 2026 and offers no
+  photo-download flow. Samsung's own US support page, "Access your
+  device backups in Samsung Cloud"
+  (samsung.com/us/support/answer/ANS10002032/, read first-hand this
+  run, crawled 2026-11-28 01:55 UTC): "Your photos and videos cannot
+  be backed up to Samsung Cloud, however the Gallery on all your
+  Galaxy devices can be backed up with Microsoft OneDrive"; "You
+  cannot download your backups individually. If you need to recover
+  data in Samsung Cloud, you must sync your data to a compatible
+  device"; and "Calendar, Contacts, Reminders, Samsung Notes,
+  Bluetooth settings, and Wi-Fi settings are the only things that
+  can be synced to Samsung Cloud". Samsung's own IE support page,
+  "What has changed with Sync with OneDrive in the Gallery app?"
+  (samsung.com/ie/support/mobile-devices/what-has-changed-with-sync-with-onedrive-in-the-gallery-app/,
+  updated 17.11.2026, read first-hand this run, crawled 2026-11-28
+  01:54 UTC): "The Gallery Sync with Microsoft OneDrive was
+  discontinued on the 30th of September 2026... Your existing photos
+  and videos stay safe in OneDrive... If you'd like a copy on your
+  device, you can download them from the OneDrive app." Gallery sync
+  in Samsung Cloud itself ended in 2021 — final download deadlines
+  30 September and 30 November 2021, after which the data was deleted
+  (samsungphotographyacademy.com/blog/samsung-cloud-photos, read
+  first-hand this run, crawled 2026-11-28 01:58 UTC: "Samsung Cloud
+  stopped keeping Gallery photos in 2021 and OneDrive sync ended in
+  2026"; "Old Samsung Cloud Gallery photos can't be downloaded"). So
+  there is no Samsung Cloud photo leg to write: the photos live in
+  OneDrive (download from the OneDrive app) or, on One UI 9, in
+  Google — and our own onedrive-photos-to-usb.html already covers the
+  OneDrive-to-USB leg and joins both phrasings below. Gap check, both
+  phrasings this run: "save Samsung Cloud photos to USB drive from
+  Android phone no computer" joins pcnmobile.com ("How to Transfer
+  Photos from Samsung Galaxy to a Flash Drive", My Files copy of
+  on-device photos, no cloud leg), our own
+  samsung-galaxy-photos-to-usb.html, umatechnology.org ("Back Up
+  Samsung Galaxy Photos: Cloud and USB Methods", general Samsung
+  backup guide, Samsung Cloud only as device backup), itechfaqs.com
+  (generic Android-to-USB); "transfer Samsung Cloud photos to USB
+  flash drive Android no computer" joins our own
+  samsung-galaxy-photos-to-usb.html, pcnmobile.com, our own
+  selling-phone-photos-to-usb.html, umatechnology.org. No dedicated
+  current Samsung-Cloud-specific photo-download guide joins either
+  phrasing — because there is no such flow to guide. Own site: 0
+  dedicated Samsung Cloud article (candidate slug
+  samsung-cloud-photos-to-usb.html 404s live, dispatcher-verified);
+  0 "samsung-cloud" hits in the live feed.xml (verified this run);
+  the 3 "Samsung Cloud" hits in searches.md at base are passing text
+  inside the WL-40 Samsung Galaxy row and other rows' evidence, read
+  this run, not kills — the topic as its own query was never scored
+  until now. Claim check in order: 0 dedicated WORKLOG rows
+  (mentions only incidental inside the WL-40 Samsung Galaxy row and
+  other rows' evidence). No SnapDisk-specific honest centre: there is
+  no Samsung Cloud save step for SnapDisk to automate, and a "how to
+  download from Samsung Cloud" article would tell readers to use
+  OneDrive — which our OneDrive article already does. Do not
+  re-dispatch. Un-kill only if Samsung restores a photo-download flow
+  to Samsung Cloud. Query 236 stays unassigned.
 
 ## Winners and what changed
 
