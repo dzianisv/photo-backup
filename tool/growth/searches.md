@@ -20778,6 +20778,52 @@ demand is read off competitor install velocity instead (see
   covering the bridge, and no current dedicated guide joins the query.
   Query 240 stays unassigned.
 
+- "transfer photos from Android phone to USB drive using Files by Google" /
+  "save photos to USB flash drive with Files by Google app no computer" (briefed as
+  Query 241, Nov 28, 2026): NOT a gap — KILLED Nov 28, 2026 (WL-292).
+  Dedicated current guides join both phrasings with full Files-by-Google
+  step-by-step sections, and our own Pixel article already covers the same
+  flow — no SnapDisk-specific honest centre. Phrasing 1: thedroidguy.com,
+  "How To Copy Files From Android To A USB Drive (2026)" (updated 6 days
+  ago, read via search this run): a dedicated Pixel section — connect the
+  drive, open Files by Google, tap the USB-available notification and
+  Allow, Storage devices then the USB device, Copy to, pick the drive and
+  a folder, Copy here; plus a multi-select section; itechfaqs.com, "How to
+  Transfer Photos from Android to a USB Drive" (108 days ago): a dedicated
+  "Transfer photos directly with Files by Google" section — Images or
+  DCIM/Camera, multi-select, Copy to, Copy here, verify, eject;
+  eztoolset.com, "How to Transfer Photos from Android to a USB Drive"
+  (108 days ago): Method 1, "Copy photos directly with Files by Google",
+  the same ten-step flow. Phrasing 2: the same thedroidguy and itechfaqs
+  guides join it; mefmobile.org, "How to Transfer Phone Photos to a USB
+  Stick Without a Computer" (81 days ago): a Files by Google section —
+  Browse, Storage devices, Images or DCIM/Camera, Copy to, Copy here,
+  citing Google's own Files Help guide; thedroidguy.com, "How To Backup
+  Phone Photos To External Storage (2026)" (updated 1 day ago): "You can
+  do this with the Files app already on your phone. It is called Files by
+  Google on many phones" — DCIM/Camera, Select all, Copy to, pick the USB
+  drive. No honest centre: Files by Google is the stock file manager, not
+  a photo source — it holds no photos of its own, so the flow is the
+  generic manual copy every OTG guide already documents, and our own
+  google-pixel-photos-to-usb.html (live) already carries it as Method 2,
+  "Files by Google (the stock route, no app needed)", with the honest
+  contrast against SnapDisk's one-tap background copy. The article would
+  be the generic how-to plus the Pixel article's Method 2 — a duplicate,
+  not a new gap. Own site: candidate slug
+  files-by-google-photos-to-usb.html 404s live (curl, this run); feed.xml
+  0 hits and sitemap.xml 0 hits for files-by-google — no dedicated
+  article. Claim check in order: 0 dedicated WORKLOG rows (56 "Files by
+  Google" hits are passing mentions inside other rows, 0 headings; the
+  auto-backup article is WL-39, transfer-photos-to-usb-automatically);
+  the searches.md "Not a gap" Files by Google hits are passing text
+  inside the XCover scored-query entry (sekin.in naming Files by Google
+  as the file-manager tool), read this run, not kills — the topic as its
+  own query was never scored until now. Do not re-dispatch. Un-kill only
+  if the dedicated guides go stale (no update in 12+ months) or
+  disappear, or Files by Google gains a photo-backup-specific flow no
+  guide covers.
+  Query 241 stays unassigned.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
