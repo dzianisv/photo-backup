@@ -20824,6 +20824,57 @@ demand is read off competitor install velocity instead (see
   guide covers.
   Query 241 stays unassigned.
 
+- "transfer photos from Android phone to USB flash drive using a computer" /
+  "move Android photos to USB drive via computer without OTG" (briefed as
+  Query 242, Nov 28, 2026): NOT a gap — KILLED Nov 28, 2026 (WL-293).
+  Dedicated current guides join both phrasings with full computer-as-middleman
+  step-by-step sections, and our own no-OTG article already carries the same
+  route as Method 1 — no SnapDisk-specific honest centre. Phrasing 1:
+  thedroidguy.com, "How To Backup Phone Photos To External Storage (2026)"
+  (updated 1 day ago, read via search this run): a dedicated "Use a Computer
+  Instead" section — plug the drive into the computer, connect the phone by
+  USB cable, choose File transfer, open DCIM/Camera in File Explorer, select
+  all, drag to the drive, plus the Mac Photos-app Import variant;
+  drfone.wondershare.com, "4 Practical Ways to Transfer Photos from Android
+  to USB Flash Drive" (190 days ago): "using a PC as a middleman via USB
+  File Transfer mode" as a named method, with the drag-and-drop steps;
+  fonelab.com, "How to Transfer Photos from Android to Flash Drive in 3 Easy
+  Ways" (updated Jan 23, 2026): File Explorer method — plug phone and drive
+  into the PC, copy from the phone, paste to the drive; coolmuster.com, "How
+  to Transfer Photos from Android to Flash Drive [5 Ways]" (295 days ago):
+  Method 1 drag and drop via computer — connect by USB cable, File transfer,
+  open DCIM, drag to the drive. Phrasing 2: the same thedroidguy guide joins
+  it; blog.rottenwifi.com, "How to Move Pictures From Android to External
+  Hard Drive" (85 days ago): "the most dependable method is to copy them
+  from the unlocked phone to a computer, then copy that folder to the
+  external drive", with the full Windows method; ireashare.com, "Transfer
+  Files from Android to USB Flash Drive: 4 Ways" (158 days ago): desktop
+  software method through the computer alongside the OTG route. No honest
+  centre: the computer copy uses no phone app at all — the copy happens on
+  the computer, SnapDisk is not involved in the flow, and the article would
+  be the generic PC guide plus our own no-otg-photos-to-usb.html (live, 200,
+  36,179 B, verified this run), which already gives the computer route as
+  Method 1 ("phone to computer by cable, then computer to drive, the most
+  dependable method") and usb-photo-backup.html, which names the computer
+  route too. Own site: candidate slugs
+  transfer-photos-to-usb-via-computer.html,
+  transfer-photos-to-usb-using-computer.html,
+  transfer-photos-to-usb-with-computer.html,
+  transfer-android-photos-to-usb-via-pc.html all 404 live (curl, this run);
+  0 slugs containing "computer" in sitemap.xml; feed.xml "computer" hits
+  are the "no computer" qualifier inside existing articles, not a
+  computer-route article. Claim check in order: 0 dedicated WORKLOG rows
+  (the "computer" headings are "no computer" articles — the opposite
+  qualifier; the auto-backup article is WL-39,
+  transfer-photos-to-usb-automatically); the searches.md "Not a gap"
+  "computer" hits (898 lines) are "no computer" phrasings inside other
+  queries' kills plus passing text inside rugged-device entries, read this
+  run, not kills — the with-computer topic as its own query was never
+  scored until now. Do not re-dispatch. Un-kill only if the dedicated
+  guides go stale (no update in 12+ months) or disappear, or the PC flow
+  gains a SnapDisk-specific step no guide covers.
+  Query 242 stays unassigned.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
