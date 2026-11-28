@@ -27690,3 +27690,196 @@ unchanged (already "Back up photos & videos to a USB disk").
   docs document the Save to downloads control verbatim, name the Download
   Folder exactly, and the download saves a real full-size file to shared
   storage — a real file, not a cache.
+### 219. "Save GoPro photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 244, Nov 28, 2026 (WL-295).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already on a GoPro camera, downloaded on the Android phone itself
+  with Quik, saved to the phone, onto a USB drive plugged into the phone, no
+  computer — with both saves stated (pair the camera to Quik, tap View Media,
+  tap the photos, tap Download — they land in the Media tab — then tap the
+  Quik tab, select the photos, tap the arrow, tap Save to phone — GoPro's own
+  support page, with GoPro's own docs naming the Media tab and the photo
+  album), the destinations named (the file lands in Quik's Media tab first,
+  then in the phone's photo album, with GoPro publishing no absolute Android
+  path, so the article names the destinations as GoPro names them and never
+  invents a path), the viewing-versus-saving untangling stated (looking at a
+  photo in Quik shows a streamed copy from the camera; only Download writes
+  a file to the app, and only Save to phone writes a file to the phone), the
+  app-only trap stated (a photo downloaded to the app but never saved to the
+  phone lives in Quik's private app storage, invisible to the gallery and to
+  SnapDisk, with no picker route into it), the auto-upload direction stated
+  (Auto Upload runs camera to GoPro cloud on a subscription, with the
+  originals staying on the camera; there is no documented auto-download), the
+  one-batch-at-a-time limit stated (the download is a tap each time you
+  connect; the bulk version is Tap Download to download all of your new
+  footage to the app, one tap per session; the whole-camera route is the
+  wired USB-C connection or the microSD card reader), and the quality
+  limit stated (Save to phone asks for quality selections, and GoPro's page
+  does not say the saved file is byte-identical to the camera original, so
+  the article makes no byte-for-byte claim for that step). Our own generic
+  flight, storage-full, and transfer-automatically articles rank top on the
+  second phrasing and never open Quik; the generic phone-to-USB guides never
+  name the Quik save legs; no GoPro listing ranks on any phrasing. The gap
+  stands ONLY on that narrow angle: the GoPro photo, downloaded from the
+  camera into Quik, saved to the phone, onto a USB drive, no computer, with
+  both saves stated, the destinations named, the viewing-versus-saving
+  untangling stated, and the app-only trap stated plainly.
+- Gate evidence (verified live this run, Nov 28, 2026): GoPro's own support
+  page, "Quik (Mobile): How To View, Download, And Delete Media"
+  (community.gopro.com/s/article/GoPro-Quik-How-to-View-Copy-and-Delete-Media,
+  read first-hand this run, crawled 2026-11-28 12:28 UTC) — "How to download
+  Media from a GoPro Camera to Quik (Mobile): 1. Pair your camera to Quik.
+  2. Tap [View Media]. 3. Tap on the Media you want to download. To select
+  more than one, tap [Select], then tap each additional media item you want
+  to download. 4. Tap [Download], and the files will be in the [Media]
+  tab." — "Download Media to device photo gallery: 1. Open Quik. 2. Tap on
+  [Media] to view all of your photos and videos. 3. Tap the [Quik] tab.
+  4. Select a photo or video tap and hold the icon until it turns blue. Tap
+  more files individually or by using the [Date bubble]. 5. Tap on the
+  [Arrow]. 6. Tap [Save to phone]. 7. Make your Quality selections and tap
+  [Continue]. 8. The files begin downloading. 9. Open your photo album to
+  view your saved content." — "Download Media from Cloud to Device: ...
+  Tap [Download to app storage] and the download begins." GoPro's own
+  HERO13 Black manual, "Saving Your Media" (read via the ManualsLib mirror
+  this run) — "SAVING TO YOUR PHONE WIRELESSLY: Wirelessly save your photos
+  and videos to the GoPro Quik app for easy access and sharing on your
+  phone. 1. Connect your camera to the GoPro Quik app. 2. Tap Download to
+  download all of your new footage to the app. 3. Tap View Media for a
+  gallery view of all of your media." — "SAVING TO YOUR PHONE WITH A WIRED
+  CONNECTION: Use a wired connection to transfer photos and videos from
+  your GoPro to your phone faster and more reliably. 1. Use the appropriate
+  cable/adapter (not included) to connect your GoPro to your phone. 2. Start
+  the GoPro Quik app on your phone and follow the on-screen instructions."
+  — Android: "Standard USB-C to USB-C". GoPro's own Quik features page
+  (community.gopro.com/s/article/GoPro-Quik-Features-And-Information, last
+  updated 184 days ago, crawled 1 day ago) — "Quik (Mobile) is an
+  all-in-one solution for saving, editing, and sharing photos and videos
+  on a GoPro camera or phone." — "The basic version of Quik is free, and
+  the fully-featured version is $9.99/year, or included with GoPro
+  Subscription for $49.99/year." — Availability: "iOS App store", "Google
+  Play store". GoPro publishes no absolute Android path for either landing
+  spot, and the third-party guides disagree about it: blog.usro.net,
+  "Where Does GoPro Quik Save Files on Android?" (120 days ago) — "Within
+  the DCIM folder, you should find a folder named GoPro. ... the typical
+  path looks like this: Internal Storage > DCIM > GoPro" — while GoPro's
+  own community answers say the save goes "to wherever you set your media
+  gallery save location", or "usually in a folder called GoPro exports",
+  or "usually in a folder called DCIM" — three answers, no agreement,
+  which is itself the evidence there is no one path to give. No
+  screenshot-only, cache-only, cloud-only, or third-party-downloader
+  condition: GoPro's own Download is a real file download into a named
+  in-app folder with a real Save to phone step out of it, and the app-only
+  trap is documented and untangled rather than hidden, so the gate PASSES
+  — write the article, do not kill the row.
+- Search phrasings, scored live: phrasing 1, "save GoPro photos to USB from
+  Android Quik download" (lead, this run, first-hand): GoPro's own support
+  page "Quik (Mobile): How To View, Download, And Delete Media", GoPro's
+  own Quik features page, GoPro's own news posts about the Quik app, and
+  GoPro's own camera manuals — no GoPro-photos-to-USB guide. Phrasing 2,
+  "transfer GoPro photos to USB flash drive from Android phone" (lead, this
+  run, first-hand): generic phone-to-USB video guides (YouTube, "How to
+  Connect USB Drive to Android Phone to Move Photos & Videos" and "How to
+  Transfer Photos, Videos and any Files from Android Phone to USB
+  Pendrive"), which show the OTG cable and the file manager and never open
+  Quik; airphotography.ca, "How To Transfer Content From The GoPro Hero 13
+  Black To Mobile Devices", which covers the Quik download and the USB-C
+  cable and stops at the phone; repairit.wondershare.com, "How to Download,
+  Transfer, or Upload GoPro Videos?", which covers the app, the SD card,
+  and the card reader and stops at the phone; and our own flight article,
+  which covers the before-a-flight backup and never opens Quik — no
+  GoPro-photos-to-USB guide exists on either phrasing.
+- Honest centre (verified from GoPro's own docs + the code at base 31a3ffeb
+  this run): a GoPro photo is not on the phone until Quik saves it — and
+  the save is two steps, not one: downloading the photo from the camera
+  puts it in Quik's own Media tab, and a photo that has only reached the
+  Media tab is a file in the app, not a file in the phone's gallery, so the
+  second step, Save to phone, is the bridge. The download is pair the
+  camera to Quik → tap View Media → tap the photos → tap Download; the
+  save is tap the Quik tab → select the photos → tap the arrow → tap Save
+  to phone → make your quality selections; the on-disk destinations are
+  Quik's Media tab first, then the phone's photo album — so the article
+  states the destinations as named destinations plus the gallery check (a
+  saved photo that shows in the gallery is an ordinary indexed file),
+  never as a claimed absolute path (GoPro publishes none), never as
+  DCIM/Camera, which is where the camera puts its own photos, and never as
+  DCIM/GoPro, which is one third-party guide's claim contradicted by
+  GoPro's own community answers. A share link is not a save — Quik's share
+  link opens the photo in a browser or in the app. The download is one
+  batch at a time; GoPro's own HERO13 manual documents the bulk version,
+  Tap Download to download all of your new footage to the app, and no
+  auto-download, and the bulk routes are the wired USB-C connection and
+  the microSD card reader. The Save to phone step asks for quality
+  selections, and GoPro's page does not say the saved file is byte-identical
+  to the camera original, so the article makes no byte-for-byte claim for
+  that step. The default run covers a saved GoPro photo that shows in the
+  gallery (no folder filter, selection null,
+  app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:60); there
+  is NO picker route into Quik's app storage — the picker can only point
+  at folders the system picker can reach, and another app's private storage
+  is not one of them — and the picker must not be pointed at Android/data,
+  which holds Quik's working data, not the photos. SnapDisk does not talk
+  to the camera at all: zero matches for "gopro" in the app's source, no
+  camera API, and no INTERNET permission with which to reach one.
+- SnapDisk facts re-verified from the code at base 31a3ffeb (do not copy from
+  memory): Pro $9.99 once (app/src/main/java/dev/dzianisv/snapdisk/backup/
+  ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB free per-run cap (:43, 5L *
+  1024 * 1024 * 1024), oldest-first MediaStore DATE_TAKEN
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:23,
+  queryMediaStoreOldestFirst; :60, selection null, no folder filter;
+  app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:95,
+  sortOldestFirst), size verification after copy (BackupEngine.kt:107,
+  verify; :126, :148, CopyResult.Copied only after verify passes),
+  byte-stream copy with resume (BackupEngine.kt:170-205, buffered
+  InputStream to OutputStream via a .part file, size check after copy),
+  Pause/Stop in the notification (app/src/main/java/dev/dzianisv/snapdisk/
+  service/NotificationHelper.kt:20; BackupService.kt:113,115),
+  foreground-service dataSync (app/src/main/AndroidManifest.xml:38), FAT32
+  files >=4 GiB skipped with their reason (app/src/main/java/dev/dzianisv/
+  snapdisk/service/BackupService.kt:428-433), no INTERNET permission (0
+  occurrences in the manifest), no Google Play Services dependency (0
+  matches for com.google.android.gms in the repo, this run), no all-files
+  access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24
+  (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11). "SnapDisk copies, it never
+  deletes" present — the only .delete() calls in the code are on SnapDisk's
+  own half-finished .part files (app/src/main/java/dev/dzianisv/snapdisk/
+  backup/BackupEngine.kt:176, :207; app/src/main/java/dev/dzianisv/snapdisk/
+  service/BackupService.kt:385, :477). No VaultDrive price is stated in this
+  article — only the comparison-article link text once. The 5 "install"
+  forms in the article are benign (Quik installed; SnapDisk installed from
+  the v0.1.2 APK; "install it by allowing 'install unknown apps'"; "the
+  installation"). The 2 "Google Play" mentions are factual (Quik free from
+  Google Play; SnapDisk not on Google Play yet), same form as
+  WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240 and WL-193. Read time 12
+  min from the word count (8,923 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/gopro-photos-to-usb.html verified 0 collisions in feed.xml, sitemap.xml,
+  blog index, llms.txt, and llms-full.txt before writing; "gopro" returns 0
+  matches in feed.xml, sitemap.xml, blog index, llms.txt, and llms-full.txt
+  pre-write, 0 matches in searches.md (whole file, including the "Not a gap"
+  section — read, no kill), and 0 matches in WORKLOG.md pre-write; 0
+  "gopro-photos-to-usb" slugs in docs/ pre-write (git ls-tree at base 31a3ffeb);
+  the live URL 404s (gopro-photos-to-usb.html, verified this run); 0 "gopro"
+  hits in live feed.xml and sitemap.xml (verified this run); never scored
+  before, never killed. Query 244 stays assigned to this row.
+- There are no near matches from other articles that cover the GoPro save legs —
+  the near matches are our own generic flight, storage-full, and
+  transfer-automatically articles — all different, already-live articles,
+  untouched — plus the other NAS articles (nextcloud-photos-to-usb.html,
+  seafile-photos-to-usb.html, qnap-photos-to-usb.html) and the other cloud
+  articles (google-drive-photos-to-usb.html, dropbox-photos-to-usb.html,
+  onedrive-photos-to-usb.html, icloud-photos-to-usb.html,
+  amazon-photos-to-usb.html, mega-photos-to-usb.html,
+  pcloud-photos-to-usb.html) and the other social articles
+  (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html,
+  x-twitter-photos-to-usb.html, kik-photos-to-usb.html,
+  pinterest-photos-to-usb.html, messenger-photos-to-usb.html) — all
+  different, already-live articles, untouched. GoPro also survives the
+  WL-265 Box kill test where Box failed: Box's own help documents no
+  Download control for photos and names no on-disk folder, while GoPro's own
+  support documents the Download control verbatim, names the Media tab and
+  the photo album exactly, and the download saves a real file into the app
+  with a real Save to phone step out of it — a real file, not a cache —
+  with the quality-selection limit stated rather than hidden.
