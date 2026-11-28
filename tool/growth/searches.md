@@ -27231,3 +27231,204 @@ unchanged (already "Back up photos & videos to a USB disk").
   and names the Downloads folder exactly, the independent guides name the
   on-disk folder exactly, and the save writes a real full-size file to shared
   storage — a real file, not a cache.
+
+### 218. "Save QNAP photos to USB from Android, no computer" — HOW-TO GAP
+- Volume: unknown (Play publishes no volume). Briefed as Query 238, Nov 27, 2026 (WL-289).
+- Difficulty: Low on the narrow angle. No guide in search covers the joined job —
+  a photo already on a QNAP NAS, saved on the Android phone itself, onto a USB
+  drive plugged into the phone, no computer — with the save step stated (open
+  Qfile Pro, tap the device-list icon, tap your NAS, tap the three-dot menu on
+  a photo or a folder, then Save to downloads — QNAP's own download, with
+  QNAP's own docs naming the Download Folder), the folder named (the file
+  lands in Qfile Pro's Download Folder — Menu, then Offline Files, then
+  Download Folder — inside a subfolder named after your NAS, with QNAP
+  publishing no absolute Android path, so the article names the folder as
+  QNAP names it and never invents a path), the viewing-versus-saving
+  untangling stated (looking at a photo in Qfile Pro or QuMagie Mobile shows
+  a streamed copy from the NAS; only Save to downloads writes a real file),
+  the QuMagie trap stated (QuMagie Mobile views, searches, tags, and shares
+  the photos on the NAS and uploads phone photos to the NAS, but its own
+  quick-start guide contains no download-to-device step at all), the
+  auto-upload direction stated (Qfile Pro's auto-upload and QuMagie Mobile's
+  automatic backup both run phone to NAS; there is no documented
+  auto-download), the one-folder-at-a-time limit stated (QNAP's download
+  page documents files and folders together with no per-photo multi-select;
+  the whole-NAS route is the one-touch-copy button on the NAS itself), and
+  the original-file and full-size quality limits stated (the download is the
+  file exactly as it sits on the NAS, byte-for-byte; no conversion step
+  appears anywhere in QNAP's download docs). Our own generic VeraCrypt,
+  storage-full, and transfer-automatically articles rank top on the first
+  phrasing and never open a QNAP app; the generic phone-to-USB guides never
+  name the QNAP save leg; no QNAP listing ranks on any phrasing. The gap
+  stands ONLY on that narrow angle: the QNAP photo, saved from Qfile Pro
+  into its Download Folder, onto a USB drive, no computer, with the save
+  step stated, the folder named, the viewing-versus-saving untangling
+  stated, and the QuMagie trap stated plainly.
+- Gate evidence (verified live this run, Nov 27, 2026): QNAP's own docs,
+  "Downloading files and folders" (docs.qnap.com/application/qfile-pro/4.x/
+  en-us/downloading-files-and-folders-967EFD5B.html, Qfile Pro 4.x, crawled
+  2026-11-28 06:30 UTC) — "1. Open Qfile Pro on your mobile device. 2. Tap
+  [device-list icon] on the app bar. The Device List window appears. 3. Tap
+  a QNAP device to select it. The Folders window appears. 4. Identify a file
+  or folder, and then tap [three-dot menu]. The file and folder action menu
+  opens. 5. Tap Save to downloads." — "Qfile Pro creates and adds the
+  download task to background tasks." — "Downloaded files and folders appear
+  in a folder with the same name as the source device." QNAP's own docs,
+  "Managing downloaded files and folders" (docs.qnap.com, Qfile Pro 4.x,
+  crawled 2026-11-28 06:30 UTC) — "1. Open Qfile Pro on your mobile
+  device. 2. Tap [menu icon]. The Menu window appears. 3. Tap Offline
+  files. The Offline files window appears." — "Download Folder: Displays
+  files and folders that have been downloaded to your mobile device." —
+  "Tap a device folder to view all the files and folders that have been
+  downloaded from that device." QNAP's own FAQ, "Where can I find downloaded
+  files in Qfile Pro?" (qnap.com/en-ph/how-to/faq/con_show.php?cid=2984,
+  last modified 2024-03-07, crawled 2026-11-25 00:12 UTC, Qfile Pro 4.0.0
+  and later) — "You can download files from your QNAP device to your mobile
+  device using Qfile Pro. To access your downloaded files, go to: Menu >
+  Offline > Download Folder (Qfile Pro 4.0.0 and earlier); Menu > Offline
+  Files > Download Folder (Qfile Pro 4.1.0 and later)." — "Qfile Pro
+  requires 'All file access' permissions to access downloaded files."
+  QNAP's own Mobile Apps Beginner's Guide (qnap.com, last modified
+  2023-12-20, crawled 2026-11-28 06:30 UTC) — "Download files from NAS to
+  the mobile device using Qfile Pro" (linking the docs page above) and the
+  remote-access precondition: "Register a QNAP ID (i.e. myQNAPcloud
+  account)", "Setup myQNAPcloud Link on the NAS", "Login mobile App with
+  QNAP ID (QID)". QNAP's own Qfile Pro listing on Google Play (crawled Nov
+  2026) — prerequisites "Android 8.0 or later", "QNAP NAS running QTS 4.0
+  or later, QuTS hero 4.5.0 or later"; "Offline file reading: Qfile Pro
+  provides a simple way for downloading files from your QNAP NAS to mobile
+  devices for offline reading"; "Auto upload: Automatically upload files
+  from your mobile device to your QNAP NAS"; "Support for changing the
+  download folder on an external SD card." QNAP's own QuMagie quick-start
+  guide (qnap.com, QuMagie 2.0 and later, QuMagie Mobile Android 2.4 and
+  later, crawled 2026-11-28 06:33 UTC) — "With QuMagie Mobile you can
+  manually upload photos and videos, or configure automatic backups of your
+  media files from your mobile device to your NAS"; the "Back up photos and
+  videos from your mobile device to your NAS" section is phone to NAS only
+  (Menu tab, Backup Settings, Set up now); the guide's sections are view
+  and manage, search, tag people, edit properties, create and manage
+  albums, back up phone to NAS, share content — no download-to-device step
+  anywhere in the guide. QNAP's own blog, "Backup Photos on Your Phone
+  Automatically without Fear" (blog.qnap.com, published 2017-09-15, updated
+  2020-04-24, crawled 2026-11-28 06:36 UTC) — Qfile "not only offers
+  several management features on the NAS, such as searching, downloading,
+  uploading files, and streaming videos, but it also does automatic
+  backups"; "you can enable the option: 'Auto upload photos from the photo
+  gallery'"; USB One Touch Copy "back[s] up the data in our USB storage to
+  the NAS" and since QTS 4.3.4 "supports backing up the data on your mobile
+  device" — both directions into the NAS. QNAP's own TS-431P product page
+  (qnap.com, crawled 2026-11-28 06:37 UTC) — "The front panel USB port
+  features a one-touch-copy function for you to instantly back up data on
+  USB drives to the TS-431P or alternatively to back up data from the
+  TS-431P to USB drives." No screenshot-only, cache-only, cloud-only, or
+  third-party-downloader condition: QNAP's own Save to downloads is a real
+  file download into a named folder, and the QuMagie trap is documented and
+  untangled rather than hidden, so the gate PASSES — write the article, do
+  not kill the row.
+- Search phrasings, scored live: phrasing 1, "QNAP Qfile Android app
+  download photos to phone save to device" (lead, this run, first-hand):
+  QNAP's own Qfile Pro listing on Google Play, QNAP's own December 2023
+  Qfile Pro press release, the TS-651 user manual on a third-party manual
+  site, a QNAP support-site media guide, QNAP's own Mobile Apps Beginner's
+  Guide, a QNAP video page about Qfile, and QNAP's own FAQ "Where can I
+  find downloaded files in Qfile Pro?" — no QNAP-photos-to-USB guide.
+  Phrasing 2, "save QNAP NAS photos to USB from Android Qfile QuMagie
+  download" (lead, this run, first-hand): QNAP's own QuMagie quick-start
+  guide, QNAP's own Beginner's Guide, the Play listing again, QNAP's own
+  blog post "Backup Photos on Your Phone Automatically without Fear"
+  (phone to NAS, plus the USB One Touch Copy button into the NAS), the
+  TS-431P and TS-231P2 feature pages, and the Qfile video page again — no
+  QNAP-photos-to-USB guide exists on either phrasing.
+- Honest centre (verified from QNAP's own docs + the code at base d189b6f
+  this run): a QNAP photo is not on the phone until Qfile Pro saves it —
+  viewing the photo in Qfile Pro or QuMagie Mobile shows a streamed copy
+  from the NAS, and QuMagie Mobile has no download-to-device step anywhere
+  in its own quick-start guide, while Save to downloads is the step that
+  writes a real file. The save is open Qfile Pro → tap the device-list
+  icon → tap your NAS → tap the three-dot menu on a photo or a folder →
+  Save to downloads; the on-disk folder is Qfile Pro's Download Folder
+  (Menu, then Offline Files, then Download Folder; Menu, then Offline,
+  then Download Folder on 4.0.0 and earlier), inside a subfolder named
+  after your NAS — so the article states the folder as a named destination
+  plus the gallery check (a downloaded photo that shows in the gallery is
+  an ordinary indexed file), never as a claimed absolute path (QNAP
+  publishes none), never as DCIM/Camera, which is where the camera puts
+  its own photos, not where Qfile Pro puts downloads. A share link is not
+  a save — Qfile Pro's download link and QuMagie's share link open the
+  photo in a browser on the NAS. The save is one photo or one folder at a
+  time; QNAP's download page documents no per-photo multi-select and no
+  auto-download, and the bulk routes are the folder save on the phone and
+  the one-touch-copy button on the NAS itself. A photo in a QuMagie content
+  source is an ordinary NAS folder and saves the same way once found in
+  Qfile Pro; a NAS that is not reachable — no local network, no myQNAPcloud
+  — cannot be saved from at all. The download is the file exactly as it
+  sits on the NAS, byte-for-byte, so it sorts by the date taken when the
+  file carries one, falling back to the download date when it does not. The
+  default run covers a downloaded QNAP photo that shows in the gallery (no
+  folder filter, selection null,
+  app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:60); the From
+  picker route is code-supported but UNTESTED on the Download Folder — and
+  the picker must point at the folder the save landed in (the Download
+  Folder), not at DCIM, which is where only camera photos live.
+- SnapDisk facts re-verified from the code at base d189b6f (do not copy from
+  memory): Pro $9.99 once (app/src/main/java/dev/dzianisv/snapdisk/backup/
+  ProPrefs.kt:40, PRO_PRICE_LABEL "$9.99"), 5 GB free per-run cap (:43, 5L *
+  1024 * 1024 * 1024), oldest-first MediaStore DATE_TAKEN
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/PhotoQuery.kt:23,
+  queryMediaStoreOldestFirst; :60, selection null, no folder filter;
+  app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:95,
+  sortOldestFirst), size verification after copy (BackupEngine.kt:107,
+  verify; :126, :148, :242, CopyResult.Copied only after verify passes),
+  Pause/Stop in the notification (app/src/main/java/dev/dzianisv/snapdisk/
+  service/NotificationHelper.kt:126,136; BackupService.kt:113,115),
+  foreground-service dataSync (app/src/main/AndroidManifest.xml:38), FAT32
+  files >=4 GiB skipped with their reason (app/src/main/java/dev/dzianisv/
+  snapdisk/service/BackupService.kt:428-433), no INTERNET permission (0
+  occurrences in the manifest), no Google Play Services dependency (0
+  matches for com.google.android.gms in the repo, this run), no all-files
+  access (no MANAGE_EXTERNAL_STORAGE anywhere), minSdk 24
+  (app/build.gradle.kts:12, Android 7.0), applicationId
+  dev.dzianisv.snapdisk (app/build.gradle.kts:11). Pro $9.99 once
+  (app/src/main/java/dev/dzianisv/snapdisk/backup/ProPrefs.kt:40), 5 GB free
+  per run (:43). "SnapDisk copies, it never deletes" present — the only
+  .delete() calls in the code are on SnapDisk's own half-finished .part
+  files (app/src/main/java/dev/dzianisv/snapdisk/backup/BackupEngine.kt:176,
+  :207; app/src/main/java/dev/dzianisv/snapdisk/service/BackupService.kt:385,
+  :477). No VaultDrive price is stated in this article — only the
+  comparison-article link text once. The 5 "install" forms in the article
+  are benign (Qfile Pro installed; SnapDisk installed from the v0.1.2 APK;
+  "install it by allowing 'install unknown apps'"; "the installation").
+  The 3 "Google Play" mentions are factual (Qfile Pro's listing on Google
+  Play; Qfile Pro free from Google Play; SnapDisk not on Google Play yet),
+  same form as WL-233/WL-234/WL-235/WL-236/WL-238/WL-239/WL-240 and WL-193.
+  Read time 12 min from the word count (8,648 words at /750).
+- Anti-duplicate check (first, before writing — the WL-189 lesson): new slug
+  docs/qnap-photos-to-usb.html verified 0 collisions in feed.xml, sitemap.xml,
+  blog index, llms.txt, and llms-full.txt before writing; "qnap" returns 0
+  matches in feed.xml, sitemap.xml, blog index, llms.txt, and llms-full.txt
+  pre-write, 0 matches in searches.md (whole file, including the "Not a gap"
+  section — read, no kill), and 0 matches in WORKLOG.md pre-write; 0
+  "qnap-photos-to-usb" slugs in docs/ pre-write (git ls-tree at base d189b6f);
+  the live URL 404s (qnap-photos-to-usb.html, verified this run); 0 "qnap"
+  hits in live feed.xml and sitemap.xml (verified this run); never scored
+  before, never killed. Query 238 stays assigned to this row.
+- There are no near matches from other articles that cover the QNAP save leg —
+  the near matches are our own generic VeraCrypt, storage-full, and
+  transfer-automatically articles — all different, already-live articles,
+  untouched — plus the other NAS articles (nextcloud-photos-to-usb.html,
+  seafile-photos-to-usb.html) and the other cloud articles
+  (google-drive-photos-to-usb.html, dropbox-photos-to-usb.html,
+  onedrive-photos-to-usb.html, icloud-photos-to-usb.html,
+  amazon-photos-to-usb.html, mega-photos-to-usb.html,
+  pcloud-photos-to-usb.html) and the other social articles
+  (whatsapp-photos-to-usb.html, telegram-photos-to-usb.html,
+  instagram-photos-to-usb.html, facebook-photos-to-usb.html,
+  snapchat-photos-to-usb.html, tiktok-photos-videos-to-usb.html,
+  x-twitter-photos-to-usb.html, kik-photos-to-usb.html,
+  pinterest-photos-to-usb.html, messenger-photos-to-usb.html) — all
+  different, already-live articles, untouched. QNAP also survives the
+  WL-265 Box kill test where Box failed: Box's own help documents no
+  Download control for photos and names no on-disk folder, while QNAP's own
+  docs document the Save to downloads control verbatim, name the Download
+  Folder exactly, and the download saves a real full-size file to shared
+  storage — a real file, not a cache.
