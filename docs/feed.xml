@@ -1539,5 +1539,12 @@
       <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
       <description>A QNAP photo isn't on your phone until Qfile Pro saves it. Tap the file menu, Save to downloads — it lands in the Download Folder. Then back it up to USB.</description>
     </item>
+    <item>
+      <title>Save GoPro photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/gopro-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/gopro-photos-to-usb.html</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A GoPro photo isn't on your phone until Quik saves it. Download it to the app, Save to phone — it lands in your photo album. Then back it up to USB.</description>
+    </item>
 </channel>
 </rss>
