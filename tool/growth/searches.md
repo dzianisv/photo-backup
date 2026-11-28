@@ -20630,6 +20630,51 @@ demand is read off competitor install velocity instead (see
   re-dispatch. Un-kill only if Samsung restores a photo-download flow
   to Samsung Cloud. Query 236 stays unassigned.
 
+- "transfer photos from iPhone to USB flash drive without a computer" / "save iPhone photos to USB stick from iPhone no computer" (briefed as
+  Query 237, Nov 27, 2026): KILLED Nov 27, 2026
+  (WL-288). Three dedicated current iPhone-to-USB guides join both
+  phrasings, and SnapDisk is Android-only, so there is no
+  SnapDisk-specific honest centre. thedroidguy.com, "How To Transfer
+  iPhone Photos To A USB Or External Drive (2026)"
+  (thedroidguy.com/iphone-photos-to-usb-external-drive-1289911, updated
+  1 day ago, read first-hand this run): plug the drive into the
+  iPhone's charging port, adapter if it does not fit, Photos > select
+  > Share > Export Unmodified Original > the drive > Save; follows
+  Apple's iPhone User Guide for the steps, the drive formats that work,
+  and what to check when the drive does not appear; Lightning adapters
+  named (Lightning to USB Camera Adapter, Lightning to USB 3 Camera
+  Adapter), powered hub for a USB-C iPhone whose drive needs power.
+  digieraglobal.com, "How to Transfer Photos from iPhone to Flash
+  Drive" (digieraglobal.com/blogs/news/how-to-transfer-photos-from-iphone-to-flash-drive,
+  updated 24 days ago, read first-hand this run): 6-step Files-app
+  flow, USB-C direct on iPhone 15/16+, Lightning drive or adapter on
+  iPhone 14 and older, exFAT format check as the #1 failure reason.
+  dblabsapps.com, "Save iPhone Photos to USB Drive (Any Type)"
+  (dblabsapps.com/blog/iphone-photos-to-usb-drive/, updated Apr 7,
+  2026, read first-hand this run): USB-C direct on iPhone 15+, Lightning
+  to USB 3 Camera Adapter ($39) or SanDisk iXpand on older iPhones,
+  exFAT recommended. mefmobile.org and pcnmobile.com generic
+  phone-to-USB guides (both updated 81 days ago) carry dedicated iPhone
+  sections (USB-C and Lightning routes, Apple's single-partition rule
+  and format list: APFS, encrypted APFS, macOS Extended, exFAT, FAT32,
+  FAT). Own site: 0 dedicated iPhone article (candidate slug
+  iphone-photos-to-usb.html 404s live, verified this run); the live
+  feed.xml mentions iPhone only as passing text inside other articles
+  ("iPhones are not covered here — SnapDisk is Android only", verified
+  this run) and carries no iPhone article. Claim check in order: 0
+  dedicated WORKLOG rows (iPhone hits are passing text in the Tumblr,
+  X, HEIC, motion-photos and VaultDrive rows, 0 headings); the
+  searches.md "Not a gap" iPhone hits are passing text inside
+  rugged-device entries (Nokia, Bluebird, Chainway and others: "generic
+  Android and iPhone, not written for X"), read this run, not kills —
+  the topic as its own query was never scored until now. No
+  SnapDisk-specific honest centre: the iPhone flow is Photos > Share >
+  Save to Files, no app involved, and SnapDisk does not run on iOS —
+  our own feed states it. Do not re-dispatch. Un-kill only if the
+  dedicated guides go stale (no update in 12+ months) or disappear and
+  no current dedicated guide joins the query. Query 237 stays
+  unassigned.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
