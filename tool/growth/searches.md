@@ -20875,6 +20875,64 @@ demand is read off competitor install velocity instead (see
   gains a SnapDisk-specific step no guide covers.
   Query 242 stays unassigned.
 
+
+- "transfer photos from Android phone to USB flash drive wirelessly" /
+  "transfer photos from Android to USB drive via WiFi" (briefed as
+  Query 243, Nov 28, 2026): NOT a gap — KILLED Nov 28, 2026 (WL-294).
+  Dedicated current guides join both phrasings with full wireless
+  sections, and every wireless route ends at a computer, a cloud, or a
+  discontinued drive — no SnapDisk-specific honest centre. Phrasing 1:
+  ireashare.com, "Transfer Files from Android to USB Flash Drive: 4 Ways"
+  (158 days ago, crawled 2 hours ago, read via search this run): a
+  dedicated Part 4, "Transfer Files from Android to Flash Drive via
+  LocalSend" — LocalSend is "completely wireless and free", but the
+  guide's own comparison table states it "requires intermediate storage
+  (PC) before saving to the flash drive"; techcult.com, "How to Transfer
+  Files from Android to USB Flash Drive (Wired or Wireless)"
+  (968 days ago): the title itself joins both phrasings — Method 2,
+  "Use Files by Google (Wireless)", Method 3, "Use Android Assistant"
+  ("Connect via Wi-Fi"), Method 5, AirDroid/SHAREit — every one routes
+  through a computer with the drive plugged in; en.windowsnoticias.com,
+  "How to transfer photos from the mobile to a flash drive" (666 days
+  ago): a dedicated "Wirelessly" section — install a wireless file
+  transfer app on the phone and the computer, same Wi-Fi network,
+  transfer to the computer, then copy to the USB drive; eyefi.com,
+  "What's the best way to move photos from my Android phone to a flash
+  drive?" (822 days ago): Send Anywhere (phone to browser on the
+  computer, then copy to the drive) and wireless LAN file transfer apps
+  (Feem, AirDroid) — both end on the computer. Phrasing 2: the same
+  techcult and ireashare guides join it (Wi-Fi transfer as a named
+  method in both). No honest centre: the cable-free route to a plain USB
+  drive does not exist — the drive has no radio, so wireless always
+  means a middleman (a computer, killed as its own query by WL-293, or
+  a cloud, covered by our live Google Drive / Dropbox / OneDrive /
+  iCloud articles), and the one truly wireless drive, the SanDisk
+  Connect Wireless Stick (its own Wi-Fi network, app transfer), is
+  discontinued — the only guides are gizmodo.com (13 years ago) and
+  androidcentral.com (10 years ago). SnapDisk is a wired OTG app with
+  no wireless step, and our own no-otg-photos-to-usb.html (live, 200,
+  36,179 B) already gives the computer route as Method 1. The article
+  would be the generic wireless guide plus the WL-293 kill — a
+  duplicate, not a new gap. Own site: candidate slugs
+  transfer-photos-to-usb-wirelessly.html,
+  transfer-android-photos-to-usb-via-wifi.html,
+  transfer-photos-to-usb-via-wifi.html all 404 live (curl, this run);
+  0 slugs containing "wifi" or "wireless" in sitemap.xml; feed.xml
+  "wifi"/"wireless" hits are passing text inside existing articles
+  (device specs, model names, cited guide titles), not a wireless-route
+  article. Claim check in order: 0 dedicated WORKLOG rows (0 headings;
+  the wifi/wireless hits are passing mentions inside other rows; the
+  auto-backup article is WL-39, transfer-photos-to-usb-automatically);
+  the searches.md "Not a gap" wifi/wireless hits are passing text
+  inside rugged-device entries (Chainway, Janam, iData, Bittium —
+  "wirelessly through Google Drive or AirDroid", "USB OTG cable,
+  wireless, or a computer"), read this run, not kills — the wireless
+  topic as its own query was never scored until now. Do not re-dispatch.
+  Un-kill only if the dedicated guides go stale (no update in 12+
+  months) or disappear, or a current wireless flash drive with a live
+  app ships and no guide covers it.
+  Query 243 stays unassigned.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
