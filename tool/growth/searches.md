@@ -20728,6 +20728,56 @@ demand is read off competitor install velocity instead (see
   dedicated guide joins the query, or a first-hand source proves the
   plain-drive route works. Query 239 stays unassigned.
 
+- "transfer photos from Android to iPhone using USB flash drive" /
+  "move photos Android to iPhone via USB drive no computer" (briefed as
+  Query 240, Nov 28, 2026): NOT a gap — KILLED Nov 28, 2026 (WL-291).
+  Dedicated guides join both phrasings, and our own switching-phones
+  article already covers the bridge — no SnapDisk-specific honest
+  centre. Phrasing 1: gbtimes.com, "Can You Transfer Photos from
+  Android to iPhone?" (published 2025-07-05, last updated 511 days ago,
+  read via search this run): section 5, "Using a USB Drive (OTG):
+  Direct Transfer for Large Files" — OTG copy on Android, Lightning to
+  USB adapter on the iPhone, Files app import; excellentmobiles.com,
+  "How to Transfer Files Between iPhone and Android Smartphones" (261
+  days ago): "External Storage: Flash Drives and OTG Magic" — OTG
+  flash drive on Android, Lightning-compatible drive on iPhone, move
+  files from one phone to the stick, then to the other;
+  thecomputerbasics.com, "Transfer Files Without a Computer" (crawled
+  6 hours ago): the drive-between-devices flow — exFAT as the format
+  to use, iPhone Files import under Locations, Android OTG copy.
+  Phrasing 2: the same gbtimes guide and thecomputerbasics guide join
+  it; igeeksblog.com (108 days ago) and Apple's own support page
+  ("Move from Android to iPhone or iPad") cover Move to iOS and a
+  direct USB-C cable instead — a cable, not a drive bridge. The
+  gbtimes guide is the oldest of the three (17 months since its last
+  update) but the flow it documents — OTG plus Lightning adapter plus
+  Files app — is unchanged, and excellentmobiles plus
+  thecomputerbasics plus our own article join it. No honest centre:
+  the Android leg is SnapDisk's generic one-tap copy, already the
+  centre of our transfer-photos-to-usb-automatically how-to; the
+  iPhone leg is the Files app, no app involved, and SnapDisk does not
+  run on iOS; our own switching-phones-photos-to-usb.html (live,
+  37,225 B, verified this run) already states the bridge — "Android to
+  iPhone is Move to iOS after the drive copy" and "iPhone the route is
+  the Files app: browse to your photos on the drive, select them, tap
+  Share, and save them to the library". The article would be the
+  generic how-to plus the switching article's iPhone section — a
+  duplicate, not a new gap. Own site: candidate slug
+  android-to-iphone-photos-to-usb.html 404s live (curl, this run); the
+  feed.xml "iphone" hits (8) are passing text inside other articles
+  and the sitemap.xml carries 0 iphone slugs — no dedicated article.
+  Claim check in order: 0 dedicated WORKLOG rows (iPhone hits are
+  passing text in the Tumblr, X, HEIC, motion-photos and VaultDrive
+  rows, 0 headings; Query 237/WL-288 killed iPhone-to-USB, the
+  opposite direction, not this bridge); the searches.md "Not a gap"
+  iPhone hits are passing text inside rugged-device entries ("generic
+  Android and iPhone, not written for X"), read this run, not kills —
+  the bridge as its own query was never scored until now. Do not
+  re-dispatch. Un-kill only if the dedicated guides go stale (no update
+  in 12+ months) or disappear, our switching-phones article stops
+  covering the bridge, and no current dedicated guide joins the query.
+  Query 240 stays unassigned.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
