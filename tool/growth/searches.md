@@ -20675,6 +20675,59 @@ demand is read off competitor install velocity instead (see
   no current dedicated guide joins the query. Query 237 stays
   unassigned.
 
+- "save photos to PhotoStick from Android" / "transfer photos to
+  PhotoStick Android no computer" (briefed as Query 239, Nov 28,
+  2026): NOT a gap — KILLED Nov 28, 2026 (WL-290). Dedicated current
+  guides join both phrasings, and there is no SnapDisk-specific
+  honest centre. Phrasing 1: ossaward.org, "PhotoStick Mobile for
+  Android: Step-by-Step Setup 2026"
+  (ossaward.org/how-to-use-photostick-mobile-for-android-devices/,
+  updated 44 days ago, read first-hand this run): a full 7-step
+  guide — OTG check, connector match, install ThePhotoStick Mobile
+  (PrairieIT Inc.), plug in, grant Photos and Videos permission, tap
+  Back Up, verify on a computer — plus troubleshooting; the maker's
+  own guide, thephotostick.com, "Getting Started with ThePhotoStick
+  Omni on Android Devices" (published 2026-06-08, updated
+  2026-06-10, read first-hand this run): install the Omni app, grant
+  All File Access, plug in, select the drive named "PHOTOSTICK",
+  tap "BACK UP FILES NOW", pause/resume included; thegadgetians.com
+  install guide (crawled 3 days ago) joins it too. Phrasing 2:
+  umatechnology.org, "Transfer Photos from Android to a Photo Stick:
+  Steps & Compatibility"
+  (umatechnology.org/how-to-transfer-photos-from-android-to-a-photo-stick/,
+  updated 56 days ago, read first-hand this run): connect a
+  compatible USB drive, open the phone's file manager, copy local
+  photos to the drive, with the OTG and companion-app checks;
+  thegadgetians.com, "How to Transfer Files From Phone to USB
+  Without Computer" (crawled 2 days ago), names ThePhotoStick Omni
+  as the example drive; camrojud.com (crawled 1 day ago) joins it
+  too. No honest centre: the only SnapDisk-specific angle would be
+  the plain-drive route — use the stick as an ordinary USB drive
+  with SnapDisk and skip the PhotoStick app — but no first-hand
+  source confirms an Omni stick works that way, and the maker's own
+  guide routes everything through its app (drive select + All File
+  Access) while the Play listing, quoted in our own WL-219
+  comparison (snapdisk-vs-thephotostick.html), says "Designed to
+  work with only ThePhotoStick Omni devices" (3.9 from 1,689
+  ratings, updated Nov 21, 2026; AppBrain about 380,000 installs).
+  Asserting the plain-drive route would be inventing it, and even if
+  it worked the article would be our generic
+  transfer-photos-to-usb-automatically how-to with "PhotoStick"
+  substituted plus the WL-219 comparison facts — a duplicate, not a
+  new gap. Own site: candidate slug photostick-photos-to-usb.html
+  404s live (curl, this run); the feed.xml "photostick" hits (2) and
+  the sitemap.xml hit (1) are the WL-219 comparison article only.
+  Claim check in order: 0 dedicated WORKLOG rows for PhotoStick
+  (WL-219 is a comparison article, not a how-to; all other mentions
+  are passing text); the searches.md "Not a gap" PhotoStick hits are
+  passing text inside rugged-device entries ("notes ThePhotoStick
+  Omni; generic Android and iPhone, not written for X"), read this
+  run, not kills — the topic as its own query was never scored until
+  now. Do not re-dispatch. Un-kill only if the dedicated guides go
+  stale (no update in 12+ months) or disappear and no current
+  dedicated guide joins the query, or a first-hand source proves the
+  plain-drive route works. Query 239 stays unassigned.
+
 ## Winners and what changed
 
 Winners: "photos to usb", "photo backup to usb" (tied top),
