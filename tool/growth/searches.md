@@ -20538,6 +20538,39 @@ demand is read off competitor install velocity instead (see
   stale (no update in 12+ months) or disappear and no current
   dedicated guide joins the query. Query 234 stays unassigned.
 
+- "save Google Photos to USB flash drive" / "transfer Google Photos to USB stick" (briefed as
+  Query 235, Nov 27, 2026): NOT a gap — KILLED Nov 27, 2026
+  (WL-286). Two dedicated, current guides already join both
+  phrasings: live2tech.com, "How to Move Google Photos to a Flash
+  Drive" (live2tech.com/move-google-photos-flash-drive/, updated 13
+  days ago) — no straight-to-USB button, download from
+  photos.google.com or the Google Photos app (More > Download) for
+  a handful or one album, Google Takeout for the whole library,
+  then copy; plus a dedicated Android-phone section (app Download,
+  USB-available notification, Files by Google Copy to, Android 7.0+);
+  technobezz.com, "How to Transfer Google Photos to a USB Flash
+  Drive" (technobezz.com/how-to-transfer-google-photos-to-a-usb-flash-drive,
+  updated 27 days ago) — same two legs (selected download, Takeout
+  export) with Windows / Mac / Chromebook / phone transfer steps.
+  Supporting, older: chromeready.com (234 days ago, Chromebook
+  route) and gbtimes.com (812 days ago). Our own site: 0
+  google-photos slugs (candidate slug
+  google-photos-photos-to-usb.html 404s this run; 0 'google-photos'
+  hits in live feed.xml and sitemap.xml); Google Photos appears in
+  our articles only as passing text inside device rows ("Google
+  Photos is cloud, not USB"). Claim check in order: 0 dedicated
+  WORKLOG rows (273 'Google Photos' hits are passing text in device
+  rows, 0 headings); the searches.md 'Google Photos' hits are
+  passing text inside device-article rows, read this run, not
+  kills — the topic as its own query was never scored until now.
+  No SnapDisk-specific honest centre: the Download and Takeout legs
+  are exactly what the dedicated guides cover, and the USB leg is
+  already in our generic transfer articles; a Google Photos article
+  from us would restate live2tech's Android-phone section. Do not
+  re-dispatch. Un-kill only if the guides go stale (no update in
+  12+ months) or disappear and no current dedicated guide joins the
+  query. Query 235 stays unassigned.
+
 
 ## Winners and what changed
 
