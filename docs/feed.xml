@@ -1532,5 +1532,12 @@
       <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
       <description>An Outlook photo isn't on your phone until you save it. Tap the attachment, Save to Device — it lands in Downloads. Then back it up to USB.</description>
     </item>
+    <item>
+      <title>Save QNAP photos to USB from Android — SnapDisk</title>
+      <link>https://dzianisv.github.io/photo-backup/qnap-photos-to-usb.html</link>
+      <guid>https://dzianisv.github.io/photo-backup/qnap-photos-to-usb.html</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A QNAP photo isn't on your phone until Qfile Pro saves it. Tap the file menu, Save to downloads — it lands in the Download Folder. Then back it up to USB.</description>
+    </item>
 </channel>
 </rss>
