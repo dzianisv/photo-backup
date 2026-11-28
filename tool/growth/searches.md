@@ -20503,6 +20503,41 @@ demand is read off competitor install velocity instead (see
   stale (no update in 12+ months) or disappear and no current
   dedicated guide joins the query. Query 232 stays unassigned.
 
+- "transfer photos from Android phone to external hard drive without a computer" (briefed as
+  Query 234, Nov 27, 2026): NOT a gap — KILLED Nov 27, 2026
+  (WL-285). Three dedicated, current guides already join both
+  phrasings: robots.net, "How To Transfer Files From Android To
+  External Hard Drive" (robots.net/tech/how-to-transfer-files-from-android-to-external-hard-drive/,
+  updated 72 days ago) — OTG adapter, FAT32/exFAT, NTFS note,
+  file-manager copy, no computer; mefmobile.org, "How to Transfer
+  Files From Android to an External Hard Drive"
+  (mefmobile.org/how-to-transfer-files-from-android-to-an-external-hard-drive/,
+  updated 66 days ago) — portable SSD/HDD/USB in the lede, powered
+  hub for mechanical drives, Files by Google + Samsung My Files
+  methods; thedroidguy.com, "How To Copy Files From Android To A USB
+  Drive (2026)" (thedroidguy.com/android-files-to-usb-flash-drive-1295405,
+  updated 6 days ago) — flash drive and portable SSD, no computer,
+  Samsung + Pixel steps, with a dedicated SSD section. Our own
+  usb-photo-backup.html already covers the same workflow (external
+  hard drive, spinning-drive power note, exFAT/FAT32 limit) and ranks
+  in the results. Own site: 0 external-hard-drive slugs (candidate
+  slugs transfer-photos-to-external-hard-drive.html and
+  transfer-photos-android-to-external-hard-drive.html both 404 this
+  run; 0 dedicated article). Claim check in order: 0 dedicated
+  WORKLOG rows (14 'hard drive' hits are passing text in other rows);
+  the searches.md 'hard drive' hits in the "Not a gap" section are
+  passing text inside the XCover and iData entries, read this run,
+  not kills — the topic as its own query was never killed until now,
+  and it shares its evidence with the WL-283/Query 232 SSD kill,
+  which cites the same two hard-drive guides. No SnapDisk-specific
+  honest centre: a hard drive is a device variant of the USB-drive
+  backup our generic article already owns, and the drive-specific
+  notes (powered hub, exFAT vs NTFS) are already joined by the
+  dedicated guides above and already in our articles and on the
+  WL-214 row. Do not re-dispatch. Un-kill only if the guides go
+  stale (no update in 12+ months) or disappear and no current
+  dedicated guide joins the query. Query 234 stays unassigned.
+
 
 ## Winners and what changed
 
